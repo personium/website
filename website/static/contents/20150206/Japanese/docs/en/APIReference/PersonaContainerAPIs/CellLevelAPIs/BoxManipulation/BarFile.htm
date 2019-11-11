@@ -1,0 +1,1108 @@
+<?xml version="1.0" encoding="iso-2022-jp" ?>
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN"
+    "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<!-- saved from url=(0014)about:internet -->
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=iso-2022-jp" />
+<meta http-equiv="Content-Language" content="en-US" />
+<meta name="generator" content="Adobe RoboHelp 10" />
+<title>Bar File</title>
+<link rel="StyleSheet" href="../../../../../../default.css" type="text/css" />
+<script type="text/javascript" src="../../../../../../prettify.js" language="JavaScript1.2">
+</script>
+<style type="text/css">
+/*<![CDATA[*/
+<!--
+.mainBreadCrumb a:link { color:#000000;
+background-color:transparent;
+text-decoration:none; }
+.mainBreadCrumb a:visited { color:#000000;
+background-color:transparent;
+text-decoration:none; }
+.mainBreadCrumb a:hover { color:#ff0000 ! important;
+cursor:pointer;
+text-decoration:underline; }
+p.mainBreadCrumb { margin-left:0px;
+margin-top:1px ! important; }
+h1 { padding-left:10px ! important; }
+-->
+/*]]>*/
+</style>
+
+<script type="text/javascript" language="JavaScript">
+//<![CDATA[
+function reDo() {
+  if (innerWidth != origWidth || innerHeight != origHeight)
+     location.reload();
+}
+if ((parseInt(navigator.appVersion) == 4) && (navigator.appName == "Netscape")) {
+        origWidth = innerWidth;
+        origHeight = innerHeight;
+        onresize = reDo;
+}
+onerror = null; 
+//]]>
+</script>
+<style type="text/css">
+/*<![CDATA[*/
+<!--
+div.WebHelpPopupMenu { position:absolute;
+left:0px;
+top:0px;
+z-index:4;
+visibility:hidden; }
+-->
+/*]]>*/
+</style>
+
+<script type="text/javascript" language="javascript1.2" src="../../../../../../whmsg.js" charset="utf-8">
+</script>
+<script type="text/javascript" language="javascript" src="../../../../../../whver.js" charset="utf-8">
+</script>
+<script type="text/javascript" language="javascript1.2" src="../../../../../../whutils.js" charset="utf-8">
+</script>
+<script type="text/javascript" language="javascript1.2" src="../../../../../../whproxy.js" charset="utf-8">
+</script>
+<script type="text/javascript" language="javascript1.2" src="../../../../../../whlang.js" charset="utf-8">
+</script>
+<script type="text/javascript" language="javascript1.2" src="../../../../../../whtopic.js" charset="utf-8">
+</script>
+</head>
+<body onload="prettyPrint()">
+<script type="text/javascript" language="javascript1.2">
+//<![CDATA[
+<!--
+if (window.gbWhTopic)
+{
+        var strUrl = document.location.href;
+        var bc = 0;
+        var n = strUrl.toLowerCase().indexOf("bc-");
+        if(n != -1)
+        {
+                document.location.href = strUrl.substring(0, n);
+                bc = strUrl.substring(n+3);
+        }
+
+        if (window.addTocInfo)
+        {
+        addButton("show",BTN_TEXT,"表示","","","","",0,0,"","","");
+
+        }
+        if (window.writeBtnStyle)
+                writeBtnStyle();
+
+        if (window.writeIntopicBar)
+                writeIntopicBar(1);
+
+        
+        
+}
+else
+        if (window.gbIE4)
+                document.location.reload();
+
+onLoadHandler = function()
+{
+  if (window.setRelStartPage)
+        {
+        setTimeout("setRelStartPage('../../../../../../Japanese.htm');", 1)
+
+    setTimeout("UpdateBreadCrumbsMarker();", 1);
+        }
+}
+
+if (window.addEventListener){  
+        window.addEventListener('load', onLoadHandler, false);   
+} else if (window.attachEvent){  
+        window.attachEvent('onload', onLoadHandler);  
+}
+
+function onSetStartPage()
+{
+  autoSync(1);
+  sendSyncInfo();
+  sendAveInfoOut();
+}
+//-->
+//]]>
+</script><script type="text/javascript" src="../../../../../../ehlpdhtm.js" language="JavaScript1.2">
+</script>
+<div style="width: 100%; position: relative;" id="header">
+<p style="font-size: 10pt;">&#160;</p>
+</div>
+<script type="text/javascript" language="javascript">
+//<![CDATA[
+document.write("<p  class=\"mainBreadCrumb\"  style=\"text-align:left;\" class=\"breadcrumbs\">");
+AddMasterBreadcrumbs("../../../../../../Japanese.htm", "breadcrumbs", " &gt; ", "トップ", "../../../../../ja/HomePage.htm");
+document.write("Bar File<\/p>");
+//]]>
+</script>
+<hr style="border-left-width: 0px; margin-left: -6px;" size="1" width="101%" align="center" />
+<form><input type="image" value="Print" onclick="window.print();return false" name="Printer.png" src="../../../../../../Images/Printer.png" style="width: 16px; height: 16px; float: right; margin-top: -32px; margin-right: 2px;" /></form>
+<h1>Bar File</h1>
+<p class="Paragraph">Bar file contains the Box data in a hierarchical format, which contains resources, such as Odata, WebDAV, and Service of Box. This data is archived in the ZIP file format.</p>
+<h2>Specifications</h2>
+<p class="Paragraph">Bar file comes in a ZIP format. The ZIP64 format is also acceptable.</p>
+<p class="Paragraph"><font class="">In addition, ZIP files encryption is not supported.</font></p>
+<h3>Directory Structure</h3>
+<p class="Paragraph">The directory structure of the Bar file is as follows:</p>
+<table style="margin-right: 12px; margin-top: 12px; margin-bottom: 12px; margin-left: 26pt;" cellspacing="0" width="90%" bgcolor="#EAEAEA">
+<col style="width: 100%;" />
+<tr>
+<td style="border: Solid 1px #9b9b9b;">
+<ul style=" list-style:url('../../../../../../note.png');">
+<li>
+<p class="Note" style="margin-left: 0px;">"★ required" implies that the specified directory is essential during the installation of the bar file. If the specified directory does not exist, an error "400 - Bad Request" is returned. It also shows an error, if the structure of the bar file is not created in the following order.</p>
+</li>
+</ul>
+</td>
+</tr>
+</table>
+<p class="Paragraph">&#160;</p>
+<table class="CodeTable" style="margin-left: 26pt;" cellspacing="0px" width="96%">
+<col style="width: 100%;" />
+<tr>
+<td>
+<p class="Code">bar/</p>
+<p class="Code">&#160;|</p>
+<p class="Code">&#160;+-- 00_meta/ &#160;★ <font>required</font></p>
+<p class="Code">&#160;| &#160;&#160;&#160;|</p>
+<p class="Code">&#160;| &#160;&#160;&#160;+-- 00_manifest.json &#160;★ required</p>
+<p class="Code">&#160;| &#160;&#160;&#160;+-- 10_relations.json</p>
+<p class="Code">&#160;| &#160;&#160;&#160;+-- 20_roles.json</p>
+<p class="Code">&#160;| &#160;&#160;&#160;+-- 30_extroles.json</p>
+<p class="Code">&#160;| &#160;&#160;&#160;+-- 70_$links.json</p>
+<p class="Code">&#160;| &#160;&#160;&#160;+-- 90_rootprops.xml &#160;★ required</p>
+<p class="Code">&#160;|</p>
+<p class="Code">&#160;+-- 90_contents/ &#160;&#160;&#160;&#160;★ <font class="">under the same name and collection</font></p>
+<p class="Code">&#160;&#160;&#160;&#160;&#160;&#160;|</p>
+<p class="Code">&#160;&#160;&#160;&#160;&#160;&#160;+-- {OData}/ &#160;&#160;&#160;★ <font><font class="">rootprops.xml</font></font></p>
+<p class="Code">&#160;&#160;&#160;&#160;&#160;&#160;| &#160;&#160;&#160;|</p>
+<p class="Code">&#160;&#160;&#160;&#160;&#160;&#160;| &#160;&#160;&#160;+-- 00_$metadata.xml &#160;&#160;&#160;★ required</p>
+<p class="Code">&#160;&#160;&#160;&#160;&#160;&#160;| &#160;&#160;&#160;+-- 10_odatarelations.json</p>
+<p class="Code">&#160;&#160;&#160;&#160;&#160;&#160;| &#160;&#160;&#160;|</p>
+<p class="Code">&#160;&#160;&#160;&#160;&#160;&#160;| &#160;&#160;&#160;+-- 90_data/</p>
+<p class="Code">&#160;&#160;&#160;&#160;&#160;&#160;| &#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;|</p>
+<p class="Code">&#160;&#160;&#160;&#160;&#160;&#160;| &#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;+-- {EntityType}/</p>
+<p class="Code">&#160;&#160;&#160;&#160;&#160;&#160;| &#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;|</p>
+<p class="Code">&#160;&#160;&#160;&#160;&#160;&#160;| &#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;+-- {1.json}</p>
+<p class="Code">&#160;&#160;&#160;&#160;&#160;&#160;|</p>
+<p class="Code">&#160;&#160;&#160;&#160;&#160;&#160;+-- {Service}/</p>
+<p class="Code">&#160;&#160;&#160;&#160;&#160;&#160;| &#160;&#160;&#160;|</p>
+<p class="Code">&#160;&#160;&#160;&#160;&#160;&#160;| &#160;&#160;&#160;+-- {src.js}</p>
+<p class="Code">&#160;&#160;&#160;&#160;&#160;&#160;|</p>
+<p class="Code">&#160;&#160;&#160;&#160;&#160;&#160;+-- {dir1}/</p>
+<p class="Code">&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;|</p>
+<p class="Code">&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;+-- {dir1-1}/</p>
+<p class="Code">&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;|</p>
+<p class="Code">&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;+-- {userdata1-2.jpg}</p>
+<p class="Code">&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;|</p>
+<p class="Code">&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;+-- {dir2}/</p>
+<p class="Code">&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;|</p>
+<p class="Code">&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;+-- [userdata1-2.jpg}</p>
+</td>
+</tr>
+</table>
+<p class="Paragraph">&#160;</p>
+<h3>Bar File Version Control</h3>
+<p class="Paragraph">bar file version will be upgraded when, data structure are changed because of some enhancements and at the back compatibility could not be ensured.</p>
+<p class="Bullet_1" style=" margin-left: 50px; text-indent: -30px;"><span class="rls-1-Bullets"><span style="font-family:'Symbol'">&#183;</span></span><span style='word-spacing:normal; font:6.0pt "Times New Roman"'><font size="1" style="font-size:6pt;">&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;</font></span>Version won’t be upgraded just because of adding files.</p>
+<p class="Bullet_1" style=" margin-left: 50px; text-indent: -30px;"><span class="rls-1-Bullets"><span style="font-family:'Symbol'">&#183;</span></span><span style='word-spacing:normal; font:6.0pt "Times New Roman"'><font size="1" style="font-size:6pt;">&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;</font></span>Versions should be upgraded for file name change and delete.</p>
+<h2>File List</h2>
+<h3>00_manifest.json</h3>
+<p class="Paragraph">File that contains information of the box to install.</p>
+<div>
+<table class="ParameterTable" style="margin-left: 26pt;" cellspacing="0px" width="96%">
+<col style="width: 22%;" />
+<col style="width: 20%;" />
+<col style="width: 20%;" />
+<col style="width: 10%;" />
+<col style="width: 28%;" />
+<tr>
+<th style="border: Solid 1px #9b9b9b;" bgcolor="#DADADA">
+<p class="GreyColumnHeading" style="font-weight: normal; margin-left: 0px;"><span style="font-weight: normal;"><span style="font-weight: bold; font-size: 10pt;"><font size="2" style="font-size:10pt;">項目名</font></span></span></p>
+</th>
+<th style="border-top: Solid 1px #9b9b9b; border-right: Solid 1px #9b9b9b; border-bottom: Solid 1px #9b9b9b;" bgcolor="#DADADA">
+<p class="GreyColumnHeading" style="font-weight: normal; margin-left: 0px;"><span style="font-weight: normal;"><span style="font-weight: bold; font-size: 10pt;"><font size="2" style="font-size:10pt;">概要</font></span></span></p>
+</th>
+<th style="border-top: Solid 1px #9b9b9b; border-right: Solid 1px #9b9b9b; border-bottom: Solid 1px #9b9b9b;" bgcolor="#DADADA">
+<p class="GreyColumnHeading" style="font-weight: normal; margin-left: 0px;"><span style="font-weight: normal;"><span style="font-size: 10pt; font-weight: bold;"><font size="2" style="font-size:10pt;">有効値</font></span></span></p>
+</th>
+<th style="border-top: Solid 1px #9b9b9b; border-right: Solid 1px #9b9b9b; border-bottom: Solid 1px #9b9b9b;" bgcolor="#DADADA">
+<p class="GreyColumnHeading" style="font-weight: normal; margin-left: 0px;"><span style="font-weight: normal;"><span style="font-size: 10pt; font-weight: bold;"><font size="2" style="font-size:10pt;">必須</font></span></span></p>
+</th>
+<th style="border-top: Solid 1px #9b9b9b; border-right: Solid 1px #9b9b9b; border-bottom: Solid 1px #9b9b9b;" bgcolor="#DADADA">
+<p class="GreyColumnHeading" style="font-weight: normal; margin-left: 0px;"><span style="font-weight: normal;">備考</span></p>
+</th>
+</tr>
+</table>
+</div>
+<div>
+<table class="ParameterTable" style="border-collapse: collapse; padding: 4px; color: rgb(72, 72, 72); font-family: Verdana, sans-serif; font-size: 12px; line-height: normal; orphans: auto; widows: auto; margin-left: 26pt;" cellspacing="0px" width="96%" bgcolor="#FFFFFF">
+<col style="width: 22%;" />
+<col style="width: 20%;" />
+<col style="width: 20%;" />
+<col style="width: 10%;" />
+<col style="width: 28%;" />
+<tr>
+<td style="border-left: Solid 1px #9b9b9b; border-right: Solid 1px #9b9b9b; border-bottom: Solid 1px #9b9b9b; padding: 4px; vertical-align: top;">
+<p class="TableText"><font><font>bar_version</font></font></p>
+</td>
+<td style="border-right: Solid 1px #9b9b9b; border-bottom: Solid 1px #9b9b9b; padding: 4px; vertical-align: top;">
+<p class="TableText"><font><font>version of bar files</font></font></p>
+</td>
+<td style="border-right: Solid 1px #9b9b9b; border-bottom: Solid 1px #9b9b9b; padding: 4px; vertical-align: top;">
+<p class="TableText">Valid version</p>
+<p class="TableText"><font><font>version changes for each change of the bar file format</font></font></p>
+</td>
+<td style="border-right: Solid 1px #9b9b9b; border-bottom: Solid 1px #9b9b9b; padding: 4px; vertical-align: top;">
+<p class="TableText"><font><font>○</font></font></p>
+</td>
+<td style="border-right: Solid 1px #9b9b9b; border-bottom: Solid 1px #9b9b9b; padding: 4px; vertical-align: top;">
+<p class="TableText"><font><font>"1" status quo</font></font></p>
+</td>
+</tr>
+</table>
+</div>
+<div>
+<table class="ParameterTable" style="border-collapse: collapse; padding: 4px; color: rgb(72, 72, 72); font-family: Verdana, sans-serif; font-size: 12px; line-height: normal; orphans: auto; widows: auto; margin-left: 26pt;" cellspacing="0px" width="96%" bgcolor="#FFFFFF">
+<col style="width: 22%;" />
+<col style="width: 20%;" />
+<col style="width: 20%;" />
+<col style="width: 10%;" />
+<col style="width: 28%;" />
+<tr>
+<td style="border-left: Solid 1px #9b9b9b; border-right: solid 1px #9b9b9b; border-bottom: solid 1px #9b9b9b; padding: 4px; vertical-align: top;">
+<p class="TableText"><font><font class="">box_version</font></font></p>
+</td>
+<td style="border-right: solid 1px #9b9b9b; border-bottom: solid 1px #9b9b9b; padding: 4px; vertical-align: top;">
+<p class="TableText"><font><font>Version of Box</font></font></p>
+</td>
+<td style="border-right: solid 1px #9b9b9b; border-bottom: solid 1px #9b9b9b; padding: 4px; vertical-align: top;">
+<p class="TableText">Valid version</p>
+<p class="TableText">Version changes for each change of Box&#160;format</p>
+</td>
+<td style="border-right: solid 1px #9b9b9b; border-bottom: solid 1px #9b9b9b; padding: 4px; vertical-align: top;">
+<p class="TableText"><font><font>○</font></font></p>
+</td>
+<td style="border-right: solid 1px #9b9b9b; border-bottom: solid 1px #9b9b9b; padding: 4px; vertical-align: top;">
+<p class="TableText">Any string will be fine but "1" is recommended (to provide the Box revision function)</p>
+</td>
+</tr>
+</table>
+</div>
+<div>
+<table class="ParameterTable" style="border-collapse: collapse; padding: 4px; color: rgb(72, 72, 72); font-family: Verdana, sans-serif; font-size: 12px; line-height: normal; orphans: auto; widows: auto; margin-left: 26pt;" cellspacing="0px" width="96%" bgcolor="#FFFFFF">
+<col style="width: 22%;" />
+<col style="width: 20%;" />
+<col style="width: 20%;" />
+<col style="width: 10%;" />
+<col style="width: 28%;" />
+<tr>
+<td style="border-left: Solid 1px #9b9b9b; border-right: solid 1px #9b9b9b; border-bottom: solid 1px #9b9b9b; padding: 4px; vertical-align: top;">
+<p class="TableText"><font><font>DefaultPath</font></font></p>
+</td>
+<td style="border-right: solid 1px #9b9b9b; border-bottom: solid 1px #9b9b9b; padding: 4px; vertical-align: top;">
+<p class="TableText"><font><font>Box name in the bar file</font></font></p>
+</td>
+<td style="border-right: solid 1px #9b9b9b; border-bottom: solid 1px #9b9b9b; padding: 4px; vertical-align: top;">
+<p class="TableText">Number of Digits: 1-128</p>
+<p class="TableText">Character type: half-width [alphanumeric characters, - (hyphen) and _ (underscore)]</p>
+<p class="TableText">However, the first character with half-width [ - (hyphen) and _ (underscore)] is not allowed.</p>
+<p class="TableText">"null" is also not allowed</p>
+</td>
+<td style="border-right: solid 1px #9b9b9b; border-bottom: solid 1px #9b9b9b; padding: 4px; vertical-align: top;">
+<p class="TableText"><font><font>○</font></font></p>
+</td>
+<td style="border-right: solid 1px #9b9b9b; border-bottom: solid 1px #9b9b9b; padding: 4px; vertical-align: top;">
+<p class="TableText">&#160;</p>
+</td>
+</tr>
+</table>
+</div>
+<div>
+<table class="ParameterTable" style="border-collapse: collapse; padding: 4px; color: rgb(72, 72, 72); font-family: Verdana, sans-serif; font-size: 12px; line-height: normal; orphans: auto; widows: auto; margin-left: 26pt;" cellspacing="0px" width="96%" bgcolor="#FFFFFF">
+<col style="width: 22%;" />
+<col style="width: 20%;" />
+<col style="width: 20%;" />
+<col style="width: 10%;" />
+<col style="width: 28%;" />
+<tr>
+<td style="border-left: Solid 1px #9b9b9b; border-right: solid 1px #9b9b9b; border-bottom: solid 1px #9b9b9b; padding: 4px; vertical-align: top;">
+<p class="TableText"><font><font>schema</font></font></p>
+</td>
+<td style="border-right: solid 1px #9b9b9b; border-bottom: solid 1px #9b9b9b; padding: 4px; vertical-align: top;">
+<p class="TableText"><font><font>Schema name</font></font></p>
+</td>
+<td style="border-right: solid 1px #9b9b9b; border-bottom: solid 1px #9b9b9b; padding: 4px; vertical-align: top;">
+<p class="TableText"><font class="">Number of digits: 1-1024</font></p>
+<p class="TableText"><span class="hps">The URL format to be followed is (scheme: http / https / urn)</span></p>
+<p class="TableText"><font class="">null can be specified.</font></p>
+</td>
+<td style="border-right: solid 1px #9b9b9b; border-bottom: solid 1px #9b9b9b; padding: 4px; vertical-align: top;">
+<p class="TableText"><font><font>×</font></font></p>
+</td>
+<td style="border-right: solid 1px #9b9b9b; border-bottom: solid 1px #9b9b9b; padding: 4px; vertical-align: top;">
+<p class="TableText">&#160;</p>
+</td>
+</tr>
+</table>
+</div>
+<h4><span style="font-weight: bold;">CURLサンプル</span></h4>
+<table class="CodeTable" style="margin-left: 26pt;" cellspacing="0px" width="96%">
+<col style="width: 100%;" />
+<tr>
+<td>
+<pre class="prettyprint">
+<br />{<br />  "Bar_version": "1",<br />  "Box_version": "1",<br />  "DefaultPath": "boxName",<br />  "Schema": "http://app1.example.com" <br />}
+</pre></td>
+</tr>
+</table>
+<h3>10_relations.json</h3>
+<p class="Paragraph">File that contains the Relation information of the target installation.</p>
+<p class="Paragraph">Refer to <a href="../../../../../../../../../../../workspace/track3_sources/API_Reference_EN/Sources/APIReferenceGuide/ENG/APIReference/PersonaContainerAPIs/CellLevelAPIs/BoxManipulation/Relation request body" style="color: #0000ff;">Relation request body</a>, for the "Active value" field [-] topic.</p>
+<div>
+<table class="ParameterTable" style="margin-left: 26pt;" cellspacing="0px" width="96%">
+<col style="width: 22%;" />
+<col style="width: 20%;" />
+<col style="width: 20%;" />
+<col style="width: 10%;" />
+<col style="width: 28%;" />
+<tr>
+<th style="border: Solid 1px #9b9b9b;" bgcolor="#DADADA">
+<p class="GreyColumnHeading" style="font-weight: normal; margin-left: 0px;"><span style="font-weight: normal;"><span style="font-weight: bold; font-size: 10pt;"><font size="2" style="font-size:10pt;">項目名</font></span></span></p>
+</th>
+<th style="border-top: Solid 1px #9b9b9b; border-right: Solid 1px #9b9b9b; border-bottom: Solid 1px #9b9b9b;" bgcolor="#DADADA">
+<p class="GreyColumnHeading" style="font-weight: normal; margin-left: 0px;"><span style="font-weight: normal;"><span style="font-weight: bold; font-size: 10pt;"><font size="2" style="font-size:10pt;">概要</font></span></span></p>
+</th>
+<th style="border-top: Solid 1px #9b9b9b; border-right: Solid 1px #9b9b9b; border-bottom: Solid 1px #9b9b9b;" bgcolor="#DADADA">
+<p class="GreyColumnHeading" style="font-weight: normal; margin-left: 0px;"><span style="font-weight: normal;"><span style="font-size: 10pt; font-weight: bold;"><font size="2" style="font-size:10pt;">有効値</font></span></span></p>
+</th>
+<th style="border-top: Solid 1px #9b9b9b; border-right: Solid 1px #9b9b9b; border-bottom: Solid 1px #9b9b9b;" bgcolor="#DADADA">
+<p class="GreyColumnHeading" style="font-weight: normal; margin-left: 0px;"><span style="font-weight: normal;"><span style="font-size: 10pt; font-weight: bold;"><font size="2" style="font-size:10pt;">必須</font></span></span></p>
+</th>
+<th style="border-top: Solid 1px #9b9b9b; border-right: Solid 1px #9b9b9b; border-bottom: Solid 1px #9b9b9b;" bgcolor="#DADADA">
+<p class="GreyColumnHeading" style="font-weight: normal; margin-left: 0px;"><span style="font-weight: normal;">備考</span></p>
+</th>
+</tr>
+</table>
+</div>
+<div>
+<table style="margin-left: 26pt;" cellspacing="0" width="96%">
+<col style="width: 22%;" />
+<col style="width: 20%;" />
+<col style="width: 20%;" />
+<col style="width: 10%;" />
+<col style="width: 28%;" />
+<tr style="color: rgb(72, 72, 72); font-family: Verdana, sans-serif; font-size: 12px; font-style: normal; font-variant: normal; font-weight: normal; letter-spacing: normal; line-height: normal; orphans: auto; text-align: start; text-indent: 0px; text-transform: none; white-space: normal; widows: auto; word-spacing: 0px; -webkit-text-stroke-width: 0px;" bgcolor="#FFFFFF">
+<td style="border-left: Solid 1px #9b9b9b; border-right: solid 1px #9b9b9b; border-bottom: solid 1px #9b9b9b; padding: 4px;">
+<p class="TableText"><font><font>Relations</font></font></p>
+</td>
+<td style="border-right: solid 1px #9b9b9b; border-bottom: solid 1px #9b9b9b; padding: 4px;">
+<p class="TableText"><font><font class="">List of Relation</font></font></p>
+</td>
+<td style="border-right: solid 1px #9b9b9b; border-bottom: solid 1px #9b9b9b; padding: 4px;">
+<p class="TableText">&#160;</p>
+</td>
+<td style="border-right: solid 1px #9b9b9b; border-bottom: solid 1px #9b9b9b; padding: 4px;">
+<p class="TableText"><font><font>○</font></font></p>
+</td>
+<td style="border-right: solid 1px #9b9b9b; border-bottom: solid 1px #9b9b9b; padding: 4px;">
+<p class="TableText">&#160;</p>
+</td>
+</tr>
+</table>
+</div>
+<div>
+<table class="ParameterTable" style="margin-left: 26pt;" cellspacing="0px" width="96%">
+<col style="width: 22%;" />
+<col style="width: 20%;" />
+<col style="width: 20%;" />
+<col style="width: 10%;" />
+<col style="width: 28%;" />
+<tr style="color: rgb(72, 72, 72); font-family: Verdana, sans-serif; font-size: 12px; font-style: normal; font-variant: normal; font-weight: normal; letter-spacing: normal; line-height: normal; orphans: auto; text-align: start; text-indent: 0px; text-transform: none; white-space: normal; widows: auto; word-spacing: 0px; -webkit-text-stroke-width: 0px;" bgcolor="#FFFFFF">
+<td style="border-left: Solid 1px #9b9b9b; border-right: solid 1px #9b9b9b; border-bottom: solid 1px #9b9b9b; padding: 4px;">
+<p class="TableText"><font><font>Relations / Name</font></font></p>
+</td>
+<td style="border-right: solid 1px #9b9b9b; border-bottom: solid 1px #9b9b9b; padding: 4px;">
+<p class="TableText"><font><font>Relation name</font></font></p>
+</td>
+<td style="border-right: solid 1px #9b9b9b; border-bottom: solid 1px #9b9b9b; padding: 4px;">
+<p class="TableText"><font><font>-</font></font></p>
+</td>
+<td style="border-right: solid 1px #9b9b9b; border-bottom: solid 1px #9b9b9b; padding: 4px;">
+<p class="TableText"><font><font>○</font></font></p>
+</td>
+<td style="border-right: solid 1px #9b9b9b; border-bottom: solid 1px #9b9b9b; padding: 4px;">
+<p class="TableText">&#160;</p>
+</td>
+</tr>
+</table>
+</div>
+<h4><span style="font-weight: bold;">CURLサンプル</span></h4>
+<table class="CodeTable" style="margin-left: 26pt;" cellspacing="0px" width="96%">
+<col style="width: 100%;" />
+<tr>
+<td>
+<pre class="prettyprint">
+<br />{<br />  "Relations": [<br />    {<br />      "Name": "relation1" <br />    }<br />  ]<br />}
+</pre></td>
+</tr>
+</table>
+<h3>20_roles.json</h3>
+<p class="Paragraph">File that contains the Role information of the target installation.</p>
+<p class="Paragraph">Refer to <a href="../../../../../../../../../../../workspace/track3_sources/API_Reference_EN/Sources/APIReferenceGuide/ENG/APIReference/PersonaContainerAPIs/CellLevelAPIs/BoxManipulation/Relation request body" style="color: #0000ff;">Role request body</a>, for the "Active value" field [-] topic.</p>
+<div>
+<table class="ParameterTable" style="margin-left: 26pt;" cellspacing="0px" width="96%">
+<col style="width: 22%;" />
+<col style="width: 20%;" />
+<col style="width: 20%;" />
+<col style="width: 10%;" />
+<col style="width: 28%;" />
+<tr>
+<th style="border: Solid 1px #9b9b9b;" bgcolor="#DADADA">
+<p class="GreyColumnHeading" style="font-weight: normal; margin-left: 0px;"><span style="font-weight: normal;"><span style="font-weight: bold; font-size: 10pt;"><font size="2" style="font-size:10pt;">項目名</font></span></span></p>
+</th>
+<th style="border-top: Solid 1px #9b9b9b; border-right: Solid 1px #9b9b9b; border-bottom: Solid 1px #9b9b9b;" bgcolor="#DADADA">
+<p class="GreyColumnHeading" style="font-weight: normal; margin-left: 0px;"><span style="font-weight: normal;"><span style="font-weight: bold; font-size: 10pt;"><font size="2" style="font-size:10pt;">概要</font></span></span></p>
+</th>
+<th style="border-top: Solid 1px #9b9b9b; border-right: Solid 1px #9b9b9b; border-bottom: Solid 1px #9b9b9b;" bgcolor="#DADADA">
+<p class="GreyColumnHeading" style="font-weight: normal; margin-left: 0px;"><span style="font-weight: normal;"><span style="font-size: 10pt; font-weight: bold;"><font size="2" style="font-size:10pt;">有効値</font></span></span></p>
+</th>
+<th style="border-top: Solid 1px #9b9b9b; border-right: Solid 1px #9b9b9b; border-bottom: Solid 1px #9b9b9b;" bgcolor="#DADADA">
+<p class="GreyColumnHeading" style="font-weight: normal; margin-left: 0px;"><span style="font-weight: normal;"><span style="font-size: 10pt; font-weight: bold;"><font size="2" style="font-size:10pt;">必須</font></span></span></p>
+</th>
+<th style="border-top: Solid 1px #9b9b9b; border-right: Solid 1px #9b9b9b; border-bottom: Solid 1px #9b9b9b;" bgcolor="#DADADA">
+<p class="GreyColumnHeading" style="font-weight: normal; margin-left: 0px;"><span style="font-weight: normal;">備考</span></p>
+</th>
+</tr>
+</table>
+</div>
+<div>
+<table class="ParameterTable" style="border-collapse: collapse; padding: 4px; color: rgb(72, 72, 72); font-family: Verdana, sans-serif; font-size: 12px; line-height: normal; orphans: auto; widows: auto; margin-left: 26pt;" cellspacing="0px" width="96%" bgcolor="#FFFFFF">
+<col style="width: 22%;" />
+<col style="width: 20%;" />
+<col style="width: 20%;" />
+<col style="width: 10%;" />
+<col style="width: 28%;" />
+<tr>
+<td style="border-left: solid 1px #9b9b9b; border-right: solid 1px #9b9b9b; border-bottom: Solid 1px #9b9b9b; padding: 4px;">
+<p class="TableText"><font><font>Roles</font></font></p>
+</td>
+<td style="border-right: solid 1px #9b9b9b; border-bottom: Solid 1px #9b9b9b; padding: 4px;">
+<p class="TableText"><font><font>List of Role</font></font></p>
+</td>
+<td style="border-right: solid 1px #9b9b9b; border-bottom: Solid 1px #9b9b9b; padding: 4px;">
+<p class="TableText">&#160;</p>
+</td>
+<td style="border-right: solid 1px #9b9b9b; border-bottom: Solid 1px #9b9b9b; padding: 4px;">
+<p class="TableText"><font><font>○</font></font></p>
+</td>
+<td style="border-right: Solid 1px #9b9b9b; border-bottom: Solid 1px #9b9b9b; padding: 4px;">
+<p class="TableText">&#160;</p>
+</td>
+</tr>
+</table>
+</div>
+<div>
+<table class="ParameterTable" style="border-collapse: collapse; margin-bottom: 1em; padding: 4px; color: rgb(72, 72, 72); font-family: Verdana, sans-serif; font-size: 12px; line-height: normal; orphans: auto; widows: auto; margin-left: 26pt;" cellspacing="0px" width="96%" bgcolor="#FFFFFF">
+<col style="width: 22%;" />
+<col style="width: 20%;" />
+<col style="width: 20%;" />
+<col style="width: 10%;" />
+<col style="width: 28%;" />
+<tr>
+<td style="border-left: solid 1px #9b9b9b; border-right: solid 1px #9b9b9b; border-bottom: Solid 1px #9b9b9b; padding: 4px;">
+<p class="TableText"><font><font>Roles / Name</font></font></p>
+</td>
+<td style="border-right: solid 1px #9b9b9b; border-bottom: Solid 1px #9b9b9b; padding: 4px;">
+<p class="TableText"><font><font>Role name</font></font></p>
+</td>
+<td style="border-right: solid 1px #9b9b9b; border-bottom: Solid 1px #9b9b9b; padding: 4px;">
+<p class="TableText"><font><font>-</font></font></p>
+</td>
+<td style="border-right: solid 1px #9b9b9b; border-bottom: Solid 1px #9b9b9b; padding: 4px;">
+<p class="TableText"><font><font>○</font></font></p>
+</td>
+<td style="border-right: Solid 1px #9b9b9b; border-bottom: Solid 1px #9b9b9b;">
+<p class="TableText">&#160;</p>
+</td>
+</tr>
+</table>
+</div>
+<h4><span style="font-weight: bold;">CURLサンプル</span></h4>
+<table class="CodeTable" style="margin-left: 26pt;" cellspacing="0px" width="96%">
+<col style="width: 100%;" />
+<tr>
+<td>
+<pre class="prettyprint">
+<br />{<br />  "Roles": [<br />    {<br />      "Name": "role1" <br />    }<br />  ]<br />}
+</pre></td>
+</tr>
+</table>
+<h3>30_extroles.json</h3>
+<p class="Paragraph">File that contains the ExtRole information of the target installation.</p>
+<p class="Paragraph2" style="color: #353535;">Refer to <a href="../../../../../../../../../../../workspace/track3_sources/API_Reference_EN/Sources/APIReferenceGuide/ENG/APIReference/PersonaContainerAPIs/CellLevelAPIs/BoxManipulation/Relation request body" style="color: #0000ff;">ExtRole request body</a>, for the "Active value" field [-] topic.</p>
+<div>
+<table class="ParameterTable" style="margin-left: 26pt;" cellspacing="0px" width="96%">
+<col style="width: 22%;" />
+<col style="width: 20%;" />
+<col style="width: 20%;" />
+<col style="width: 10%;" />
+<col style="width: 28%;" />
+<tr>
+<th style="border: Solid 1px #9b9b9b;" bgcolor="#DADADA">
+<p class="GreyColumnHeading" style="font-weight: normal; margin-left: 0px;"><span style="font-weight: normal;"><span style="font-weight: bold; font-size: 10pt;"><font size="2" style="font-size:10pt;">項目名</font></span></span></p>
+</th>
+<th style="border-top: Solid 1px #9b9b9b; border-right: Solid 1px #9b9b9b; border-bottom: Solid 1px #9b9b9b;" bgcolor="#DADADA">
+<p class="GreyColumnHeading" style="font-weight: normal; margin-left: 0px;"><span style="font-weight: normal;"><span style="font-weight: bold; font-size: 10pt;"><font size="2" style="font-size:10pt;">概要</font></span></span></p>
+</th>
+<th style="border-top: Solid 1px #9b9b9b; border-right: Solid 1px #9b9b9b; border-bottom: Solid 1px #9b9b9b;" bgcolor="#DADADA">
+<p class="GreyColumnHeading" style="font-weight: normal; margin-left: 0px;"><span style="font-weight: normal;"><span style="font-size: 10pt; font-weight: bold;"><font size="2" style="font-size:10pt;">有効値</font></span></span></p>
+</th>
+<th style="border-top: Solid 1px #9b9b9b; border-right: Solid 1px #9b9b9b; border-bottom: Solid 1px #9b9b9b;" bgcolor="#DADADA">
+<p class="GreyColumnHeading" style="font-weight: normal; margin-left: 0px;"><span style="font-weight: normal;"><span style="font-size: 10pt; font-weight: bold;"><font size="2" style="font-size:10pt;">必須</font></span></span></p>
+</th>
+<th style="border-top: Solid 1px #9b9b9b; border-right: Solid 1px #9b9b9b; border-bottom: Solid 1px #9b9b9b;" bgcolor="#DADADA">
+<p class="GreyColumnHeading" style="font-weight: normal; margin-left: 0px;"><span style="font-weight: normal;">備考</span></p>
+</th>
+</tr>
+</table>
+</div>
+<div>
+<table class="ParameterTable" style="border-collapse: collapse; padding: 4px; color: rgb(72, 72, 72); font-family: Verdana, sans-serif; font-size: 12px; line-height: normal; orphans: auto; widows: auto; margin-left: 26pt;" cellspacing="0px" width="96%" bgcolor="#FFFFFF">
+<col style="width: 22%;" />
+<col style="width: 20%;" />
+<col style="width: 20%;" />
+<col style="width: 10%;" />
+<col style="width: 28%;" />
+<tr>
+<td style="border-left: solid 1px #9b9b9b; border-right: solid 1px #9b9b9b; border-bottom: solid 1px #9b9b9b; padding: 4px;">
+<p class="TableText"><font><font>ExtRoles</font></font></p>
+</td>
+<td style="border-right: Solid 1px #9b9b9b; border-bottom: Solid 1px #9b9b9b; padding: 4px;">
+<p class="TableText"><font><font>List of ExtRole</font></font></p>
+</td>
+<td style="border-right: Solid 1px #9b9b9b; border-bottom: Solid 1px #9b9b9b; padding: 4px;">
+<p class="TableText">&#160;</p>
+</td>
+<td style="border-right: Solid 1px #9b9b9b; border-bottom: Solid 1px #9b9b9b; padding: 4px;">
+<p class="TableText"><font><font>○</font></font></p>
+</td>
+<td style="border-right: solid 1px #9b9b9b; border-bottom: Solid 1px #9b9b9b; padding: 4px;">
+<p class="TableText">&#160;</p>
+</td>
+</tr>
+</table>
+</div>
+<div>
+<table class="ParameterTable" style="border-collapse: collapse; padding: 4px; color: rgb(72, 72, 72); font-family: Verdana, sans-serif; font-size: 12px; line-height: normal; orphans: auto; widows: auto; margin-left: 26pt;" cellspacing="0px" width="96%" bgcolor="#FFFFFF">
+<col style="width: 22%;" />
+<col style="width: 20%;" />
+<col style="width: 20%;" />
+<col style="width: 10%;" />
+<col style="width: 28%;" />
+<tr>
+<td style="border-left: solid 1px #9b9b9b; border-right: Solid 1px #9b9b9b; border-bottom: Solid 1px #9b9b9b; padding: 4px;">
+<p class="TableText">ExtRoles / _Relation.Name</p>
+</td>
+<td style="border-right: Solid 1px #9b9b9b; border-bottom: Solid 1px #9b9b9b; padding: 4px;">
+<p class="TableText">Relation name</p>
+</td>
+<td style="border-right: Solid 1px #9b9b9b; border-bottom: Solid 1px #9b9b9b; padding: 4px;">
+<p class="TableText"><font><font>-</font></font></p>
+</td>
+<td style="border-right: Solid 1px #9b9b9b; border-bottom: Solid 1px #9b9b9b; padding: 4px;">
+<p class="TableText"><font><font>○</font></font></p>
+</td>
+<td style="border-right: solid 1px #9b9b9b; border-bottom: Solid 1px #9b9b9b; padding: 4px;">
+<p class="TableText"><font><font class="">Cannot be null</font></font></p>
+</td>
+</tr>
+</table>
+</div>
+<div>
+<table class="ParameterTable" style="border-collapse: collapse; padding: 4px; color: rgb(72, 72, 72); font-family: Verdana, sans-serif; font-size: 12px; line-height: normal; orphans: auto; widows: auto; margin-left: 26pt;" cellspacing="0px" width="96%" bgcolor="#FFFFFF">
+<col style="width: 22%;" />
+<col style="width: 20%;" />
+<col style="width: 20%;" />
+<col style="width: 10%;" />
+<col style="width: 28%;" />
+<tr>
+<td style="border-left: solid 1px #9b9b9b; border-right: Solid 1px #9b9b9b; border-bottom: Solid 1px #9b9b9b; padding: 4px;">
+<p class="TableText">ExtRoles / _Relation.Name</p>
+</td>
+<td style="border-right: Solid 1px #9b9b9b; border-bottom: Solid 1px #9b9b9b; padding: 4px;">
+<p class="TableText">Relation name</p>
+</td>
+<td style="border-right: Solid 1px #9b9b9b; border-bottom: Solid 1px #9b9b9b; padding: 4px;">
+<p class="TableText"><font><font>-</font></font></p>
+</td>
+<td style="border-right: Solid 1px #9b9b9b; border-bottom: Solid 1px #9b9b9b; padding: 4px;">
+<p class="TableText"><font><font>○</font></font></p>
+</td>
+<td style="border-right: solid 1px #9b9b9b; border-bottom: Solid 1px #9b9b9b; padding: 4px;">
+<p class="TableText"><font><font class="">Cannot be null</font></font></p>
+</td>
+</tr>
+</table>
+</div>
+<p class="Paragraph">&#160;</p>
+<p class="Paragraph">(※ 1) While exporting, convert to the role class URL<br />
+https://fqdn/cell1/__role/box/staff -&gt; https://fqdn/cell1/__role/__/staff</p>
+<h4><span style="font-weight: bold;">CURLサンプル</span></h4>
+<table class="CodeTable" style="margin-left: 26pt;" cellspacing="0px" width="96%">
+<col style="width: 100%;" />
+<tr>
+<td>
+<pre class="prettyprint">
+<br />{<br />  "ExtRoles": [<br />    {<br />      "ExtRole": "https://fqdn/cellName/__role/__/role2",<br />      "_Relation.Name": "Relation1" <br />    }<br />  ]<br />}
+</pre></td>
+</tr>
+</table>
+<h3>70_$links.json</h3>
+<p class="Paragraph">File that describes the $links data-related information for installation</p>
+<div>
+<table class="ParameterTable" style="margin-left: 26pt;" cellspacing="0px" width="96%">
+<col style="width: 22%;" />
+<col style="width: 20%;" />
+<col style="width: 20%;" />
+<col style="width: 10%;" />
+<col style="width: 28%;" />
+<tr>
+<th style="border: Solid 1px #9b9b9b;" bgcolor="#DADADA">
+<p class="GreyColumnHeading" style="font-weight: normal; margin-left: 0px;"><span style="font-weight: normal;"><span style="font-weight: bold; font-size: 10pt;"><font size="2" style="font-size:10pt;">項目名</font></span></span></p>
+</th>
+<th style="border-top: Solid 1px #9b9b9b; border-right: Solid 1px #9b9b9b; border-bottom: Solid 1px #9b9b9b;" bgcolor="#DADADA">
+<p class="GreyColumnHeading" style="font-weight: normal; margin-left: 0px;"><span style="font-weight: normal;"><span style="font-weight: bold; font-size: 10pt;"><font size="2" style="font-size:10pt;">概要</font></span></span></p>
+</th>
+<th style="border-top: Solid 1px #9b9b9b; border-right: Solid 1px #9b9b9b; border-bottom: Solid 1px #9b9b9b;" bgcolor="#DADADA">
+<p class="GreyColumnHeading" style="font-weight: normal; margin-left: 0px;"><span style="font-weight: normal;"><span style="font-size: 10pt; font-weight: bold;"><font size="2" style="font-size:10pt;">有効値</font></span></span></p>
+</th>
+<th style="border-top: Solid 1px #9b9b9b; border-right: Solid 1px #9b9b9b; border-bottom: Solid 1px #9b9b9b;" bgcolor="#DADADA">
+<p class="GreyColumnHeading" style="font-weight: normal; margin-left: 0px;"><span style="font-weight: normal;"><span style="font-size: 10pt; font-weight: bold;"><font size="2" style="font-size:10pt;">必須</font></span></span></p>
+</th>
+<th style="border-top: Solid 1px #9b9b9b; border-right: Solid 1px #9b9b9b; border-bottom: Solid 1px #9b9b9b;" bgcolor="#DADADA">
+<p class="GreyColumnHeading" style="font-weight: normal; margin-left: 0px;"><span style="font-weight: normal;">備考</span></p>
+</th>
+</tr>
+</table>
+</div>
+<div>
+<table class="ParameterTable" style="margin-left: 26pt;" cellspacing="0px" width="96%">
+<col style="width: 22%;" />
+<col style="width: 20%;" />
+<col style="width: 20%;" />
+<col style="width: 10%;" />
+<col style="width: 28%;" />
+<tr style="color: rgb(72, 72, 72); font-family: Verdana, sans-serif; font-size: 12px; font-style: normal; font-variant: normal; font-weight: normal; letter-spacing: normal; line-height: normal; orphans: auto; text-align: start; text-indent: 0px; text-transform: none; white-space: normal; widows: auto; word-spacing: 0px; -webkit-text-stroke-width: 0px;" bgcolor="#FFFFFF">
+<td style="border-left: solid 1px #9b9b9b; border-right: solid 1px #9b9b9b; border-bottom: solid 1px #9b9b9b; padding: 4px; vertical-align: top;">
+<p class="TableText"><font><font>Links</font></font></p>
+</td>
+<td style="border-right: solid 1px #9b9b9b; border-bottom: solid 1px #9b9b9b; padding: 4px; vertical-align: top;">
+<p class="TableText"><font><font>List of $links</font></font></p>
+</td>
+<td style="border-right: solid 1px #9b9b9b; border-bottom: solid 1px #9b9b9b; padding: 4px; vertical-align: top;">
+<p class="TableText">&#160;</p>
+</td>
+<td style="border-right: solid 1px #9b9b9b; border-bottom: solid 1px #9b9b9b; padding: 4px; vertical-align: top;">
+<p class="TableText"><font><font>○</font></font></p>
+</td>
+<td style="border-right: solid 1px #9b9b9b; border-bottom: solid 1px #9b9b9b; padding: 4px; vertical-align: top;">
+<p class="TableText">&#160;</p>
+</td>
+</tr>
+</table>
+</div>
+<div>
+<table class="ParameterTable" style="margin-left: 26pt;" cellspacing="0px" width="96%">
+<col style="width: 22%;" />
+<col style="width: 20%;" />
+<col style="width: 20%;" />
+<col style="width: 10%;" />
+<col style="width: 28%;" />
+<tr style="color: rgb(72, 72, 72); font-family: Verdana, sans-serif; font-size: 12px; font-style: normal; font-variant: normal; font-weight: normal; letter-spacing: normal; line-height: normal; orphans: auto; text-align: start; text-indent: 0px; text-transform: none; white-space: normal; widows: auto; word-spacing: 0px; -webkit-text-stroke-width: 0px;" bgcolor="#FFFFFF">
+<td style="border-left: solid 1px #9b9b9b; border-right: solid 1px #9b9b9b; border-bottom: solid 1px #9b9b9b; padding: 4px; vertical-align: top;">
+<p class="TableText"><font><font>Links / FromType</font></font></p>
+</td>
+<td style="border-right: solid 1px #9b9b9b; border-bottom: solid 1px #9b9b9b; padding: 4px; vertical-align: top;">
+<p class="TableText"><font><font>Type of source data</font></font></p>
+</td>
+<td style="border-right: solid 1px #9b9b9b; border-bottom: solid 1px #9b9b9b; padding: 4px; vertical-align: top;">
+<p class="TableText">"Relation"</p>
+<p class="TableText">"Role"</p>
+<p class="TableText"><font><font>"ExtRole"</font></font></p>
+</td>
+<td style="border-right: solid 1px #9b9b9b; border-bottom: solid 1px #9b9b9b; padding: 4px; vertical-align: top;">
+<p class="TableText"><font><font>○</font></font></p>
+</td>
+<td style="border-right: solid 1px #9b9b9b; border-bottom: solid 1px #9b9b9b; padding: 4px; vertical-align: top;">
+<p class="TableText"><font><font>Cannot be null.</font></font></p>
+</td>
+</tr>
+</table>
+</div>
+<div>
+<table class="ParameterTable" style="margin-left: 26pt;" cellspacing="0px" width="96%">
+<col style="width: 22%;" />
+<col style="width: 20%;" />
+<col style="width: 20%;" />
+<col style="width: 10%;" />
+<col style="width: 28%;" />
+<tr style="color: rgb(72, 72, 72); font-family: Verdana, sans-serif; font-size: 12px; font-style: normal; font-variant: normal; font-weight: normal; letter-spacing: normal; line-height: normal; orphans: auto; text-align: start; text-indent: 0px; text-transform: none; white-space: normal; widows: auto; word-spacing: 0px; -webkit-text-stroke-width: 0px;" bgcolor="#FFFFFF">
+<td style="border-left: solid 1px #9b9b9b; border-right: solid 1px #9b9b9b; border-bottom: solid 1px #9b9b9b; padding: 4px; vertical-align: top;">
+<p class="TableText"><font><font>Links / FromName</font></font></p>
+</td>
+<td style="border-right: solid 1px #9b9b9b; border-bottom: solid 1px #9b9b9b; padding: 4px; vertical-align: top;">
+<p class="TableText">Name of the source data</p>
+</td>
+<td style="border-right: solid 1px #9b9b9b; border-bottom: solid 1px #9b9b9b; padding: 4px; vertical-align: top;">
+<p class="TableText">- ( ※ 1 arranged format)</p>
+</td>
+<td style="border-right: solid 1px #9b9b9b; border-bottom: solid 1px #9b9b9b; padding: 4px; vertical-align: top;">
+<p class="TableText"><font><font>○</font></font></p>
+</td>
+<td style="border-right: solid 1px #9b9b9b; border-bottom: solid 1px #9b9b9b; padding: 4px; vertical-align: top;">
+<p class="TableText"><font><font>not null,<span class="Apple-converted-space">&#160;</span></font></font><br />
+<font><font>(example: {"Name": "relation1"}])</font></font></p>
+</td>
+</tr>
+</table>
+</div>
+<div>
+<table class="ParameterTable" style="margin-left: 26pt;" cellspacing="0px" width="96%">
+<col style="width: 22%;" />
+<col style="width: 20%;" />
+<col style="width: 20%;" />
+<col style="width: 10%;" />
+<col style="width: 28%;" />
+<tr style="color: rgb(72, 72, 72); font-family: Verdana, sans-serif; font-size: 12px; font-style: normal; font-variant: normal; font-weight: normal; letter-spacing: normal; line-height: normal; orphans: auto; text-align: start; text-indent: 0px; text-transform: none; white-space: normal; widows: auto; word-spacing: 0px; -webkit-text-stroke-width: 0px;" bgcolor="#FFFFFF">
+<td style="border-left: solid 1px #9b9b9b; border-right: solid 1px #9b9b9b; border-bottom: solid 1px #9b9b9b; padding: 4px; vertical-align: top;">
+<p class="TableText"><font><font>Links / ToType</font></font></p>
+</td>
+<td style="border-right: solid 1px #9b9b9b; border-bottom: solid 1px #9b9b9b; padding: 4px; vertical-align: top;">
+<p class="TableText"><font><font>Type of the referenced data</font></font></p>
+</td>
+<td style="border-right: solid 1px #9b9b9b; border-bottom: solid 1px #9b9b9b; padding: 4px; vertical-align: top;">
+<p class="TableText">"Relation"</p>
+<p class="TableText">"Role"</p>
+<p class="TableText"><font><font>"ExtRole"</font></font></p>
+</td>
+<td style="border-right: solid 1px #9b9b9b; border-bottom: solid 1px #9b9b9b; padding: 4px; vertical-align: top;">
+<p class="TableText"><font><font>○</font></font></p>
+</td>
+<td style="border-right: solid 1px #9b9b9b; border-bottom: solid 1px #9b9b9b; padding: 4px; vertical-align: top;">
+<p class="TableText"><font><font>Cannot be null</font></font></p>
+</td>
+</tr>
+</table>
+</div>
+<div>
+<table class="ParameterTable" style="margin-left: 26pt;" cellspacing="0px" width="96%">
+<col style="width: 22%;" />
+<col style="width: 20%;" />
+<col style="width: 20%;" />
+<col style="width: 10%;" />
+<col style="width: 28%;" />
+<tr style="color: rgb(72, 72, 72); font-family: Verdana, sans-serif; font-size: 12px; font-style: normal; font-variant: normal; font-weight: normal; letter-spacing: normal; line-height: normal; orphans: auto; text-align: start; text-indent: 0px; text-transform: none; white-space: normal; widows: auto; word-spacing: 0px; -webkit-text-stroke-width: 0px;" bgcolor="#FFFFFF">
+<td style="border-left: solid 1px #9b9b9b; border-right: solid 1px #9b9b9b; border-bottom: solid 1px #9b9b9b; padding: 4px; vertical-align: top;">
+<p class="TableText"><font><font>Links / ToName</font></font></p>
+</td>
+<td style="border-right: solid 1px #9b9b9b; border-bottom: solid 1px #9b9b9b; padding: 4px; vertical-align: top;">
+<p class="TableText"><font><font>Name of the referenced data</font></font></p>
+</td>
+<td style="border-right: solid 1px #9b9b9b; border-bottom: solid 1px #9b9b9b; padding: 4px; vertical-align: top;">
+<p class="TableText">- ( ※ 1 arranged format)</p>
+</td>
+<td style="border-right: solid 1px #9b9b9b; border-bottom: solid 1px #9b9b9b; padding: 4px; vertical-align: top;">
+<p class="TableText"><font><font>○</font></font></p>
+</td>
+<td style="border-right: solid 1px #9b9b9b; border-bottom: solid 1px #9b9b9b; padding: 4px; vertical-align: top;">
+<p class="TableText">not null,<span class="Apple-converted-space">&#160;</span></p>
+<p class="TableText"><font><font>(example: {"Name": "role"}])</font></font></p>
+</td>
+</tr>
+</table>
+</div>
+<p class="Paragraph">&#160;</p>
+<p class="Paragraph">(※ 1) As Relation information is also needed for ExtRole, it should be the list format. But need to fix the key name of specified JSON data as &quot;name&quot;. (Restriction) sample &#160;</p>
+<h4 class="Paragraph"><span style="font-weight: bold;">CURLサンプル</span></h4>
+<table class="CodeTable" style="margin-left: 26pt;" cellspacing="0px" width="96%">
+<col style="width: 100%;" />
+<tr>
+<td>
+<pre class="prettyprint">
+<br />{<br />  "Links": [<br />    {<br />      "FromType": "Relation",<br />      "FromName": <br />        {<br />          "Name": "relation1" <br />        },<br />      "ToType": "Role",<br />      "ToName":<br />        {<br />          "Name": "role1" <br />        }<br />    },<br />    {<br />      "FromType": "Role",<br />      "FromName":<br />        {<br />          "Name": "role1" <br />        },<br />      "ToType": "ExtRole",<br />      "ToName": {<br />          "ExtRole": "https://fqdn/CellName/__role/__/role2",<br />          "_Relation.Name": "Relation1" <br />        }<br />    }<br />  ]<br />}
+</pre></td>
+</tr>
+</table>
+<h3>90_rootprops.xml</h3>
+<p class="Paragraph">The PROPFIND method indicates the XML data for all the levels of the Box, which will be exported as bar file.</p>
+<p class="Paragraph">Please refer to the “GET Property” API for more details about the xml data.</p>
+<p class="Paragraph">The URL of the BOX to be installed, is described as "dcbox :/".</p>
+<p class="Paragraph">When installing bar file, the creation date in the &lt;prop&gt; and all the data except get last modified will be installed as shown in the following example.</p>
+<p class="Bullet_1" style=" margin-left: 50px; text-indent: -30px;"><span class="rls-1-Bullets"><span style="font-family:'Symbol'">&#183;</span></span><span style='word-spacing:normal; font:6.0pt "Times New Roman"'><font size="1" style="font-size:6pt;">&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;</font></span>resourcetype: Set the type of collection.</p>
+<p class="Bullet_1" style=" margin-left: 50px; text-indent: -30px;"><span class="rls-1-Bullets"><span style="font-family:'Symbol'">&#183;</span></span><span style='word-spacing:normal; font:6.0pt "Times New Roman"'><font size="1" style="font-size:6pt;">&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;</font></span>acl: Set the permissions</p>
+<p class="Bullet_1" style=" margin-left: 50px; text-indent: -30px;"><span class="rls-1-Bullets"><span style="font-family:'Symbol'">&#183;</span></span><span style='word-spacing:normal; font:6.0pt "Times New Roman"'><font size="1" style="font-size:6pt;">&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;</font></span>Other: Set by PROPPATCH</p>
+<h4><span style="font-weight: bold;">CURLサンプル</span></h4>
+<table class="CodeTable" style="margin-left: 26pt;" cellspacing="0px" width="96%">
+<col style="width: 100%;" />
+<tr>
+<td>
+<pre class="prettyprint">
+<br />&lt;multistatus xmlns="DAV:"&gt;<br />    &lt;response&gt;<br />        &lt;href&gt;dcbox:/&lt;/href&gt;<br />        &lt;propstat&gt;<br />           &lt;prop&gt;<br />              &lt;resourcetype&gt;<br />                  &lt;collection/&gt;<br />              &lt;/resourcetype&gt;<br />              &lt;acl xml:base="https://fqdn/cell/__role/__/" xmlns:dc="urn:x-dc1:xmlns"&gt;<br />                  &lt;ace&gt;<br />                      &lt;principal&gt;<br />                          &lt;href&gt;admin&lt;/href&gt;<br />                      &lt;/principal&gt;<br />                      &lt;grant&gt;<br />                          &lt;privilege&gt;<br />                              &lt;all/&gt;<br />                          &lt;/privilege&gt;<br />                      &lt;/grant&gt;<br />                  &lt;/ace&gt;<br />              &lt;/acl&gt;<br />          &lt;/prop&gt;<br />      &lt;/propstat&gt;<br />  &lt;/response&gt;<br />  &lt;response&gt;<br />      &lt;href&gt;dcbox:/odata&lt;/href&gt;<br />      &lt;propstat&gt;<br />          &lt;prop&gt;<br />              &lt;resourcetype&gt;<br />                  &lt;collection/&gt;<br />                  &lt;dc:service xmlns:dc="urn:x-dc1:xmlns"/&gt;<br />              &lt;/resourcetype&gt;<br />              &lt;acl xml:base="https://fqdn/cell/__role/__/" xmlns:dc="urn:x-dc1:xmlns"&gt;<br />                  &lt;ace&gt;<br />                      &lt;principal&gt;<br />                          &lt;href&gt;user&lt;/href&gt;<br />                      &lt;/principal&gt;<br />                      &lt;grant&gt;<br />                          &lt;privilege&gt;<br />                              &lt;read/&gt;<br />                          &lt;/privilege&gt;<br />                          &lt;privilege&gt;<br />                              &lt;write/&gt;<br />                          &lt;/privilege&gt;<br />                          &lt;privilege&gt;<br />                              &lt;read-properties/&gt;<br />                          &lt;/privilege&gt;<br />                      &lt;/grant&gt;<br />                  &lt;/ace&gt;<br />              &lt;/acl&gt;<br />          &lt;/prop&gt;<br />      &lt;/propstat&gt;<br />  &lt;/response&gt;<br />  &lt;response&gt;<br />      &lt;href&gt;dcbox:/dav&lt;/href&gt;<br />      &lt;propstat&gt;<br />          &lt;prop&gt;<br />              &lt;resourcetype&gt;<br />                  &lt;collection/&gt;<br />              &lt;/resourcetype&gt;<br />              &lt;acl xml:base="https://fqdn/cell/__role/__/" xmlns:dc="urn:x-dc1:xmlns"&gt;<br />                  &lt;ace&gt;<br />                      &lt;principal&gt;<br />                          &lt;href&gt;user&lt;/href&gt;<br />                      &lt;/principal&gt;<br />                      &lt;grant&gt;<br />                          &lt;privilege&gt;<br />                              &lt;read/&gt;<br />                          &lt;/privilege&gt;<br />                          &lt;privilege&gt;<br />                              &lt;write/&gt;<br />                          &lt;/privilege&gt;<br />                          &lt;privilege&gt;<br />                              &lt;read-properties/&gt;<br />                          &lt;/privilege&gt;<br />                      &lt;/grant&gt;<br />                  &lt;/ace&gt;<br />              &lt;/acl&gt;<br />          &lt;/prop&gt;<br />      &lt;/propstat&gt;<br />  &lt;/response&gt;<br />  &lt;response&gt;<br />      &lt;href&gt;dcbox:/dav/testdavfile.txt&lt;/href&gt;<br />      &lt;propstat&gt;<br />          &lt;prop&gt;<br />              &lt;getcontenttype&gt;text/plain&lt;/getcontenttype&gt;<br />          &lt;/prop&gt;<br />      &lt;/propstat&gt;<br />  &lt;/response&gt;<br />  &lt;response&gt;<br />      &lt;href&gt;dcbox:/service&lt;/href&gt;<br />      &lt;propstat&gt;<br />          &lt;prop&gt;<br />              &lt;resourcetype&gt;<br />                  &lt;collection/&gt;<br />                  &lt;dc:service xmlns:dc="urn:x-dc1:xmlns"/&gt;<br />              &lt;/resourcetype&gt;<br />             &lt;acl xml:base="https://fqdn/cell/__role/__/" xmlns:dc="urn:x-dc1:xmlns"/&gt;<br />              &lt;dc:service language="JavaScript" xmlns:D="DAV:" xmlns:dc="urn:x-dc1:xmlns" \<br />              xmlns:Z="http://www.w3.com/standards/z39.50/"&gt;<br />                  &lt;dc:path name="ehr" src="ehr.js"/&gt;<br />                  &lt;dc:path name="ehr_connector" src="ehr_connector.js"/&gt;<br />              &lt;/dc:service&gt;<br />            &lt;/prop&gt;<br />        &lt;/propstat&gt;<br />    &lt;/response&gt;<br />    &lt;response&gt;<br />        &lt;href&gt;dcbox:/service/__src&lt;/href&gt;<br />        &lt;propstat&gt;<br />            &lt;prop&gt;<br />                &lt;resourcetype&gt;<br />                    &lt;collection/&gt;<br />                &lt;/resourcetype&gt;<br />                &lt;acl xml:base="https://fqdn/cell/__role/__/"\<br />                 xmlns:dc="urn:x-dc1:xmlns"/&gt;<br />            &lt;/prop&gt;<br />        &lt;/propstat&gt;<br />    &lt;/response&gt;<br />    &lt;response&gt;<br />        &lt;href&gt;dcbox:/service/__src/ehr.js&lt;/href&gt;<br />        &lt;propstat&gt;<br />            &lt;prop&gt;<br />                &lt;getcontenttype&gt;text/javascript&lt;/getcontenttype&gt;<br />            &lt;/prop&gt;<br />        &lt;/propstat&gt;<br />    &lt;/response&gt;<br />    &lt;response&gt;<br />        &lt;href&gt;dcbox:/service/__src/ehr_connector.js&lt;/href&gt;<br />        &lt;propstat&gt;<br />            &lt;prop&gt;<br />                &lt;getcontenttype&gt;text/javascript&lt;/getcontenttype&gt;<br />            &lt;/prop&gt;<br />        &lt;/propstat&gt;<br />    &lt;/response&gt;<br />&lt;/multistatus&gt;
+</pre></td>
+</tr>
+</table>
+<h3>contents/{OData}/</h3>
+<p class="Paragraph">The details are not drafted for the following files:</p>
+<p class="Bullet_1" style=" margin-left: 50px; text-indent: -30px;"><span class="rls-1-Bullets"><span style="font-family:'Symbol'">&#183;</span></span><span style='word-spacing:normal; font:6.0pt "Times New Roman"'><font size="1" style="font-size:6pt;">&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;</font></span>90_data / {EntityType}/1.json</p>
+<h4>00_$metadata.xml</h4>
+<p class="Paragraph">It shows the schema definition of user OData. Retrieved XML based $metadata of OData collection while exporting a bar file.</p>
+<p class="Paragraph">For details of the XML data, see Section <a href="../../BoxLevelAPIs/SpecialCollection/ODataServiceCollection/DataManipulation/SchemaDefinition/schemaget.htm">schema_get</a>.</p>
+<p class="Paragraph">When installing Box, install it under Schema tag.</p>
+<p class="Paragraph">File exist even when the schema definition of user OData does not exist.</p>
+<p class="Paragraph">Below is the sample when there’s no schema definition.</p>
+<table class="CodeTable" style="margin-left: 26pt;" cellspacing="0px" width="96%">
+<col style="width: 100%;" />
+<tr>
+<td>
+<pre class="prettyprint">
+<br />&lt;edmx:Edmx Version='1.0' xmlns:edmx='http://schemas.microsoft.com/ado/2007/06/edmx' xmlns:d='http://schemas.microsoft.com/ado/2007/08/dataservices' xmlns:m='http://schemas.microsoft.com/ado/2007/08/dataservices/metadata' xmlns:dc='urn:x-dc1:xmlns'&gt;<br />  &lt;edmx:DataServices m:DataServiceVersion='1.0'&gt;<br />    &lt;Schema xmlns='http://schemas.microsoft.com/ado/2006/04/edm' Namespace='UserData'&gt;<br />      &lt;EntityContainer Name='UserData' m:IsDefaultEntityContainer='true'/&gt;<br />    &lt;/Schema&gt;<br />  &lt;/edmx:DataServices&gt;<br />&lt;/edmx:Edmx&gt;
+</pre></td>
+</tr>
+</table>
+<h4>10_odatarelations.json</h4>
+<p class="Paragraph">File that describes the relational data information of user data $links for installation.</p>
+<p class="Paragraph">The schema level of the user OData in 00_$metadata.xml is defining the relation between Association ends.</p>
+<p class="Paragraph">But this file defines the relation between the entities of user data.</p>
+<p class="Paragraph2" style="color: #00ff00; margin-bottom: 0pt;">&#160;</p>
+<div>
+<table class="ParameterTable" style="margin-left: 26pt;" cellspacing="0px" width="96%">
+<col style="width: 22%;" />
+<col style="width: 20%;" />
+<col style="width: 20%;" />
+<col style="width: 10%;" />
+<col style="width: 28%;" />
+<tr>
+<th style="border: Solid 1px #9b9b9b;" bgcolor="#DADADA">
+<p class="GreyColumnHeading" style="font-weight: normal; margin-left: 0px;"><span style="font-weight: normal;"><span style="font-weight: bold; font-size: 10pt;"><font size="2" style="font-size:10pt;">項目名</font></span></span></p>
+</th>
+<th style="border-top: Solid 1px #9b9b9b; border-right: Solid 1px #9b9b9b; border-bottom: Solid 1px #9b9b9b;" bgcolor="#DADADA">
+<p class="GreyColumnHeading" style="font-weight: normal; margin-left: 0px;"><span style="font-weight: normal;"><span style="font-weight: bold; font-size: 10pt;"><font size="2" style="font-size:10pt;">概要</font></span></span></p>
+</th>
+<th style="border-top: Solid 1px #9b9b9b; border-right: Solid 1px #9b9b9b; border-bottom: Solid 1px #9b9b9b;" bgcolor="#DADADA">
+<p class="GreyColumnHeading" style="font-weight: normal; margin-left: 0px;"><span style="font-weight: normal;"><span style="font-size: 10pt; font-weight: bold;"><font size="2" style="font-size:10pt;">有効値</font></span></span></p>
+</th>
+<th style="border-top: Solid 1px #9b9b9b; border-right: Solid 1px #9b9b9b; border-bottom: Solid 1px #9b9b9b;" bgcolor="#DADADA">
+<p class="GreyColumnHeading" style="font-weight: normal; margin-left: 0px;"><span style="font-weight: normal;"><span style="font-size: 10pt; font-weight: bold;"><font size="2" style="font-size:10pt;">必須</font></span></span></p>
+</th>
+<th style="border-top: Solid 1px #9b9b9b; border-right: Solid 1px #9b9b9b; border-bottom: Solid 1px #9b9b9b;" bgcolor="#DADADA">
+<p class="GreyColumnHeading" style="font-weight: normal; margin-left: 0px;"><span style="font-weight: normal;">備考</span></p>
+</th>
+</tr>
+</table>
+</div>
+<div>
+<table style="margin-left: 26pt;" cellspacing="0" width="96%">
+<col style="width: 22%;" />
+<col style="width: 20%;" />
+<col style="width: 20%;" />
+<col style="width: 10%;" />
+<col style="width: 28%;" />
+<tr style="color: rgb(72, 72, 72); font-family: Verdana, sans-serif; font-size: 12px; font-style: normal; font-variant: normal; font-weight: normal; letter-spacing: normal; line-height: normal; orphans: auto; text-align: start; text-indent: 0px; text-transform: none; white-space: normal; widows: auto; word-spacing: 0px; -webkit-text-stroke-width: 0px;" bgcolor="#FFFFFF">
+<td style="border-left: Solid 1px #9b9b9b; border-right: Solid 1px #9b9b9b; border-bottom: Solid 1px #9b9b9b; padding: 4px; vertical-align: top;">
+<p class="TableText"><font><font>Links</font></font></p>
+</td>
+<td style="border-right: Solid 1px #9b9b9b; border-bottom: Solid 1px #9b9b9b; padding: 4px; vertical-align: top;">
+<p class="TableText"><font><font class="">List of $links</font></font></p>
+</td>
+<td style="border-right: Solid 1px #9b9b9b; border-bottom: Solid 1px #9b9b9b; padding: 4px; vertical-align: top;">
+<p class="TableText">&#160;</p>
+</td>
+<td style="border-right: Solid 1px #9b9b9b; border-bottom: Solid 1px #9b9b9b; padding: 4px; vertical-align: top;">
+<p class="TableText"><font><font>○</font></font></p>
+</td>
+<td style="border-right: solid 1px #9b9b9b; border-bottom: Solid 1px #9b9b9b; padding: 4px; vertical-align: top;">
+<p class="TableText">&#160;</p>
+</td>
+</tr>
+</table>
+</div>
+<div>
+<table style="margin-left: 26pt;" cellspacing="0" width="96%">
+<col style="width: 22%;" />
+<col style="width: 20%;" />
+<col style="width: 20%;" />
+<col style="width: 10%;" />
+<col style="width: 28%;" />
+<tr style="color: rgb(72, 72, 72); font-family: Verdana, sans-serif; font-size: 12px; font-style: normal; font-variant: normal; font-weight: normal; letter-spacing: normal; line-height: normal; orphans: auto; text-align: start; text-indent: 0px; text-transform: none; white-space: normal; widows: auto; word-spacing: 0px; -webkit-text-stroke-width: 0px;" bgcolor="#FFFFFF">
+<td style="border-left: Solid 1px #9b9b9b; border-right: Solid 1px #9b9b9b; border-bottom: Solid 1px #9b9b9b; padding: 4px; vertical-align: top;">
+<p class="TableText"><font><font class="">Links / FromType</font></font></p>
+</td>
+<td style="border-right: Solid 1px #9b9b9b; border-bottom: Solid 1px #9b9b9b; padding: 4px; vertical-align: top;">
+<p class="TableText">Name of a referring EntityType</p>
+</td>
+<td style="border-right: Solid 1px #9b9b9b; border-bottom: Solid 1px #9b9b9b; padding: 4px; vertical-align: top;">
+<p class="TableText"><font><font>-</font></font></p>
+</td>
+<td style="border-right: Solid 1px #9b9b9b; border-bottom: Solid 1px #9b9b9b; padding: 4px; vertical-align: top;">
+<p class="TableText"><font><font>○</font></font></p>
+</td>
+<td style="border-right: solid 1px #9b9b9b; border-bottom: Solid 1px #9b9b9b; padding: 4px; vertical-align: top;">
+<p class="TableText"><font><font>Cannot be null</font></font></p>
+</td>
+</tr>
+</table>
+</div>
+<div>
+<table style="margin-left: 26pt;" cellspacing="0" width="96%">
+<col style="width: 22%;" />
+<col style="width: 20%;" />
+<col style="width: 20%;" />
+<col style="width: 10%;" />
+<col style="width: 28%;" />
+<tr style="color: rgb(72, 72, 72); font-family: Verdana, sans-serif; font-size: 12px; font-style: normal; font-variant: normal; font-weight: normal; letter-spacing: normal; line-height: normal; orphans: auto; text-align: start; text-indent: 0px; text-transform: none; white-space: normal; widows: auto; word-spacing: 0px; -webkit-text-stroke-width: 0px;" bgcolor="#FFFFFF">
+<td style="border-left: Solid 1px #9b9b9b; border-right: Solid 1px #9b9b9b; border-bottom: Solid 1px #9b9b9b; padding: 4px; vertical-align: top;">
+<p class="TableText"><font><font>Links / FromId</font></font></p>
+</td>
+<td style="border-right: Solid 1px #9b9b9b; border-bottom: Solid 1px #9b9b9b; padding: 4px; vertical-align: top;">
+<p class="TableText"><font><font>ID of the referencing user data</font></font></p>
+</td>
+<td style="border-right: Solid 1px #9b9b9b; border-bottom: Solid 1px #9b9b9b; padding: 4px; vertical-align: top;">
+<p class="TableText"><font><font>- (Array format ※ 1)</font></font></p>
+</td>
+<td style="border-right: Solid 1px #9b9b9b; border-bottom: Solid 1px #9b9b9b; padding: 4px; vertical-align: top;">
+<p class="TableText"><font><font class="">○</font></font></p>
+</td>
+<td style="border-right: solid 1px #9b9b9b; border-bottom: Solid 1px #9b9b9b; padding: 4px; vertical-align: top;">
+<p class="TableText"><font><font>not null (for example: {"FromId": "fujitsu_taro"}</font></font></p>
+</td>
+</tr>
+</table>
+</div>
+<div>
+<table style="margin-left: 26pt;" cellspacing="0" width="96%">
+<col style="width: 22%;" />
+<col style="width: 20%;" />
+<col style="width: 20%;" />
+<col style="width: 10%;" />
+<col style="width: 28%;" />
+<tr style="color: rgb(72, 72, 72); font-family: Verdana, sans-serif; font-size: 12px; font-style: normal; font-variant: normal; font-weight: normal; letter-spacing: normal; line-height: normal; orphans: auto; text-align: start; text-indent: 0px; text-transform: none; white-space: normal; widows: auto; word-spacing: 0px; -webkit-text-stroke-width: 0px;" bgcolor="#FFFFFF">
+<td style="border-left: Solid 1px #9b9b9b; border-right: Solid 1px #9b9b9b; border-bottom: Solid 1px #9b9b9b; padding: 4px; vertical-align: top;">
+<p class="TableText"><font><font>Links / ToType</font></font></p>
+</td>
+<td style="border-right: Solid 1px #9b9b9b; border-bottom: Solid 1px #9b9b9b; padding: 4px; vertical-align: top;">
+<p class="TableText"><font><font>Name of the referenced EntityType</font></font></p>
+</td>
+<td style="border-right: Solid 1px #9b9b9b; border-bottom: Solid 1px #9b9b9b; padding: 4px; vertical-align: top;">
+<p class="TableText"><font><font>-</font></font></p>
+</td>
+<td style="border-right: Solid 1px #9b9b9b; border-bottom: Solid 1px #9b9b9b; padding: 4px; vertical-align: top;">
+<p class="TableText"><font><font>○</font></font></p>
+</td>
+<td style="border-right: solid 1px #9b9b9b; border-bottom: Solid 1px #9b9b9b; padding: 4px; vertical-align: top;">
+<p class="TableText"><font><font>Cannot be null</font></font></p>
+</td>
+</tr>
+</table>
+</div>
+<div>
+<table style="margin-left: 26pt;" cellspacing="0" width="96%">
+<col style="width: 22%;" />
+<col style="width: 20%;" />
+<col style="width: 20%;" />
+<col style="width: 10%;" />
+<col style="width: 28%;" />
+<tr style="color: rgb(72, 72, 72); font-family: Verdana, sans-serif; font-size: 12px; font-style: normal; font-variant: normal; font-weight: normal; letter-spacing: normal; line-height: normal; orphans: auto; text-align: start; text-indent: 0px; text-transform: none; white-space: normal; widows: auto; word-spacing: 0px; -webkit-text-stroke-width: 0px;" bgcolor="#FFFFFF">
+<td style="border-left: Solid 1px #9b9b9b; border-right: Solid 1px #9b9b9b; border-bottom: solid 1px #9b9b9b; padding: 4px; vertical-align: top;">
+<p class="TableText"><font><font>Links / ToId</font></font></p>
+</td>
+<td style="border-right: Solid 1px #9b9b9b; border-bottom: solid 1px #9b9b9b; padding: 4px; vertical-align: top;">
+<p class="TableText"><font><font>ID of the referenced user data</font></font></p>
+</td>
+<td style="border-right: Solid 1px #9b9b9b; border-bottom: solid 1px #9b9b9b; padding: 4px; vertical-align: top;">
+<p class="TableText"><font><font>- (Array format ※ 1)</font></font></p>
+</td>
+<td style="border-right: Solid 1px #9b9b9b; border-bottom: solid 1px #9b9b9b; padding: 4px; vertical-align: top;">
+<p class="TableText"><font><font>○</font></font></p>
+</td>
+<td style="border-right: solid 1px #9b9b9b; border-bottom: solid 1px #9b9b9b; padding: 4px; vertical-align: top;">
+<p class="TableText"><font><font>not null (for example: {"ToId": "fujitsu_hanako"}</font></font></p>
+</td>
+</tr>
+</table>
+</div>
+<p class="Paragraph">&#160;</p>
+<p class="Paragraph2" style="color: #353535;">※ １ Considers the array format, to support the compound primary key In the future.</p>
+<h4><span style="font-weight: bold;">CURLサンプル</span></h4>
+<table class="CodeTable" style="margin-left: 26pt;" cellspacing="0px" width="96%">
+<col style="width: 100%;" />
+<tr>
+<td>
+<pre class="prettyprint">
+<br />{<br />  "Links": [<br />    {<br />      "FromType": "Keeper",<br />      "FromId": {<br />        "usercode": "001",<br />        "Name": "Peru_Taro" <br />      },<br />      "ToType": "Animal",<br />      "ToId": {<br />        "shopcode": "001",<br />        "Name": "pochi" <br />      }<br />    },<br />    {<br />      "FromType": "Keeper",<br />      "FromId": {<br />        "usercode": "002",<br />        "Name": "Peru_Hanako" <br />      },<br />      "ToType": "Animal",<br />      "ToId": {<br />        "shopcode": "002",<br />        "Name": "tama" <br />      }<br />    }<br />  ]<br />}
+</pre></td>
+</tr>
+</table>
+<h3>90_data / {EntityType} / {1.json}</h3>
+<p class="Paragraph">It stores the user data one by one in JSON format.</p>
+<table class="ParameterTable" style="margin-left: 26pt;" cellspacing="0px" width="96%">
+<col style="width: 11.366%;" />
+<col style="width: 88.634%;" />
+<tr>
+<td style="border: Solid 1px #9b9b9b;">
+<p class="TableText">File name</p>
+</td>
+<td style="border-top: Solid 1px #9b9b9b; border-right: Solid 1px #9b9b9b; border-bottom: Solid 1px #9b9b9b;">
+<p class="TableText">Valid values: {Byte numbers} json</p>
+</td>
+</tr>
+</table>
+<p class="Paragraph">&#160;</p>
+<table class="CodeTable" style="margin-left: 26pt;" cellspacing="0px" width="96%">
+<col style="width: 100%;" />
+<tr>
+<td>
+<pre class="prettyprint">
+<br />{<br />    "__id": "entity",<br />    "name": "pochi",<br />    "address": {<br />        "country": "japan",<br />        "city": "tokyo" <br />    }<br />}
+</pre></td>
+</tr>
+</table>
+<h3>contents / {webdavbcol} /</h3>
+<p class="Paragraph">Not implemented</p>
+<h3>contents/Service/{src.js}</h3>
+<p class="Paragraph">It registers the Box under the destination to {Service}/__src/{src.js}, the source file that is stored in the bar/90_contents/{Service}/{src.js}.</p>
+<p class="Paragraph" style=" margin-left: 50px; text-indent: -30px;"><span class="rls-1-Bullets"><span style="font-family:'Symbol'">&#183;</span></span><span style='word-spacing:normal; font:6.0pt "Times New Roman"'><font size="1" style="font-size:6pt;">&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;</font></span>Cannot run as service, when no collection {Service} is defined <span lang="JA" xml:lang="JA" style="font-size: 11.0pt; line-height: 115%; font-family: 'ＭＳ 明朝', serif; mso-ascii-font-family: Calibri; mso-ascii-theme-font: minor-latin; mso-fareast-theme-font: minor-fareast; mso-hansi-font-family: Calibri; mso-hansi-theme-font: minor-latin; mso-bidi-font-family: 'Times New Roman'; mso-bidi-theme-font: minor-bidi; mso-ansi-language: EN-US; mso-fareast-language: JA; mso-bidi-language: AR-SA;"><font size="3" style="font-size:11pt;">（</font></span><span style="font-size: 11.0pt; line-height: 115%; font-family: Calibri, sans-serif; mso-ascii-theme-font: minor-latin; mso-fareast-font-family: 'ＭＳ 明朝'; mso-fareast-theme-font: minor-fareast; mso-hansi-theme-font: minor-latin; mso-bidi-font-family: 'Times New Roman'; mso-bidi-theme-font: minor-bidi; mso-ansi-language: EN-US; mso-fareast-language: JA; mso-bidi-language: AR-SA;"><font size="3" style="font-size:11pt;">PROPPATCH</font></span><span lang="JA" xml:lang="JA" style="font-size: 11.0pt; line-height: 115%; font-family: 'ＭＳ 明朝', serif; mso-ascii-font-family: Calibri; mso-ascii-theme-font: minor-latin; mso-fareast-theme-font: minor-fareast; mso-hansi-font-family: Calibri; mso-hansi-theme-font: minor-latin; mso-bidi-font-family: 'Times New Roman'; mso-bidi-theme-font: minor-bidi; mso-ansi-language: EN-US; mso-fareast-language: JA; mso-bidi-language: AR-SA;"><font size="3" style="font-size:11pt;">）</font></span> <span style="font-size: 11.0pt; line-height: 115%; font-family: Calibri, sans-serif; mso-ascii-theme-font: minor-latin; mso-fareast-font-family: 'ＭＳ 明朝'; mso-fareast-theme-font: minor-fareast; mso-hansi-theme-font: minor-latin; mso-bidi-font-family: 'Times New Roman'; mso-bidi-theme-font: minor-bidi; mso-ansi-language: EN-US; mso-fareast-language: JA; mso-bidi-language: AR-SA;"><font size="3" style="font-size:11pt;">in bar/00_meta/90_rootprops.xml.</font></span></p>
+<p class="Paragraph" style=" margin-left: 50px; text-indent: -30px;"><span class="rls-1-Bullets"><span style="font-family:'Symbol'">&#183;</span></span><span style='word-spacing:normal; font:6.0pt "Times New Roman"'><font size="1" style="font-size:6pt;">&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;</font></span>Cannot entry {src.js}, when {Service}/__src is not defined in bar/00_meta/90_rootprops.xml</p>
+<p class="Paragraph" style=" margin-left: 50px; text-indent: -30px;"><span class="rls-1-Bullets"><span style="font-family:'Symbol'">&#183;</span></span><span style='word-spacing:normal; font:6.0pt "Times New Roman"'><font size="1" style="font-size:6pt;">&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;</font></span>Set the Content-Type of {src.js} according to {Service}/__src/{src.js}, defined in bar/00_meta/90_rootprops.xml</p>
+<p class="Paragraph">Sample of service registration 90_rootprops.xml</p>
+<table class="CodeTable" style="margin-left: 26pt;" cellspacing="0px" width="96%">
+<col style="width: 100%;" />
+<tr>
+<td>
+<pre class="prettyprint">
+<br />&lt;multistatus xmlns="DAV:"&gt;<br />    &lt;response&gt;<br />        &lt;href&gt;dcbox:/service&lt;/href&gt;<br />        &lt;propstat&gt;<br />            &lt;prop&gt;<br />                &lt;resourcetype&gt;<br />                    &lt;collection/&gt;<br />                    &lt;dc:service xmlns:dc="urn:x-dc1:xmlns"/&gt;<br />                &lt;/resourcetype&gt;<br />                &lt;acl xml:base="https://fqdn/cell/__role/__/"\<br />                xmlns:dc="urn:x-dc1:xmlns"/&gt;<br />                &lt;dc:service language="JavaScript" xmlns:D="DAV:" xmlns:dc="urn:x-dc1:xmlns" \<br />                xmlns:Z="http://www.w3.com/standards/z39.50/"&gt;<br />                    &lt;dc:path name="ehr" src="ehr.js"/&gt;<br />                    &lt;dc:path name="ehr_connector" src="ehr_connector.js"/&gt;<br />                &lt;/dc:service&gt;<br />            &lt;/prop&gt;<br />        &lt;/propstat&gt;<br />    &lt;/response&gt;<br />    &lt;response&gt;<br />        &lt;href&gt;dcbox:/service/__src&lt;/href&gt;<br />        &lt;propstat&gt;<br />            &lt;prop&gt;<br />                &lt;resourcetype&gt;<br />                    &lt;collection/&gt;<br />                &lt;/resourcetype&gt;<br />                &lt;acl xml:base="https://fqdn/cell/__role/__/"\<br />                 xmlns:dc="urn:x-dc1:xmlns"/&gt;<br />            &lt;/prop&gt;<br />        &lt;/propstat&gt;<br />    &lt;/response&gt;<br />    &lt;response&gt;<br />        &lt;href&gt;dcbox:/service/__src/ehr.js&lt;/href&gt;<br />        &lt;propstat&gt;<br />            &lt;prop&gt;<br />                &lt;getcontenttype&gt;text/javascript&lt;/getcontenttype&gt;<br />            &lt;/prop&gt;<br />        &lt;/propstat&gt;<br />    &lt;/response&gt;<br />    &lt;response&gt;<br />        &lt;href&gt;dcbox:/service/__src/ehr_connector.js&lt;/href&gt;<br />        &lt;propstat&gt;<br />            &lt;prop&gt;<br />                &lt;getcontenttype&gt;text/javascript&lt;/getcontenttype&gt;<br />            &lt;/prop&gt;<br />        &lt;/propstat&gt;<br />    &lt;/response&gt;<br />&lt;/multistatus&gt;
+</pre></td>
+</tr>
+</table>
+<p class="Paragraph">&#160;</p>
+<p class="Paragraph">&#160;</p>
+<br />
+<div style="border-top: Solid 3px #3a3a3a; width: 100%; position: relative; padding-top: 2px; padding-bottom: 2px; padding-right: 5px; background-color: #9b9b9b;" id="footer">
+<h6 style="text-align: right; margin-top: 5pt; margin-bottom: 5pt;">Copyright 2014 &#160;FUJITSU LIMITED</h6>
+</div>
+<script type="text/javascript" language="javascript1.2">
+//<![CDATA[
+<!--
+if (window.writeIntopicBar)
+        writeIntopicBar(0);
+
+
+highlightSearch();
+//-->
+//]]>
+</script>
+</body>
+</html>

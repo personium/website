@@ -1,0 +1,168 @@
+<?xml version="1.0" encoding="iso-2022-jp" ?>
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN"
+    "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<!-- saved from url=(0014)about:internet -->
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=iso-2022-jp" />
+<meta http-equiv="Content-Language" content="en-US" />
+<meta name="generator" content="Adobe RoboHelp 10" />
+<title>Linking Cell Control Objects</title>
+<link rel="StyleSheet" href="../../../default.css" type="text/css" />
+<style type="text/css">
+/*<![CDATA[*/
+<!--
+.mainBreadCrumb a:link { color:#000000;
+background-color:transparent;
+text-decoration:none; }
+.mainBreadCrumb a:visited { color:#000000;
+background-color:transparent;
+text-decoration:none; }
+.mainBreadCrumb a:hover { color:#ff0000 ! important;
+cursor:pointer;
+text-decoration:underline; }
+p.mainBreadCrumb { margin-left:0px;
+margin-top:1px ! important; }
+h1 { padding-left:10px ! important; }
+-->
+/*]]>*/
+</style>
+
+<script type="text/javascript" language="JavaScript">
+//<![CDATA[
+function reDo() {
+  if (innerWidth != origWidth || innerHeight != origHeight)
+     location.reload();
+}
+if ((parseInt(navigator.appVersion) == 4) && (navigator.appName == "Netscape")) {
+        origWidth = innerWidth;
+        origHeight = innerHeight;
+        onresize = reDo;
+}
+onerror = null; 
+//]]>
+</script>
+<style type="text/css">
+/*<![CDATA[*/
+<!--
+div.WebHelpPopupMenu { position:absolute;
+left:0px;
+top:0px;
+z-index:4;
+visibility:hidden; }
+-->
+/*]]>*/
+</style>
+
+<script type="text/javascript" language="javascript1.2" src="../../../whmsg.js" charset="utf-8">
+</script>
+<script type="text/javascript" language="javascript" src="../../../whver.js" charset="utf-8">
+</script>
+<script type="text/javascript" language="javascript1.2" src="../../../whutils.js" charset="utf-8">
+</script>
+<script type="text/javascript" language="javascript1.2" src="../../../whproxy.js" charset="utf-8">
+</script>
+<script type="text/javascript" language="javascript1.2" src="../../../whlang.js" charset="utf-8">
+</script>
+<script type="text/javascript" language="javascript1.2" src="../../../whtopic.js" charset="utf-8">
+</script>
+</head>
+<body page-style="x-size: Letter;">
+<script type="text/javascript" language="javascript1.2">
+//<![CDATA[
+<!--
+if (window.gbWhTopic)
+{
+        var strUrl = document.location.href;
+        var bc = 0;
+        var n = strUrl.toLowerCase().indexOf("bc-");
+        if(n != -1)
+        {
+                document.location.href = strUrl.substring(0, n);
+                bc = strUrl.substring(n+3);
+        }
+
+        if (window.addTocInfo)
+        {
+        addButton("show",BTN_TEXT,"表示","","","","",0,0,"","","");
+
+        }
+        if (window.writeBtnStyle)
+                writeBtnStyle();
+
+        if (window.writeIntopicBar)
+                writeIntopicBar(1);
+
+        
+        
+}
+else
+        if (window.gbIE4)
+                document.location.reload();
+
+onLoadHandler = function()
+{
+  if (window.setRelStartPage)
+        {
+        setTimeout("setRelStartPage('../../../Japanese.htm');", 1)
+
+    setTimeout("UpdateBreadCrumbsMarker();", 1);
+        }
+}
+
+if (window.addEventListener){  
+        window.addEventListener('load', onLoadHandler, false);   
+} else if (window.attachEvent){  
+        window.attachEvent('onload', onLoadHandler);  
+}
+
+function onSetStartPage()
+{
+  autoSync(1);
+  sendSyncInfo();
+  sendAveInfoOut();
+}
+//-->
+//]]>
+</script><script type="text/javascript" src="../../../ehlpdhtm.js" language="JavaScript1.2">
+</script>
+<div style="width: 100%; position: relative;" id="header">
+<p style="font-size: 10pt;">&#160;</p>
+</div>
+<script type="text/javascript" language="javascript">
+//<![CDATA[
+document.write("<p  class=\"mainBreadCrumb\"  style=\"text-align:left;\" class=\"breadcrumbs\">");
+AddMasterBreadcrumbs("../../../Japanese.htm", "breadcrumbs", " &gt; ", "トップ", "../../ja/HomePage.htm");
+document.write("Linking Cell Control Objects<\/p>");
+//]]>
+</script>
+<hr style="border-left-width: 0px; margin-left: -6px;" size="1" width="101%" align="center" />
+<form><input type="image" value="Print" onclick="window.print();return false" name="Printer.png" src="../../../Images/Printer.png" style="width: 16px; height: 16px; float: right; margin-top: -32px; margin-right: 2px;" /></form>
+<h1>Linking Cell Control Objects</h1>
+<p class="Paragraph"><span style="background-color: #ffffff;"><span segoe="" important="" style="font-size: 10.0pt; font-family: ;"><font size="2" style="font-size:10pt;">To configure cell control objects with each other, you should link these cell control objects with External Role, External Cell, Relation, Role, and Account.</font></span></span></p>
+<p class="Paragraph" style="font-size: 10.0pt; font-family: ;"><span segoe="" important="">There are the following two methods to link cell control objects:</span></p>
+<p class="Paragraph" style=" margin-left: 40px; text-indent: -20px;"><span class="rls-1-Number">1.</span><span style='word-spacing:normal; font:6.0pt "Times New Roman"'><font size="1" style="font-size:6pt;">&#160;&#160;&#160;&#160;&#160;</font></span>Cell control objects are created in advance and you need to link them using $links. For example, Role and Account are created in advance. These two objects can be linked using $links API.</p>
+<p class="Paragraph" style=" margin-left: 40px; text-indent: -20px;"><span class="rls-1-Number">2.</span><span style='word-spacing:normal; font:6.0pt "Times New Roman"'><font size="1" style="font-size:6pt;">&#160;&#160;&#160;&#160;&#160;</font></span>Cell control objects are simultaneously created and linked using $links. For example, while creating a Role in combination of Box, the Box object automatically gets associated with the Role.</p>
+<p class="Paragraph"><span style="font-size: 10.0pt; line-height: 115%; mso-fareast-font-family: Calibri; mso-fareast-theme-font: minor-latin; mso-ansi-language: EN-US; mso-fareast-language: EN-US; mso-bidi-language: AR-SA;"><font size="2" style="font-size:10pt;"><a href="#Figure1:LinkingCellControlObjects">Figure 1</a> depicts different combination of cell control objects:</font></span></p>
+<p class="Figure"><img src="../../../Images/LinkingCellControlObjects.gif" alt="" style="border: none;" border="0" /></p>
+<p class="Figure" style="font-weight: bold;"><a name="Figure1:LinkingCellControlObjects" id="Figure1:LinkingCellControlObjects">Figure 1: Linking Cell Control Objects</a></p>
+<p class="Paragraph">&#160;</p>
+<p class="Paragraph">&#160;</p>
+<p class="Paragraph">&#160;</p>
+<br />
+<div style="border-top: Solid 3px #3a3a3a; width: 100%; position: relative; padding-top: 2px; padding-bottom: 2px; padding-right: 5px; background-color: #9b9b9b;" id="footer">
+<h6 style="text-align: right; margin-top: 5pt; margin-bottom: 5pt;">Copyright 2014 &#160;FUJITSU LIMITED</h6>
+</div>
+<script type="text/javascript" language="javascript1.2">
+//<![CDATA[
+<!--
+if (window.writeIntopicBar)
+        writeIntopicBar(0);
+
+
+highlightSearch();
+//-->
+//]]>
+</script>
+</body>
+</html>

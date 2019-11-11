@@ -1,0 +1,399 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+<meta name="generator" content="Adobe RoboHelp 10" />
+<title>全文検索(q) クエリ</title>
+<link rel="StyleSheet" href="../../../../default.css" type="text/css" />
+<script type="text/javascript" language="JavaScript">
+//<![CDATA[
+function reDo() {
+  if (innerWidth != origWidth || innerHeight != origHeight)
+     location.reload();
+}
+if ((parseInt(navigator.appVersion) == 4) && (navigator.appName == "Netscape")) {
+	origWidth = innerWidth;
+	origHeight = innerHeight;
+	onresize = reDo;
+}
+onerror = null; 
+//]]>
+</script>
+<style type="text/css">
+<!--
+div.WebHelpPopupMenu { position:absolute;
+left:0px;
+top:0px;
+z-index:4;
+visibility:hidden; }
+-->
+</style>
+<script type="text/javascript" language="javascript1.2" src="../../../../whmsg.js" charset="utf-8"></script>
+<script type="text/javascript" language="javascript" src="../../../../whver.js" charset="utf-8"></script>
+<script type="text/javascript" language="javascript1.2" src="../../../../whutils.js" charset="utf-8"></script>
+<script type="text/javascript" language="javascript1.2" src="../../../../whproxy.js" charset="utf-8"></script>
+<script type="text/javascript" language="javascript1.2" src="../../../../whlang.js" charset="utf-8"></script>
+<script type="text/javascript" language="javascript1.2" src="../../../../whtopic.js" charset="utf-8"></script>
+
+</head>
+
+<body><script type="text/javascript" language="javascript1.2">//<![CDATA[
+<!--
+if (window.gbWhTopic)
+{
+	var strUrl = document.location.href;
+	var bc = 0;
+	var n = strUrl.toLowerCase().indexOf("bc-");
+	if(n != -1)
+	{
+		document.location.href = strUrl.substring(0, n);
+		bc = strUrl.substring(n+3);
+	}
+
+	if (window.addTocInfo)
+	{
+	addTocInfo("付録\n共通API\n全文検索(q) クエリ");
+addButton("show",BTN_TEXT,"表示","","","","",0,0,"","","");
+
+	}
+	if (window.writeBtnStyle)
+		writeBtnStyle();
+
+	if (window.writeIntopicBar)
+		writeIntopicBar(1);
+
+	
+	
+}
+else
+	if (window.gbIE4)
+		document.location.reload();
+
+onLoadHandler = function()
+{
+  if (window.setRelStartPage)
+	{
+	setTimeout("setRelStartPage('../../../../Japanese.htm');", 1)
+
+    setTimeout("UpdateBreadCrumbsMarker();", 1);
+	}
+}
+
+if (window.addEventListener){  
+	window.addEventListener('load', onLoadHandler, false);   
+} else if (window.attachEvent){  
+	window.attachEvent('onload', onLoadHandler);  
+}
+
+function onSetStartPage()
+{
+  autoSync(1);
+  sendSyncInfo();
+  sendAveInfoOut();
+}
+//-->
+//]]></script>
+<script type="text/javascript" src="../../../../ehlpdhtm.js" language="JavaScript1.2"></script>
+
+<div style="width: 100%; position: relative;" id="header">
+	<p>&#160;</p>
+</div>
+
+<script type="text/javascript" language="javascript">//<![CDATA[
+document.write("<p  style=\"text-align:right;font-family:Arial;font-size:9pt;font-weight: normal;font-style: normal;text-decoration: none;\">");
+AddMasterBreadcrumbs("../../../../Japanese.htm", "font-family:Arial;font-size:9pt;font-weight: normal;font-style: normal;text-decoration: none;", "&gt;", "Home", "../../What_is_Persona_Container_Server.htm");
+document.write("<a style=\"font-family:Arial;font-size:9pt;font-weight: normal;font-style: normal;text-decoration: none;\" href=\"../AppErrorMessages.htm\">付録<\/a> &gt; <a style=\"font-family:Arial;font-size:9pt;font-weight: normal;font-style: normal;text-decoration: none;\" href=\"SkipQuery.htm\">共通API<\/a> &gt; 全文検索(q) クエリ<\/p>");
+//]]></script>
+
+<h1 style="-webkit-text-size-adjust: auto; -webkit-text-stroke-width: 0px;"><font 
+	 class="">全文検索(q) クエリ</font></h1>
+<ul style="
+list-style:url('../../../../Images/arrow.png');">
+	<li style="margin-left: -20px;"><h2><span lang="JA" xml:lang="JA" style="line-height: 115%; mso-ascii-font-family: Arial; 
+		 mso-fareast-theme-font: minor-fareast; mso-hansi-font-family: Arial; 
+		 mso-bidi-font-family: Arial; mso-ansi-language: EN-US; mso-fareast-language: JA; 
+		 mso-bidi-language: AR-SA; font-weight: bold; font-family: 'MS Gothic';">概要</span></h2></li>
+</ul>
+<p class="Paragraph" style="margin-bottom: 1.5pt;"><span style="color: rgb(72, 72, 72); 
+														 font-family: Verdana, sans-serif; 
+														 font-size: 12px; 
+														 line-height: normal; 
+														 orphans: auto; 
+														 widows: auto; 
+														 -webkit-text-stroke-width: 0px; 
+														 background-color: #ffffff; 
+														 display: inline	 ! important ; 
+														 float: none;">一覧取得時に全文検索キーワードを指定する場合は全文検索(q)クエリを使用する</span> 
+ </p>
+<p class="Paragraph" style="margin-bottom: 1.5pt;"><span style="color: rgb(72, 72, 72); 
+														 font-family: Verdana, sans-serif; 
+														 font-size: 12px; 
+														 line-height: normal; 
+														 orphans: auto; 
+														 widows: auto; 
+														 -webkit-text-stroke-width: 0px; 
+														 background-color: #ffffff; 
+														 display: inline	 ! important ; 
+														 float: none;">コンプレックスタイプのデータを含めて、全ての値が検索対象</span> 
+ </p>
+<p class="Paragraph">&#160;</p>
+<p class="Paragraph"><strong style="color: rgb(72, 72, 72); font-family: Verdana, sans-serif; 
+							 font-size: 12px; line-height: normal; orphans: auto; 
+							 widows: auto; -webkit-text-stroke-width: 0px; 
+							 background-color: #ffffff;">※クエリを指定する際はURLエンコードが必要</strong> 
+ <br />
+<strong style="color: rgb(72, 72, 72); font-family: Verdana, sans-serif; 
+		 font-size: 12px; line-height: normal; orphans: auto; widows: auto; 
+		 -webkit-text-stroke-width: 0px; background-color: #ffffff;">※__updated, 
+ _<em>publishedの値を指定する場合は、UNIX時間（&quot;/Date()&quot;の括弧内の数字）で指定</em></strong> 
+ <em><br />
+</em><em style="color: rgb(72, 72, 72); font-family: Verdana, sans-serif; 
+		 font-size: 12px; line-height: normal; orphans: auto; widows: auto; 
+		 -webkit-text-stroke-width: 0px; background-color: #ffffff;"><strong 
+	 style="font-style: normal;">※</strong></em><strong style="color: rgb(72, 72, 72); 
+														 font-family: Verdana, sans-serif; 
+														 font-size: 12px; 
+														 line-height: normal; 
+														 orphans: auto; 
+														 widows: auto; 
+														 -webkit-text-stroke-width: 0px; 
+														 background-color: #ffffff;">_metadata内の項目は検索対象外</strong> 
+ </p>
+<ul style="
+list-style:url('../../../../Images/arrow.png');">
+	<li style="margin-left: -20px;"><h2><span style="font-weight: bold;">リクエストクエリ</span></h2></li>
+</ul>
+<table style="margin-left: 26pt; height: 47px;" cellspacing="0" width="96%">
+	<col style="width: 100%;" />
+	<tr>
+		<td style="border: Solid 1px #9b9b9b; vertical-align: middle;"><p 
+			 class="Code" style="font-weight: normal;">q={SearchKeyword}</p></td>
+	</tr>
+</table>
+<p class="Paragraph">&#160;</p>
+<table style="margin-left: 26pt;" cellspacing="0" width="96%">
+	<col style="width: 19.685%;" />
+	<col style="width: 24.833%;" />
+	<col style="width: 26.368%;" />
+	<col style="width: 29.724%;" />
+	<tr>
+		<th style="border: Solid 1px #9b9b9b;" bgcolor="#353D47"><p class="GreyColumnHeading">項目</p></th>
+		<th style="border-top: Solid 1px #9b9b9b; border-right: Solid 1px #9b9b9b; 
+			 border-bottom: Solid 1px #9b9b9b;" bgcolor="#353D47"><p class="GreyColumnHeading">概要</p></th>
+		<td style="border-top: Solid 1px #9b9b9b; border-right: Solid 1px #9b9b9b; 
+			 border-bottom: Solid 1px #9b9b9b;" bgcolor="#353D47"><p class="GreyColumnHeading">有効値</p></td>
+		<td style="border-top: Solid 1px #9b9b9b; border-right: Solid 1px #9b9b9b; 
+			 border-bottom: Solid 1px #9b9b9b;" bgcolor="#353D47"><p class="GreyColumnHeading">備考</p></td>
+	</tr>
+	<tr>
+		<td style="border-left: Solid 1px #9b9b9b; border-right: Solid 1px #9b9b9b; 
+			 border-bottom: Solid 1px #9b9b9b; vertical-align: top;"><p 
+			 class="TableText"><font><font>{SearchKeyword}</font></font></p></td>
+		<td style="border-right: Solid 1px #9b9b9b; border-bottom: Solid 1px #9b9b9b; 
+			 vertical-align: top;"><p class="TableText"><span style="color: rgb(72, 72, 72); 
+		 font-family: Verdana, sans-serif; font-size: 12px; line-height: normal; 
+		 orphans: auto; widows: auto; -webkit-text-stroke-width: 0px; background-color: #ffffff; 
+		 display: inline	 ! important ; float: none;">検索文字列を指定する</span> 
+		 </p></td>
+		<td style="border-right: Solid 1px #9b9b9b; border-bottom: Solid 1px #9b9b9b; 
+			 vertical-align: top;"><p class="TableText"><span style="color: rgb(72, 72, 72); 
+		 font-family: Verdana, sans-serif; font-size: 12px; line-height: normal; 
+		 orphans: auto; widows: auto; -webkit-text-stroke-width: 0px; background-color: #ffffff; 
+		 display: inline	 ! important ; float: none;">桁数：1～255 byte</span> 
+		 </p></td>
+		<td style="border-right: Solid 1px #9b9b9b; border-bottom: Solid 1px #9b9b9b; 
+			 vertical-align: top;"><p class="TableText">&#160;</p></td>
+	</tr>
+</table>
+<h4><span style="font-weight: bold;">CURLサンプル</span></h4>
+<p class="Bullet_1" style="margin-left: 98px;"><span style="font-family:'Symbol'">&#183;</span><span style='word-spacing:normal; font:6.0pt "Times New Roman"'><font size="1" style="font-size:6pt;">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</font></span><span 
+	 style="color: rgb(72, 72, 72); font-family: Verdana, sans-serif; font-size: 12px; 
+	 text-indent: 0px; display: inline	 ! important ; float: none;">「ぽち」というキーワードを含むデータを取得する</span> 
+ </p>
+<p class="CodeIndent1" style="margin-left: 104px; font-family: Verdana, sans-serif; 
+	 font-size: 12px;">q=ぽち</p>
+<p class="Bullet_1" style="margin-left: 98px;"><span style="font-family:'Symbol'">&#183;</span><span style='word-spacing:normal; font:6.0pt "Times New Roman"'><font size="1" style="font-size:6pt;">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</font></span><span 
+	 style="color: rgb(72, 72, 72); font-family: Verdana, sans-serif; font-size: 12px; 
+	 text-indent: 0px; display: inline	 ! important ; float: none;">「ぽち」かつ「たま」というキーワードを含むデータを取得する</span> 
+ </p>
+<p class="CodeIndent1" style="margin-left: 104px;"><span style="font-size: 12px; 
+														 font-family: Verdana, sans-serif;">q=ぽち%20たま</span> 
+ </p>
+<ul style="
+list-style:url('../../../../Images/arrow.png');">
+	<li style="margin-left: -20px; font-weight: bold; color: #198e9e;"><h2 
+		 style="font-weight: bold; color: #198e9e;">検索対象となる型</h2></li>
+</ul>
+<p class="Paragraph"><span style="color: rgb(72, 72, 72); font-family: Verdana, sans-serif; 
+							 font-size: 12px; line-height: normal; orphans: auto; 
+							 widows: auto; -webkit-text-stroke-width: 0px; 
+							 background-color: #ffffff; display: inline	 ! important ; 
+							 float: none;">検索対象となるデータ型を以下に示す</span> </p>
+<table style="margin-left: 26pt;" width="58.699%" cellspacing="0">
+	<col style="width: 59.527%;" />
+	<col style="width: 20.237%;" />
+	<col style="width: 20.237%;" />
+	<tr>
+		<td style="border: Solid 1px #9b9b9b;" bgcolor="#353D47"><p class="GreyColumnHeading">データ型</p></td>
+		<td style="border-top: Solid 1px #9b9b9b; border-right: Solid 1px #9b9b9b; 
+			 border-bottom: Solid 1px #9b9b9b;" bgcolor="#353D47"><p class="GreyColumnHeading">検索対象</p></td>
+		<td style="border-top: Solid 1px #9b9b9b; border-right: Solid 1px #9b9b9b; 
+			 border-bottom: Solid 1px #9b9b9b;" bgcolor="#353D47"><p class="GreyColumnHeading">備考</p></td>
+	</tr>
+	<tr>
+		<td style="border-left: Solid 1px #9b9b9b; border-right: Solid 1px #9b9b9b; 
+			 border-bottom: Solid 1px #9b9b9b;"><p class="TableText">Edm.String</p></td>
+		<td style="border-right: Solid 1px #9b9b9b; border-bottom: Solid 1px #9b9b9b;"><p 
+			 class="TableText">○</p></td>
+		<td style="border-right: Solid 1px #9b9b9b; border-bottom: Solid 1px #9b9b9b;"><p 
+			 class="TableText">&#160;</p></td>
+	</tr>
+	<tr>
+		<td style="border-left: Solid 1px #9b9b9b; border-right: Solid 1px #9b9b9b; 
+			 border-bottom: Solid 1px #9b9b9b;"><p class="TableText">Edm.Boolean</p></td>
+		<td style="border-right: Solid 1px #9b9b9b; border-bottom: Solid 1px #9b9b9b;"><p 
+			 class="TableText">○</p></td>
+		<td style="border-right: Solid 1px #9b9b9b; border-bottom: Solid 1px #9b9b9b;"><p 
+			 class="TableText">&#160;</p></td>
+	</tr>
+	<tr>
+		<td style="border-left: Solid 1px #9b9b9b; border-right: Solid 1px #9b9b9b; 
+			 border-bottom: Solid 1px #9b9b9b;"><p class="TableText">Edm.Single</p></td>
+		<td style="border-right: Solid 1px #9b9b9b; border-bottom: Solid 1px #9b9b9b;"><p 
+			 class="TableText">○</p></td>
+		<td style="border-right: Solid 1px #9b9b9b; border-bottom: Solid 1px #9b9b9b;"><p 
+			 class="TableText">&#160;</p></td>
+	</tr>
+	<tr>
+		<td style="border-left: Solid 1px #9b9b9b; border-right: Solid 1px #9b9b9b; 
+			 border-bottom: Solid 1px #9b9b9b;"><p class="TableText">Edm.Int32</p></td>
+		<td style="border-right: Solid 1px #9b9b9b; border-bottom: Solid 1px #9b9b9b;"><p 
+			 class="TableText">○</p></td>
+		<td style="border-right: Solid 1px #9b9b9b; border-bottom: Solid 1px #9b9b9b;"><p 
+			 class="TableText">&#160;</p></td>
+	</tr>
+	<tr>
+		<td style="border-left: Solid 1px #9b9b9b; border-right: Solid 1px #9b9b9b; 
+			 border-bottom: Solid 1px #9b9b9b; "><p class="TableText">Edm.Double</p></td>
+		<td style="border-right: Solid 1px #9b9b9b; border-bottom: Solid 1px #9b9b9b; 
+			 "><p class="TableText">○</p></td>
+		<td style="border-right: Solid 1px #9b9b9b; border-bottom: Solid 1px #9b9b9b; 
+			 "><p class="TableText" style="font-family: Verdana, sans-serif; 
+					 font-size: 12px;">動的プロパティのみ</p></td>
+	</tr>
+	<tr>
+		<td style="border-left: Solid 1px #9b9b9b; border-right: Solid 1px #9b9b9b; 
+			 border-bottom: Solid 1px #9b9b9b; "><p class="TableText">Edm.DateTime</p></td>
+		<td style="border-right: Solid 1px #9b9b9b; border-bottom: Solid 1px #9b9b9b; 
+			 "><p class="TableText">×</p></td>
+		<td style="border-right: Solid 1px #9b9b9b; border-bottom: Solid 1px #9b9b9b; 
+			 "><p class="TableText">&#160;</p></td>
+	</tr>
+</table>
+<ul>
+	<li style="
+margin-left:-20px;
+list-style:url('../../../../Images/arrow.png');
+color:#198e9e;
+font-weight:bold;"><h2 style="font-weight: bold;">検索の仕様</h2></li>
+</ul>
+<p class="Bullet_1" style="margin-left: 114px;"><span style="font-family:'Symbol'">&#183;</span><span style='word-spacing:normal; font:6.0pt "Times New Roman"'><font size="1" style="font-size:6pt;">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</font></span><span 
+	 style="color: rgb(72, 72, 72); font-family: Verdana, sans-serif; font-size: 12px; 
+	 text-indent: 0px; display: inline	 ! important ; float: none;">半角空白</span> 
+ </p>
+<ul>
+	<ul>
+		<li style="list-style: circle; font-family: Verdana, sans-serif; 
+			 font-size: 12px;"><p class="Bullet_2" style="font-size: 12px;">区切り文字として扱う</p></li>
+		<li style="list-style: circle; font-family: Verdana, sans-serif; 
+			 font-size: 12px;"><p class="Bullet_2" style="color: rgb(72, 72, 72); 
+									 font-family: Verdana, sans-serif; 
+									 line-height: normal; orphans: auto; 
+									 widows: auto; background-color: #ffffff; 
+									 display: inline	 ! important ; 
+									 -webkit-text-stroke-width: 0px; font-size: 12px;">&quot;(ダブルコート)で囲んでも、一単語として扱われない</p></li>
+	</ul>
+</ul>
+<ol style="margin-top: 0px; margin-bottom: 0px; list-style: rh-list;">
+	<ol style="margin-top: 0px; margin-bottom: 0px; list-style: rh-list;">
+		<p class="Bullet_2" style="color: rgb(72, 72, 72); 
+													 font-family: Verdana, sans-serif; 
+													 font-size: 12px; line-height: normal; 
+													 orphans: auto; widows: auto; 
+													 -webkit-text-stroke-width: 0px; 
+													 background-color: #ffffff; 
+													 display: inline	 ! important ;"><span style="font-family:'Courier New'">o</span><span style='word-spacing:normal; font:6.0pt "Times New Roman"'><font size="1" style="font-size:6pt;">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</font></span>例) 
+		 以下の指定はどちらも 「ぽち」かつ「たま」というキーワードを含むデータを検索する </p>
+		<table style="margin-left: 26pt; height: 47px;" cellspacing="0" 
+				 width="65.82%">
+			<col style="width: 100%;" />
+			<tr>
+				<td style="border: Solid 1px #9b9b9b; vertical-align: middle;"><p 
+					 class="Code" style="font-size: 12px; font-family: Verdana, sans-serif;">q=ぽち%20たま</p>
+				<p class="Paragraph" style="margin-left: 0px; font-size: 12px; 
+					 font-family: Verdana, sans-serif;">q=&quot;ぽち%20たま&quot;</p></td>
+			</tr>
+		</table>
+	</ol>
+</ol>
+<p class="Bullet_1"><span style="font-family:'Symbol'">&#183;</span><span style='word-spacing:normal; font:6.0pt "Times New Roman"'><font size="1" style="font-size:6pt;">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</font></span><span style="color: rgb(72, 72, 72); 
+	 font-family: Verdana, sans-serif; font-size: 12px; text-indent: 0px; 
+	 display: inline	 ! important ; float: none;">半角英数字</span> </p>
+<ul style="list-style: circle;">
+	<ul style="list-style: circle;">
+		<ul style="list-style: circle;">
+			<li style="font-size: 12px; font-family: Verdana, sans-serif;"><p 
+				 class="Paragraph" style="margin-left: 0px; font-size: 12px; 
+				 font-family: Verdana, sans-serif;">キーワード内での部分一致の検索不可</p></li>
+			<li style="font-size: 12px; font-family: Verdana, sans-serif;"><p 
+				 class="Paragraph" style="margin-left: 0px; font-size: 12px; 
+				 font-family: Verdana, sans-serif;">大文字・小文字の区別は行わない</p></li>
+		</ul>
+	</ul>
+</ul>
+<p class="Bullet_1"><span style="font-family:'Symbol'">&#183;</span><span style='word-spacing:normal; font:6.0pt "Times New Roman"'><font size="1" style="font-size:6pt;">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</font></span><span style="color: rgb(72, 72, 72); 
+	 font-family: Verdana, sans-serif; font-size: 12px; text-indent: 0px; 
+	 display: inline	 ! important ; float: none;">全角文字</span><span style="color: #000000;"><font color="black" > 
+ </font></span></p>
+<ul style="list-style: circle;">
+	<ul style="list-style: circle;">
+		<ul style="list-style: circle;">
+			<li style="font-family: Verdana, sans-serif; font-size: 12px;"><p 
+				 class="Paragraph" style="margin-left: 0px; font-family: Verdana, sans-serif; 
+				 font-size: 12px;">部分一致の検索可</p></li>
+			<li style="font-family: Verdana, sans-serif; font-size: 12px;"><p 
+				 class="Paragraph" style="margin-left: 0px; font-family: Verdana, sans-serif; 
+				 font-size: 12px;">大文字・小文字の区別は行わない</p></li>
+		</ul>
+	</ul>
+</ul>
+<p class="Paragraph">&#160;</p>
+<p class="Paragraph" style="color: rgb(72, 72, 72); font-family: Verdana, sans-serif; 
+	 font-size: 12px; font-style: normal; font-variant: normal; font-weight: normal; 
+	 letter-spacing: normal; line-height: normal; orphans: 2; text-align: -webkit-auto; 
+	 text-indent: 0px; text-transform: none; white-space: normal; widows: 2; 
+	 word-spacing: 0px; -webkit-text-size-adjust: auto; -webkit-text-stroke-width: 0px; 
+	 background-color: #ffffff;">&#160;</p>
+<div style="border-top: Solid 4px #0080c0; width: 100%; 
+					 position: relative; background-color: #374049; padding-top: 7px; 
+					 padding-bottom: 7px; padding-right: 5px;" id="footer">
+	<p style="font-size: 8pt; color: #ffffff; text-align: right;"><span 
+	 style="mso-ascii-theme-font: minor-latin; mso-fareast-font-family: Calibri; 
+	 mso-fareast-theme-font: minor-latin; mso-hansi-theme-font: minor-latin; 
+	 mso-bidi-font-family: 'Times New Roman'; mso-bidi-theme-font: minor-bidi; 
+	 mso-ansi-language: EN-US; mso-fareast-language: EN-US; mso-bidi-language: AR-SA; 
+	 font-family: Arial, sans-serif;">All Rights Reserved,Copyright (C) 
+	 FUJITSU LIMITED 1998-2013</span> </p>
+</div>
+<script type="text/javascript" language="javascript1.2">//<![CDATA[
+<!--
+if (window.writeIntopicBar)
+	writeIntopicBar(0);
+
+
+highlightSearch();
+//-->
+//]]></script>
+</body>
+</html>

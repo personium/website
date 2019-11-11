@@ -1,0 +1,1258 @@
+<?xml version="1.0" encoding="iso-2022-jp" ?>
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN"
+    "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<!-- saved from url=(0014)about:internet -->
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=iso-2022-jp" />
+<meta http-equiv="Content-Language" content="ja-JP" />
+<meta name="generator" content="Adobe RoboHelp 10" />
+<title>search_log</title>
+<link rel="StyleSheet" href="../../../../../../default.css" type="text/css" />
+<style type="text/css">
+/*<![CDATA[*/
+<!--
+.mainBreadCrumb a:link { color:#000000;
+background-color:transparent;
+text-decoration:none; }
+.mainBreadCrumb a:visited { color:#000000;
+background-color:transparent;
+text-decoration:none; }
+.mainBreadCrumb a:hover { color:#ff0000 ! important;
+cursor:pointer;
+text-decoration:underline; }
+p.mainBreadCrumb { margin-left:0px;
+margin-top:1px ! important; }
+h1 { padding-left:10px ! important; }
+-->
+/*]]>*/
+</style>
+
+<script type="text/javascript" language="JavaScript">
+//<![CDATA[
+function reDo() {
+  if (innerWidth != origWidth || innerHeight != origHeight)
+     location.reload();
+}
+if ((parseInt(navigator.appVersion) == 4) && (navigator.appName == "Netscape")) {
+        origWidth = innerWidth;
+        origHeight = innerHeight;
+        onresize = reDo;
+}
+onerror = null; 
+//]]>
+</script>
+<style type="text/css">
+/*<![CDATA[*/
+<!--
+div.WebHelpPopupMenu { position:absolute;
+left:0px;
+top:0px;
+z-index:4;
+visibility:hidden; }
+-->
+/*]]>*/
+</style>
+
+<script type="text/javascript" language="javascript1.2" src="../../../../../../whmsg.js" charset="utf-8">
+</script>
+<script type="text/javascript" language="javascript" src="../../../../../../whver.js" charset="utf-8">
+</script>
+<script type="text/javascript" language="javascript1.2" src="../../../../../../whutils.js" charset="utf-8">
+</script>
+<script type="text/javascript" language="javascript1.2" src="../../../../../../whproxy.js" charset="utf-8">
+</script>
+<script type="text/javascript" language="javascript1.2" src="../../../../../../whlang.js" charset="utf-8">
+</script>
+<script type="text/javascript" language="javascript1.2" src="../../../../../../whtopic.js" charset="utf-8">
+</script>
+</head>
+<body>
+<script type="text/javascript" language="javascript1.2">
+//<![CDATA[
+<!--
+if (window.gbWhTopic)
+{
+        var strUrl = document.location.href;
+        var bc = 0;
+        var n = strUrl.toLowerCase().indexOf("bc-");
+        if(n != -1)
+        {
+                document.location.href = strUrl.substring(0, n);
+                bc = strUrl.substring(n+3);
+        }
+
+        if (window.addTocInfo)
+        {
+        addTocInfo("Cell Level API\nイベント\nイベントのロギング\nログファイル一覧取得");
+addAvenueInfo("Event（イベント）","docs/ja/rest_api/cell_level/event/event_log/LogFile_Get(ログファイル取得).htm","docs/ja/rest_api/cell_level/event/event_log/LogFile_Delete(ログファイル削除)(Not_Implemented_Yet).htm");
+addButton("show",BTN_TEXT,"表示","","","","",0,0,"","","");
+
+        }
+        if (window.writeBtnStyle)
+                writeBtnStyle();
+
+        if (window.writeIntopicBar)
+                writeIntopicBar(1);
+
+        
+        
+}
+else
+        if (window.gbIE4)
+                document.location.reload();
+
+onLoadHandler = function()
+{
+  if (window.setRelStartPage)
+        {
+        setTimeout("setRelStartPage('../../../../../../Japanese.htm');", 1)
+
+    setTimeout("UpdateBreadCrumbsMarker();", 1);
+        }
+}
+
+if (window.addEventListener){  
+        window.addEventListener('load', onLoadHandler, false);   
+} else if (window.attachEvent){  
+        window.attachEvent('onload', onLoadHandler);  
+}
+
+function onSetStartPage()
+{
+  autoSync(1);
+  sendSyncInfo();
+  sendAveInfoOut();
+}
+//-->
+//]]>
+</script><script type="text/javascript" src="../../../../../../ehlpdhtm.js" language="JavaScript1.2">
+</script>
+<div style="width: 100%; position: relative;" id="header">
+<p style="font-size: 10pt;">&#160;</p>
+</div>
+<script type="text/javascript" language="javascript">
+//<![CDATA[
+document.write("<p  class=\"mainBreadCrumb\"   style=\"text-align:left;\" class=\"breadcrumbs\">");
+AddMasterBreadcrumbs("../../../../../../Japanese.htm", "breadcrumbs", " &gt; ", "トップ", "../../../../HomePage.htm");
+document.write("<a class=\"breadcrumbs\" href=\"../../CellLevelAPIOverview.htm\">Cell Level API<\/a>  &gt;  <a class=\"breadcrumbs\" href=\"../eventoverview.htm\">イベント<\/a>  &gt;  <a class=\"breadcrumbs\" href=\"LogFile_Info.htm\">イベントのロギング<\/a>  &gt;  ログファイル一覧取得<\/p>");
+//]]>
+</script>
+<hr style="border-left-width: 0px; margin-left: -6px;" size="1" width="101%" align="center" />
+<form><input type="image" value="Print" onclick="window.print();return false" name="Printer.png" src="../../../../../../Images/Printer.png" style="width: 16px; height: 16px; float: right; margin-top: -32px; margin-right: 2px;" /></form>
+<h1>ログファイル一覧取得</h1>
+<h2 style="margin-left: 0px;"><span lang="JA" xml:lang="JA" style="line-height: 115%; mso-ascii-font-family: Arial; mso-fareast-theme-font: minor-fareast; mso-hansi-font-family: Arial; mso-bidi-font-family: Arial; mso-ansi-language: EN-US; mso-fareast-language: JA; mso-bidi-language: AR-SA; font-weight: bold; font-family: 'MS Gothic';">概要</span></h2>
+<p class="Paragraph" style="font-family: Verdana, sans-serif; font-size: 12px;">指定されたURL配下のログファイルの一覧を取得する</p>
+<h2><span style="font-weight: bold;">必要な権限</span></h2>
+<p class="Paragraph" style="font-family: Verdana, sans-serif; font-size: 12px;">log-read</p>
+<h2><span style="font-weight: bold;">制限事項</span></h2>
+<p class="Paragraph" style=" margin-left: 50px; text-indent: -30px;"><span class="rls-1-Bullets"><span style="font-family:'Symbol'">&#183;</span></span><span style='word-spacing:normal; font:6.0pt "Times New Roman"'><font size="1" style="font-size:6pt;">&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;</font></span>コレクションの階層の深さの最大値は50</p>
+<p class="Paragraph" style=" margin-left: 50px; text-indent: -30px;"><span class="rls-1-Bullets"><span style="font-family:'Symbol'">&#183;</span></span><span style='word-spacing:normal; font:6.0pt "Times New Roman"'><font size="1" style="font-size:6pt;">&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;</font></span>各コレクション配下の子要素数の最大値は1コレクションあたり10,000</p>
+<p class="Paragraph" style=" margin-left: 70px; text-indent: -20px;"><span class="rls-2-Bullets"><span style="font-family:'Courier New'">o</span></span><span style='word-spacing:normal; font:6.0pt "Times New Roman"'><font size="1" style="font-size:6pt;">&#160;&#160;&#160;&#160;&#160;</font></span>Box直下のコレクションを1階層目とし、以下2階層目、3階層目…とカウントする。<span style="text-indent: -30px;">コレクション配下に作成するファイルは、階層としてカウントしない。</span></p>
+<p class="Paragraph">&#160;</p>
+<p class="Paragraph" style=" margin-left: 50px; text-indent: -30px;"><span class="rls-1-Bullets"><span style="font-family:'Symbol'">&#183;</span></span><span style='word-spacing:normal; font:6.0pt "Times New Roman"'><font size="1" style="font-size:6pt;">&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;</font></span>内部イベントのログ出力は未サポート</p>
+<p class="Paragraph" style=" margin-left: 50px; text-indent: -30px;"><span class="rls-1-Bullets"><span style="font-family:'Symbol'">&#183;</span></span><span style='word-spacing:normal; font:6.0pt "Times New Roman"'><font size="1" style="font-size:6pt;">&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;</font></span>ログの出力設定、および出力設定の参照は未サポート</p>
+<p class="Paragraph" style=" margin-left: 70px; text-indent: -20px;"><span class="rls-2-Bullets"><span style="font-family:'Courier New'">o</span></span><span style='word-spacing:normal; font:6.0pt "Times New Roman"'><font size="1" style="font-size:6pt;">&#160;&#160;&#160;&#160;&#160;</font></span>ログファイル名は"default.log"固定とする</p>
+<p class="Paragraph" style=" margin-left: 70px; text-indent: -20px;"><span class="rls-2-Bullets"><span style="font-family:'Courier New'">o</span></span><span style='word-spacing:normal; font:6.0pt "Times New Roman"'><font size="1" style="font-size:6pt;">&#160;&#160;&#160;&#160;&#160;</font></span>ローテートは以下のデフォルト設定に従い行う</p>
+<p class="Paragraph" style=" margin-left: 90px; text-indent: -20px;"><span class="rls-3-Bullets"><span style="font-family:Wingdings">§</span></span><span style='word-spacing:normal; font:6.0pt "Times New Roman"'><font size="1" style="font-size:6pt;">&#160;&#160;&#160;&#160;&#160;&#160;</font></span>ローテートのサイズ設定:50MB</p>
+<p class="Paragraph" style=" margin-left: 50px; text-indent: -30px;"><span class="rls-1-Bullets"><span style="font-family:'Symbol'">&#183;</span></span><span style='word-spacing:normal; font:6.0pt "Times New Roman"'><font size="1" style="font-size:6pt;">&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;</font></span>ログの出力レベルは"info"固定（INFO, WARN, ERRORすべて出力）とする</p>
+<p class="Paragraph" style=" margin-left: 50px; text-indent: -30px;"><span class="rls-1-Bullets"><span style="font-family:'Symbol'">&#183;</span></span><span style='word-spacing:normal; font:6.0pt "Times New Roman"'><font size="1" style="font-size:6pt;">&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;</font></span>ローテート時のファイル名は、 default.log.{timestamp} とする。 {timestamp}は、ローテートされたときの時刻で採番される。</p>
+<div>
+<table style="margin-left: 26pt;" cellspacing="0" width="65.778%">
+<col style="width: 23.65%;" />
+<col style="width: 21.057%;" />
+<col style="width: 31.399%;" />
+<col style="width: 23.893%;" />
+<tr>
+<th style="border: Solid 1px #9b9b9b;" bgcolor="#DADADA">
+<p class="GreyColumnHeading" style="font-weight: normal;">アクション</p>
+</th>
+<th style="border-top: Solid 1px #9b9b9b; border-right: Solid 1px #9b9b9b; border-bottom: Solid 1px #9b9b9b;" bgcolor="#DADADA">
+<p class="GreyColumnHeading" style="font-weight: normal;">アーカイブされたログファイル</p>
+</th>
+<th style="border-top: Solid 1px #9b9b9b; border-right: Solid 1px #9b9b9b; border-bottom: Solid 1px #9b9b9b;" bgcolor="#DADADA">
+<p class="GreyColumnHeading" style="font-weight: normal;">説明</p>
+</th>
+<th style="border-top: Solid 1px #9b9b9b; border-right: Solid 1px #9b9b9b; border-bottom: Solid 1px #9b9b9b;" bgcolor="#DADADA">
+<p class="GreyColumnHeading" style="font-weight: normal;">備考</p>
+</th>
+</tr>
+<tr>
+<td style="border-left: Solid 1px #9b9b9b; border-right: Solid 1px #9b9b9b; border-bottom: Solid 1px #9b9b9b;">
+<p class="TableText">First Rotation</p>
+</td>
+<td style="border-right: Solid 1px #9b9b9b; border-bottom: Solid 1px #9b9b9b;">
+<p class="TableText">archive/</p>
+<p class="TableText">default.log.1402910774659</p>
+</td>
+<td style="border-right: Solid 1px #9b9b9b; border-bottom: Solid 1px #9b9b9b;">
+<p class="TableText">&#160;</p>
+<p class="TableText">新規にローテートされたファイル</p>
+</td>
+<td style="border-right: Solid 1px #9b9b9b; border-bottom: Solid 1px #9b9b9b;">
+<p class="TableText">&#160;</p>
+<p class="TableText">2014-06-16 18:26:14 +0900</p>
+</td>
+</tr>
+<tr>
+<td style="border-left: Solid 1px #9b9b9b; border-right: Solid 1px #9b9b9b; border-bottom: Solid 1px #9b9b9b;">
+<p class="TableText">2nd Rotation</p>
+</td>
+<td style="border-right: Solid 1px #9b9b9b; border-bottom: Solid 1px #9b9b9b;">
+<p class="TableText">archive/</p>
+<p class="TableText">default.log.1402910774659</p>
+<p class="TableText">default.log.1403910784659</p>
+</td>
+<td style="border-right: Solid 1px #9b9b9b; border-bottom: Solid 1px #9b9b9b;">
+<p class="TableText">&#160;</p>
+<p class="TableText">前回ローテートされたファイル</p>
+<p class="TableText">新規にローテートされたファイル</p>
+</td>
+<td style="border-right: Solid 1px #9b9b9b; border-bottom: Solid 1px #9b9b9b;">
+<p class="TableText">&#160;</p>
+<p class="TableText">2014-06-16 18:26:14 +0900</p>
+<p class="TableText">2014-06-28 08:13:04 +0900</p>
+</td>
+</tr>
+<tr>
+<td style="border-left: Solid 1px #9b9b9b; border-right: Solid 1px #9b9b9b; border-bottom: Solid 1px #9b9b9b;">
+<p class="TableText">3rd Rotation</p>
+</td>
+<td style="border-right: Solid 1px #9b9b9b; border-bottom: Solid 1px #9b9b9b;">
+<p class="TableText">archive/</p>
+<p class="TableText">default.log.1402910774659</p>
+<p class="TableText">default.log.1403910784659</p>
+<p class="TableText">default.log.1403910784659</p>
+</td>
+<td style="border-right: Solid 1px #9b9b9b; border-bottom: Solid 1px #9b9b9b;">
+<p class="TableText">&#160;</p>
+<p class="TableText">前々回にローテートされたファイル</p>
+<p class="TableText">前回ローテートされたファイル</p>
+<p class="TableText">新規にローテートされたファイル</p>
+</td>
+<td style="border-right: Solid 1px #9b9b9b; border-bottom: Solid 1px #9b9b9b;">
+<p class="TableText">&#160;</p>
+<p class="TableText">2014-06-16 18:26:14 +0900</p>
+<p class="TableText">2014-06-28 08:13:04 +0900</p>
+<p class="TableText">2014-07-09 21:59:44 +0900</p>
+</td>
+</tr>
+</table>
+<p>&#160;</p>
+</div>
+<p class="Paragraph">&#160;</p>
+<h2><span style="font-weight: bold;">リクエスト</span></h2>
+<h3><span style="font-weight: bold;">リクエストURL</span></h3>
+<h5>最新のログファイルの一覧を取得</h5>
+<table class="CodeTable" style="height: 47px; margin-left: 26pt;" cellspacing="0px" width="96%">
+<col style="width: 100%;" />
+<tr>
+<td style="border: Solid 1px #9b9b9b;" bgcolor="#E0E0E0">
+<p class="Code">/{cellname}/__log/current</p>
+</td>
+</tr>
+</table>
+<h5>ローテートされたログファイルの一覧を取得</h5>
+<table class="CodeTable" style="height: 47px; margin-left: 26pt;" cellspacing="0px" width="96%">
+<col style="width: 100%;" />
+<tr>
+<td style="border: Solid 1px #9b9b9b;" bgcolor="#E0E0E0">
+<p class="Code">/{cellname}/__log/archive</p>
+</td>
+</tr>
+</table>
+<h3><span style="font-weight: bold;">メソッド</span></h3>
+<p class="Paragraph2" style="font-family: Verdana, sans-serif; font-size: 12px;">PROPFIND</p>
+<h3><span style="font-weight: bold;">リクエストクエリ</span></h3>
+<div>
+<table style="margin-left: 26pt;" cellspacing="0" width="96%">
+<col style="width: 15.606%;" />
+<col style="width: 22.268%;" />
+<col style="width: 16.702%;" />
+<col style="width: 10.752%;" />
+<col style="width: 34.672%;" />
+<tr>
+<th style="border: Solid 1px #9b9b9b;" bgcolor="#DADADA">
+<p class="TableText">クエリ名</p>
+</th>
+<th style="border-top: Solid 1px #9b9b9b; border-right: Solid 1px #9b9b9b; border-bottom: Solid 1px #9b9b9b;" bgcolor="#DADADA">
+<p class="TableText">概要</p>
+</th>
+<th style="border-top: Solid 1px #9b9b9b; border-right: Solid 1px #9b9b9b; border-bottom: Solid 1px #9b9b9b;" bgcolor="#DADADA">
+<p class="TableText">有効値</p>
+</th>
+<th style="border-top: Solid 1px #9b9b9b; border-right: Solid 1px #9b9b9b; border-bottom: Solid 1px #9b9b9b;" bgcolor="#DADADA">
+<p class="TableText">必須</p>
+</th>
+<th style="border-top: Solid 1px #9b9b9b; border-right: Solid 1px #9b9b9b; border-bottom: Solid 1px #9b9b9b;" bgcolor="#DADADA">
+<p class="TableText">備考</p>
+</th>
+</tr>
+<tr>
+<td style="border-left: Solid 1px #9b9b9b; border-right: Solid 1px #9b9b9b; border-bottom: Solid 1px #9b9b9b;">
+<p class="TableText" style="font-family: Verdana, sans-serif; font-size: 12px;">dc_cookie_peer</p>
+</td>
+<td style="border-right: Solid 1px #9b9b9b; border-bottom: Solid 1px #9b9b9b;">
+<p class="TableText" style="color: rgb(72, 72, 72); font-family: Verdana, sans-serif; font-size: 12px; line-height: normal; orphans: auto; widows: auto; background-color: #ffffff; -webkit-text-stroke-width: 0px;">クッキー認証値</p>
+</td>
+<td style="border-right: Solid 1px #9b9b9b; border-bottom: Solid 1px #9b9b9b;">
+<p class="TableText" style="color: rgb(72, 72, 72); font-family: Verdana, sans-serif; font-size: 12px; line-height: normal; orphans: auto; widows: auto; background-color: #ffffff;">認証時にサーバから返却されたクッキー認証値</p>
+</td>
+<td style="border-right: Solid 1px #9b9b9b; border-bottom: Solid 1px #9b9b9b;">
+<p class="TableText" style="font-family: 'Segoe UI', sans-serif;">×</p>
+</td>
+<td style="border-right: Solid 1px #9b9b9b; border-bottom: Solid 1px #9b9b9b;">
+<p class="TableText" style="color: rgb(72, 72, 72); font-family: Verdana, sans-serif; font-size: 12px; line-height: normal; orphans: auto; widows: auto; background-color: #ffffff; -webkit-text-stroke-width: 0px;">Authorizationヘッダの指定が無い場合のみ有効</p>
+<p class="TableText" style="color: rgb(72, 72, 72); font-family: Verdana, sans-serif; font-size: 12px; line-height: normal; orphans: auto; widows: auto; background-color: #ffffff; -webkit-text-stroke-width: 0px;">クッキーの認証情報を利用する場合に指定する</p>
+</td>
+</tr>
+</table>
+</div>
+<h3><span style="font-weight: bold;">リクエストヘッダ</span></h3>
+<table style="margin-left: 26pt;" cellspacing="0" width="96%">
+<col style="width: 15.606%;" />
+<col style="width: 22.268%;" />
+<col style="width: 16.702%;" />
+<col style="width: 10.752%;" />
+<col style="width: 34.672%;" />
+<tr>
+<th style="border: Solid 1px #9b9b9b;" bgcolor="#DADADA">
+<p class="TableText">ヘッダ名</p>
+</th>
+<th style="border-top: Solid 1px #9b9b9b; border-right: Solid 1px #9b9b9b; border-bottom: Solid 1px #9b9b9b;" bgcolor="#DADADA">
+<p class="TableText"><span style="font-weight: bold; font-size: 10pt;"><font size="2" style="font-size:10pt;">概要</font></span></p>
+</th>
+<th style="border-top: Solid 1px #9b9b9b; border-right: Solid 1px #9b9b9b; border-bottom: Solid 1px #9b9b9b;" bgcolor="#DADADA">
+<p class="TableText"><span style="font-size: 10pt; font-weight: bold;"><font size="2" style="font-size:10pt;">有効値</font></span></p>
+</th>
+<th style="border-top: Solid 1px #9b9b9b; border-right: Solid 1px #9b9b9b; border-bottom: Solid 1px #9b9b9b;" bgcolor="#DADADA">
+<p class="TableText"><span style="font-weight: normal;"><span style="font-size: 10pt; font-weight: bold;"><font size="2" style="font-size:10pt;">必須</font></span></span></p>
+</th>
+<th style="border-top: Solid 1px #9b9b9b; border-right: Solid 1px #9b9b9b; border-bottom: Solid 1px #9b9b9b;" bgcolor="#DADADA">
+<p class="TableText"><span style="font-weight: normal;">備考</span></p>
+</th>
+</tr>
+<tr>
+<td style="border-left: solid 1px #9b9b9b; border-right: Solid 1px #9b9b9b; border-bottom: Solid 1px #9b9b9b;">
+<p class="TableText" style="font-family: Verdana, sans-serif; font-size: 12px;">X-Dc-Version</p>
+</td>
+<td style="border-right: Solid 1px #9b9b9b; border-bottom: Solid 1px #9b9b9b;">
+<p class="TableText" style="color: rgb(72, 72, 72); line-height: normal; orphans: auto; widows: auto; -webkit-text-size-adjust: auto; background-color: #ffffff; display: inline ! important ; font-family: Verdana, sans-serif; -webkit-text-stroke-width: 0px; font-size: 12px;">APIの実行バージョン</p>
+</td>
+<td style="border-right: Solid 1px #9b9b9b; border-bottom: Solid 1px #9b9b9b;">
+<p class="TableText" style="color: rgb(72, 72, 72); line-height: normal; orphans: auto; widows: auto; -webkit-text-size-adjust: auto; background-color: #ffffff; display: inline ! important ; font-family: Verdana, sans-serif; -webkit-text-stroke-width: 0px; font-size: 12px;">有効なバージョン</p>
+</td>
+<td style="border-right: Solid 1px #9b9b9b; border-bottom: Solid 1px #9b9b9b;">
+<p class="TableText" style="font-family: Verdana, sans-serif; font-size: 12px;">×</p>
+</td>
+<td style="border-right: Solid 1px #9b9b9b; border-bottom: Solid 1px #9b9b9b;">
+<p class="TableText" style="color: rgb(72, 72, 72); line-height: normal; orphans: auto; widows: auto; -webkit-text-size-adjust: auto; background-color: #ffffff; display: inline ! important ; font-family: Verdana, sans-serif; -webkit-text-stroke-width: 0px; font-size: 12px;">指定がない場合、最新のAPIバージョンが指定される</p>
+</td>
+</tr>
+<tr>
+<td style="border-left: solid 1px #9b9b9b; border-right: Solid 1px #9b9b9b; border-bottom: Solid 1px #9b9b9b;">
+<p class="TableText" style="font-family: Verdana, sans-serif; font-size: 12px;">X-HTTP-Method-Override</p>
+</td>
+<td style="border-right: Solid 1px #9b9b9b; border-bottom: Solid 1px #9b9b9b;">
+<p class="TableText" style="color: rgb(72, 72, 72); line-height: normal; orphans: auto; widows: auto; -webkit-text-size-adjust: auto; background-color: #ffffff; display: inline ! important ; font-family: Verdana, sans-serif; -webkit-text-stroke-width: 0px; font-size: 12px;">メソッドオーバーライド機能</p>
+</td>
+<td style="border-right: Solid 1px #9b9b9b; border-bottom: Solid 1px #9b9b9b;">
+<p class="TableText" style="color: rgb(72, 72, 72); line-height: normal; orphans: auto; widows: auto; -webkit-text-size-adjust: auto; background-color: #ffffff; display: inline ! important ; font-family: Verdana, sans-serif; -webkit-text-stroke-width: 0px; font-size: 12px;">任意</p>
+</td>
+<td style="border-right: Solid 1px #9b9b9b; border-bottom: Solid 1px #9b9b9b;">
+<p class="TableText" style="font-family: Verdana, sans-serif; font-size: 12px;">×</p>
+</td>
+<td style="border-right: Solid 1px #9b9b9b; border-bottom: Solid 1px #9b9b9b;">
+<p class="TableText" style="color: rgb(72, 72, 72); line-height: normal; orphans: auto; widows: auto; -webkit-text-size-adjust: auto; background-color: #ffffff; display: inline ! important ; font-family: Verdana, sans-serif; -webkit-text-stroke-width: 0px; font-size: 12px;">POSTメソッドでリクエスト時にこの値を指定すると、指定した値がメソッドとして使用されます。</p>
+</td>
+</tr>
+<tr>
+<td style="border-left: solid 1px #9b9b9b; border-right: Solid 1px #9b9b9b; border-bottom: Solid 1px #9b9b9b;">
+<p class="TableText" style="font-family: Verdana, sans-serif; font-size: 12px;">X-Override</p>
+</td>
+<td style="border-right: Solid 1px #9b9b9b; border-bottom: Solid 1px #9b9b9b;">
+<p class="TableText" style="color: rgb(72, 72, 72); line-height: normal; orphans: auto; widows: auto; -webkit-text-size-adjust: auto; background-color: #ffffff; display: inline ! important ; font-family: Verdana, sans-serif; -webkit-text-stroke-width: 0px; font-size: 12px;">ヘッダーオーバライド機能</p>
+</td>
+<td style="border-right: Solid 1px #9b9b9b; border-bottom: Solid 1px #9b9b9b;">
+<p class="TableText" style="color: rgb(72, 72, 72); line-height: normal; orphans: auto; widows: auto; -webkit-text-size-adjust: auto; background-color: #ffffff; display: inline ! important ; font-family: Verdana, sans-serif; -webkit-text-stroke-width: 0px; font-size: 12px;">${上書きするヘッダー名}:${値}</p>
+</td>
+<td style="border-right: Solid 1px #9b9b9b; border-bottom: Solid 1px #9b9b9b;">
+<p class="TableText" style="font-family: Verdana, sans-serif; font-size: 12px;">×</p>
+</td>
+<td style="border-right: Solid 1px #9b9b9b; border-bottom: Solid 1px #9b9b9b;">
+<p class="TableText" style="color: rgb(72, 72, 72); line-height: normal; orphans: auto; widows: auto; -webkit-text-size-adjust: auto; background-color: #ffffff; display: inline ! important ; font-family: Verdana, sans-serif; -webkit-text-stroke-width: 0px; font-size: 12px;">通常のHTTPヘッダの値を上書きします。複数のヘッダを上書きする場合はX-Overrideヘッダを複数指定します。</p>
+</td>
+</tr>
+<tr>
+<td style="border-left: solid 1px #9b9b9b; border-right: Solid 1px #9b9b9b; border-bottom: Solid 1px #9b9b9b;">
+<p class="TableText" style="color: rgb(72, 72, 72); line-height: normal; orphans: auto; widows: auto; background-color: #ffffff; display: inline ! important ; font-family: Verdana, sans-serif; -webkit-text-stroke-width: 0px; font-size: 12px;">X-Dc-RequestKey</p>
+</td>
+<td style="border-right: Solid 1px #9b9b9b; border-bottom: Solid 1px #9b9b9b;">
+<p class="TableText" style="color: rgb(72, 72, 72); line-height: normal; orphans: auto; widows: auto; background-color: #ffffff; display: inline ! important ; font-family: Verdana, sans-serif; -webkit-text-stroke-width: 0px; font-size: 12px;">イベントログに出力するRequestKeyフィールドの値</p>
+</td>
+<td style="border-right: Solid 1px #9b9b9b; border-bottom: Solid 1px #9b9b9b;">
+<p class="TableText" style="font-family: Verdana, sans-serif; font-size: 12px;"><span style="color: rgb(72, 72, 72); line-height: normal; orphans: auto; widows: auto; -webkit-text-stroke-width: 0px; background-color: #ffffff; display: inline ! important ; float: none;">半角英数、-(半角ハイフン)と_(半角アンダーバー)</span><br style="color: rgb(72, 72, 72); font-family: Verdana, sans-serif; font-size: 12px; font-style: normal; font-variant: normal; font-weight: normal; letter-spacing: normal; line-height: normal; orphans: auto; text-align: start; text-indent: 0px; text-transform: none; white-space: normal; widows: auto; word-spacing: 0px; -webkit-text-stroke-width: 0px; background-color: #ffffff;" />
+<span style="color: rgb(72, 72, 72); line-height: normal; orphans: auto; widows: auto; -webkit-text-stroke-width: 0px; background-color: #ffffff; display: inline ! important ; float: none;">最大128文字</span></p>
+</td>
+<td style="border-right: Solid 1px #9b9b9b; border-bottom: Solid 1px #9b9b9b;">
+<p class="TableText" style="font-family: Verdana, sans-serif; font-size: 12px;">×</p>
+</td>
+<td style="border-right: Solid 1px #9b9b9b; border-bottom: Solid 1px #9b9b9b;">
+<p class="TableText" style="font-family: Verdana, sans-serif; font-size: 12px;"><span style="color: rgb(72, 72, 72); line-height: normal; orphans: auto; widows: auto; -webkit-text-stroke-width: 0px; background-color: #ffffff; display: inline ! important ; float: none;">指定がない場合、PCS-${UNIX時間}を設定する</span><br style="color: rgb(72, 72, 72); font-family: Verdana, sans-serif; font-size: 12px; font-style: normal; font-variant: normal; font-weight: normal; letter-spacing: normal; line-height: normal; orphans: auto; text-align: start; text-indent: 0px; text-transform: none; white-space: normal; widows: auto; word-spacing: 0px; -webkit-text-stroke-width: 0px; background-color: #ffffff;" />
+<span style="color: rgb(72, 72, 72); line-height: normal; orphans: auto; widows: auto; -webkit-text-stroke-width: 0px; background-color: #ffffff; display: inline ! important ; float: none;">V1.1.7以降で対応</span></p>
+</td>
+</tr>
+<tr>
+<td style="border-left: solid 1px #9b9b9b; border-right: Solid 1px #9b9b9b; border-bottom: Solid 1px #9b9b9b;">
+<p class="TableText" style="font-family: Verdana, sans-serif; font-size: 12px;">Authorization</p>
+</td>
+<td style="border-right: Solid 1px #9b9b9b; border-bottom: Solid 1px #9b9b9b;">
+<p class="TableText" style="color: rgb(72, 72, 72); line-height: normal; orphans: auto; widows: auto; -webkit-text-size-adjust: auto; background-color: #ffffff; display: inline ! important ; font-family: Verdana, sans-serif; -webkit-text-stroke-width: 0px; font-size: 12px;">OAuth2.0形式で、認証情報を指定する</p>
+</td>
+<td style="border-right: Solid 1px #9b9b9b; border-bottom: Solid 1px #9b9b9b;">
+<p class="TableText" style="font-family: Verdana, sans-serif; font-size: 12px;">Bearer {TokenValue}</p>
+</td>
+<td style="border-right: Solid 1px #9b9b9b; border-bottom: Solid 1px #9b9b9b;">
+<p class="TableText" style="font-family: Verdana, sans-serif; font-size: 12px;">×</p>
+</td>
+<td style="border-right: Solid 1px #9b9b9b; border-bottom: Solid 1px #9b9b9b;">
+<p class="TableText" style="color: rgb(72, 72, 72); line-height: normal; orphans: auto; widows: auto; -webkit-text-size-adjust: auto; background-color: #ffffff; display: inline ! important ; font-family: Verdana, sans-serif; -webkit-text-stroke-width: 0px; font-size: 12px;">※認証トークンは認証トークン取得APIで取得したトークン</p>
+</td>
+</tr>
+</table>
+<h3><span style="font-weight: bold;">リクエストボディ</span></h3>
+<h4>名前空間</h4>
+<table style="margin-left: 26pt;" cellspacing="0" width="81.352%">
+<col style="width: 21.783%;" />
+<col style="width: 26.151%;" />
+<col style="width: 52.067%;" />
+<tr>
+<th style="border: Solid 1px #9b9b9b;" bgcolor="#DADADA">
+<p class="TableText">URI</p>
+</th>
+<th style="border-top: Solid 1px #9b9b9b; border-right: Solid 1px #9b9b9b; border-bottom: Solid 1px #9b9b9b;" bgcolor="#DADADA">
+<p class="TableText"><span style="font-weight: bold; font-size: 10pt;"><font size="2" style="font-size:10pt;">概要</font></span></p>
+</th>
+<th style="border-top: Solid 1px #9b9b9b; border-right: Solid 1px #9b9b9b; border-bottom: Solid 1px #9b9b9b;" bgcolor="#DADADA">
+<p class="TableText">備考()prefix</p>
+</th>
+</tr>
+<tr>
+<td style="border-left: solid 1px #9b9b9b; border-right: Solid 1px #9b9b9b; border-bottom: Solid 1px #9b9b9b;">
+<p class="TableText" style="font-family: Verdana, sans-serif; font-size: 12px;">DAV:</p>
+</td>
+<td style="border-right: Solid 1px #9b9b9b; border-bottom: Solid 1px #9b9b9b;">
+<p class="TableText" style="font-family: Verdana, sans-serif; font-size: 12px;"><span style="color: rgb(72, 72, 72); line-height: normal; orphans: auto; widows: auto; -webkit-text-stroke-width: 0px; background-color: #ffffff; display: inline ! important ; float: none;">WebDAVの名前空間</span> &#160;</p>
+</td>
+<td style="border-right: Solid 1px #9b9b9b; border-bottom: Solid 1px #9b9b9b;">
+<p class="TableText" style="font-family: Verdana, sans-serif; font-size: 12px;"><span style="color: rgb(72, 72, 72); line-height: normal; orphans: auto; widows: auto; -webkit-text-stroke-width: 0px; background-color: #ffffff; display: inline ! important ; float: none;">D:</span> &#160;</p>
+</td>
+</tr>
+</table>
+<p class="Paragraph">※ 参考prefixは以下表の可読性を高めるためのもので、このprefix文字列の使用を保証するものでも要求するものでもありません。</p>
+<h4>XMLの構造</h4>
+<p class="Paragraph2">ボディはXMLで、以下のスキーマに従っています。</p>
+<table style="margin-left: 26pt;" cellspacing="0" width="74.511%">
+<col style="width: 14.302%;" />
+<col style="width: 17.171%;" />
+<col style="width: 17.171%;" />
+<col style="width: 17.171%;" />
+<col style="width: 34.186%;" />
+<tr>
+<th style="border: Solid 1px #9b9b9b;" bgcolor="#DADADA">
+<p class="TableText">ノード名</p>
+</th>
+<th style="border-top: Solid 1px #9b9b9b; border-right: Solid 1px #9b9b9b; border-bottom: Solid 1px #9b9b9b;" bgcolor="#DADADA">
+<p class="TableText">Namespace</p>
+</th>
+<th style="border-top: Solid 1px #9b9b9b; border-right: Solid 1px #9b9b9b; border-bottom: Solid 1px #9b9b9b;" bgcolor="#DADADA">
+<p class="TableText">ノードタイプ</p>
+</th>
+<th style="border-top: Solid 1px #9b9b9b; border-right: Solid 1px #9b9b9b; border-bottom: Solid 1px #9b9b9b;" bgcolor="#DADADA">
+<p class="TableText"><span style="font-weight: bold; font-size: 10pt;"><font size="2" style="font-size:10pt;">概要</font></span></p>
+</th>
+<th style="border-top: Solid 1px #9b9b9b; border-right: Solid 1px #9b9b9b; border-bottom: Solid 1px #9b9b9b;" bgcolor="#DADADA">
+<p class="TableText">備考</p>
+</th>
+</tr>
+<tr>
+<td style="border-left: Solid 1px #9b9b9b; border-right: Solid 1px #9b9b9b; border-bottom: Solid 1px #9b9b9b;">
+<p class="TableText" style="color: rgb(72, 72, 72); font-size: 12px; line-height: normal; orphans: auto; widows: auto; background-color: #ffffff; display: inline ! important ; font-family: Verdana, sans-serif; -webkit-text-stroke-width: 0px;">propfind</p>
+</td>
+<td style="border-right: Solid 1px #9b9b9b; border-bottom: Solid 1px #9b9b9b;">
+<p class="TableText" style="font-family: Verdana, sans-serif; font-size: 12px;">D:</p>
+</td>
+<td style="border-right: Solid 1px #9b9b9b; border-bottom: Solid 1px #9b9b9b;">
+<p class="TableText" style="color: rgb(72, 72, 72); font-size: 12px; line-height: normal; orphans: auto; widows: auto; background-color: #ffffff; display: inline ! important ; font-family: Verdana, sans-serif; -webkit-text-stroke-width: 0px;">要素</p>
+</td>
+<td style="border-right: Solid 1px #9b9b9b; border-bottom: Solid 1px #9b9b9b;">
+<p class="TableText" style="font-family: Verdana, sans-serif; font-size: 12px;"><span style="color: rgb(72, 72, 72); line-height: normal; orphans: auto; widows: auto; -webkit-text-stroke-width: 0px; background-color: #ffffff; display: inline ! important ; float: none;">propfindのルート要素を表し、allpropが子となる。</span> <span style="color: rgb(72, 72, 72); line-height: normal; orphans: auto; widows: auto; -webkit-text-size-adjust: auto; -webkit-text-stroke-width: 0px; background-color: #ffffff;">&#160;</span>&#160;</p>
+</td>
+<td style="border-right: Solid 1px #9b9b9b; border-bottom: Solid 1px #9b9b9b;">
+<p class="TableText" style="font-family: Verdana, sans-serif; font-size: 12px;">&#160;</p>
+</td>
+</tr>
+<tr>
+<td style="border-left: Solid 1px #9b9b9b; border-right: Solid 1px #9b9b9b; border-bottom: Solid 1px #9b9b9b;">
+<p class="TableText" style="color: rgb(72, 72, 72); font-size: 12px; line-height: normal; orphans: auto; widows: auto; background-color: #ffffff; display: inline ! important ; font-family: Verdana, sans-serif; -webkit-text-stroke-width: 0px;">allprop</p>
+</td>
+<td style="border-right: Solid 1px #9b9b9b; border-bottom: Solid 1px #9b9b9b;">
+<p class="TableText" style="font-family: Verdana, sans-serif; font-size: 12px;">D:</p>
+</td>
+<td style="border-right: Solid 1px #9b9b9b; border-bottom: Solid 1px #9b9b9b;">
+<p class="TableText" style="color: rgb(72, 72, 72); font-size: 12px; line-height: normal; orphans: auto; text-align: start; widows: auto; background-color: #ffffff; display: inline ! important ; font-family: Verdana, sans-serif; -webkit-text-stroke-width: 0px;">要素</p>
+</td>
+<td style="border-right: Solid 1px #9b9b9b; border-bottom: Solid 1px #9b9b9b;">
+<p class="TableText" style="font-family: Verdana, sans-serif; font-size: 12px;"><span style="color: rgb(72, 72, 72); line-height: normal; orphans: auto; widows: auto; -webkit-text-stroke-width: 0px; background-color: #ffffff; display: inline ! important ; float: none;">全プロパティを取得設定を表す</span> <span style="color: rgb(72, 72, 72); line-height: normal; orphans: auto; widows: auto; -webkit-text-size-adjust: auto; -webkit-text-stroke-width: 0px; background-color: #ffffff;">&#160;</span>&#160;</p>
+</td>
+<td style="border-right: Solid 1px #9b9b9b; border-bottom: Solid 1px #9b9b9b;">
+<p class="TableText" style="font-family: Verdana, sans-serif; font-size: 12px;"><span style="color: rgb(72, 72, 72); line-height: normal; orphans: auto; widows: auto; -webkit-text-stroke-width: 0px; background-color: #ffffff; display: inline ! important ; float: none;">allprop・・・すべてのプロパティを取得する</span><br style="color: rgb(72, 72, 72); font-family: Verdana, sans-serif; font-size: 12px; font-style: normal; font-variant: normal; font-weight: normal; letter-spacing: normal; line-height: normal; orphans: auto; text-align: start; text-indent: 0px; text-transform: none; white-space: normal; widows: auto; word-spacing: 0px; -webkit-text-stroke-width: 0px; background-color: #ffffff;" />
+<span style="color: rgb(72, 72, 72); line-height: normal; orphans: auto; widows: auto; -webkit-text-stroke-width: 0px; background-color: #ffffff; display: inline ! important ; float: none;">リクエストボディが空の場合も、allpropとして扱う</span><br style="color: rgb(72, 72, 72); font-family: Verdana, sans-serif; font-size: 12px; font-style: normal; font-variant: normal; font-weight: normal; letter-spacing: normal; line-height: normal; orphans: auto; text-align: start; text-indent: 0px; text-transform: none; white-space: normal; widows: auto; word-spacing: 0px; -webkit-text-stroke-width: 0px; background-color: #ffffff;" />
+<span style="color: rgb(72, 72, 72); line-height: normal; orphans: auto; widows: auto; -webkit-text-stroke-width: 0px; background-color: #ffffff; display: inline ! important ; float: none;">allprop以外の要素はv1.2系、v1.1系未対応</span></p>
+</td>
+</tr>
+</table>
+<h3><span style="font-family: Arial, sans-serif;">DTD表記</span></h3>
+<table class="CodeTable" style="margin-left: 26pt;" cellspacing="0px" width="96%">
+<col style="width: 100%;" />
+<tr>
+<td style="border: Solid 1px #9b9b9b;" bgcolor="#E0E0E0">
+<p class="Code">&lt;!ELEMENT propfind (allprop) &gt;</p>
+<p class="Code">&lt;!ELEMENT allprop ENPTY &gt;</p>
+</td>
+</tr>
+</table>
+<h3><span style="font-weight: bold;">リクエストサンプル</span></h3>
+<table class="CodeTable" style="margin-left: 26pt;" cellspacing="0px" width="96%">
+<col style="width: 100%;" />
+<tr>
+<td style="border: Solid 1px #9b9b9b;" bgcolor="#E0E0E0">
+<p class="Code">&lt;?xml version="1.0" encoding="utf-8"?&gt;</p>
+<p class="Code">&lt;D:propfind xmlns:D="DAV:"&gt;</p>
+<p class="Code">&#160;&#160;&lt;D:allprop/&gt;</p>
+<p class="Code">&lt;/D:propfind&gt;</p>
+</td>
+</tr>
+</table>
+<h2><span style="font-weight: bold;">レスポンス</span></h2>
+<h3><span style="font-weight: bold;">ステータスコード</span></h3>
+<table style="margin-left: 26pt;" cellspacing="0" width="96%">
+<col style="width: 21.478%;" />
+<col style="width: 38.862%;" />
+<col style="width: 39.661%;" />
+<tr>
+<th style="border: Solid 1px #9b9b9b;" bgcolor="#DADADA">
+<p class="TableText"><span style="font-size: 10pt; font-weight: bold;"><font size="2" style="font-size:10pt;">コード</font></span></p>
+</th>
+<th style="border-top: Solid 1px #9b9b9b; border-right: Solid 1px #9b9b9b; border-bottom: Solid 1px #9b9b9b;" bgcolor="#DADADA">
+<p class="TableText">メッセージ</p>
+</th>
+<th style="border-top: Solid 1px #9b9b9b; border-right: Solid 1px #9b9b9b; border-bottom: Solid 1px #9b9b9b;" bgcolor="#DADADA">
+<p class="TableText"><span style="font-weight: bold; font-size: 10pt;"><font size="2" style="font-size:10pt;">概要</font></span></p>
+</th>
+</tr>
+<tr>
+<td>
+<p class="TableText">207</p>
+</td>
+<td>
+<p class="TableText">Multi-Status</p>
+</td>
+<td>
+<p class="TableText">取得成功時</p>
+</td>
+</tr>
+</table>
+<p class="Paragraph2" style="font-family: Verdana, sans-serif; font-size: 12px;">&#160;</p>
+<h3><span style="font-weight: bold;">レスポンスヘッダ</span></h3>
+<table class="5ColumnTable" style="margin-left: 26pt;" cellspacing="0" width="96%">
+<col style="width: 21.478%;" />
+<col style="width: 38.862%;" />
+<col style="width: 39.661%;" />
+<tr class="t1st">
+<th style="border: Solid 1px #9b9b9b;" bgcolor="#DADADA">
+<p class="TableText"><span style="font-weight: bold; font-size: 10pt;"><font size="2" style="font-size:10pt;">項目名</font></span></p>
+</th>
+<th style="border-top: Solid 1px #9b9b9b; border-right: Solid 1px #9b9b9b; border-bottom: Solid 1px #9b9b9b;" bgcolor="#DADADA">
+<p class="TableText"><span style="font-weight: bold; font-size: 10pt;"><font size="2" style="font-size:10pt;">概要</font></span></p>
+</th>
+<th style="border-top: Solid 1px #9b9b9b; border-right: Solid 1px #9b9b9b; border-bottom: Solid 1px #9b9b9b;" bgcolor="#DADADA">
+<p class="TableText">備考</p>
+</th>
+</tr>
+<tr>
+<td>
+<p class="TableText" style="font-size: 12px; font-family: Verdana, sans-serif;">X-Dc-Version</p>
+</td>
+<td>
+<p class="TableText" style="color: rgb(72, 72, 72); font-family: Verdana, sans-serif; line-height: normal; orphans: auto; widows: auto; -webkit-text-size-adjust: auto; background-color: #ffffff; display: inline ! important ; font-size: 12px; -webkit-text-stroke-width: 0px;">APIの実行バージョン</p>
+</td>
+<td>
+<p class="TableText" style="color: rgb(72, 72, 72); font-family: Verdana, sans-serif; line-height: normal; orphans: auto; widows: auto; -webkit-text-size-adjust: auto; background-color: #ffffff; display: inline ! important ; font-size: 12px; -webkit-text-stroke-width: 0px;">有効なバージョン</p>
+</td>
+</tr>
+<tr>
+<td>
+<p class="TableText" style="font-size: 12px; font-family: Verdana, sans-serif;">Access-Control-Allow-Origin</p>
+</td>
+<td>
+<p class="TableText" style="color: rgb(72, 72, 72); font-family: Verdana, sans-serif; font-size: 12px; line-height: normal; orphans: auto; widows: auto; -webkit-text-size-adjust: auto; background-color: #ffffff; -webkit-text-stroke-width: 0px;">クロスドメイン通信許可ヘッダー</p>
+</td>
+<td>
+<p class="TableText" style="color: rgb(72, 72, 72); font-family: Verdana, sans-serif; font-size: 12px; line-height: normal; orphans: auto; widows: auto; -webkit-text-size-adjust: auto; background-color: #ffffff; -webkit-text-stroke-width: 0px;">返却値は"*"固定</p>
+</td>
+</tr>
+<tr>
+<td>
+<p class="TableText">Content-Type</p>
+</td>
+<td>
+<p class="TableText">Resourceのデータ形式に応じたMimeType</p>
+</td>
+<td>
+<p class="TableText">"text/csv"</p>
+</td>
+</tr>
+</table>
+<h3><span style="font-weight: bold;">レスポンスボディ</span></h3>
+<h4>名前空間</h4>
+<table style="margin-left: 26pt;" cellspacing="0" width="96%">
+<col style="width: 28.263%;" />
+<col style="width: 32.577%;" />
+<col style="width: 39.16%;" />
+<tr>
+<th style="border: Solid 1px #9b9b9b;" bgcolor="#DADADA">
+<p class="TableText">URI</p>
+</th>
+<th style="border-top: Solid 1px #9b9b9b; border-right: Solid 1px #9b9b9b; border-bottom: Solid 1px #9b9b9b;" bgcolor="#DADADA">
+<p class="TableText"><span style="font-weight: bold; font-size: 10pt;"><font size="2" style="font-size:10pt;">概要</font></span></p>
+</th>
+<th style="border-top: Solid 1px #9b9b9b; border-right: Solid 1px #9b9b9b; border-bottom: Solid 1px #9b9b9b;" bgcolor="#DADADA">
+<p class="TableText">参考Prefix</p>
+</th>
+</tr>
+<tr>
+<td style="border-left: Solid 1px #9b9b9b; border-right: Solid 1px #9b9b9b; border-bottom: Solid 1px #9b9b9b; vertical-align: top;">
+<p class="TableText">DAV:</p>
+</td>
+<td style="border-right: Solid 1px #9b9b9b; border-bottom: Solid 1px #9b9b9b; vertical-align: top;">
+<p class="TableText" style="color: rgb(72, 72, 72); font-family: Verdana, sans-serif; font-size: 12px; line-height: normal; orphans: auto; widows: auto; -webkit-text-size-adjust: auto; background-color: #ffffff;">WebDAVの名前空間</p>
+</td>
+<td style="border-right: Solid 1px #9b9b9b; border-bottom: Solid 1px #9b9b9b; vertical-align: top;">
+<p class="TableText">D:</p>
+</td>
+</tr>
+<tr>
+<td style="border-left: Solid 1px #9b9b9b; border-right: Solid 1px #9b9b9b; border-bottom: Solid 1px #9b9b9b; vertical-align: top;">
+<p class="TableText">urn:x-dc1:xmlns</p>
+</td>
+<td style="border-right: Solid 1px #9b9b9b; border-bottom: Solid 1px #9b9b9b; vertical-align: top;">
+<p class="TableText">personium.ioの名前空間</p>
+</td>
+<td style="border-right: Solid 1px #9b9b9b; border-bottom: Solid 1px #9b9b9b; vertical-align: top;">
+<p class="TableText">dc:</p>
+</td>
+</tr>
+</table>
+<p class="Paragraph">※ 参考prefixは以下表の可読性を高めるためのもので、このprefix文字列の使用を保証するものでも要求するものでもありません。</p>
+<h4>XMLの構造</h4>
+<p class="Paragraph2">ボディはXMLで、以下のスキーマに従っています。</p>
+<table style="margin-left: 26pt;" cellspacing="0" width="74.511%">
+<col style="width: 14.302%;" />
+<col style="width: 17.171%;" />
+<col style="width: 17.171%;" />
+<col style="width: 17.171%;" />
+<col style="width: 34.186%;" />
+<tr>
+<th style="border: Solid 1px #9b9b9b;" bgcolor="#DADADA">
+<p class="TableText">ノード名</p>
+</th>
+<th style="border-top: Solid 1px #9b9b9b; border-right: Solid 1px #9b9b9b; border-bottom: Solid 1px #9b9b9b;" bgcolor="#DADADA">
+<p class="TableText">Namespace</p>
+</th>
+<th style="border-top: Solid 1px #9b9b9b; border-right: Solid 1px #9b9b9b; border-bottom: Solid 1px #9b9b9b;" bgcolor="#DADADA">
+<p class="TableText">ノードタイプ</p>
+</th>
+<th style="border-top: Solid 1px #9b9b9b; border-right: Solid 1px #9b9b9b; border-bottom: Solid 1px #9b9b9b;" bgcolor="#DADADA">
+<p class="TableText"><span style="font-weight: bold; font-size: 10pt;"><font size="2" style="font-size:10pt;">概要</font></span></p>
+</th>
+<th style="border-top: Solid 1px #9b9b9b; border-right: Solid 1px #9b9b9b; border-bottom: Solid 1px #9b9b9b;" bgcolor="#DADADA">
+<p class="TableText">備考</p>
+</th>
+</tr>
+<tr>
+<td style="border-left: Solid 1px #9b9b9b; border-right: Solid 1px #9b9b9b; border-bottom: Solid 1px #9b9b9b;">
+<p class="TableText">multistatus</p>
+</td>
+<td style="border-right: Solid 1px #9b9b9b; border-bottom: Solid 1px #9b9b9b;">
+<p class="TableText">D:</p>
+</td>
+<td style="border-right: Solid 1px #9b9b9b; border-bottom: Solid 1px #9b9b9b;">
+<p class="TableText" style="text-align: center;">要素</p>
+</td>
+<td style="border-right: Solid 1px #9b9b9b; border-bottom: Solid 1px #9b9b9b;">
+<p class="TableText">multistatusのルートを表し、1つ以上複数のresponseが子となる &#160;&#160;</p>
+</td>
+<td style="border-right: Solid 1px #9b9b9b; border-bottom: Solid 1px #9b9b9b;">
+<p class="TableText">&#160;</p>
+</td>
+</tr>
+<tr>
+<td style="border-left: Solid 1px #9b9b9b; border-right: Solid 1px #9b9b9b; border-bottom: Solid 1px #9b9b9b;">
+<p class="TableText">response</p>
+</td>
+<td style="border-right: Solid 1px #9b9b9b; border-bottom: Solid 1px #9b9b9b;">
+<p class="TableText">D:</p>
+</td>
+<td style="border-right: Solid 1px #9b9b9b; border-bottom: Solid 1px #9b9b9b;">
+<p class="TableText" style="text-align: center;">要素</p>
+</td>
+<td style="border-right: Solid 1px #9b9b9b; border-bottom: Solid 1px #9b9b9b;">
+<p class="TableText">リソース取得のレスポンスを表し、hrefとpropstatが子となる &#160;&#160;</p>
+</td>
+<td style="border-right: Solid 1px #9b9b9b; border-bottom: Solid 1px #9b9b9b;">
+<p class="TableText">&#160;</p>
+</td>
+</tr>
+<tr>
+<td style="border-left: Solid 1px #9b9b9b; border-right: Solid 1px #9b9b9b; border-bottom: Solid 1px #9b9b9b;">
+<p class="TableText">href</p>
+</td>
+<td style="border-right: Solid 1px #9b9b9b; border-bottom: Solid 1px #9b9b9b;">
+<p class="TableText">D:</p>
+</td>
+<td style="border-right: Solid 1px #9b9b9b; border-bottom: Solid 1px #9b9b9b;">
+<p class="TableText" style="text-align: center;">要素</p>
+</td>
+<td style="border-right: Solid 1px #9b9b9b; border-bottom: Solid 1px #9b9b9b;">
+<p class="TableText" style="color: rgb(72, 72, 72); font-family: Verdana, sans-serif; font-size: 12px; line-height: normal; orphans: auto; widows: auto; -webkit-text-size-adjust: auto; background-color: #ffffff; -webkit-text-stroke-width: 0px;">リソースのurl &#160;</p>
+</td>
+<td style="border-right: Solid 1px #9b9b9b; border-bottom: Solid 1px #9b9b9b;">
+<p class="TableText">&#160;</p>
+</td>
+</tr>
+<tr>
+<td style="border-left: Solid 1px #9b9b9b; border-right: Solid 1px #9b9b9b; border-bottom: Solid 1px #9b9b9b;">
+<p class="TableText">propstat</p>
+</td>
+<td style="border-right: Solid 1px #9b9b9b; border-bottom: Solid 1px #9b9b9b;">
+<p class="TableText">D:</p>
+</td>
+<td style="border-right: Solid 1px #9b9b9b; border-bottom: Solid 1px #9b9b9b;">
+<p class="TableText" style="text-align: center;">要素</p>
+</td>
+<td style="border-right: Solid 1px #9b9b9b; border-bottom: Solid 1px #9b9b9b;">
+<p class="TableText" style="color: rgb(72, 72, 72); font-family: Verdana, sans-serif; font-size: 12px; line-height: normal; orphans: auto; widows: auto; -webkit-text-size-adjust: auto; background-color: #ffffff; -webkit-text-stroke-width: 0px;">リソースのプロパティ情報を表し、statusとpropが子となる &#160;</p>
+</td>
+<td style="border-right: Solid 1px #9b9b9b; border-bottom: Solid 1px #9b9b9b;">
+<p class="TableText">&#160;</p>
+</td>
+</tr>
+<tr>
+<td style="border-left: Solid 1px #9b9b9b; border-right: Solid 1px #9b9b9b; border-bottom: Solid 1px #9b9b9b;">
+<p class="TableText">status</p>
+</td>
+<td style="border-right: Solid 1px #9b9b9b; border-bottom: Solid 1px #9b9b9b;">
+<p class="TableText">D:</p>
+</td>
+<td style="border-right: Solid 1px #9b9b9b; border-bottom: Solid 1px #9b9b9b;">
+<p class="TableText" style="text-align: center;">要素</p>
+</td>
+<td style="border-right: Solid 1px #9b9b9b; border-bottom: Solid 1px #9b9b9b;">
+<p class="TableText">リソース取得のレスポンスコードを表す &#160;&#160;</p>
+</td>
+<td style="border-right: Solid 1px #9b9b9b; border-bottom: Solid 1px #9b9b9b;">
+<p class="TableText">&#160;</p>
+</td>
+</tr>
+<tr>
+<td style="border-left: Solid 1px #9b9b9b; border-right: Solid 1px #9b9b9b; border-bottom: Solid 1px #9b9b9b;">
+<p class="TableText" style="color: rgb(72, 72, 72); font-family: Verdana, sans-serif; font-size: 12px; line-height: normal; orphans: auto; widows: auto; background-color: #ffffff;">prop</p>
+</td>
+<td style="border-right: Solid 1px #9b9b9b; border-bottom: Solid 1px #9b9b9b;">
+<p class="TableText">D:</p>
+</td>
+<td style="border-right: Solid 1px #9b9b9b; border-bottom: Solid 1px #9b9b9b;">
+<p class="TableText" style="text-align: center;">要素</p>
+</td>
+<td style="border-right: Solid 1px #9b9b9b; border-bottom: Solid 1px #9b9b9b;">
+<p class="TableText">プロパティ詳細情報を表し、creationdateとresourcetypeとaclとproppatch設定値が子となる &#160;</p>
+</td>
+<td style="border-right: Solid 1px #9b9b9b; border-bottom: Solid 1px #9b9b9b;">
+<p class="TableText">&#160;</p>
+</td>
+</tr>
+<tr>
+<td style="border-left: Solid 1px #9b9b9b; border-right: Solid 1px #9b9b9b; border-bottom: Solid 1px #9b9b9b;">
+<p class="TableText">creationdate</p>
+</td>
+<td style="border-right: Solid 1px #9b9b9b; border-bottom: Solid 1px #9b9b9b;">
+<p class="TableText">D:</p>
+</td>
+<td style="border-right: Solid 1px #9b9b9b; border-bottom: Solid 1px #9b9b9b;">
+<p style="text-align: center; margin-left: 0px;">要素</p>
+</td>
+<td style="border-right: Solid 1px #9b9b9b; border-bottom: Solid 1px #9b9b9b;">
+<p class="TableText">リソース作成時刻 &#160;&#160;</p>
+</td>
+<td style="border-right: Solid 1px #9b9b9b; border-bottom: Solid 1px #9b9b9b;">
+<p class="TableText">&#160;</p>
+</td>
+</tr>
+<tr>
+<td style="border-left: Solid 1px #9b9b9b; border-right: Solid 1px #9b9b9b; border-bottom: Solid 1px #9b9b9b;">
+<p class="TableText">getcontentlength &#160;</p>
+</td>
+<td style="border-right: Solid 1px #9b9b9b; border-bottom: Solid 1px #9b9b9b;">
+<p class="TableText">D:</p>
+</td>
+<td style="border-right: Solid 1px #9b9b9b; border-bottom: Solid 1px #9b9b9b;">
+<p class="TableText" style="text-align: center;">要素</p>
+</td>
+<td style="border-right: Solid 1px #9b9b9b; border-bottom: Solid 1px #9b9b9b;">
+<p class="TableText">リソースのサイズ &#160;&#160;</p>
+</td>
+<td style="border-right: Solid 1px #9b9b9b; border-bottom: Solid 1px #9b9b9b;">
+<p class="TableText">リソースがファイルの場合のみ</p>
+</td>
+</tr>
+<tr>
+<td style="border-left: Solid 1px #9b9b9b; border-right: Solid 1px #9b9b9b; border-bottom: Solid 1px #9b9b9b;">
+<p class="TableText">getcontenttype</p>
+</td>
+<td style="border-right: Solid 1px #9b9b9b; border-bottom: Solid 1px #9b9b9b;">
+<p class="TableText">dc:</p>
+</td>
+<td style="border-right: Solid 1px #9b9b9b; border-bottom: Solid 1px #9b9b9b;">
+<p class="TableText" style="text-align: center;">要素</p>
+</td>
+<td style="border-right: Solid 1px #9b9b9b; border-bottom: Solid 1px #9b9b9b;">
+<p class="TableText">リソースのcontenttype &#160;&#160;</p>
+</td>
+<td style="border-right: Solid 1px #9b9b9b; border-bottom: Solid 1px #9b9b9b;">
+<p class="TableText">リソースがファイルの場合のみ &#160;</p>
+</td>
+</tr>
+<tr>
+<td style="border-left: Solid 1px #9b9b9b; border-right: Solid 1px #9b9b9b; border-bottom: Solid 1px #9b9b9b;">
+<p class="TableText">getlastmodified &#160;</p>
+</td>
+<td style="border-right: Solid 1px #9b9b9b; border-bottom: Solid 1px #9b9b9b;">
+<p class="TableText">dc:</p>
+</td>
+<td style="border-right: Solid 1px #9b9b9b; border-bottom: Solid 1px #9b9b9b;">
+<p class="TableText" style="text-align: center;">要素</p>
+</td>
+<td style="border-right: Solid 1px #9b9b9b; border-bottom: Solid 1px #9b9b9b;">
+<p class="TableText">リソース更新時刻 &#160;&#160;</p>
+</td>
+<td style="border-right: Solid 1px #9b9b9b; border-bottom: Solid 1px #9b9b9b;">
+<p class="TableText"><span style="color: rgb(72, 72, 72); font-family: Verdana, sans-serif; font-size: 12px; line-height: normal; orphans: auto; widows: auto; -webkit-text-size-adjust: auto; -webkit-text-stroke-width: 0px; background-color: #ffffff;">&#160;</span>&#160;</p>
+</td>
+</tr>
+<tr>
+<td style="border-left: Solid 1px #9b9b9b; border-right: Solid 1px #9b9b9b; border-bottom: Solid 1px #9b9b9b;">
+<p class="TableText">resourcetype</p>
+</td>
+<td style="border-right: Solid 1px #9b9b9b; border-bottom: Solid 1px #9b9b9b;">
+<p class="TableText">dc:</p>
+</td>
+<td style="border-right: Solid 1px #9b9b9b; border-bottom: Solid 1px #9b9b9b;">
+<p class="TableText" style="text-align: center;">要素</p>
+</td>
+<td style="border-right: Solid 1px #9b9b9b; border-bottom: Solid 1px #9b9b9b;">
+<p class="TableText">リソースのタイプを表す。<br style="color: rgb(72, 72, 72); font-family: Verdana, sans-serif; font-size: 12px; font-style: normal; font-variant: normal; font-weight: normal; letter-spacing: normal; line-height: normal; orphans: auto; text-align: start; text-indent: 0px; text-transform: none; white-space: normal; widows: auto; word-spacing: 0px; -webkit-text-stroke-width: 0px; background-color: #ffffff;" />
+collectionと、odataかserviceのいづれかが子となるか、子は空となる &#160;&#160;</p>
+</td>
+<td style="border-right: Solid 1px #9b9b9b; border-bottom: Solid 1px #9b9b9b;">
+<p class="TableText"><span style="color: rgb(72, 72, 72); font-family: Verdana, sans-serif; font-size: 12px; line-height: normal; orphans: auto; widows: auto; -webkit-text-size-adjust: auto; -webkit-text-stroke-width: 0px; background-color: #ffffff;">&#160;</span>&#160;</p>
+</td>
+</tr>
+<tr>
+<td style="border-left: Solid 1px #9b9b9b; border-right: Solid 1px #9b9b9b; border-bottom: Solid 1px #9b9b9b;">
+<p class="TableText">collection</p>
+</td>
+<td style="border-right: Solid 1px #9b9b9b; border-bottom: Solid 1px #9b9b9b;">
+<p class="TableText">dc:</p>
+</td>
+<td style="border-right: Solid 1px #9b9b9b; border-bottom: Solid 1px #9b9b9b;">
+<p class="TableText" style="text-align: center;">要素</p>
+</td>
+<td style="border-right: Solid 1px #9b9b9b; border-bottom: Solid 1px #9b9b9b;">
+<p class="TableText">リソースのタイプがコレクションであることを表す</p>
+</td>
+<td style="border-right: Solid 1px #9b9b9b; border-bottom: Solid 1px #9b9b9b;">
+<p class="TableText">リソースがWebDAVの場合、この要素のみが表示される &#160;</p>
+</td>
+</tr>
+<tr>
+<td style="border-left: Solid 1px #9b9b9b; border-right: Solid 1px #9b9b9b; border-bottom: Solid 1px #9b9b9b;">
+<p class="TableText">odata</p>
+</td>
+<td style="border-right: Solid 1px #9b9b9b; border-bottom: Solid 1px #9b9b9b;">
+<p class="TableText">dc:</p>
+</td>
+<td style="border-right: Solid 1px #9b9b9b; border-bottom: Solid 1px #9b9b9b;">
+<p style="text-align: center; margin-left: 0px;">要素</p>
+</td>
+<td style="border-right: Solid 1px #9b9b9b; border-bottom: Solid 1px #9b9b9b;">
+<p class="TableText">リソースのタイプがODataコレクションであることを表す &#160;&#160;</p>
+</td>
+<td style="border-right: Solid 1px #9b9b9b; border-bottom: Solid 1px #9b9b9b;">
+<p class="TableText">ODataコレクションの場合表示 &#160;</p>
+</td>
+</tr>
+<tr>
+<td style="border-left: Solid 1px #9b9b9b; border-right: Solid 1px #9b9b9b; border-bottom: Solid 1px #9b9b9b;">
+<p class="TableText">service</p>
+</td>
+<td style="border-right: Solid 1px #9b9b9b; border-bottom: Solid 1px #9b9b9b;">
+<p class="TableText">dc:</p>
+</td>
+<td style="border-right: Solid 1px #9b9b9b; border-bottom: Solid 1px #9b9b9b;">
+<p class="TableText" style="text-align: center;">要素</p>
+</td>
+<td style="border-right: Solid 1px #9b9b9b; border-bottom: Solid 1px #9b9b9b;">
+<p class="TableText">リソースのタイプがサービスコレクションであることを表す &#160;&#160;</p>
+</td>
+<td style="border-right: Solid 1px #9b9b9b; border-bottom: Solid 1px #9b9b9b;">
+<p class="TableText">Serviceコレクションの場合表示 &#160;</p>
+</td>
+</tr>
+<tr>
+<td style="border-left: Solid 1px #9b9b9b; border-right: Solid 1px #9b9b9b; border-bottom: Solid 1px #9b9b9b;">
+<p class="TableText">acl</p>
+</td>
+<td style="border-right: Solid 1px #9b9b9b; border-bottom: Solid 1px #9b9b9b;">
+<p class="TableText">dc:</p>
+</td>
+<td style="border-right: Solid 1px #9b9b9b; border-bottom: Solid 1px #9b9b9b;">
+<p style="text-align: center; text-indent: -7px; margin-left: 12px;">要素</p>
+</td>
+<td style="border-right: Solid 1px #9b9b9b; border-bottom: Solid 1px #9b9b9b;">
+<p class="TableText">リソースに設定されているACL設定 &#160;&#160;</p>
+</td>
+<td style="border-right: Solid 1px #9b9b9b; border-bottom: Solid 1px #9b9b9b;">
+<p class="TableText">ACL設定を取得するためには、対象リソースに対するacl-read権限が必要 ACL要素以下の内容については、セルレベルアクセス制御設定APIを参照</p>
+</td>
+</tr>
+<tr>
+<td style="border-left: Solid 1px #9b9b9b; border-right: Solid 1px #9b9b9b; border-bottom: Solid 1px #9b9b9b;">
+<p class="TableText">base</p>
+</td>
+<td style="border-right: Solid 1px #9b9b9b; border-bottom: Solid 1px #9b9b9b;">
+<p class="TableText">dc:</p>
+</td>
+<td style="border-right: Solid 1px #9b9b9b; border-bottom: Solid 1px #9b9b9b;">
+<p class="TableText" style="text-align: center;">要素</p>
+</td>
+<td style="border-right: Solid 1px #9b9b9b; border-bottom: Solid 1px #9b9b9b;">
+<p class="TableText" style="color: rgb(72, 72, 72); font-family: Verdana, sans-serif; font-size: 12px; line-height: normal; orphans: auto; widows: auto; -webkit-text-size-adjust: auto; background-color: #ffffff; -webkit-text-stroke-width: 0px;"><span style="display: inline ! important ; float: none;">ACLのPrivilegeのBaseURL</span> &#160;</p>
+</td>
+<td style="border-right: Solid 1px #9b9b9b; border-bottom: Solid 1px #9b9b9b;">
+<p class="TableText" style="color: rgb(72, 72, 72); font-family: Verdana, sans-serif; font-size: 12px; line-height: normal; orphans: auto; widows: auto; -webkit-text-size-adjust: auto; background-color: #ffffff; display: inline ! important ; -webkit-text-stroke-width: 0px;"><span style="float: none;">CellへのPROPFINDの場合、デフォルトボックス（"__"）のリソースURL</span></p>
+</td>
+</tr>
+</table>
+<h4>DTD表記</h4>
+<p class="Paragraph2">名前空間：D:</p>
+<table class="CodeTable" style="margin-left: 26pt;" cellspacing="0px" width="96%">
+<col style="width: 100%;" />
+<tr>
+<td style="border: Solid 1px #9b9b9b;" bgcolor="#E0E0E0">
+<p class="Code">&lt;!ELEMENT multistatus (response*)&gt;</p>
+<p class="Code">&lt;!ELEMENT response (href, propstat)&gt;</p>
+<p class="Code">&lt;!ELEMENT href (#PCDATA)&gt;</p>
+<p class="Code">&lt;!ELEMENT propstat (status, prop)&gt;</p>
+<p class="Code">&lt;!ELEMENT status (#PCDATA)&gt;</p>
+<p class="Code">&lt;!ELEMENT prop (creationdate, resourcetype, acl, ANY)&gt;</p>
+<p class="Code">&lt;!ELEMENT creationdate (#PCDATA)&gt;</p>
+<p class="Code">&lt;!ELEMENT getcontentlength (#PCDATA)&gt;</p>
+<p class="Code">&lt;!ELEMENT getcontenttype (#PCDATA)&gt;</p>
+<p class="Code">&lt;!ELEMENT getlastmodified (#PCDATA)&gt;</p>
+<p class="Code">&lt;!ELEMENT resourcetype ((collection, (odata or service) or EMPTY))&gt;</p>
+<p class="Code">&lt;!ELEMENT collection EMPTY&gt;</p>
+<p class="Code">&lt;!ELEMENT acl (ace*)&gt;</p>
+</td>
+</tr>
+</table>
+<p class="Paragraph2">名前空間:dc:</p>
+<table class="CodeTable" style="margin-left: 26pt;" cellspacing="0px" width="96%">
+<col style="width: 100%;" />
+<tr>
+<td style="border: Solid 1px #9b9b9b;" bgcolor="#E0E0E0">
+<p class="Code">&lt;!ELEMENT odata EMPTY&gt;</p>
+<p class="Code">&lt;!ELEMENT service EMPTY&gt;</p>
+</td>
+</tr>
+</table>
+<p class="Paragraph2">名前空間：xml:</p>
+<table class="CodeTable" style="margin-left: 26pt;" cellspacing="0px" width="96%">
+<col style="width: 100%;" />
+<tr>
+<td style="border: Solid 1px #9b9b9b;" bgcolor="#E0E0E0">
+<p class="Code">&lt;!ATTLIST acl base CDATA #IMPLIED&gt;</p>
+</td>
+</tr>
+</table>
+<h4>resourcetype要素</h4>
+<table class="ParameterTable" style="margin-left: 26pt; left: 0px; top: 3403px;" cellspacing="0px" width="1370">
+<col style="width: 15.244%;" />
+<col style="width: 29.027%;" />
+<col style="width: 29.027%;" />
+<col style="width: 26.703%;" />
+<tr>
+<th style="border: Solid 1px #9b9b9b;" bgcolor="#DADADA">
+<p class="TableText"><span style="font-weight: bold; font-size: 10pt;"><font size="2" style="font-size:10pt;">項目名</font></span></p>
+</th>
+<th style="border-top: Solid 1px #9b9b9b; border-right: Solid 1px #9b9b9b; border-bottom: Solid 1px #9b9b9b;" bgcolor="#DADADA">
+<p class="TableText">名前空間</p>
+</th>
+<th style="border-top: Solid 1px #9b9b9b; border-right: Solid 1px #9b9b9b; border-bottom: Solid 1px #9b9b9b;" bgcolor="#DADADA">
+<p class="TableText"><span style="font-weight: bold; font-size: 10pt;"><font size="2" style="font-size:10pt;">概要</font></span></p>
+</th>
+<th style="border-top: Solid 1px #9b9b9b; border-right: Solid 1px #9b9b9b; border-bottom: Solid 1px #9b9b9b;" bgcolor="#DADADA">
+<p class="TableText">備考</p>
+</th>
+</tr>
+<tr>
+<td>
+<p class="TableText">collection</p>
+</td>
+<td>
+<p class="TableText">DAV:</p>
+</td>
+<td>
+<p class="TableText">WebDAVコレクション</p>
+</td>
+<td>
+<p class="TableText">リソースがコレクションの場合表示</p>
+</td>
+</tr>
+</table>
+<h5>サンプル</h5>
+<table class="CodeTable" style="margin-left: 26pt;" cellspacing="0px" width="96%">
+<col style="width: 100%;" />
+<tr>
+<td style="border: Solid 1px #9b9b9b;" bgcolor="#E0E0E0">
+<p class="Code">&lt;?xml version="1.0" encoding="utf-8"?&gt;</p>
+<p class="Code">&lt;multistatus xmlns="DAV:"&gt;</p>
+<p class="Code">&#160;&#160;&#160;&#160;&lt;response&gt;</p>
+<p class="Code">&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&lt;href&gt;https://fqdn/cell_name/__log/archive&lt;/href&gt;</p>
+<p class="Code">&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&lt;propstat&gt;</p>
+<p class="Code">&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&lt;prop&gt;</p>
+<p class="Code">&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&lt;creationdate&gt;2013-03-27T07:05:04.265+0000&lt;/creationdate&gt;</p>
+<p class="Code">&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&lt;getlastmodified&gt;Mon, 14 May 2012 07:05:04 GMT&lt;/getlastmodified&gt;</p>
+<p class="Code">&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&lt;resourcetype&gt;</p>
+<p class="Code">&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&lt;collection/&gt;</p>
+<p class="Code">&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&lt;/resourcetype&gt;</p>
+<p class="Code">&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&lt;/prop&gt;</p>
+<p class="Code">&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&lt;status&gt;HTTP/1.1 200 OK&lt;/status&gt;</p>
+<p class="Code">&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&lt;/propstat&gt;</p>
+<p class="Code">&#160;&#160;&#160;&#160;&lt;/response&gt;</p>
+<p class="Code">&#160;&#160;&#160;&#160;&lt;response&gt;</p>
+<p class="Code">&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&lt;href&gt;https://fqdn/cell_name/__log/archive/default.log.1364350331902&lt;/href&gt;</p>
+<p class="Code">&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&lt;propstat&gt;</p>
+<p class="Code">&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&lt;prop&gt;</p>
+<p class="Code">&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&lt;creationdate&gt;2013-03-27T02:12:11.265+0000&lt;/creationdate&gt;</p>
+<p class="Code">&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&lt;getcontentlength&gt;0&lt;/getcontentlength&gt;</p>
+<p class="Code">&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&lt;getcontenttype&gt;text/csv&lt;/getcontenttype&gt;</p>
+<p class="Code">&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&lt;getlastmodified&gt;Wed, 27 Mar 2013 02:12:11 GMT&lt;/getlastmodified&gt;</p>
+<p class="Code">&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&lt;resourcetype/&gt;</p>
+<p class="Code">&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&lt;/prop&gt;</p>
+<p class="Code">&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&lt;status&gt;HTTP/1.1 200 OK&lt;/status&gt;</p>
+<p class="Code">&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&lt;/propstat&gt;</p>
+<p class="Code">&#160;&#160;&#160;&#160;&lt;/response&gt;</p>
+<p class="Code">&#160;&#160;&#160;&#160;&lt;response&gt;</p>
+<p class="Code">&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&lt;href&gt;https://fqdn/cell_name/__log/archive/default.log.1364460341902&lt;/href&gt;</p>
+<p class="Code">&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&lt;propstat&gt;</p>
+<p class="Code">&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&lt;prop&gt;</p>
+<p class="Code">&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&lt;creationdate&gt;2013-03-27T08:45:41.265+0000&lt;/creationdate&gt;</p>
+<p class="Code">&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&lt;getcontentlength&gt;0&lt;/getcontentlength&gt;</p>
+<p class="Code">&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&lt;getcontenttype&gt;text/csv&lt;/getcontenttype&gt;</p>
+<p class="Code">&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&lt;getlastmodified&gt;Thu, 28 Mar 2013 08:45:41 GMT&lt;/getlastmodified&gt;</p>
+<p class="Code">&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&lt;resourcetype/&gt;</p>
+<p class="Code">&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&lt;/prop&gt;</p>
+<p class="Code">&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&lt;status&gt;HTTP/1.1 200 OK&lt;/status&gt;</p>
+<p class="Code">&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&lt;/propstat&gt;</p>
+<p class="Code">&#160;&#160;&#160;&#160;&lt;/response&gt;</p>
+<p class="Code">&lt;/multistatus&gt;</p>
+</td>
+</tr>
+</table>
+<p class="Paragraph">&#160;</p>
+<p class="Paragraph">なお、ログファイルのローテート時にファイルのZIP圧縮有無を指定可能とする予定（ログ設定更新API）</p>
+<p class="Paragraph">この際、ログファイルの圧縮有無によって、href要素のファイル名と、getcontenttype要素のMimeTypeが切り替わる</p>
+<table style="margin-left: 26pt;" cellspacing="0" width="96%">
+<col style="width: 14.991%;" />
+<col style="width: 17.114%;" />
+<col style="width: 53.259%;" />
+<col style="width: 14.636%;" />
+<tr>
+<th style="border: Solid 1px #9b9b9b;" bgcolor="#DADADA">
+<p class="GreyColumnHeading" style="font-weight: normal; margin-left: 0px;">ZIP圧縮有無</p>
+</th>
+<th style="border-top: Solid 1px #9b9b9b; border-right: Solid 1px #9b9b9b; border-bottom: Solid 1px #9b9b9b;" bgcolor="#DADADA">
+<p class="GreyColumnHeading" style="font-weight: normal; margin-left: 0px;">href要素のファイル名(例)</p>
+</th>
+<th style="border-top: Solid 1px #9b9b9b; border-right: Solid 1px #9b9b9b; border-bottom: Solid 1px #9b9b9b;" bgcolor="#DADADA">
+<p class="GreyColumnHeading" style="font-weight: normal; margin-left: 0px;">getcontenttypeの値</p>
+</th>
+<th style="border-top: Solid 1px #9b9b9b; border-right: Solid 1px #9b9b9b; border-bottom: Solid 1px #9b9b9b;" bgcolor="#DADADA">
+<p class="GreyColumnHeading" style="font-weight: normal; margin-left: 0px;">備考</p>
+</th>
+</tr>
+<tr>
+<td style="border-left: Solid 1px #9b9b9b; border-right: Solid 1px #9b9b9b; border-bottom: Solid 1px #9b9b9b; vertical-align: top;">
+<p class="TableText" style="font-family: Verdana, sans-serif;">圧縮なし</p>
+</td>
+<td style="border-right: Solid 1px #9b9b9b; border-bottom: Solid 1px #9b9b9b; vertical-align: top;">
+<p class="TableText" style="font-family: Verdana, sans-serif;">default.log.1364460341902</p>
+</td>
+<td style="border-right: Solid 1px #9b9b9b; border-bottom: Solid 1px #9b9b9b; vertical-align: top;">
+<p class="TableText" style="font-family: Verdana, sans-serif; color: rgb(72, 72, 72); font-size: 12px; line-height: normal; orphans: auto; widows: auto; background-color: #ffffff;">text/csv</p>
+</td>
+<td style="border-right: Solid 1px #9b9b9b; border-bottom: Solid 1px #9b9b9b; vertical-align: top;">
+<p cla="" ss="TableText">ローテートなしの場合も同様</p>
+</td>
+</tr>
+<tr>
+<td style="border-left: Solid 1px #9b9b9b; border-right: Solid 1px #9b9b9b; border-bottom: Solid 1px #9b9b9b; vertical-align: top;">
+<p class="TableText">圧縮あり</p>
+</td>
+<td style="border-right: Solid 1px #9b9b9b; border-bottom: Solid 1px #9b9b9b; vertical-align: top;">
+<p class="TableText">default.log.1364460341902.zip</p>
+</td>
+<td style="border-right: Solid 1px #9b9b9b; border-bottom: Solid 1px #9b9b9b; vertical-align: top;">
+<p class="TableText">application/zip</p>
+</td>
+<td style="border-right: Solid 1px #9b9b9b; border-bottom: Solid 1px #9b9b9b; vertical-align: top;">
+<p class="TableText">&#160;</p>
+</td>
+</tr>
+</table>
+<h3><span style="font-weight: bold; font-size: 10pt;"><font size="2" style="font-size:10pt;">エラーメッセージ一覧</font></span></h3>
+<p class="Paragraph2"><a href="../../../common/AppErrorMessages.htm"><span style="font-weight: bold; font-size: 10pt;"><font size="2" style="font-size:10pt;">エラーメッセージ一覧</font></span></a>を参照</p>
+<table style="margin-left: 26pt;" cellspacing="0" width="96%">
+<col style="width: 14.991%;" />
+<col style="width: 17.114%;" />
+<col style="width: 53.259%;" />
+<col style="width: 14.636%;" />
+<tr>
+<th style="border: Solid 1px #9b9b9b;" bgcolor="#DADADA">
+<p class="GreyColumnHeading" style="font-weight: normal; margin-left: 0px;"><span style="font-weight: normal;">コード</span></p>
+</th>
+<th style="border-top: Solid 1px #9b9b9b; border-right: Solid 1px #9b9b9b; border-bottom: Solid 1px #9b9b9b;" bgcolor="#DADADA">
+<p class="GreyColumnHeading" style="font-weight: normal; margin-left: 0px;"><span style="font-weight: normal;">メッセージ</span></p>
+</th>
+<th style="border-top: Solid 1px #9b9b9b; border-right: Solid 1px #9b9b9b; border-bottom: Solid 1px #9b9b9b;" bgcolor="#DADADA">
+<p class="GreyColumnHeading" style="font-weight: normal; margin-left: 0px;"><span style="font-weight: normal;">概要</span></p>
+</th>
+<th style="border-top: Solid 1px #9b9b9b; border-right: Solid 1px #9b9b9b; border-bottom: Solid 1px #9b9b9b;" bgcolor="#DADADA">
+<p class="GreyColumnHeading" style="font-weight: normal; margin-left: 0px;"><span style="font-weight: normal;">備考</span></p>
+</th>
+</tr>
+<tr>
+<td style="border-left: Solid 1px #9b9b9b; border-right: Solid 1px #9b9b9b; border-bottom: Solid 1px #9b9b9b; vertical-align: top;">
+<p class="TableText" style="font-family: Verdana, sans-serif;">400</p>
+</td>
+<td style="border-right: Solid 1px #9b9b9b; border-bottom: Solid 1px #9b9b9b; vertical-align: top;">
+<p class="TableText" style="font-family: Verdana, sans-serif;">Bad Request</p>
+</td>
+<td style="border-right: Solid 1px #9b9b9b; border-bottom: Solid 1px #9b9b9b; vertical-align: top;">
+<p class="TableText" style="font-family: Verdana, sans-serif;">リクエストボディの形式が不正&#160;<br style="color: rgb(72, 72, 72); font-family: Verdana, sans-serif; font-size: 12px; font-style: normal; font-variant: normal; font-weight: normal; letter-spacing: normal; line-height: normal; orphans: auto; text-align: start; text-indent: 0px; text-transform: none; white-space: normal; widows: auto; word-spacing: 0px; -webkit-text-stroke-width: 0px; background-color: #ffffff;" />
+リクエストヘッダの形式が不正</p>
+<p class="TableText" style="font-family: Verdana, sans-serif;">既に別のスキーマ型のIndexが作成されている場合</p>
+</td>
+<td style="border-right: Solid 1px #9b9b9b; border-bottom: Solid 1px #9b9b9b; vertical-align: top;">
+<p class="TableText">&#160;</p>
+</td>
+</tr>
+<tr>
+<td style="border-left: Solid 1px #9b9b9b; border-right: Solid 1px #9b9b9b; border-bottom: Solid 1px #9b9b9b; vertical-align: top;">
+<p class="TableText" style="font-family: Verdana, sans-serif;">401</p>
+</td>
+<td style="border-right: Solid 1px #9b9b9b; border-bottom: Solid 1px #9b9b9b; vertical-align: top;">
+<p class="TableText" style="font-family: Verdana, sans-serif;">Unauthorized</p>
+</td>
+<td style="border-right: Solid 1px #9b9b9b; border-bottom: Solid 1px #9b9b9b; vertical-align: top;">
+<p class="TableText" style="font-family: Verdana, sans-serif;">認証トークンが無効</p>
+</td>
+<td style="border-right: Solid 1px #9b9b9b; border-bottom: Solid 1px #9b9b9b; vertical-align: top;">
+<p class="TableText">&#160;</p>
+</td>
+</tr>
+<tr>
+<td style="border-left: Solid 1px #9b9b9b; border-right: Solid 1px #9b9b9b; border-bottom: Solid 1px #9b9b9b; vertical-align: top;">
+<p class="TableText" style="font-family: Verdana, sans-serif;">403</p>
+</td>
+<td style="border-right: Solid 1px #9b9b9b; border-bottom: Solid 1px #9b9b9b; vertical-align: top;">
+<p class="TableText" style="font-family: Verdana, sans-serif;">Forbidden</p>
+</td>
+<td style="border-right: Solid 1px #9b9b9b; border-bottom: Solid 1px #9b9b9b; vertical-align: top;">
+<p class="TableText">アクセス権限が不足している場合</p>
+</td>
+<td style="border-right: Solid 1px #9b9b9b; border-bottom: Solid 1px #9b9b9b; vertical-align: top;">
+<p class="TableText">&#160;</p>
+</td>
+</tr>
+<tr>
+<td style="border-left: Solid 1px #9b9b9b; border-right: Solid 1px #9b9b9b; border-bottom: Solid 1px #9b9b9b; vertical-align: top;">
+<p class="TableText" style="font-family: Verdana, sans-serif;">404</p>
+</td>
+<td style="border-right: Solid 1px #9b9b9b; border-bottom: Solid 1px #9b9b9b; vertical-align: top;">
+<p class="TableText" style="font-family: Verdana, sans-serif;">Not Found</p>
+</td>
+<td style="border-right: Solid 1px #9b9b9b; border-bottom: Solid 1px #9b9b9b; vertical-align: top;">
+<p class="TableText" style="font-family: Verdana, sans-serif;">存在しないリソースを指定</p>
+</td>
+<td style="border-right: Solid 1px #9b9b9b; border-bottom: Solid 1px #9b9b9b; vertical-align: top;">
+<p class="TableText">&#160;</p>
+</td>
+</tr>
+<tr>
+<td style="border-left: Solid 1px #9b9b9b; border-right: Solid 1px #9b9b9b; border-bottom: Solid 1px #9b9b9b; vertical-align: top;">
+<p class="TableText" style="font-family: Verdana, sans-serif;">405</p>
+</td>
+<td style="border-right: Solid 1px #9b9b9b; border-bottom: Solid 1px #9b9b9b; vertical-align: top;">
+<p class="TableText" style="font-family: Verdana, sans-serif;">Method Not Allowed</p>
+</td>
+<td style="border-right: Solid 1px #9b9b9b; border-bottom: Solid 1px #9b9b9b; vertical-align: top;">
+<p class="TableText" style="font-family: Verdana, sans-serif;">許可していないリクエストメソッドを指定</p>
+</td>
+<td style="border-right: Solid 1px #9b9b9b; border-bottom: Solid 1px #9b9b9b; vertical-align: top;">
+<p class="TableText">&#160;</p>
+</td>
+</tr>
+</table>
+<h2><span style="font-weight: bold;">CURLサンプル</span></h2>
+<h3><span style="font-weight: bold;">CURLコマンド(UNIX)</span></h3>
+<table class="CodeTable" style="margin-left: 26pt;" cellspacing="0px" width="96%">
+<col style="width: 100%;" />
+<tr>
+<td style="border: Solid 1px #9b9b9b; vertical-align: middle;">
+<pre class="prettyprint Code">
+<br />curl 'https://fqdn/cellname/__log/archive' -X PROPFIND -v \
+-H 'Authorization:Bearer auth_token'
+</pre></td>
+</tr>
+</table>
+<p class="Paragraph">&#160;</p>
+<p>&#160;</p>
+<br />
+<div style="border-top: Solid 3px #3a3a3a; width: 100%; position: relative; padding-top: 2px; padding-bottom: 2px; padding-right: 5px; background-color: #9b9b9b;" id="footer">
+<h6 style="text-align: right; margin-top: 5pt; margin-bottom: 5pt;">Copyright 2014 &#160;FUJITSU LIMITED</h6>
+</div>
+<script type="text/javascript" language="javascript1.2">
+//<![CDATA[
+<!--
+if (window.writeIntopicBar)
+        writeIntopicBar(0);
+
+
+highlightSearch();
+//-->
+//]]>
+</script>
+</body>
+</html>

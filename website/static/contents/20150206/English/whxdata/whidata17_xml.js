@@ -1,0 +1,1 @@
+gXMLBuffer ="<?xml version='1.0' encoding='utf-8' ?>  <indexdata>  <key name=\"OAuth2 Token Endpoint\" >    <topic name=\"OAuth2 Token Endpoint\" url=\"APIReferenceGuide/en/APIReference/PersonaContainerAPIs/CellLevelAPIs/Authentication/OAuth2TokenEndpoint.htm\" />  </key>    </indexdata>";

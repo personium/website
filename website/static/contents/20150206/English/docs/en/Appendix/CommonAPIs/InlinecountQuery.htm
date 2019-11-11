@@ -1,0 +1,211 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN"
+    "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<!-- saved from url=(0014)about:internet -->
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+<meta name="generator" content="Adobe RoboHelp 10" />
+<title>Inlinecount Query</title>
+<link rel="StyleSheet" href="../../../../default.css" type="text/css" />
+<style type="text/css">
+/*<![CDATA[*/
+<!--
+.mainBreadCrumb a:link { color:#000000;
+background-color:transparent;
+text-decoration:none; }
+.mainBreadCrumb a:visited { color:#000000;
+background-color:transparent;
+text-decoration:none; }
+.mainBreadCrumb a:hover { color:#ff0000 ! important;
+cursor:pointer;
+text-decoration:underline; }
+p.mainBreadCrumb { margin-left:0px;
+margin-top:1px ! important; }
+h1 { padding-left:10px ! important; }
+-->
+/*]]>*/
+</style>
+
+<script type="text/javascript" language="JavaScript">
+//<![CDATA[
+function reDo() {
+  if (innerWidth != origWidth || innerHeight != origHeight)
+     location.reload();
+}
+if ((parseInt(navigator.appVersion) == 4) && (navigator.appName == "Netscape")) {
+        origWidth = innerWidth;
+        origHeight = innerHeight;
+        onresize = reDo;
+}
+onerror = null; 
+//]]>
+</script>
+<style type="text/css">
+/*<![CDATA[*/
+<!--
+div.WebHelpPopupMenu { position:absolute;
+left:0px;
+top:0px;
+z-index:4;
+visibility:hidden; }
+-->
+/*]]>*/
+</style>
+
+<script type="text/javascript" language="javascript1.2" src="../../../../whmsg.js" charset="utf-8">
+</script>
+<script type="text/javascript" language="javascript" src="../../../../whver.js" charset="utf-8">
+</script>
+<script type="text/javascript" language="javascript1.2" src="../../../../whutils.js" charset="utf-8">
+</script>
+<script type="text/javascript" language="javascript1.2" src="../../../../whproxy.js" charset="utf-8">
+</script>
+<script type="text/javascript" language="javascript1.2" src="../../../../whlang.js" charset="utf-8">
+</script>
+<script type="text/javascript" language="javascript1.2" src="../../../../whtopic.js" charset="utf-8">
+</script>
+</head>
+<body>
+<script type="text/javascript" language="javascript1.2">
+//<![CDATA[
+<!--
+if (window.gbWhTopic)
+{
+        var strUrl = document.location.href;
+        var bc = 0;
+        var n = strUrl.toLowerCase().indexOf("bc-");
+        if(n != -1)
+        {
+                document.location.href = strUrl.substring(0, n);
+                bc = strUrl.substring(n+3);
+        }
+
+        if (window.addTocInfo)
+        {
+        addTocInfo("REST API Reference\nCommon Specification\nOData Common query\nInlinecount Query");
+addButton("show",BTN_TEXT,"Show","","","","",0,0,"","","");
+
+        }
+        if (window.writeBtnStyle)
+                writeBtnStyle();
+
+        if (window.writeIntopicBar)
+                writeIntopicBar(1);
+
+        
+        
+}
+else
+        if (window.gbIE4)
+                document.location.reload();
+
+onLoadHandler = function()
+{
+  if (window.setRelStartPage)
+        {
+        setTimeout("setRelStartPage('../../../../English.htm');", 1)
+
+    setTimeout("UpdateBreadCrumbsMarker();", 1);
+        }
+}
+
+if (window.addEventListener){  
+        window.addEventListener('load', onLoadHandler, false);   
+} else if (window.attachEvent){  
+        window.attachEvent('onload', onLoadHandler);  
+}
+
+function onSetStartPage()
+{
+  autoSync(1);
+  sendSyncInfo();
+  sendAveInfoOut();
+}
+//-->
+//]]>
+</script><script type="text/javascript" src="../../../../ehlpdhtm.js" language="JavaScript1.2">
+</script>
+<div style="width: 100%; position: relative;" id="header">
+<p style="font-size: 10pt;">&#160;</p>
+</div>
+<script type="text/javascript" language="javascript">
+//<![CDATA[
+document.write("<p  class=\"mainBreadCrumb\"   style=\"text-align:left;\" class=\"breadcrumbs\">");
+AddMasterBreadcrumbs("../../../../English.htm", "breadcrumbs", " &gt; ", "トップ", "../../../WelcometoPCSDocumentation.htm");
+document.write("<a class=\"breadcrumbs\" href=\"../../APIReference/PCSUnitAPIs/Overview.htm\">REST API Reference<\/a>  &gt;  <a class=\"breadcrumbs\" href=\"../../APIReference/PersonaContainerAPIs/CommonSpecification/CrossDomainAccessControl/CORS.htm\">Common Specification<\/a>  &gt;  <a class=\"breadcrumbs\" href=\"SkipQuery.htm\">OData Common query<\/a>  &gt;  Inlinecount Query<\/p>");
+//]]>
+</script>
+<hr style="border-left-width: 0px; margin-left: -6px;" size="1" width="101%" align="center" />
+<form><input type="image" value="Print" onclick="window.print();return false" name="Printer.png" src="../../../../Images/Printer.png" style="width: 16px; height: 16px; float: right; margin-top: -32px; margin-right: 2px;" /></form>
+<h1>$inlinecount Query</h1>
+<h2>Overview</h2>
+<p class="Paragraph">If you want to specify the number of results obtained during the enumeration, use the $inlinecount query if it is omitted, does not include the number of results you get in response</p>
+<h2>Valid Value</h2>
+<table style="margin-left: 26pt;" cellspacing="0" width="96%">
+<col style="width: 17.486%;" />
+<col style="width: 31.454%;" />
+<col style="width: 26.227%;" />
+<col style="width: 24.833%;" />
+<tr>
+<th style="border: Solid 1px #9b9b9b;" bgcolor="#DADADA">
+<p class="GreyColumnHeading" style="font-weight: normal; margin-left: 0px;"><span style="font-weight: normal;">Value</span></p>
+</th>
+<th style="border-top: Solid 1px #9b9b9b; border-right: Solid 1px #9b9b9b; border-bottom: Solid 1px #9b9b9b;" bgcolor="#DADADA">
+<p class="GreyColumnHeading" style="font-weight: normal; margin-left: 0px;"><span style="font-weight: normal;">Summary</span></p>
+</th>
+<th style="border-top: Solid 1px #9b9b9b; border-right: Solid 1px #9b9b9b; border-bottom: Solid 1px #9b9b9b;" bgcolor="#DADADA">
+<p class="GreyColumnHeading" style="font-weight: normal; margin-left: 0px;"><span style="font-weight: normal;">Example</span></p>
+</th>
+<th style="border-top: Solid 1px #9b9b9b; border-right: Solid 1px #9b9b9b; border-bottom: Solid 1px #9b9b9b;" bgcolor="#DADADA">
+<p class="GreyColumnHeading" style="font-weight: normal; margin-left: 0px;"><span style="font-weight: normal;">Remarks</span></p>
+</th>
+</tr>
+<tr>
+<td style="border-left: Solid 1px #9b9b9b; border-right: Solid 1px #9b9b9b; border-bottom: Solid 1px #9b9b9b;">
+<p class="TableText">allpages</p>
+</td>
+<td style="border-right: Solid 1px #9b9b9b; border-bottom: Solid 1px #9b9b9b;">
+<p class="TableText">Acquisition, including the number of results</p>
+</td>
+<td style="border-right: Solid 1px #9b9b9b; border-bottom: Solid 1px #9b9b9b;">
+<p class="TableText">$inlinecount=allpages</p>
+</td>
+<td style="border-right: Solid 1px #9b9b9b; border-bottom: Solid 1px #9b9b9b;">
+<p class="TableText">&#160;</p>
+</td>
+</tr>
+<tr>
+<td style="border-left: Solid 1px #9b9b9b; border-right: Solid 1px #9b9b9b; border-bottom: Solid 1px #9b9b9b;">
+<p class="TableText">none</p>
+</td>
+<td style="border-right: Solid 1px #9b9b9b; border-bottom: Solid 1px #9b9b9b;">
+<p class="TableText">I do not get the number of results, including</p>
+</td>
+<td style="border-right: Solid 1px #9b9b9b; border-bottom: Solid 1px #9b9b9b;">
+<p class="TableText">$inlinecount=none</p>
+</td>
+<td style="border-right: Solid 1px #9b9b9b; border-bottom: Solid 1px #9b9b9b;">
+<p class="TableText">&#160;</p>
+</td>
+</tr>
+</table>
+<p class="Paragraph">&#160;</p>
+<p class="Paragraph">&#160;</p>
+<br />
+<div style="border-top: Solid 3px #3a3a3a; width: 100%; position: relative; padding-top: 2px; padding-bottom: 2px; padding-right: 5px; background-color: #9b9b9b;" id="footer">
+<h6 style="text-align: right; margin-top: 5pt; margin-bottom: 5pt;">Copyright 2014 &#160;FUJITSU LIMITED</h6>
+</div>
+<script type="text/javascript" language="javascript1.2">
+//<![CDATA[
+<!--
+if (window.writeIntopicBar)
+        writeIntopicBar(0);
+
+
+highlightSearch();
+//-->
+//]]>
+</script>
+</body>
+</html>

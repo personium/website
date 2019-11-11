@@ -1,0 +1,511 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+<meta name="generator" content="Adobe RoboHelp 10" />
+<title>$filter クエリ</title>
+<link rel="StyleSheet" href="../../../../default.css" type="text/css" />
+<script type="text/javascript" language="JavaScript">
+//<![CDATA[
+function reDo() {
+  if (innerWidth != origWidth || innerHeight != origHeight)
+     location.reload();
+}
+if ((parseInt(navigator.appVersion) == 4) && (navigator.appName == "Netscape")) {
+	origWidth = innerWidth;
+	origHeight = innerHeight;
+	onresize = reDo;
+}
+onerror = null; 
+//]]>
+</script>
+<style type="text/css">
+<!--
+div.WebHelpPopupMenu { position:absolute;
+left:0px;
+top:0px;
+z-index:4;
+visibility:hidden; }
+-->
+</style>
+<script type="text/javascript" language="javascript1.2" src="../../../../whmsg.js" charset="utf-8"></script>
+<script type="text/javascript" language="javascript" src="../../../../whver.js" charset="utf-8"></script>
+<script type="text/javascript" language="javascript1.2" src="../../../../whutils.js" charset="utf-8"></script>
+<script type="text/javascript" language="javascript1.2" src="../../../../whproxy.js" charset="utf-8"></script>
+<script type="text/javascript" language="javascript1.2" src="../../../../whlang.js" charset="utf-8"></script>
+<script type="text/javascript" language="javascript1.2" src="../../../../whtopic.js" charset="utf-8"></script>
+
+</head>
+
+<body><script type="text/javascript" language="javascript1.2">//<![CDATA[
+<!--
+if (window.gbWhTopic)
+{
+	var strUrl = document.location.href;
+	var bc = 0;
+	var n = strUrl.toLowerCase().indexOf("bc-");
+	if(n != -1)
+	{
+		document.location.href = strUrl.substring(0, n);
+		bc = strUrl.substring(n+3);
+	}
+
+	if (window.addTocInfo)
+	{
+	addButton("show",BTN_TEXT,"表示","","","","",0,0,"","","");
+
+	}
+	if (window.writeBtnStyle)
+		writeBtnStyle();
+
+	if (window.writeIntopicBar)
+		writeIntopicBar(1);
+
+	
+	
+}
+else
+	if (window.gbIE4)
+		document.location.reload();
+
+onLoadHandler = function()
+{
+  if (window.setRelStartPage)
+	{
+	setTimeout("setRelStartPage('../../../../Japanese.htm');", 1)
+
+    setTimeout("UpdateBreadCrumbsMarker();", 1);
+	}
+}
+
+if (window.addEventListener){  
+	window.addEventListener('load', onLoadHandler, false);   
+} else if (window.attachEvent){  
+	window.attachEvent('onload', onLoadHandler);  
+}
+
+function onSetStartPage()
+{
+  autoSync(1);
+  sendSyncInfo();
+  sendAveInfoOut();
+}
+//-->
+//]]></script>
+<script type="text/javascript" src="../../../../ehlpdhtm.js" language="JavaScript1.2"></script>
+
+<div style="width: 100%; position: relative;" id="header">
+	<p>&#160;</p>
+</div>
+
+<script type="text/javascript" language="javascript">//<![CDATA[
+document.write("<p  style=\"text-align:right;font-family:Arial;font-size:9pt;font-weight: normal;font-style: normal;text-decoration: none;\">");
+AddMasterBreadcrumbs("../../../../Japanese.htm", "font-family:Arial;font-size:9pt;font-weight: normal;font-style: normal;text-decoration: none;", "&gt;", "Home", "../../What_is_Persona_Container_Server.htm");
+document.write("$filter クエリ<\/p>");
+//]]></script>
+
+<h1>$filter <span style="-webkit-text-size-adjust: auto; -webkit-text-stroke-width: 0px;"><font 
+	 class="">クエリ</font></span></h1>
+<ul style="
+list-style:url('../../../../Images/arrow.png');">
+	<li style="margin-left: -20px;"><h2 class="Paragraph"><span lang="JA" xml:lang="JA" style="line-height: 115%; mso-ascii-font-family: Arial; 
+		 mso-fareast-theme-font: minor-fareast; mso-hansi-font-family: Arial; 
+		 mso-bidi-font-family: Arial; mso-ansi-language: EN-US; mso-fareast-language: JA; 
+		 mso-bidi-language: AR-SA; font-weight: bold; font-family: 'MS Gothic';">概要</span></h2></li>
+</ul>
+<p class="Paragraph" style="color: #ff0000;"><span style="color: rgb(72, 72, 72); 
+													 font-family: Verdana, sans-serif; 
+													 font-size: 12.222222328186035px; 
+													 line-height: normal; 
+													 orphans: auto; widows: auto; 
+													 -webkit-text-stroke-width: 0px; 
+													 background-color: #ffffff; 
+													 display: inline	 ! important ; 
+													 float: none;">一覧取得時に検索条件を指定する場合は$filterクエリを使用する</span> 
+ </p>
+<ul style="
+list-style:url('../../../../Images/arrow.png');">
+	<li style="margin-left: -20px;"><h2>Operator Support</h2></li>
+</ul>
+<p class="Paragraph">&#160;</p>
+<table style="margin-left: 26pt;" cellspacing="0" width="96%">
+	<col style="width: 11.516%;" />
+	<col style="width: 13.904%;" />
+	<col style="width: 36.483%;" />
+	<col style="width: 38.097%;" />
+	<tr>
+		<td style="border: Solid 1px #9b9b9b;" bgcolor="#353D47"><p class="GreyColumnHeading">Operator</p></td>
+		<td style="border-top: Solid 1px #9b9b9b; border-right: Solid 1px #9b9b9b; 
+			 border-bottom: Solid 1px #9b9b9b;" bgcolor="#353D47"><p class="GreyColumnHeading">Description</p></td>
+		<td style="border-top: Solid 1px #9b9b9b; border-right: Solid 1px #9b9b9b; 
+			 border-bottom: Solid 1px #9b9b9b;" bgcolor="#353D47"><p class="GreyColumnHeading">Example</p></td>
+		<td style="border-top: Solid 1px #9b9b9b; border-right: Solid 1px #9b9b9b; 
+			 border-bottom: Solid 1px #9b9b9b;" bgcolor="#353D47"><p class="GreyColumnHeading">備考</p></td>
+	</tr>
+	<tr>
+		<td style="border-left: Solid 1px #9b9b9b; border-right: Solid 1px #9b9b9b; 
+			 border-bottom: Solid 1px #9b9b9b; vertical-align: top;"><p 
+			 class="TableText"><font><font>eq</font></font></p></td>
+		<td style="border-right: Solid 1px #9b9b9b; border-bottom: Solid 1px #9b9b9b; 
+			 vertical-align: top;"><p class="TableText"><span style="color: rgb(72, 72, 72); 
+		 font-family: Verdana, sans-serif; font-size: 12.222222328186035px; 
+		 line-height: normal; orphans: auto; widows: auto; -webkit-text-stroke-width: 0px; 
+		 background-color: #ffffff; display: inline	 ! important ; float: none;">等号</span> 
+		 </p></td>
+		<td style="border-right: Solid 1px #9b9b9b; border-bottom: Solid 1px #9b9b9b; 
+			 vertical-align: top;"><p class="TableText"><span style="color: rgb(72, 72, 72); 
+		 font-family: Verdana, sans-serif; font-size: 12.222222328186035px; 
+		 line-height: normal; orphans: auto; widows: auto; -webkit-text-stroke-width: 0px; 
+		 background-color: #ffffff; display: inline	 ! important ; float: none;">文字列の場合 
+		 ： $filter=itemKey eq 'searchValue'</span><br style="color: rgb(72, 72, 72); 
+														 font-family: Verdana, sans-serif; 
+														 font-size: 12.222222328186035px; 
+														 font-style: normal; 
+														 font-variant: normal; 
+														 font-weight: normal; 
+														 letter-spacing: normal; 
+														 line-height: normal; 
+														 orphans: auto; 
+														 text-align: start; 
+														 text-indent: 0px; 
+														 text-transform: none; 
+														 white-space: normal; 
+														 widows: auto; 
+														 word-spacing: 0px; 
+														 -webkit-text-stroke-width: 0px; 
+														 background-color: #ffffff;" />
+		<span style="color: rgb(72, 72, 72); font-family: Verdana, sans-serif; 
+				 font-size: 12.222222328186035px; line-height: normal; 
+				 orphans: auto; widows: auto; -webkit-text-stroke-width: 0px; 
+				 background-color: #ffffff; display: inline	 ! important ; 
+				 float: none;">数値の場合 ： $filter=itemKey eq 10</span> </p></td>
+		<td style="border-right: Solid 1px #9b9b9b; border-bottom: Solid 1px #9b9b9b; 
+			 vertical-align: top;"><p class="TableText"><span style="color: rgb(72, 72, 72); 
+		 font-family: Verdana, sans-serif; font-size: 12.222222328186035px; 
+		 line-height: normal; orphans: auto; widows: auto; -webkit-text-stroke-width: 0px; 
+		 background-color: #ffffff; display: inline	 ! important ; float: none;">文字列、数値、真偽値、NULLに対応</span> 
+		 </p></td>
+	</tr>
+	<tr>
+		<td style="border-left: Solid 1px #9b9b9b; border-right: Solid 1px #9b9b9b; 
+			 border-bottom: Solid 1px #9b9b9b; vertical-align: top;"><p 
+			 class="TableText"><font><font>gt</font></font></p></td>
+		<td style="border-right: Solid 1px #9b9b9b; border-bottom: Solid 1px #9b9b9b; 
+			 vertical-align: top;"><p class="TableText"><span style="color: rgb(72, 72, 72); 
+		 font-family: Verdana, sans-serif; font-size: 12.222222328186035px; 
+		 line-height: normal; orphans: auto; widows: auto; -webkit-text-stroke-width: 0px; 
+		 background-color: #ffffff; display: inline	 ! important ; float: none;">より大きい</span></p></td>
+		<td style="border-right: Solid 1px #9b9b9b; border-bottom: Solid 1px #9b9b9b; 
+			 vertical-align: top;"><p class="TableText">$filter=itemKey 
+		 gt 1000</p></td>
+		<td style="border-right: Solid 1px #9b9b9b; border-bottom: Solid 1px #9b9b9b; 
+			 vertical-align: top;"><p class="TableText"><span style="color: rgb(72, 72, 72); 
+		 font-family: Verdana, sans-serif; font-size: 12.222222328186035px; 
+		 line-height: normal; orphans: auto; widows: auto; -webkit-text-stroke-width: 0px; 
+		 background-color: #ffffff; display: inline	 ! important ; float: none;">文字列、数値に対応</span> 
+		 </p></td>
+	</tr>
+	<tr>
+		<td style="border-left: Solid 1px #9b9b9b; border-right: Solid 1px #9b9b9b; 
+			 border-bottom: Solid 1px #9b9b9b; vertical-align: top;"><p 
+			 class="TableText"><font><font>ge</font></font></p></td>
+		<td style="border-right: Solid 1px #9b9b9b; border-bottom: Solid 1px #9b9b9b; 
+			 vertical-align: top;"><p class="TableText"><span style="color: rgb(72, 72, 72); 
+		 font-family: Verdana, sans-serif; font-size: 12.222222328186035px; 
+		 line-height: normal; orphans: auto; widows: auto; -webkit-text-stroke-width: 0px; 
+		 background-color: #ffffff; display: inline	 ! important ; float: none;">以上</span> 
+		 </p></td>
+		<td style="border-right: Solid 1px #9b9b9b; border-bottom: Solid 1px #9b9b9b; 
+			 vertical-align: top;"><p class="TableText">$filter=itemKey 
+		 ge 1000</p></td>
+		<td style="border-right: Solid 1px #9b9b9b; border-bottom: Solid 1px #9b9b9b; 
+			 vertical-align: top;"><p class="TableText" style="color: rgb(72, 72, 72); 
+										 font-family: Verdana, sans-serif; 
+										 font-size: 12.222222328186035px; 
+										 line-height: normal; orphans: auto; 
+										 widows: auto; background-color: #ffffff; 
+										 display: inline	 ! important ;"><span 
+		 style="-webkit-text-stroke-width: 0px;">文字列、数値に対応</span></p></td>
+	</tr>
+	<tr>
+		<td style="border-left: Solid 1px #9b9b9b; border-right: Solid 1px #9b9b9b; 
+			 border-bottom: Solid 1px #9b9b9b; vertical-align: top;"><p 
+			 class="TableText"><font><font>lt</font></font></p></td>
+		<td style="border-right: Solid 1px #9b9b9b; border-bottom: Solid 1px #9b9b9b; 
+			 vertical-align: top;"><p class="TableText"><span style="color: rgb(72, 72, 72); 
+		 font-family: Verdana, sans-serif; font-size: 12.222222328186035px; 
+		 line-height: normal; orphans: auto; widows: auto; -webkit-text-stroke-width: 0px; 
+		 background-color: #ffffff; display: inline	 ! important ; float: none;">より小さい</span> 
+		 </p></td>
+		<td style="border-right: Solid 1px #9b9b9b; border-bottom: Solid 1px #9b9b9b; 
+			 vertical-align: top;"><p class="TableText">$filter=itemKey 
+		 lt 1000</p></td>
+		<td style="border-right: Solid 1px #9b9b9b; border-bottom: Solid 1px #9b9b9b; 
+			 vertical-align: top;"><p class="TableText" style="color: rgb(72, 72, 72); 
+										 font-family: Verdana, sans-serif; 
+										 font-size: 12.222222328186035px; 
+										 line-height: normal; orphans: auto; 
+										 widows: auto; background-color: #ffffff; 
+										 display: inline	 ! important ;"><span 
+		 style="-webkit-text-stroke-width: 0px;">文字列、数値に対応</span></p></td>
+	</tr>
+	<tr>
+		<td style="border-left: Solid 1px #9b9b9b; border-right: Solid 1px #9b9b9b; 
+			 border-bottom: Solid 1px #9b9b9b; vertical-align: top;"><p 
+			 class="TableText"><font><font>le</font></font></p></td>
+		<td style="border-right: Solid 1px #9b9b9b; border-bottom: Solid 1px #9b9b9b; 
+			 vertical-align: top;"><p class="TableText"><span style="color: rgb(72, 72, 72); 
+		 font-family: Verdana, sans-serif; font-size: 12.222222328186035px; 
+		 line-height: normal; orphans: auto; widows: auto; -webkit-text-stroke-width: 0px; 
+		 background-color: #ffffff; display: inline	 ! important ; float: none;">以下</span> 
+		 </p></td>
+		<td style="border-right: Solid 1px #9b9b9b; border-bottom: Solid 1px #9b9b9b; 
+			 vertical-align: top;"><p class="TableText">$filter=itemKey 
+		 le 1000</p></td>
+		<td style="border-right: Solid 1px #9b9b9b; border-bottom: Solid 1px #9b9b9b; 
+			 vertical-align: top;"><p class="TableText" style="color: rgb(72, 72, 72); 
+										 font-family: Verdana, sans-serif; 
+										 font-size: 12.222222328186035px; 
+										 line-height: normal; orphans: auto; 
+										 widows: auto; background-color: #ffffff; 
+										 display: inline	 ! important ;"><span 
+		 style="-webkit-text-stroke-width: 0px;">文字列、数値に対応</span></p></td>
+	</tr>
+	<tr>
+		<td style="border-left: Solid 1px #9b9b9b; border-right: Solid 1px #9b9b9b; 
+			 border-bottom: Solid 1px #9b9b9b; vertical-align: top;"><p 
+			 class="TableText"><font><font>and</font></font></p></td>
+		<td style="border-right: Solid 1px #9b9b9b; border-bottom: Solid 1px #9b9b9b; 
+			 vertical-align: top;"><p class="TableText"><span style="color: rgb(72, 72, 72); 
+		 font-family: Verdana, sans-serif; font-size: 12.222222328186035px; 
+		 line-height: normal; orphans: auto; widows: auto; -webkit-text-stroke-width: 0px; 
+		 background-color: #ffffff; display: inline	 ! important ; float: none;">論理積</span> 
+		 </p></td>
+		<td style="border-right: Solid 1px #9b9b9b; border-bottom: Solid 1px #9b9b9b; 
+			 vertical-align: top;"><p class="TableText">$filter=itemKey1 
+		 eq 'searchValue1' and itemKey2 eq 'searchValue2'</p></td>
+		<td style="border-right: Solid 1px #9b9b9b; border-bottom: Solid 1px #9b9b9b; 
+			 vertical-align: top;"><p class="TableText">&#160;</p></td>
+	</tr>
+	<tr>
+		<td style="border-left: Solid 1px #9b9b9b; border-right: Solid 1px #9b9b9b; 
+			 border-bottom: Solid 1px #9b9b9b; vertical-align: top;"><p 
+			 class="TableText"><font><font>or</font></font></p></td>
+		<td style="border-right: Solid 1px #9b9b9b; border-bottom: Solid 1px #9b9b9b; 
+			 vertical-align: top;"><p class="TableText"><span style="color: rgb(72, 72, 72); 
+		 font-family: Verdana, sans-serif; font-size: 12.222222328186035px; 
+		 line-height: normal; orphans: auto; widows: auto; -webkit-text-stroke-width: 0px; 
+		 background-color: #ffffff; display: inline	 ! important ; float: none;">論理和</span> 
+		 </p></td>
+		<td style="border-right: Solid 1px #9b9b9b; border-bottom: Solid 1px #9b9b9b; 
+			 vertical-align: top;"><p class="TableText">$filter=itemKey1 
+		 eq 'searchValue1' or itemKey2 eq 'searchValue2'</p></td>
+		<td style="border-right: Solid 1px #9b9b9b; border-bottom: Solid 1px #9b9b9b; 
+			 vertical-align: top;"><p class="TableText">&#160;</p></td>
+	</tr>
+	<tr>
+		<td style="border-left: Solid 1px #9b9b9b; border-right: Solid 1px #9b9b9b; 
+			 border-bottom: Solid 1px #9b9b9b; vertical-align: top;"><p 
+			 class="TableText"><font><font>()</font></font></p></td>
+		<td style="border-right: Solid 1px #9b9b9b; border-bottom: Solid 1px #9b9b9b; 
+			 vertical-align: top;"><p class="TableText"><span style="color: rgb(72, 72, 72); 
+		 font-family: Verdana, sans-serif; font-size: 12.222222328186035px; 
+		 line-height: normal; orphans: auto; widows: auto; -webkit-text-stroke-width: 0px; 
+		 background-color: #ffffff; display: inline	 ! important ; float: none;">優先グループ</span> 
+		 </p></td>
+		<td style="border-right: Solid 1px #9b9b9b; border-bottom: Solid 1px #9b9b9b; 
+			 vertical-align: top;"><p class="TableText">$filter=itemKey 
+		 eq 'searchValue' or (itemKey gt 500 and itemKey lt 1500)</p></td>
+		<td style="border-right: Solid 1px #9b9b9b; border-bottom: Solid 1px #9b9b9b; 
+			 vertical-align: top;"><p class="TableText"><span style="color: rgb(72, 72, 72); 
+		 font-family: Verdana, sans-serif; font-size: 12.222222328186035px; 
+		 line-height: normal; orphans: auto; widows: auto; -webkit-text-stroke-width: 0px; 
+		 background-color: #ffffff; display: inline	 ! important ; float: none;">括弧が片方のみの場合、括弧は無視される</span> 
+		 </p></td>
+	</tr>
+</table>
+<ul style="
+list-style:url('../../../../Images/arrow.png');">
+	<li style="margin-left: -20px;"><h2 style="font-weight: normal;"><strong 
+	 style="font-weight: normal;">Support Functions</strong></h2></li>
+</ul>
+<table style="margin-left: 26pt;" cellspacing="0" width="96%">
+	<col style="width: 13.287%;" />
+	<col style="width: 16.278%;" />
+	<col style="width: 34.748%;" />
+	<col style="width: 36.024%;" />
+	<tr>
+		<td style="border: Solid 1px #9b9b9b;" bgcolor="#353D47"><p class="GreyColumnHeading">Function</p></td>
+		<td style="border-top: Solid 1px #9b9b9b; border-right: Solid 1px #9b9b9b; 
+			 border-bottom: Solid 1px #9b9b9b;" bgcolor="#353D47"><p class="GreyColumnHeading"><span style="font-weight: bold; font-size: 10pt;"><font size="2" style="font-size:10pt;">概要</font></span></p></td>
+		<td style="border-top: Solid 1px #9b9b9b; border-right: Solid 1px #9b9b9b; 
+			 border-bottom: Solid 1px #9b9b9b;" bgcolor="#353D47"><p class="GreyColumnHeading">Example</p></td>
+		<td style="border-top: Solid 1px #9b9b9b; border-right: Solid 1px #9b9b9b; 
+			 border-bottom: Solid 1px #9b9b9b;" bgcolor="#353D47"><p class="GreyColumnHeading">備考</p></td>
+	</tr>
+	<tr>
+		<td style="border-left: Solid 1px #9b9b9b; border-right: Solid 1px #9b9b9b; 
+			 border-bottom: Solid 1px #9b9b9b; vertical-align: top;"><p 
+			 class="TableText"><font><font>startswith</font></font></p></td>
+		<td style="border-right: Solid 1px #9b9b9b; border-bottom: Solid 1px #9b9b9b; 
+			 vertical-align: top;"><p class="TableText"><span style="color: rgb(72, 72, 72); 
+		 font-family: Verdana, sans-serif; font-size: 12.222222328186035px; 
+		 line-height: normal; orphans: auto; widows: auto; -webkit-text-stroke-width: 0px; 
+		 background-color: #ffffff; display: inline	 ! important ; float: none;">前方一致</span> 
+		 </p></td>
+		<td style="border-right: Solid 1px #9b9b9b; border-bottom: Solid 1px #9b9b9b; 
+			 vertical-align: top;"><p class="TableText">$filter=startswith(itemKey, 
+		 'searchValue')</p></td>
+		<td style="border-right: Solid 1px #9b9b9b; border-bottom: Solid 1px #9b9b9b; 
+			 vertical-align: top;"><p class="TableText"><span style="color: rgb(72, 72, 72); 
+		 font-family: Verdana, sans-serif; font-size: 12.222222328186035px; 
+		 line-height: normal; orphans: auto; widows: auto; -webkit-text-stroke-width: 0px; 
+		 background-color: #ffffff; display: inline	 ! important ; float: none;">文字列のみ対応</span> 
+		 </p></td>
+	</tr>
+	<tr>
+		<td style="border-left: Solid 1px #9b9b9b; border-right: Solid 1px #9b9b9b; 
+			 border-bottom: Solid 1px #9b9b9b; vertical-align: top;"><p 
+			 class="TableText"><font><font>substringof</font></font></p></td>
+		<td style="border-right: Solid 1px #9b9b9b; border-bottom: Solid 1px #9b9b9b; 
+			 vertical-align: top;"><p class="TableText"><span style="color: rgb(72, 72, 72); 
+		 font-family: Verdana, sans-serif; font-size: 12.222222328186035px; 
+		 line-height: normal; orphans: auto; widows: auto; -webkit-text-stroke-width: 0px; 
+		 background-color: #ffffff; display: inline	 ! important ; float: none;">部分一致</span> 
+		 </p></td>
+		<td style="border-right: Solid 1px #9b9b9b; border-bottom: Solid 1px #9b9b9b; 
+			 vertical-align: top;"><p class="TableText">$filter=substringof('searchValue1', 
+		 itemKey1)</p></td>
+		<td style="border-right: Solid 1px #9b9b9b; border-bottom: Solid 1px #9b9b9b; 
+			 vertical-align: top;"><p class="TableText"><span style="color: rgb(72, 72, 72); 
+		 font-family: Verdana, sans-serif; font-size: 12.222222328186035px; 
+		 line-height: normal; orphans: auto; widows: auto; -webkit-text-stroke-width: 0px; 
+		 background-color: #ffffff; display: inline	 ! important ; float: none;">文字列のみ対応</span><br 
+		 style="color: rgb(72, 72, 72); font-family: Verdana, sans-serif; 
+		 font-size: 12.222222328186035px; font-style: normal; font-variant: normal; 
+		 font-weight: normal; letter-spacing: normal; line-height: normal; 
+		 orphans: auto; text-align: start; text-indent: 0px; text-transform: none; 
+		 white-space: normal; widows: auto; word-spacing: 0px; -webkit-text-stroke-width: 0px; 
+		 background-color: #ffffff;" />
+		<span style="color: rgb(72, 72, 72); font-family: Verdana, sans-serif; 
+				 font-size: 12.222222328186035px; line-height: normal; 
+				 orphans: auto; widows: auto; -webkit-text-stroke-width: 0px; 
+				 background-color: #ffffff; display: inline	 ! important ; 
+				 float: none;">※英数字の部分一致は未対応</span> </p></td>
+	</tr>
+</table>
+<p class="Paragraph" style="font-weight: normal;">&#160;</p>
+<ul style="
+list-style:url('../../../../Images/arrow.png');">
+	<li style="margin-left: -20px;"><h2 style="font-weight: normal;">エラー : 変数 (varSearchSpecificPropertyType) は定義されていません。</h2></li>
+</ul>
+<p class="Paragraph">&#160;</p>
+<h1 style="font-family: 'Trebuchet MS', Verdana, sans-serif; 
+											 color: rgb(85, 85, 85); font-size: 13px; 
+											 counter-increment: section 1; 
+											 line-height: normal; background-color: #ffffff; 
+											 orphans: auto; widows: auto; 
+											 -webkit-text-stroke-width: 0px;">1<span style='word-spacing:normal; font:6.0pt "Times New Roman"'><font size="1" style="font-size:6pt;">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</font></span>Edm.String型</h1>
+<p class="Paragraph"><span style="-webkit-text-stroke-width: 0px;">検</span><span 
+	 style="font-size: 12px; font-family: Verdana, sans-serif;">索に指定したキーワードを文字列型に変換して検索する</span></p>
+<h1 style="font-family: 'Trebuchet MS', Verdana, sans-serif; 
+											 color: rgb(85, 85, 85); font-size: 13px; 
+											 counter-increment: section 1; 
+											 line-height: normal; background-color: #ffffff; 
+											 orphans: auto; widows: auto; 
+											 -webkit-text-stroke-width: 0px;">2<span style='word-spacing:normal; font:6.0pt "Times New Roman"'><font size="1" style="font-size:6pt;">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</font></span>Edm.Int32型</h1>
+<p class="Paragraph" style="margin-bottom: 1.5pt; font-size: 12px; font-family: Verdana, sans-serif;">整数値またはnullが指定可能</p>
+<p class="Paragraph" style="margin-bottom: 1.5pt; font-size: 12px; font-family: Verdana, sans-serif;">文字列型で整数値を指定された場合は数値型に変換して検索する</p>
+<h1 style="font-family: 'Trebuchet MS', Verdana, sans-serif; 
+											 color: rgb(85, 85, 85); font-size: 13px; 
+											 counter-increment: section 1; 
+											 line-height: normal; background-color: #ffffff; 
+											 orphans: auto; widows: auto; 
+											 -webkit-text-stroke-width: 0px;">3<span style='word-spacing:normal; font:6.0pt "Times New Roman"'><font size="1" style="font-size:6pt;">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</font></span>Edm.Single型</h1>
+<p class="Paragraph" style="color: rgb(85, 85, 85); counter-increment: section 1; 
+	 line-height: normal; background-color: #ffffff; font-family: Verdana, sans-serif; 
+	 orphans: auto; widows: auto; font-size: 12px; margin-bottom: 1.5pt;"><span 
+	 style="-webkit-text-stroke-width: 0px;">整数、小数値またはnullの指定が可能</span></p>
+<p class="Paragraph" style="font-family: Verdana, sans-serif; font-size: 12px; 
+	 margin-bottom: 1.5pt;">文字列型で整数、小数値を指定された場合は小数値に変換して検索を行う</p>
+<h1 style="font-family: 'Trebuchet MS', Verdana, sans-serif; 
+											 color: rgb(85, 85, 85); font-size: 13px; 
+											 counter-increment: section 1; 
+											 line-height: normal; background-color: #ffffff; 
+											 orphans: auto; widows: auto; 
+											 -webkit-text-stroke-width: 0px;">4<span style='word-spacing:normal; font:6.0pt "Times New Roman"'><font size="1" style="font-size:6pt;">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</font></span>Edm.Boolean型</h1>
+<p class="Paragraph" style="font-weight: normal; font-size: 12px; font-family: Verdana, sans-serif;"><span 
+	 style="color: rgb(72, 72, 72); font-size: 12.222222328186035px; line-height: normal; 
+	 orphans: auto; widows: auto; -webkit-text-stroke-width: 0px; background-color: #ffffff; 
+	 display: inline	 ! important ; float: none;">真偽値またはnullのみ指定可能</span> 
+ </p>
+<ul style="
+list-style:url('../../../../Images/arrow.png');">
+	<li style="margin-left: -20px;"><h2 style="font-weight: normal;">備考</h2></li>
+</ul>
+<p class="Paragraph"><span style="font-family: Verdana, sans-serif;"><strong 
+	 style="color: rgb(72, 72, 72); font-size: 12.222222328186035px; line-height: normal; 
+	 orphans: auto; widows: auto; -webkit-text-stroke-width: 0px; background-color: #ffffff; 
+	 font-family: Verdana, sans-serif;">※クエリを指定する際はURLエンコードが必要</strong><br 
+	 style="color: rgb(72, 72, 72); font-family: Verdana, sans-serif; font-size: 12.222222328186035px; 
+	 font-style: normal; font-variant: normal; font-weight: normal; letter-spacing: normal; 
+	 line-height: normal; orphans: auto; text-align: start; text-indent: 0px; 
+	 text-transform: none; white-space: normal; widows: auto; word-spacing: 0px; 
+	 -webkit-text-stroke-width: 0px; background-color: #ffffff;" />
+<strong style="color: rgb(72, 72, 72); font-size: 12.222222328186035px; 
+		 line-height: normal; orphans: auto; widows: auto; -webkit-text-stroke-width: 0px; 
+		 background-color: #ffffff; font-family: Verdana, sans-serif;">※検索対象のプロパティの有効値は半角英数字と-(半角ハイフン),_(半角アンダーバー)が有効。</strong><br 
+	 style="color: rgb(72, 72, 72); font-family: Verdana, sans-serif; font-size: 12.222222328186035px; 
+	 font-style: normal; font-variant: normal; font-weight: normal; letter-spacing: normal; 
+	 line-height: normal; orphans: auto; text-align: start; text-indent: 0px; 
+	 text-transform: none; white-space: normal; widows: auto; word-spacing: 0px; 
+	 -webkit-text-stroke-width: 0px; background-color: #ffffff;" />
+<strong style="color: rgb(72, 72, 72); font-size: 12.222222328186035px; 
+		 line-height: normal; orphans: auto; widows: auto; -webkit-text-stroke-width: 0px; 
+		 background-color: #ffffff; font-family: Verdana, sans-serif;">※検索文字列にシングルクオートを含めたい場合、シングルクオートを２個「''」記述することでシングルクオートを検索文字列に指定することができる</strong><br 
+	 style="color: rgb(72, 72, 72); font-family: Verdana, sans-serif; font-size: 12.222222328186035px; 
+	 font-style: normal; font-variant: normal; font-weight: normal; letter-spacing: normal; 
+	 line-height: normal; orphans: auto; text-align: start; text-indent: 0px; 
+	 text-transform: none; white-space: normal; widows: auto; word-spacing: 0px; 
+	 -webkit-text-stroke-width: 0px; background-color: #ffffff;" />
+<strong style="color: rgb(72, 72, 72); font-size: 12.222222328186035px; 
+		 line-height: normal; orphans: auto; widows: auto; -webkit-text-stroke-width: 0px; 
+		 background-color: #ffffff; font-family: Verdana, sans-serif;">※$filterに存在しないプロパティ名を指定した場合、検索条件に含めて検索を行う</strong><br 
+	 style="color: rgb(72, 72, 72); font-family: Verdana, sans-serif; font-size: 12.222222328186035px; 
+	 font-style: normal; font-variant: normal; font-weight: normal; letter-spacing: normal; 
+	 line-height: normal; orphans: auto; text-align: start; text-indent: 0px; 
+	 text-transform: none; white-space: normal; widows: auto; word-spacing: 0px; 
+	 -webkit-text-stroke-width: 0px; background-color: #ffffff;" />
+<strong style="color: rgb(72, 72, 72); font-size: 12.222222328186035px; 
+		 line-height: normal; orphans: auto; widows: auto; -webkit-text-stroke-width: 0px; 
+		 background-color: #ffffff; font-family: Verdana, sans-serif;">※__updated, 
+ __publishedを指定する場合は、UNIX時間（&quot;/Date()&quot;の括弧内の数字）で指定</strong></span> 
+ </p>
+<p class="Paragraph" style="font-size: 12px; font-family: Verdana, sans-serif; 
+	 margin-left: 0px;">&#160;</p>
+<p class="Paragraph" style="font-size: 12px; font-family: Verdana, sans-serif; 
+	 margin-left: 0px;">&#160;</p>
+<p class="Paragraph">&#160;</p>
+<div style="border-top: Solid 4px #0080c0; width: 100%; 
+					 position: relative; background-color: #374049; padding-top: 7px; 
+					 padding-bottom: 7px; padding-right: 5px;" id="footer">
+	<p style="font-size: 8pt; color: #ffffff; text-align: right;"><span 
+	 style="mso-ascii-theme-font: minor-latin; mso-fareast-font-family: Calibri; 
+	 mso-fareast-theme-font: minor-latin; mso-hansi-theme-font: minor-latin; 
+	 mso-bidi-font-family: 'Times New Roman'; mso-bidi-theme-font: minor-bidi; 
+	 mso-ansi-language: EN-US; mso-fareast-language: EN-US; mso-bidi-language: AR-SA; 
+	 font-family: Arial, sans-serif;">All Rights Reserved,Copyright (C) 
+	 FUJITSU LIMITED 1998-2013</span> </p>
+</div>
+<script type="text/javascript" language="javascript1.2">//<![CDATA[
+<!--
+if (window.writeIntopicBar)
+	writeIntopicBar(0);
+
+
+highlightSearch();
+//-->
+//]]></script>
+</body>
+</html>

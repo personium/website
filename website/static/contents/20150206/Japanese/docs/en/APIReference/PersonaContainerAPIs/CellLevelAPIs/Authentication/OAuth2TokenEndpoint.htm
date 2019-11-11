@@ -1,0 +1,1246 @@
+<?xml version="1.0" encoding="iso-2022-jp" ?>
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN"
+    "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<!-- saved from url=(0014)about:internet -->
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=iso-2022-jp" />
+<meta http-equiv="Content-Language" content="en-US" />
+<meta name="generator" content="Adobe RoboHelp 10" />
+<title>OAuth2 Token Endpoint</title>
+<link rel="StyleSheet" href="../../../../../../default.css" type="text/css" />
+<script type="text/javascript" src="../../../../../../prettify.js" language="JavaScript1.2">
+</script>
+<style type="text/css">
+/*<![CDATA[*/
+<!--
+.mainBreadCrumb a:link { color:#000000;
+background-color:transparent;
+text-decoration:none; }
+.mainBreadCrumb a:visited { color:#000000;
+background-color:transparent;
+text-decoration:none; }
+.mainBreadCrumb a:hover { color:#ff0000 ! important;
+cursor:pointer;
+text-decoration:underline; }
+p.mainBreadCrumb { margin-left:0px;
+margin-top:1px ! important; }
+h1 { padding-left:10px ! important; }
+-->
+/*]]>*/
+</style>
+
+<script type="text/javascript" language="JavaScript">
+//<![CDATA[
+function reDo() {
+  if (innerWidth != origWidth || innerHeight != origHeight)
+     location.reload();
+}
+if ((parseInt(navigator.appVersion) == 4) && (navigator.appName == "Netscape")) {
+        origWidth = innerWidth;
+        origHeight = innerHeight;
+        onresize = reDo;
+}
+onerror = null; 
+//]]>
+</script>
+<style type="text/css">
+/*<![CDATA[*/
+<!--
+div.WebHelpPopupMenu { position:absolute;
+left:0px;
+top:0px;
+z-index:4;
+visibility:hidden; }
+-->
+/*]]>*/
+</style>
+
+<script type="text/javascript" language="javascript1.2" src="../../../../../../whmsg.js" charset="utf-8">
+</script>
+<script type="text/javascript" language="javascript" src="../../../../../../whver.js" charset="utf-8">
+</script>
+<script type="text/javascript" language="javascript1.2" src="../../../../../../whutils.js" charset="utf-8">
+</script>
+<script type="text/javascript" language="javascript1.2" src="../../../../../../whproxy.js" charset="utf-8">
+</script>
+<script type="text/javascript" language="javascript1.2" src="../../../../../../whlang.js" charset="utf-8">
+</script>
+<script type="text/javascript" language="javascript1.2" src="../../../../../../whtopic.js" charset="utf-8">
+</script>
+</head>
+<body onload="prettyPrint()">
+<script type="text/javascript" language="javascript1.2">
+//<![CDATA[
+<!--
+if (window.gbWhTopic)
+{
+        var strUrl = document.location.href;
+        var bc = 0;
+        var n = strUrl.toLowerCase().indexOf("bc-");
+        if(n != -1)
+        {
+                document.location.href = strUrl.substring(0, n);
+                bc = strUrl.substring(n+3);
+        }
+
+        if (window.addTocInfo)
+        {
+        addButton("show",BTN_TEXT,"表示","","","","",0,0,"","","");
+
+        }
+        if (window.writeBtnStyle)
+                writeBtnStyle();
+
+        if (window.writeIntopicBar)
+                writeIntopicBar(1);
+
+        
+        
+}
+else
+        if (window.gbIE4)
+                document.location.reload();
+
+onLoadHandler = function()
+{
+  if (window.setRelStartPage)
+        {
+        setTimeout("setRelStartPage('../../../../../../Japanese.htm');", 1)
+
+    setTimeout("UpdateBreadCrumbsMarker();", 1);
+        }
+}
+
+if (window.addEventListener){  
+        window.addEventListener('load', onLoadHandler, false);   
+} else if (window.attachEvent){  
+        window.attachEvent('onload', onLoadHandler);  
+}
+
+function onSetStartPage()
+{
+  autoSync(1);
+  sendSyncInfo();
+  sendAveInfoOut();
+}
+//-->
+//]]>
+</script><script type="text/javascript" src="../../../../../../ehlpdhtm.js" language="JavaScript1.2">
+</script>
+<div style="width: 100%; position: relative;" id="header">
+<p style="font-size: 10pt;">&#160;</p>
+</div>
+<script type="text/javascript" language="javascript">
+//<![CDATA[
+document.write("<p  class=\"mainBreadCrumb\"  style=\"text-align:left;\" class=\"breadcrumbs\">");
+AddMasterBreadcrumbs("../../../../../../Japanese.htm", "breadcrumbs", " &gt; ", "トップ", "../../../../../ja/HomePage.htm");
+document.write("OAuth2 Token Endpoint<\/p>");
+//]]>
+</script>
+<hr style="border-left-width: 0px; margin-left: -6px;" size="1" width="101%" align="center" />
+<form><input type="image" value="Print" onclick="window.print();return false" name="Printer.png" src="../../../../../../Images/Printer.png" style="width: 16px; height: 16px; float: right; margin-top: -32px; margin-right: 2px;" /></form>
+<h1>OAuth2 Token Endpoint</h1>
+<h2><span lang="JA" xml:lang="JA" style="line-height: 115%; mso-ascii-font-family: Arial; mso-fareast-theme-font: minor-fareast; mso-hansi-font-family: Arial; mso-bidi-font-family: Arial; mso-ansi-language: EN-US; mso-fareast-language: JA; mso-bidi-language: AR-SA; font-weight: bold; font-family: 'MS Gothic';">概要</span></h2>
+<p class="Paragraph">This API authenticates and authorizes token using the following methods:</p>
+<p class="Paragraph" style="font-weight: bold;">Password authentication</p>
+<p class="Paragraph">Cell local token could be retrieved by account authentication, which will be acceptable only for the author cell of that token.</p>
+<p class="Paragraph">If authentication fails, account will be locked for 1 second.</p>
+<p class="Paragraph" style=" margin-left: 90px; text-indent: -20px;"><span class="rls-3-Bullets"><span style="font-family:Wingdings">§</span></span><span style='word-spacing:normal; font:6.0pt "Times New Roman"'><font size="1" style="font-size:6pt;">&#160;&#160;&#160;&#160;&#160;&#160;</font></span>During the account lock period if user sends request for account authentication:</p>
+<p class="Paragraph" style=" margin-left: 90px; text-indent: -20px;"><span class="rls-3-Bullets"><span style="font-family:Wingdings">§</span></span><span style='word-spacing:normal; font:6.0pt "Times New Roman"'><font size="1" style="font-size:6pt;">&#160;&#160;&#160;&#160;&#160;&#160;</font></span>regardless of validating the user name and password, an authorization error will be returned.</p>
+<p class="Paragraph" style=" margin-left: 90px; text-indent: -20px;"><span class="rls-3-Bullets"><span style="font-family:Wingdings">§</span></span><span style='word-spacing:normal; font:6.0pt "Times New Roman"'><font size="1" style="font-size:6pt;">&#160;&#160;&#160;&#160;&#160;&#160;</font></span>Another one more second the account will be locked, from the time of request.</p>
+<p class="Paragraph" style="font-weight: bold;">Token authentication</p>
+<p class="Paragraph">Only token issuer cell should issue a valid cell local token, by using transformer cell token</p>
+<p class="Paragraph" style="font-weight: bold;">Refresh token authentication</p>
+<p class="Paragraph" style="mso-fareast-theme-font: minor-fareast;"><span style="mso-bidi-font-family: 'Times New Roman'; mso-bidi-theme-font: minor-bidi; mso-ansi-language: EN-US; mso-fareast-language: JA; mso-bidi-language: AR-SA;">Issues a cell local token again by refreshing the old cell local token</span></p>
+<h2><span style="font-weight: bold;">必要な権限</span></h2>
+<p class="Paragraph">None</p>
+<h2><span style="font-weight: bold;">制限事項</span></h2>
+<p class="Paragraph2" style="font-weight: bold; color: #000000;">Basic authentication</p>
+<p class="Paragraph2" style="color: #000000;">Not implemented</p>
+<h2><span style="font-weight: bold;">リクエスト</span></h2>
+<h3><span style="font-weight: bold;">リクエストURL</span></h3>
+<table class="CodeTable" style="margin-left: 26pt;" cellspacing="0px" width="96%">
+<col style="width: 100%;" />
+<tr>
+<td>
+<p class="Code">{Cell_name}/__auth</p>
+</td>
+</tr>
+</table>
+<h3><span style="font-weight: bold;">メソッド</span></h3>
+<p class="Paragraph">POST</p>
+<h3><span style="font-weight: bold;">リクエストクエリ</span></h3>
+<p class="Paragraph">Query is ignored</p>
+<h3><span style="font-weight: bold;">リクエストヘッダ</span></h3>
+<div>
+<table class="ParameterTable" style="margin-left: 26pt;" cellspacing="0px" width="96%">
+<col style="width: 15.561%;" />
+<col style="width: 37.011%;" />
+<col style="width: 13.177%;" />
+<col style="width: 2.664%;" />
+<col style="width: 31.587%;" />
+<tr>
+<th style="border: Solid 1px #9b9b9b;" bgcolor="#DADADA">
+<p class="GreyColumnHeading" style="font-weight: normal; margin-left: 0px;"><span><font style="font-weight: normal;">Header name</font></span></p>
+</th>
+<th style="border-top: Solid 1px #9b9b9b; border-right: Solid 1px #9b9b9b; border-bottom: Solid 1px #9b9b9b;" bgcolor="#DADADA">
+<p class="GreyColumnHeading" style="font-weight: normal; margin-left: 0px;"><span><font style="font-weight: normal;">Summary</font></span></p>
+</th>
+<th style="border-top: Solid 1px #9b9b9b; border-right: Solid 1px #9b9b9b; border-bottom: Solid 1px #9b9b9b;" bgcolor="#DADADA">
+<p class="GreyColumnHeading" style="font-weight: normal; margin-left: 0px;"><span><font style="font-weight: normal;">Valid value</font></span></p>
+</th>
+<th style="border-top: Solid 1px #9b9b9b; border-right: Solid 1px #9b9b9b; border-bottom: Solid 1px #9b9b9b;" bgcolor="#DADADA">
+<p class="GreyColumnHeading" style="font-weight: normal; margin-left: 0px;"><span><font style="font-weight: normal;">Required</font></span></p>
+</th>
+<th style="border-top: Solid 1px #9b9b9b; border-right: Solid 1px #9b9b9b; border-bottom: Solid 1px #9b9b9b;" bgcolor="#DADADA">
+<p class="GreyColumnHeading" style="font-weight: normal; margin-left: 0px;"><span><font style="font-weight: normal;">Remarks</font></span></p>
+</th>
+</tr>
+</table>
+</div>
+<div>
+<table class="ParameterTable" style="margin-left: 26pt;" cellspacing="0px" width="96%">
+<col style="width: 22%;" />
+<col style="width: 20%;" />
+<col style="width: 20%;" />
+<col style="width: 10%;" />
+<col style="width: 28%;" />
+<tr>
+<td style="border-left: Solid 1px #9b9b9b; border-right: Solid 1px #9b9b9b; border-bottom: Solid 1px #9b9b9b; vertical-align: top;">
+<p class="TableText">Authorization</p>
+</td>
+<td style="border-right: Solid 1px #9b9b9b; border-bottom: Solid 1px #9b9b9b; vertical-align: top;">
+<p class="TableText">In the form of OAuth2.0, specify the authentication information</p>
+</td>
+<td style="border-right: Solid 1px #9b9b9b; border-bottom: Solid 1px #9b9b9b; vertical-align: top;">
+<p class="TableText">Basic {String}</p>
+</td>
+<td style="border-right: Solid 1px #9b9b9b; border-bottom: Solid 1px #9b9b9b; vertical-align: top;">
+<p class="TableText">×</p>
+</td>
+<td style="border-right: Solid 1px #9b9b9b; border-bottom: Solid 1px #9b9b9b; vertical-align: top;">
+<p class="TableText" style="color: #000000;">When you define the value of {Application cell URL of the schema authentication}:{produced token from the schema authentication} in Base64Encode, it will become the schema authentication.</p>
+<p class="TableText"><span style="color: #000000;"><font color="black">When you perform the above settings and on the other side the client_id and client_secret are not set on the Request Body, the settings for authorization header will get higher priority.</font></span></p>
+</td>
+</tr>
+</table>
+</div>
+<h3><span style="font-weight: bold;">リクエストボディ</span></h3>
+<h4>Password Authentication Request</h4>
+<div>
+<table style="margin-left: 26pt;" cellspacing="0" width="96%">
+<col style="width: 22%;" />
+<col style="width: 20%;" />
+<col style="width: 20%;" />
+<col style="width: 10%;" />
+<col style="width: 28%;" />
+<tr>
+<td style="border: Solid 1px #9b9b9b;" bgcolor="#DADADA">
+<p class="GreyColumnHeading" style="font-weight: normal; margin-left: 0px;"><span style="font-weight: normal;"><span style="font-weight: bold; font-size: 10pt;"><font size="2" style="font-size:10pt;">項目名</font></span></span></p>
+</td>
+<td style="border-top: Solid 1px #9b9b9b; border-right: Solid 1px #9b9b9b; border-bottom: Solid 1px #9b9b9b;" bgcolor="#DADADA">
+<p class="GreyColumnHeading" style="font-weight: normal; margin-left: 0px;"><span style="font-weight: normal;"><span style="font-weight: bold; font-size: 10pt;"><font size="2" style="font-size:10pt;">概要</font></span></span></p>
+</td>
+<td style="border-top: Solid 1px #9b9b9b; border-right: Solid 1px #9b9b9b; border-bottom: Solid 1px #9b9b9b;" bgcolor="#DADADA">
+<p class="GreyColumnHeading" style="font-weight: normal; margin-left: 0px;"><span style="font-weight: normal;"><span style="font-size: 10pt; font-weight: bold;"><font size="2" style="font-size:10pt;">書式</font></span></span></p>
+</td>
+<td style="border-top: Solid 1px #9b9b9b; border-right: Solid 1px #9b9b9b; border-bottom: Solid 1px #9b9b9b;" bgcolor="#DADADA">
+<p class="GreyColumnHeading" style="font-weight: normal; margin-left: 0px;"><span style="font-weight: normal;"><span style="font-size: 10pt; font-weight: bold;"><font size="2" style="font-size:10pt;">必須</font></span></span></p>
+</td>
+<td style="border-top: Solid 1px #9b9b9b; border-right: Solid 1px #9b9b9b; border-bottom: Solid 1px #9b9b9b;" bgcolor="#DADADA">
+<p class="GreyColumnHeading" style="font-weight: normal; margin-left: 0px;"><span style="font-weight: normal;"><span style="font-size: 10pt; font-weight: bold;"><font size="2" style="font-size:10pt;">有効値</font></span></span></p>
+</td>
+</tr>
+</table>
+</div>
+<div>
+<table class="ParameterTable" style="margin-left: 26pt;" cellspacing="0px" width="96%">
+<col style="width: 22%;" />
+<col style="width: 20%;" />
+<col style="width: 20%;" />
+<col style="width: 10%;" />
+<col style="width: 28%;" />
+<tr>
+<td style="border-left: Solid 1px #9b9b9b; border-right: Solid 1px #9b9b9b; border-bottom: Solid 1px #9b9b9b; vertical-align: top;">
+<p class="TableText">grant_type</p>
+</td>
+<td style="border-right: Solid 1px #9b9b9b; border-bottom: Solid 1px #9b9b9b; vertical-align: top;">
+<p class="TableText">Authentication type</p>
+</td>
+<td style="border-right: Solid 1px #9b9b9b; border-bottom: Solid 1px #9b9b9b; vertical-align: top;">
+<p class="TableText">String</p>
+</td>
+<td style="border-right: Solid 1px #9b9b9b; border-bottom: Solid 1px #9b9b9b; vertical-align: top;">
+<p class="TableText">○</p>
+</td>
+<td style="border-right: Solid 1px #9b9b9b; border-bottom: Solid 1px #9b9b9b; vertical-align: top;">
+<p class="TableText">password</p>
+</td>
+</tr>
+</table>
+</div>
+<div>
+<table class="ParameterTable" style="margin-left: 26pt;" cellspacing="0px" width="96%">
+<col style="width: 22%;" />
+<col style="width: 20%;" />
+<col style="width: 20%;" />
+<col style="width: 10%;" />
+<col style="width: 28%;" />
+<tr>
+<td style="border-left: Solid 1px #9b9b9b; border-right: Solid 1px #9b9b9b; border-bottom: Solid 1px #9b9b9b; vertical-align: top;">
+<p class="TableText">username</p>
+</td>
+<td style="border-right: Solid 1px #9b9b9b; border-bottom: Solid 1px #9b9b9b; vertical-align: top;">
+<p class="TableText">User name</p>
+</td>
+<td style="border-right: Solid 1px #9b9b9b; border-bottom: Solid 1px #9b9b9b; vertical-align: top;">
+<p class="TableText">String</p>
+</td>
+<td style="border-right: Solid 1px #9b9b9b; border-bottom: Solid 1px #9b9b9b; vertical-align: top;">
+<p class="TableText">○</p>
+</td>
+<td style="border-right: Solid 1px #9b9b9b; border-bottom: Solid 1px #9b9b9b; vertical-align: top;">
+<p class="TableText">Registered user name</p>
+</td>
+</tr>
+</table>
+</div>
+<div>
+<table class="ParameterTable" style="margin-left: 26pt;" cellspacing="0px" width="96%">
+<col style="width: 22%;" />
+<col style="width: 20%;" />
+<col style="width: 20%;" />
+<col style="width: 10%;" />
+<col style="width: 28%;" />
+<tr>
+<td style="border-left: Solid 1px #9b9b9b; border-right: Solid 1px #9b9b9b; border-bottom: Solid 1px #9b9b9b; vertical-align: top;">
+<p class="TableText">password</p>
+</td>
+<td style="border-right: Solid 1px #9b9b9b; border-bottom: Solid 1px #9b9b9b; vertical-align: top;">
+<p class="TableText">Password</p>
+</td>
+<td style="border-right: Solid 1px #9b9b9b; border-bottom: Solid 1px #9b9b9b; vertical-align: top;">
+<p class="TableText">String</p>
+</td>
+<td style="border-right: Solid 1px #9b9b9b; border-bottom: Solid 1px #9b9b9b; vertical-align: top;">
+<p class="TableText">○</p>
+</td>
+<td style="border-right: Solid 1px #9b9b9b; border-bottom: Solid 1px #9b9b9b; vertical-align: top;">
+<p class="TableText">Registered password</p>
+</td>
+</tr>
+</table>
+</div>
+<div>
+<table class="ParameterTable" style="margin-left: 26pt;" cellspacing="0px" width="96%">
+<col style="width: 22%;" />
+<col style="width: 20%;" />
+<col style="width: 20%;" />
+<col style="width: 10%;" />
+<col style="width: 28%;" />
+<tr>
+<td style="border-left: Solid 1px #9b9b9b; border-right: Solid 1px #9b9b9b; border-bottom: Solid 1px #9b9b9b; vertical-align: top;">
+<p class="TableText"><span style="line-height: normal; orphans: 2; widows: 2; -webkit-text-size-adjust: auto; -webkit-text-stroke-width: 0px; background-color: #ffffff; display: inline ! important ; float: none;">dc_target</span></p>
+</td>
+<td style="border-right: Solid 1px #9b9b9b; border-bottom: Solid 1px #9b9b9b; vertical-align: top;">
+<p class="TableText"><span class="hps">Trans</span> cell token target</p>
+</td>
+<td style="border-right: Solid 1px #9b9b9b; border-bottom: Solid 1px #9b9b9b; vertical-align: top;">
+<p class="TableText">String</p>
+</td>
+<td style="border-right: Solid 1px #9b9b9b; border-bottom: Solid 1px #9b9b9b; vertical-align: top;">
+<p class="TableText"><span style="line-height: 115%; mso-fareast-font-family: 'Times New Roman'; mso-bidi-font-family: 'Times New Roman'; mso-ansi-language: EN-US; mso-fareast-language: EN-US; mso-bidi-language: AR-SA;">×</span></p>
+</td>
+<td style="border-right: Solid 1px #9b9b9b; border-bottom: Solid 1px #9b9b9b; vertical-align: top;">
+<p class="TableText" style="mso-bidi-language: AR-SA;">It becomes the trans cell token, when the cell URL is defined on the produced token.</p>
+</td>
+</tr>
+</table>
+</div>
+<div>
+<table class="ParameterTable" style="margin-left: 26pt;" cellspacing="0px" width="96%">
+<col style="width: 22%;" />
+<col style="width: 20%;" />
+<col style="width: 20%;" />
+<col style="width: 10%;" />
+<col style="width: 28%;" />
+<col style="width: 28%;" />
+<tr>
+<td style="border-left: Solid 1px #9b9b9b; border-right: Solid 1px #9b9b9b; border-bottom: Solid 1px #9b9b9b; vertical-align: top;">
+<p class="TableText"><span style="font-size: 10.0pt; line-height: 115%; mso-fareast-font-family: 'Times New Roman'; mso-ansi-language: EN-US; mso-fareast-language: EN-US; mso-bidi-language: AR-SA;"><font size="2" style="font-size:10pt;">client_id</font></span></p>
+</td>
+<td style="border-right: Solid 1px #9b9b9b; border-bottom: Solid 1px #9b9b9b; vertical-align: top;">
+<p class="TableText"><span style="font-size: 10.0pt; line-height: 115%; mso-fareast-font-family: 'Times New Roman'; mso-ansi-language: EN-US; mso-fareast-language: EN-US; mso-bidi-language: AR-SA;"><font size="2" style="font-size:10pt;">Application cell</font></span> <span style="font-size: 10.0pt; line-height: 115%; mso-fareast-font-family: 'Times New Roman'; mso-ansi-language: EN-US; mso-fareast-language: EN-US; mso-bidi-language: AR-SA;"><font size="2" style="font-size:10pt;">URL</font></span></p>
+</td>
+<td style="border-right: Solid 1px #9b9b9b; border-bottom: Solid 1px #9b9b9b; vertical-align: top;">
+<p class="TableText"><span style="font-size: 10.0pt; line-height: 115%; mso-fareast-font-family: 'Times New Roman'; mso-ansi-language: EN-US; mso-fareast-language: EN-US; mso-bidi-language: AR-SA;"><font size="2" style="font-size:10pt;">String</font></span></p>
+</td>
+<td style="border-right: Solid 1px #9b9b9b; border-bottom: Solid 1px #9b9b9b; vertical-align: top;">
+<p class="TableText" style="line-height: 115%; mso-fareast-font-family: 'Times New Roman'; mso-bidi-font-family: 'Times New Roman';"><span style="mso-ansi-language: EN-US; mso-fareast-language: EN-US; mso-bidi-language: AR-SA;">×</span></p>
+</td>
+<td style="border-right: Solid 1px #9b9b9b; border-bottom: Solid 1px #9b9b9b; vertical-align: top;">
+<p class="TableText">When you set the client_secret and App. cell URL of the schema authentication together, it becomes the schema authentication.</p>
+<p class="TableText">Same as the settings for authorization header will get higher priority when the schema authentication is set to the Authorization header.</p>
+</td>
+</tr>
+</table>
+</div>
+<div>
+<table class="ParameterTable" style="margin-left: 26pt;" cellspacing="0px" width="96%">
+<col style="width: 22%;" />
+<col style="width: 20%;" />
+<col style="width: 20%;" />
+<col style="width: 10%;" />
+<col style="width: 28%;" />
+<tr>
+<td style="border-left: Solid 1px #9b9b9b; border-right: Solid 1px #9b9b9b; border-bottom: Solid 1px #9b9b9b; vertical-align: top;">
+<p class="TableText"><span style="font-size: 10.0pt; line-height: 115%; mso-fareast-font-family: 'Times New Roman'; mso-ansi-language: EN-US; mso-fareast-language: EN-US; mso-bidi-language: AR-SA;"><font size="2" style="font-size:10pt;">client_secret</font></span></p>
+</td>
+<td style="border-right: Solid 1px #9b9b9b; border-bottom: Solid 1px #9b9b9b; vertical-align: top;">
+<p class="TableText" style="font-size: 10.0pt; line-height: 115%; mso-fareast-font-family: 'Times New Roman';"><span style="mso-ansi-language: EN-US; mso-fareast-language: EN-US; mso-bidi-language: AR-SA;">Token that is produced from Application cell</span></p>
+</td>
+<td style="border-right: Solid 1px #9b9b9b; border-bottom: Solid 1px #9b9b9b; vertical-align: top;">
+<p class="TableText"><span style="font-size: 10.0pt; line-height: 115%; mso-fareast-font-family: 'Times New Roman'; mso-ansi-language: EN-US; mso-fareast-language: EN-US; mso-bidi-language: AR-SA;"><font size="2" style="font-size:10pt;">String</font></span></p>
+</td>
+<td style="border-right: Solid 1px #9b9b9b; border-bottom: Solid 1px #9b9b9b; vertical-align: top;">
+<p class="TableText"><span style="font-size: 10.0pt; line-height: 115%; mso-fareast-font-family: 'Times New Roman'; mso-ansi-language: EN-US; mso-fareast-language: EN-US; mso-bidi-language: AR-SA;"><font size="2" style="font-size:10pt;">×</font></span></p>
+</td>
+<td style="border-right: Solid 1px #9b9b9b; border-bottom: Solid 1px #9b9b9b; vertical-align: top;">
+<p class="TableText">It becomes the schema authentication, when the value of the produced token from the schema authentication and client_id are set together.</p>
+<p class="TableText">Same as the settings for authorization header will get higher priority when the schema authentication is set to the Authorization header.</p>
+</td>
+</tr>
+</table>
+</div>
+<div>
+<table class="ParameterTable" style="margin-left: 26pt;" cellspacing="0px" width="96%">
+<col style="width: 22%;" />
+<col style="width: 20%;" />
+<col style="width: 20%;" />
+<col style="width: 10%;" />
+<col style="width: 28%;" />
+<tr>
+<td style="border-left: Solid 1px #9b9b9b; border-right: Solid 1px #9b9b9b; border-bottom: Solid 1px #9b9b9b; vertical-align: top;">
+<p class="TableText"><span style="font-size: 10.0pt; line-height: 115%; mso-fareast-font-family: 'Times New Roman'; mso-ansi-language: EN-US; mso-fareast-language: EN-US; mso-bidi-language: AR-SA;"><font size="2" style="font-size:10pt;">dc_owner</font></span></p>
+</td>
+<td style="border-right: Solid 1px #9b9b9b; border-bottom: Solid 1px #9b9b9b; vertical-align: top;">
+<p class="TableText"><span style="font-size: 10.0pt; line-height: 115%; mso-fareast-font-family: 'Times New Roman'; mso-ansi-language: EN-US; mso-fareast-language: EN-US; mso-bidi-language: AR-SA;"><font size="2" style="font-size:10pt;">ULUUT Advancement execution query</font></span></p>
+</td>
+<td style="border-right: Solid 1px #9b9b9b; border-bottom: Solid 1px #9b9b9b; vertical-align: top;">
+<p class="TableText"><span style="font-size: 10.0pt; line-height: 115%; mso-fareast-font-family: 'Times New Roman'; mso-ansi-language: EN-US; mso-fareast-language: EN-US; mso-bidi-language: AR-SA;"><font size="2" style="font-size:10pt;">String</font></span></p>
+</td>
+<td style="border-right: Solid 1px #9b9b9b; border-bottom: Solid 1px #9b9b9b; vertical-align: top;">
+<p class="TableText"><span style="font-size: 10.0pt; line-height: 115%; mso-fareast-font-family: 'Times New Roman'; mso-ansi-language: EN-US; mso-fareast-language: EN-US; mso-bidi-language: AR-SA;"><font size="2" style="font-size:10pt;">×</font></span></p>
+</td>
+<td style="border-right: Solid 1px #9b9b9b; border-bottom: Solid 1px #9b9b9b; vertical-align: top;">
+<p class="TableText">Only true is valid</p>
+</td>
+</tr>
+</table>
+</div>
+<div>
+<table class="ParameterTable" style="margin-left: 26pt;" cellspacing="0px" width="96%">
+<col style="width: 22%;" />
+<col style="width: 20%;" />
+<col style="width: 20%;" />
+<col style="width: 10%;" />
+<col style="width: 28%;" />
+<tr>
+<td style="border-left: Solid 1px #9b9b9b; border-right: Solid 1px #9b9b9b; border-bottom: Solid 1px #9b9b9b; vertical-align: top;">
+<p class="TableText"><span style="font-size: 10.0pt; line-height: 115%; mso-fareast-font-family: 'Times New Roman'; mso-ansi-language: EN-US; mso-fareast-language: EN-US; mso-bidi-language: AR-SA;"><font size="2" style="font-size:10pt;">dc_cookie</font></span></p>
+</td>
+<td style="border-right: Solid 1px #9b9b9b; border-bottom: Solid 1px #9b9b9b; vertical-align: top;">
+<p class="TableText"><span style="font-size: 10.0pt; line-height: 115%; mso-fareast-font-family: 'Times New Roman'; mso-ansi-language: EN-US; mso-fareast-language: EN-US; mso-bidi-language: AR-SA;"><font size="2" style="font-size:10pt;">The authentication cookie issued options</font></span><span class="Apple-converted-space">&#160;</span><span style="font-size: 10.0pt; line-height: 115%; mso-fareast-font-family: 'Times New Roman'; mso-ansi-language: EN-US; mso-fareast-language: EN-US; mso-bidi-language: AR-SA;"><font size="2" style="font-size:10pt;">to issue the authentication cookie, if specified,</font></span><span class="Apple-converted-space">&#160;</span><span style="font-size: 10.0pt; line-height: 115%; mso-fareast-font-family: 'Times New Roman'; mso-ansi-language: EN-US; mso-fareast-language: EN-US; mso-bidi-language: AR-SA;"><font size="2" style="font-size:10pt;">if the dc_target is specified, it is ignored specification of this parameter</font></span></p>
+</td>
+<td style="border-right: Solid 1px #9b9b9b; border-bottom: Solid 1px #9b9b9b; vertical-align: top;">
+<p class="TableText"><span style="font-size: 10.0pt; line-height: 115%; mso-fareast-font-family: 'Times New Roman'; mso-ansi-language: EN-US; mso-fareast-language: EN-US; mso-bidi-language: AR-SA;"><font size="2" style="font-size:10pt;">String</font></span></p>
+</td>
+<td style="border-right: Solid 1px #9b9b9b; border-bottom: Solid 1px #9b9b9b; vertical-align: top;">
+<p class="TableText"><span style="font-size: 10.0pt; line-height: 115%; mso-fareast-font-family: 'Times New Roman'; mso-ansi-language: EN-US; mso-fareast-language: EN-US; mso-bidi-language: AR-SA;"><font size="2" style="font-size:10pt;">×</font></span></p>
+</td>
+<td style="border-right: Solid 1px #9b9b9b; border-bottom: Solid 1px #9b9b9b; vertical-align: top;">
+<p class="TableText">Only true is valid</p>
+</td>
+</tr>
+</table>
+</div>
+<h3><span style="font-weight: bold;">リクエストサンプル</span></h3>
+<p class="Paragraph2" style="font-weight: bold;">Password Authentication</p>
+<table class="CodeTable" style="margin-left: 26pt;" cellspacing="0px" width="96%">
+<col style="width: 100%;" />
+<tr>
+<td>
+<p class="Code">grant_type=password&amp;username=username&amp;password=pass</p>
+</td>
+</tr>
+</table>
+<p class="Paragraph2" style="font-weight: bold;">&#160;</p>
+<p class="Paragraph2" style="font-weight: bold;">Password Authentication</p>
+<table class="CodeTable" style="margin-left: 26pt;" cellspacing="0px" width="96%">
+<col style="width: 100%;" />
+<tr>
+<td>
+<p class="Code">grant_type=password&amp;username=username&amp;password=pass&amp;dc_cookie=true</p>
+</td>
+</tr>
+</table>
+<p class="Paragraph2" style="font-weight: bold;">&#160;</p>
+<p class="Paragraph2" style="font-weight: bold;">Transformer cell token issued by password authentication</p>
+<table class="CodeTable" style="margin-left: 26pt;" cellspacing="0px" width="96%">
+<col style="width: 100%;" />
+<tr>
+<td>
+<p class="Code">grant_type=password&amp;username=username&amp;password=pass&amp;dc_target=https://fqdn/cellname/</p>
+</td>
+</tr>
+</table>
+<p class="Paragraph2" style="font-weight: bold;">&#160;</p>
+<p class="Paragraph2" style="font-weight: bold;">Password authentication with schema</p>
+<table class="CodeTable" style="margin-left: 26pt;" cellspacing="0px" width="96%">
+<col style="width: 100%;" />
+<tr>
+<td>
+<p class="Code">grant_type=password&amp;username=username&amp;password=pass&amp;client_id=\</p>
+<p class="Code">https://fqdn/appcellname/&amp;client_secret=WjzDmvJSLvM9qVuJL1xxP6hSxt64HijoIea0P5R2CVloXJ2HEvEILl7UOtEtjSDdjlvyx9</p>
+<p class="Code">wrosPBhDRU97Qnn6EQIQ3MwaqtIx7HjuX36_ZBC6qxcgscCDmdtGb4nHgo</p>
+</td>
+</tr>
+</table>
+<h4>Request Token Authentication</h4>
+<div>
+<table style="margin-left: 26pt;" cellspacing="0" width="96%">
+<col style="width: 22%;" />
+<col style="width: 20%;" />
+<col style="width: 20%;" />
+<col style="width: 10%;" />
+<col style="width: 28%;" />
+<tr>
+<td style="border: Solid 1px #9b9b9b;" bgcolor="#DADADA">
+<p class="GreyColumnHeading" style="font-weight: normal; margin-left: 0px;"><span style="font-weight: normal;"><span style="font-weight: bold; font-size: 10pt;"><font size="2" style="font-size:10pt;">項目名</font></span></span></p>
+</td>
+<td style="border-top: Solid 1px #9b9b9b; border-right: Solid 1px #9b9b9b; border-bottom: Solid 1px #9b9b9b;" bgcolor="#DADADA">
+<p class="GreyColumnHeading" style="font-weight: normal; margin-left: 0px;"><span style="font-weight: normal;"><span style="font-weight: bold; font-size: 10pt;"><font size="2" style="font-size:10pt;">概要</font></span></span></p>
+</td>
+<td style="border-top: Solid 1px #9b9b9b; border-right: Solid 1px #9b9b9b; border-bottom: Solid 1px #9b9b9b;" bgcolor="#DADADA">
+<p class="GreyColumnHeading" style="font-weight: normal; margin-left: 0px;"><span style="font-weight: normal;"><span style="font-size: 10pt; font-weight: bold;"><font size="2" style="font-size:10pt;">書式</font></span></span></p>
+</td>
+<td style="border-top: Solid 1px #9b9b9b; border-right: Solid 1px #9b9b9b; border-bottom: Solid 1px #9b9b9b;" bgcolor="#DADADA">
+<p class="GreyColumnHeading" style="font-weight: normal; margin-left: 0px;"><span style="font-weight: normal;"><span style="font-size: 10pt; font-weight: bold;"><font size="2" style="font-size:10pt;">必須</font></span></span></p>
+</td>
+<td style="border-top: Solid 1px #9b9b9b; border-right: Solid 1px #9b9b9b; border-bottom: Solid 1px #9b9b9b;" bgcolor="#DADADA">
+<p class="GreyColumnHeading" style="font-weight: normal; margin-left: 0px;"><span style="font-weight: normal;"><span style="font-size: 10pt; font-weight: bold;"><font size="2" style="font-size:10pt;">有効値</font></span></span></p>
+</td>
+</tr>
+</table>
+</div>
+<div>
+<table class="ParameterTable" style="margin-left: 26pt;" cellspacing="0px" width="96%">
+<col style="width: 22%;" />
+<col style="width: 20%;" />
+<col style="width: 20%;" />
+<col style="width: 10%;" />
+<col style="width: 28%;" />
+<tr>
+<td style="border-left: Solid 1px #9b9b9b; border-right: Solid 1px #9b9b9b; border-bottom: Solid 1px #9b9b9b; vertical-align: top;">
+<p class="TableText" style="font-size: 10.0pt; line-height: 115%; mso-fareast-font-family: 'Times New Roman';"><span style="mso-ansi-language: EN-US; mso-fareast-language: EN-US; mso-bidi-language: AR-SA;">grant_type</span></p>
+</td>
+<td style="border-right: Solid 1px #9b9b9b; border-bottom: Solid 1px #9b9b9b; vertical-align: top;">
+<p class="TableText"><span style="font-size: 10.0pt; line-height: 115%; mso-fareast-font-family: 'Times New Roman'; mso-ansi-language: EN-US; mso-fareast-language: EN-US; mso-bidi-language: AR-SA;"><font size="2" style="font-size:10pt;">Authentication type</font></span></p>
+</td>
+<td style="border-right: Solid 1px #9b9b9b; border-bottom: Solid 1px #9b9b9b; vertical-align: top;">
+<p class="TableText"><span style="font-size: 10.0pt; line-height: 115%; mso-fareast-font-family: 'Times New Roman'; mso-ansi-language: EN-US; mso-fareast-language: EN-US; mso-bidi-language: AR-SA;"><font size="2" style="font-size:10pt;">String</font></span></p>
+</td>
+<td style="border-right: Solid 1px #9b9b9b; border-bottom: Solid 1px #9b9b9b; vertical-align: top;">
+<p class="TableText"><span style="font-size: 10.0pt; line-height: 115%; mso-fareast-font-family: 'Times New Roman'; mso-ansi-language: EN-US; mso-fareast-language: EN-US; mso-bidi-language: AR-SA;"><font size="2" style="font-size:10pt;">○</font></span></p>
+</td>
+<td style="border-right: Solid 1px #9b9b9b; border-bottom: Solid 1px #9b9b9b; vertical-align: top;">
+<p class="TableText">urn:ietf:params:oauth:grant-type:saml2-bearer</p>
+</td>
+</tr>
+</table>
+</div>
+<div>
+<table class="ParameterTable" style="margin-left: 26pt;" cellspacing="0px" width="96%">
+<col style="width: 22%;" />
+<col style="width: 20%;" />
+<col style="width: 20%;" />
+<col style="width: 10%;" />
+<col style="width: 28%;" />
+<tr>
+<td style="border-left: Solid 1px #9b9b9b; border-right: Solid 1px #9b9b9b; border-bottom: Solid 1px #9b9b9b; vertical-align: top;">
+<p class="TableText"><span style="font-size: 10.0pt; line-height: 115%; mso-fareast-font-family: 'Times New Roman'; mso-ansi-language: EN-US; mso-fareast-language: EN-US; mso-bidi-language: AR-SA;"><font size="2" style="font-size:10pt;">assertion</font></span></p>
+</td>
+<td style="border-right: Solid 1px #9b9b9b; border-bottom: Solid 1px #9b9b9b; vertical-align: top;">
+<p class="TableText"><span style="font-size: 10.0pt; line-height: 115%; mso-fareast-font-family: 'Times New Roman'; mso-ansi-language: EN-US; mso-fareast-language: EN-US; mso-bidi-language: AR-SA;"><font size="2" style="font-size:10pt;">Access token</font></span></p>
+</td>
+<td style="border-right: Solid 1px #9b9b9b; border-bottom: Solid 1px #9b9b9b; vertical-align: top;">
+<p class="TableText"><span style="font-size: 10.0pt; line-height: 115%; mso-fareast-font-family: 'Times New Roman'; mso-ansi-language: EN-US; mso-fareast-language: EN-US; mso-bidi-language: AR-SA;"><font size="2" style="font-size:10pt;">String</font></span></p>
+</td>
+<td style="border-right: Solid 1px #9b9b9b; border-bottom: Solid 1px #9b9b9b; vertical-align: top;">
+<p class="TableText"><span style="font-size: 10.0pt; line-height: 115%; mso-fareast-font-family: 'Times New Roman'; mso-ansi-language: EN-US; mso-fareast-language: EN-US; mso-bidi-language: AR-SA;"><font size="2" style="font-size:10pt;">○</font></span></p>
+</td>
+<td style="border-right: Solid 1px #9b9b9b; border-bottom: Solid 1px #9b9b9b; vertical-align: top;">
+<p class="TableText">V<span style="line-height: 115%; mso-ascii-theme-font: minor-latin; mso-fareast-font-family: 'ＭＳ 明朝'; mso-fareast-theme-font: minor-fareast; mso-hansi-theme-font: minor-latin; mso-bidi-font-family: 'Times New Roman'; mso-bidi-theme-font: minor-bidi; mso-ansi-language: EN-US; mso-fareast-language: JA; mso-bidi-language: AR-SA;">alid transformer cell token</span></p>
+</td>
+</tr>
+</table>
+</div>
+<div>
+<table class="ParameterTable" style="margin-left: 26pt;" cellspacing="0px" width="96%">
+<col style="width: 22%;" />
+<col style="width: 20%;" />
+<col style="width: 20%;" />
+<col style="width: 10%;" />
+<col style="width: 28%;" />
+<tr>
+<td style="border-left: Solid 1px #9b9b9b; border-right: Solid 1px #9b9b9b; border-bottom: Solid 1px #9b9b9b; vertical-align: top;">
+<p class="TableText"><span style="line-height: normal; orphans: 2; widows: 2; -webkit-text-size-adjust: auto; -webkit-text-stroke-width: 0px; background-color: #ffffff; display: inline ! important ; float: none;">dc_target</span></p>
+</td>
+<td style="border-right: Solid 1px #9b9b9b; border-bottom: Solid 1px #9b9b9b; vertical-align: top;">
+<p class="TableText"><span class="hps">Trans</span> cell token target</p>
+</td>
+<td style="border-right: Solid 1px #9b9b9b; border-bottom: Solid 1px #9b9b9b; vertical-align: top;">
+<p class="TableText">String</p>
+</td>
+<td style="border-right: Solid 1px #9b9b9b; border-bottom: Solid 1px #9b9b9b; vertical-align: top;">
+<p class="TableText"><span style="line-height: 115%; mso-fareast-font-family: 'Times New Roman'; mso-bidi-font-family: 'Times New Roman'; mso-ansi-language: EN-US; mso-fareast-language: EN-US; mso-bidi-language: AR-SA;">×</span></p>
+</td>
+<td style="border-right: Solid 1px #9b9b9b; border-bottom: Solid 1px #9b9b9b; vertical-align: top;">
+<p class="TableText" style="mso-bidi-language: AR-SA;">It becomes the trans cell token, when the cell URL is defined on the produced token.</p>
+</td>
+</tr>
+</table>
+</div>
+<div>
+<table class="ParameterTable" style="margin-left: 26pt;" cellspacing="0px" width="96%">
+<col style="width: 22%;" />
+<col style="width: 20%;" />
+<col style="width: 20%;" />
+<col style="width: 10%;" />
+<col style="width: 28%;" />
+<col style="width: 28%;" />
+<tr>
+<td style="border-left: Solid 1px #9b9b9b; border-right: Solid 1px #9b9b9b; border-bottom: Solid 1px #9b9b9b; vertical-align: top;">
+<p class="TableText"><span style="font-size: 10.0pt; line-height: 115%; mso-fareast-font-family: 'Times New Roman'; mso-ansi-language: EN-US; mso-fareast-language: EN-US; mso-bidi-language: AR-SA;"><font size="2" style="font-size:10pt;">client_id</font></span></p>
+</td>
+<td style="border-right: Solid 1px #9b9b9b; border-bottom: Solid 1px #9b9b9b; vertical-align: top;">
+<p class="TableText"><span style="font-size: 10.0pt; line-height: 115%; mso-fareast-font-family: 'Times New Roman'; mso-ansi-language: EN-US; mso-fareast-language: EN-US; mso-bidi-language: AR-SA;"><font size="2" style="font-size:10pt;">Application cell</font></span> <span style="font-size: 10.0pt; line-height: 115%; mso-fareast-font-family: 'Times New Roman'; mso-ansi-language: EN-US; mso-fareast-language: EN-US; mso-bidi-language: AR-SA;"><font size="2" style="font-size:10pt;">URL</font></span></p>
+</td>
+<td style="border-right: Solid 1px #9b9b9b; border-bottom: Solid 1px #9b9b9b; vertical-align: top;">
+<p class="TableText"><span style="font-size: 10.0pt; line-height: 115%; mso-fareast-font-family: 'Times New Roman'; mso-ansi-language: EN-US; mso-fareast-language: EN-US; mso-bidi-language: AR-SA;"><font size="2" style="font-size:10pt;">String</font></span></p>
+</td>
+<td style="border-right: Solid 1px #9b9b9b; border-bottom: Solid 1px #9b9b9b; vertical-align: top;">
+<p class="TableText" style="line-height: 115%; mso-fareast-font-family: 'Times New Roman'; mso-bidi-font-family: 'Times New Roman';"><span style="mso-ansi-language: EN-US; mso-fareast-language: EN-US; mso-bidi-language: AR-SA;">×</span></p>
+</td>
+<td style="border-right: Solid 1px #9b9b9b; border-bottom: Solid 1px #9b9b9b; vertical-align: top;">
+<p class="TableText">When you set the client_secret and App. cell URL of the schema authentication together, it becomes the schema authentication.</p>
+<p class="TableText">Same as the settings for authorization header will get higher priority when the schema authentication is set to the Authorization header.</p>
+</td>
+</tr>
+</table>
+</div>
+<div>
+<table class="ParameterTable" style="margin-left: 26pt;" cellspacing="0px" width="96%">
+<col style="width: 22%;" />
+<col style="width: 20%;" />
+<col style="width: 20%;" />
+<col style="width: 10%;" />
+<col style="width: 28%;" />
+<tr>
+<td style="border-left: Solid 1px #9b9b9b; border-right: Solid 1px #9b9b9b; border-bottom: Solid 1px #9b9b9b; vertical-align: top;">
+<p class="TableText"><span style="font-size: 10.0pt; line-height: 115%; mso-fareast-font-family: 'Times New Roman'; mso-ansi-language: EN-US; mso-fareast-language: EN-US; mso-bidi-language: AR-SA;"><font size="2" style="font-size:10pt;">client_secret</font></span></p>
+</td>
+<td style="border-right: Solid 1px #9b9b9b; border-bottom: Solid 1px #9b9b9b; vertical-align: top;">
+<p class="TableText" style="font-size: 10.0pt; line-height: 115%; mso-fareast-font-family: 'Times New Roman';"><span style="mso-ansi-language: EN-US; mso-fareast-language: EN-US; mso-bidi-language: AR-SA;">Token that is produced from Application cell</span></p>
+</td>
+<td style="border-right: Solid 1px #9b9b9b; border-bottom: Solid 1px #9b9b9b; vertical-align: top;">
+<p class="TableText"><span style="font-size: 10.0pt; line-height: 115%; mso-fareast-font-family: 'Times New Roman'; mso-ansi-language: EN-US; mso-fareast-language: EN-US; mso-bidi-language: AR-SA;"><font size="2" style="font-size:10pt;">String</font></span></p>
+</td>
+<td style="border-right: Solid 1px #9b9b9b; border-bottom: Solid 1px #9b9b9b; vertical-align: top;">
+<p class="TableText"><span style="font-size: 10.0pt; line-height: 115%; mso-fareast-font-family: 'Times New Roman'; mso-ansi-language: EN-US; mso-fareast-language: EN-US; mso-bidi-language: AR-SA;"><font size="2" style="font-size:10pt;">×</font></span></p>
+</td>
+<td style="border-right: Solid 1px #9b9b9b; border-bottom: Solid 1px #9b9b9b; vertical-align: top;">
+<p class="TableText">It becomes the schema authentication, when the value of the produced token from the schema authentication and client_id are set together.</p>
+<p class="TableText">Same as the settings for authorization header will get higher priority when the schema authentication is set to the Authorization header.</p>
+</td>
+</tr>
+</table>
+</div>
+<div>
+<table class="ParameterTable" style="margin-left: 26pt;" cellspacing="0px" width="96%">
+<col style="width: 22%;" />
+<col style="width: 20%;" />
+<col style="width: 20%;" />
+<col style="width: 10%;" />
+<col style="width: 28%;" />
+<tr>
+<td style="border-left: Solid 1px #9b9b9b; border-right: Solid 1px #9b9b9b; border-bottom: Solid 1px #9b9b9b; vertical-align: top;">
+<p class="TableText"><span style="font-size: 10.0pt; line-height: 115%; mso-fareast-font-family: 'Times New Roman'; mso-ansi-language: EN-US; mso-fareast-language: EN-US; mso-bidi-language: AR-SA;"><font size="2" style="font-size:10pt;">dc_cookie</font></span></p>
+</td>
+<td style="border-right: Solid 1px #9b9b9b; border-bottom: Solid 1px #9b9b9b; vertical-align: top;">
+<p class="TableText"><span style="font-size: 10.0pt; line-height: 115%; mso-fareast-font-family: 'Times New Roman'; mso-ansi-language: EN-US; mso-fareast-language: EN-US; mso-bidi-language: AR-SA;"><font size="2" style="font-size:10pt;">The authentication cookie issued options</font></span><span class="Apple-converted-space">&#160;</span><span style="font-size: 10.0pt; line-height: 115%; mso-fareast-font-family: 'Times New Roman'; mso-ansi-language: EN-US; mso-fareast-language: EN-US; mso-bidi-language: AR-SA;"><font size="2" style="font-size:10pt;">to issue the authentication cookie, if specified,</font></span><span class="Apple-converted-space">&#160;</span><span style="font-size: 10.0pt; line-height: 115%; mso-fareast-font-family: 'Times New Roman'; mso-ansi-language: EN-US; mso-fareast-language: EN-US; mso-bidi-language: AR-SA;"><font size="2" style="font-size:10pt;">if the dc_target is specified, it is ignored specification of this parameter</font></span></p>
+</td>
+<td style="border-right: Solid 1px #9b9b9b; border-bottom: Solid 1px #9b9b9b; vertical-align: top;">
+<p class="TableText"><span style="font-size: 10.0pt; line-height: 115%; mso-fareast-font-family: 'Times New Roman'; mso-ansi-language: EN-US; mso-fareast-language: EN-US; mso-bidi-language: AR-SA;"><font size="2" style="font-size:10pt;">String</font></span></p>
+</td>
+<td style="border-right: Solid 1px #9b9b9b; border-bottom: Solid 1px #9b9b9b; vertical-align: top;">
+<p class="TableText"><span style="font-size: 10.0pt; line-height: 115%; mso-fareast-font-family: 'Times New Roman'; mso-ansi-language: EN-US; mso-fareast-language: EN-US; mso-bidi-language: AR-SA;"><font size="2" style="font-size:10pt;">×</font></span></p>
+</td>
+<td style="border-right: Solid 1px #9b9b9b; border-bottom: Solid 1px #9b9b9b; vertical-align: top;">
+<p class="TableText">Only true is valid</p>
+</td>
+</tr>
+</table>
+</div>
+<p class="Paragraph">&#160;</p>
+<table class="CodeTable" style="margin-left: 26pt;" cellspacing="0px" width="96%">
+<col style="width: 100%;" />
+<tr>
+<td>
+<p class="Code">grant_type=urn:ietf:params:oauth:grant-type:saml2-\</p>
+<p class="Code">bearer&amp;assertion=WjzDmvJSLvM9qVuJL1xxP6hSxt64HijoIea0P5R2CVloXJ2HEvEILl7UOtEtjSDdjlvyx9wros\</p>
+<p class="Code">PBhDRU97Qnn6EQIQ3MwaqtIx7HjuX36_ZBC6qxcgscCDmdtGb4nHgo</p>
+</td>
+</tr>
+</table>
+<h4>Refresh Token Authentication Request</h4>
+<div>
+<table style="margin-left: 26pt;" cellspacing="0" width="96%">
+<col style="width: 22%;" />
+<col style="width: 20%;" />
+<col style="width: 20%;" />
+<col style="width: 10%;" />
+<col style="width: 28%;" />
+<tr>
+<td style="border: Solid 1px #9b9b9b;" bgcolor="#DADADA">
+<p class="GreyColumnHeading" style="font-weight: normal; margin-left: 0px;"><span style="font-weight: normal;"><span style="font-weight: bold; font-size: 10pt;"><font size="2" style="font-size:10pt;">項目名</font></span></span></p>
+</td>
+<td style="border-top: Solid 1px #9b9b9b; border-right: Solid 1px #9b9b9b; border-bottom: Solid 1px #9b9b9b;" bgcolor="#DADADA">
+<p class="GreyColumnHeading" style="font-weight: normal; margin-left: 0px;"><span style="font-weight: normal;"><span style="font-weight: bold; font-size: 10pt;"><font size="2" style="font-size:10pt;">概要</font></span></span></p>
+</td>
+<td style="border-top: Solid 1px #9b9b9b; border-right: Solid 1px #9b9b9b; border-bottom: Solid 1px #9b9b9b;" bgcolor="#DADADA">
+<p class="GreyColumnHeading" style="font-weight: normal; margin-left: 0px;"><span style="font-weight: normal;"><span style="font-size: 10pt; font-weight: bold;"><font size="2" style="font-size:10pt;">書式</font></span></span></p>
+</td>
+<td style="border-top: Solid 1px #9b9b9b; border-right: Solid 1px #9b9b9b; border-bottom: Solid 1px #9b9b9b;" bgcolor="#DADADA">
+<p class="GreyColumnHeading" style="font-weight: normal; margin-left: 0px;"><span style="font-weight: normal;"><span style="font-size: 10pt; font-weight: bold;"><font size="2" style="font-size:10pt;">必須</font></span></span></p>
+</td>
+<td style="border-top: Solid 1px #9b9b9b; border-right: Solid 1px #9b9b9b; border-bottom: Solid 1px #9b9b9b;" bgcolor="#DADADA">
+<p class="GreyColumnHeading" style="font-weight: normal; margin-left: 0px;"><span style="font-weight: normal;"><span style="font-size: 10pt; font-weight: bold;"><font size="2" style="font-size:10pt;">有効値</font></span></span></p>
+</td>
+</tr>
+</table>
+</div>
+<div>
+<table class="ParameterTable" style="margin-left: 26pt;" cellspacing="0px" width="96%">
+<col style="width: 22%;" />
+<col style="width: 20%;" />
+<col style="width: 20%;" />
+<col style="width: 10%;" />
+<col style="width: 28%;" />
+<tr>
+<td style="border-left: Solid 1px #9b9b9b; border-right: Solid 1px #9b9b9b; border-bottom: Solid 1px #9b9b9b; vertical-align: top;">
+<p class="TableText">grant_type</p>
+</td>
+<td style="border-right: Solid 1px #9b9b9b; border-bottom: Solid 1px #9b9b9b; vertical-align: top;">
+<p class="TableText">Authentication type</p>
+</td>
+<td style="border-right: Solid 1px #9b9b9b; border-bottom: Solid 1px #9b9b9b; vertical-align: top;">
+<p class="TableText">String</p>
+</td>
+<td style="border-right: Solid 1px #9b9b9b; border-bottom: Solid 1px #9b9b9b; vertical-align: top;">
+<p class="TableText">○</p>
+</td>
+<td style="border-right: Solid 1px #9b9b9b; border-bottom: Solid 1px #9b9b9b; vertical-align: top;">
+<p class="TableText">refresh_token</p>
+</td>
+</tr>
+</table>
+</div>
+<div>
+<table style="margin-left: 26pt;" cellspacing="0" width="96%">
+<col style="width: 22%;" />
+<col style="width: 20%;" />
+<col style="width: 20%;" />
+<col style="width: 10%;" />
+<col style="width: 28%;" />
+<tr>
+<td style="border-left: Solid 1px #9b9b9b; border-right: Solid 1px #9b9b9b; border-bottom: Solid 1px #9b9b9b; vertical-align: top;">
+<p class="TableText"><span style="font-size: 10.0pt; line-height: 115%; mso-fareast-font-family: 'Times New Roman'; mso-ansi-language: EN-US; mso-fareast-language: EN-US; mso-bidi-language: AR-SA;"><font size="2" style="font-size:10pt;">refresh_token</font></span></p>
+</td>
+<td style="border-right: Solid 1px #9b9b9b; border-bottom: Solid 1px #9b9b9b; vertical-align: top;">
+<p class="TableText"><span style="font-size: 10.0pt; line-height: 115%; mso-fareast-font-family: 'Times New Roman'; mso-ansi-language: EN-US; mso-fareast-language: EN-US; mso-bidi-language: AR-SA;"><font size="2" style="font-size:10pt;">Refresh token name</font></span></p>
+</td>
+<td style="border-right: Solid 1px #9b9b9b; border-bottom: Solid 1px #9b9b9b; vertical-align: top;">
+<p class="TableText"><span style="font-size: 10.0pt; line-height: 115%; mso-fareast-font-family: 'Times New Roman'; mso-ansi-language: EN-US; mso-fareast-language: EN-US; mso-bidi-language: AR-SA;"><font size="2" style="font-size:10pt;">String</font></span></p>
+</td>
+<td style="border-right: Solid 1px #9b9b9b; border-bottom: Solid 1px #9b9b9b; vertical-align: top;">
+<p class="TableText"><span style="font-size: 10.0pt; line-height: 115%; mso-fareast-font-family: 'Times New Roman'; mso-ansi-language: EN-US; mso-fareast-language: EN-US; mso-bidi-language: AR-SA;"><font size="2" style="font-size:10pt;">○</font></span></p>
+</td>
+<td style="border-right: Solid 1px #9b9b9b; border-bottom: Solid 1px #9b9b9b; vertical-align: top;">
+<p class="TableText"><span style="font-size: 10.0pt; line-height: 115%; mso-fareast-font-family: 'Times New Roman'; mso-ansi-language: EN-US; mso-fareast-language: EN-US; mso-bidi-language: AR-SA;"><font size="2" style="font-size:10pt;">Valid refresh token</font></span></p>
+</td>
+</tr>
+</table>
+</div>
+<div>
+<table class="ParameterTable" style="margin-left: 26pt;" cellspacing="0px" width="96%">
+<col style="width: 22%;" />
+<col style="width: 20%;" />
+<col style="width: 20%;" />
+<col style="width: 10%;" />
+<col style="width: 28%;" />
+<tr>
+<td style="border-left: Solid 1px #9b9b9b; border-right: Solid 1px #9b9b9b; border-bottom: Solid 1px #9b9b9b; vertical-align: top;">
+<p class="TableText"><span style="line-height: normal; orphans: 2; widows: 2; -webkit-text-size-adjust: auto; -webkit-text-stroke-width: 0px; background-color: #ffffff; display: inline ! important ; float: none;">dc_target</span></p>
+</td>
+<td style="border-right: Solid 1px #9b9b9b; border-bottom: Solid 1px #9b9b9b; vertical-align: top;">
+<p class="TableText"><span class="hps">Trans</span> cell token target</p>
+</td>
+<td style="border-right: Solid 1px #9b9b9b; border-bottom: Solid 1px #9b9b9b; vertical-align: top;">
+<p class="TableText">String</p>
+</td>
+<td style="border-right: Solid 1px #9b9b9b; border-bottom: Solid 1px #9b9b9b; vertical-align: top;">
+<p class="TableText"><span style="line-height: 115%; mso-fareast-font-family: 'Times New Roman'; mso-bidi-font-family: 'Times New Roman'; mso-ansi-language: EN-US; mso-fareast-language: EN-US; mso-bidi-language: AR-SA;">×</span></p>
+</td>
+<td style="border-right: Solid 1px #9b9b9b; border-bottom: Solid 1px #9b9b9b; vertical-align: top;">
+<p class="TableText" style="mso-bidi-language: AR-SA;">It becomes the trans cell token, when the cell URL is defined on the produced token.</p>
+</td>
+</tr>
+</table>
+</div>
+<div>
+<table class="ParameterTable" style="margin-left: 26pt;" cellspacing="0px" width="96%">
+<col style="width: 22%;" />
+<col style="width: 20%;" />
+<col style="width: 20%;" />
+<col style="width: 10%;" />
+<col style="width: 28%;" />
+<tr>
+<td style="border-left: Solid 1px #9b9b9b; border-right: Solid 1px #9b9b9b; border-bottom: Solid 1px #9b9b9b; vertical-align: top;">
+<p class="TableText"><span style="font-size: 10.0pt; line-height: 115%; mso-fareast-font-family: 'Times New Roman'; mso-ansi-language: EN-US; mso-fareast-language: EN-US; mso-bidi-language: AR-SA;"><font size="2" style="font-size:10pt;">dc_owner</font></span></p>
+</td>
+<td style="border-right: Solid 1px #9b9b9b; border-bottom: Solid 1px #9b9b9b; vertical-align: top;">
+<p class="TableText"><span style="font-size: 10.0pt; line-height: 115%; mso-fareast-font-family: 'Times New Roman'; mso-ansi-language: EN-US; mso-fareast-language: EN-US; mso-bidi-language: AR-SA;"><font size="2" style="font-size:10pt;">ULUUT Advancement execution query</font></span></p>
+</td>
+<td style="border-right: Solid 1px #9b9b9b; border-bottom: Solid 1px #9b9b9b; vertical-align: top;">
+<p class="TableText"><span style="font-size: 10.0pt; line-height: 115%; mso-fareast-font-family: 'Times New Roman'; mso-ansi-language: EN-US; mso-fareast-language: EN-US; mso-bidi-language: AR-SA;"><font size="2" style="font-size:10pt;">String</font></span></p>
+</td>
+<td style="border-right: Solid 1px #9b9b9b; border-bottom: Solid 1px #9b9b9b; vertical-align: top;">
+<p class="TableText"><span style="font-size: 10.0pt; line-height: 115%; mso-fareast-font-family: 'Times New Roman'; mso-ansi-language: EN-US; mso-fareast-language: EN-US; mso-bidi-language: AR-SA;"><font size="2" style="font-size:10pt;">×</font></span></p>
+</td>
+<td style="border-right: Solid 1px #9b9b9b; border-bottom: Solid 1px #9b9b9b; vertical-align: top;">
+<p class="TableText">Only true is valid</p>
+</td>
+</tr>
+</table>
+</div>
+<div>
+<table class="ParameterTable" style="margin-left: 26pt;" cellspacing="0px" width="96%">
+<col style="width: 22%;" />
+<col style="width: 20%;" />
+<col style="width: 20%;" />
+<col style="width: 10%;" />
+<col style="width: 28%;" />
+<tr>
+<td style="border-left: Solid 1px #9b9b9b; border-right: Solid 1px #9b9b9b; border-bottom: Solid 1px #9b9b9b; vertical-align: top;">
+<p class="TableText"><span style="font-size: 10.0pt; line-height: 115%; mso-fareast-font-family: 'Times New Roman'; mso-ansi-language: EN-US; mso-fareast-language: EN-US; mso-bidi-language: AR-SA;"><font size="2" style="font-size:10pt;">dc_cookie</font></span></p>
+</td>
+<td style="border-right: Solid 1px #9b9b9b; border-bottom: Solid 1px #9b9b9b; vertical-align: top;">
+<p class="TableText"><span style="font-size: 10.0pt; line-height: 115%; mso-fareast-font-family: 'Times New Roman'; mso-ansi-language: EN-US; mso-fareast-language: EN-US; mso-bidi-language: AR-SA;"><font size="2" style="font-size:10pt;">The authentication cookie issued options</font></span><span class="Apple-converted-space">&#160;</span><span style="font-size: 10.0pt; line-height: 115%; mso-fareast-font-family: 'Times New Roman'; mso-ansi-language: EN-US; mso-fareast-language: EN-US; mso-bidi-language: AR-SA;"><font size="2" style="font-size:10pt;">to issue the authentication cookie, if specified,</font></span><span class="Apple-converted-space">&#160;</span><span style="font-size: 10.0pt; line-height: 115%; mso-fareast-font-family: 'Times New Roman'; mso-ansi-language: EN-US; mso-fareast-language: EN-US; mso-bidi-language: AR-SA;"><font size="2" style="font-size:10pt;">if the dc_target is specified, it is ignored specification of this parameter</font></span></p>
+</td>
+<td style="border-right: Solid 1px #9b9b9b; border-bottom: Solid 1px #9b9b9b; vertical-align: top;">
+<p class="TableText"><span style="font-size: 10.0pt; line-height: 115%; mso-fareast-font-family: 'Times New Roman'; mso-ansi-language: EN-US; mso-fareast-language: EN-US; mso-bidi-language: AR-SA;"><font size="2" style="font-size:10pt;">String</font></span></p>
+</td>
+<td style="border-right: Solid 1px #9b9b9b; border-bottom: Solid 1px #9b9b9b; vertical-align: top;">
+<p class="TableText"><span style="font-size: 10.0pt; line-height: 115%; mso-fareast-font-family: 'Times New Roman'; mso-ansi-language: EN-US; mso-fareast-language: EN-US; mso-bidi-language: AR-SA;"><font size="2" style="font-size:10pt;">×</font></span></p>
+</td>
+<td style="border-right: Solid 1px #9b9b9b; border-bottom: Solid 1px #9b9b9b; vertical-align: top;">
+<p class="TableText">Only true is valid</p>
+</td>
+</tr>
+</table>
+</div>
+<p class="Paragraph">&#160;</p>
+<table class="CodeTable" style="margin-left: 26pt;" cellspacing="0px" width="96%">
+<col style="width: 100%;" />
+<tr>
+<td>
+<p class="Code">grant_type=refresh_token&amp;refresh_token=RA~wywd2JVR4mMP-k-mmHG_B5iV_I7zAxxnpXtLscFmQq72YdecSCGDCNTUJokl4TOiDmgMLAOhviGo57--0J0xrY3mSfKQRBQYy8y641SQhyk6e_XS7K6FsSCYUTABc8T7xHPhZVW3On6FSsJUQ1YTfA</p>
+</td>
+</tr>
+</table>
+<h2><span style="font-weight: bold;">レスポンス</span></h2>
+<h3><span style="font-weight: bold;">ステータスコード</span></h3>
+<p class="Paragraph">200</p>
+<h3><span style="font-weight: bold;">レスポンスヘッダ</span></h3>
+<div>
+<table class="ParameterTable" style="margin-left: 26pt;" cellspacing="0px" width="96%">
+<col style="width: 23.686%;" />
+<col style="width: 30.236%;" />
+<col style="width: 46.078%;" />
+<tr>
+<th style="border-top: Solid 1px #c0c0c0; border-left: solid 1px #9b9b9b; border-right: Solid 1px #9b9b9b; border-bottom: Solid 1px #9b9b9b;" bgcolor="#DADADA">
+<p class="GreyColumnHeading" style="font-weight: normal; margin-left: 0px;"><span><font style="font-weight: normal;">Item name</font></span></p>
+</th>
+<th style="border-top: Solid 1px #c0c0c0; border-right: Solid 1px #9b9b9b; border-bottom: Solid 1px #9b9b9b;" bgcolor="#DADADA">
+<p class="GreyColumnHeading" style="font-weight: normal; margin-left: 0px;"><span><font style="font-weight: normal;">Summary</font></span></p>
+</th>
+<th style="border-top: Solid 1px #c0c0c0; border-right: Solid 1px #9b9b9b; border-bottom: Solid 1px #9b9b9b;" bgcolor="#DADADA">
+<p class="GreyColumnHeading" style="font-weight: normal; margin-left: 0px;"><span><font style="font-weight: normal;">Remarks</font></span></p>
+</th>
+</tr>
+</table>
+</div>
+<div>
+<table class="ParameterTable" style="margin-left: 26pt;" cellspacing="0px" width="96%">
+<col style="width: 23.686%;" />
+<col style="width: 30.236%;" />
+<col style="width: 46.078%;" />
+<tr>
+<td style="border-left: Solid 1px #9b9b9b; border-right: Solid 1px #9b9b9b; border-bottom: Solid 1px #9b9b9b; vertical-align: top;">
+<p class="TableText">Content-Type</p>
+</td>
+<td style="border-right: Solid 1px #9b9b9b; border-bottom: Solid 1px #9b9b9b; vertical-align: top;">
+<p class="TableText" style="font-family: 'Courier New', monospace;">application/json</p>
+</td>
+<td style="border-right: Solid 1px #9b9b9b; border-bottom: Solid 1px #9b9b9b; vertical-align: top;">
+<p class="TableText">&#160;</p>
+</td>
+</tr>
+</table>
+</div>
+<h3><span style="font-weight: bold;">レスポンスボディ</span></h3>
+<div>
+<table class="TemplateTable" style="margin-left: 26pt;" cellspacing="0" width="96%" bgcolor="#DADADA">
+<col style="width: 20%;" />
+<col style="width: 30%;" />
+<col style="width: 50%;" />
+<tr>
+<td style="border: Solid 1px #9b9b9b; padding-left: 0px; padding-top: 0px; padding-right: 0px; padding-bottom: 0px;">
+<p class="GreyColumnHeading" style="font-weight: normal; margin-left: 0px;"><span style="font-weight: normal;"><span style="font-weight: bold; font-size: 10pt;"><font size="2" style="font-size:10pt;">項目名</font></span></span></p>
+</td>
+<td style="border-top: Solid 1px #9b9b9b; border-right: Solid 1px #9b9b9b; border-bottom: Solid 1px #9b9b9b; padding-left: 0px; padding-top: 0px; padding-right: 0px; padding-bottom: 0px;">
+<p class="GreyColumnHeading" style="font-weight: normal; margin-left: 0px;"><span style="font-weight: normal;"><span style="font-weight: bold; font-size: 10pt;"><font size="2" style="font-size:10pt;">概要</font></span></span></p>
+</td>
+<td style="border-top: Solid 1px #9b9b9b; border-right: Solid 1px #9b9b9b; border-bottom: Solid 1px #9b9b9b; padding-left: 0px; padding-top: 0px; padding-right: 0px; padding-bottom: 0px;">
+<p class="GreyColumnHeading" style="font-weight: normal; margin-left: 0px;"><span style="font-weight: normal;">備考</span></p>
+</td>
+</tr>
+</table>
+</div>
+<div>
+<table class="ParameterTable" style="margin-left: 26pt;" cellspacing="0px" width="96%">
+<col style="width: 20%;" />
+<col style="width: 30%;" />
+<col style="width: 50%;" />
+<tr>
+<td style="border-left: Solid 1px #9b9b9b; border-right: Solid 1px #9b9b9b; border-bottom: Solid 1px #9b9b9b; vertical-align: top;">
+<p class="TableText">token_type</p>
+</td>
+<td style="border-right: Solid 1px #9b9b9b; border-bottom: Solid 1px #9b9b9b; vertical-align: top;">
+<p class="TableText">Bearer</p>
+</td>
+<td style="border-right: Solid 1px #9b9b9b; border-bottom: Solid 1px #9b9b9b; vertical-align: top;">
+<p class="TableText">&#160;</p>
+</td>
+</tr>
+</table>
+</div>
+<div>
+<table class="ParameterTable" style="margin-left: 26pt;" cellspacing="0px" width="96%">
+<col style="width: 20%;" />
+<col style="width: 30%;" />
+<col style="width: 50%;" />
+<tr>
+<td style="border-left: Solid 1px #9b9b9b; border-right: Solid 1px #9b9b9b; border-bottom: Solid 1px #9b9b9b; vertical-align: top;">
+<p class="TableText">expires_in</p>
+</td>
+<td style="border-right: Solid 1px #9b9b9b; border-bottom: Solid 1px #9b9b9b; vertical-align: top;">
+<p class="TableText">Expiration date of the access token</p>
+</td>
+<td style="border-right: Solid 1px #9b9b9b; border-bottom: Solid 1px #9b9b9b; vertical-align: top;">
+<p class="TableText">1 hour (3600 seconds)</p>
+</td>
+</tr>
+</table>
+</div>
+<div>
+<table class="ParameterTable" style="margin-left: 26pt;" cellspacing="0px" width="96%">
+<col style="width: 20%;" />
+<col style="width: 30%;" />
+<col style="width: 50%;" />
+<tr>
+<td style="border-left: Solid 1px #9b9b9b; border-right: Solid 1px #9b9b9b; border-bottom: Solid 1px #9b9b9b; vertical-align: top;">
+<p class="TableText">refresh_token</p>
+</td>
+<td style="border-right: Solid 1px #9b9b9b; border-bottom: Solid 1px #9b9b9b; vertical-align: top;">
+<p class="TableText">Refresh token</p>
+</td>
+<td style="border-right: Solid 1px #9b9b9b; border-bottom: Solid 1px #9b9b9b; vertical-align: top;">
+<p class="TableText">If you have set at the time of the request, the <span style="font-family: 'Courier New', monospace;">dc_owner</span> is returned</p>
+</td>
+</tr>
+</table>
+</div>
+<div>
+<table style="margin-left: 26pt;" cellspacing="0" width="96%">
+<col style="width: 20%;" />
+<col style="width: 30%;" />
+<col style="width: 50%;" />
+<tr>
+<td style="border-left: Solid 1px #9b9b9b; border-right: Solid 1px #9b9b9b; border-bottom: Solid 1px #9b9b9b; vertical-align: top;">
+<p class="TableText">refresh_token_expires_in</p>
+</td>
+<td style="border-right: Solid 1px #9b9b9b; border-bottom: Solid 1px #9b9b9b; vertical-align: top;">
+<p class="TableText">Expiration of the refresh token</p>
+</td>
+<td style="border-right: Solid 1px #9b9b9b; border-bottom: Solid 1px #9b9b9b; vertical-align: top;">
+<p class="TableText">(86400 seconds) for 24 hours</p>
+<p class="TableText">if you set at the time of request, <span style="font-family: 'Courier New', monospace;">dc_owner</span>, is not returned</p>
+</td>
+</tr>
+</table>
+</div>
+<div>
+<table class="ParameterTable" style="margin-left: 26pt;" cellspacing="0px" width="96%">
+<col style="width: 20%;" />
+<col style="width: 30%;" />
+<col style="width: 50%;" />
+<tr>
+<td style="border-left: Solid 1px #9b9b9b; border-right: Solid 1px #9b9b9b; border-bottom: Solid 1px #9b9b9b; vertical-align: top;">
+<p class="TableText">access_token</p>
+</td>
+<td style="border-right: Solid 1px #9b9b9b; border-bottom: Solid 1px #9b9b9b; vertical-align: top;">
+<p class="TableText">Access token</p>
+</td>
+<td style="border-right: Solid 1px #9b9b9b; border-bottom: Solid 1px #9b9b9b; vertical-align: top;">
+<p class="TableText">&#160;</p>
+</td>
+</tr>
+</table>
+</div>
+<div>
+<table class="ParameterTable" style="margin-left: 26pt;" cellspacing="0px" width="96%">
+<col style="width: 20%;" />
+<col style="width: 30%;" />
+<col style="width: 50%;" />
+<tr>
+<td style="border-left: Solid 1px #9b9b9b; border-right: Solid 1px #9b9b9b; border-bottom: Solid 1px #9b9b9b; vertical-align: top;">
+<p class="TableText">dc_cookie_peer</p>
+</td>
+<td style="border-right: Solid 1px #9b9b9b; border-bottom: Solid 1px #9b9b9b; vertical-align: top;">
+<p class="TableText">Authentication cookie value</p>
+</td>
+<td style="border-right: Solid 1px #9b9b9b; border-bottom: Solid 1px #9b9b9b; vertical-align: top;">
+<p class="TableText">Authentication value specified during cookie authentication</p>
+<p class="TableText">※ It returns, only if the cookie issue options is set at the time of request</p>
+</td>
+</tr>
+</table>
+</div>
+<h3><span style="font-weight: bold; font-size: 10pt;"><font size="2" style="font-size:10pt;">エラーメッセージ一覧</font></span></h3>
+<p class="Paragraph">Refer to the <a href="../../../../Appendix/ErrorMessages.htm">Error Messages</a>.</p>
+<div>
+<table style="margin-left: 26pt;" cellspacing="0" width="96%" bgcolor="#DADADA">
+<col style="width: 25%;" />
+<col style="width: 25%;" />
+<col style="width: 25%;" />
+<col style="width: 25%;" />
+<tr>
+<th style="border: Solid 1px #9b9b9b;">
+<p class="GreyColumnHeading" style="font-weight: normal; margin-left: 0px;"><span style="font-weight: normal;"><span style="font-size: 10pt; font-weight: bold;"><font size="2" style="font-size:10pt;">コード</font></span></span></p>
+</th>
+<th style="border-top: Solid 1px #9b9b9b; border-right: Solid 1px #9b9b9b; border-bottom: Solid 1px #9b9b9b;">
+<p class="GreyColumnHeading" style="font-weight: normal; margin-left: 0px;"><span style="font-weight: normal;">メッセージ</span></p>
+</th>
+<th style="border-top: Solid 1px #9b9b9b; border-right: Solid 1px #9b9b9b; border-bottom: Solid 1px #9b9b9b;">
+<p class="GreyColumnHeading" style="font-weight: normal; margin-left: 0px;"><span style="font-weight: normal;"><span style="font-weight: bold; font-size: 10pt;"><font size="2" style="font-size:10pt;">概要</font></span></span></p>
+</th>
+<th style="border-top: Solid 1px #9b9b9b; border-right: Solid 1px #9b9b9b; border-bottom: Solid 1px #9b9b9b;">
+<p class="GreyColumnHeading" style="font-weight: normal; margin-left: 0px;"><span style="font-weight: normal;">備考</span></p>
+</th>
+</tr>
+</table>
+</div>
+<div>
+<table class="ParameterTable" style="margin-left: 26pt;" cellspacing="0px" width="96%">
+<col style="width: 25%;" />
+<col style="width: 25%;" />
+<col style="width: 25%;" />
+<col style="width: 25%;" />
+<tr>
+<td style="border-left: Solid 1px #9b9b9b; border-right: Solid 1px #9b9b9b; border-bottom: Solid 1px #9b9b9b; vertical-align: top;">
+<p class="TableText">400</p>
+</td>
+<td style="border-right: Solid 1px #9b9b9b; border-bottom: Solid 1px #9b9b9b; vertical-align: top;">
+<p class="TableText">Bad Request</p>
+</td>
+<td style="border-right: Solid 1px #9b9b9b; border-bottom: Solid 1px #9b9b9b; vertical-align: top;">
+<p class="TableText"><span class="hps">Format</span> <span id="result_box" class="" lang="en" xml:lang="en"></span><span class="hps">of the request</span> <span id="result_box0" class="" lang="en" xml:lang="en"></span><span class="hps">header</span> <span id="result_box1" class="" lang="en" xml:lang="en"></span><span class="hps">is invalid</span> <span id="result_box2" class="" lang="en" xml:lang="en"><br /></span> <span id="result_box3" class="hps" lang="en" xml:lang="en">F</span><span class="hps">ormat of</span> <span id="result_box4" class="" lang="en" xml:lang="en"></span><span class="hps">the request body</span> <span id="result_box5" class="" lang="en" xml:lang="en"></span><span class="hps">is invalid</span></p>
+</td>
+<td style="border-right: Solid 1px #9b9b9b; border-bottom: Solid 1px #9b9b9b; vertical-align: top;">
+<p class="TableText">&#160;</p>
+</td>
+</tr>
+</table>
+</div>
+<div>
+<table class="ParameterTable" style="margin-left: 26pt;" cellspacing="0px" width="96%">
+<col style="width: 25%;" />
+<col style="width: 25%;" />
+<col style="width: 25%;" />
+<col style="width: 25%;" />
+<tr>
+<td style="border-left: Solid 1px #9b9b9b; border-right: Solid 1px #9b9b9b; border-bottom: Solid 1px #9b9b9b; vertical-align: top;">
+<p class="TableText">401</p>
+</td>
+<td style="border-right: Solid 1px #9b9b9b; border-bottom: Solid 1px #9b9b9b; vertical-align: top;">
+<p class="TableText">Unauthorized</p>
+</td>
+<td style="border-right: Solid 1px #9b9b9b; border-bottom: Solid 1px #9b9b9b; vertical-align: top;">
+<p class="TableText">Authentication token is invalid</p>
+</td>
+<td style="border-right: Solid 1px #9b9b9b; border-bottom: Solid 1px #9b9b9b; vertical-align: top;">
+<p class="TableText">&#160;</p>
+</td>
+</tr>
+</table>
+</div>
+<div>
+<table class="ParameterTable" style="margin-left: 26pt;" cellspacing="0px" width="96%">
+<col style="width: 25%;" />
+<col style="width: 25%;" />
+<col style="width: 25%;" />
+<col style="width: 25%;" />
+<tr>
+<td style="border-left: Solid 1px #9b9b9b; border-right: Solid 1px #9b9b9b; border-bottom: Solid 1px #9b9b9b; vertical-align: top;">
+<p class="TableText">404</p>
+</td>
+<td style="border-right: Solid 1px #9b9b9b; border-bottom: Solid 1px #9b9b9b; vertical-align: top;">
+<p class="TableText">Not Found</p>
+</td>
+<td style="border-right: Solid 1px #9b9b9b; border-bottom: Solid 1px #9b9b9b; vertical-align: top;">
+<p class="TableText">Specifies the resource that does not exist</p>
+</td>
+<td style="border-right: Solid 1px #9b9b9b; border-bottom: Solid 1px #9b9b9b; vertical-align: top;">
+<p class="TableText">&#160;</p>
+</td>
+</tr>
+</table>
+</div>
+<div>
+<table class="ParameterTable" style="margin-left: 26pt;" cellspacing="0px" width="96%">
+<col style="width: 25%;" />
+<col style="width: 25%;" />
+<col style="width: 25%;" />
+<col style="width: 25%;" />
+<tr>
+<td style="border-left: Solid 1px #9b9b9b; border-right: Solid 1px #9b9b9b; border-bottom: Solid 1px #9b9b9b; vertical-align: top;">
+<p class="TableText">405</p>
+</td>
+<td style="border-right: Solid 1px #9b9b9b; border-bottom: Solid 1px #9b9b9b; vertical-align: top;">
+<p class="TableText">Method Not Allowed</p>
+</td>
+<td style="border-right: Solid 1px #9b9b9b; border-bottom: Solid 1px #9b9b9b; vertical-align: top;">
+<p class="TableText">Specifies that the request method is not allowed</p>
+</td>
+<td style="border-right: Solid 1px #9b9b9b; border-bottom: Solid 1px #9b9b9b; vertical-align: top;">
+<p class="TableText">&#160;</p>
+</td>
+</tr>
+</table>
+</div>
+<h3><span style="font-weight: bold;">レスポンスサンプル</span></h3>
+<table class="CodeTable" style="margin-left: 26pt;" cellspacing="0px" width="96%">
+<col style="width: 100%;" />
+<tr>
+<td>
+<pre class="prettyprint">
+<br />{<br />  "dc_cookie_peer":"a5fa1363-4ded-462d-be19-d0b4b17b924a",<br />  "token_type":"Bearer",<br />  "expires_in":3600,<br />  "refresh_token":"RA~wywd2JVR4mMP-k-mmHG_B5iV_I7zAxxnpXtLscFmQq72YdecSCGDCNTUJokl4TOiDmgMLAOhviGo57\<br />  --0J0xrY3mSfKQRBQYy8y641SQhyk6e_XS7K6FsSCYUTABc8T7xHPhZVW3On6FSsJUQ1YTfA",<br />  "refresh_token_expires_in":86400,<br />  "access_token":"AA~WjzDmvJSLvM9qVuJL1xxP6hSxt64HijoIea0P5R2CVloXJ2HEvEILl7UOtEtjSDdjlvyx9wrosPBhDRU97Qnn\<br />  6EQIQ3MwaqtIx7HjuX36_ZBC6qxcgscCDmdtGb4nHgo" <br />}
+</pre></td>
+</tr>
+</table>
+<h2><span style="font-weight: bold;">CURLコマンド(UNIX)</span></h2>
+<h3>Syntax</h3>
+<h4>Password authentication</h4>
+<p class="Paragraph">Sample CURL command where type is password:</p>
+<table class="CodeTable" style="margin-left: 26pt;" cellspacing="0px" width="96%">
+<col style="width: 100%;" />
+<tr>
+<td>
+<pre class="prettyprint">
+<br />curl 'https://fqdn/cellname/__auth' -X POST -v -k \   -d 'grant_type=password&amp;username=user&amp;password=password'
+</pre></td>
+</tr>
+</table>
+<h4>Token authentication</h4>
+<table class="CodeTable" style="margin-left: 26pt;" cellspacing="0px" width="96%">
+<col style="width: 100%;" />
+<tr>
+<td>
+<pre class="prettyprint">
+<br />curl 'https://fndn/cellname/__auth' -k -v \ <br />-X POST -d 'grant_type=urn:ietf:params:oauth:grant-type:saml2-bearer&amp;assertion=SAML token'
+</pre></td>
+</tr>
+</table>
+<h4>Refresh token authentication</h4>
+<h4>Sample CURL command for refresh token authentication:</h4>
+<table class="CodeTable" style="margin-left: 26pt;" cellspacing="0px" width="96%">
+<col style="width: 100%;" />
+<tr>
+<td>
+<pre class="prettyprint">
+<br />curl 'https://fqdn/cellname/__auth'  -k -v \ <br />-X POST -d 'grant_type=refresh_token&amp;refresh_token=refresh_token'
+</pre></td>
+</tr>
+</table>
+<h4>Password authentication + schema authentication</h4>
+<table class="CodeTable" style="margin-left: 26pt;" cellspacing="0px" width="96%">
+<col style="width: 100%;" />
+<tr>
+<td>
+<pre class="prettyprint Code">
+<br />curl 'https://fqdn/cellname/__auth' -X POST -v -k \ <br />-d 'grant_type=password&amp;username=username&amp;password=pass&amp;client_id=https://fqdn/appcellname/&amp;client_secret=app_cell_token'
+</pre></td>
+</tr>
+</table>
+<h4>Trans-cell issue token+ authentication token</h4>
+<table class="CodeTable" style="margin-left: 26pt;" cellspacing="0px" width="96%">
+<col style="width: 100%;" />
+<tr>
+<td>
+<pre class="prettyprint Code">
+<br />curl'https://fqdn/cellname/__auth' -X POST -v -k \ <br />-d 'grant_type=urn:ietf:params:oauth:grant-type:saml2-bearer&amp;assertion=SAML_token&amp;dc_target=https://fqdn/cellname/'
+</pre></td>
+</tr>
+</table>
+<h3><span style="font-weight: bold;">CURLサンプル</span></h3>
+<table class="CodeTable" style="margin-left: 26pt;" cellspacing="0px" width="96%">
+<col style="width: 100%;" />
+<tr>
+<td>
+<pre class="prettyprint Code">
+<br />curl -X POST 'https://fqdn/CompanyA/__auth' -k -v \<br /> -d 'grant_type=urn:ietf:params:oauth:grant-type:saml2-bearer&amp;assertion=\<br />SAML token'
+</pre></td>
+</tr>
+</table>
+<p class="Paragraph">&#160;</p>
+<p class="Paragraph">&#160;</p>
+<br />
+<div style="border-top: Solid 3px #3a3a3a; width: 100%; position: relative; padding-top: 2px; padding-bottom: 2px; padding-right: 5px; background-color: #9b9b9b;" id="footer">
+<h6 style="text-align: right; margin-top: 5pt; margin-bottom: 5pt;">Copyright 2014 &#160;FUJITSU LIMITED</h6>
+</div>
+<script type="text/javascript" language="javascript1.2">
+//<![CDATA[
+<!--
+if (window.writeIntopicBar)
+        writeIntopicBar(0);
+
+
+highlightSearch();
+//-->
+//]]>
+</script>
+</body>
+</html>

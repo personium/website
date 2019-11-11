@@ -1,0 +1,180 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN"
+    "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<!-- saved from url=(0014)about:internet -->
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+<meta name="generator" content="Adobe RoboHelp 10" />
+<title>Overview</title>
+<link rel="StyleSheet" href="../../../../default.css" type="text/css" />
+<style type="text/css">
+/*<![CDATA[*/
+<!--
+.mainBreadCrumb a:link { color:#000000;
+background-color:transparent;
+text-decoration:none; }
+.mainBreadCrumb a:visited { color:#000000;
+background-color:transparent;
+text-decoration:none; }
+.mainBreadCrumb a:hover { color:#ff0000 ! important;
+cursor:pointer;
+text-decoration:underline; }
+p.mainBreadCrumb { margin-left:0px;
+margin-top:1px ! important; }
+h1 { padding-left:10px ! important; }
+-->
+/*]]>*/
+</style>
+
+<script type="text/javascript" language="JavaScript">
+//<![CDATA[
+function reDo() {
+  if (innerWidth != origWidth || innerHeight != origHeight)
+     location.reload();
+}
+if ((parseInt(navigator.appVersion) == 4) && (navigator.appName == "Netscape")) {
+        origWidth = innerWidth;
+        origHeight = innerHeight;
+        onresize = reDo;
+}
+onerror = null; 
+//]]>
+</script>
+<style type="text/css">
+/*<![CDATA[*/
+<!--
+div.WebHelpPopupMenu { position:absolute;
+left:0px;
+top:0px;
+z-index:4;
+visibility:hidden; }
+-->
+/*]]>*/
+</style>
+
+<script type="text/javascript" language="javascript1.2" src="../../../../whmsg.js" charset="utf-8">
+</script>
+<script type="text/javascript" language="javascript" src="../../../../whver.js" charset="utf-8">
+</script>
+<script type="text/javascript" language="javascript1.2" src="../../../../whutils.js" charset="utf-8">
+</script>
+<script type="text/javascript" language="javascript1.2" src="../../../../whproxy.js" charset="utf-8">
+</script>
+<script type="text/javascript" language="javascript1.2" src="../../../../whlang.js" charset="utf-8">
+</script>
+<script type="text/javascript" language="javascript1.2" src="../../../../whtopic.js" charset="utf-8">
+</script>
+</head>
+<body>
+<script type="text/javascript" language="javascript1.2">
+//<![CDATA[
+<!--
+if (window.gbWhTopic)
+{
+        var strUrl = document.location.href;
+        var bc = 0;
+        var n = strUrl.toLowerCase().indexOf("bc-");
+        if(n != -1)
+        {
+                document.location.href = strUrl.substring(0, n);
+                bc = strUrl.substring(n+3);
+        }
+
+        if (window.addTocInfo)
+        {
+        addTocInfo("REST API Reference\nUnit Level APIs\nOverview");
+addButton("show",BTN_TEXT,"Show","","","","",0,0,"","","");
+
+        }
+        if (window.writeBtnStyle)
+                writeBtnStyle();
+
+        if (window.writeIntopicBar)
+                writeIntopicBar(1);
+
+        
+        
+}
+else
+        if (window.gbIE4)
+                document.location.reload();
+
+onLoadHandler = function()
+{
+  if (window.setRelStartPage)
+        {
+        setTimeout("setRelStartPage('../../../../English.htm');", 1)
+
+    setTimeout("UpdateBreadCrumbsMarker();", 1);
+        }
+}
+
+if (window.addEventListener){  
+        window.addEventListener('load', onLoadHandler, false);   
+} else if (window.attachEvent){  
+        window.attachEvent('onload', onLoadHandler);  
+}
+
+function onSetStartPage()
+{
+  autoSync(1);
+  sendSyncInfo();
+  sendAveInfoOut();
+}
+//-->
+//]]>
+</script><script type="text/javascript" src="../../../../ehlpdhtm.js" language="JavaScript1.2">
+</script>
+<div style="width: 100%; position: relative;" id="header">
+<p style="font-size: 10pt;">&#160;</p>
+</div>
+<script type="text/javascript" language="javascript">
+//<![CDATA[
+document.write("<p  class=\"mainBreadCrumb\"   style=\"text-align:left;\" class=\"breadcrumbs\">");
+AddMasterBreadcrumbs("../../../../English.htm", "breadcrumbs", " &gt; ", "トップ", "../../../WelcometoPCSDocumentation.htm");
+document.write("<a class=\"breadcrumbs\" href=\"Overview.htm\">REST API Reference<\/a>  &gt;  <a class=\"breadcrumbs\" href=\"Overview.htm\">Unit Level APIs<\/a>  &gt;  Overview<\/p>");
+//]]>
+</script>
+<hr style="border-left-width: 0px; margin-left: -6px;" size="1" width="101%" align="center" />
+<form><input type="image" value="Print" onclick="window.print();return false" name="Printer.png" src="../../../../Images/Printer.png" style="width: 16px; height: 16px; float: right; margin-top: -32px; margin-right: 2px;" /></form>
+<h1>Overview</h1>
+<p class="Paragraph">Unit APIs explains the APIs that hosts the group of Cells. These API cannot access the access token issued from Cell as a general rule.<span class="Apple-converted-space">&#160;</span><span style="color: #ff0000;"><font color="red">(Via elevated operations to the token of the unit level,. Available)</font></span><span class="Apple-converted-space">&#160;</span><span style="color: #ff0000;"><font color="red">making the management of the Cell group that was created and produced the Cell is the role of the unit API.</font></span></p>
+<h2>Unit Control Objects</h2>
+<p class="Paragraph" style=" margin-left: 50px; text-indent: -30px;"><span class="rls-1-Bullets"><span style="font-family:'Symbol'">·</span></span><span style='word-spacing:normal; font:6.0pt "Times New Roman"'><font size="1" style="font-size:6pt;">&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;</font></span>OData Schema Retrival</p>
+<h3>Cell</h3>
+<p class="Paragraph" style=" margin-left: 50px; text-indent: -30px;"><span class="rls-1-Bullets"><span style="font-family:'Symbol'">·</span></span><span style='word-spacing:normal; font:6.0pt "Times New Roman"'><font size="1" style="font-size:6pt;">&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;</font></span><a href="UnitControlObjects/Cell/Create.htm">Create</a></p>
+<p class="Paragraph" style=" margin-left: 50px; text-indent: -30px;"><span class="rls-1-Bullets"><span style="font-family:'Symbol'">·</span></span><span style='word-spacing:normal; font:6.0pt "Times New Roman"'><font size="1" style="font-size:6pt;">&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;</font></span><a href="UnitControlObjects/Cell/Search.htm">Search</a></p>
+<p class="Paragraph" style=" margin-left: 50px; text-indent: -30px;"><span class="rls-1-Bullets"><span style="font-family:'Symbol'">·</span></span><span style='word-spacing:normal; font:6.0pt "Times New Roman"'><font size="1" style="font-size:6pt;">&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;</font></span><a href="UnitControlObjects/Cell/Retrieve.htm">Retrieve</a></p>
+<p class="Paragraph" style=" margin-left: 50px; text-indent: -30px;"><span class="rls-1-Bullets"><span style="font-family:'Symbol'">·</span></span><span style='word-spacing:normal; font:6.0pt "Times New Roman"'><font size="1" style="font-size:6pt;">&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;</font></span><a href="UnitControlObjects/Cell/Update.htm">Update</a></p>
+<p class="Paragraph" style=" margin-left: 50px; text-indent: -30px;"><span class="rls-1-Bullets"><span style="font-family:'Symbol'">·</span></span><span style='word-spacing:normal; font:6.0pt "Times New Roman"'><font size="1" style="font-size:6pt;">&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;</font></span><a href="UnitControlObjects/Cell/Delete.htm">Delete</a></p>
+<h4>Delete Cell Recursive</h4>
+<p class="Paragraph" style=" margin-left: 50px; text-indent: -30px;"><span class="rls-1-Bullets"><span style="font-family:'Symbol'">·</span></span><span style='word-spacing:normal; font:6.0pt "Times New Roman"'><font size="1" style="font-size:6pt;">&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;</font></span><a href="UnitControlObjects/Cell/CellRecursiveDelete.htm">cell delete recursive</a></p>
+<h2>Cross Domain Access Control</h2>
+<p class="Paragraph" style=" margin-left: 50px; text-indent: -30px;"><span class="rls-1-Bullets"><span style="font-family:'Symbol'">·</span></span><span style='word-spacing:normal; font:6.0pt "Times New Roman"'><font size="1" style="font-size:6pt;">&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;</font></span><a href="CrossDomainAccessControl/crossdomainPolicyFile.htm">Cross Domain Policy File</a></p>
+<p class="Paragraph" style=" margin-left: 50px; text-indent: -30px;"><span class="rls-1-Bullets"><span style="font-family:'Symbol'">·</span></span><span style='word-spacing:normal; font:6.0pt "Times New Roman"'><font size="1" style="font-size:6pt;">&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;</font></span><a href="CrossDomainAccessControl/CORS.htm">CORS</a></p>
+<h2>Limitations</h2>
+<p class="Paragraph" style=" margin-left: 50px; text-indent: -30px;"><span class="rls-1-Bullets"><span style="font-family:'Symbol'">·</span></span><span style='word-spacing:normal; font:6.0pt "Times New Roman"'><font size="1" style="font-size:6pt;">&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;</font></span>Common Limitations</p>
+<h2>APIs for Administrators</h2>
+<p class="Paragraph">When you host this as a service. API is implemented as personium.io software below, you will need to disable it using a reverse proxy, etc.</p>
+<p class="Paragraph">This only has a internal use as well as personium.io as a service of Fujitsu, it does not do the external public.</p>
+<p class="Paragraph" style=" margin-left: 50px; text-indent: -30px;"><span class="rls-1-Bullets"><span style="font-family:'Symbol'">·</span></span><span style='word-spacing:normal; font:6.0pt "Times New Roman"'><font size="1" style="font-size:6pt;">&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;</font></span>Status Check</p>
+<p class="Paragraph">&#160;</p>
+<p class="Paragraph">&#160;</p>
+<br />
+<div style="border-top: Solid 3px #3a3a3a; width: 100%; position: relative; padding-top: 2px; padding-bottom: 2px; padding-right: 5px; background-color: #9b9b9b;" id="footer">
+<h6 style="text-align: right; margin-top: 5pt; margin-bottom: 5pt;">Copyright 2014 &#160;FUJITSU LIMITED</h6>
+</div>
+<script type="text/javascript" language="javascript1.2">
+//<![CDATA[
+<!--
+if (window.writeIntopicBar)
+        writeIntopicBar(0);
+
+
+highlightSearch();
+//-->
+//]]>
+</script>
+</body>
+</html>

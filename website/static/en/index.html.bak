@@ -1,0 +1,503 @@
+<!doctype html>
+<html lang="en">
+<!--
+
+Page    : index / MobApp
+Version : 1.0
+Author  : Colorlib
+URI     : https://colorlib.com
+
+ -->
+
+<head>
+    <title>Personium | Open Source PDS Software.</title>
+    <!-- Required meta tags -->
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+    <meta name="description" content="An interconnectable open source PDS (Personal Data Store) server envisioning world wide web of protected data APIs.">
+    <meta name="keywords" content="HTML5, bootstrap, mobile, app, landing, ios, android, responsive">
+	<link rel="icon" href="../images/favicon.ico" type="image/x-icon" />
+
+    <!-- Font -->
+    <link rel="dns-prefetch" href="//fonts.googleapis.com">
+    <link href="https://fonts.googleapis.com/css?family=Rubik:300,400,500" rel="stylesheet">
+
+    <!-- Bootstrap CSS -->
+    <link rel="stylesheet" href="../css/bootstrap.min.css">
+    <!-- Themify Icons -->
+    <link rel="stylesheet" href="../css/themify-icons.css">
+    <!-- Owl carousel -->
+    <link rel="stylesheet" href="../css/owl.carousel.min.css">
+    <!-- Main css -->
+    <link href="../css/new_style.css" rel="stylesheet">
+	<!--Google Material icon-->
+	<link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet" />
+</head>
+
+<body data-spy="scroll" data-target="#navbar" data-offset="30">
+
+    <!-- Nav Menu -->
+
+    <div class="nav-menu fixed-top">
+        <div class="container">
+            <div class="row">
+                <div class="col-md-12">
+                    <nav class="navbar navbar-dark navbar-expand-lg">
+                        <a class="navbar-brand" href="index.html">
+							
+					
+						<img id="header-logo" class=" md-dark pmd-sm pmd-svg-icon" src="../../../images/logo-quantify-light.png" title="personium" alt="personium" width="225px">
+						
+						</a> 
+						
+						<button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbar" aria-controls="navbar" aria-expanded="false" aria-label="Toggle navigation"> <span class="navbar-toggler-icon"></span> </button>
+                        <div class="collapse navbar-collapse" id="navbar">
+                            <ul class="navbar-nav ml-auto">
+                                <li class="nav-item"> <a class="nav-link" href="#features">About<span class="sr-only">(current)</span></a> </li>
+								<li class="nav-item"> <a class="nav-link" href="#Vision">Vision</a> </li>
+                                <li class="nav-item"> <a class="nav-link" href="#Resources">Resources</a> </li>
+								<li class="nav-item"> <a class="nav-link" href="#Demo">Demo</a> </li>
+								
+								<li class="nav-item"> <a class="nav-link" href="#Community">Community</a> </li>
+								
+								
+					<li class="nav-item sns">
+					 <a href="https://personium-io.slack.com/" target="_blank">
+						<img id="sns-s" src="../images/h_slack.png" title="slack" alt="slack">
+                    </a></li>
+								
+					<li class="nav-item sns">
+					<a href="https://github.com/personium" target="_blank">
+						 <img id="sns-g" src="../images/h_github.png" title="github" alt="github">
+                    </a></li>
+								<li class="nav-item"><a href="https://personium.io/docs/en/" target="_blank" class="btn btn-outline-light my-3 my-sm-0 ml-lg-3">Document</a></li>
+							
+									<li class="nav-item dropdown">
+								<a class="nav-item nav-link dropdown-toggle mr-md-2" href="#" id="bd-versions" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+								Languages</a>
+								  <div class="dropdown-menu dropdown-menu-right" aria-labelledby="bd-versions">
+									<a class="dropdown-item active" href="../en/index.html">English</a>
+									<a class="dropdown-item" href="../ja/index.html">Japanese</a>
+								  </div>
+								</li>
+                            </ul>
+
+					
+                        </div>
+							
+                    </nav>
+                </div>
+            </div>
+        </div>
+    </div>
+
+
+    <header class="bg-gradient" id="home">
+        <div class="container mt-5">
+			<div class="header-title">
+            <h1><img class="logo" src="../images/logo-quantify-light.svg" alt="Quantify - One Page HTML Theme" /></h1>
+            <p class="tagline">An interconnectable open source
+                <br/>PDS (Personal Data Store) server
+                <br/>envisioning world wide web of protected data APIs.</p>
+			</div>
+        </div>
+       <!-- <div class="img-holder mt-3"><img src="images/iphonex.png" alt="phone" class="img-fluid"></div>-->
+    </header>
+
+
+    <div class="section light-bg" id="features">
+
+
+        <div class="container">
+
+            <div class="section-title">
+                <h3>Open Source PDS server software</h3>
+            </div>
+			<div class="videoflame">
+			<div class="embed-responsive embed-responsive-16by9 video">
+  				<iframe class="embed-responsive-item video" src="https://www.youtube.com/embed/Fq0pqL4lFA4?rel=0&amp;showinfo=0" frameborder="0" allow="autoplay; encrypted-media" allowfullscreen></iframe>
+			</div>
+				</div>
+
+
+            <div class="row">
+                <div class="col-12 col-lg-4">
+                    <div class="card features">
+                        <div class="card-body">
+                            <div class="about-icon">
+								<img src="../images/lock.svg" alt="Components" title="Components">
+                                <!--<span class="ti-face-smile gradient-fill ti-3x mr-3"></span>-->
+                                <div class="media-body">
+                                    <h4 class="card-title">Personal Data Store</h4>
+                                    <p class="card-text">Personium is a distributed Personal Data Store(PDS) server with which various applications
+                                        on various devices can read and write their data. As a BaaS software, it has proven
+                                        flexibility to store variety of data from various appilcations, from electronic medical
+                                        record to simple game. Personium has not only lofty visions and concepts but also
+                                        proven track record.</p>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-12 col-lg-4">
+                    <div class="card features">
+                        <div class="card-body">
+                            <div class="about-icon">
+								<img src="../images/phone_iphone.svg" alt="Components" title="Components">
+                                <!--<span class="ti-settings gradient-fill ti-3x mr-3"></span>-->
+                                <div class="media-body">
+                                    <h4 class="card-title">Backend as a Service</h4>
+                                    <p class="card-text">Personium is strong at this point. It has proven track records of securely storing data
+                                        from various applications from medical record to simple game, which run on various
+                                        platforms like Android, iOS, Windows, installed on various devices such as smart
+                                        phones, tablets, PC, sensors.
+                                        <br />
+                                        <br />From functional point of view, since you can create as many OASIS OData spaces to
+                                        handle relational data, you will benefit from flexible data API with advanced features
+                                        such as various searchs and optimistic lock. Also, WebDAV feature enables CRUD operation
+                                        of file data such as image, sound, movie media in a simple and smart manner.</p>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-12 col-lg-4">
+                    <div class="card features">
+                        <div class="card-body">
+                            <div class="about-icon">
+								<img src="../images/check.svg" alt="Components" title="Components">
+                                <!--<span class="ti-lock gradient-fill ti-3x mr-3"></span>-->
+                                <div class="media-body">
+                                    <h4 class="card-title">Interconnectable</h4>
+                                    <p class="card-text">Personium enables secure data sharing among interconnected data stores. This feature
+                                        enables such systems that multiple organizations and individuals cooperate in a complex
+                                        manner. Some system may enable a home doctor to use his/her patient's blood pressure
+                                        data that care workers measured a few days ago. Other system may enable a private
+                                        tutor to refer to his/her student's arithmetics weak point that school teacher has
+                                        just finded out. In short, it enables something new, which could not be achieved
+                                        due to the separation of systems. Data stores are also interconnectable beyond the
+                                        server infrastructures, because the trust among data stores is achieved using PKI
+                                        technology.</p>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+        </div>
+
+
+
+    </div>
+	<!-- // end .section -->
+		 <div class="section bg-gradient" id="Vision">
+         <div class="container text-center">
+            <div class="call-to-action">
+				<h2 class="title-text">Vision</h2>
+				<p class="tagline">An interconnectable open source
+                    <br/>PDS (Personal Data Store) server
+                    <br/>envisioning world wide web of protected data APIs.</p>
+				
+                <!--<div class="box-icon"><span class="ti-mobile gradient-fill ti-3x"></span></div>-->
+                
+                <h2 class="t-vision">We signed the <a href='https://mydata.org/declaration/'>MyData Declaration</a> based on our strong sympathy with its principles.</h2>
+			</div>
+        </div>
+
+    </div>
+    <!-- // end .section -->
+				
+
+
+    <div class="section light-bg">
+
+        <div class="container">
+			<h5 class="mt-4 mb-2">Mission</h5>
+            <div class="row" style="margin-top: 20px;">
+                <div class="col-md-6">
+                    <img src="../images/mission.png" alt="mission" class="img-fluid">
+                </div>
+                <div class="col-md-6 d-flex align-items-center vision">
+                    <div>
+						
+                        <p class="mb-4">We do not think current form of computing, data-data flow is optimal for human society. 
+                            It should be a common interest for all the human society to create an existence using the power of IT to support  individual human information processing ability, that is, reception, recognition, memory, integration, analysis and expression of the information.
+                            Among the technical metabolism, that is, new divices, new   representation techniques arising every year based on that interest,  we strongly recognize the importance of a persistence layer  mainly responsible for memory, in other words, an IT that keeps stablly existing throught individual human lifecycle.
+                            What is called PDS today is very close to this.  And it had better be implemented in the abstracted layer 'Cloud' or Web API (as opposed to 'Client'), which is relatively free   from the metabolism.
+                            Such IT for the human society, should not be put under the control of single corporate or individual, but be shared and co-created using the knowledge of many individual or corporate entities.
+                            For that to happen,  that cloud technology should be open to all the corporates, organizations and individulals over the world.
+                            Our mission is to develop and keep evolving such software and grow and nourish the application ecosystem based on it.</p>
+                    </div>
+                </div>
+            </div>
+			<h5 class="mt-4 mb-2">Goal</h5>
+			<div class="row">
+                <div class="col-md-6 d-flex align-items-center">
+					 <div>
+                        <p class="mb-4">Our goal is to form the World scale Web of PDS's.
+                            Preferrablly with our PDS implementation 'Personium' playing significant role  just as a web server implementation 'Apache' did when forming WWW (World Wide Web)</p>
+                    </div>
+                </div>
+                <div class="col-md-6">
+                   <img src="../images/goal.png" alt="mission" class="img-fluid">
+                </div>
+            </div>
+
+        </div>
+
+    </div>
+    <!-- // end .section -->
+
+	
+	    <div class="section" id="pricing">
+        <div class="container">
+            <div class="section-title" id="Resources">
+                <h3>Personium is licensed under the Apache License Version 2.0.</h3>
+            </div>
+
+            <div class="card-deck">
+                <div class="card pricing">
+                    <div class="card-head">
+                        <small class="text-primary">Set Up</small>
+                        <span class="price"><img class="svg" src="../images/settings.svg" alt="Set Up" title="Set Up"></span>
+                    </div>
+                    <ul class="list-group list-group-flush">
+                        <div class="list-group-item">Set up your own Personium server!</div>
+                    </ul>
+                    <div class="card-body">
+                        <a href="https://personium.io/docs/en/server-operator/setup_en.html" target="_blank" class="btn btn-primary btn-lg btn-block">Set Up</a>
+                    </div>
+                </div>
+                <div class="card pricing">
+                    <div class="card-head">
+                        <small class="text-primary">Source</small>
+                        <span class="price"><img class="svg" src="../images/code.svg" alt="Set Up" title="Set Up"></span>
+                    </div>
+                    <ul class="list-group list-group-flush">
+                        <div class="list-group-item">Clone repository from GitHub!</div>
+ 
+                    </ul>
+                    <div class="card-body">
+                        <a href="https://github.com/personium/" target="_blank" class="btn btn-primary btn-lg btn-block">Source</a>
+                    </div>
+                </div>
+                <div class="card pricing">
+                    <div class="card-head">
+                        <small class="text-primary">Introduction</small>
+                        <span class="price"><img class="svg" src="../images/slideshare.svg" alt="Set Up" title="Set Up"></span>
+                    </div>
+                    <ul class="list-group list-group-flush">
+                        <div class="list-group-item">The introduction of Personium is opened on SlideShare.</div>
+                    </ul>
+                    <div class="card-body">
+                        <a href="https://www.slideshare.net/ssuser11bf2b/personium-open-source-pds-envisioning-the-web-of-mydata" target="_blank" class="btn btn-primary btn-lg btn-block">Introduction</a>
+                    </div>
+                </div>
+				<div class="card pricing">
+                    <div class="card-head">
+                        <small class="text-primary">Documentation</small>
+                        <span class="price"><img class="svg" src="../images/file-text-o.svg" alt="Set Up" title="Set Up"></span>
+                    </div>
+                    <ul class="list-group list-group-flush">
+                        <div class="list-group-item">See Personium's online documents!</div>
+                    </ul>
+                    <div class="card-body">
+                        <a href="https://personium.io/docs/en/" target="_blank" class="btn btn-primary btn-lg btn-block">Documentation</a>
+                    </div>
+                </div>
+            </div>
+            <!-- // end .pricing -->
+
+
+        </div>
+
+    </div>
+    <!-- // end .section -->
+   
+
+
+    <div class="section light-bg" id="Demo">
+
+        <div class="container">
+			<div class="section-title">
+                <small>The following apps demonstrate how Personium manages data based on different user scenarios (user/operator/administrator).</small>
+                <h3>Personium Demo Apps</h3>
+            </div>
+			<div class="videoflame">
+			<div class="embed-responsive embed-responsive-16by9 video">
+  				<iframe class="embed-responsive-item video" src="https://www.youtube.com/embed/0Wqzj3ZX2fc?rel=0&amp;showinfo=0" frameborder="0" allow="autoplay; encrypted-media" allowfullscreen></iframe>
+			</div>
+			</div>
+			
+			<div class="section-title">
+                <h3>Management Tools</h3>
+            </div>
+			
+	<div class="row line">
+								<div class="col-md-6">
+									<h5>UnitManager</h5>
+									<p class="demo-text">UnitManager is a GUI tool that helps you manage the unit cells of Personium.</p>
+								</div>
+								<div class="col-md-6">
+									<a href="https://github.com/personium/app-uc-unit-manager/blob/master/README.md" target="_blank">
+										<span class="tools"><img src="../images/demo5.jpg" alt="Set Up" title="Set Up"></span>
+									</a>
+								</div>
+
+								</div>
+						
+						
+                      <div class="row line">
+
+                            <div class="col-md-6">
+                                <h5>HomeApp</h5>
+                                <p>HomeApp is a Personium-based \"Personal Data Store(PDS)\" management application.</p>
+                            </div>
+							 <div class="col-md-6">
+								<a href="demo/home-app/index.html" target="_blank">
+                                <span class="tools"><img src="../images/demo3.jpg" alt="Set Up" title="Set Up"></span>
+								</a>
+                            </div>
+                        </div>
+						
+						
+						
+						
+						
+						
+										
+						  <div class="row line">
+                      <div class="col-md-6">
+							
+                          
+                           
+                                <h5>PCUI</h5>
+                                <p>PCUI is the CLI version of HomeApp that helps you manage a Personium-based cell.</p>
+                            </div>
+							<div class="col-md-6">
+								<a href="demo/pcui/index.html" target="_blank">
+							<span class="tools"><img src="../images/demo4.jpg" alt="Set Up" title="Set Up"></span>
+									</a>
+                            </div>
+							
+                        	</div>
+						<div class="section-title">
+                <h3>APIs</h3>
+            </div>
+				  <div class="row line">
+                            <div class="col-md-6">
+                            
+                            
+                            
+                                <h5>OData, WebDAV</h5>
+                                <p>This demo explains the basics of OData and WebDAV by allowing you to send an instant request and verify the response. These two REST-based protocols are international standards widely used in various area.  More than 90% of personium APIs are based on these two protocols. Therefore, developing applications for Personium is similar to developing any other OData/WebDAV based applications.</p>
+                            </div>
+						<div class="col-md-6">
+								<a href="https://demo.personium.io/baas-demo/1/index.html" target="_blank">
+                                <span class="tools"><img src="../images/demo2.jpg" alt="Set Up" title="Set Up"></span>
+								</a>
+                            </div>
+                      
+                </div>
+
+            </div>
+
+        
+
+    </div>
+</div>
+ 
+				
+				
+    
+    <!-- // end .section -->
+	
+	  <div class="section" id="Community">
+        <div class="container">
+            <div class="section-title">
+                <h3>Community</h3>
+            </div>
+			<div class="t-member">
+               
+					<blockquote class="blockquote">For the Personium community, people and companies belonging to the following companies participate in various activities.
+                        <br>
+                        <br>For participation in the Personium project and cooperation please contact <a href='https://personium-io.slack.com/'> Slack Community </a>.<br>Slack participation registration in the community please from <a href='https://join.slack.com/t/personium-io/shared_invite/enQtNDA4OTg1MzI3NjM3LTIwNjVkZjZkZDVlNTQ2NjFmZTFjMTljMzAwNzk0ZjQ0MGJhMDIzOGIxN2UyZmMxYTkwMzIzOTU5ZmZkMmEyNzE'> here </a>.</blockquote>
+				
+                </div>
+
+            <div class="row pt-4">
+                <div class="col-md-6">
+                   <h4 class="mb-3">(Alphabetical Order)</h4>
+                    <p class="light-font mb-5">
+                                        <a href="http://www.coenet.co.jp/" target="_blank">COMPUTER ENGINEERING CO,.LTD</a><br>
+                                        <a href="http://www.cyberbeing.co.jp/" target="_blank">CyberBeing LIMITED</a><br>
+                                        <a href="http://www.dnp.co.jp/eng/" target="_blank">Dai Nippon Printing Co., Ltd.</a><br>
+					<a href="http://www.fujitsu.com/global/" target="_blank">FUJITSU LIMITED</a><br>
+                                        <a href="http://www.fujitsu.com/jp/group/fdl/en/" target="_blank">FUJITSU DESIGN LIMITED</a><br>
+                                        <a href="http://www.fujitsu.com/jp/group/kyushu/en/" target="_blank">FUJITSU KYUSHU SYSTEMS LIMITED</a><br>
+                                        <a href="https://tajirushi.com/" target="_blank">TAJIRUSHI</a><br>
+                                        <a href="http://www.u-aizu.ac.jp/en/" target="_blank">THE UNIVERSITY OF AIZU</a>
+					</p>
+                </div>
+            </div>
+        </div>
+
+    </div>
+    <!-- // end .section -->
+
+
+				
+			
+
+    <div class="bg-gradient py-5" id="contact">
+        <div class="container">
+           
+			<div class="center-block text-center">
+
+                
+                    <div class="social-icons f-aria">
+						<li class="f-icon">
+								 <a href="https://twitter.com/personium" target="_blank">
+						<img src="../images/f_twitter.png" title="twitter" alt="twitter">
+                    </a></li>
+								
+					<li class="f-icon">
+					 <a class="social-icons" href="https://personium-io.slack.com/" target="_blank">
+						<img src="../images/f_slack.png" title="slack" alt="slack">
+                    </a></li>
+								
+					<li class="f-icon">
+					<a href="https://github.com/personium" target="_blank">
+						<img src="../images/f_github.png" title="github" alt="github">
+                    </a>
+						</li>
+                        
+<!--                        <a href="https://twitter.com/personium"><span class="ti-twitter-alt"></span></a>
+                        <a href="https://github.com/personium"><span class="ti-github"></span></a>-->
+                    </div>
+                
+            </div>
+			
+
+        </div>
+
+    </div>
+    <!-- // end .section -->
+    <footer class="my-5 text-center">
+        <!-- Copyright removal is not prohibited! -->
+        <p class="mb-2"><small>COPYRIGHT © 2017. ALL RIGHTS RESERVED. MOBAPP TEMPLATE BY <a href="https://colorlib.com">COLORLIB</a></small></p>
+
+    </footer>
+
+    <!-- jQuery and Bootstrap -->
+    <script src="../js/jquery-3.2.1.min.js"></script>
+    <script src="../js/bootstrap.bundle.min.js"></script>
+    <!-- Plugins JS -->
+    <script src="../js/owl.carousel.min.js"></script>
+    <!-- Custom JS -->
+    <script src="../js/script.js"></script>
+<p id="page-top"><a href="#home"></a></p>
+</body>
+
+</html>

@@ -1,0 +1,188 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN"
+    "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+<meta http-equiv="Content-Language" content="en-US" />
+<meta name="generator" content="Adobe RoboHelp 10" />
+<title>APIの各種制限について</title>
+<link rel="StyleSheet" href="../../../../../../default.css" type="text/css" />
+<script type="text/javascript" src="../../../../../../prettify.js" language="JavaScript1.2">
+</script>
+<script type="text/javascript" language="JavaScript">
+//<![CDATA[
+function reDo() {
+  if (innerWidth != origWidth || innerHeight != origHeight)
+     location.reload();
+}
+if ((parseInt(navigator.appVersion) == 4) && (navigator.appName == "Netscape")) {
+	origWidth = innerWidth;
+	origHeight = innerHeight;
+	onresize = reDo;
+}
+onerror = null; 
+//]]>
+</script>
+<style type="text/css">
+<!--
+div.WebHelpPopupMenu { position:absolute;
+left:0px;
+top:0px;
+z-index:4;
+visibility:hidden; }
+-->
+</style>
+<script type="text/javascript" language="javascript1.2" src="../../../../../../whmsg.js" charset="utf-8"></script>
+<script type="text/javascript" language="javascript" src="../../../../../../whver.js" charset="utf-8"></script>
+<script type="text/javascript" language="javascript1.2" src="../../../../../../whutils.js" charset="utf-8"></script>
+<script type="text/javascript" language="javascript1.2" src="../../../../../../whproxy.js" charset="utf-8"></script>
+<script type="text/javascript" language="javascript1.2" src="../../../../../../whlang.js" charset="utf-8"></script>
+<script type="text/javascript" language="javascript1.2" src="../../../../../../whtopic.js" charset="utf-8"></script>
+
+</head>
+<body onload="prettyPrint()"><script type="text/javascript" language="javascript1.2">//<![CDATA[
+<!--
+if (window.gbWhTopic)
+{
+	var strUrl = document.location.href;
+	var bc = 0;
+	var n = strUrl.toLowerCase().indexOf("bc-");
+	if(n != -1)
+	{
+		document.location.href = strUrl.substring(0, n);
+		bc = strUrl.substring(n+3);
+	}
+
+	if (window.addTocInfo)
+	{
+	addTocInfo("API リファレンス\nペルソナコンテナAPI\n共通仕様\n制限\nAPIの各種制限について");
+addButton("show",BTN_TEXT,"表示","","","","",0,0,"","","");
+
+	}
+	if (window.writeBtnStyle)
+		writeBtnStyle();
+
+	if (window.writeIntopicBar)
+		writeIntopicBar(1);
+
+	
+	
+}
+else
+	if (window.gbIE4)
+		document.location.reload();
+
+onLoadHandler = function()
+{
+  if (window.setRelStartPage)
+	{
+	setTimeout("setRelStartPage('../../../../../../Japanese.htm');", 1)
+
+    setTimeout("UpdateBreadCrumbsMarker();", 1);
+	}
+}
+
+if (window.addEventListener){  
+	window.addEventListener('load', onLoadHandler, false);   
+} else if (window.attachEvent){  
+	window.attachEvent('onload', onLoadHandler);  
+}
+
+function onSetStartPage()
+{
+  autoSync(1);
+  sendSyncInfo();
+  sendAveInfoOut();
+}
+//-->
+//]]></script>
+<script type="text/javascript" src="../../../../../../ehlpdhtm.js" language="JavaScript1.2"></script>
+
+<h1>Common Limitations on HTTP Implementation of PCS</h1>
+<ul style="
+list-style:url('../../../../../../Images/arrow.png');">
+<li style="margin-left: -20px;">
+<h2><span style="font-weight: bold;">リクエスト</span></h2>
+</li>
+</ul>
+<h3>URL</h3>
+<p class="Paragraph2">Maximum Length: 50KByte</p>
+<p class="Paragraph2"><font><font>※) URL Size = header size + (URL path size × 2) + (query size × 3)</font></font></p>
+<p class="Paragraph2"><font><font>※ limit) IE7, 8 Many reference the browser is about 1Mbyte 2048byte, IE9 is other 5120byte,</font></font></p>
+<h3><span style="font-weight: bold;">リクエストヘッダ</span></h3>
+<p class="Paragraph2">The maximum size of each header: 4096byte (whether or not including the length of the key is unknown)</p>
+<h4>Accept Encoding</h4>
+<p class="Paragraph2">I support the gzip.</p>
+<h3>リクエストボディ</h3>
+<h4><font><font>Transfer-Encoding</font></font></h4>
+<p class="Paragraph2"><font><font>I have to respond to a request for chunked.</font> <font>(Unconfirmed)</font></font></p>
+<h4><font><font>Content-Encoding</font></font></h4>
+<p class="Paragraph2">I do not support is expected to respond to a request for gzip.</p>
+<h3><font><font><font><font>T</font></font>ime-out</font></font></h3>
+<p class="Paragraph2"><font><font>Time of 60 seconds from the start of the request, the server until you have received all of the request (unconfirmed)</font></font></p>
+<ul>
+<li style="
+list-style:url('../../../../../../Images/arrow.png');
+margin-left:-20px;">
+<h2><span style="font-weight: bold;">レスポンス</span></h2>
+</li>
+</ul>
+<h3>Headers</h3>
+<table style="margin-left: 26pt;" cellspacing="0" width="96%">
+<col style="width: 33.855%;" />
+<col style="width: 66.145%;" />
+<tr>
+<td style="border: Solid 1px #9b9b9b;" bgcolor="#353D47">
+<p class="GreyColumnHeading">Header Name</p>
+</td>
+<td style="border-top: Solid 1px #9b9b9b; border-right: Solid 1px #9b9b9b; border-bottom: Solid 1px #9b9b9b;" bgcolor="#353D47">
+<p class="GreyColumnHeading">Description</p>
+</td>
+</tr>
+<tr>
+<td style="border-left: Solid 1px #9b9b9b; border-right: Solid 1px #9b9b9b; border-bottom: Solid 1px #9b9b9b; vertical-align: top;">
+<p class="TableText"><font><font>Transfer-Encoding</font></font></p>
+</td>
+<td style="border-right: Solid 1px #9b9b9b; border-bottom: Solid 1px #9b9b9b; vertical-align: top;">
+<p class="TableText"><font><font>I always respond with chunked</font></font></p>
+</td>
+</tr>
+<tr>
+<td style="border-left: Solid 1px #9b9b9b; border-right: Solid 1px #9b9b9b; border-bottom: Solid 1px #9b9b9b; vertical-align: top;">
+<p class="TableText"><font><font>Content-Encoding</font></font></p>
+</td>
+<td style="border-right: Solid 1px #9b9b9b; border-bottom: Solid 1px #9b9b9b; vertical-align: top;">
+<p class="TableText"><font><font>If set to a valid value Accept-Encoding request header contains the value</font></font></p>
+</td>
+</tr>
+<tr>
+<td style="border-left: Solid 1px #9b9b9b; border-right: Solid 1px #9b9b9b; border-bottom: Solid 1px #9b9b9b; vertical-align: top;">
+<p class="TableText"><font><font>Date</font></font></p>
+</td>
+<td style="border-right: Solid 1px #9b9b9b; border-bottom: Solid 1px #9b9b9b; vertical-align: top;">
+<p class="TableText"><font><font>I return the UTC time that the request has been accepted</font></font></p>
+</td>
+</tr>
+</table>
+<h3>Body Response</h3>
+<h4>Size Limit</h4>
+<p class="Paragraph2"><font><font>Unknown (about 500MB?)</font></font></p>
+<h4>Transfer-Encoding</h4>
+<p class="Paragraph2"><font><font>I do chunk response in principle.</font></font></p>
+<h4>Content-Encoding</h4>
+<p class="Paragraph2"><font><font>If you set the value of a valid request Accept-Encoding header is compressed and encoded in the form of its body.</font></font></p>
+<p class="Note">Note: <a href="http://schredinger.soft.fujitsu.com/svn/vet/dc1-env/trunk/conf/sc01.baas/proxy/opt/nginx/conf/nginx.conf" target="_blank" style="font-weight: normal; font-style: normal;">http://schredinger.soft.fujitsu.com/svn/vet/dc1-env/trunk/conf/sc01.baas/proxy/opt/nginx/conf/nginx.conf</a></p>
+<p class="Paragraph">&#160;</p>
+<p class="Paragraph">&#160;</p>
+<script type="text/javascript" language="javascript1.2">//<![CDATA[
+<!--
+if (window.writeIntopicBar)
+	writeIntopicBar(0);
+
+
+highlightSearch();
+//-->
+//]]></script>
+</body>
+</html>

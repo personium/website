@@ -1,0 +1,173 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<meta name="template" content="API Master.htt" />
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+<meta http-equiv="Content-Language" content="en-US" />
+<meta name="topic-check-list" content="Ran Smart Index" />
+<meta name="generator" content="Adobe RoboHelp 10" />
+<title>CORS</title>
+<link rel="StyleSheet" href="../../../../../default.css" type="text/css" />
+</head>
+
+<body>
+<script type="text/javascript" src="../../../../../ehlpdhtm.js"></script>
+
+<div style="width: 100%; position: relative;" id="header">
+	<p>&#160;</p>
+</div>
+
+<?rh-placeholder type="breadcrumbs" ph-align="2" usetopicformat="0" home="Home" 
+ sep-char="&gt;" ph-style="font-family:Arial;font-size:9pt;font-weight: normal;font-style: normal;text-decoration: none;" ?>
+
+<h1>CORS Support</h1>
+<ul style="list-style: url('../../../../../Images/arrow.png');">
+	<li style="margin-left: -20px;"><h2>Overview </h2></li>
+</ul>
+<p class="Paragraph">API of all of persona container, meant to be used 
+ in principle CORS (Cross Origin Resource Sharing) with some exceptions.</p>
+<table class="CodeTable" style="margin-left: 26pt;" cellspacing="0px" width="96%">
+	<col style="width: 100%;" />
+	<tr>
+		<td><p class="Code"><code>Authentication end point in Implicit 
+		 Flow: TODO exception? ? Only?</code></p></td>
+	</tr>
+</table>
+<p class="Paragraph">&#160;</p>
+<p class="Paragraph"><font><font>If you do not have a description as a 
+ special exception, I will return the response header following all API 
+ endpoint on request specifically.</font></font></p>
+<ol>
+	<li style="font-size: 10pt;"><p class="Paragraph">Access-Control-Allow-Origin</p></li>
+	<li style="font-size: 10pt;"><p class="Paragraph">Access-Control-Allow-Methods</p></li>
+	<li style="font-size: 10pt;"><p class="Paragraph">Access-Control-Allow-Headers</p></li>
+</ol>
+<p class="Paragraph">Thus, for performing the HTTP asynchronous communication 
+ with the server script language Web browser installed, such as JavaScript, 
+ you can use the XMLHttpRequest Level 2.</p>
+<ul style="list-style: url('../../../../../Images/arrow.png');">
+	<li style="margin-left: -20px;"><h2 style="margin-left: 0px;">Return 
+	 of Access-Control-Allow-Origin response header</h2></li>
+</ul>
+<p class="Paragraph">In the API of all, I will return * as Access-Control-Allow-Origin 
+ response header.</p>
+<p class="Paragraph">Access-Control-Allow-Origin response header is to 
+ return the domain that allow access, but persona container such behavior 
+ in order to allow access from all domains.</p>
+<p class="Paragraph">The following is an example of a response header Access-Control-Allow-Origin.</p>
+<p class="Paragraph">&#160;</p>
+<table class="CodeTable" style="margin-left: 26pt;" cellspacing="0px" width="96%">
+	<col style="width: 100%;" />
+	<tr>
+		<td><p class="Code">Access-Control-Allow-Origin:*</p></td>
+	</tr>
+</table>
+<ul style="list-style: url('../../../../../Images/arrow.png');">
+	<li style="margin-left: -20px;"><h2>Response to the pre-flight requests 
+	 from the browser</h2></li>
+</ul>
+<p class="Paragraph"><font><font>And the behavior of the following as a 
+ response to pre-flight requests from the browser, when you issue the request 
+ of the OPTIONS method in the API of all.</font></font></p>
+<ol>
+	<li style="font-size: 10pt;"><p class="Paragraph">Return of Access-Control-Allow-Methods 
+	 response header</p></li>
+	<li style="font-size: 10pt;"><p class="Paragraph">Return of Access-Control-Allow-Headers 
+	 response header</p></li>
+</ol>
+<ul style="list-style: url('../../../../../Images/arrow.png');">
+	<li style="margin-left: -20px;"><h2>Return of Access-Control-Allow-Methods 
+	 response header</h2></li>
+</ul>
+<p class="Paragraph">When you issue the request of the OPTIONS method in 
+ the API of all, it returns the Access-Control-Allow-Methods response header.</p>
+<p class="Paragraph">Contents of the Access-Control-Allow-Methods Responsive 
+ header will change as follows depending on the contents of the Authorization 
+ header and access control settings of the API.</p>
+<table style="margin-left: 26pt;" cellspacing="0" width="96%">
+	<col style="width: 48.719%;" />
+	<col style="width: 51.281%;" />
+	<tr>
+		<td style="border: Solid 1px #9b9b9b;"><p class="TableText"><font><font>The 
+		 resources (read possible without Authorization header published)</font></font></p></td>
+		<td style="border-top: Solid 1px #9b9b9b; border-right: Solid 1px #9b9b9b; 
+			 border-bottom: Solid 1px #9b9b9b;"><p class="TableText"><font><font>I 
+		 will return all the HTTP methods that the resource supports.</font></font></p></td>
+	</tr>
+	<tr>
+		<td style="border-left: Solid 1px #9b9b9b; border-right: Solid 1px #9b9b9b; 
+			 border-bottom: Solid 1px #9b9b9b;"><p class="TableText"><font><font>Private 
+		 (non-public) OPTIONS request without the Authorization header 
+		 to the resource</font></font></p></td>
+		<td style="border-right: Solid 1px #9b9b9b; border-bottom: Solid 1px #9b9b9b;"><p 
+			 class="TableText"><font><font>I will return all the HTTP methods 
+		 that the PCS can support.</font></font></p></td>
+	</tr>
+	<tr>
+		<td style="border-left: Solid 1px #9b9b9b; border-right: Solid 1px #9b9b9b; 
+			 border-bottom: Solid 1px #9b9b9b;"><p class="TableText"><font><font>OPTIONS 
+		 request to the private resources of a valid ※ Authorization header 
+		 with</font></font></p></td>
+		<td style="border-right: Solid 1px #9b9b9b; border-bottom: Solid 1px #9b9b9b;"><p 
+			 class="TableText"><font><font>I will return all the HTTP methods 
+		 that the resource supports.</font></font></p></td>
+	</tr>
+</table>
+<p class="Paragraph">&#160;</p>
+<p class="Paragraph"><font><font>The request Authorization header with, 
+ it can sometimes be an error of the following, depending on the contents 
+ of the header.</font></font></p>
+<ol>
+	<li style="font-size: 10pt;"><p class="Paragraph">401: the contents 
+	 of the Authorization header is invalid.</p></li>
+	<li style="font-size: 10pt;"><p class="Paragraph">Request is not accepted 
+	 by the situation of access control, such as: 403. (. Reading is not 
+	 allowed)</p></li>
+</ol>
+<p class="Paragraph">I will return the request method that is allowed inside 
+ the request URL.</p>
+<p class="Paragraph"><font><font>The following is an example of a response 
+ header Access-Control-Allow-Methods.</font></font></p>
+<table class="CodeTable" style="margin-left: 26pt;" cellspacing="0px" width="96%">
+	<col style="width: 100%;" />
+	<tr>
+		<td><p class="Code">Access-Control-Allow-Methods:GET,OPTIONS</p></td>
+	</tr>
+</table>
+<ul style="list-style: url('../../../../../Images/arrow.png');">
+	<li style="margin-left: -20px;"><h2 style="margin-left: 0px;">Return 
+	 of Access-Control-Allow-Headers response header</h2></li>
+</ul>
+<p class="Paragraph"><font class="">In the API of all, if you specify the 
+ Access-Control-Request-Headers in the request header, it returns the Access-Control-Allow-Headers.</font></p>
+<p class="Paragraph">So that you can send all of the header that the client 
+ wants, what is returned in the Access-Control-Allow-Headers response header, 
+ and returns as the value that is specified in the Access-Control-Request-Headers.</p>
+<p class="Paragraph">The following is an example of the response header 
+ if you specify a &quot;sample&quot; in the Access-Control-Request-Headers.</p>
+<table class="CodeTable" style="margin-left: 26pt;" cellspacing="0px" width="96%">
+	<col style="width: 100%;" />
+	<tr>
+		<td><p class="Code">Access-Control-Allow-Headers:sample</p></td>
+	</tr>
+</table>
+<ul style="list-style: url('../../../../../Images/arrow.png');">
+	<li style="margin-left: -20px;"><h2>Reference</h2></li>
+</ul>
+<p class="Paragraph"><font class=""><a href="http://www.w3.org/TR/cors/" 
+										 target="_blank">http://www.w3.org/TR/cors/</a></font> 
+ </p>
+<div style="border-top: Solid 4px #0080c0; width: 100%; 
+					 position: relative; background-color: #374049; padding-top: 7px; 
+					 padding-bottom: 7px; padding-right: 5px;" id="footer">
+	<p style="font-size: 8pt; color: #ffffff; text-align: right;"><span 
+	 style="mso-ascii-theme-font: minor-latin; mso-fareast-font-family: Calibri; 
+	 mso-fareast-theme-font: minor-latin; mso-hansi-theme-font: minor-latin; 
+	 mso-bidi-font-family: 'Times New Roman'; mso-bidi-theme-font: minor-bidi; 
+	 mso-ansi-language: EN-US; mso-fareast-language: EN-US; mso-bidi-language: AR-SA; 
+	 font-family: Arial, sans-serif;">All Rights Reserved,Copyright (C) 
+	 FUJITSU LIMITED 1998-2013</span> </p>
+</div>
+</body>
+</html>

@@ -1,0 +1,259 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN"
+    "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+ <meta name="generator" content="Adobe RoboHelp 10" />
+<title>クロスドメインポリシーファイル</title>
+<link rel="StyleSheet" href="../../../../../default.css" type="text/css" />
+<script type="text/javascript" language="JavaScript">
+//<![CDATA[
+function reDo() {
+  if (innerWidth != origWidth || innerHeight != origHeight)
+     location.reload();
+}
+if ((parseInt(navigator.appVersion) == 4) && (navigator.appName == "Netscape")) {
+	origWidth = innerWidth;
+	origHeight = innerHeight;
+	onresize = reDo;
+}
+onerror = null; 
+//]]>
+</script>
+<style type="text/css">
+<!--
+div.WebHelpPopupMenu { position:absolute;
+left:0px;
+top:0px;
+z-index:4;
+visibility:hidden; }
+-->
+</style>
+<script type="text/javascript" language="javascript1.2" src="../../../../../whmsg.js" charset="utf-8"></script>
+<script type="text/javascript" language="javascript" src="../../../../../whver.js" charset="utf-8"></script>
+<script type="text/javascript" language="javascript1.2" src="../../../../../whutils.js" charset="utf-8"></script>
+<script type="text/javascript" language="javascript1.2" src="../../../../../whproxy.js" charset="utf-8"></script>
+<script type="text/javascript" language="javascript1.2" src="../../../../../whlang.js" charset="utf-8"></script>
+<script type="text/javascript" language="javascript1.2" src="../../../../../whtopic.js" charset="utf-8"></script>
+
+</head>
+<body><script type="text/javascript" language="javascript1.2">//<![CDATA[
+<!--
+if (window.gbWhTopic)
+{
+	var strUrl = document.location.href;
+	var bc = 0;
+	var n = strUrl.toLowerCase().indexOf("bc-");
+	if(n != -1)
+	{
+		document.location.href = strUrl.substring(0, n);
+		bc = strUrl.substring(n+3);
+	}
+
+	if (window.addTocInfo)
+	{
+	addTocInfo("API リファレンス\nPCSユニットAPI\nCrossDomainAccessControl\nクロスドメインポリシーファイル");
+addButton("show",BTN_TEXT,"表示","","","","",0,0,"","","");
+
+	}
+	if (window.writeBtnStyle)
+		writeBtnStyle();
+
+	if (window.writeIntopicBar)
+		writeIntopicBar(1);
+
+	
+	
+}
+else
+	if (window.gbIE4)
+		document.location.reload();
+
+onLoadHandler = function()
+{
+  if (window.setRelStartPage)
+	{
+	setTimeout("setRelStartPage('../../../../../Japanese.htm');", 1)
+
+    setTimeout("UpdateBreadCrumbsMarker();", 1);
+	}
+}
+
+if (window.addEventListener){  
+	window.addEventListener('load', onLoadHandler, false);   
+} else if (window.attachEvent){  
+	window.attachEvent('onload', onLoadHandler);  
+}
+
+function onSetStartPage()
+{
+  autoSync(1);
+  sendSyncInfo();
+  sendAveInfoOut();
+}
+//-->
+//]]></script>
+<script type="text/javascript" src="../../../../../ehlpdhtm.js" language="JavaScript1.2"></script>
+
+<h1>クロスドメインポリシーファイル</h1>
+<ul>
+<li style="
+list-style:url('../../../../../arrow.png');
+margin-left:-20px;">
+<h2 style="margin-left: 0px;"><span lang="JA" xml:lang="JA" style="line-height: 115%; font-family: 'MS Mincho'; 
+		 mso-ascii-font-family: Arial; mso-fareast-theme-font: minor-fareast; 
+		 mso-hansi-font-family: Arial; mso-bidi-font-family: Arial; mso-ansi-language: EN-US; 
+		 mso-fareast-language: JA; mso-bidi-language: AR-SA; font-weight: bold;">概要</span></h2>
+</li>
+</ul>
+<p class="Paragraph" style="color: rgb(72, 72, 72); font-family: Verdana, sans-serif; font-size: 12px; line-height: normal; orphans: auto; widows: auto; background-color: #ffffff; display: inline ! important ;"><span style="-webkit-text-stroke-width: 0px;">クロスドメインポリシーファイル(crossdomain.xml)を取得します。</span></p>
+<p class="Paragraph"><span style="color: rgb(72, 72, 72); font-family: Verdana, sans-serif; font-size: 12px; line-height: normal; orphans: auto; widows: auto; -webkit-text-stroke-width: 0px; background-color: #ffffff; display: inline ! important ; float: none;">クロスドメインポリシーファイルはすべての利用者が取得できます。</span></p>
+<ul>
+<li style="
+list-style:url('../../../../../arrow.png');
+margin-left:-20px;">
+<h2 style="margin-left: 0px;"><span style="font-weight: bold;">必要な権限</span></h2>
+</li>
+</ul>
+<p class="Paragraph">なし</p>
+<ul>
+<li style="
+list-style:url('../../../../../arrow.png');
+margin-left:-20px;">
+<h2 style="margin-left: 0px;"><span style="font-weight: bold;">制限事項</span></h2>
+</li>
+</ul>
+<p class="Paragraph">特になし</p>
+<ul>
+<li style="
+list-style:url('../../../../../arrow.png');
+margin-left:-20px;">
+<h2 style="margin-left: 0px;"><span style="font-weight: bold;">リクエスト</span></h2>
+</li>
+</ul>
+<h3 class="Paragraph"><span style="font-weight: bold;">リクエストURL</span></h3>
+<table style="height: 47px; margin-left: 26pt;" cellspacing="0" width="96%">
+<col style="width: 100%;" />
+<tr>
+<td style="border: Solid 1px #9b9b9b;">
+<p class="Code">/crossdomain.xml</p>
+</td>
+</tr>
+</table>
+<h3><span style="font-weight: bold;">メソッド</span></h3>
+<p class="Paragraph2"><span style="color: rgb(72, 72, 72); font-family: Verdana, sans-serif; font-size: 12px; line-height: normal; orphans: auto; widows: auto; -webkit-text-stroke-width: 0px; background-color: #ffffff; display: inline ! important ; float: none;">GET</span></p>
+<h3><span style="font-weight: bold;">リクエストクエリ</span></h3>
+<p class="Paragraph2"><span style="color: rgb(72, 72, 72); font-family: Verdana, sans-serif; font-size: 12px; line-height: normal; orphans: auto; widows: auto; -webkit-text-stroke-width: 0px; background-color: #ffffff; display: inline ! important ; float: none;">なし</span></p>
+<h3><span style="font-weight: bold;">リクエストヘッダ</span></h3>
+<p class="Paragraph2">なし</p>
+<h3>リクエストボディ</h3>
+<p class="Paragraph2">なし</p>
+<h3><span style="font-weight: bold;">リクエストサンプル</span></h3>
+<p class="Paragraph2">なし</p>
+<ul>
+<li style="
+list-style:url('../../../../../arrow.png');
+margin-left:-20px;">
+<h2 style="margin-left: 0px;"><span style="font-weight: bold;">レスポンス</span></h2>
+</li>
+</ul>
+<h3 class="Paragraph"><span style="font-weight: bold;">ステータスコード</span></h3>
+<p class="Paragraph2">200</p>
+<h3><span style="font-weight: bold;">レスポンスヘッダ</span></h3>
+<p class="Paragraph2">なし</p>
+<h3><span style="font-weight: bold;">レスポンスボディ</span></h3>
+<p class="Paragraph2">XML形式</p>
+<table style="margin-left: 26pt;" cellspacing="0" width="95.33%">
+<col style="width: 48.8%;" />
+<col style="width: 51.2%;" />
+<tr>
+<th style="border: Solid 1px #9b9b9b;" bgcolor="#353D47">
+<p class="GreyColumnHeading">項目名</p>
+</th>
+<th style="border-top: Solid 1px #9b9b9b; border-right: Solid 1px #9b9b9b; border-bottom: Solid 1px #9b9b9b;" bgcolor="#353D47">
+<p class="GreyColumnHeading">概要</p>
+</th>
+</tr>
+<tr>
+<td style="border-left: Solid 1px #9b9b9b; border-right: Solid 1px #9b9b9b; border-bottom: Solid 1px #9b9b9b;">
+<p class="TableText"><span style="color: rgb(72, 72, 72); font-family: Verdana, sans-serif; font-size: 12px; line-height: normal; orphans: auto; widows: auto; -webkit-text-stroke-width: 0px; background-color: #ffffff; display: inline ! important ; float: none;">/cross-domain-policy/site-control</span></p>
+</td>
+<td style="border-right: Solid 1px #9b9b9b; border-bottom: Solid 1px #9b9b9b;">
+<p class="TableText"><span style="color: rgb(72, 72, 72); font-family: Verdana, sans-serif; font-size: 12px; line-height: normal; orphans: auto; widows: auto; -webkit-text-stroke-width: 0px; background-color: #ffffff; display: inline ! important ; float: none;">メタポリシーの許可設定情報。固定で属性値「permitted-cross-domain-policies="all"」を返却する</span></p>
+</td>
+</tr>
+<tr>
+<td style="border-left: Solid 1px #9b9b9b; border-right: Solid 1px #9b9b9b; border-bottom: Solid 1px #9b9b9b;">
+<p class="TableText"><span style="color: rgb(72, 72, 72); font-family: Verdana, sans-serif; font-size: 12px; font-style: normal; font-variant: normal; font-weight: normal; letter-spacing: normal; line-height: normal; orphans: auto; text-align: start; text-indent: 0px; text-transform: none; white-space: normal; widows: auto; word-spacing: 0px; -webkit-text-stroke-width: 0px; background-color: #ffffff; display: inline ! important ; float: none;">/cross-domain-policy/allow-access-from</span></p>
+</td>
+<td style="border-right: Solid 1px #9b9b9b; border-bottom: Solid 1px #9b9b9b;">
+<p class="TableText"><span style="color: rgb(72, 72, 72); font-family: Verdana, sans-serif; font-size: 12px; line-height: normal; orphans: auto; widows: auto; -webkit-text-stroke-width: 0px; background-color: #ffffff; display: inline ! important ; float: none;">現在のドメインにアクセス可能なドメイン。固定で属性値「domain="*"」を返却する</span></p>
+</td>
+</tr>
+<tr>
+<td style="border-left: Solid 1px #9b9b9b; border-right: Solid 1px #9b9b9b; border-bottom: Solid 1px #9b9b9b;">
+<p class="TableText"><span style="color: rgb(72, 72, 72); font-family: Verdana, sans-serif; font-size: 12px; font-style: normal; font-variant: normal; font-weight: normal; letter-spacing: normal; line-height: normal; orphans: auto; text-align: start; text-indent: 0px; text-transform: none; white-space: normal; widows: auto; word-spacing: 0px; -webkit-text-stroke-width: 0px; background-color: #ffffff; display: inline ! important ; float: none;">/cross-domain-policy/allow-http-request-headers-from</span></p>
+</td>
+<td style="border-right: Solid 1px #9b9b9b; border-bottom: Solid 1px #9b9b9b;">
+<p class="TableText"><span style="color: rgb(72, 72, 72); font-family: Verdana, sans-serif; font-size: 12px; line-height: normal; orphans: auto; widows: auto; -webkit-text-stroke-width: 0px; background-color: #ffffff; display: inline ! important ; float: none;">現在のドメインに送信可能なヘッダ情報と、ヘッダ送信元ドメイン。固定で属性値「domain="*" headers="*"」を返却する</span></p>
+</td>
+</tr>
+</table>
+<h3><span style="font-weight: bold; font-size: 10pt;"><font size="2" style="font-size:10pt;">エラーメッセージ一覧</font></span></h3>
+<p class="Paragraph2"><a href="../../../../en/Appendix/ErrorMessages.htm">Error Messages</a>を参照</p>
+<h3><span style="font-weight: bold;">レスポンスサンプル</span></h3>
+<table class="CodeTable" style="margin-left: 26pt;" cellspacing="0px" width="96%">
+<col style="width: 100%;" />
+<tr>
+<td style="border: Solid 1px #9b9b9b; vertical-align: middle;">
+<pre class="prettyprint Code">
+<code class="xml syntaxhl"><span class="preprocessor" style="color: 透明;">&lt;?xml version="1.0"?&gt;</span></code>
+<br /><code class="xml syntaxhl"><span class="doctype">&lt;!DOCTYPE cross-domain-policy SYSTEM "http://www.macromedia.com/xml/dtds/cross-domain-policy.dtd"&gt;</span></code>
+<br /><code class="xml syntaxhl"><span class="tag">
+&lt;cross-domain-policy&gt;</span><span class="CodeRay">   </span></code>
+<br /><code class="xml syntaxhl"><span class="CodeRay">
+　</span><span class="tag">&lt;site-control</span><span class="CodeRay"> </span><span class="attribute-name">permitted-cross-domain-policies</span><span class="CodeRay">=</span><span class="delimiter">"</span><span class="content">all</span><span class="delimiter">"</span><span class="tag">/&gt;</span></code>
+<br /><code class="xml syntaxhl"><span class="tag">
+　&lt;allow-access-from</span><span class="CodeRay"> </span><span class="attribute-name">domain</span><span class="CodeRay">=</span><span class="delimiter">"</span><span class="content">*</span><span class="delimiter">"</span><span class="tag">/&gt;</span></code>
+<br /><code class="xml syntaxhl"><span class="tag">
+　&lt;allow-http-request-headers-from</span><span class="CodeRay"> </span><span class="attribute-name">domain</span><span class="CodeRay">=</span><span class="delimiter">"</span><span class="content">*</span><span class="delimiter">"</span><span class="CodeRay"> </span><span class="attribute-name">headers</span><span class="CodeRay">=</span><span class="delimiter">"</span><span class="content">*</span><span class="delimiter">"</span><span class="tag">/&gt; </span></code>
+<br /><code class="xml syntaxhl"><span class="tag">
+&lt;/cross-domain-policy&gt;</span></code>              
+                
+</pre></td>
+</tr>
+</table>
+<p class="Paragraph2">&#160;</p>
+<ul style="
+list-style:url('../../../../../arrow.png');">
+<li style="margin-left: -20px;">
+<h2 style="margin-left: 0px;"><span style="font-weight: bold;">CURLサンプル</span></h2>
+</li>
+</ul>
+<p class="Paragraph">&#160;</p>
+<table class="CodeTable" style="margin-left: 26pt;" cellspacing="0px" width="96%">
+<col style="width: 100%;" />
+<tr>
+<td style="border: Solid 1px #9b9b9b; vertical-align: middle;">
+<pre class="prettyprint Code">
+curl 'https://fqdn/crossdomain.xml -X GET -v -k 
+</pre></td>
+</tr>
+</table>
+<p class="Paragraph">&#160;</p>
+<p class="Paragraph">&#160;</p>
+<p>&#160;</p>
+<p>&#160;</p>
+<p>&#160;</p>
+<script type="text/javascript" language="javascript1.2">//<![CDATA[
+<!--
+if (window.writeIntopicBar)
+	writeIntopicBar(0);
+
+
+highlightSearch();
+//-->
+//]]></script>
+</body>
+</html>

@@ -1,0 +1,973 @@
+<?xml version="1.0" encoding="iso-2022-jp" ?>
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN"
+    "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<!-- saved from url=(0014)about:internet -->
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=iso-2022-jp" />
+<meta http-equiv="Content-Language" content="en-US" />
+<meta name="generator" content="Adobe RoboHelp 10" />
+<title>Box Installation</title>
+<link rel="StyleSheet" href="../../../../../../default.css" type="text/css" />
+<script type="text/javascript" src="../../../../../../prettify.js" language="JavaScript1.2">
+</script>
+<style type="text/css">
+/*<![CDATA[*/
+<!--
+.mainBreadCrumb a:link { color:#000000;
+background-color:transparent;
+text-decoration:none; }
+.mainBreadCrumb a:visited { color:#000000;
+background-color:transparent;
+text-decoration:none; }
+.mainBreadCrumb a:hover { color:#ff0000 ! important;
+cursor:pointer;
+text-decoration:underline; }
+p.mainBreadCrumb { margin-left:0px;
+margin-top:1px ! important; }
+h1 { padding-left:10px ! important; }
+-->
+/*]]>*/
+</style>
+
+<script type="text/javascript" language="JavaScript">
+//<![CDATA[
+function reDo() {
+  if (innerWidth != origWidth || innerHeight != origHeight)
+     location.reload();
+}
+if ((parseInt(navigator.appVersion) == 4) && (navigator.appName == "Netscape")) {
+        origWidth = innerWidth;
+        origHeight = innerHeight;
+        onresize = reDo;
+}
+onerror = null; 
+//]]>
+</script>
+<style type="text/css">
+/*<![CDATA[*/
+<!--
+div.WebHelpPopupMenu { position:absolute;
+left:0px;
+top:0px;
+z-index:4;
+visibility:hidden; }
+-->
+/*]]>*/
+</style>
+
+<script type="text/javascript" language="javascript1.2" src="../../../../../../whmsg.js" charset="utf-8">
+</script>
+<script type="text/javascript" language="javascript" src="../../../../../../whver.js" charset="utf-8">
+</script>
+<script type="text/javascript" language="javascript1.2" src="../../../../../../whutils.js" charset="utf-8">
+</script>
+<script type="text/javascript" language="javascript1.2" src="../../../../../../whproxy.js" charset="utf-8">
+</script>
+<script type="text/javascript" language="javascript1.2" src="../../../../../../whlang.js" charset="utf-8">
+</script>
+<script type="text/javascript" language="javascript1.2" src="../../../../../../whtopic.js" charset="utf-8">
+</script>
+</head>
+<body onload="prettyPrint()">
+<script type="text/javascript" language="javascript1.2">
+//<![CDATA[
+<!--
+if (window.gbWhTopic)
+{
+        var strUrl = document.location.href;
+        var bc = 0;
+        var n = strUrl.toLowerCase().indexOf("bc-");
+        if(n != -1)
+        {
+                document.location.href = strUrl.substring(0, n);
+                bc = strUrl.substring(n+3);
+        }
+
+        if (window.addTocInfo)
+        {
+        addButton("show",BTN_TEXT,"表示","","","","",0,0,"","","");
+
+        }
+        if (window.writeBtnStyle)
+                writeBtnStyle();
+
+        if (window.writeIntopicBar)
+                writeIntopicBar(1);
+
+        
+        
+}
+else
+        if (window.gbIE4)
+                document.location.reload();
+
+onLoadHandler = function()
+{
+  if (window.setRelStartPage)
+        {
+        setTimeout("setRelStartPage('../../../../../../Japanese.htm');", 1)
+
+    setTimeout("UpdateBreadCrumbsMarker();", 1);
+        }
+}
+
+if (window.addEventListener){  
+        window.addEventListener('load', onLoadHandler, false);   
+} else if (window.attachEvent){  
+        window.attachEvent('onload', onLoadHandler);  
+}
+
+function onSetStartPage()
+{
+  autoSync(1);
+  sendSyncInfo();
+  sendAveInfoOut();
+}
+//-->
+//]]>
+</script><script type="text/javascript" src="../../../../../../ehlpdhtm.js" language="JavaScript1.2">
+</script>
+<div style="width: 100%; position: relative;" id="header">
+<p style="font-size: 10pt;">&#160;</p>
+</div>
+<script type="text/javascript" language="javascript">
+//<![CDATA[
+document.write("<p  class=\"mainBreadCrumb\"  style=\"text-align:left;\" class=\"breadcrumbs\">");
+AddMasterBreadcrumbs("../../../../../../Japanese.htm", "breadcrumbs", " &gt; ", "トップ", "../../../../../ja/HomePage.htm");
+document.write("Box Installation<\/p>");
+//]]>
+</script>
+<hr style="border-left-width: 0px; margin-left: -6px;" size="1" width="101%" align="center" />
+<form><input type="image" value="Print" onclick="window.print();return false" name="Printer.png" src="../../../../../../Images/Printer.png" style="width: 16px; height: 16px; float: right; margin-top: -32px; margin-right: 2px;" /></form>
+<h1>Box Installation</h1>
+<h2><span lang="JA" xml:lang="JA" style="line-height: 115%; mso-ascii-font-family: Arial; mso-fareast-theme-font: minor-fareast; mso-hansi-font-family: Arial; mso-bidi-font-family: Arial; mso-ansi-language: EN-US; mso-fareast-language: JA; mso-bidi-language: AR-SA; font-weight: bold; font-family: 'MS Gothic';">概要</span></h2>
+<p class="Paragraph">This API allows you to install the Box at the specified path using the bar file.&#160;For the bar file format, see <a href="BarFile.htm">bar_File (bar file)</a>.&#160;</p>
+<p class="Paragraph">This API adopts the asynchronous transmission method, which means that after accepting the Box installation, it returns immediately. Therefore, to verify the box installation status, use the following API.</p>
+<p class="Paragraph" style=" margin-left: 50px; text-indent: -30px;"><span class="rls-1-Bullets"><span style="font-family:'Symbol'">&#183;</span></span><span style='word-spacing:normal; font:6.0pt "Times New Roman"'><font size="1" style="font-size:6pt;">&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;</font></span>(<a href="../../BoxLevelAPIs/BoxOperation/BarFileInstallationProgress.htm">Box metadata acquisition</a>) Box Metadata</p>
+<p class="Indent1">If the Box is not installed successfully, you can confirm the box installation situation in this API and can view the reason that caused this error.</p>
+<p class="Indent1">The following code snippet shows the Box installation acceptance and status check:</p>
+<p class="Paragraph">&#160;</p>
+<table class="CodeTable" style="margin-left: 26pt;" cellspacing="0px" width="96%">
+<col style="width: 100%;" />
+<tr>
+<td>
+<p class="Code">Example of the Box Installation call (For 30 seconds of polling at client side) &#160;</p>
+<p class="Code">1 Box installation acceptance.</p>
+<p class="Code">&#160;&#160;&#160;&#160;- MKCOL / {Cell} / {box}</p>
+<p class="Code">2 Box installation status check.</p>
+<p class="Code">&#160;&#160;&#160;&#160;- GET / {Cell} / {box} -&gt; return in the &quot;process&quot;.</p>
+<p class="Code">&#160;&#160;&#160;&#160;- 30 seconds polling</p>
+<p class="Code">3 GET /{cell}/{box}&#160;-&gt; Returns &quot;processing complete&quot; .</p>
+<p class="Code">※ Polling should continue till the No. 2 process is complete.</p>
+</td>
+</tr>
+</table>
+<h2><span style="font-weight: bold;">必要な権限</span></h2>
+<p class="Paragraph">box-install</p>
+<h2><span style="font-weight: bold;">制限事項</span></h2>
+<h3>Box installation target box limit</h3>
+<p class="Paragraph" style=" margin-left: 50px; text-indent: -30px;"><span class="rls-1-Bullets"><span style="font-family:'Symbol'">&#183;</span></span><span style='word-spacing:normal; font:6.0pt "Times New Roman"'><font size="1" style="font-size:6pt;">&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;</font></span>If there is a Box with the same name, you cannot install it again.</p>
+<p class="Paragraph" style=" margin-left: 50px; text-indent: -30px;"><span class="rls-1-Bullets"><span style="font-family:'Symbol'">&#183;</span></span><span style='word-spacing:normal; font:6.0pt "Times New Roman"'><font size="1" style="font-size:6pt;">&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;</font></span>If the Box with the same scheme URL exists, you cannot install the bar files.</p>
+<p class="Paragraph" style=" margin-left: 50px; text-indent: -30px;"><span class="rls-1-Bullets"><span style="font-family:'Symbol'">&#183;</span></span><span style='word-spacing:normal; font:6.0pt "Times New Roman"'><font size="1" style="font-size:6pt;">&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;</font></span>You cannot install box to the Main box.</p>
+<p class="Paragraph" style=" margin-left: 50px; text-indent: -30px;"><span class="rls-1-Bullets"><span style="font-family:'Symbol'">&#183;</span></span><span style='word-spacing:normal; font:6.0pt "Times New Roman"'><font size="1" style="font-size:6pt;">&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;</font></span>You cannot specify a null field in the schema of "/ bar/00_meta/00_manifest.json": bar file.</p>
+<h3>Bar files limitations</h3>
+<p class="Paragraph" style=" margin-left: 50px; text-indent: -30px;"><span class="rls-1-Bullets"><span style="font-family:'Symbol'">&#183;</span></span><span style='word-spacing:normal; font:6.0pt "Times New Roman"'><font size="1" style="font-size:6pt;">&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;</font></span>File size of the box installable can be equal to or less than the upper limit.</p>
+<p class="Paragraph" style="margin-left: 59px;">You cannot install the box if it exceeds the upper limit.</p>
+<p class="Bullet_2" style=" margin-left: 90px; text-indent: -20px;"><span class="rls-3-Bullets"><span style="font-family:Wingdings">§</span></span><span style='word-spacing:normal; font:6.0pt "Times New Roman"'><font size="1" style="font-size:6pt;">&#160;&#160;&#160;&#160;&#160;&#160;</font></span>100MB: size of bar files</p>
+<p class="Bullet_2" style=" margin-left: 90px; text-indent: -20px;"><span class="rls-3-Bullets"><span style="font-family:Wingdings">§</span></span><span style='word-spacing:normal; font:6.0pt "Times New Roman"'><font size="1" style="font-size:6pt;">&#160;&#160;&#160;&#160;&#160;&#160;</font></span>10MB: uncompressed file size of bar file entry</p>
+<p class="Paragraph" style=" margin-left: 50px; text-indent: -30px;"><span class="rls-1-Bullets"><span style="font-family:'Symbol'">&#183;</span></span><span style='word-spacing:normal; font:6.0pt "Times New Roman"'><font size="1" style="font-size:6pt;">&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;</font></span>In <a href="BarFile.htm">Bar_File</a> each entry is stored in the order in which they are defined.</p>
+<h3>Box installation log detail limitation</h3>
+<p class="Paragraph">Log details of the Box installation is captured in the EventBus of the Cell, attached with the Box of target Box install.※<span lang="EN-US" xml:lang="EN-US">1</span></p>
+<p class="Paragraph">Therefore while referring the log details, Get log file API should be used.</p>
+<p class="Paragraph" style=" margin-left: 50px; text-indent: -30px;"><span class="rls-1-Bullets"><span style="font-family:'Symbol'">&#183;</span></span><span style='word-spacing:normal; font:6.0pt "Times New Roman"'><font size="1" style="font-size:6pt;">&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;</font></span>In order to use the Get log file API, "log-read" permission is required.</p>
+<p class="Paragraph" style=" margin-left: 50px; text-indent: -30px;"><span class="rls-1-Bullets"><span style="font-family:'Symbol'">&#183;</span></span><span style='word-spacing:normal; font:6.0pt "Times New Roman"'><font size="1" style="font-size:6pt;">&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;</font></span>For mixing the event log out of Box install, the value of &quot;RequestKey&quot; field need to be filtered. &#160;</p>
+<p class="Paragraph">Filter after retrieving the value of "Requestkey" field of "MKCOL" that could be retrieved by "action" field.</p>
+<h3>Other Limitations</h3>
+<p class="Paragraph" style=" margin-left: 50px; text-indent: -30px;"><span class="rls-1-Bullets"><span style="font-family:'Symbol'">&#183;</span></span><span style='word-spacing:normal; font:6.0pt "Times New Roman"'><font size="1" style="font-size:6pt;">&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;</font></span>During the installation process, data manipulation cannot be performed to resources which are included under the bar files to be installed</p>
+<p class="Paragraph" style=" margin-left: 50px; text-indent: -30px;"><span class="rls-1-Bullets"><span style="font-family:'Symbol'">&#183;</span></span><span style='word-spacing:normal; font:6.0pt "Times New Roman"'><font size="1" style="font-size:6pt;">&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;</font></span>It will not be rolled back when an error occurs in the box during installation.</p>
+<h3>Details Format of Log 1 Box installation</h3>
+<table class="ParameterTable" style="margin-left: 26pt;" cellspacing="0px" width="96%">
+<col style="width: 26.291%;" />
+<col style="width: 19.774%;" />
+<col style="width: 23.215%;" />
+<col style="width: 30.72%;" />
+<tr>
+<th style="border: Solid 1px #9b9b9b;" bgcolor="#DADADA">
+<p class="GreyColumnHeading" style="font-weight: normal; margin-left: 0px;"><span><font style="font-weight: normal;">State</font></span></p>
+</th>
+<th style="border-top: Solid 1px #9b9b9b; border-right: Solid 1px #9b9b9b; border-bottom: Solid 1px #9b9b9b;" bgcolor="#DADADA">
+<p class="GreyColumnHeading" style="font-weight: normal; margin-left: 0px;"><span><font style="font-weight: normal;">"Action"</font></span></p>
+</th>
+<th style="border-top: Solid 1px #9b9b9b; border-right: Solid 1px #9b9b9b; border-bottom: Solid 1px #9b9b9b;" bgcolor="#DADADA">
+<p class="GreyColumnHeading" style="font-weight: normal; margin-left: 0px;"><span><font style="font-weight: normal;">"Object"</font></span></p>
+</th>
+<th style="border-top: Solid 1px #9b9b9b; border-right: Solid 1px #9b9b9b; border-bottom: Solid 1px #9b9b9b;" bgcolor="#DADADA">
+<p class="GreyColumnHeading" style="font-weight: normal; margin-left: 0px;"><span><font style="font-weight: normal;">"Result"</font></span></p>
+</th>
+</tr>
+<tr>
+<td style="border-left: Solid 1px #9b9b9b; border-right: Solid 1px #9b9b9b; border-bottom: Solid 1px #9b9b9b; vertical-align: top;">
+<p class="TableText">Box installation acceptance</p>
+</td>
+<td style="border-right: Solid 1px #9b9b9b; border-bottom: Solid 1px #9b9b9b; vertical-align: top;">
+<p class="TableText"><font><font>"MKCOL"</font></font></p>
+</td>
+<td style="border-right: Solid 1px #9b9b9b; border-bottom: Solid 1px #9b9b9b; vertical-align: top;">
+<p class="TableText"><font><font class="">URL of the Box</font></font></p>
+</td>
+<td style="border-right: Solid 1px #9b9b9b; border-bottom: Solid 1px #9b9b9b; vertical-align: top;">
+<p class="TableText"><font><font class="">Status code</font></font></p>
+</td>
+</tr>
+<tr>
+<td style="border-left: Solid 1px #9b9b9b; border-right: Solid 1px #9b9b9b; border-bottom: Solid 1px #9b9b9b; vertical-align: top;">
+<p class="TableText">Box during the installation process</p>
+</td>
+<td style="border-right: Solid 1px #9b9b9b; border-bottom: Solid 1px #9b9b9b; vertical-align: top;">
+<p class="TableText"><font><font>Processing Code</font></font></p>
+</td>
+<td style="border-right: Solid 1px #9b9b9b; border-bottom: Solid 1px #9b9b9b; vertical-align: top;">
+<p class="TableText">Entry path to the bar file</p>
+</td>
+<td style="border-right: Solid 1px #9b9b9b; border-bottom: Solid 1px #9b9b9b; vertical-align: top;">
+<p class="TableText"><font><font>Messages corresponding to the processing code</font></font></p>
+</td>
+</tr>
+<tr>
+<td style="border-left: Solid 1px #9b9b9b; border-right: Solid 1px #9b9b9b; border-bottom: Solid 1px #9b9b9b; vertical-align: top;">
+<p class="TableText">Box installation is complete</p>
+</td>
+<td style="border-right: Solid 1px #9b9b9b; border-bottom: Solid 1px #9b9b9b; vertical-align: top;">
+<p class="TableText"><font><font>Processing Code</font></font></p>
+</td>
+<td style="border-right: Solid 1px #9b9b9b; border-bottom: Solid 1px #9b9b9b; vertical-align: top;">
+<p class="TableText"><font><font>URL of the Box</font></font></p>
+</td>
+<td style="border-right: Solid 1px #9b9b9b; border-bottom: Solid 1px #9b9b9b; vertical-align: top;">
+<p class="TableText"><font><font>Messages corresponding to the processing code</font></font></p>
+</td>
+</tr>
+</table>
+<h3>Processing Code</h3>
+<table class="ParameterTable" style="border-collapse: collapse; margin-bottom: 1em; padding: 4px; color: rgb(72, 72, 72); font-family: Verdana, sans-serif; font-size: 12px; line-height: normal; orphans: auto; widows: auto; margin-left: 26pt;" cellspacing="0px" width="96%" bgcolor="#FFFFFF">
+<col style="width: 23.471%;" />
+<col style="width: 27.934%;" />
+<col style="width: 48.595%;" />
+<tr>
+<th style="border: None 1px #ffffff;" bgcolor="#DADADA">
+<p class="GreyColumnHeading" style="font-weight: normal; margin-left: 0px;"><span><font style="font-weight: normal;">Processing Code</font></span></p>
+</th>
+<th style="border-top: None 1px #ffffff; border-right: None 1px #ffffff; border-bottom: None 1px #ffffff;" bgcolor="#DADADA">
+<p class="GreyColumnHeading" style="font-weight: normal; margin-left: 0px;"><span><font style="font-weight: normal;">Message</font></span></p>
+</th>
+<th style="border-top: None 1px #ffffff; border-right: None 1px #ffffff; border-bottom: None 1px #ffffff;" bgcolor="#DADADA">
+<p class="GreyColumnHeading" style="font-weight: normal; margin-left: 0px;"><span><font style="font-weight: normal;">Description</font></span></p>
+</th>
+</tr>
+<tr>
+<td style="border-left: None 1px #ffffff; border-right: None 1px #ffffff; border-bottom: None 1px #ffffff;">
+<p class="TableText"><font><font>PL-BI-0000</font></font></p>
+</td>
+<td style="border-right: None 1px #ffffff; border-bottom: None 1px #ffffff;">
+<p class="TableText"><font><font>bar install completed</font></font></p>
+</td>
+<td style="border-right: None 1px #ffffff; border-bottom: None 1px #ffffff;">
+<p class="TableText"><font class="">Box installation is successfully completed</font></p>
+</td>
+</tr>
+<tr>
+<td style="border-left: Solid 1px #9b9b9b; border-right: Solid 1px #9b9b9b; border-bottom: Solid 1px #9b9b9b;">
+<p class="TableText"><font><font>PL-BI-0001</font></font></p>
+</td>
+<td style="border-right: Solid 1px #9b9b9b; border-bottom: Solid 1px #9b9b9b;">
+<p class="TableText"><font><font>bar install failed ({cause})</font></font></p>
+</td>
+<td style="border-right: Solid 1px #9b9b9b; border-bottom: Solid 1px #9b9b9b;">
+<p class="TableText">Box installation is complete but it was not a normal completion</p>
+</td>
+</tr>
+<tr>
+<td style="border-left: Solid 1px #9b9b9b; border-right: Solid 1px #9b9b9b; border-bottom: Solid 1px #9b9b9b;">
+<p class="TableText"><font><font>PL-BI-1000</font></font></p>
+</td>
+<td style="border-right: Solid 1px #9b9b9b; border-bottom: Solid 1px #9b9b9b;">
+<p class="TableText"><font><font>bar install started</font></font></p>
+</td>
+<td style="border-right: Solid 1px #9b9b9b; border-bottom: Solid 1px #9b9b9b;">
+<p class="TableText">Box installation is started</p>
+</td>
+</tr>
+<tr>
+<td style="border-left: Solid 1px #9b9b9b; border-right: Solid 1px #9b9b9b; border-bottom: Solid 1px #9b9b9b;">
+<p class="TableText"><font><font>PL-BI-1001</font></font></p>
+</td>
+<td style="border-right: Solid 1px #9b9b9b; border-bottom: Solid 1px #9b9b9b;">
+<p class="TableText"><font><font class="">install started</font></font></p>
+</td>
+<td style="border-right: Solid 1px #9b9b9b; border-bottom: Solid 1px #9b9b9b;">
+<p class="TableText">Bar files entries in the Start of Installation</p>
+</td>
+</tr>
+<tr>
+<td style="border-left: Solid 1px #9b9b9b; border-right: Solid 1px #9b9b9b; border-bottom: Solid 1px #9b9b9b;">
+<p class="TableText"><font><font>PL-BI-1003</font></font></p>
+</td>
+<td style="border-right: Solid 1px #9b9b9b; border-bottom: Solid 1px #9b9b9b;">
+<p class="TableText"><font><font>install completed</font></font></p>
+</td>
+<td style="border-right: Solid 1px #9b9b9b; border-bottom: Solid 1px #9b9b9b;">
+<p class="TableText">Bar files entries in the installation is <font class="">successfully completed</font></p>
+</td>
+</tr>
+<tr>
+<td style="border-left: Solid 1px #9b9b9b; border-right: Solid 1px #9b9b9b; border-bottom: Solid 1px #9b9b9b;">
+<p class="TableText"><font><font>PL-BI-1004</font></font></p>
+</td>
+<td style="border-right: Solid 1px #9b9b9b; border-bottom: Solid 1px #9b9b9b;">
+<p class="TableText"><font><font>install failed ({cause})</font></font></p>
+</td>
+<td style="border-right: Solid 1px #9b9b9b; border-bottom: Solid 1px #9b9b9b;">
+<p class="TableText">Bar files entries in the installation is complete but it was not a normal completion</p>
+</td>
+</tr>
+<tr>
+<td style="border-left: Solid 1px #9b9b9b; border-right: Solid 1px #9b9b9b; border-bottom: Solid 1px #9b9b9b;">
+<p class="TableText"><font><font>PL-BI-1005</font></font></p>
+</td>
+<td style="border-right: Solid 1px #9b9b9b; border-bottom: Solid 1px #9b9b9b;">
+<p class="TableText"><font><font>Unknown Error ({cause})</font></font></p>
+</td>
+<td style="border-right: Solid 1px #9b9b9b; border-bottom: Solid 1px #9b9b9b;">
+<p class="TableText"><font><font>Internal error</font></font></p>
+</td>
+</tr>
+</table>
+<h2><span style="font-weight: bold;">リクエスト</span></h2>
+<h3><span style="font-weight: bold;">リクエストURL</span></h3>
+<table class="CodeTable" style="margin-left: 26pt;" cellspacing="0px" width="96%">
+<col style="width: 100%;" />
+<tr>
+<td>
+<p class="Code">/{Cell_name}/{Box_name}</p>
+</td>
+</tr>
+</table>
+<h3><span style="font-weight: bold;">メソッド</span></h3>
+<p class="Paragraph">MKCOL</p>
+<h3><span style="font-weight: bold;">リクエストクエリ</span></h3>
+<div>
+<table style="margin-left: 26pt;" cellspacing="0" width="96%">
+<col style="width: 22%;" />
+<col style="width: 20%;" />
+<col style="width: 20%;" />
+<col style="width: 10%;" />
+<col style="width: 28%;" />
+<tr>
+<th style="border: Solid 1px #9b9b9b;" bgcolor="#DADADA">
+<p class="GreyColumnHeading" style="font-weight: normal; margin-left: 0px;"><span style="font-weight: normal;"><span style="font-weight: bold; font-size: 10pt;"><font size="2" style="font-size:10pt;">項目名</font></span></span></p>
+</th>
+<th style="border-top: Solid 1px #9b9b9b; border-right: Solid 1px #9b9b9b; border-bottom: Solid 1px #9b9b9b;" bgcolor="#DADADA">
+<p class="GreyColumnHeading" style="font-weight: normal; margin-left: 0px;"><span style="font-weight: normal;"><span style="font-weight: bold; font-size: 10pt;"><font size="2" style="font-size:10pt;">概要</font></span></span></p>
+</th>
+<th style="border-top: Solid 1px #9b9b9b; border-right: Solid 1px #9b9b9b; border-bottom: Solid 1px #9b9b9b;" bgcolor="#DADADA">
+<p class="GreyColumnHeading" style="font-weight: normal; margin-left: 0px;"><span style="font-weight: normal;"><span style="font-size: 10pt; font-weight: bold;"><font size="2" style="font-size:10pt;">書式</font></span></span></p>
+</th>
+<th style="border-top: Solid 1px #9b9b9b; border-right: Solid 1px #9b9b9b; border-bottom: Solid 1px #9b9b9b;" bgcolor="#DADADA">
+<p class="GreyColumnHeading" style="font-weight: normal; margin-left: 0px;"><span style="font-weight: normal;"><span style="font-size: 10pt; font-weight: bold;"><font size="2" style="font-size:10pt;">必須</font></span></span></p>
+</th>
+<th style="border-top: Solid 1px #9b9b9b; border-right: Solid 1px #9b9b9b; border-bottom: Solid 1px #9b9b9b;" bgcolor="#DADADA">
+<p class="GreyColumnHeading" style="font-weight: normal; margin-left: 0px;"><span style="font-weight: normal;"><span style="font-size: 10pt; font-weight: bold;"><font size="2" style="font-size:10pt;">有効値</font></span></span></p>
+</th>
+</tr>
+</table>
+</div>
+<div>
+<table class="ParameterTable" style="margin-left: 26pt;" cellspacing="0px" width="96%">
+<col style="width: 22%;" />
+<col style="width: 20%;" />
+<col style="width: 20%;" />
+<col style="width: 10%;" />
+<col style="width: 28%;" />
+<tr>
+<td style="border-left: solid 1px #9b9b9b; border-right: Solid 1px #9b9b9b; border-bottom: Solid 1px #9b9b9b; vertical-align: top;">
+<p class="TableText" style="margin-left: 0px;">dc_cookie_peer</p>
+</td>
+<td style="border-right: Solid 1px #9b9b9b; border-bottom: Solid 1px #9b9b9b; vertical-align: top;">
+<p class="TableText" style="margin-left: 0px;">Authentication cookie value</p>
+</td>
+<td style="border-right: Solid 1px #9b9b9b; border-bottom: Solid 1px #9b9b9b; vertical-align: top;">
+<p class="TableText" style="margin-left: 0px;">Authentication cookie value that is returned from the server during authentication</p>
+</td>
+<td style="border-right: Solid 1px #9b9b9b; border-bottom: Solid 1px #9b9b9b; vertical-align: top;">
+<p class="TableText" style="margin-left: 0px;"><font><font>×</font></font></p>
+</td>
+<td style="border-right: Solid 1px #9b9b9b; border-bottom: Solid 1px #9b9b9b; vertical-align: top;">
+<p class="TableText" style="margin-left: 0px;">Valid only if there is no specification of the Authorization header</p>
+<p class="TableText" style="margin-left: 0px;">to specify if you want to use the authentication information of cookies</p>
+</td>
+</tr>
+</table>
+</div>
+<h3><span style="font-weight: bold;">リクエストヘッダ</span></h3>
+<div>
+<table class="ParameterTable" style="margin-left: 26pt;" cellspacing="0px" width="96%">
+<col style="width: 15.561%;" />
+<col style="width: 37.011%;" />
+<col style="width: 13.177%;" />
+<col style="width: 2.664%;" />
+<col style="width: 31.587%;" />
+<tr>
+<th style="border: Solid 1px #9b9b9b;" bgcolor="#DADADA">
+<p class="GreyColumnHeading" style="font-weight: normal; margin-left: 0px;"><span><font style="font-weight: normal;">Header name</font></span></p>
+</th>
+<th style="border-top: Solid 1px #9b9b9b; border-right: Solid 1px #9b9b9b; border-bottom: Solid 1px #9b9b9b;" bgcolor="#DADADA">
+<p class="GreyColumnHeading" style="font-weight: normal; margin-left: 0px;"><span><font style="font-weight: normal;">Summary</font></span></p>
+</th>
+<th style="border-top: Solid 1px #9b9b9b; border-right: Solid 1px #9b9b9b; border-bottom: Solid 1px #9b9b9b;" bgcolor="#DADADA">
+<p class="GreyColumnHeading" style="font-weight: normal; margin-left: 0px;"><span><font style="font-weight: normal;">Valid value</font></span></p>
+</th>
+<th style="border-top: Solid 1px #9b9b9b; border-right: Solid 1px #9b9b9b; border-bottom: Solid 1px #9b9b9b;" bgcolor="#DADADA">
+<p class="GreyColumnHeading" style="font-weight: normal; margin-left: 0px;"><span><font style="font-weight: normal;">Required</font></span></p>
+</th>
+<th style="border-top: Solid 1px #9b9b9b; border-right: Solid 1px #9b9b9b; border-bottom: Solid 1px #9b9b9b;" bgcolor="#DADADA">
+<p class="GreyColumnHeading" style="font-weight: normal; margin-left: 0px;"><span><font style="font-weight: normal;">Remarks</font></span></p>
+</th>
+</tr>
+</table>
+</div>
+<div>
+<table class="ParameterTable" style="margin-left: 26pt;" cellspacing="0px" width="96%">
+<col style="width: 22%;" />
+<col style="width: 20%;" />
+<col style="width: 20%;" />
+<col style="width: 10%;" />
+<col style="width: 28%;" />
+<tr>
+<td style="border-left: solid 1px #9b9b9b; border-right: Solid 1px #9b9b9b; border-bottom: Solid 1px #9b9b9b; vertical-align: top;">
+<p class="TableText"><font><font>X-Dc-Version</font></font></p>
+</td>
+<td style="border-right: Solid 1px #9b9b9b; border-bottom: Solid 1px #9b9b9b; vertical-align: top;">
+<p class="TableText">Executable version of the Data Cloud API</p>
+</td>
+<td style="border-right: Solid 1px #9b9b9b; border-bottom: Solid 1px #9b9b9b; vertical-align: top;">
+<p class="TableText"><font><font>Valid version</font></font></p>
+</td>
+<td style="border-right: Solid 1px #9b9b9b; border-bottom: Solid 1px #9b9b9b; vertical-align: top;">
+<p class="TableText"><font><font>×</font></font></p>
+</td>
+<td style="border-right: Solid 1px #9b9b9b; border-bottom: Solid 1px #9b9b9b; vertical-align: top;">
+<p class="TableText">If not specified, the latest version of API is specified</p>
+</td>
+</tr>
+</table>
+</div>
+<div>
+<table class="ParameterTable" style="margin-left: 26pt;" cellspacing="0px" width="96%">
+<col style="width: 22%;" />
+<col style="width: 20%;" />
+<col style="width: 20%;" />
+<col style="width: 10%;" />
+<col style="width: 28%;" />
+<tr>
+<td style="border-left: solid 1px #9b9b9b; border-right: Solid 1px #9b9b9b; border-bottom: Solid 1px #9b9b9b; vertical-align: top;">
+<p class="TableText"><font><font>X-HTTP-Method-Override</font></font></p>
+</td>
+<td style="border-right: Solid 1px #9b9b9b; border-bottom: Solid 1px #9b9b9b; vertical-align: top;">
+<p class="TableText" style="color: #353535;">Function method override</p>
+</td>
+<td style="border-right: Solid 1px #9b9b9b; border-bottom: Solid 1px #9b9b9b; vertical-align: top;">
+<p class="TableText"><font><font>Any</font></font></p>
+</td>
+<td style="border-right: Solid 1px #9b9b9b; border-bottom: Solid 1px #9b9b9b; vertical-align: top;">
+<p class="TableText"><font><font>×</font></font></p>
+</td>
+<td style="border-right: Solid 1px #9b9b9b; border-bottom: Solid 1px #9b9b9b; vertical-align: top;">
+<p class="TableText">If this value is specified at the time of the request in the POST method, the specified value is used as a method</p>
+</td>
+</tr>
+</table>
+</div>
+<div>
+<table class="ParameterTable" style="margin-left: 26pt;" cellspacing="0px" width="96%">
+<col style="width: 22%;" />
+<col style="width: 20%;" />
+<col style="width: 20%;" />
+<col style="width: 10%;" />
+<col style="width: 28%;" />
+<tr>
+<td style="border-left: solid 1px #9b9b9b; border-right: Solid 1px #9b9b9b; border-bottom: Solid 1px #9b9b9b; vertical-align: top;">
+<p class="TableText"><font><font>X-Override</font></font></p>
+</td>
+<td style="border-right: Solid 1px #9b9b9b; border-bottom: Solid 1px #9b9b9b; vertical-align: top;">
+<p class="TableText"><font><font>Header override function</font></font></p>
+</td>
+<td style="border-right: Solid 1px #9b9b9b; border-bottom: Solid 1px #9b9b9b; vertical-align: top;">
+<p class="TableText"><font><font>{Name of the header to override} $: $ {value}</font></font></p>
+</td>
+<td style="border-right: Solid 1px #9b9b9b; border-bottom: Solid 1px #9b9b9b; vertical-align: top;">
+<p class="TableText"><font><font>×</font></font></p>
+</td>
+<td style="border-right: Solid 1px #9b9b9b; border-bottom: Solid 1px #9b9b9b; vertical-align: top;">
+<p class="TableText">Overrides the value of the HTTP header.</p>
+<p class="TableText" style="color: #353535;">If you want to override multiple headers, specify multiple X-Override.</p>
+</td>
+</tr>
+</table>
+</div>
+<div>
+<table class="ParameterTable" style="margin-left: 26pt;" cellspacing="0px" width="96%">
+<col style="width: 22%;" />
+<col style="width: 20%;" />
+<col style="width: 20%;" />
+<col style="width: 10%;" />
+<col style="width: 28%;" />
+<tr>
+<td style="border-left: Solid 1px #9b9b9b; border-right: Solid 1px #9b9b9b; border-bottom: Solid 1px #9b9b9b; vertical-align: top;">
+<p class="TableText">X-Dc-RequestKey</p>
+</td>
+<td style="border-right: Solid 1px #9b9b9b; border-bottom: Solid 1px #9b9b9b; vertical-align: top;">
+<p class="TableText">Value of RequestKey field to be output to the event log</p>
+</td>
+<td style="border-right: Solid 1px #9b9b9b; border-bottom: Solid 1px #9b9b9b; vertical-align: top;">
+<p class="TableText">Alphanumeric characters: up to 128, _ (underscore), and - (hyphen)</p>
+</td>
+<td style="border-right: Solid 1px #9b9b9b; border-bottom: Solid 1px #9b9b9b; vertical-align: top;">
+<p class="TableText">×</p>
+</td>
+<td style="border-right: Solid 1px #9b9b9b; border-bottom: Solid 1px #9b9b9b; vertical-align: top;">
+<p class="TableText">If not specified then set PCS-${UNIXtime}</p>
+</td>
+</tr>
+</table>
+</div>
+<div>
+<table class="ParameterTable" style="margin-left: 26pt;" cellspacing="0px" width="96%">
+<col style="width: 14.991%;" />
+<col style="width: 35.869%;" />
+<col style="width: 12.932%;" />
+<col style="width: 2.664%;" />
+<col style="width: 30.527%;" />
+<tr>
+<td style="border-left: solid 1px #9b9b9b; border-right: Solid 1px #9b9b9b; border-bottom: Solid 1px #9b9b9b; vertical-align: top;">
+<p class="TableText"><font><font>Authorization</font></font></p>
+</td>
+<td style="border-right: Solid 1px #9b9b9b; border-bottom: Solid 1px #9b9b9b; vertical-align: top;">
+<p class="TableText">In the form of OAuth2.0, specify the authentication information</p>
+</td>
+<td style="border-right: Solid 1px #9b9b9b; border-bottom: Solid 1px #9b9b9b; vertical-align: top;">
+<p class="TableText"><font><font>Bearer{TokenValue}</font></font></p>
+</td>
+<td style="border-right: Solid 1px #9b9b9b; border-bottom: Solid 1px #9b9b9b; vertical-align: top;">
+<p class="TableText"><font><font>○</font></font></p>
+</td>
+<td style="border-right: Solid 1px #9b9b9b; border-bottom: Solid 1px #9b9b9b; vertical-align: top;">
+<p class="TableText">Authentication token obtained in the acquisition API</p>
+</td>
+</tr>
+</table>
+</div>
+<div>
+<table class="ParameterTable" style="margin-left: 26pt;" cellspacing="0px" width="96%">
+<col style="width: 22%;" />
+<col style="width: 20%;" />
+<col style="width: 20%;" />
+<col style="width: 10%;" />
+<col style="width: 28%;" />
+<tr>
+<td style="border-left: solid 1px #9b9b9b; border-right: Solid 1px #9b9b9b; border-bottom: Solid 1px #9b9b9b; vertical-align: top;">
+<p class="TableText"><font><font>Content-Type</font></font></p>
+</td>
+<td style="border-right: Solid 1px #9b9b9b; border-bottom: Solid 1px #9b9b9b; vertical-align: top;">
+<p class="TableText"><font><font>Specifies the format of the request body</font></font></p>
+</td>
+<td style="border-right: Solid 1px #9b9b9b; border-bottom: Solid 1px #9b9b9b; vertical-align: top;">
+<p class="TableText">application/zip</p>
+</td>
+<td style="border-right: Solid 1px #9b9b9b; border-bottom: Solid 1px #9b9b9b; vertical-align: top;">
+<p class="TableText">○</p>
+</td>
+<td style="border-right: Solid 1px #9b9b9b; border-bottom: Solid 1px #9b9b9b; vertical-align: top;">
+<p class="TableText">&#160;</p>
+</td>
+</tr>
+</table>
+</div>
+<div>
+<table class="ParameterTable" style="margin-left: 26pt;" cellspacing="0px" width="96%">
+<col style="width: 22%;" />
+<col style="width: 20%;" />
+<col style="width: 20%;" />
+<col style="width: 10%;" />
+<col style="width: 28%;" />
+<tr>
+<td style="border-left: solid 1px #9b9b9b; border-right: Solid 1px #9b9b9b; border-bottom: Solid 1px #9b9b9b; vertical-align: top;">
+<p class="TableText">Content-Length</p>
+</td>
+<td style="border-right: Solid 1px #9b9b9b; border-bottom: Solid 1px #9b9b9b; vertical-align: top;">
+<p class="TableText">Specifies the size of the request body</p>
+</td>
+<td style="border-right: Solid 1px #9b9b9b; border-bottom: Solid 1px #9b9b9b; vertical-align: top;">
+<p class="TableText">Byte numbers</p>
+</td>
+<td style="border-right: Solid 1px #9b9b9b; border-bottom: Solid 1px #9b9b9b; vertical-align: top;">
+<p class="TableText">&#160;</p>
+</td>
+<td style="border-right: Solid 1px #9b9b9b; border-bottom: Solid 1px #9b9b9b; vertical-align: top;">
+<p class="TableText">&#160;</p>
+</td>
+</tr>
+</table>
+</div>
+<h3><span style="font-weight: bold;">リクエストボディ</span></h3>
+<table class="ParameterTable" style="margin-left: 26pt;" cellspacing="0px" width="96%">
+<col style="width: 33.011%;" />
+<col style="width: 31.052%;" />
+<col style="width: 10.301%;" />
+<col style="width: 27.09%;" />
+<tr style="color: rgb(72, 72, 72); font-family: Verdana, sans-serif; font-size: 12px; font-style: normal; font-variant: normal; font-weight: normal; letter-spacing: normal; line-height: normal; orphans: auto; text-align: start; text-indent: 0px; text-transform: none; white-space: normal; widows: auto; word-spacing: 0px; -webkit-text-stroke-width: 0px; height: 5px;" bgcolor="#FFFFFF">
+<th style="border: Solid 1px #9b9b9b;" bgcolor="#DADADA">
+<p class="GreyColumnHeading" style="font-weight: normal; margin-left: 0px;"><span style="font-weight: normal;">Summary</span></p>
+</th>
+<th style="border-top: Solid 1px #9b9b9b; border-right: Solid 1px #9b9b9b; border-bottom: Solid 1px #9b9b9b;" bgcolor="#DADADA">
+<p class="GreyColumnHeading" style="font-weight: normal; margin-left: 0px;"><span style="font-weight: normal;">Valid value</span></p>
+</th>
+<th style="border-top: Solid 1px #9b9b9b; border-right: Solid 1px #9b9b9b; border-bottom: Solid 1px #9b9b9b;" bgcolor="#DADADA">
+<p class="GreyColumnHeading" style="font-weight: normal; margin-left: 0px;"><span style="font-weight: normal;">Required</span></p>
+</th>
+<th style="border-top: Solid 1px #9b9b9b; border-right: Solid 1px #9b9b9b; border-bottom: Solid 1px #9b9b9b;" bgcolor="#DADADA">
+<p class="GreyColumnHeading" style="font-weight: normal; margin-left: 0px;"><span style="font-weight: normal;">Remarks</span></p>
+</th>
+</tr>
+<tr style="height: 41px;">
+<td style="border-left: Solid 1px #9b9b9b; border-right: Solid 1px #9b9b9b; border-bottom: Solid 1px #9b9b9b; vertical-align: top;">
+<p class="TableText">Set the request body with binary of the bar file to be installed</p>
+</td>
+<td style="border-right: Solid 1px #9b9b9b; border-bottom: Solid 1px #9b9b9b; vertical-align: top;">
+<p class="TableText">The format specified in the Content-Type header</p>
+</td>
+<td style="border-right: Solid 1px #9b9b9b; border-bottom: Solid 1px #9b9b9b; vertical-align: top;">
+<p class="TableText">○</p>
+</td>
+<td style="border-right: Solid 1px #9b9b9b; border-bottom: Solid 1px #9b9b9b; vertical-align: top;">
+<p class="TableText">Bar files: Zip file format</p>
+</td>
+</tr>
+</table>
+<p class="Paragraph">&#160;</p>
+<p class="Paragraph">For more information about the file structure of the bar files, see <a href="BarFile.htm">bar_File</a>.</p>
+<h3><span style="font-weight: bold;">リクエストサンプル</span></h3>
+<p class="Paragraph">None</p>
+<h2><span style="font-weight: bold;">レスポンス</span></h2>
+<h3 class="Paragraph"><span style="font-weight: bold;">ステータスコード</span></h3>
+<table class="ParameterTable" style="margin-left: 26pt;" cellspacing="0px" width="96%">
+<col style="width: 21.723%;" />
+<col style="width: 30.108%;" />
+<col style="width: 26.239%;" />
+<col style="width: 23.236%;" />
+<tr style="color: rgb(72, 72, 72); font-family: Verdana, sans-serif; font-size: 12px; font-style: normal; font-variant: normal; font-weight: normal; letter-spacing: normal; line-height: normal; orphans: auto; text-align: start; text-indent: 0px; text-transform: none; white-space: normal; widows: auto; word-spacing: 0px; -webkit-text-stroke-width: 0px;" bgcolor="#FFFFFF">
+<th style="border: Solid 1px #9b9b9b;" bgcolor="#DADADA">
+<p class="GreyColumnHeading" style="font-weight: normal; margin-left: 0px;"><span style="font-weight: normal;">Code</span></p>
+</th>
+<th style="border-top: Solid 1px #9b9b9b; border-right: Solid 1px #9b9b9b; border-bottom: Solid 1px #9b9b9b;" bgcolor="#DADADA">
+<p class="GreyColumnHeading" style="font-weight: normal; margin-left: 0px;"><span style="font-weight: normal;">Message</span></p>
+</th>
+<th style="border-top: Solid 1px #9b9b9b; border-right: Solid 1px #9b9b9b; border-bottom: Solid 1px #9b9b9b;" bgcolor="#DADADA">
+<p class="GreyColumnHeading" style="font-weight: normal; margin-left: 0px;"><span style="font-weight: normal;">Summary</span></p>
+</th>
+<th style="border-top: Solid 1px #9b9b9b; border-right: Solid 1px #9b9b9b; border-bottom: Solid 1px #9b9b9b;" bgcolor="#DADADA">
+<p class="GreyColumnHeading" style="font-weight: normal; margin-left: 0px;"><span style="font-weight: normal;">Remarks</span></p>
+</th>
+</tr>
+<tr style="color: rgb(72, 72, 72); font-family: Verdana, sans-serif; font-size: 12px; font-style: normal; font-variant: normal; font-weight: normal; letter-spacing: normal; line-height: normal; orphans: auto; text-align: start; text-indent: 0px; text-transform: none; white-space: normal; widows: auto; word-spacing: 0px; -webkit-text-stroke-width: 0px;" bgcolor="#FFFFFF">
+<td style="border-left: Solid 1px #9b9b9b; border-right: Solid 1px #9b9b9b; border-bottom: Solid 1px #9b9b9b;">
+<p class="TableText">202</p>
+</td>
+<td style="border-right: Solid 1px #9b9b9b; border-bottom: Solid 1px #9b9b9b;">
+<p class="TableText">Accepted</p>
+</td>
+<td style="border-right: Solid 1px #9b9b9b; border-bottom: Solid 1px #9b9b9b;">
+<p class="TableText">Processing accepted success</p>
+</td>
+<td style="border-right: Solid 1px #9b9b9b; border-bottom: Solid 1px #9b9b9b; padding: 4px;">
+<p class="TableText">&#160;</p>
+</td>
+</tr>
+</table>
+<h3><span style="font-weight: bold;">レスポンスヘッダ</span></h3>
+<h4>Common Response Header</h4>
+<div>
+<table class="ParameterTable" style="margin-left: 26pt;" cellspacing="0px" width="96%">
+<col style="width: 23.686%;" />
+<col style="width: 30.236%;" />
+<col style="width: 46.078%;" />
+<tr>
+<th style="border-top: Solid 1px #c0c0c0; border-left: solid 1px #9b9b9b; border-right: Solid 1px #9b9b9b; border-bottom: Solid 1px #9b9b9b;" bgcolor="#DADADA">
+<p class="GreyColumnHeading" style="font-weight: normal; margin-left: 0px;"><span><font style="font-weight: normal;">Item name</font></span></p>
+</th>
+<th style="border-top: Solid 1px #c0c0c0; border-right: Solid 1px #9b9b9b; border-bottom: Solid 1px #9b9b9b;" bgcolor="#DADADA">
+<p class="GreyColumnHeading" style="font-weight: normal; margin-left: 0px;"><span><font style="font-weight: normal;">Summary</font></span></p>
+</th>
+<th style="border-top: Solid 1px #c0c0c0; border-right: Solid 1px #9b9b9b; border-bottom: Solid 1px #9b9b9b;" bgcolor="#DADADA">
+<p class="GreyColumnHeading" style="font-weight: normal; margin-left: 0px;"><span><font style="font-weight: normal;">Remarks</font></span></p>
+</th>
+</tr>
+</table>
+</div>
+<div>
+<table style="margin-left: 26pt;" cellspacing="0" width="96%">
+<col style="width: 23.686%;" />
+<col style="width: 30.236%;" />
+<col style="width: 46.078%;" />
+<tr>
+<td style="border-left: Solid 1px #9b9b9b; border-right: Solid 1px #9b9b9b; border-bottom: Solid 1px #9b9b9b; vertical-align: top;">
+<p class="TableText"><font><font>X-Dc-Version</font></font></p>
+</td>
+<td style="border-right: Solid 1px #9b9b9b; border-bottom: Solid 1px #9b9b9b; vertical-align: top;">
+<p class="TableText">Running version of the Data Cloud API</p>
+</td>
+<td style="border-right: Solid 1px #9b9b9b; border-bottom: Solid 1px #9b9b9b; vertical-align: top;">
+<p class="TableText">API version that the request is processed</p>
+</td>
+</tr>
+</table>
+</div>
+<div>
+<table style="margin-left: 26pt;" cellspacing="0" width="96%">
+<col style="width: 23.686%;" />
+<col style="width: 30.236%;" />
+<col style="width: 46.078%;" />
+<tr>
+<td style="border-left: Solid 1px #9b9b9b; border-right: Solid 1px #9b9b9b; border-bottom: Solid 1px #9b9b9b; vertical-align: top;">
+<p class="TableText"><font><font>Access-Control-Allow-Origin</font></font></p>
+</td>
+<td style="border-right: Solid 1px #9b9b9b; border-bottom: Solid 1px #9b9b9b; vertical-align: top;">
+<p class="TableText">Cross-domain communication authorization header</p>
+</td>
+<td style="border-right: Solid 1px #9b9b9b; border-bottom: Solid 1px #9b9b9b; vertical-align: top;">
+<p class="TableText">Fixed "*" return value</p>
+</td>
+</tr>
+</table>
+</div>
+<h4>Box Installation Response Header</h4>
+<div>
+<table class="ParameterTable" style="margin-left: 26pt;" cellspacing="0px" width="96%">
+<col style="width: 23.686%;" />
+<col style="width: 30.236%;" />
+<col style="width: 46.078%;" />
+<tr>
+<th style="border-top: Solid 1px #c0c0c0; border-left: solid 1px #9b9b9b; border-right: Solid 1px #9b9b9b; border-bottom: Solid 1px #9b9b9b;" bgcolor="#DADADA">
+<p class="GreyColumnHeading" style="font-weight: normal; margin-left: 0px;"><span><font style="font-weight: normal;">Item name</font></span></p>
+</th>
+<th style="border-top: Solid 1px #c0c0c0; border-right: Solid 1px #9b9b9b; border-bottom: Solid 1px #9b9b9b;" bgcolor="#DADADA">
+<p class="GreyColumnHeading" style="font-weight: normal; margin-left: 0px;"><span><font style="font-weight: normal;">Summary</font></span></p>
+</th>
+<th style="border-top: Solid 1px #c0c0c0; border-right: Solid 1px #9b9b9b; border-bottom: Solid 1px #9b9b9b;" bgcolor="#DADADA">
+<p class="GreyColumnHeading" style="font-weight: normal; margin-left: 0px;"><span><font style="font-weight: normal;">Remarks</font></span></p>
+</th>
+</tr>
+</table>
+</div>
+<div>
+<table style="margin-left: 26pt;" cellspacing="0" width="96%">
+<col style="width: 23.686%;" />
+<col style="width: 30.236%;" />
+<col style="width: 46.078%;" />
+<tr>
+<td style="border-left: Solid 1px #9b9b9b; border-right: Solid 1px #9b9b9b; border-bottom: Solid 1px #9b9b9b; vertical-align: top;">
+<p class="TableText"><font><font>Location</font></font></p>
+</td>
+<td style="border-right: Solid 1px #9b9b9b; border-bottom: Solid 1px #9b9b9b; vertical-align: top;">
+<p class="TableText">Box meta data application API for URL</p>
+</td>
+<td style="border-right: Solid 1px #9b9b9b; border-bottom: Solid 1px #9b9b9b; vertical-align: top;">
+<p class="TableText">&#160;</p>
+</td>
+</tr>
+</table>
+</div>
+<h3><span style="font-weight: bold;">レスポンスボディ</span></h3>
+<p class="Paragraph">None</p>
+<h3><span style="font-weight: bold; font-size: 10pt;"><font size="2" style="font-size:10pt;">エラーメッセージ一覧</font></span></h3>
+<p class="Paragraph">Refer to the <a href="../../../../Appendix/ErrorMessages.htm">Error Messages</a>.</p>
+<div>
+<table style="margin-left: 26pt;" cellspacing="0" width="96%" bgcolor="#DADADA">
+<col style="width: 25%;" />
+<col style="width: 25%;" />
+<col style="width: 25%;" />
+<col style="width: 25%;" />
+<tr>
+<th style="border: Solid 1px #9b9b9b;">
+<p class="GreyColumnHeading" style="font-weight: normal; margin-left: 0px;"><span style="font-weight: normal;"><span style="font-size: 10pt; font-weight: bold;"><font size="2" style="font-size:10pt;">コード</font></span></span></p>
+</th>
+<th style="border-top: Solid 1px #9b9b9b; border-right: Solid 1px #9b9b9b; border-bottom: Solid 1px #9b9b9b;">
+<p class="GreyColumnHeading" style="font-weight: normal; margin-left: 0px;"><span style="font-weight: normal;">メッセージ</span></p>
+</th>
+<th style="border-top: Solid 1px #9b9b9b; border-right: Solid 1px #9b9b9b; border-bottom: Solid 1px #9b9b9b;">
+<p class="GreyColumnHeading" style="font-weight: normal; margin-left: 0px;"><span style="font-weight: normal;"><span style="font-weight: bold; font-size: 10pt;"><font size="2" style="font-size:10pt;">概要</font></span></span></p>
+</th>
+<th style="border-top: Solid 1px #9b9b9b; border-right: Solid 1px #9b9b9b; border-bottom: Solid 1px #9b9b9b;">
+<p class="GreyColumnHeading" style="font-weight: normal; margin-left: 0px;"><span style="font-weight: normal;">備考</span></p>
+</th>
+</tr>
+</table>
+</div>
+<div>
+<table class="ParameterTable" style="margin-left: 26pt;" cellspacing="0px" width="96%">
+<col style="width: 25%;" />
+<col style="width: 25%;" />
+<col style="width: 25%;" />
+<col style="width: 25%;" />
+<tr>
+<td style="border-left: Solid 1px #9b9b9b; border-right: Solid 1px #9b9b9b; border-bottom: Solid 1px #9b9b9b; vertical-align: top;">
+<p class="TableText">400</p>
+</td>
+<td style="border-right: Solid 1px #9b9b9b; border-bottom: Solid 1px #9b9b9b; vertical-align: top;">
+<p class="TableText">Bad Request</p>
+</td>
+<td style="border-right: Solid 1px #9b9b9b; border-bottom: Solid 1px #9b9b9b; vertical-align: top;">
+<p class="TableText">Incorrect format of the request header</p>
+<p class="TableText">Invalid request query</p>
+<p class="TableText">(Including the zero byte file) is not a ZIP format</p>
+<p class="TableText">File size bar file exceeds the upper limit value</p>
+<p class="TableText">File Size bar file entry is larger than the upper limit</p>
+<p class="TableText">structure of the bar file is incorrect</p>
+<p class="TableText">version of the bar file is different from the version on the server</p>
+<p class="TableText">Box the same scheme URL is set already exists</p>
+</td>
+<td style="border-right: Solid 1px #9b9b9b; border-bottom: Solid 1px #9b9b9b; vertical-align: top;">
+<p class="TableText">&#160;</p>
+</td>
+</tr>
+</table>
+</div>
+<div>
+<table class="ParameterTable" style="margin-left: 26pt;" cellspacing="0px" width="96%">
+<col style="width: 25%;" />
+<col style="width: 25%;" />
+<col style="width: 25%;" />
+<col style="width: 25%;" />
+<tr>
+<td style="border-left: Solid 1px #9b9b9b; border-right: Solid 1px #9b9b9b; border-bottom: Solid 1px #9b9b9b; vertical-align: top;">
+<p class="TableText">401</p>
+</td>
+<td style="border-right: Solid 1px #9b9b9b; border-bottom: Solid 1px #9b9b9b; vertical-align: top;">
+<p class="TableText">Unauthorized</p>
+</td>
+<td style="border-right: Solid 1px #9b9b9b; border-bottom: Solid 1px #9b9b9b; vertical-align: top;">
+<p class="TableText">Authentication token is invalid</p>
+</td>
+<td style="border-right: Solid 1px #9b9b9b; border-bottom: Solid 1px #9b9b9b; vertical-align: top;">
+<p class="TableText">&#160;</p>
+</td>
+</tr>
+</table>
+</div>
+<div>
+<table class="ParameterTable" style="margin-left: 26pt;" cellspacing="0px" width="96%">
+<col style="width: 25%;" />
+<col style="width: 25%;" />
+<col style="width: 25%;" />
+<col style="width: 25%;" />
+<tr>
+<td style="border-left: Solid 1px #9b9b9b; border-right: Solid 1px #9b9b9b; border-bottom: Solid 1px #9b9b9b; vertical-align: top;">
+<p class="TableText">403</p>
+</td>
+<td style="border-right: Solid 1px #9b9b9b; border-bottom: Solid 1px #9b9b9b; vertical-align: top;">
+<p class="TableText">Forbidden</p>
+</td>
+<td style="border-right: Solid 1px #9b9b9b; border-bottom: Solid 1px #9b9b9b; vertical-align: top;">
+<p class="TableText">If the access rights are insufficient</p>
+</td>
+<td style="border-right: Solid 1px #9b9b9b; border-bottom: Solid 1px #9b9b9b; vertical-align: top;">
+<p class="TableText">&#160;</p>
+</td>
+</tr>
+</table>
+</div>
+<div>
+<table class="ParameterTable" style="margin-left: 26pt;" cellspacing="0px" width="96%">
+<col style="width: 25%;" />
+<col style="width: 25%;" />
+<col style="width: 25%;" />
+<col style="width: 25%;" />
+<tr>
+<td style="border-left: Solid 1px #9b9b9b; border-right: Solid 1px #9b9b9b; border-bottom: Solid 1px #9b9b9b; vertical-align: top;">
+<p class="TableText">404</p>
+</td>
+<td style="border-right: Solid 1px #9b9b9b; border-bottom: Solid 1px #9b9b9b; vertical-align: top;">
+<p class="TableText">Not Found</p>
+</td>
+<td style="border-right: Solid 1px #9b9b9b; border-bottom: Solid 1px #9b9b9b; vertical-align: top;">
+<p class="TableText">Specifies the resource that does not exist</p>
+</td>
+<td style="border-right: Solid 1px #9b9b9b; border-bottom: Solid 1px #9b9b9b; vertical-align: top;">
+<p class="TableText">&#160;</p>
+</td>
+</tr>
+</table>
+</div>
+<div>
+<table class="ParameterTable" style="margin-left: 26pt;" cellspacing="0px" width="96%">
+<col style="width: 25%;" />
+<col style="width: 25%;" />
+<col style="width: 25%;" />
+<col style="width: 25%;" />
+<tr>
+<td style="border-left: Solid 1px #9b9b9b; border-right: Solid 1px #9b9b9b; border-bottom: Solid 1px #9b9b9b; vertical-align: top;">
+<p class="TableText">405</p>
+</td>
+<td style="border-right: Solid 1px #9b9b9b; border-bottom: Solid 1px #9b9b9b; vertical-align: top;">
+<p class="TableText">Method Not Allowed</p>
+</td>
+<td style="border-right: Solid 1px #9b9b9b; border-bottom: Solid 1px #9b9b9b; vertical-align: top;">
+<p class="TableText">Specifies that the request method is not allowed</p>
+</td>
+<td style="border-right: Solid 1px #9b9b9b; border-bottom: Solid 1px #9b9b9b; vertical-align: top;">
+<p class="TableText">&#160;</p>
+</td>
+</tr>
+</table>
+</div>
+<h3><span style="font-weight: bold;">レスポンスサンプル</span></h3>
+<table class="CodeTable" style="margin-left: 26pt;" cellspacing="0px" width="96%">
+<col style="width: 100%;" />
+<tr>
+<td>
+<pre class="prettyprint">
+Location: https://fqdn/CellName/box
+</pre></td>
+</tr>
+</table>
+<p class="Paragraph">&#160;</p>
+<p class="Paragraph">For more details of Box metadata acquisition API for the URL, (Box metadata acquisition), see <a href="../../BoxLevelAPIs/BoxOperation/BarFileInstallationProgress.htm">Box Metadata</a>.</p>
+<h2><span style="font-weight: bold;">CURLコマンド(UNIX)</span></h2>
+<h3>Syntax</h3>
+<table class="CodeTable" style="margin-left: 26pt;" cellspacing="0px" width="96%">
+<col style="width: 100%;" />
+<tr>
+<td>
+<pre class="prettyprint">
+<br />curl -X MKCOL 'https://fqdn/Cellname/BoxName' -v \<br /> -H 'Content-type: application / zip' \<br /> -F '{file_path}; type = application/zip' \<br /> -H 'Authorization: Bearer token'
+</pre></td>
+</tr>
+</table>
+<p class="Paragraph">&#160;</p>
+<br />
+<div style="border-top: Solid 3px #3a3a3a; width: 100%; position: relative; padding-top: 2px; padding-bottom: 2px; padding-right: 5px; background-color: #9b9b9b;" id="footer">
+<h6 style="text-align: right; margin-top: 5pt; margin-bottom: 5pt;">Copyright 2014 &#160;FUJITSU LIMITED</h6>
+</div>
+<script type="text/javascript" language="javascript1.2">
+//<![CDATA[
+<!--
+if (window.writeIntopicBar)
+        writeIntopicBar(0);
+
+
+highlightSearch();
+//-->
+//]]>
+</script>
+</body>
+</html>

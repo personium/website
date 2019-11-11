@@ -1,0 +1,1009 @@
+<?xml version="1.0" encoding="iso-2022-jp" ?>
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN"
+    "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<!-- saved from url=(0014)about:internet -->
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=iso-2022-jp" />
+<meta name="generator" content="Adobe RoboHelp 10" />
+<title>userodata_list</title>
+<link rel="StyleSheet" href="../../../../../../../../default.css" type="text/css" />
+<script type="text/javascript" src="../../../../../../../../prettify.js" language="JavaScript1.2">
+</script>
+<style type="text/css">
+/*<![CDATA[*/
+<!--
+.mainBreadCrumb a:link { color:#000000;
+background-color:transparent;
+text-decoration:none; }
+.mainBreadCrumb a:visited { color:#000000;
+background-color:transparent;
+text-decoration:none; }
+.mainBreadCrumb a:hover { color:#ff0000 ! important;
+cursor:pointer;
+text-decoration:underline; }
+p.mainBreadCrumb { margin-left:0px;
+margin-top:1px ! important; }
+h1 { padding-left:10px ! important; }
+-->
+/*]]>*/
+</style>
+
+<script type="text/javascript" language="JavaScript">
+//<![CDATA[
+function reDo() {
+  if (innerWidth != origWidth || innerHeight != origHeight)
+     location.reload();
+}
+if ((parseInt(navigator.appVersion) == 4) && (navigator.appName == "Netscape")) {
+        origWidth = innerWidth;
+        origHeight = innerHeight;
+        onresize = reDo;
+}
+onerror = null; 
+//]]>
+</script>
+<style type="text/css">
+/*<![CDATA[*/
+<!--
+div.WebHelpPopupMenu { position:absolute;
+left:0px;
+top:0px;
+z-index:4;
+visibility:hidden; }
+-->
+/*]]>*/
+</style>
+
+<script type="text/javascript" language="javascript1.2" src="../../../../../../../../whmsg.js" charset="utf-8">
+</script>
+<script type="text/javascript" language="javascript" src="../../../../../../../../whver.js" charset="utf-8">
+</script>
+<script type="text/javascript" language="javascript1.2" src="../../../../../../../../whutils.js" charset="utf-8">
+</script>
+<script type="text/javascript" language="javascript1.2" src="../../../../../../../../whproxy.js" charset="utf-8">
+</script>
+<script type="text/javascript" language="javascript1.2" src="../../../../../../../../whlang.js" charset="utf-8">
+</script>
+<script type="text/javascript" language="javascript1.2" src="../../../../../../../../whtopic.js" charset="utf-8">
+</script>
+</head>
+<body onload="prettyPrint()">
+<script type="text/javascript" language="javascript1.2">
+//<![CDATA[
+<!--
+if (window.gbWhTopic)
+{
+        var strUrl = document.location.href;
+        var bc = 0;
+        var n = strUrl.toLowerCase().indexOf("bc-");
+        if(n != -1)
+        {
+                document.location.href = strUrl.substring(0, n);
+                bc = strUrl.substring(n+3);
+        }
+
+        if (window.addTocInfo)
+        {
+        addButton("show",BTN_TEXT,"表示","","","","",0,0,"","","");
+
+        }
+        if (window.writeBtnStyle)
+                writeBtnStyle();
+
+        if (window.writeIntopicBar)
+                writeIntopicBar(1);
+
+        
+        
+}
+else
+        if (window.gbIE4)
+                document.location.reload();
+
+onLoadHandler = function()
+{
+  if (window.setRelStartPage)
+        {
+        setTimeout("setRelStartPage('../../../../../../../../Japanese.htm');", 1)
+
+    setTimeout("UpdateBreadCrumbsMarker();", 1);
+        }
+}
+
+if (window.addEventListener){  
+        window.addEventListener('load', onLoadHandler, false);   
+} else if (window.attachEvent){  
+        window.attachEvent('onload', onLoadHandler);  
+}
+
+function onSetStartPage()
+{
+  autoSync(1);
+  sendSyncInfo();
+  sendAveInfoOut();
+}
+//-->
+//]]>
+</script><script type="text/javascript" src="../../../../../../../../ehlpdhtm.js" language="JavaScript1.2">
+</script>
+<div style="width: 100%; position: relative;" id="header">
+<p style="font-size: 10pt;">&#160;</p>
+</div>
+<script type="text/javascript" language="javascript">
+//<![CDATA[
+document.write("<p  class=\"mainBreadCrumb\"  style=\"text-align:left;\" class=\"breadcrumbs\">");
+AddMasterBreadcrumbs("../../../../../../../../Japanese.htm", "breadcrumbs", " &gt; ", "トップ", "../../../../../../../ja/HomePage.htm");
+document.write("userodata_list<\/p>");
+//]]>
+</script>
+<hr style="border-left-width: 0px; margin-left: -6px;" size="1" width="101%" align="center" />
+<form><input type="image" value="Print" onclick="window.print();return false" name="Printer.png" src="../../../../../../../../Images/Printer.png" style="width: 16px; height: 16px; float: right; margin-top: -32px; margin-right: 2px;" /></form>
+<h1>List Entity</h1>
+<h2><span lang="JA" xml:lang="JA" style="line-height: 115%; mso-ascii-font-family: Arial; mso-fareast-theme-font: minor-fareast; mso-hansi-font-family: Arial; mso-bidi-font-family: Arial; mso-ansi-language: EN-US; mso-fareast-language: JA; mso-bidi-language: AR-SA; font-weight: bold; font-family: 'MS Gothic';">概要</span></h2>
+<p class="Paragraph"><span style="font-size: 10.0pt; line-height: 115%; mso-fareast-font-family: 'Times New Roman'; mso-ansi-language: EN-US; mso-fareast-language: EN-US; mso-bidi-language: AR-SA;"><font size="2" style="font-size:10pt;">This API gives a complete list of all the OData entities or records for the selected Entity Type</font></span></p>
+<h2><span style="font-weight: bold;">必要な権限</span></h2>
+<p class="Paragraph">read</p>
+<h2><span style="font-weight: bold;">制限事項</span></h2>
+<h3>Common Limitations</h3>
+<p class="Paragraph">None</p>
+<h3>OData 制限</h3>
+<p class="Paragraph" style=" margin-left: 50px; text-indent: -30px;"><span class="rls-1-Bullets"><span style="font-family:'Symbol'">&#183;</span></span><span style='word-spacing:normal; font:6.0pt "Times New Roman"'><font size="1" style="font-size:6pt;">&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;</font></span><font><font>Content-Type header of the request is treated as application/json all</font></font></p>
+<p class="Paragraph" style=" margin-left: 50px; text-indent: -30px;"><span class="rls-1-Bullets"><span style="font-family:'Symbol'">&#183;</span></span><span style='word-spacing:normal; font:6.0pt "Times New Roman"'><font size="1" style="font-size:6pt;">&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;</font></span><font><font>The body of the request is accepted only json format</font></font></p>
+<p class="Paragraph" style=" margin-left: 50px; text-indent: -30px;"><span class="rls-1-Bullets"><span style="font-family:'Symbol'">&#183;</span></span><span style='word-spacing:normal; font:6.0pt "Times New Roman"'><font size="1" style="font-size:6pt;">&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;</font></span>Request query [$format] specified [xml] is ignored and treated as json</p>
+<p class="Paragraph" style=" margin-left: 50px; text-indent: -30px;"><span class="rls-1-Bullets"><span style="font-family:'Symbol'">&#183;</span></span><span style='word-spacing:normal; font:6.0pt "Times New Roman"'><font size="1" style="font-size:6pt;">&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;</font></span>If $top is not added in the request, at most 25 data will be retrieved.</p>
+<h2>ユーザデータ制限事項</h2>
+<p class="Paragraph" style=" margin-left: 50px; text-indent: -30px;"><span class="rls-1-Bullets"><span style="font-family:'Symbol'">&#183;</span></span><span style='word-spacing:normal; font:6.0pt "Times New Roman"'><font size="1" style="font-size:6pt;">&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;</font></span>Array of Edm.DateTime type is not supported</p>
+<p class="Paragraph" style=" margin-left: 50px; text-indent: -30px;"><span class="rls-1-Bullets"><span style="font-family:'Symbol'">&#183;</span></span><span style='word-spacing:normal; font:6.0pt "Times New Roman"'><font size="1" style="font-size:6pt;">&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;</font></span>If you specify the SYSUTCDATETIME () the properties of the Edm.DateTime type, there are cases where system time to be set is different</p>
+<p class="Paragraph" style=" margin-left: 70px; text-indent: -20px;"><span class="rls-2-Bullets"><span style="font-family:'Courier New'">o</span></span><span style='word-spacing:normal; font:6.0pt "Times New Roman"'><font size="1" style="font-size:6pt;">&#160;&#160;&#160;&#160;&#160;</font></span>During the initialization time of request body and DefaultValue, (__published, __updated are the latter case timing)</p>
+<p class="Paragraph" style=" margin-left: 50px; text-indent: -30px;"><span class="rls-1-Bullets"><span style="font-family:'Symbol'">&#183;</span></span><span style='word-spacing:normal; font:6.0pt "Times New Roman"'><font size="1" style="font-size:6pt;">&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;</font></span>It is possible to create up to 400 DynamicProperty・DeclaredProperty・ComplexTypeProperty for each EntityType</p>
+<h2><span style="font-weight: bold;">リクエスト</span></h2>
+<h3><span style="font-weight: bold;">リクエストURL</span></h3>
+<table class="CodeTable" style="margin-left: 26pt;" cellspacing="0px" width="96%">
+<col style="width: 100%;" />
+<tr>
+<td>
+<p class="Code">/{Cell_name}/{Box_name}/{odata_collection_path}/{entity_set}</p>
+</td>
+</tr>
+</table>
+<p class="Paragraph">&#160;</p>
+<table style="margin-left: 26pt;" cellspacing="0" width="96%">
+<col style="width: 38.057%;" />
+<col style="width: 61.943%;" />
+<tr>
+<th style="border: Solid 1px #9b9b9b;" bgcolor="#DADADA">
+<p class="GreyColumnHeading" style="font-weight: normal; margin-left: 0px;"><span style="font-weight: normal;">Path</span></p>
+</th>
+<th style="border-top: Solid 1px #9b9b9b; border-right: Solid 1px #9b9b9b; border-bottom: Solid 1px #9b9b9b;" bgcolor="#DADADA">
+<p class="GreyColumnHeading" style="font-weight: normal; margin-left: 0px;"><span style="font-weight: normal;"><span style="font-weight: bold; font-size: 10pt;"><font size="2" style="font-size:10pt;">概要</font></span></span></p>
+</th>
+</tr>
+<tr>
+<td style="border-left: Solid 1px #9b9b9b; border-right: Solid 1px #9b9b9b; border-bottom: Solid 1px #9b9b9b; vertical-align: top;">
+<p class="TableText"><font><font>Cell_name</font></font></p>
+</td>
+<td style="border-right: Solid 1px #9b9b9b; border-bottom: Solid 1px #9b9b9b; vertical-align: top;">
+<p class="TableText"><font><font>Cell name</font></font></p>
+</td>
+</tr>
+<tr>
+<td style="border-left: Solid 1px #9b9b9b; border-right: Solid 1px #9b9b9b; border-bottom: Solid 1px #9b9b9b; vertical-align: top;">
+<p class="TableText"><font><font>Box_name</font></font></p>
+</td>
+<td style="border-right: Solid 1px #9b9b9b; border-bottom: Solid 1px #9b9b9b; vertical-align: top;">
+<p class="TableText">Box name</p>
+</td>
+</tr>
+<tr>
+<td style="border-left: Solid 1px #9b9b9b; border-right: Solid 1px #9b9b9b; border-bottom: Solid 1px #9b9b9b; vertical-align: top;">
+<p class="TableText">odata_collection_path</p>
+</td>
+<td style="border-right: Solid 1px #9b9b9b; border-bottom: Solid 1px #9b9b9b; vertical-align: top;">
+<p class="TableText">Collection name</p>
+</td>
+</tr>
+<tr>
+<td style="border-left: Solid 1px #9b9b9b; border-right: Solid 1px #9b9b9b; border-bottom: Solid 1px #9b9b9b; vertical-align: top;">
+<p class="TableText"><font><font>entity_set</font></font></p>
+</td>
+<td style="border-right: Solid 1px #9b9b9b; border-bottom: Solid 1px #9b9b9b; vertical-align: top;">
+<p class="TableText">EntityType name</p>
+</td>
+</tr>
+</table>
+<h3><span style="font-weight: bold;">メソッド</span></h3>
+<p class="Paragraph">GET</p>
+<h3><span style="font-weight: bold;">リクエストクエリ</span></h3>
+<div>
+<table style="margin-left: 26pt;" cellspacing="0" width="96%">
+<col style="width: 22%;" />
+<col style="width: 20%;" />
+<col style="width: 20%;" />
+<col style="width: 10%;" />
+<col style="width: 28%;" />
+<tr>
+<th style="border: Solid 1px #9b9b9b;" bgcolor="#DADADA">
+<p class="GreyColumnHeading" style="font-weight: normal; margin-left: 0px;"><span style="font-weight: normal;"><span style="font-weight: bold; font-size: 10pt;"><font size="2" style="font-size:10pt;">項目名</font></span></span></p>
+</th>
+<th style="border-top: Solid 1px #9b9b9b; border-right: Solid 1px #9b9b9b; border-bottom: Solid 1px #9b9b9b;" bgcolor="#DADADA">
+<p class="GreyColumnHeading" style="font-weight: normal; margin-left: 0px;"><span style="font-weight: normal;"><span style="font-weight: bold; font-size: 10pt;"><font size="2" style="font-size:10pt;">概要</font></span></span></p>
+</th>
+<th style="border-top: Solid 1px #9b9b9b; border-right: Solid 1px #9b9b9b; border-bottom: Solid 1px #9b9b9b;" bgcolor="#DADADA">
+<p class="GreyColumnHeading" style="font-weight: normal; margin-left: 0px;"><span style="font-weight: normal;"><span style="font-size: 10pt; font-weight: bold;"><font size="2" style="font-size:10pt;">書式</font></span></span></p>
+</th>
+<th style="border-top: Solid 1px #9b9b9b; border-right: Solid 1px #9b9b9b; border-bottom: Solid 1px #9b9b9b;" bgcolor="#DADADA">
+<p class="GreyColumnHeading" style="font-weight: normal; margin-left: 0px;"><span style="font-weight: normal;"><span style="font-size: 10pt; font-weight: bold;"><font size="2" style="font-size:10pt;">必須</font></span></span></p>
+</th>
+<th style="border-top: Solid 1px #9b9b9b; border-right: Solid 1px #9b9b9b; border-bottom: Solid 1px #9b9b9b;" bgcolor="#DADADA">
+<p class="GreyColumnHeading" style="font-weight: normal; margin-left: 0px;"><span style="font-weight: normal;"><span style="font-size: 10pt; font-weight: bold;"><font size="2" style="font-size:10pt;">有効値</font></span></span></p>
+</th>
+</tr>
+</table>
+</div>
+<div>
+<table class="ParameterTable" style="margin-left: 26pt;" cellspacing="0px" width="96%">
+<col style="width: 22%;" />
+<col style="width: 20%;" />
+<col style="width: 20%;" />
+<col style="width: 10%;" />
+<col style="width: 28%;" />
+<tr>
+<td style="border-left: solid 1px #9b9b9b; border-right: Solid 1px #9b9b9b; border-bottom: Solid 1px #9b9b9b; vertical-align: top;">
+<p class="TableText" style="margin-left: 0px;">dc_cookie_peer</p>
+</td>
+<td style="border-right: Solid 1px #9b9b9b; border-bottom: Solid 1px #9b9b9b; vertical-align: top;">
+<p class="TableText" style="margin-left: 0px;">Authentication cookie value</p>
+</td>
+<td style="border-right: Solid 1px #9b9b9b; border-bottom: Solid 1px #9b9b9b; vertical-align: top;">
+<p class="TableText" style="margin-left: 0px;">Authentication cookie value that is returned from the server during authentication</p>
+</td>
+<td style="border-right: Solid 1px #9b9b9b; border-bottom: Solid 1px #9b9b9b; vertical-align: top;">
+<p class="TableText" style="margin-left: 0px;"><font><font>×</font></font></p>
+</td>
+<td style="border-right: Solid 1px #9b9b9b; border-bottom: Solid 1px #9b9b9b; vertical-align: top;">
+<p class="TableText" style="margin-left: 0px;">Valid only if there is no specification of the Authorization header</p>
+<p class="TableText" style="margin-left: 0px;">to specify if you want to use the authentication information of cookies</p>
+</td>
+</tr>
+</table>
+</div>
+<p class="Paragraph2" style="font-weight: bold;"><span style="font-weight: bold;">OData common query request</span></p>
+<p class="Paragraph">The following parameters are available for query.</p>
+<p class="Paragraph" style=" margin-left: 50px; text-indent: -30px;"><span class="rls-1-Bullets"><span style="font-family:'Symbol'">&#183;</span></span><span style='word-spacing:normal; font:6.0pt "Times New Roman"'><font size="1" style="font-size:6pt;">&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;</font></span><a href="../../../../../../Appendix/CommonAPIs/SelectQuery.htm">$select query</a></p>
+<p class="Paragraph" style=" margin-left: 50px; text-indent: -30px;"><span class="rls-1-Bullets"><span style="font-family:'Symbol'">&#183;</span></span><span style='word-spacing:normal; font:6.0pt "Times New Roman"'><font size="1" style="font-size:6pt;">&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;</font></span><a href="../../../../../../Appendix/CommonAPIs/ExpandQuery.htm">$expand query</a></p>
+<p class="Paragraph" style=" margin-left: 50px; text-indent: -30px;"><span class="rls-1-Bullets"><span style="font-family:'Symbol'">&#183;</span></span><span style='word-spacing:normal; font:6.0pt "Times New Roman"'><font size="1" style="font-size:6pt;">&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;</font></span><a href="../../../../../../Appendix/CommonAPIs/FormatQuery.htm">$format query</a></p>
+<p class="Paragraph">Valid only for list acquisition</p>
+<p class="Paragraph" style=" margin-left: 50px; text-indent: -30px;"><span class="rls-1-Bullets"><span style="font-family:'Symbol'">&#183;</span></span><span style='word-spacing:normal; font:6.0pt "Times New Roman"'><font size="1" style="font-size:6pt;">&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;</font></span><a href="../../../../../../Appendix/CommonAPIs/FilterQuery.htm">$filter query</a></p>
+<p class="Paragraph" style=" margin-left: 50px; text-indent: -30px;"><span class="rls-1-Bullets"><span style="font-family:'Symbol'">&#183;</span></span><span style='word-spacing:normal; font:6.0pt "Times New Roman"'><font size="1" style="font-size:6pt;">&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;</font></span><a href="../../../../../../Appendix/CommonAPIs/InlinecountQuery.htm">$inlinecount query</a></p>
+<p class="Paragraph" style=" margin-left: 50px; text-indent: -30px;"><span class="rls-1-Bullets"><span style="font-family:'Symbol'">&#183;</span></span><span style='word-spacing:normal; font:6.0pt "Times New Roman"'><font size="1" style="font-size:6pt;">&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;</font></span><a href="../../../../../../Appendix/CommonAPIs/OrderbyQuery.htm">$orderby query</a></p>
+<p class="Paragraph" style=" margin-left: 50px; text-indent: -30px;"><span class="rls-1-Bullets"><span style="font-family:'Symbol'">&#183;</span></span><span style='word-spacing:normal; font:6.0pt "Times New Roman"'><font size="1" style="font-size:6pt;">&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;</font></span><a href="../../../../../../Appendix/CommonAPIs/TopQuery.htm">$top query</a></p>
+<p class="Paragraph" style=" margin-left: 50px; text-indent: -30px;"><span class="rls-1-Bullets"><span style="font-family:'Symbol'">&#183;</span></span><span style='word-spacing:normal; font:6.0pt "Times New Roman"'><font size="1" style="font-size:6pt;">&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;</font></span><a href="../../../../../../Appendix/CommonAPIs/SkipQuery.htm">$skip query</a></p>
+<p class="Paragraph" style=" margin-left: 50px; text-indent: -30px;"><span class="rls-1-Bullets"><span style="font-family:'Symbol'">&#183;</span></span><span style='word-spacing:normal; font:6.0pt "Times New Roman"'><font size="1" style="font-size:6pt;">&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;</font></span><a href="../../../../../../Appendix/CommonAPIs/FullTextSearchQuery.htm">Full-text search (q) queries</a> [Not fixed yet.]</p>
+<h3><span style="font-weight: bold;">リクエストヘッダ</span></h3>
+<div>
+<table class="ParameterTable" style="margin-left: 26pt;" cellspacing="0px" width="96%">
+<col style="width: 15.561%;" />
+<col style="width: 37.011%;" />
+<col style="width: 13.177%;" />
+<col style="width: 2.664%;" />
+<col style="width: 31.587%;" />
+<tr>
+<th style="border: Solid 1px #9b9b9b;" bgcolor="#DADADA">
+<p class="GreyColumnHeading" style="font-weight: normal; margin-left: 0px;"><span><font style="font-weight: normal;">Header name</font></span></p>
+</th>
+<th style="border-top: Solid 1px #9b9b9b; border-right: Solid 1px #9b9b9b; border-bottom: Solid 1px #9b9b9b;" bgcolor="#DADADA">
+<p class="GreyColumnHeading" style="font-weight: normal; margin-left: 0px;"><span><font style="font-weight: normal;">Summary</font></span></p>
+</th>
+<th style="border-top: Solid 1px #9b9b9b; border-right: Solid 1px #9b9b9b; border-bottom: Solid 1px #9b9b9b;" bgcolor="#DADADA">
+<p class="GreyColumnHeading" style="font-weight: normal; margin-left: 0px;"><span><font style="font-weight: normal;">Valid value</font></span></p>
+</th>
+<th style="border-top: Solid 1px #9b9b9b; border-right: Solid 1px #9b9b9b; border-bottom: Solid 1px #9b9b9b;" bgcolor="#DADADA">
+<p class="GreyColumnHeading" style="font-weight: normal; margin-left: 0px;"><span><font style="font-weight: normal;">Required</font></span></p>
+</th>
+<th style="border-top: Solid 1px #9b9b9b; border-right: Solid 1px #9b9b9b; border-bottom: Solid 1px #9b9b9b;" bgcolor="#DADADA">
+<p class="GreyColumnHeading" style="font-weight: normal; margin-left: 0px;"><span><font style="font-weight: normal;">Remarks</font></span></p>
+</th>
+</tr>
+</table>
+</div>
+<div>
+<table class="ParameterTable" style="margin-left: 26pt;" cellspacing="0px" width="96%">
+<col style="width: 22%;" />
+<col style="width: 20%;" />
+<col style="width: 20%;" />
+<col style="width: 10%;" />
+<col style="width: 28%;" />
+<tr>
+<td style="border-left: solid 1px #9b9b9b; border-right: Solid 1px #9b9b9b; border-bottom: Solid 1px #9b9b9b; vertical-align: top;">
+<p class="TableText"><font><font>X-Dc-Version</font></font></p>
+</td>
+<td style="border-right: Solid 1px #9b9b9b; border-bottom: Solid 1px #9b9b9b; vertical-align: top;">
+<p class="TableText">Executable version of the Data Cloud API</p>
+</td>
+<td style="border-right: Solid 1px #9b9b9b; border-bottom: Solid 1px #9b9b9b; vertical-align: top;">
+<p class="TableText"><font><font>Valid version</font></font></p>
+</td>
+<td style="border-right: Solid 1px #9b9b9b; border-bottom: Solid 1px #9b9b9b; vertical-align: top;">
+<p class="TableText"><font><font>×</font></font></p>
+</td>
+<td style="border-right: Solid 1px #9b9b9b; border-bottom: Solid 1px #9b9b9b; vertical-align: top;">
+<p class="TableText">If not specified, the latest version of API is specified</p>
+</td>
+</tr>
+</table>
+</div>
+<div>
+<table class="ParameterTable" style="margin-left: 26pt;" cellspacing="0px" width="96%">
+<col style="width: 22%;" />
+<col style="width: 20%;" />
+<col style="width: 20%;" />
+<col style="width: 10%;" />
+<col style="width: 28%;" />
+<tr>
+<td style="border-left: solid 1px #9b9b9b; border-right: Solid 1px #9b9b9b; border-bottom: Solid 1px #9b9b9b; vertical-align: top;">
+<p class="TableText"><font><font>X-HTTP-Method-Override</font></font></p>
+</td>
+<td style="border-right: Solid 1px #9b9b9b; border-bottom: Solid 1px #9b9b9b; vertical-align: top;">
+<p class="TableText" style="color: #353535;">Function method override</p>
+</td>
+<td style="border-right: Solid 1px #9b9b9b; border-bottom: Solid 1px #9b9b9b; vertical-align: top;">
+<p class="TableText"><font><font>Any</font></font></p>
+</td>
+<td style="border-right: Solid 1px #9b9b9b; border-bottom: Solid 1px #9b9b9b; vertical-align: top;">
+<p class="TableText"><font><font>×</font></font></p>
+</td>
+<td style="border-right: Solid 1px #9b9b9b; border-bottom: Solid 1px #9b9b9b; vertical-align: top;">
+<p class="TableText">If this value is specified at the time of the request in the POST method, the specified value is used as a method</p>
+</td>
+</tr>
+</table>
+</div>
+<div>
+<table class="ParameterTable" style="margin-left: 26pt;" cellspacing="0px" width="96%">
+<col style="width: 22%;" />
+<col style="width: 20%;" />
+<col style="width: 20%;" />
+<col style="width: 10%;" />
+<col style="width: 28%;" />
+<tr>
+<td style="border-left: solid 1px #9b9b9b; border-right: Solid 1px #9b9b9b; border-bottom: Solid 1px #9b9b9b; vertical-align: top;">
+<p class="TableText"><font><font>X-Override</font></font></p>
+</td>
+<td style="border-right: Solid 1px #9b9b9b; border-bottom: Solid 1px #9b9b9b; vertical-align: top;">
+<p class="TableText"><font><font>Header override function</font></font></p>
+</td>
+<td style="border-right: Solid 1px #9b9b9b; border-bottom: Solid 1px #9b9b9b; vertical-align: top;">
+<p class="TableText"><font><font>{Name of the header to override} $: $ {value}</font></font></p>
+</td>
+<td style="border-right: Solid 1px #9b9b9b; border-bottom: Solid 1px #9b9b9b; vertical-align: top;">
+<p class="TableText"><font><font>×</font></font></p>
+</td>
+<td style="border-right: Solid 1px #9b9b9b; border-bottom: Solid 1px #9b9b9b; vertical-align: top;">
+<p class="TableText">Overrides the value of the HTTP header.</p>
+<p class="TableText" style="color: #353535;">If you want to override multiple headers, specify multiple X-Override.</p>
+</td>
+</tr>
+</table>
+</div>
+<div>
+<table class="ParameterTable" style="margin-left: 26pt;" cellspacing="0px" width="96%">
+<col style="width: 22%;" />
+<col style="width: 20%;" />
+<col style="width: 20%;" />
+<col style="width: 10%;" />
+<col style="width: 28%;" />
+<tr>
+<td style="border-left: Solid 1px #9b9b9b; border-right: Solid 1px #9b9b9b; border-bottom: Solid 1px #9b9b9b; vertical-align: top;">
+<p class="TableText">X-Dc-RequestKey</p>
+</td>
+<td style="border-right: Solid 1px #9b9b9b; border-bottom: Solid 1px #9b9b9b; vertical-align: top;">
+<p class="TableText">Value of RequestKey field to be output to the event log</p>
+</td>
+<td style="border-right: Solid 1px #9b9b9b; border-bottom: Solid 1px #9b9b9b; vertical-align: top;">
+<p class="TableText">Alphanumeric characters: up to 128, _ (underscore), and - (hyphen)</p>
+</td>
+<td style="border-right: Solid 1px #9b9b9b; border-bottom: Solid 1px #9b9b9b; vertical-align: top;">
+<p class="TableText">×</p>
+</td>
+<td style="border-right: Solid 1px #9b9b9b; border-bottom: Solid 1px #9b9b9b; vertical-align: top;">
+<p class="TableText">If not specified then set PCS-${UNIXtime}</p>
+</td>
+</tr>
+</table>
+</div>
+<div>
+<table class="ParameterTable" style="margin-left: 26pt;" cellspacing="0px" width="96%">
+<col style="width: 14.991%;" />
+<col style="width: 35.869%;" />
+<col style="width: 12.932%;" />
+<col style="width: 2.664%;" />
+<col style="width: 30.527%;" />
+<tr>
+<td style="border-left: solid 1px #9b9b9b; border-right: Solid 1px #9b9b9b; border-bottom: Solid 1px #9b9b9b; vertical-align: top;">
+<p class="TableText"><font><font>Authorization</font></font></p>
+</td>
+<td style="border-right: Solid 1px #9b9b9b; border-bottom: Solid 1px #9b9b9b; vertical-align: top;">
+<p class="TableText">In the form of OAuth2.0, specify the authentication information</p>
+</td>
+<td style="border-right: Solid 1px #9b9b9b; border-bottom: Solid 1px #9b9b9b; vertical-align: top;">
+<p class="TableText"><font><font>Bearer{TokenValue}</font></font></p>
+</td>
+<td style="border-right: Solid 1px #9b9b9b; border-bottom: Solid 1px #9b9b9b; vertical-align: top;">
+<p class="TableText"><font><font>○</font></font></p>
+</td>
+<td style="border-right: Solid 1px #9b9b9b; border-bottom: Solid 1px #9b9b9b; vertical-align: top;">
+<p class="TableText">Authentication token obtained in the acquisition API</p>
+</td>
+</tr>
+</table>
+</div>
+<div>
+<table class="ParameterTable" style="margin-left: 26pt;" cellspacing="0px" width="96%">
+<col style="width: 22%;" />
+<col style="width: 20%;" />
+<col style="width: 20%;" />
+<col style="width: 10%;" />
+<col style="width: 28%;" />
+<tr>
+<td style="border-left: Solid 1px #9b9b9b; border-right: Solid 1px #9b9b9b; border-bottom: Solid 1px #9b9b9b; vertical-align: top;">
+<p class="TableText"><font><font>Accept</font></font></p>
+</td>
+<td style="border-right: Solid 1px #9b9b9b; border-bottom: Solid 1px #9b9b9b; vertical-align: top;">
+<p class="TableText"><font><font>Specifies the format of the response body</font></font></p>
+</td>
+<td style="border-right: Solid 1px #9b9b9b; border-bottom: Solid 1px #9b9b9b; vertical-align: top;">
+<p class="TableText">application/json</p>
+<p class="TableText">application/xml</p>
+<p class="TableText"><font><font>application/atom + xml</font></font></p>
+</td>
+<td style="border-right: Solid 1px #9b9b9b; border-bottom: Solid 1px #9b9b9b; vertical-align: top;">
+<p class="TableText"><font><font>×</font></font></p>
+</td>
+<td style="border-right: Solid 1px #9b9b9b; border-bottom: Solid 1px #9b9b9b; vertical-align: top;">
+<p class="TableText">Default is treated as [application/json</p>
+<p class="TableText">Preferred is $format</p>
+</td>
+</tr>
+</table>
+</div>
+<div>
+<table class="ParameterTable" style="margin-left: 26pt;" cellspacing="0px" width="96%">
+<col style="width: 22%;" />
+<col style="width: 20%;" />
+<col style="width: 20%;" />
+<col style="width: 10%;" />
+<col style="width: 28%;" />
+<tr>
+<td style="border-left: Solid 1px #9b9b9b; border-right: Solid 1px #9b9b9b; border-bottom: Solid 1px #9b9b9b; vertical-align: top;">
+<p class="TableText"><font><font>If-None-Match</font></font></p>
+</td>
+<td style="border-right: Solid 1px #9b9b9b; border-bottom: Solid 1px #9b9b9b; vertical-align: top;">
+<p class="TableText">Specifies the value of the ETag</p>
+<p class="TableText">If there is no change <span style="font-size: 10.0pt; line-height: 115%; mso-fareast-font-family: 'Times New Roman'; mso-ansi-language: EN-US; mso-fareast-language: EN-US; mso-bidi-language: AR-SA;"><font size="2" style="font-size:10pt;">then status code 304 is returned. Else, 200 is returned with the content</font></span></p>
+</td>
+<td style="border-right: Solid 1px #9b9b9b; border-bottom: Solid 1px #9b9b9b; vertical-align: top;">
+<p class="TableText">String</p>
+</td>
+<td style="border-right: Solid 1px #9b9b9b; border-bottom: Solid 1px #9b9b9b; vertical-align: top;">
+<p class="TableText"><font><font>×</font></font></p>
+</td>
+<td style="border-right: Solid 1px #9b9b9b; border-bottom: Solid 1px #9b9b9b; vertical-align: top;">
+<p class="TableText">Specify if you want to get the Entity that does not match the ETag</p>
+<p class="TableText"><font><font>unsupported</font></font></p>
+</td>
+</tr>
+</table>
+</div>
+<h3><span style="font-weight: bold;">リクエストボディ</span></h3>
+<p class="Paragraph">None</p>
+<h3><span style="font-weight: bold;">リクエストサンプル</span></h3>
+<p class="Paragraph">None</p>
+<h2><span style="font-weight: bold;">レスポンス</span></h2>
+<h3><span style="font-weight: bold;">ステータスコード</span></h3>
+<table style="margin-left: 26pt;" cellspacing="0" width="96%">
+<col style="width: 22.442%;" />
+<col style="width: 46.103%;" />
+<col style="width: 31.455%;" />
+<tr>
+<th style="border: Solid 1px #9b9b9b;" bgcolor="#DADADA">
+<p class="GreyColumnHeading" style="font-weight: normal; margin-left: 0px;"><span style="font-weight: normal;"><span style="font-size: 10pt; font-weight: bold;"><font size="2" style="font-size:10pt;">コード</font></span></span></p>
+</th>
+<th style="border-top: Solid 1px #9b9b9b; border-right: Solid 1px #9b9b9b; border-bottom: Solid 1px #9b9b9b;" bgcolor="#DADADA">
+<p class="GreyColumnHeading" style="font-weight: normal; margin-left: 0px;"><span style="font-weight: normal;"><span style="font-weight: bold; font-size: 10pt;"><font size="2" style="font-size:10pt;">概要</font></span></span></p>
+</th>
+<th style="border-top: Solid 1px #9b9b9b; border-right: Solid 1px #9b9b9b; border-bottom: Solid 1px #9b9b9b;" bgcolor="#DADADA">
+<p class="GreyColumnHeading" style="font-weight: normal; margin-left: 0px;"><span style="font-weight: normal;">備考</span></p>
+</th>
+</tr>
+<tr>
+<td style="border-left: Solid 1px #9b9b9b; border-right: Solid 1px #9b9b9b; border-bottom: Solid 1px #9b9b9b; vertical-align: top;">
+<p class="TableText"><font><font>200</font></font></p>
+</td>
+<td style="border-right: Solid 1px #9b9b9b; border-bottom: Solid 1px #9b9b9b; vertical-align: top;">
+<p class="TableText"><font><font>If the acquisition is completed successfully list</font></font></p>
+</td>
+<td style="border-right: Solid 1px #9b9b9b; border-bottom: Solid 1px #9b9b9b; vertical-align: top;">
+<p class="TableText">&#160;</p>
+</td>
+</tr>
+<tr>
+<td style="border-left: Solid 1px #9b9b9b; border-right: Solid 1px #9b9b9b; border-bottom: Solid 1px #9b9b9b; vertical-align: top;">
+<p class="TableText"><font><font>400</font></font></p>
+</td>
+<td style="border-right: Solid 1px #9b9b9b; border-bottom: Solid 1px #9b9b9b; vertical-align: top;">
+<p class="TableText"><font><font>Error specification of request query</font></font><br />
+<font><font>error specified in the request header</font></font></p>
+</td>
+<td style="border-right: Solid 1px #9b9b9b; border-bottom: Solid 1px #9b9b9b; vertical-align: top;">
+<p class="TableText"><font><font>Not supported</font></font></p>
+</td>
+</tr>
+<tr>
+<td style="border-left: Solid 1px #9b9b9b; border-right: Solid 1px #9b9b9b; border-bottom: Solid 1px #9b9b9b; vertical-align: top;">
+<p class="TableText"><font><font>401</font></font></p>
+</td>
+<td style="border-right: Solid 1px #9b9b9b; border-bottom: Solid 1px #9b9b9b; vertical-align: top;">
+<p class="TableText"><font><font>Authentication token is invalid</font></font></p>
+</td>
+<td style="border-right: Solid 1px #9b9b9b; border-bottom: Solid 1px #9b9b9b; vertical-align: top;">
+<p class="TableText"><font><font>Untested</font></font></p>
+</td>
+</tr>
+<tr>
+<td style="border-left: Solid 1px #9b9b9b; border-right: Solid 1px #9b9b9b; border-bottom: Solid 1px #9b9b9b; vertical-align: top;">
+<p class="TableText"><font><font>404</font></font></p>
+</td>
+<td style="border-right: Solid 1px #9b9b9b; border-bottom: Solid 1px #9b9b9b; vertical-align: top;">
+<p class="TableText">If you specify a Cell that does not exist<br />
+if you specify a Box that does not exist<br />
+if you specify a collection that does not exist<br />
+if you specify the EntitySet that does not exist</p>
+</td>
+<td style="border-right: Solid 1px #9b9b9b; border-bottom: Solid 1px #9b9b9b; vertical-align: top;">
+<p class="TableText"><font><font>Untested</font></font></p>
+</td>
+</tr>
+<tr>
+<td style="border-left: Solid 1px #9b9b9b; border-right: Solid 1px #9b9b9b; border-bottom: Solid 1px #9b9b9b; vertical-align: top;">
+<p class="TableText"><font><font>405</font></font></p>
+</td>
+<td style="border-right: Solid 1px #9b9b9b; border-bottom: Solid 1px #9b9b9b; vertical-align: top;">
+<p class="TableText">If you specify the request method does not allow</p>
+</td>
+<td style="border-right: Solid 1px #9b9b9b; border-bottom: Solid 1px #9b9b9b; vertical-align: top;">
+<p class="TableText"><font><font>Untested</font></font></p>
+</td>
+</tr>
+</table>
+<h3><span style="font-weight: bold;">レスポンスヘッダ</span></h3>
+<div>
+<table class="ParameterTable" style="margin-left: 26pt;" cellspacing="0px" width="96%">
+<col style="width: 23.686%;" />
+<col style="width: 30.236%;" />
+<col style="width: 46.078%;" />
+<tr>
+<th style="border-top: Solid 1px #c0c0c0; border-left: solid 1px #9b9b9b; border-right: Solid 1px #9b9b9b; border-bottom: Solid 1px #9b9b9b;" bgcolor="#DADADA">
+<p class="GreyColumnHeading" style="font-weight: normal; margin-left: 0px;"><span><font style="font-weight: normal;">Item name</font></span></p>
+</th>
+<th style="border-top: Solid 1px #c0c0c0; border-right: Solid 1px #9b9b9b; border-bottom: Solid 1px #9b9b9b;" bgcolor="#DADADA">
+<p class="GreyColumnHeading" style="font-weight: normal; margin-left: 0px;"><span><font style="font-weight: normal;">Summary</font></span></p>
+</th>
+<th style="border-top: Solid 1px #c0c0c0; border-right: Solid 1px #9b9b9b; border-bottom: Solid 1px #9b9b9b;" bgcolor="#DADADA">
+<p class="GreyColumnHeading" style="font-weight: normal; margin-left: 0px;"><span><font style="font-weight: normal;">Remarks</font></span></p>
+</th>
+</tr>
+</table>
+</div>
+<div>
+<table class="ParameterTable" style="margin-left: 26pt;" cellspacing="0px" width="96%">
+<col style="width: 23.686%;" />
+<col style="width: 30.236%;" />
+<col style="width: 46.078%;" />
+<tr>
+<td style="border-left: solid 1px #9b9b9b; border-right: Solid 1px #9b9b9b; border-bottom: Solid 1px #9b9b9b;">
+<p class="TableText"><font><font>Content-Type</font></font></p>
+</td>
+<td style="border-right: Solid 1px #9b9b9b; border-bottom: Solid 1px #9b9b9b;">
+<p class="TableText">Format of the data to be returned</p>
+</td>
+<td style="border-right: Solid 1px #9b9b9b; border-bottom: Solid 1px #9b9b9b;">
+<p class="TableText">"application/xml"</p>
+</td>
+</tr>
+</table>
+</div>
+<div>
+<table style="margin-left: 26pt;" cellspacing="0" width="96%">
+<col style="width: 23.686%;" />
+<col style="width: 30.236%;" />
+<col style="width: 46.078%;" />
+<tr>
+<td style="border-left: Solid 1px #9b9b9b; border-right: Solid 1px #9b9b9b; border-bottom: Solid 1px #9b9b9b; vertical-align: top;">
+<p class="TableText"><font><font>DataServiceVersion</font></font></p>
+</td>
+<td style="border-right: Solid 1px #9b9b9b; border-bottom: Solid 1px #9b9b9b; vertical-align: top;">
+<p class="TableText">Version information of ODataProtocol</p>
+</td>
+<td style="border-right: Solid 1px #9b9b9b; border-bottom: Solid 1px #9b9b9b; vertical-align: top;">
+<p class="TableText">Be returned only if the AssociationEnd could be successfully created<span class="Apple-converted-space">&#160;</span>a confirmed operation</p>
+</td>
+</tr>
+</table>
+</div>
+<h3><span style="font-weight: bold;">レスポンスボディ</span></h3>
+<div>
+<p class="Paragraph2" style=" box-sizing:border-box; color:#ff0000; border-width:4px;"><span style="box-sizing: border-box; color: #ff0000;"><font color="red"><span style="font-size: 10.0pt; line-height: 115%; font-family: Arial, sans-serif; mso-fareast-font-family: 'Times New Roman'; color: #353535; mso-ansi-language: EN-US; mso-fareast-language: JA; mso-bidi-language: AR-SA;"><font size="2" color="#353535" style="font-size:10.000000pt;">In response we get JSON object, the JSON object is defined object (sub-objects)&#160;as well as the corresponding value of the type, (name) and key are as follows</font></span></font></span></p>
+<table style="margin-left: 26pt;" cellspacing="0" width="96%">
+<col style="width: 16.028%;" />
+<col style="width: 19.908%;" />
+<col style="width: 22.636%;" />
+<col style="width: 41.428%;" />
+<tr>
+<th style="border: Solid 1px #9b9b9b;" bgcolor="#DADADA">
+<p class="GreyColumnHeading" style="font-weight: normal; margin-left: 0px;"><span style="font-weight: normal;">オブジェクト</span></p>
+</th>
+<th style="border-top: Solid 1px #9b9b9b; border-right: Solid 1px #9b9b9b; border-bottom: Solid 1px #9b9b9b;" bgcolor="#DADADA">
+<p class="GreyColumnHeading" style="font-weight: normal; margin-left: 0px;"><span style="font-weight: normal;">Name(Key)</span></p>
+</th>
+<th style="border-top: Solid 1px #9b9b9b; border-right: Solid 1px #9b9b9b; border-bottom: Solid 1px #9b9b9b;" bgcolor="#DADADA">
+<p class="GreyColumnHeading" style="font-weight: normal; margin-left: 0px;"><span style="font-weight: normal;">Type</span></p>
+</th>
+<th style="border-top: Solid 1px #9b9b9b; border-right: Solid 1px #9b9b9b; border-bottom: Solid 1px #9b9b9b;" bgcolor="#DADADA">
+<p class="GreyColumnHeading" style="font-weight: normal; margin-left: 0px;"><span style="font-weight: normal;">Value</span></p>
+</th>
+</tr>
+<tr>
+<td style="border-left: Solid 1px #9b9b9b; border-right: Solid 1px #9b9b9b; border-bottom: Solid 1px #9b9b9b;">
+<p class="TableText">Root 　</p>
+</td>
+<td style="border-right: Solid 1px #9b9b9b; border-bottom: Solid 1px #9b9b9b;">
+<p class="TableText">d</p>
+</td>
+<td style="border-right: Solid 1px #9b9b9b; border-bottom: Solid 1px #9b9b9b;">
+<p class="TableText">object</p>
+</td>
+<td style="border-right: Solid 1px #9b9b9b; border-bottom: Solid 1px #9b9b9b;">
+<p class="TableText">Object {1}</p>
+</td>
+</tr>
+<tr>
+<td style="border-left: Solid 1px #9b9b9b; border-right: Solid 1px #9b9b9b; border-bottom: Solid 1px #9b9b9b;">
+<p class="TableText">{1}</p>
+</td>
+<td style="border-right: Solid 1px #9b9b9b; border-bottom: Solid 1px #9b9b9b;">
+<p class="TableText">__count</p>
+</td>
+<td style="border-right: Solid 1px #9b9b9b; border-bottom: Solid 1px #9b9b9b;">
+<p class="TableText">string</p>
+</td>
+<td style="border-right: Solid 1px #9b9b9b; border-bottom: Solid 1px #9b9b9b;">
+<p class="TableText">Get number of results in $inlinecount query</p>
+</td>
+</tr>
+<tr>
+<td style="border-left: Solid 1px #9b9b9b; border-right: Solid 1px #9b9b9b; border-bottom: Solid 1px #9b9b9b;">
+<p class="TableText">{1}</p>
+</td>
+<td style="border-right: Solid 1px #9b9b9b; border-bottom: Solid 1px #9b9b9b;">
+<p class="TableText">results</p>
+</td>
+<td style="border-right: Solid 1px #9b9b9b; border-bottom: Solid 1px #9b9b9b;">
+<p class="TableText">array</p>
+</td>
+<td style="border-right: Solid 1px #9b9b9b; border-bottom: Solid 1px #9b9b9b;">
+<p class="TableText">Array object {2}</p>
+</td>
+</tr>
+<tr>
+<td style="border-left: Solid 1px #9b9b9b; border-right: Solid 1px #9b9b9b; border-bottom: Solid 1px #9b9b9b;">
+<p class="TableText">{2}</p>
+</td>
+<td style="border-right: Solid 1px #9b9b9b; border-bottom: Solid 1px #9b9b9b;">
+<p class="TableText">__published</p>
+</td>
+<td style="border-right: Solid 1px #9b9b9b; border-bottom: Solid 1px #9b9b9b;">
+<p class="TableText">string</p>
+</td>
+<td style="border-right: Solid 1px #9b9b9b; border-bottom: Solid 1px #9b9b9b;">
+<p class="TableText">Date created (UNIX time)</p>
+</td>
+</tr>
+<tr>
+<td style="border-left: Solid 1px #9b9b9b; border-right: Solid 1px #9b9b9b; border-bottom: Solid 1px #9b9b9b;">
+<p class="TableText">{2}</p>
+</td>
+<td style="border-right: Solid 1px #9b9b9b; border-bottom: Solid 1px #9b9b9b;">
+<p class="TableText">__updated</p>
+</td>
+<td style="border-right: Solid 1px #9b9b9b; border-bottom: Solid 1px #9b9b9b;">
+<p class="TableText">string</p>
+</td>
+<td style="border-right: Solid 1px #9b9b9b; border-bottom: Solid 1px #9b9b9b;">
+<p class="TableText">Update date (UNIX time)</p>
+</td>
+</tr>
+<tr>
+<td style="border-left: Solid 1px #9b9b9b; border-right: Solid 1px #9b9b9b; border-bottom: Solid 1px #9b9b9b;">
+<p class="TableText">{2}</p>
+</td>
+<td style="border-right: Solid 1px #9b9b9b; border-bottom: Solid 1px #9b9b9b;">
+<p class="TableText">__metadata</p>
+</td>
+<td style="border-right: Solid 1px #9b9b9b; border-bottom: Solid 1px #9b9b9b;">
+<p class="TableText">object</p>
+</td>
+<td style="border-right: Solid 1px #9b9b9b; border-bottom: Solid 1px #9b9b9b;">
+<p class="TableText">Object {3}</p>
+</td>
+</tr>
+<tr>
+<td style="border-left: Solid 1px #9b9b9b; border-right: Solid 1px #9b9b9b; border-bottom: Solid 1px #9b9b9b;">
+<p class="TableText">{3}</p>
+</td>
+<td style="border-right: Solid 1px #9b9b9b; border-bottom: Solid 1px #9b9b9b;">
+<p class="TableText">etag</p>
+</td>
+<td style="border-right: Solid 1px #9b9b9b; border-bottom: Solid 1px #9b9b9b;">
+<p class="TableText">string</p>
+</td>
+<td style="border-right: Solid 1px #9b9b9b; border-bottom: Solid 1px #9b9b9b;">
+<p class="TableText">ETag value</p>
+</td>
+</tr>
+<tr>
+<td style="border-left: Solid 1px #9b9b9b; border-right: Solid 1px #9b9b9b; border-bottom: Solid 1px #9b9b9b;">
+<p class="TableText">{3}</p>
+</td>
+<td style="border-right: Solid 1px #9b9b9b; border-bottom: Solid 1px #9b9b9b;">
+<p class="TableText">type</p>
+</td>
+<td style="border-right: Solid 1px #9b9b9b; border-bottom: Solid 1px #9b9b9b;">
+<p class="TableText">string</p>
+</td>
+<td style="border-right: Solid 1px #9b9b9b; border-bottom: Solid 1px #9b9b9b;">
+<p class="TableText">EntityType name</p>
+</td>
+</tr>
+<tr>
+<td style="border-left: Solid 1px #9b9b9b; border-right: Solid 1px #9b9b9b; border-bottom: Solid 1px #9b9b9b;">
+<p class="TableText">{3}</p>
+</td>
+<td style="border-right: Solid 1px #9b9b9b; border-bottom: Solid 1px #9b9b9b;">
+<p class="TableText">uri</p>
+</td>
+<td style="border-right: Solid 1px #9b9b9b; border-bottom: Solid 1px #9b9b9b;">
+<p class="TableText">string</p>
+</td>
+<td style="border-right: Solid 1px #9b9b9b; border-bottom: Solid 1px #9b9b9b;">
+<p class="TableText">URL to the resource that you created</p>
+</td>
+</tr>
+<tr>
+<td style="border-left: Solid 1px #9b9b9b; border-right: Solid 1px #9b9b9b; border-bottom: Solid 1px #9b9b9b;">
+<p class="TableText">{2}</p>
+</td>
+<td style="border-right: Solid 1px #9b9b9b; border-bottom: Solid 1px #9b9b9b;">
+<p class="TableText">_id</p>
+</td>
+<td style="border-right: Solid 1px #9b9b9b; border-bottom: Solid 1px #9b9b9b;">
+<p class="TableText">string</p>
+</td>
+<td style="border-right: Solid 1px #9b9b9b; border-bottom: Solid 1px #9b9b9b;">
+<p class="TableText">ID of the Entity (__id)</p>
+</td>
+</tr>
+<tr>
+<td style="border-left: Solid 1px #9b9b9b; border-right: Solid 1px #9b9b9b; border-bottom: Solid 1px #9b9b9b;">
+<p class="TableText">{2}</p>
+</td>
+<td style="border-right: Solid 1px #9b9b9b; border-bottom: Solid 1px #9b9b9b;">
+<p class="TableText">_ {NP-name}</p>
+</td>
+<td style="border-right: Solid 1px #9b9b9b; border-bottom: Solid 1px #9b9b9b;">
+<p class="TableText">string</p>
+</td>
+<td style="border-right: Solid 1px #9b9b9b; border-bottom: Solid 1px #9b9b9b;">
+<p class="TableText"><font style="line-height: normal; orphans: auto; widows: auto; -webkit-text-stroke-width: 0px; background-color: #ffffff;" color="#484848">{4} object<span class="Apple-converted-space">&#160;</span></font><strong style="color: rgb(72, 72, 72); line-height: normal; orphans: auto; widows: auto; -webkit-text-stroke-width: 0px; background-color: #ffffff;"><span style="font-weight: normal;">is returned only if the Link is connected.</span><span class="Apple-converted-space">&#160;</span></strong><font class="goog-text-highlight" style="-webkit-box-shadow: rgb(153, 153, 170) 2px 2px 4px; box-shadow: rgb(153, 153, 170) 2px 2px 4px; box-sizing: border-box; position: relative; line-height: normal; orphans: auto; widows: auto; -webkit-text-stroke-width: 0px;" color="#484848">{NP name}: NavigationPropert name</font></p>
+</td>
+</tr>
+<tr>
+<td style="border-left: Solid 1px #9b9b9b; border-right: Solid 1px #9b9b9b; border-bottom: Solid 1px #9b9b9b;">
+<p class="TableText">{4}</p>
+</td>
+<td style="border-right: Solid 1px #9b9b9b; border-bottom: Solid 1px #9b9b9b;">
+<p class="TableText">_deferred</p>
+</td>
+<td style="border-right: Solid 1px #9b9b9b; border-bottom: Solid 1px #9b9b9b;">
+<p class="TableText">object</p>
+</td>
+<td style="border-right: Solid 1px #9b9b9b; border-bottom: Solid 1px #9b9b9b;">
+<p class="TableText">Object {5}</p>
+</td>
+</tr>
+<tr>
+<td style="border-left: Solid 1px #9b9b9b; border-right: Solid 1px #9b9b9b; border-bottom: Solid 1px #9b9b9b;">
+<p class="TableText">{5}</p>
+</td>
+<td style="border-right: Solid 1px #9b9b9b; border-bottom: Solid 1px #9b9b9b;">
+<p class="TableText">uri</p>
+</td>
+<td style="border-right: Solid 1px #9b9b9b; border-bottom: Solid 1px #9b9b9b;">
+<p class="TableText">string</p>
+</td>
+<td style="border-right: Solid 1px #9b9b9b; border-bottom: Solid 1px #9b9b9b;">
+<p class="TableText">Uri of the resource that has signed a relationship<span class="Apple-converted-space">&#160;</span><br style="color: rgb(72, 72, 72); font-family: Verdana, sans-serif; font-size: 12px; font-style: normal; font-variant: normal; font-weight: normal; letter-spacing: normal; line-height: normal; orphans: auto; text-align: start; text-indent: 0px; text-transform: none; white-space: normal; widows: auto; word-spacing: 0px; -webkit-text-stroke-width: 0px; background-color: #ffffff;" />
+untested</p>
+</td>
+</tr>
+</table>
+</div>
+<p class="Paragraph">&#160;</p>
+<p class="Paragraph">Return dynamic user data that was specified when you registered other than the above mentioned parameters</p>
+<h4 class="Paragraph">Handling Special Characters</h4>
+<div>
+<table style="border-collapse: collapse; padding: 4px; color: rgb(72, 72, 72); font-family: Verdana, sans-serif; font-size: 12px; line-height: normal; orphans: auto; widows: auto; -webkit-text-stroke-width: 0px; margin-left: 26pt;" cellspacing="0" width="96%" bgcolor="#FFFFFF">
+<col style="width: 21.547%;" />
+<col style="width: 31.26%;" />
+<col style="width: 47.193%;" />
+<tr>
+<th style="border: Solid 1px #9b9b9b; padding: 4px;" bgcolor="#E9E9E9" border-bottom:="" solid="">
+<p class="GreyColumnHeading" style="font-weight: normal; margin-left: 0px;"><span><font style="font-weight: normal;">Names / meaning</font></span></p>
+</th>
+<th style="border-top: Solid 1px #9b9b9b; border-right: Solid 1px #9b9b9b; border-bottom: Solid 1px #9b9b9b; padding: 4px;" bgcolor="#E9E9E9">
+<p class="GreyColumnHeading" style="font-weight: normal; margin-left: 0px;"><span><font style="font-weight: normal;">Control code (Unicode)</font></span></p>
+</th>
+<th style="border-top: Solid 1px #9b9b9b; border-right: Solid 1px #9b9b9b; border-bottom: Solid 1px #9b9b9b; padding: 4px;" bgcolor="#E9E9E9">
+<p class="GreyColumnHeading" style="font-weight: normal; margin-left: 0px;"><span><font style="font-weight: normal;">Escaped</font></span></p>
+</th>
+</tr>
+<tr>
+<td style="border-left: Solid 1px #9b9b9b; border-right: Solid 1px #9b9b9b; border-bottom: Solid 1px #9b9b9b; padding: 4px; vertical-align: top;">
+<p class="TableText"><font><font>Recession</font></font></p>
+</td>
+<td style="border-right: Solid 1px #9b9b9b; border-bottom: Solid 1px #9b9b9b; padding: 4px; vertical-align: top;">
+<p class="TableText"><font><font>U +0008</font></font></p>
+</td>
+<td style="border-right: Solid 1px #9b9b9b; border-bottom: Solid 1px #9b9b9b; padding: 4px; vertical-align: top;">
+<p class="TableText"><font><font>\ B</font></font></p>
+</td>
+</tr>
+<tr>
+<td style="border-left: Solid 1px #9b9b9b; border-right: Solid 1px #9b9b9b; border-bottom: Solid 1px #9b9b9b; padding: 4px; vertical-align: top;">
+<p class="TableText"><font><font>Horizontal tab</font></font></p>
+</td>
+<td style="border-right: Solid 1px #9b9b9b; border-bottom: Solid 1px #9b9b9b; padding: 4px; vertical-align: top;">
+<p class="TableText"><font><font>U +0009</font></font></p>
+</td>
+<td style="border-right: Solid 1px #9b9b9b; border-bottom: Solid 1px #9b9b9b; padding: 4px; vertical-align: top;">
+<p class="TableText"><font><font>\ T</font></font></p>
+</td>
+</tr>
+<tr>
+<td style="border-left: Solid 1px #9b9b9b; border-right: Solid 1px #9b9b9b; border-bottom: Solid 1px #9b9b9b; padding: 4px; vertical-align: top;">
+<p class="TableText"><font><font>New line</font></font></p>
+</td>
+<td style="border-right: Solid 1px #9b9b9b; border-bottom: Solid 1px #9b9b9b; padding: 4px; vertical-align: top;">
+<p class="TableText"><font><font>U +000 A</font></font></p>
+</td>
+<td style="border-right: Solid 1px #9b9b9b; border-bottom: Solid 1px #9b9b9b; padding: 4px; vertical-align: top;">
+<p class="TableText"><font><font>\ N</font></font></p>
+</td>
+</tr>
+<tr>
+<td style="border-left: Solid 1px #9b9b9b; border-right: Solid 1px #9b9b9b; border-bottom: Solid 1px #9b9b9b; padding: 4px; vertical-align: top;">
+<p class="TableText"><font><font>Form feed</font></font></p>
+</td>
+<td style="border-right: Solid 1px #9b9b9b; border-bottom: Solid 1px #9b9b9b; padding: 4px; vertical-align: top;">
+<p class="TableText"><font><font>U +000 C</font></font></p>
+</td>
+<td style="border-right: Solid 1px #9b9b9b; border-bottom: Solid 1px #9b9b9b; padding: 4px; vertical-align: top;">
+<p class="TableText"><font><font>\ F</font></font></p>
+</td>
+</tr>
+<tr>
+<td style="border-left: Solid 1px #9b9b9b; border-right: Solid 1px #9b9b9b; border-bottom: Solid 1px #9b9b9b; padding: 4px; vertical-align: top;">
+<p class="TableText"><font><font>Return</font></font></p>
+</td>
+<td style="border-right: Solid 1px #9b9b9b; border-bottom: Solid 1px #9b9b9b; padding: 4px; vertical-align: top;">
+<p class="TableText"><font><font>U +000 D</font></font></p>
+</td>
+<td style="border-right: Solid 1px #9b9b9b; border-bottom: Solid 1px #9b9b9b; padding: 4px; vertical-align: top;">
+<p class="TableText"><font><font>\ R</font></font></p>
+</td>
+</tr>
+<tr>
+<td style="border-left: Solid 1px #9b9b9b; border-right: Solid 1px #9b9b9b; border-bottom: Solid 1px #9b9b9b; padding: 4px; vertical-align: top;">
+<p class="TableText"><font><font>Slash</font></font></p>
+</td>
+<td style="border-right: Solid 1px #9b9b9b; border-bottom: Solid 1px #9b9b9b; padding: 4px; vertical-align: top;">
+<p class="TableText"><font><font>U +002 F</font></font></p>
+</td>
+<td style="border-right: Solid 1px #9b9b9b; border-bottom: Solid 1px #9b9b9b; padding: 4px; vertical-align: top;">
+<p class="TableText"><font><font>\ /</font></font></p>
+</td>
+</tr>
+<tr>
+<td style="border-left: Solid 1px #9b9b9b; border-right: Solid 1px #9b9b9b; border-bottom: Solid 1px #9b9b9b; padding: 4px; vertical-align: top;">
+<p class="TableText"><font><font>Backslash</font></font></p>
+</td>
+<td style="border-right: Solid 1px #9b9b9b; border-bottom: Solid 1px #9b9b9b; padding: 4px; vertical-align: top;">
+<p class="TableText"><font><font>U +005 C</font></font></p>
+</td>
+<td style="border-right: Solid 1px #9b9b9b; border-bottom: Solid 1px #9b9b9b; padding: 4px; vertical-align: top;">
+<p class="TableText"><font><font>\ \</font></font></p>
+</td>
+</tr>
+<tr>
+<td style="border-left: Solid 1px #9b9b9b; border-right: Solid 1px #9b9b9b; border-bottom: solid 1px #9b9b9b; padding: 4px; vertical-align: top;">
+<p class="TableText"><font><font>Control code other than the above</font></font></p>
+</td>
+<td style="border-right: Solid 1px #9b9b9b; border-bottom: solid 1px #9b9b9b; padding: 4px; vertical-align: top;">
+<p class="TableText"><font><font>U +0000 - U +0007<span class="Apple-converted-space">&#160;</span></font></font><br />
+<font><font>U +000 B<span class="Apple-converted-space">&#160;</span></font></font><br />
+<font><font>U +000 E - U Tasu0015<span class="Apple-converted-space">&#160;</span></font></font><br />
+<font><font>Tasu0017 U - U +001 F<span class="Apple-converted-space">&#160;</span></font></font><br />
+<font><font>U +007 F</font></font></p>
+</td>
+<td style="border-right: Solid 1px #9b9b9b; border-bottom: solid 1px #9b9b9b; padding: 4px; vertical-align: top;">
+<p class="TableText"><font><font>\ U {character code}<span class="Apple-converted-space">&#160;</span></font></font><br />
+<font><font>example) \ u0000</font></font></p>
+</td>
+</tr>
+</table>
+</div>
+<p class="Paragraph">&#160;</p>
+<p class="Paragraph2" style="font-weight: bold; text-decoration: underline;">Treatment of a number</p>
+<p class="Paragraph"><span style="font-weight: bold;">Fractional value (Edm.Single type)</span></p>
+<p class="Paragraph">Handling of the case to get the UserOData in JSON format are as follows:</p>
+<p class="Paragraph" style=" margin-left: 50px; text-indent: -30px;"><span class="rls-1-Bullets"><span style="font-family:'Symbol'">&#183;</span></span><span style='word-spacing:normal; font:6.0pt "Times New Roman"'><font size="1" style="font-size:6pt;">&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;</font></span>The value of the fractional part of 5.0, etc. is 0, It will return as an integer value</p>
+<p class="Paragraph" style=" margin-left: 50px; text-indent: -30px;"><span class="rls-1-Bullets"><span style="font-family:'Symbol'">&#183;</span></span><span style='word-spacing:normal; font:6.0pt "Times New Roman"'><font size="1" style="font-size:6pt;">&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;</font></span><font class="">Numerical value of four decimal places, and returned in three-point after rounding</font></p>
+<p class="Paragraph2" style="font-weight: bold; text-decoration: underline;">Numeric (Edm.Double type)</p>
+<p class="Paragraph2" style="font-weight: bold;">※ treatment of type Double of the personium.io follows the specification of the Java Double</p>
+<p class="Paragraph" style=" margin-left: 50px; text-indent: -30px;"><span class="rls-1-Bullets"><span style="font-family:'Symbol'">&#183;</span></span><span style='word-spacing:normal; font:6.0pt "Times New Roman"'><font size="1" style="font-size:6pt;">&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;</font></span>Handling of the case to get the UserOData in JSON format are as follows:</p>
+<p class="Paragraph" style=" margin-left: 70px; text-indent: -20px;"><span class="rls-2-Bullets"><span style="font-family:'Courier New'">o</span></span><span style='word-spacing:normal; font:6.0pt "Times New Roman"'><font size="1" style="font-size:6pt;">&#160;&#160;&#160;&#160;&#160;</font></span>The value of the fractional part of 5.0, etc. is 0, I will return as an integer value</p>
+<p class="Paragraph" style=" margin-left: 50px; text-indent: -30px;"><span class="rls-1-Bullets"><span style="font-family:'Symbol'">&#183;</span></span><span style='word-spacing:normal; font:6.0pt "Times New Roman"'><font size="1" style="font-size:6pt;">&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;</font></span>Information about what is returned</p>
+<p class="Paragraph" style=" margin-left: 70px; text-indent: -20px;"><span class="rls-2-Bullets"><span style="font-family:'Courier New'">o</span></span><span style='word-spacing:normal; font:6.0pt "Times New Roman"'><font size="1" style="font-size:6pt;">&#160;&#160;&#160;&#160;&#160;</font></span>If the number of input values &#8203;&#8203;at the time of registration is accurate to double or more, performs data registration and rounded to the precision to be managed as floats internally, but the range that does not occur informative drop on output In and outputs the converted fixed-point number representation</p>
+<p class="Paragraph" style=" margin-left: 70px; text-indent: -20px;"><span class="rls-2-Bullets"><span style="font-family:'Courier New'">o</span></span><span style='word-spacing:normal; font:6.0pt "Times New Roman"'><font size="1" style="font-size:6pt;">&#160;&#160;&#160;&#160;&#160;</font></span>When using the input fixed-point number output, the identity of the original number and the number of inputs is guaranteed</p>
+<h3><span style="font-weight: bold; font-size: 10pt;"><font size="2" style="font-size:10pt;">エラーメッセージ一覧</font></span></h3>
+<p class="Paragraph">Refer to the <a href="../../../../../../Appendix/ErrorMessages.htm">Error Messages</a>.</p>
+<h3><span style="font-weight: bold;">レスポンスサンプル</span></h3>
+<table class="CodeTable" style="margin-left: 26pt;" cellspacing="0px" width="96%">
+<col style="width: 100%;" />
+<tr>
+<td>
+<pre class="prettyprint">
+<br />{<br />   "d":<br />   {<br />       "results":<br />       [<br />           {<br />               "__metadata":<br />               {<br />                   "uri": "https://fqdn/cellname/boxname/odataname/parent\<br />                   ('0022b630db5c4aedade200a955e82285')",<br />                   "etag": "1-1341275504613",<br />                   "type": "UserData.Category" <br />               },<br />               "__id": "0022b630db5c4aedade200a955e82285",<br />               "__published": "/Date(1341275504613)/",<br />               "__updated": "/Date(1341275504613)/",<br />               "outcome": "6cbb76424e2d",<br />               "episodeType": "care",<br />               "endedAt": "",<br />               "animalId": "100-1",<br />               "startedAt": "2010-11-08",<br />               "_Sales": {<br />                 "__deferred": {<br />                   "uri": "https://fqdn/cellname/boxname/odataname/Sales('0abc630db5c4aedade200a955e82285')" <br />                 }<br />              }<br />           }<br />       ],<br />       "__count": "1" <br />   }<br />}
+</pre></td>
+</tr>
+</table>
+<h2><span style="font-weight: bold;">CURLコマンド(UNIX)</span></h2>
+<h3>Syntax</h3>
+<table class="CodeTable" style="margin-left: 26pt;" cellspacing="0px" width="96%">
+<col style="width: 100%;" />
+<tr>
+<td>
+<pre class="prettyprint">
+<br />curl -X GET "https://fqdn/CellName/BoxName/OdataName/SourceEntityType\<br />('id')/$links/_DestinationEntityType "\<br /> -H "Authorization:Bearer token" -i -k -s
+</pre></td>
+</tr>
+</table>
+<h3>&#160;</h3>
+<p class="Paragraph">&#160;</p>
+<br />
+<div style="border-top: Solid 3px #3a3a3a; width: 100%; position: relative; padding-top: 2px; padding-bottom: 2px; padding-right: 5px; background-color: #9b9b9b;" id="footer">
+<h6 style="text-align: right; margin-top: 5pt; margin-bottom: 5pt;">Copyright 2014 &#160;FUJITSU LIMITED</h6>
+</div>
+<script type="text/javascript" language="javascript1.2">
+//<![CDATA[
+<!--
+if (window.writeIntopicBar)
+        writeIntopicBar(0);
+
+
+highlightSearch();
+//-->
+//]]>
+</script>
+</body>
+</html>

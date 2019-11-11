@@ -1,0 +1,220 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+<meta http-equiv="Content-Language" content="en-US" />
+ <meta name="generator" content="Adobe RoboHelp 10" />
+<title>セル制御オブジェクト</title>
+<link rel="StyleSheet" href="../../default.css" type="text/css" />
+<script type="text/javascript" language="JavaScript">
+//<![CDATA[
+function reDo() {
+  if (innerWidth != origWidth || innerHeight != origHeight)
+     location.reload();
+}
+if ((parseInt(navigator.appVersion) == 4) && (navigator.appName == "Netscape")) {
+	origWidth = innerWidth;
+	origHeight = innerHeight;
+	onresize = reDo;
+}
+onerror = null; 
+//]]>
+</script>
+<style type="text/css">
+<!--
+div.WebHelpPopupMenu { position:absolute;
+left:0px;
+top:0px;
+z-index:4;
+visibility:hidden; }
+-->
+</style>
+<script type="text/javascript" language="javascript1.2" src="../../whmsg.js" charset="utf-8"></script>
+<script type="text/javascript" language="javascript" src="../../whver.js" charset="utf-8"></script>
+<script type="text/javascript" language="javascript1.2" src="../../whutils.js" charset="utf-8"></script>
+<script type="text/javascript" language="javascript1.2" src="../../whproxy.js" charset="utf-8"></script>
+<script type="text/javascript" language="javascript1.2" src="../../whlang.js" charset="utf-8"></script>
+<script type="text/javascript" language="javascript1.2" src="../../whtopic.js" charset="utf-8"></script>
+
+</head>
+
+<body page-style="x-size: Letter;"><script type="text/javascript" language="javascript1.2">//<![CDATA[
+<!--
+if (window.gbWhTopic)
+{
+	var strUrl = document.location.href;
+	var bc = 0;
+	var n = strUrl.toLowerCase().indexOf("bc-");
+	if(n != -1)
+	{
+		document.location.href = strUrl.substring(0, n);
+		bc = strUrl.substring(n+3);
+	}
+
+	if (window.addTocInfo)
+	{
+	addTocInfo("セル制御オブジェクト");
+addButton("show",BTN_TEXT,"表示","","","","",0,0,"","","");
+
+	}
+	if (window.writeBtnStyle)
+		writeBtnStyle();
+
+	if (window.writeIntopicBar)
+		writeIntopicBar(1);
+
+	
+	
+}
+else
+	if (window.gbIE4)
+		document.location.reload();
+
+onLoadHandler = function()
+{
+  if (window.setRelStartPage)
+	{
+	setTimeout("setRelStartPage('../../Japanese.htm');", 1)
+
+    setTimeout("UpdateBreadCrumbsMarker();", 1);
+	}
+}
+
+if (window.addEventListener){  
+	window.addEventListener('load', onLoadHandler, false);   
+} else if (window.attachEvent){  
+	window.attachEvent('onload', onLoadHandler);  
+}
+
+function onSetStartPage()
+{
+  autoSync(1);
+  sendSyncInfo();
+  sendAveInfoOut();
+}
+//-->
+//]]></script>
+<script type="text/javascript" src="../../ehlpdhtm.js" language="JavaScript1.2"></script>
+
+<h1>セル制御オブジェクト</h1>
+<p class="Paragraph">セル制御オブジェクトとは、セルに付随する機能を管理するためのODataオブジェクト群です。</p>
+<p class="Paragraph">具体的には、「Role」、「Account」、「ExtCell」、「Relation」、「ExtRole」、「Box」、「SentMessage」、「ReceivedMessage」のオブジェクトがあります。</p>
+<p class="Paragraph">このセクションでは、「Role」、「Account」、「ExtCell」、「Relation」、「ExtRole」、「Box」の機能について説明します。</p>
+<ul>
+	<li style="list-style: url('../../Images/arrow.png'); margin-left: -20px;"><h2>Role</h2></li>
+</ul>
+<p class="Paragraph2" style="background-color: #ffffff; font-size: 10.0pt; 
+	 font-family: Arial, sans-serif;">Role（=役割）は、該当セルにアクセスする利用者主体(User 
+ entity)に付与しうる役割を定義するための定義体です。</p>
+<p class="Paragraph2" style="background-color: #ffffff; font-size: 10.0pt; 
+	 font-family: Arial, sans-serif;">（例：administrator、teacher、studentなど）</p>
+<p 
+	 class="Bullet_1"><span style="font-family:'Symbol'">&#183;</span><span style='word-spacing:normal; font:6.0pt "Times New Roman"'><font size="1" style="font-size:6pt;">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</font></span>データアクセスを含むセルへのあらゆるアクセスは、付与されたRoleに応じて制御されます。</p>
+<p 
+	 class="Bullet_1"><span style="font-family:'Symbol'">&#183;</span><span style='word-spacing:normal; font:6.0pt "Times New Roman"'><font size="1" style="font-size:6pt;">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</font></span>セルにアクセスするためには、指定されたアカウント(ユーザ)とRoleを定義しなければなりません。</p>
+<p 
+	 class="Bullet_1"><span style="font-family:'Symbol'">&#183;</span><span style='word-spacing:normal; font:6.0pt "Times New Roman"'><font size="1" style="font-size:6pt;">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</font></span>Account/ExtCell/Relation/ExtRoleに対しRoleを紐付けることによって、利用者主体(User 
+ entity)にRoleを付与することが出来ます。 </p>
+<p 
+	 class="Bullet_1"><span style="font-family:'Symbol'">&#183;</span><span style='word-spacing:normal; font:6.0pt "Times New Roman"'><font size="1" style="font-size:6pt;">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</font></span>Roleを定義するためには、RoleをBoxに関連づける(<a href="API_リファレンス/ペルソナコンテナAPI/CellレベルAPI/Cell_制御オブジェクト/Role/RoleLink/RoleLinkCreate.htm">$links登録</a>)必要があります。<span 
+	 style="font-size: 10.0pt; font-family: Arial, sans-serif;"><font size="2" style="font-size:10pt;">(関連付けない場合、Roleは自動的に<a 
+	 href="Glossary.htm#M">Main Box</a>に関連付けられます。)</font></span></p>
+<p 
+	 class="Bullet_1"><span style="font-family:'Symbol'">&#183;</span><span style='word-spacing:normal; font:6.0pt "Times New Roman"'><font size="1" style="font-size:6pt;">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</font></span>セルにアクセスするには、利用者にRoleを定義する必要があります。</p>
+<p 
+	 class="Bullet_1"><span style="font-family:'Symbol'">&#183;</span><span style='word-spacing:normal; font:6.0pt "Times New Roman"'><font size="1" style="font-size:6pt;">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</font></span>セルのアカウントまたはExtCellのユーザがセルにアクセスするRoleを定義できます。</p>
+<ul>
+	<li style="list-style: url('../../Images/arrow.png'); margin-left: -20px;"><h2>Account</h2></li>
+</ul>
+<p class="Paragraph2">Accountは、該当のCellに属する利用者主体（ユーザ）を定義する定義体です。</p>
+<p class="Paragraph2"><span style="font-size: 10.0pt; line-height: 115%; 
+							 font-family: Arial, sans-serif; mso-fareast-font-family: Calibri; 
+							 mso-fareast-theme-font: minor-latin; mso-ansi-language: EN-US; 
+							 mso-fareast-language: EN-US; mso-bidi-language: AR-SA;"><font size="2" style="font-size:10pt;">こ</font></span><span 
+	 style="font-size: 10.0pt; line-height: 115%; font-family: Arial, sans-serif; 
+	 mso-fareast-font-family: Calibri;"><font size="2" style="font-size:10pt;">の定義体にRoleを紐付けることで、セルのRoleを付与することができます。</font></span></p>
+<p class="Paragraph2" style="font-size: 10.0pt; line-height: 115%; font-family: Arial, sans-serif; 
+	 mso-fareast-font-family: Calibri; mso-fareast-theme-font: minor-latin;"><span 
+	 style="font-size: 10.0pt; line-height: 115%; font-family: Arial, sans-serif; 
+	 mso-fareast-font-family: Calibri; mso-fareast-theme-font: minor-latin;"><font size="2" style="font-size:10pt;">また、アカウント名やパスワードの情報も保存します。 
+ </font></span></p>
+<ul>
+	<li style="list-style: url('../../Images/arrow.png'); margin-left: -20px;"><h2>ExtCell</h2></li>
+</ul>
+<p class="Paragraph2">ExtCell(外部参照セル)は、着目するセルからみた外部セルへの参照を外部セルのURL登録によって定義します。<br />
+すなわち、該当セルが意識すべき外部セルは、この定義体で管理されます。<br />
+</p>
+<p class="Paragraph2">この定義体にRoleを紐付けることで、外部セルで利用者認証を受けた主体に、主セルでのRoleを付与することができます。</p>
+<p class="Paragraph2">関係が2つのセルの間で確立されれば、ExtRoleが定義されます。</p>
+<p class="Paragraph2">セルが外部セルにアクセスでき（外部セル→セルも可）、内部のRoleはRelationで写像されます。</p>
+<ul>
+	<li style="list-style: url('../../Images/arrow.png'); margin-left: -20px;"><h2>Relation</h2></li>
+</ul>
+<p class="Paragraph2">Relationは、セルと外部セルとの関係性を定義するために用いる、関係情報の定義体です。　（例：所属する団体、友人）</p>
+<p class="Paragraph2">この定義体とExtCellを紐付けることで、外部セルとの関係を定義する事ができます。<br />
+また、この定義体に役割（Role）を紐付けることで、外部セルとの関係に応じて、セルでの役割を付与することができます。</p>
+<p class="Paragraph2">また、Relationの属性値として設定可能なBoxは、設定したBoxに関連する関係性を表し、アクセス制御等には影響ありません。</p>
+<p class="Paragraph2" style="font-size: 10.0pt; line-height: 115%; font-family: Arial, sans-serif; 
+	 mso-fareast-font-family: Calibri; mso-fareast-theme-font: minor-latin; 
+	 mso-ansi-language: EN-US; mso-fareast-language: EN-US; mso-bidi-language: AR-SA;"><span 
+	 style="mso-bidi-language: AR-SA;">例えば、以下の図において、親セルと娘セルの間のRelationは、Family(家族)と定義できます。</span></p>
+<p class="Figure"><img src="../../Images/Relation.gif" alt="" style="border: none;" 
+						 border="0" /></p>
+<p class="Paragraph2">&#160;</p>
+<p class="Paragraph2"><span style="font-size: 10.0pt; line-height: 115%; 
+							 font-family: Arial, sans-serif; mso-fareast-font-family: Calibri; 
+							 mso-fareast-theme-font: minor-latin; mso-ansi-language: EN-US; 
+							 mso-fareast-language: EN-US; mso-bidi-language: AR-SA;"><font size="2" style="font-size:10pt;">Relationは、「</font></span><span 
+	 style="mso-fareast-theme-font: minor-latin; mso-ansi-language: EN-US; 
+	 mso-fareast-language: EN-US; mso-bidi-language: AR-SA;">friend」、「family」、「social」といった 
+ 名前によって定義され、また大抵の場合Boxと紐付けられます。</span></p>
+<p class="Paragraph2" style="mso-fareast-theme-font: minor-latin;"><span 
+	 style="mso-ansi-language: EN-US; mso-fareast-language: EN-US; mso-bidi-language: AR-SA;">外部セルとのRelationは、ExtCellを作成したとき定義されます。</span></p>
+<p class="Paragraph2"><span style="mso-fareast-theme-font: minor-latin; 
+							 mso-ansi-language: EN-US; mso-fareast-language: EN-US; 
+							 mso-bidi-language: AR-SA;">さらに、セルへのアクセス権を外部セルに付与するため、Roleが外部セルとのRelationとともに写像されています。</span></p>
+<ul>
+	<li style="list-style: url('../../Images/arrow.png'); margin-left: -20px;"><h2>ExtRole</h2></li>
+</ul>
+<p class="Paragraph2"><span style="background-color: #ffffff; font-size: 10.0pt; 
+							 font-family: Arial, sans-serif;"><font size="2" style="font-size:10pt;">ExtRoleとは、特</font></span>定の関係にある外部セルにて、特定の役割（Role）を付与された利用者主体を表す定義体です。（例：所属する団体の管理者）</p>
+<p class="Paragraph2" style="background-color: #ffffff; font-size: 10.0pt; 
+	 font-family: Arial, sans-serif;">この定義体にRoleを紐付けることで、外部セルとの関係とそこで与えられたRoleに応じて、セル<span 
+	 style="font-size: 10.0pt; font-family: Arial, sans-serif;"><font size="2" style="font-size:10pt;">でのRoleを付与することができます。</font></span></p>
+<p class="Paragraph2" style="background-color: #ffffff; font-size: 10.0pt; 
+	 font-family: Arial, sans-serif;">ExtRoleで指定する外部セルは、Environmentの同異に関わらず生成可能です。</p>
+<p class="Paragraph2" style="background-color: #ffffff; font-size: 10.0pt; 
+	 font-family: Arial, sans-serif;">特定のセルにアクセスするために、以下の条件があります。</p>
+<p 
+	 class="Bullet_1"><span style="font-family:'Symbol'">&#183;</span><span style='word-spacing:normal; font:6.0pt "Times New Roman"'><font size="1" style="font-size:6pt;">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</font></span><span style="font-size: 10.0pt; font-family: Arial, sans-serif; 
+							 background-color: #ffffff;"><font size="2" style="font-size:10pt;">外部セルのRoleでExtRoleを写像する</font></span><span 
+	 style="font-size: 10.0pt; font-family: Arial, sans-serif;"><font size="2" style="font-size:10pt;"> </font></span></p>
+<p 
+	 class="Bullet_1"><span style="font-family:'Symbol'">&#183;</span><span style='word-spacing:normal; font:6.0pt "Times New Roman"'><font size="1" style="font-size:6pt;">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</font></span>これらの2つのセルのRelationを定義する（参照：<a href="API_リファレンス/ペルソナコンテナAPI/CellレベルAPI/Cell_制御オブジェクト/Relation/RelCreate.htm">Relation登録API</a>）</p>
+<p class="Paragraph2">&#160;</p>
+<p class="Paragraph2"><span style="font-size: 10.0pt; font-family: Arial, sans-serif;"><font size="2" style="font-size:10pt;">また、</font></span>RoleでExtRoleを写像する以下のオプションを使用できます:</p>
+<p class="Bullet_1" style="font-size: 10.0pt; 
+											 font-family: Arial, sans-serif;"><span style="font-family:'Symbol'">&#183;</span><span style='word-spacing:normal; font:6.0pt "Times New Roman"'><font size="1" style="font-size:6pt;">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</font></span>ExtRoleから、Role名を選択し、外部セルのRoleにそれを写像する</p>
+<p class="Bullet_1" style="font-size: 10.0pt; 
+											 font-family: Arial, sans-serif;"><span style="font-family:'Symbol'">&#183;</span><span style='word-spacing:normal; font:6.0pt "Times New Roman"'><font size="1" style="font-size:6pt;">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</font></span>Roleから、ExtRoleを選択し、外部セルのRoleにそれを写像する</p>
+<ul>
+	<li style="list-style: url('../../Images/arrow.png'); margin-left: -20px;"><h2>Box</h2></li>
+</ul>
+<p class="Paragraph2">アプリケーション毎のデータ保管の単位。.</p>
+<p class="Paragraph2">Boxはアプリケーションのためのデータを保存するユニットです。 </p>
+<p class="Paragraph2">PCSは、Cell作成時に初期状態で「Main Box」というBoxを含んでいて、&quot;__&quot;(アンダーバー2つ)として表されます。 
+ </p>
+<p class="Paragraph2">Main Boxは削除できませんが、特定用途に関連するデータを保存できる他のアプリケーションのためのBoxを作成できます。</p>
+<p class="Paragraph">&#160;</p>
+<script type="text/javascript" language="javascript1.2">//<![CDATA[
+<!--
+if (window.writeIntopicBar)
+	writeIntopicBar(0);
+
+
+highlightSearch();
+//-->
+//]]></script>
+</body>
+</html>

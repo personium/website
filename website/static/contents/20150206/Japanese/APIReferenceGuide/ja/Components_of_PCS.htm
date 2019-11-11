@@ -1,0 +1,217 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+<meta http-equiv="Content-Language" content="en-US" />
+ <meta name="generator" content="Adobe RoboHelp 10" />
+<title>PCSのデータ構造</title>
+<link rel="StyleSheet" href="../../default.css" type="text/css" />
+<script type="text/javascript" language="JavaScript">
+//<![CDATA[
+function reDo() {
+  if (innerWidth != origWidth || innerHeight != origHeight)
+     location.reload();
+}
+if ((parseInt(navigator.appVersion) == 4) && (navigator.appName == "Netscape")) {
+	origWidth = innerWidth;
+	origHeight = innerHeight;
+	onresize = reDo;
+}
+onerror = null; 
+//]]>
+</script>
+<style type="text/css">
+<!--
+div.WebHelpPopupMenu { position:absolute;
+left:0px;
+top:0px;
+z-index:4;
+visibility:hidden; }
+-->
+</style>
+<script type="text/javascript" language="javascript1.2" src="../../whmsg.js" charset="utf-8"></script>
+<script type="text/javascript" language="javascript" src="../../whver.js" charset="utf-8"></script>
+<script type="text/javascript" language="javascript1.2" src="../../whutils.js" charset="utf-8"></script>
+<script type="text/javascript" language="javascript1.2" src="../../whproxy.js" charset="utf-8"></script>
+<script type="text/javascript" language="javascript1.2" src="../../whlang.js" charset="utf-8"></script>
+<script type="text/javascript" language="javascript1.2" src="../../whtopic.js" charset="utf-8"></script>
+
+</head>
+
+<body page-style="x-size: Letter;"><script type="text/javascript" language="javascript1.2">//<![CDATA[
+<!--
+if (window.gbWhTopic)
+{
+	var strUrl = document.location.href;
+	var bc = 0;
+	var n = strUrl.toLowerCase().indexOf("bc-");
+	if(n != -1)
+	{
+		document.location.href = strUrl.substring(0, n);
+		bc = strUrl.substring(n+3);
+	}
+
+	if (window.addTocInfo)
+	{
+	addTocInfo("PCSのデータ構造");
+addButton("show",BTN_TEXT,"表示","","","","",0,0,"","","");
+
+	}
+	if (window.writeBtnStyle)
+		writeBtnStyle();
+
+	if (window.writeIntopicBar)
+		writeIntopicBar(1);
+
+	
+	
+}
+else
+	if (window.gbIE4)
+		document.location.reload();
+
+onLoadHandler = function()
+{
+  if (window.setRelStartPage)
+	{
+	setTimeout("setRelStartPage('../../Japanese.htm');", 1)
+
+    setTimeout("UpdateBreadCrumbsMarker();", 1);
+	}
+}
+
+if (window.addEventListener){  
+	window.addEventListener('load', onLoadHandler, false);   
+} else if (window.attachEvent){  
+	window.attachEvent('onload', onLoadHandler);  
+}
+
+function onSetStartPage()
+{
+  autoSync(1);
+  sendSyncInfo();
+  sendAveInfoOut();
+}
+//-->
+//]]></script>
+<script type="text/javascript" src="../../ehlpdhtm.js" language="JavaScript1.2"></script>
+
+<h1>PCSのデータ構造</h1>
+<p class="Paragraph" style="mso-fareast-font-family: Calibri; mso-fareast-theme-font: minor-latin; 
+	 mso-ansi-language: EN-US; mso-fareast-language: EN-US; font-size: 10.0pt; 
+	 line-height: 115%;"><span style="mso-bidi-language: AR-SA;">PCSは「Unit」「Environment」「Cell」「Box」という異なる階層のデータ領域で構成されています。</span></p>
+<p class="Paragraph" style="mso-fareast-font-family: Calibri; mso-fareast-theme-font: minor-latin; 
+	 font-size: 10.0pt; line-height: 115%;"><a href="../../../../../../../../C:/Users/Owner/workspace/HCL-PCS_Repo/track_3/test/#Figure1:PCSComponents">図1</a> 
+ はPCSの内部構成を示したものです。</p>
+<p class="Figure"><img src="../../Images/PCSComponents.gif" alt="" style="border: none;" 
+						 border="0" /></p>
+<p class="Figure" style="font-weight: bold;"><a name="Figure1:PCSComponents" 
+												 id="Figure1:PCSComponents">図1: 
+ PCSの内部構成</a></p>
+<p class="Paragraph" style="mso-fareast-theme-font: minor-latin; font-size: 10.0pt; 
+	 line-height: 115%; mso-fareast-font-family: Calibri;"><span><span><span 
+	 style="font-size: 10.0pt; line-height: 115%; mso-fareast-font-family: Calibri; 
+	 mso-fareast-theme-font: minor-latin; mso-ansi-language: EN-US; mso-fareast-language: EN-US; 
+	 mso-bidi-language: AR-SA;"><font size="2" style="font-size:10pt;">構成要素</font></span></span></span></p>
+<p class="Paragraph" style="font-size: 10.0pt; line-height: 115%; mso-fareast-font-family: Calibri; 
+	 mso-fareast-theme-font: minor-latin; mso-ansi-language: EN-US; mso-fareast-language: EN-US; 
+	 mso-bidi-language: AR-SA;">Unit（ユニット）：複数のEnviromentを内包する情報共有の管理基盤。</p>
+<p class="Paragraph" style="font-size: 10.0pt; line-height: 115%; mso-fareast-font-family: Calibri; 
+	 mso-fareast-theme-font: minor-latin;"><span style="mso-ansi-language: EN-US; 
+												 mso-fareast-language: EN-US; 
+												 mso-bidi-language: AR-SA;">Environment（エンバイロメント）：複数のCellを内包する仮想環境（組織における人事、経理、管理などの部署に該当）。</span></p>
+<p class="Paragraph" style="font-size: 10.0pt; line-height: 115%; mso-fareast-font-family: Calibri; 
+	 mso-fareast-theme-font: minor-latin;"><span style="mso-ansi-language: EN-US; 
+												 mso-fareast-language: EN-US; 
+												 mso-bidi-language: AR-SA;">Cell（セル）：ペルソナコンテナと同義であり、すべての情報やアプリケーションの共有の中心（1個人、1法人に該当）。</span></p>
+<p class="Paragraph" style="font-size: 10.0pt; line-height: 115%; mso-fareast-font-family: Calibri; 
+	 mso-fareast-theme-font: minor-latin;"><span style="mso-ansi-language: EN-US; 
+												 mso-fareast-language: EN-US; 
+												 mso-bidi-language: AR-SA;">Box（ボックス）：ある特定のCell</span>における一連のデータを保持する領域。多数のアプリケーションによる情報共有が可能。<span 
+	 style="mso-ansi-language: EN-US; mso-fareast-language: EN-US; mso-bidi-language: AR-SA;"><br />
+Cell作成時に、初期状態での格納領域（Main Box）が作成される。</span></p>
+<p class="Paragraph" style="font-size: 10.0pt; line-height: 115%; mso-fareast-font-family: Calibri; 
+	 mso-fareast-theme-font: minor-latin;">&#160;</p>
+<p class="Paragraph"><a href="../../../../../../../../C:/Users/Owner/workspace/HCL-PCS_Repo/track_3/test/#Figure2:RelationshipbetweenComponents"><span 
+	 style="mso-ansi-language: EN-US; mso-fareast-language: EN-US; mso-bidi-language: AR-SA;">図</span><span 
+	 style="font-size: 10.0pt; line-height: 115%; mso-fareast-font-family: Calibri; 
+	 mso-fareast-theme-font: minor-latin; mso-ansi-language: EN-US; mso-fareast-language: EN-US; 
+	 mso-bidi-language: AR-SA;"><font size="2" style="font-size:10pt;">2</font></span></a><span style="font-size: 10.0pt; 
+													 line-height: 115%; 
+													 mso-fareast-font-family: Calibri; 
+													 mso-fareast-theme-font: minor-latin; 
+													 mso-ansi-language: EN-US; 
+													 mso-fareast-language: EN-US; 
+													 mso-bidi-language: AR-SA;"><font size="2" style="font-size:10pt;">は、これら4つのデータ領域の階層関係です。詳しくは後述の説明をご覧ください。 
+ </font></span></p>
+<p class="Figure"><img src="../../Images/ComponentsRelationships.gif" alt="" 
+						 style="border: none;" border="0" /></p>
+<p class="Figure" style="font-weight: bold;"><a name="Figure2:RelationshipbetweenComponents" 
+												 id="Figure2:RelationshipbetweenComponents" 
+												 style="font-weight: bold;">図2: 
+ 各データ領域の包含関係</a></p>
+<ul>
+	<li style="list-style: url('../../Images/arrow.png'); margin-left: -20px;"><h2>Unit</h2></li>
+</ul>
+<p class="Paragraph"><span style="font-size: 10.0pt; line-height: 115%; 
+							 mso-fareast-font-family: Calibri; mso-fareast-theme-font: minor-latin; 
+							 mso-ansi-language: EN-US; mso-fareast-language: EN-US; 
+							 mso-bidi-language: AR-SA;"><font size="2" style="font-size:10pt;">PCSを用いるに基盤におけるUnitは、Enviromentを作成する下地になります。</font></span></p>
+<p class="Paragraph" style="font-size: 10.0pt; line-height: 115%; mso-fareast-font-family: Calibri;"><span 
+	 style="mso-fareast-theme-font: minor-latin; mso-ansi-language: EN-US; 
+	 mso-fareast-language: EN-US; mso-bidi-language: AR-SA;">1つのUnitに対して、専用の完全修飾ドメイン名（FQDN）を保有し、REST 
+ APIによる操作の対象になります。</span></p>
+<ul>
+	<li style="list-style: url('../../Images/arrow.png'); margin-left: -20px;"><h2>Environment</h2></li>
+</ul>
+<p class="Paragraph" style="font-size: 10.0pt; line-height: 115%;">Enviromentは複数Cellから成るサーバ側の仮想ホストです。</p>
+<p class="Paragraph" style="font-size: 10.0pt; line-height: 115%;"><span 
+	 style="font-size: 10.0pt; line-height: 115%;"><font size="2" style="font-size:10pt;">例えば、人事部のEnvironmentでは、福利厚生部門や採用部門などの多くのCellから構成することができます。</font></span></p>
+<p class="Paragraph" style="font-size: 10.0pt; line-height: 115%;"><span 
+	 style="font-size: 10.0pt; line-height: 115%;"><font size="2" style="font-size:10pt;">Environmentは、Cell、Box、Account、Role、ExtCell、ExtRoleなどのコンポーネントを作成するためのデータ基盤を供給します。</font></span></p>
+<p class="Paragraph" style="font-size: 10.0pt; line-height: 115%;">また、ソーシャルグラフを生成することができます。 
+ ソーシャルグラフはCellの間の関係性を視覚化します。</p>
+<p class="Paragraph" style="font-size: 10.0pt; line-height: 115%;"><span 
+	 style="font-size: 10.0pt; line-height: 115%;"><font size="2" style="font-size:10pt;">&#160;これらのCellは同じユニットか外部ユニットに属することができます。</font></span></p>
+<ul>
+	<li style="list-style: url('../../Images/arrow.png'); margin-left: -20px;"><h2>Cell</h2></li>
+</ul>
+<p class="Paragraph">Cellとは、人や組織、動物やデバイス毎に作成されるPCSのオブジェクトであり、ペルソナコンテナそのものです。</p>
+<p class="Paragraph" style="background-color: #ffffff; font-size: 10.0pt;">Cellは単一もしくは複数のアプリケーションのためのデータ領域（Box）を持ち、<br />
+認証機構とそれに紐づいたロールベースアクセスコントロール（RBAC）、イベント処理・メッセージ・サービス実行等の機能をアプリケーション横断的に提供します。</p>
+<p class="Paragraph" style="background-color: #ffffff; font-size: 10.0pt;">また他のセルと関係を定義することでCellのソーシャルグラフを構築し、複数の利用者がコラボレートするための情報連携基盤を実現します。</p>
+<p class="Paragraph">&#160;</p>
+<p class="Paragraph">図3では Cellの構造 を示しています。</p>
+<p class="Figure"><img src="../../Images/CellStructure.gif" alt="" style="border: none;" 
+						 border="0" /></p>
+<p class="Figure" style="font-weight: bold;"><a name="Figure3:CellStructure" 
+												 id="Figure3:CellStructure">図3: 
+ Cellの構造</a></p>
+<p class="Paragraph">Cellは、Cell制御オブジェクトを保有しています。Cell制御オブジェクトは、Cellの機能を制御・管理するためにCell内部に存在します。</p>
+<p class="Paragraph">また、それはODataオブジェクトグループを参照します。 </p>
+<p class="Paragraph">これらのオブジェクトにより、Cell内にアクセスし操作ができます。 セル制御オブジェクトは以下の通りです(詳細事項は<a 
+	 href="Cell_Control_Objects.htm">セル制御オブジェクト</a>を参照.)</p>
+<p class="Bullet_1"><span style="font-family:'Symbol'">&#183;</span><span style='word-spacing:normal; font:6.0pt "Times New Roman"'><font size="1" style="font-size:6pt;">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</font></span><span style="mso-list: l0 level1 lfo1; 
+	 background-color: #ffffff;"><span style="font-size: 10.0pt; font-family: Arial, sans-serif;"><font size="2" style="font-size:10pt;">Role</font></span></span></p>
+<p class="Bullet_1"><span style="font-family:'Symbol'">&#183;</span><span style='word-spacing:normal; font:6.0pt "Times New Roman"'><font size="1" style="font-size:6pt;">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</font></span><span style="font-size: 10.0pt; 
+	 font-family: Arial, sans-serif;"><font size="2" style="font-size:10pt;">Account</font></span></p>
+<p class="Bullet_1"><span style="font-family:'Symbol'">&#183;</span><span style='word-spacing:normal; font:6.0pt "Times New Roman"'><font size="1" style="font-size:6pt;">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</font></span><span style="font-size: 10.0pt; 
+	 font-family: Arial, sans-serif;"><font size="2" style="font-size:10pt;">ExtCell (External Cell)</font></span></p>
+<p class="Bullet_1"><span style="font-family:'Symbol'">&#183;</span><span style='word-spacing:normal; font:6.0pt "Times New Roman"'><font size="1" style="font-size:6pt;">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</font></span><span style="font-size: 10.0pt; 
+	 font-family: Arial, sans-serif;"><font size="2" style="font-size:10pt;">Relation</font></span></p>
+<p class="Bullet_1"><span style="font-family:'Symbol'">&#183;</span><span style='word-spacing:normal; font:6.0pt "Times New Roman"'><font size="1" style="font-size:6pt;">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</font></span><span style="font-size: 10.0pt; 
+	 font-family: Arial, sans-serif;"><font size="2" style="font-size:10pt;">ExtRole (External Role)</font></span></p>
+<p class="Bullet_1" style="font-size: 10.0pt; 
+											 font-family: Arial, sans-serif;"><span style="font-family:'Symbol'">&#183;</span><span style='word-spacing:normal; font:6.0pt "Times New Roman"'><font size="1" style="font-size:6pt;">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</font></span>Box</p>
+<script type="text/javascript" language="javascript1.2">//<![CDATA[
+<!--
+if (window.writeIntopicBar)
+	writeIntopicBar(0);
+
+
+highlightSearch();
+//-->
+//]]></script>
+</body>
+</html>

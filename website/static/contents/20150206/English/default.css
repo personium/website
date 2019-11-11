@@ -1,0 +1,858 @@
+﻿/*Created with Adobe RoboHelp 10.*/
+table.ParameterTable {
+	font-size: 10pt;
+	color: #353535;
+	border-left-style: Solid;
+	border-right-style: Solid;
+	border-top-style: Solid;
+	border-bottom-style: Solid;
+	border-left-color: #c0c0c0	 ! important ;
+	border-right-color: #c0c0c0	 ! important ;
+	border-top-color: #c0c0c0	 ! important ;
+	border-bottom-color: #c0c0c0	 ! important ;
+	border-left-width: 1px;
+	border-right-width: 1px;
+	border-top-width: 1px;
+	border-bottom-width: 1px;
+	x-border-spacing: 0px;
+}
+body {
+	font-family: "Segoe UI"	 ! important ;
+}
+h1 {
+	padding-bottom: 3px;
+	margin-bottom: 10pt;
+	font-size: 18pt;
+	font-family: "Segoe UI"	 ! important ;
+	color: #000000;
+	border-bottom-style: None;
+	font-weight: normal;
+	font-style: normal;
+	x-next-class: Paragraph;
+	x-next-type: p;
+	margin-top: 3pt;
+}
+h2 {
+	padding-bottom: 3px;
+	padding-left: 10px;
+	margin-top: 14pt;
+	margin-bottom: 10pt;
+	font-size: 16pt;
+	font-family: "Segoe UI"	 ! important ;
+	color: #000000;
+	border-bottom-style: None;
+	font-weight: normal;
+	font-style: normal;
+	x-next-class: Paragraph;
+	x-next-type: p;
+	margin-left: 9pt;
+}
+h3 {
+	padding-bottom: 3px;
+	padding-left: 10px;
+	margin-top: 14pt;
+	margin-bottom: 10pt;
+	margin-left: 14pt;
+	font-size: 14pt;
+	font-family: "Segoe UI"	 ! important ;
+	color: #000000;
+	border-bottom-style: None;
+	x-next-class: Paragraph;
+	x-next-type: p;
+	font-weight: normal;
+	font-style: normal;
+}
+h4 {
+	padding-bottom: 3px;
+	padding-left: 10px;
+	margin-top: 14pt;
+	margin-bottom: 10pt;
+	margin-left: 14pt;
+	font-size: 12pt;
+	font-family: "Segoe UI"	 ! important ;
+	color: #000000;
+	border-bottom-style: None;
+	x-next-class: Paragraph;
+	x-next-type: p;
+	font-weight: normal;
+	font-style: normal;
+}
+h5 {
+	padding-bottom: 3px;
+	padding-left: 10px;
+	padding-left: 10px;
+	margin-top: 14pt;
+	margin-bottom: 10pt;
+	margin-left: 14pt;
+	font-size: 10pt;
+	font-family: "Segoe UI"	 ! important ;
+	color: #000000;
+	border-bottom-style: None;
+	x-next-class: Paragraph;
+	x-next-type: p;
+	font-weight: normal;
+	font-style: normal;
+}
+h6 {
+	padding-bottom: 3px;
+	padding-left: 10px;
+	margin-top: 14pt;
+	margin-bottom: 10pt;
+	margin-left: 14pt;
+	font-size: 8pt;
+	font-family: "Segoe UI"	 ! important ;
+	color: #000000;
+	border-bottom-style: None;
+	x-next-class: Paragraph;
+	x-next-type: p;
+	font-weight: normal;
+	font-style: normal;
+}
+p.Paragraph {
+	font-size: 10pt	 ! important ;
+	margin-top: 2pt;
+	padding-left: 14px;
+	margin-left: 14pt;
+	margin-bottom: 6pt;
+	font-family: "Segoe UI"	 ! important ;
+	color: #3c3c3c;
+}
+p.Paragraph2 {
+	font-size: 10pt	 ! important ;
+	margin-top: 2pt;
+	padding-left: 14px;
+	margin-left: 14pt;
+	margin-bottom: 6pt;
+	font-family: "Segoe UI"	 ! important ;
+	color: #3c3c3c;
+}
+p {
+	font-size: 10pt	 ! important ;
+	margin-top: 2pt;
+	padding-left: 14px;
+	margin-left: 14pt;
+	margin-bottom: 6pt;
+	font-family: "Segoe UI"	 ! important ;
+	color: #3c3c3c;
+}
+a.expandspot {
+	color: #008000;
+	cursor: hand;
+	font-style: italic;
+	text-decoration: none;
+}
+span.expandtext {
+	font-style: italic;
+	font-weight: normal;
+	color: #ff0000;
+}
+a.dropspot {
+	cursor: hand;
+	color: #008000;
+	font-style: italic;
+	text-decoration: none;
+}
+a.glossterm {
+	font-family: "Segoe UI"	 ! important ;
+	color: #800000;
+	cursor: hand;
+	font-style: italic;
+	text-decoration: none;
+}
+span.glosstext {
+	font-style: italic;
+	font-weight: normal;
+	color: #0000ff;
+}
+ol,
+ul {
+	margin-top: 0px;
+	margin-bottom: 0px;
+}
+p.Bullet_1 {
+	margin-bottom: 2pt;
+	margin-top: 2pt;
+	list-style: rh-list;
+	x-list-class: rl-p-Bullet_1;
+	x-list-level: 1;
+	font-family: "Segoe UI"	 ! important ;
+	font-size: 10pt;
+	text-indent: -0.25in;
+	padding-left: 14px;
+	margin-left: 14pt;
+	color: #353535;
+	counter-increment: section 1;
+}
+p.GreyColumnHeading {
+	font-size: 10pt;
+	font-family: "Segoe UI"	 ! important ;
+	font-weight: Regular	 ! important ;
+	font-weight: bold;
+	color: #1b1b1b;
+	text-align: left;
+}
+} table.TopRow {
+	x-1st-row: 1;
+	x-1st-row-name: t1st;
+	border-left-style: Solid;
+	border-left-width: 1px;
+	border-left-color: #c0c0c0	 ! important ;
+	border-right-style: Solid;
+	border-right-width: 1px;
+	border-right-color: #c0c0c0	 ! important ;
+	border-top-style: Solid;
+	border-top-width: 1px;
+	border-top-color: #c0c0c0	 ! important ;
+	border-bottom-style: Solid;
+	border-bottom-width: 1px;
+	border-bottom-color: #c0c0c0	 ! important ;
+	bgcolor: #dadada	 ! important ;
+	x-row-pat-1: 1;
+	x-row-pat-1-name: t1Row;
+	x-row-pat-count: 2;
+	x-row-pat-2: 1;
+	x-row-pat-2-name: t2Row;
+	x-border-spacing: 0px;
+}
+table.TopRow tr.t1st td {
+	border-left-style: Solid;
+	border-left-width: 1px;
+	border-left-color: #c0c0c0	 ! important ;
+	border-right-style: Solid;
+	border-right-width: 1px;
+	border-right-color: #c0c0c0	 ! important ;
+	border-top-style: Solid;
+	border-top-width: 1px;
+	border-top-color: #c0c0c0	 ! important ;
+	border-bottom-style: Solid;
+	border-bottom-width: 1px;
+	border-bottom-color: #c0c0c0	 ! important ;
+	font-family: "Segoe UI"	 ! important ;
+	font-size: 10pt;
+	background-color: #dadada	 ! important ;
+	font-weight: bold;
+	text-align: Center;
+}
+table.TopRow tr.t1Row td {
+	font-family: "Segoe UI"	 ! important ;
+	font-size: 10pt;
+	border-left-style: Solid;
+	border-left-width: 1px;
+	border-left-color: #c0c0c0	 ! important ;
+	border-right-style: Solid;
+	border-right-width: 1px;
+	border-right-color: #c0c0c0	 ! important ;
+	border-top-style: Solid;
+	border-top-width: 1px;
+	border-top-color: #c0c0c0	 ! important ;
+	border-bottom-style: Solid;
+	border-bottom-width: 1px;
+	border-bottom-color: #c0c0c0	 ! important ;
+}
+table.TopRow tr.t2Row td {
+	font-family: "Segoe UI"	 ! important ;
+	font-size: 10pt;
+	border-left-style: Solid;
+	border-left-width: 1px;
+	border-left-color: #c0c0c0	 ! important ;
+	border-right-style: Solid;
+	border-right-width: 1px;
+	border-right-color: #c0c0c0	 ! important ;
+	border-top-style: Solid;
+	border-top-width: 1px;
+	border-top-color: #c0c0c0	 ! important ;
+	border-bottom-style: Solid;
+	border-bottom-width: 1px;
+	border-bottom-color: #c0c0c0	 ! important ;
+}
+table.5ColumnTable {
+	x-1st-row: 1;
+	x-1st-row-name: t1st;
+	border-left-style: Solid;
+	border-right-style: Solid;
+	border-top-style: Solid;
+	border-bottom-style: Solid;
+	font-size: 10pt;
+	border-left-width: 1px;
+	border-right-width: 1px;
+	border-top-width: 1px;
+	border-bottom-width: 1px;
+	border-left-color: #c0c0c0	 ! important ;
+	border-right-color: #c0c0c0	 ! important ;
+	border-top-color: #c0c0c0	 ! important ;
+	border-bottom-color: #c0c0c0	 ! important ;
+}
+table.5ColumnTable tr.t1st td {
+	font-family: "Segoe UI"	 ! important ;
+	font-size: 10pt;
+	color: #ffffff;
+	background-color: #dadada	 ! important ;
+	font-weight: bold;
+}
+p.TableText {
+	font-size: 10pt;
+	margin-left: 2pt;
+	margin-top: 3pt;
+	margin-bottom: 3pt;
+	font-family: "Segoe UI"	 ! important ;
+	color: #3c3c3c;
+}
+rh-list.rl-p-Bullet_1 {
+	x-level-count: 1;
+	x-lvl-1-format: "<x>";
+	x-lvl-1-type: disc;
+}
+p.Indent1 {
+	font-size: 10pt;
+	margin-top: 3pt;
+	margin-bottom: 3pt;
+	font-family: "Segoe UI"	 ! important ;
+	color: #353535;
+	margin-left: 9pt;
+}
+p.Code {
+	font-family: "Courier New"	 ! important ;
+	font-size: 10pt;
+	border-left-style: None;
+	border-right-style: None;
+	border-top-style: None;
+	border-bottom-style: None;
+	margin-bottom: 2pt;
+	text-indent: -0in;
+	margin-left: 0in;
+	color: #353535;
+	x-next-class: Code;
+	x-next-type: p;
+	margin-top: 2pt;
+}
+p.Doubt {
+	font-size: 10pt;
+	color: #ff0000;
+	x-next-class: Paragraph;
+	x-next-type: p;
+}
+table.TemplateTable {
+	border-left-style: Solid;
+	border-left-width: 1px;
+	border-left-color: #c0c0c0	 ! important ;
+	border-right-style: Solid;
+	border-right-width: 1px;
+	border-right-color: #c0c0c0;
+	border-top-style: Solid;
+	border-top-width: 1px;
+	border-top-color: #c0c0c0;
+	border-bottom-style: Solid;
+	border-bottom-width: 1px;
+	border-bottom-color: #c0c0c0;
+	font-size: 10pt;
+	padding-bottom: 0px	 ! important ;
+	padding-left: 0px	 ! important ;
+	padding-right: 0px	 ! important ;
+	padding-top: 0px	 ! important ;
+	cellpadding: 0	 ! important ;
+}
+p.CodeIndent {
+	font-family: "Courier New"	 ! important ;
+	font-size: 10pt;
+	background-color: #e0e0e0;
+	margin-left: 18pt;
+	margin-bottom: 4.5pt;
+	margin-top: 4.5pt;
+}
+p.HelpTitle {
+	color: #353d47;
+	margin-top: 22.5pt;
+	text-align: center;
+	font-family: "Fujitsu Sans";
+	font-weight: bold;
+	font-size: 30pt;
+}
+p.Version {
+	font-family: "Fujitsu Sans Medium";
+	font-size: 18pt;
+	font-weight: bold;
+	text-align: center;
+	margin-top: 9pt;
+	margin-bottom: 99pt;
+}
+p.breadcrumbs {
+	font-family: "Fujitsu Sans";
+}
+#header {
+	width: 0px	 ! important ;
+	height: 0px;
+}
+a.Hyperlink {
+	font-size: 10pt;
+	display: inline;
+}
+p.Hyperlink {
+	font-size: 10pt;
+	color: #0000ff;
+}
+p.Bold {
+	font-weight: bold;
+	margin-bottom: 9pt;
+	margin-top: 9pt;
+}
+p.Figure {
+	font-size: 10pt;
+	text-align: center;
+	margin-top: 4.5pt;
+	margin-bottom: 4.5pt;
+	color: #353535;
+	font-family: "Segoe UI"	 ! important ;
+}
+p.Bullet_2 {
+	font-size: 10pt;
+	list-style: rh-list;
+	x-list-class: rl-p-Bullet_2;
+	x-list-level: 1;
+	margin-top: 2pt;
+	margin-bottom: 2pt;
+	margin-left: 25pt;
+	color: #353535;
+}
+rh-list.rl-p-Bullet_2 {
+	x-level-count: 1;
+	x-lvl-1-format: "<x>";
+	x-lvl-1-type: circle;
+}
+p.CodeIndent1 {
+	margin-left: 18pt;
+	margin-top: 3pt;
+	margin-bottom: 3pt;
+	font-family: "Courier New"	 ! important ;
+	font-size: 10pt;
+}
+p.Note {
+	font-size: 10pt;
+	font-family: "Segoe UI"	 ! important ;
+	margin-bottom: 4.5pt;
+	margin-top: 9pt;
+	padding-top: 6px;
+	border-top-style: None;
+	color: #353535;
+	border-bottom-style: None;
+	padding-left: 14px;
+	margin-left: 14pt;
+}
+rh-list.Bullets {
+	x-lvl-1-type: disc;
+	x-lvl-1-format: "<x>";
+	x-lvl-2-type: square;
+	x-lvl-2-format: "<x>";
+	x-lvl-2-margin: 20px;
+	x-lvl-3-type: circle;
+	x-lvl-3-format: "<x>";
+	x-lvl-3-margin: 40px;
+	x-lvl-4-type: diamond;
+	x-lvl-4-format: "<x>";
+	x-lvl-4-margin: 60px;
+	x-lvl-5-type: disc;
+	x-lvl-5-format: "<x>";
+	x-lvl-5-margin: 80px;
+	x-lvl-6-type: square;
+	x-lvl-6-format: "<x>";
+	x-lvl-6-margin: 100px;
+	x-lvl-7-type: circle;
+	x-lvl-7-format: "<x>";
+	x-lvl-7-margin: 120px;
+	x-lvl-8-type: diamond;
+	x-lvl-8-format: "<x>";
+	x-lvl-8-margin: 140px;
+	x-level-count: 9;
+	x-lvl-9-type: disc;
+	x-lvl-9-format: "<x>";
+	x-lvl-9-margin: 160px;
+	x-lvl-9-pfx-class: rls-9-Bullets;
+	x-lvl-1-pfx-class: rls-1-Bullets;
+	x-lvl-2-pfx-class: rls-2-Bullets;
+	x-lvl-3-pfx-class: rls-3-Bullets;
+	x-lvl-4-pfx-class: rls-4-Bullets;
+	x-lvl-5-pfx-class: rls-5-Bullets;
+	x-lvl-6-pfx-class: rls-6-Bullets;
+	x-lvl-7-pfx-class: rls-7-Bullets;
+	x-lvl-8-pfx-class: rls-8-Bullets;
+}
+table.CodeTable {
+	font-family: "Courier New"	 ! important ;
+	font-size: 10pt;
+	x-border-spacing: 0px;
+	color: #3f3f3f;
+	padding: 0px	 ! important ;
+	border: 1px solid #c0c0c0	 ! important ;
+	background-color: #eaeaea	 ! important ;
+}
+p.ColoredCode {
+}
+div.CodeDiv {
+}
+table.CodeTable td {
+	padding: 3.6pt;
+	line-height: 14px	 ! important ;
+}
+.pln {
+	color: #ff0000;
+	font-size: 10pt;
+	font-family: "Courier New";
+}
+.dec {
+	color: #0000ff;
+	font-family: "Courier New";
+	font-size: 10pt;
+}
+.var {
+	color: #000080;
+	font-family: "Courier New";
+	font-size: 10pt;
+}
+.str {
+	color: rgb(0, 102, 0);
+	font-size: 10pt;
+	font-family: "Courier New";
+}
+.kwd {
+	font-size: 10pt;
+	font-family: "Courier New";
+	color: #0000ff;
+}
+.com {
+	font-size: 10pt;
+	font-family: "Courier New";
+	color: #0000ff;
+}
+.typ {
+	font-size: 10pt;
+	color: #0000ff;
+	font-family: "Courier New";
+}
+.lit {
+	color: rgb(0, 68, 68);
+	font-size: 10pt;
+	font-family: "Courier New";
+}
+.pun {
+	font-family: "Courier New";
+	font-size: 10pt;
+	color: #ff0000;
+}
+.opn {
+	color: #000000;
+	font-size: 10pt;
+	font-family: "Courier New";
+}
+.clo {
+	color: #0000ff;
+	font-size: 10pt;
+	font-family: "Courier New";
+}
+.tag {
+	font-size: 10pt;
+	font-family: "Courier New";
+	color: #008000;
+}
+.atn {
+	color: #0000ff;
+	font-family: "Courier New";
+	font-size: 10pt;
+}
+.atv {
+	color: rgb(0, 102, 0);
+	font-size: 10pt;
+	font-family: "Courier New";
+}
+table.ParameterTable {
+	font-size: 10pt;
+	color: #353535;
+	border-left-style: None;
+	border-right-style: None;
+	border-top-style: None;
+	border-bottom-style: None;
+}
+table.AlternateCyanColorGrid {
+	x-border-spacing: 0px;
+	x-row-pat-1: 1;
+	x-row-pat-1-name: t1Row;
+	x-row-pat-count: 2;
+	x-row-pat-2: 1;
+	x-row-pat-2-name: t2Row;
+	border-left-style: Solid;
+	border-left-width: 1px;
+	border-left-color: #c0c0c0	 ! important ;
+	border-top-style: Solid;
+	border-top-width: 1px;
+	border-top-color: #c0c0c0	 ! important ;
+}
+table.AlternateCyanColorGrid td {
+	padding-left: 10px;
+	padding-right: 10px;
+	padding-top: 0px;
+	padding-bottom: 0px;
+}
+table.AlternateCyanColorGrid tr.t1Row td {
+	font-family: "Segoe UI"	 ! important ;
+	font-size: 12pt;
+	border-right-style: Solid;
+	border-right-width: 1px;
+	border-right-color: #c0c0c0	 ! important ;
+	border-bottom-style: Solid;
+	border-bottom-width: 1px;
+	border-bottom-color: #c0c0c0	 ! important ;
+}
+table.AlternateCyanColorGrid tr.t2Row td {
+	border-right-style: Solid;
+	border-right-width: 1px;
+	border-right-color: #c0c0c0	 ! important ;
+	border-bottom-style: Solid;
+	border-bottom-width: 1px;
+	border-bottom-color: #c0c0c0	 ! important ;
+	background-color: #D2EAF1;
+}
+table.RequestHeader {
+	font-size: 10pt;
+	border-left-style: Solid;
+	border-left-width: 1px;
+	border-left-color: #c0c0c0	 ! important ;
+	border-right-style: Solid;
+	border-right-width: 1px;
+	border-right-color: #c0c0c0	 ! important ;
+	border-top-style: Solid;
+	border-top-width: 1px;
+	border-top-color: #c0c0c0	 ! important ;
+	border-bottom-style: Solid;
+	border-bottom-width: 1px;
+	border-bottom-color: #c0c0c0	 ! important ;
+	background-color: #dadada	 ! important ;
+	color: #ffffff;
+	font-weight: bold;
+}
+p.GlossaryHeading1 {
+	color: #c90000;
+	font-weight: bold;
+	margin-bottom: 4.5pt;
+	font-size: 18pt;
+	margin-top: 22.5pt;
+	x-next-class: GlossaryHeading2;
+	x-next-type: p;
+}
+p.GlossaryHeading2 {
+	font-size: 11pt;
+	color: #353535;
+	font-weight: bold;
+	margin-bottom: 4.5pt;
+	margin-left: 18pt;
+	x-next-class: GlossaryParagraph;
+	x-next-type: p;
+	margin-top: 18pt;
+}
+p.GlossaryParagraph {
+	font-size: 10pt;
+	margin-left: 18pt;
+	margin-bottom: 4.5pt;
+}
+table.SimpleGridBlack {
+	padding: 0px;
+	border-top: Solid 1px #c0c0c0	 ! important ;
+	border-left: Solid 1px #c0c0c0	 ! important ;
+	x-border-spacing: 0px;
+	x-row-pat-1: 1;
+	x-row-pat-1-name: t1Row;
+	x-row-pat-count: 2;
+	x-row-pat-2: 1;
+	x-row-pat-2-name: t2Row;
+}
+table.SimpleGridBlack td {
+	padding-left: 10px;
+	padding-right: 10px;
+	padding-top: 0px;
+	padding-bottom: 0px;
+}
+table.SimpleGridBlack tr.t1Row td {
+	border-right-style: Solid;
+	border-right-width: 1px;
+	border-right-color: #c0c0c0	 ! important ;
+	border-bottom-style: Solid;
+	border-bottom-width: 1px;
+	border-bottom-color: #c0c0c0	 ! important ;
+	font-family: "Segoe UI"	 ! important ;
+	font-size: 12pt;
+}
+table.SimpleGridBlack tr.t2Row td {
+	border-right-style: Solid;
+	border-right-width: 1px;
+	border-right-color: #c0c0c0	 ! important ;
+	border-bottom-style: Solid;
+	border-bottom-width: 1px;
+	border-bottom-color: #c0c0c0	 ! important ;
+}
+rh-list.Bullet {
+	x-lvl-1-type: disc;
+	x-lvl-1-format: "<x>";
+	x-lvl-2-format: "<x>";
+	x-lvl-3-format: "<x>";
+	x-lvl-4-type: diamond;
+	x-lvl-4-format: "<x>";
+	x-lvl-5-type: disc;
+	x-lvl-5-format: "<x>";
+	x-lvl-5-margin: 80px;
+	x-lvl-6-type: square;
+	x-lvl-6-format: "<x>";
+	x-lvl-6-margin: 100px;
+	x-lvl-7-type: circle;
+	x-lvl-7-format: "<x>";
+	x-lvl-7-margin: 120px;
+	x-lvl-8-type: diamond;
+	x-lvl-8-format: "<x>";
+	x-lvl-8-margin: 140px;
+	x-lvl-9-type: disc;
+	x-lvl-9-format: "<x>";
+	x-lvl-9-margin: 160px;
+	x-lvl-9-pfx-class: rls-9-Bullets;
+	x-lvl-1-pfx-class: rls-1-Bullets;
+	x-lvl-2-pfx-class: rls-2-Bullets;
+	x-lvl-3-pfx-class: rls-3-Bullets;
+	x-lvl-4-pfx-class: rls-4-Bullets;
+	x-lvl-5-pfx-class: rls-5-Bullets;
+	x-lvl-6-pfx-class: rls-6-Bullets;
+	x-lvl-7-pfx-class: rls-7-Bullets;
+	x-lvl-8-pfx-class: rls-8-Bullets;
+	x-lvl-1-margin: 50px;
+	x-lvl-1-text-indent: -30px;
+	x-lvl-2-type: circle;
+	x-lvl-2-margin: 70px;
+	x-lvl-2-text-indent: -20px;
+	x-lvl-3-type: square;
+	x-lvl-3-margin: 90px;
+	x-lvl-3-text-indent: -20px;
+	x-level-count: 9;
+	x-lvl-4-margin: 110px;
+	x-lvl-4-text-indent: -20px;
+}
+span.rls-9-Bullets {
+	font-size: 8pt;
+}
+span.rls-1-Bullets {
+	font-size: 12pt;
+}
+span.rls-2-Bullets {
+	font-size: 12pt;
+}
+span.rls-3-Bullets {
+	font-size: 12pt;
+}
+span.rls-4-Bullets {
+	font-size: 12pt;
+}
+span.rls-5-Bullets {
+	font-size: 10pt;
+}
+span.rls-6-Bullets {
+	font-size: 10pt;
+}
+span.rls-7-Bullets {
+	font-size: 10pt;
+}
+span.rls-8-Bullets {
+	font-size: 10pt;
+}
+rh-list.BasicNumber {
+	x-lvl-1-format: "<x>&c";
+	x-lvl-2-type: lower-alpha;
+	x-lvl-2-format: "<x>&c";
+	x-lvl-1-p-tag: P;
+	x-lvl-2-margin: 20px;
+	x-lvl-2-p-tag: P;
+	x-lvl-3-type: lower-roman;
+	x-lvl-3-format: "<x>&c";
+	x-lvl-3-margin: 40px;
+	x-lvl-3-p-tag: P;
+	x-lvl-4-type: decimal;
+	x-lvl-4-format: "&o<x>&c";
+	x-lvl-4-margin: 60px;
+	x-lvl-4-p-tag: P;
+	x-lvl-5-format: "&o<x>&c";
+	x-lvl-5-margin: 80px;
+	x-lvl-5-p-tag: P;
+	x-lvl-6-type: lower-roman;
+	x-lvl-6-format: "&o<x>&c";
+	x-lvl-6-margin: 100px;
+	x-lvl-6-p-tag: P;
+	x-lvl-7-margin: 120px;
+	x-lvl-7-p-tag: P;
+	x-lvl-8-type: lower-alpha;
+	x-lvl-8-margin: 140px;
+	x-level-count: 9;
+	x-lvl-9-type: lower-roman;
+	x-lvl-9-margin: 160px;
+}
+rh-list.Number {
+	x-lvl-2-type: lower-alpha;
+	x-lvl-2-format: "<x>&c";
+	x-lvl-2-margin: 20px;
+	x-lvl-2-p-tag: P;
+	x-lvl-3-type: lower-roman;
+	x-lvl-3-format: "<x>&c";
+	x-lvl-3-margin: 40px;
+	x-lvl-3-p-tag: P;
+	x-lvl-4-type: decimal;
+	x-lvl-4-format: "&o<x>&c";
+	x-lvl-4-margin: 60px;
+	x-lvl-4-p-tag: P;
+	x-lvl-5-format: "&o<x>&c";
+	x-lvl-5-margin: 80px;
+	x-lvl-5-p-tag: P;
+	x-lvl-6-type: lower-roman;
+	x-lvl-6-format: "&o<x>&c";
+	x-lvl-6-margin: 100px;
+	x-lvl-6-p-tag: P;
+	x-lvl-7-margin: 120px;
+	x-lvl-7-p-tag: P;
+	x-lvl-8-type: lower-alpha;
+	x-lvl-8-margin: 140px;
+	x-lvl-9-type: lower-roman;
+	x-lvl-9-margin: 160px;
+	x-lvl-1-pfx-class: rls-1-Number;
+	x-level-count: 9;
+	x-lvl-1-format: "<x>.";
+	x-lvl-1-margin: 40px;
+	x-lvl-1-text-indent: -20px;
+	x-lvl-1-p-tag: p;
+}
+rh-list.NumUpperAlphaNum {
+	x-lvl-2-type: upper-alpha;
+	x-lvl-2-margin: 20px;
+	x-lvl-2-p-tag: P;
+	x-lvl-3-type: decimal;
+	x-lvl-3-margin: 40px;
+	x-lvl-3-p-tag: P;
+	x-lvl-4-type: lower-alpha;
+	x-lvl-4-margin: 60px;
+	x-lvl-4-p-tag: P;
+	x-lvl-5-type: decimal;
+	x-lvl-5-margin: 80px;
+	x-lvl-5-p-tag: P;
+	x-lvl-6-type: upper-alpha;
+	x-lvl-6-margin: 100px;
+	x-lvl-6-p-tag: P;
+	x-lvl-7-margin: 120px;
+	x-lvl-7-p-tag: P;
+	x-lvl-8-type: lower-alpha;
+	x-lvl-8-margin: 140px;
+	x-lvl-8-p-tag: P;
+	x-lvl-9-margin: 160px;
+	x-lvl-9-p-tag: P;
+	x-lvl-1-pfx-class: rls-1-NumUpperAlphaNum;
+	x-level-count: 9;
+	x-lvl-1-margin: 20px;
+	x-lvl-1-text-indent: -20px;
+	x-lvl-1-p-tag: p;
+}
+span.rls-1-NumUpperAlphaNum {
+	font-family: "Segoe UI";
+	font-size: 10pt;
+}
+span.rls-1-Number {
+	font-family: "Segoe UI";
+	font-size: 10pt;
+}

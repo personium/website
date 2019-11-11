@@ -1,0 +1,1 @@
+gXMLBuffer="<?xml version=\"1.0\" encoding=\"UTF-8\"?><cki><ck fm=\"CORS\" to=\"Create\" num=\"44\"/><ck fm=\"Delete\" to=\"Cell ACL\" num=\"40\"/><ck fm=\"Cell Get Property\" to=\"Delete\" num=\"44\"/><ck fm=\"List\" to=\"Logfile Propfind\" num=\"45\"/><ck fm=\"Event Reception API\" to=\"welcome\" num=\"19\"/></cki>";

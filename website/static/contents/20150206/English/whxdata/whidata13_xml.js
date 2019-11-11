@@ -1,0 +1,1 @@
+gXMLBuffer ="<?xml version='1.0' encoding='utf-8' ?>  <indexdata>  <key name=\"Head Match\" >    <topic name=\"Filter Query\" url=\"APIReferenceGuide/en/Appendix/CommonAPIs/FilterQuery.htm\" />    <topic name=\"Filter Query\" url=\"APIReferenceGuide/ja/付録/CommonAPIs/FilterQuery.htm\" />  </key>    </indexdata>";

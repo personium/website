@@ -1,0 +1,253 @@
+<?xml version="1.0" encoding="iso-2022-jp" ?>
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN"
+    "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<!-- saved from url=(0014)about:internet -->
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=iso-2022-jp" />
+<meta http-equiv="Content-Language" content="en-US" />
+<meta name="generator" content="Adobe RoboHelp 10" />
+<title>CORS</title>
+<link rel="StyleSheet" href="../../../../../../default.css" type="text/css" />
+<style type="text/css">
+/*<![CDATA[*/
+<!--
+.mainBreadCrumb a:link { color:#000000;
+background-color:transparent;
+text-decoration:none; }
+.mainBreadCrumb a:visited { color:#000000;
+background-color:transparent;
+text-decoration:none; }
+.mainBreadCrumb a:hover { color:#ff0000 ! important;
+cursor:pointer;
+text-decoration:underline; }
+p.mainBreadCrumb { margin-left:0px;
+margin-top:1px ! important; }
+h1 { padding-left:10px ! important; }
+-->
+/*]]>*/
+</style>
+
+<script type="text/javascript" language="JavaScript">
+//<![CDATA[
+function reDo() {
+  if (innerWidth != origWidth || innerHeight != origHeight)
+     location.reload();
+}
+if ((parseInt(navigator.appVersion) == 4) && (navigator.appName == "Netscape")) {
+        origWidth = innerWidth;
+        origHeight = innerHeight;
+        onresize = reDo;
+}
+onerror = null; 
+//]]>
+</script>
+<style type="text/css">
+/*<![CDATA[*/
+<!--
+div.WebHelpPopupMenu { position:absolute;
+left:0px;
+top:0px;
+z-index:4;
+visibility:hidden; }
+-->
+/*]]>*/
+</style>
+
+<script type="text/javascript" language="javascript1.2" src="../../../../../../whmsg.js" charset="utf-8">
+</script>
+<script type="text/javascript" language="javascript" src="../../../../../../whver.js" charset="utf-8">
+</script>
+<script type="text/javascript" language="javascript1.2" src="../../../../../../whutils.js" charset="utf-8">
+</script>
+<script type="text/javascript" language="javascript1.2" src="../../../../../../whproxy.js" charset="utf-8">
+</script>
+<script type="text/javascript" language="javascript1.2" src="../../../../../../whlang.js" charset="utf-8">
+</script>
+<script type="text/javascript" language="javascript1.2" src="../../../../../../whtopic.js" charset="utf-8">
+</script>
+</head>
+<body>
+<script type="text/javascript" language="javascript1.2">
+//<![CDATA[
+<!--
+if (window.gbWhTopic)
+{
+        var strUrl = document.location.href;
+        var bc = 0;
+        var n = strUrl.toLowerCase().indexOf("bc-");
+        if(n != -1)
+        {
+                document.location.href = strUrl.substring(0, n);
+                bc = strUrl.substring(n+3);
+        }
+
+        if (window.addTocInfo)
+        {
+        addButton("show",BTN_TEXT,"表示","","","","",0,0,"","","");
+
+        }
+        if (window.writeBtnStyle)
+                writeBtnStyle();
+
+        if (window.writeIntopicBar)
+                writeIntopicBar(1);
+
+        
+        
+}
+else
+        if (window.gbIE4)
+                document.location.reload();
+
+onLoadHandler = function()
+{
+  if (window.setRelStartPage)
+        {
+        setTimeout("setRelStartPage('../../../../../../Japanese.htm');", 1)
+
+    setTimeout("UpdateBreadCrumbsMarker();", 1);
+        }
+}
+
+if (window.addEventListener){  
+        window.addEventListener('load', onLoadHandler, false);   
+} else if (window.attachEvent){  
+        window.attachEvent('onload', onLoadHandler);  
+}
+
+function onSetStartPage()
+{
+  autoSync(1);
+  sendSyncInfo();
+  sendAveInfoOut();
+}
+//-->
+//]]>
+</script><script type="text/javascript" src="../../../../../../ehlpdhtm.js" language="JavaScript1.2">
+</script>
+<div style="width: 100%; position: relative;" id="header">
+<p style="font-size: 10pt;">&#160;</p>
+</div>
+<script type="text/javascript" language="javascript">
+//<![CDATA[
+document.write("<p  class=\"mainBreadCrumb\"  style=\"text-align:left;\" class=\"breadcrumbs\">");
+AddMasterBreadcrumbs("../../../../../../Japanese.htm", "breadcrumbs", " &gt; ", "トップ", "../../../../../ja/HomePage.htm");
+document.write("CORS<\/p>");
+//]]>
+</script>
+<hr style="border-left-width: 0px; margin-left: -6px;" size="1" width="101%" align="center" />
+<form><input type="image" value="Print" onclick="window.print();return false" name="Printer.png" src="../../../../../../Images/Printer.png" style="width: 16px; height: 16px; float: right; margin-top: -32px; margin-right: 2px;" /></form>
+<h1>CORS (Cross Origin Resource Sharing) Support</h1>
+<h2>Overview</h2>
+<p class="Paragraph"><span style="font-size: 10.0pt; line-height: 115%; mso-fareast-font-family: 'Times New Roman'; mso-ansi-language: EN-US; mso-fareast-language: EN-US; mso-bidi-language: AR-SA;"><font size="2" style="font-size:10pt;">All API’s of personium.io are empowered to</font></span> <span style="font-size: 11.0pt; line-height: 115%; font-family: Calibri, sans-serif; mso-ascii-theme-font: minor-latin; mso-fareast-font-family: Calibri; mso-fareast-theme-font: minor-latin; mso-hansi-theme-font: minor-latin; mso-bidi-font-family: 'Times New Roman'; mso-bidi-theme-font: minor-bidi; mso-ansi-language: EN-US; mso-fareast-language: EN-US; mso-bidi-language: AR-SA;"><font size="3" style="font-size:11pt;">make</font></span> cross-origin requests to resources; they are based on CORS (Cross Origin Resource Sharing) principle though with some exceptions.</p>
+<p class="Paragraph">&#160;</p>
+<table class="CodeTable" style="margin-left: 26pt;" cellspacing="0px" width="96%">
+<col style="width: 100%;" />
+<tr>
+<td>
+<p class="Code" style="color: #353d47;">TODO Exception: Authentication end point by Implicit Flow? ? Only?</p>
+</td>
+</tr>
+</table>
+<p class="Paragraph">&#160;</p>
+<p class="Paragraph" style="color: #353d47;"><span lang="EN-US" xml:lang="EN-US">Specifically, if there’s no descriptor for the particular exception, based on the request all API endpoint will return the response header like below</span></p>
+<p style=" margin-left: 40px; text-indent: -20px;"><span class="rls-1-Number">1.</span><span style='word-spacing:normal; font:6.0pt "Times New Roman"'><font size="1" style="font-size:6pt;">&#160;&#160;&#160;&#160;&#160;</font></span>Access-Control-Allow-Origin</p>
+<p style=" margin-left: 40px; text-indent: -20px;"><span class="rls-1-Number">2.</span><span style='word-spacing:normal; font:6.0pt "Times New Roman"'><font size="1" style="font-size:6pt;">&#160;&#160;&#160;&#160;&#160;</font></span>Access-Control-Allow-Methods</p>
+<p style=" margin-left: 40px; text-indent: -20px;"><span class="rls-1-Number">3.</span><span style='word-spacing:normal; font:6.0pt "Times New Roman"'><font size="1" style="font-size:6pt;">&#160;&#160;&#160;&#160;&#160;</font></span>Access-Control-Allow-Headers</p>
+<p class="Paragraph" style="color: #ff0000;">&#160;<span lang="EN-US" xml:lang="EN-US" style="font-size: 10.5pt; mso-bidi-font-size: 11.0pt; font-family: Century, serif; mso-ascii-theme-font: minor-latin; mso-fareast-font-family: 'ＭＳ 明朝'; mso-fareast-theme-font: minor-fareast; mso-hansi-theme-font: minor-latin; mso-bidi-font-family: 'Times New Roman'; mso-bidi-theme-font: minor-bidi; mso-ansi-language: EN-US; mso-fareast-language: JA; mso-bidi-language: AR-SA; color: #353d47;"><font size="3" color="#353D47" style="font-size:10.500000pt;">Thus for performing the HTTP asynchronous communication with the server, by Web browser installed script language such as JavaScript, using the XMLHttpRequest Level 2 will be possible.</font></span></p>
+<h2 style="margin-left: 0px;">Return of Access-Control-Allow-Origin Response Header</h2>
+<p class="Paragraph"><span style="font-size: 10.0pt; line-height: 115%; mso-fareast-font-family: 'Times New Roman'; mso-ansi-language: EN-US; mso-fareast-language: EN-US; mso-bidi-language: AR-SA;"><font size="2" style="font-size:10pt;">In all the API’s the value of Access-Control-Allow-Origin response header is returned as '*'.</font></span></p>
+<p class="Paragraph"><span style="font-size: 11.0pt; line-height: 115%; font-family: Calibri, sans-serif; mso-ascii-theme-font: minor-latin; mso-fareast-font-family: Calibri; mso-fareast-theme-font: minor-latin; mso-hansi-theme-font: minor-latin; mso-bidi-font-family: 'Times New Roman'; mso-bidi-theme-font: minor-bidi; mso-ansi-language: EN-US; mso-fareast-language: EN-US; mso-bidi-language: AR-SA;"><font size="3" style="font-size:11pt;">The</font></span> <code>Access-Control-Allow-Origin</code> header when set as <span style="font-size: 11.0pt; line-height: 115%; font-family: Calibri, sans-serif; mso-ascii-theme-font: minor-latin; mso-fareast-font-family: Calibri; mso-fareast-theme-font: minor-latin; mso-hansi-theme-font: minor-latin; mso-bidi-font-family: 'Times New Roman'; mso-bidi-theme-font: minor-bidi; mso-ansi-language: EN-US; mso-fareast-language: EN-US; mso-bidi-language: AR-SA;"><font size="3" style="font-size:11pt;">*</font></span> indicates that a <span style="font-size: 10.0pt; line-height: 115%; mso-fareast-font-family: 'Times New Roman'; mso-ansi-language: EN-US; mso-fareast-language: EN-US; mso-bidi-language: AR-SA;"><font size="2" style="font-size:10pt;">resource can be shared across various domains, In personium.io such behavior allows access to the resources from all domains.</font></span></p>
+<p class="Paragraph">Following is an example of the Access-Control-Allow-Origin response header.</p>
+<p class="Paragraph">&#160;</p>
+<table class="CodeTable" style="margin-left: 26pt;" cellspacing="0px" width="96%">
+<col style="width: 100%;" />
+<tr>
+<td>
+<p class="Code">Access-Control-Allow-Origin:*</p>
+</td>
+</tr>
+</table>
+<h2>Response to the pre-flight requests from the browser</h2>
+<p class="Paragraph">Following is the response of the <span style="color: #353d47;"><font color="#353D47">pref. right requests</font></span> from the browser, when you issue the request of the OPTIONS method in the API of all.</p>
+<p style=" margin-left: 40px; text-indent: -20px;"><span class="rls-1-Number">1.</span><span style='word-spacing:normal; font:6.0pt "Times New Roman"'><font size="1" style="font-size:6pt;">&#160;&#160;&#160;&#160;&#160;</font></span>Return of Access-Control-Allow-Methods response header</p>
+<p style=" margin-left: 40px; text-indent: -20px;"><span class="rls-1-Number">2.</span><span style='word-spacing:normal; font:6.0pt "Times New Roman"'><font size="1" style="font-size:6pt;">&#160;&#160;&#160;&#160;&#160;</font></span>Return of Access-Control-Allow-Headers response header</p>
+<h2>Return of Access-Control-Allow-Methods response header</h2>
+<p class="Paragraph">When you issue the request of the OPTIONS method in the API of all, it returns the Access-Control-Allow-Methods response header.</p>
+<p class="Paragraph">Contents of the Access-Control-Allow-Methods Responsive header will change as follows depending on the contents of the Authorization header and access control settings of the API.</p>
+<table style="margin-left: 26pt;" cellspacing="0" width="96%">
+<col style="width: 48.719%;" />
+<col style="width: 51.281%;" />
+<tr>
+<td style="border: Solid 1px #9b9b9b;">
+<p class="TableText"><font><font>The resources (read possible without Authorization header published)</font></font></p>
+</td>
+<td style="border-top: Solid 1px #9b9b9b; border-right: Solid 1px #9b9b9b; border-bottom: Solid 1px #9b9b9b;">
+<p class="TableText">It returns all the HTTP methods that the resource supports.</p>
+</td>
+</tr>
+<tr>
+<td style="border-left: Solid 1px #9b9b9b; border-right: Solid 1px #9b9b9b; border-bottom: Solid 1px #9b9b9b;">
+<p class="TableText"><font><font>Private (non-public) OPTIONS request without the Authorization header to the resource</font></font></p>
+</td>
+<td style="border-right: Solid 1px #9b9b9b; border-bottom: Solid 1px #9b9b9b;">
+<p class="TableText">It returns all the HTTP methods that the personium.io can support.</p>
+</td>
+</tr>
+<tr>
+<td style="border-left: Solid 1px #9b9b9b; border-right: Solid 1px #9b9b9b; border-bottom: Solid 1px #9b9b9b;">
+<p class="TableText"><font><font>OPTIONS request to the private resources of a valid ※ Authorization header with</font></font></p>
+</td>
+<td style="border-right: Solid 1px #9b9b9b; border-bottom: Solid 1px #9b9b9b;">
+<p class="TableText">It returns all the HTTP methods that the resource supports.</p>
+</td>
+</tr>
+</table>
+<p class="Paragraph">&#160;</p>
+<p class="Paragraph">The request Authorization header, can sometimes generate following errors depending on the contents of the header.</p>
+<p style=" color:#353535; margin-left: 40px; text-indent: -20px;"><span class="rls-1-Number"><font color="#353535">1.</font></span><span style='word-spacing:normal; font:6.0pt "Times New Roman"'><font size="1" style="font-size:6pt;">&#160;&#160;&#160;&#160;&#160;</font></span>401: The <span style="font-size: 10.0pt; line-height: 115%; mso-fareast-font-family: 'Times New Roman'; mso-ansi-language: EN-US; mso-fareast-language: EN-US; mso-bidi-language: AR-SA;"><font size="2" style="font-size:10pt;">content of the Authorization header is invalid, such as if the value of token happens to be incorrect</font></span> .</p>
+<p style=" margin-left: 40px; text-indent: -20px;"><span class="rls-1-Number">2.</span><span style='word-spacing:normal; font:6.0pt "Times New Roman"'><font size="1" style="font-size:6pt;">&#160;&#160;&#160;&#160;&#160;</font></span>403: Indicates that the server can be reached and understood the request, but refuses to take any further action. Request is not accepted on account of the<span style="mso-spacerun: yes;">&#160;</span>access denied to the request. For example, Reading is not allowed.</p>
+<p class="Paragraph">It returns the request method that is allowed inside the request URL.</p>
+<p class="Paragraph">Following is an example of the Access-Control-Allow-Methods response header.</p>
+<table class="CodeTable" style="margin-left: 26pt;" cellspacing="0px" width="96%">
+<col style="width: 100%;" />
+<tr>
+<td>
+<p class="Code">Access-Control-Allow-Methods:GET,OPTIONS</p>
+</td>
+</tr>
+</table>
+<h2 style="margin-left: 0px;">Return of Access-Control-Allow-Headers Response Header</h2>
+<p class="Paragraph"><font class="">In all the APIs, if you specify the Access-Control-Request-Headers in the request header, it returns the Access-Control-Allow-Headers.</font></p>
+<p class="Paragraph">So that you can send all of the header that the client wants, what is returned in the Access-Control-Allow-Headers response header, is returned as the value specified in the Access-Control-Request-Headers.</p>
+<p class="Paragraph">Following is an example of the response header if you specify a "sample" in the Access-Control-Request-Headers.</p>
+<table class="CodeTable" style="margin-left: 26pt;" cellspacing="0px" width="96%">
+<col style="width: 100%;" />
+<tr>
+<td>
+<p class="Code">Access-Control-Allow-Headers:sample</p>
+</td>
+</tr>
+</table>
+<h2>Reference</h2>
+<p class="Paragraph"><a href="http://www.w3.org/TR/cors/" target="_blank"><font class="">http://www.w3.org/TR/cors/</font></a></p>
+<p class="Paragraph">&#160;</p>
+<p class="Paragraph">&#160;</p>
+<br />
+<div style="border-top: Solid 3px #3a3a3a; width: 100%; position: relative; padding-top: 2px; padding-bottom: 2px; padding-right: 5px; background-color: #9b9b9b;" id="footer">
+<h6 style="text-align: right; margin-top: 5pt; margin-bottom: 5pt;">Copyright 2014 &#160;FUJITSU LIMITED</h6>
+</div>
+<script type="text/javascript" language="javascript1.2">
+//<![CDATA[
+<!--
+if (window.writeIntopicBar)
+        writeIntopicBar(0);
+
+
+highlightSearch();
+//-->
+//]]>
+</script>
+</body>
+</html>

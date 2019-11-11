@@ -1,0 +1,234 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+<meta http-equiv="Content-Language" content="en-US" />
+<meta name="generator" content="Adobe RoboHelp 10" />
+<title>APIの各種制限について</title>
+<link rel="StyleSheet" href="../../../../default.css" type="text/css" />
+<script type="text/javascript" src="../../../../prettify.js" language="JavaScript1.2"></script>
+<script type="text/javascript" language="JavaScript">
+//<![CDATA[
+function reDo() {
+  if (innerWidth != origWidth || innerHeight != origHeight)
+     location.reload();
+}
+if ((parseInt(navigator.appVersion) == 4) && (navigator.appName == "Netscape")) {
+	origWidth = innerWidth;
+	origHeight = innerHeight;
+	onresize = reDo;
+}
+onerror = null; 
+//]]>
+</script>
+<style type="text/css">
+<!--
+div.WebHelpPopupMenu { position:absolute;
+left:0px;
+top:0px;
+z-index:4;
+visibility:hidden; }
+-->
+</style>
+<script type="text/javascript" language="javascript1.2" src="../../../../whmsg.js" charset="utf-8"></script>
+<script type="text/javascript" language="javascript" src="../../../../whver.js" charset="utf-8"></script>
+<script type="text/javascript" language="javascript1.2" src="../../../../whutils.js" charset="utf-8"></script>
+<script type="text/javascript" language="javascript1.2" src="../../../../whproxy.js" charset="utf-8"></script>
+<script type="text/javascript" language="javascript1.2" src="../../../../whlang.js" charset="utf-8"></script>
+<script type="text/javascript" language="javascript1.2" src="../../../../whtopic.js" charset="utf-8"></script>
+
+</head>
+
+<body onload="prettyPrint()"><script type="text/javascript" language="javascript1.2">//<![CDATA[
+<!--
+if (window.gbWhTopic)
+{
+	var strUrl = document.location.href;
+	var bc = 0;
+	var n = strUrl.toLowerCase().indexOf("bc-");
+	if(n != -1)
+	{
+		document.location.href = strUrl.substring(0, n);
+		bc = strUrl.substring(n+3);
+	}
+
+	if (window.addTocInfo)
+	{
+	addTocInfo("REST API リファレンス\n制限事項\nPCSのHTTP実装に関する制限事項");
+addButton("show",BTN_TEXT,"表示","","","","",0,0,"","","");
+
+	}
+	if (window.writeBtnStyle)
+		writeBtnStyle();
+
+	if (window.writeIntopicBar)
+		writeIntopicBar(1);
+
+	
+	
+}
+else
+	if (window.gbIE4)
+		document.location.reload();
+
+onLoadHandler = function()
+{
+  if (window.setRelStartPage)
+	{
+	setTimeout("setRelStartPage('../../../../Japanese.htm');", 1)
+
+    setTimeout("UpdateBreadCrumbsMarker();", 1);
+	}
+}
+
+if (window.addEventListener){  
+	window.addEventListener('load', onLoadHandler, false);   
+} else if (window.attachEvent){  
+	window.attachEvent('onload', onLoadHandler);  
+}
+
+function onSetStartPage()
+{
+  autoSync(1);
+  sendSyncInfo();
+  sendAveInfoOut();
+}
+//-->
+//]]></script>
+<script type="text/javascript" src="../../../../ehlpdhtm.js" language="JavaScript1.2"></script>
+
+<h1>PCSのHTTP実装に関する制限事項</h1>
+<ul style="list-style: url('../../../../Images/arrow.png');">
+	<li style="margin-left: -20px;"><h2><span style="font-weight: bold;">リクエスト</span></h2></li>
+</ul>
+<h3>URL</h3>
+<p class="Paragraph2">最大サイズ: 50KByte</p>
+<p class="Paragraph2"><span style="color: rgb(72, 72, 72); font-family: Verdana, sans-serif; 
+							 font-size: 12px; line-height: normal; orphans: auto; 
+							 widows: auto; -webkit-text-stroke-width: 0px; 
+							 background-color: #ffffff; display: inline	 ! important ; 
+							 float: none;">※) URL サイズ = ヘッダーサイズ + （URLパスサイズ 
+ × ２） + （クエリサイズ × ３）</span> </p>
+<p class="Paragraph2"><span style="color: rgb(72, 72, 72); font-family: Verdana, sans-serif; 
+							 font-size: 12px; line-height: normal; orphans: auto; 
+							 widows: auto; -webkit-text-stroke-width: 0px; 
+							 background-color: #ffffff; display: inline	 ! important ; 
+							 float: none;">※参考）IE7,8の制限値は2048byte、IE9は5120byte、その他の多くブラウザは1Mbyte程度</span> 
+ </p>
+<h3><span style="font-weight: bold;">リクエストヘッダ</span></h3>
+<p class="Paragraph2"><span style="color: rgb(72, 72, 72); font-family: Verdana, sans-serif; 
+							 font-size: 12px; line-height: normal; orphans: auto; 
+							 widows: auto; -webkit-text-stroke-width: 0px; 
+							 background-color: #ffffff; display: inline	 ! important ; 
+							 float: none;">各ヘッダの上限サイズ： 4096byte （キーを含めての長さかどうかは不明）</span> 
+ </p>
+<h4>Accept Encoding</h4>
+<p class="Paragraph2"><span style="color: rgb(72, 72, 72); font-family: Verdana, sans-serif; 
+							 font-size: 12px; line-height: normal; orphans: auto; 
+							 widows: auto; -webkit-text-stroke-width: 0px; 
+							 background-color: #ffffff; display: inline	 ! important ; 
+							 float: none;">gzip に対応しています。</span> </p>
+<h3><span style="font-weight: bold;">リクエストボディ</span></h3>
+<h4><font><font>Transfer-Encoding</font></font></h4>
+<p class="Paragraph2"><span style="color: rgb(72, 72, 72); font-family: Verdana, sans-serif; 
+							 font-size: 12px; line-height: normal; orphans: auto; 
+							 widows: auto; -webkit-text-stroke-width: 0px; 
+							 background-color: #ffffff; display: inline	 ! important ; 
+							 float: none;">chunked のリクエストに対応しています。（未確認）</span> 
+ </p>
+<h4><font><font>Content-Encoding</font></font></h4>
+<p class="Paragraph2"><span style="color: rgb(72, 72, 72); font-family: Verdana, sans-serif; 
+							 font-size: 12px; line-height: normal; orphans: auto; 
+							 widows: auto; -webkit-text-stroke-width: 0px; 
+							 background-color: #ffffff; display: inline	 ! important ; 
+							 float: none;">gzip のリクエストに対応予定ですが未対応です。</span> 
+ </p>
+<h3><font><font><font><font>T</font></font>ime-out</font></font></h3>
+<p class="Paragraph2"><span style="color: rgb(72, 72, 72); font-family: Verdana, sans-serif; 
+							 font-size: 12px; line-height: normal; orphans: auto; 
+							 widows: auto; -webkit-text-stroke-width: 0px; 
+							 background-color: #ffffff; display: inline	 ! important ; 
+							 float: none;">60秒（リクエスト開始から、サーバがリクエストをすべて受領し終わるまでの時間）</span> 
+ </p>
+<ul>
+	<li style="list-style: url('../../../../Images/arrow.png'); margin-left: -20px;"><h2><span style="font-weight: bold;">レスポンス</span></h2></li>
+</ul>
+<h3><span style="font-weight: bold;">レスポンスヘッダ</span></h3>
+<table style="margin-left: 26pt;" cellspacing="0" width="96%">
+	<col style="width: 33.855%;" />
+	<col style="width: 66.145%;" />
+	<tr>
+		<td style="border: Solid 1px #9b9b9b;" bgcolor="#353D47"><p class="GreyColumnHeading">ヘッダ名</p></td>
+		<td style="border-top: Solid 1px #9b9b9b; border-right: Solid 1px #9b9b9b; 
+			 border-bottom: Solid 1px #9b9b9b;" bgcolor="#353D47"><p class="GreyColumnHeading">説明</p></td>
+	</tr>
+	<tr>
+		<td style="border-left: Solid 1px #9b9b9b; border-right: Solid 1px #9b9b9b; 
+			 border-bottom: Solid 1px #9b9b9b; vertical-align: top;"><p 
+			 class="TableText" style="font-family: Verdana, sans-serif; 
+			 font-size: 12px;">Transfer-Encoding</p></td>
+		<td style="border-right: Solid 1px #9b9b9b; border-bottom: Solid 1px #9b9b9b; 
+			 vertical-align: top;"><p class="TableText" style="font-family: Verdana, sans-serif; 
+										 font-size: 12px;"><span style="color: rgb(72, 72, 72); 
+		 line-height: normal; orphans: auto; widows: auto; -webkit-text-stroke-width: 0px; 
+		 background-color: #ffffff; display: inline	 ! important ; float: none;">常にchunkedでレスポンスします</span> 
+		 </p></td>
+	</tr>
+	<tr>
+		<td style="border-left: Solid 1px #9b9b9b; border-right: Solid 1px #9b9b9b; 
+			 border-bottom: Solid 1px #9b9b9b; vertical-align: top;"><p 
+			 class="TableText" style="font-family: Verdana, sans-serif; 
+			 font-size: 12px;">Content-Encoding</p></td>
+		<td style="border-right: Solid 1px #9b9b9b; border-bottom: Solid 1px #9b9b9b; 
+			 vertical-align: top;"><p class="TableText" style="font-family: Verdana, sans-serif; 
+										 font-size: 12px;"><span style="color: rgb(72, 72, 72); 
+		 line-height: normal; orphans: auto; widows: auto; -webkit-text-stroke-width: 0px; 
+		 background-color: #ffffff; display: inline	 ! important ; float: none;">リクエストヘッダで有効なAccept-Encoding値を設定された場合、その値が入ります</span> 
+		 </p></td>
+	</tr>
+	<tr>
+		<td style="border-left: Solid 1px #9b9b9b; border-right: Solid 1px #9b9b9b; 
+			 border-bottom: Solid 1px #9b9b9b; vertical-align: top;"><p 
+			 class="TableText" style="font-family: Verdana, sans-serif; 
+			 font-size: 12px;">Date</p></td>
+		<td style="border-right: Solid 1px #9b9b9b; border-bottom: Solid 1px #9b9b9b; 
+			 vertical-align: top;"><p class="TableText" style="font-family: Verdana, sans-serif; 
+										 font-size: 12px;"><span style="color: rgb(72, 72, 72); 
+		 line-height: normal; orphans: auto; widows: auto; -webkit-text-stroke-width: 0px; 
+		 background-color: #ffffff; display: inline	 ! important ; float: none;">リクエストを受け付けたUTC時刻を返却します</span> 
+		 </p></td>
+	</tr>
+</table>
+<h3><span style="font-weight: bold;">レスポンスボディ</span></h3>
+<h4>Size Limit</h4>
+<p class="Paragraph2">&#160;</p>
+<h4>Transfer-Encoding</h4>
+<p class="Paragraph2" style="color: rgb(72, 72, 72); font-family: Verdana, sans-serif; 
+	 font-size: 12px; line-height: normal; orphans: auto; widows: auto; 
+	 background-color: #ffffff;"><span style="-webkit-text-stroke-width: 0px; 
+										 display: inline	 ! important ; 
+										 float: none;">原則chunked でレスポンスを行う。</span><span 
+	 style="-webkit-text-stroke-width: 0px;"> </span></p>
+<h4>Content-Encoding</h4>
+<p class="Paragraph2"><span style="color: rgb(72, 72, 72); font-family: Verdana, sans-serif; 
+							 font-size: 12px; line-height: normal; orphans: auto; 
+							 widows: auto; -webkit-text-stroke-width: 0px; 
+							 background-color: #ffffff; display: inline	 ! important ; 
+							 float: none;">リクエストヘッダで有効なAccept-Encoding値を設定された場合は、ボディはその形式で圧縮エンコードされます。</span> 
+ </p>
+<p class="Paragraph">&#160;</p>
+<div style="width: 100%; position: relative;" id="footer">
+	<p style="font-size: 8pt; color: #ffffff; text-align: right;">&#160;</p>
+</div>
+<script type="text/javascript" language="javascript1.2">//<![CDATA[
+<!--
+if (window.writeIntopicBar)
+	writeIntopicBar(0);
+
+
+highlightSearch();
+//-->
+//]]></script>
+</body>
+</html>

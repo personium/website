@@ -1,0 +1,744 @@
+<?xml version="1.0" encoding="iso-2022-jp" ?>
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN"
+    "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<!-- saved from url=(0014)about:internet -->
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=iso-2022-jp" />
+<meta http-equiv="Content-Language" content="ja-JP" />
+<meta name="generator" content="Adobe RoboHelp 10" />
+<title>authz</title>
+<link rel="StyleSheet" href="../../../../../default.css" type="text/css" />
+<script type="text/javascript" src="../../../../../prettify.js" language="JavaScript1.2">
+</script>
+<style type="text/css">
+/*<![CDATA[*/
+<!--
+.mainBreadCrumb a:link { color:#000000;
+background-color:transparent;
+text-decoration:none; }
+.mainBreadCrumb a:visited { color:#000000;
+background-color:transparent;
+text-decoration:none; }
+.mainBreadCrumb a:hover { color:#ff0000 ! important;
+cursor:pointer;
+text-decoration:underline; }
+p.mainBreadCrumb { margin-left:0px;
+margin-top:1px ! important; }
+h1 { padding-left:10px ! important; }
+-->
+/*]]>*/
+</style>
+
+<script type="text/javascript" language="JavaScript">
+//<![CDATA[
+function reDo() {
+  if (innerWidth != origWidth || innerHeight != origHeight)
+     location.reload();
+}
+if ((parseInt(navigator.appVersion) == 4) && (navigator.appName == "Netscape")) {
+        origWidth = innerWidth;
+        origHeight = innerHeight;
+        onresize = reDo;
+}
+onerror = null; 
+//]]>
+</script>
+<style type="text/css">
+/*<![CDATA[*/
+<!--
+div.WebHelpPopupMenu { position:absolute;
+left:0px;
+top:0px;
+z-index:4;
+visibility:hidden; }
+-->
+/*]]>*/
+</style>
+
+<script type="text/javascript" language="javascript1.2" src="../../../../../whmsg.js" charset="utf-8">
+</script>
+<script type="text/javascript" language="javascript" src="../../../../../whver.js" charset="utf-8">
+</script>
+<script type="text/javascript" language="javascript1.2" src="../../../../../whutils.js" charset="utf-8">
+</script>
+<script type="text/javascript" language="javascript1.2" src="../../../../../whproxy.js" charset="utf-8">
+</script>
+<script type="text/javascript" language="javascript1.2" src="../../../../../whlang.js" charset="utf-8">
+</script>
+<script type="text/javascript" language="javascript1.2" src="../../../../../whtopic.js" charset="utf-8">
+</script>
+</head>
+<body onload="prettyPrint()">
+<script type="text/javascript" language="javascript1.2">
+//<![CDATA[
+<!--
+if (window.gbWhTopic)
+{
+        var strUrl = document.location.href;
+        var bc = 0;
+        var n = strUrl.toLowerCase().indexOf("bc-");
+        if(n != -1)
+        {
+                document.location.href = strUrl.substring(0, n);
+                bc = strUrl.substring(n+3);
+        }
+
+        if (window.addTocInfo)
+        {
+        addTocInfo("Cell Level API\n認証\nOAuth2 認可エンドポイントAPI(__authz)");
+addAvenueInfo("認証","docs/ja/rest_api/cell_level/auth/authproppatch.htm","docs/ja/rest_api/cell_level/auth/OAuth2TokenEndpoint.htm");
+addButton("show",BTN_TEXT,"表示","","","","",0,0,"","","");
+
+        }
+        if (window.writeBtnStyle)
+                writeBtnStyle();
+
+        if (window.writeIntopicBar)
+                writeIntopicBar(1);
+
+        
+        
+}
+else
+        if (window.gbIE4)
+                document.location.reload();
+
+onLoadHandler = function()
+{
+  if (window.setRelStartPage)
+        {
+        setTimeout("setRelStartPage('../../../../../Japanese.htm');", 1)
+
+    setTimeout("UpdateBreadCrumbsMarker();", 1);
+        }
+}
+
+if (window.addEventListener){  
+        window.addEventListener('load', onLoadHandler, false);   
+} else if (window.attachEvent){  
+        window.attachEvent('onload', onLoadHandler);  
+}
+
+function onSetStartPage()
+{
+  autoSync(1);
+  sendSyncInfo();
+  sendAveInfoOut();
+}
+//-->
+//]]>
+</script><script type="text/javascript" src="../../../../../ehlpdhtm.js" language="JavaScript1.2">
+</script>
+<div style="width: 100%; position: relative;" id="header">
+<p style="font-size: 10pt;">&#160;</p>
+</div>
+<script type="text/javascript" language="javascript">
+//<![CDATA[
+document.write("<p  class=\"mainBreadCrumb\"   style=\"text-align:left;\" class=\"breadcrumbs\">");
+AddMasterBreadcrumbs("../../../../../Japanese.htm", "breadcrumbs", " &gt; ", "トップ", "../../../HomePage.htm");
+document.write("<a class=\"breadcrumbs\" href=\"../CellLevelAPIOverview.htm\">Cell Level API<\/a>  &gt;  <a class=\"breadcrumbs\" href=\"OAuth2AuthorizationEndpoint.htm\">認証<\/a>  &gt;  OAuth2 認可エンドポイントAPI(__authz)<\/p>");
+//]]>
+</script>
+<hr style="border-left-width: 0px; margin-left: -6px;" size="1" width="101%" align="center" />
+<form><input type="image" value="Print" onclick="window.print();return false" name="Printer.png" src="../../../../../Images/Printer.png" style="width: 16px; height: 16px; float: right; margin-top: -32px; margin-right: 2px;" /></form>
+<h1>OAuth2の認可エンドポイントAPI(__authz)</h1>
+<h2 class="Paragraph"><span lang="JA" xml:lang="JA" style="line-height: 115%; mso-ascii-font-family: Arial; mso-fareast-theme-font: minor-fareast; mso-hansi-font-family: Arial; mso-bidi-font-family: Arial; mso-ansi-language: EN-US; mso-fareast-language: JA; mso-bidi-language: AR-SA; font-weight: bold; font-family: 'MS Gothic';">概要</span></h2>
+<p class="Paragraph" style="color: rgb(72, 72, 72); font-family: Verdana, sans-serif; font-size: 12px; font-style: normal; font-variant: normal; font-weight: normal; letter-spacing: normal; line-height: normal; orphans: auto; text-align: start; text-indent: 0px; text-transform: none; white-space: normal; widows: auto; word-spacing: 0px; -webkit-text-size-adjust: auto; -webkit-text-stroke-width: 0px; background-color: #ffffff;">OAuth2の認可エンドポイントAPI</p>
+<p style="color: rgb(72, 72, 72); font-family: Verdana, sans-serif; font-size: 12px; font-style: normal; font-variant: normal; font-weight: normal; letter-spacing: normal; line-height: normal; orphans: auto; text-align: start; text-indent: 0px; text-transform: none; white-space: normal; widows: auto; word-spacing: 0px; -webkit-text-size-adjust: auto; -webkit-text-stroke-width: 0px; background-color: #ffffff;">このAPIは、JSアプリケーション・ネイティブアプリでpersonium.ioを利用する場合のOAuth2の認可エンドポイントである。</p>
+<h2><span style="font-weight: bold;">必要な権限</span></h2>
+<p class="Paragraph">なし</p>
+<h2><span style="font-weight: bold;">制限事項</span></h2>
+<p class="Paragraph">リクエストクエリ、リクエストボディの「dc_target」パラメータの指定は未サポート &#160;</p>
+<p class="Paragraph" style=" margin-left: 50px; text-indent: -30px;"><span class="rls-1-Bullets"><span style="font-family:'Symbol'">&#183;</span></span><span style='word-spacing:normal; font:6.0pt "Times New Roman"'><font size="1" style="font-size:6pt;">&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;</font></span>dc_targetを指定した場合、レスポンスヘッダの「Location」の値が4,096文字を超えるため、nginxでエラーとなる。</p>
+<p class="Paragraph" style=" margin-left: 50px; text-indent: -30px;"><span class="rls-1-Bullets"><span style="font-family:'Symbol'">&#183;</span></span><span style='word-spacing:normal; font:6.0pt "Times New Roman"'><font size="1" style="font-size:6pt;">&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;</font></span>Internet Explorerでは、URLの最大長が2,048文字に制限されているため、正しくリダイレクトできない。</p>
+<h2><span style="font-weight: bold;">リクエスト</span></h2>
+<h3><span style="font-weight: bold;">リクエストURL</span></h3>
+<table class="CodeTable" style="margin-left: 26pt; height: 47px;" cellspacing="0px" width="96%">
+<col style="width: 100%;" />
+<tr>
+<td style="border: Solid 1px #9b9b9b;" bgcolor="#E0E0E0">
+<p class="Code">{Cell_name}/__authz</p>
+</td>
+</tr>
+</table>
+<h3><span style="font-weight: bold;">メソッド</span></h3>
+<p class="Paragraph2">POST : 認証フォーム リクエスト、トークン認証<br style="color: rgb(72, 72, 72); font-family: Verdana, sans-serif; font-size: 12px; font-style: normal; font-variant: normal; font-weight: normal; letter-spacing: normal; line-height: normal; orphans: auto; text-align: start; text-indent: 0px; text-transform: none; white-space: normal; widows: auto; word-spacing: 0px; -webkit-text-size-adjust: auto; -webkit-text-stroke-width: 0px; background-color: #ffffff;" />
+GET : 認証フォーム リクエスト</p>
+<h3><span style="font-weight: bold;">リクエストクエリ</span></h3>
+<table style="margin-left: 26pt;" cellspacing="0" width="96%">
+<col style="width: 17.51%;" />
+<col style="width: 24.519%;" />
+<col style="width: 11.874%;" />
+<col style="width: 11.318%;" />
+<col style="width: 34.779%;" />
+<tr>
+<th style="border: Solid 1px #9b9b9b;" bgcolor="#DADADA">
+<p class="GreyColumnHeading" style="font-weight: normal; margin-left: 0px;"><span style="font-weight: normal;"><span style="font-weight: bold; font-size: 10pt;"><font size="2" style="font-size:10pt;">項目名</font></span></span></p>
+</th>
+<th style="border-top: Solid 1px #9b9b9b; border-right: Solid 1px #9b9b9b; border-bottom: Solid 1px #9b9b9b;" bgcolor="#DADADA">
+<p class="GreyColumnHeading" style="font-weight: normal; margin-left: 0px;"><span style="font-weight: normal;"><span style="font-weight: bold; font-size: 10pt;"><font size="2" style="font-size:10pt;">概要</font></span></span></p>
+</th>
+<th style="border-top: Solid 1px #9b9b9b; border-right: Solid 1px #9b9b9b; border-bottom: Solid 1px #9b9b9b;" bgcolor="#DADADA">
+<p class="GreyColumnHeading" style="font-weight: normal; margin-left: 0px;"><span style="font-weight: normal;"><span style="font-size: 10pt; font-weight: bold;"><font size="2" style="font-size:10pt;">書式</font></span></span></p>
+</th>
+<th style="border-top: Solid 1px #9b9b9b; border-right: Solid 1px #9b9b9b; border-bottom: Solid 1px #9b9b9b;" bgcolor="#DADADA">
+<p class="GreyColumnHeading" style="font-weight: normal; margin-left: 0px;"><span style="font-weight: normal;"><span style="font-size: 10pt; font-weight: bold;"><font size="2" style="font-size:10pt;">必須</font></span></span></p>
+</th>
+<th style="border-top: Solid 1px #9b9b9b; border-right: Solid 1px #9b9b9b; border-bottom: Solid 1px #9b9b9b;" bgcolor="#DADADA">
+<p class="GreyColumnHeading" style="font-weight: normal; margin-left: 0px;"><span style="font-weight: normal;"><span style="font-size: 10pt; font-weight: bold;"><font size="2" style="font-size:10pt;">有効値</font></span></span></p>
+</th>
+</tr>
+<tr>
+<td style="border-left: Solid 1px #9b9b9b; border-right: Solid 1px #9b9b9b; border-bottom: Solid 1px #9b9b9b; vertical-align: top;">
+<p class="TableText" style="font-family: Verdana, sans-serif; font-size: 12px;">response_type</p>
+</td>
+<td style="border-right: Solid 1px #9b9b9b; border-bottom: Solid 1px #9b9b9b; vertical-align: top;">
+<p class="TableText">応答タイプ</p>
+</td>
+<td style="border-right: Solid 1px #9b9b9b; border-bottom: Solid 1px #9b9b9b; vertical-align: top;">
+<p class="TableText" style="font-family: Verdana, sans-serif; font-size: 12px;">String</p>
+</td>
+<td style="border-right: Solid 1px #9b9b9b; border-bottom: Solid 1px #9b9b9b; vertical-align: top;">
+<p class="TableText" style="font-family: Verdana, sans-serif; font-size: 12px;">○</p>
+</td>
+<td style="border-right: Solid 1px #9b9b9b; border-bottom: Solid 1px #9b9b9b; vertical-align: top;">
+<p class="TableText" style="font-family: Verdana, sans-serif; font-size: 12px;">トークン</p>
+</td>
+</tr>
+<tr>
+<td style="border-left: Solid 1px #9b9b9b; border-right: Solid 1px #9b9b9b; border-bottom: Solid 1px #9b9b9b; vertical-align: top;">
+<p class="TableText" style="font-family: Verdana, sans-serif; font-size: 12px;">client_id</p>
+</td>
+<td style="border-right: Solid 1px #9b9b9b; border-bottom: Solid 1px #9b9b9b; vertical-align: top;">
+<p class="TableText" style="font-family: Verdana, sans-serif; font-size: 12px;">アプリセル URL</p>
+</td>
+<td style="border-right: Solid 1px #9b9b9b; border-bottom: Solid 1px #9b9b9b; vertical-align: top;">
+<p class="TableText" style="font-family: Verdana, sans-serif; font-size: 12px;">String</p>
+</td>
+<td style="border-right: Solid 1px #9b9b9b; border-bottom: Solid 1px #9b9b9b; vertical-align: top;">
+<p class="TableText" style="font-family: Verdana, sans-serif; font-size: 12px;">○</p>
+</td>
+<td style="border-right: Solid 1px #9b9b9b; border-bottom: Solid 1px #9b9b9b; vertical-align: top;">
+<p class="TableText">スキーマ認証元のアプリセルURL</p>
+</td>
+</tr>
+<tr>
+<td style="border-left: Solid 1px #9b9b9b; border-right: Solid 1px #9b9b9b; border-bottom: Solid 1px #9b9b9b; vertical-align: top;">
+<p class="TableText" style="font-family: Verdana, sans-serif; font-size: 12px;">redirect_uri</p>
+</td>
+<td style="border-right: Solid 1px #9b9b9b; border-bottom: Solid 1px #9b9b9b; vertical-align: top;">
+<p class="TableText">クライアントのリダイレクトエンドポイントURL</p>
+</td>
+<td style="border-right: Solid 1px #9b9b9b; border-bottom: Solid 1px #9b9b9b; vertical-align: top;">
+<p class="TableText" style="font-family: Verdana, sans-serif; font-size: 12px;">String</p>
+</td>
+<td style="border-right: Solid 1px #9b9b9b; border-bottom: Solid 1px #9b9b9b; vertical-align: top;">
+<p class="TableText" style="font-family: Verdana, sans-serif; font-size: 12px;">○</p>
+</td>
+<td style="border-right: Solid 1px #9b9b9b; border-bottom: Solid 1px #9b9b9b; vertical-align: top;">
+<p class="TableText">アプリセルのデフォルトBOX配下に登録されたリダイレクトスクリプトのURL<br style="color: rgb(72, 72, 72); font-family: Verdana, sans-serif; font-size: 12px; font-style: normal; font-variant: normal; font-weight: normal; letter-spacing: normal; line-height: normal; orphans: auto; text-align: start; text-indent: 0px; text-transform: none; white-space: normal; widows: auto; word-spacing: 0px; -webkit-text-size-adjust: auto; -webkit-text-stroke-width: 0px; background-color: #ffffff;" />
+application/x-www-form-urlencodedでフォーマットされたクエリパラメータを含める事ができる<br style="color: rgb(72, 72, 72); font-family: Verdana, sans-serif; font-size: 12px; font-style: normal; font-variant: normal; font-weight: normal; letter-spacing: normal; line-height: normal; orphans: auto; text-align: start; text-indent: 0px; text-transform: none; white-space: normal; widows: auto; word-spacing: 0px; -webkit-text-size-adjust: auto; -webkit-text-stroke-width: 0px; background-color: #ffffff;" />
+フラグメントを含める事はできない<br style="color: rgb(72, 72, 72); font-family: Verdana, sans-serif; font-size: 12px; font-style: normal; font-variant: normal; font-weight: normal; letter-spacing: normal; line-height: normal; orphans: auto; text-align: start; text-indent: 0px; text-transform: none; white-space: normal; widows: auto; word-spacing: 0px; -webkit-text-size-adjust: auto; -webkit-text-stroke-width: 0px; background-color: #ffffff;" />
+有効桁長:512byte</p>
+</td>
+</tr>
+<tr>
+<td style="border-left: Solid 1px #9b9b9b; border-right: Solid 1px #9b9b9b; border-bottom: Solid 1px #9b9b9b; vertical-align: top;">
+<p class="TableText" style="font-family: Verdana, sans-serif; font-size: 12px;">state</p>
+</td>
+<td style="border-right: Solid 1px #9b9b9b; border-bottom: Solid 1px #9b9b9b; vertical-align: top;">
+<p class="TableText">リクエストとコールバックの間で状態を維持するために使用するランダムな値</p>
+</td>
+<td style="border-right: Solid 1px #9b9b9b; border-bottom: Solid 1px #9b9b9b; vertical-align: top;">
+<p class="TableText" style="font-family: Verdana, sans-serif; font-size: 12px;">String</p>
+</td>
+<td style="border-right: Solid 1px #9b9b9b; border-bottom: Solid 1px #9b9b9b; vertical-align: top;">
+<p class="TableText" style="font-family: Verdana, sans-serif; font-size: 12px;">×</p>
+</td>
+<td style="border-right: Solid 1px #9b9b9b; border-bottom: Solid 1px #9b9b9b; vertical-align: top;">
+<p class="TableText">ランダムな値<br style="color: rgb(72, 72, 72); font-family: Verdana, sans-serif; font-size: 12px; font-style: normal; font-variant: normal; font-weight: normal; letter-spacing: normal; line-height: normal; orphans: auto; text-align: start; text-indent: 0px; text-transform: none; white-space: normal; widows: auto; word-spacing: 0px; -webkit-text-size-adjust: auto; -webkit-text-stroke-width: 0px; background-color: #ffffff;" />
+有効桁長:512byte</p>
+</td>
+</tr>
+<tr>
+<td style="border-left: Solid 1px #9b9b9b; border-right: Solid 1px #9b9b9b; border-bottom: Solid 1px #9b9b9b; vertical-align: top;">
+<p class="TableText" style="font-family: Verdana, sans-serif; font-size: 12px;">dc_target</p>
+</td>
+<td style="border-right: Solid 1px #9b9b9b; border-bottom: Solid 1px #9b9b9b; vertical-align: top;">
+<p class="TableText" style="color: rgb(72, 72, 72); font-size: 12px; line-height: normal; orphans: auto; widows: auto; -webkit-text-size-adjust: auto; background-color: #ffffff; display: inline ! important ; font-family: Verdana, sans-serif; -webkit-text-stroke-width: 0px;">トランスセルトークンターゲット</p>
+</td>
+<td style="border-right: Solid 1px #9b9b9b; border-bottom: Solid 1px #9b9b9b; vertical-align: top;">
+<p class="TableText" style="font-family: Verdana, sans-serif; font-size: 12px;">String</p>
+</td>
+<td style="border-right: Solid 1px #9b9b9b; border-bottom: Solid 1px #9b9b9b; vertical-align: top;">
+<p class="TableText" style="font-family: Verdana, sans-serif; font-size: 12px;">×</p>
+</td>
+<td style="border-right: Solid 1px #9b9b9b; border-bottom: Solid 1px #9b9b9b; vertical-align: top;">
+<p class="TableText">払い出されるトークンを使うセルURL<br style="color: rgb(72, 72, 72); font-family: Verdana, sans-serif; font-size: 12px; font-style: normal; font-variant: normal; font-weight: normal; letter-spacing: normal; line-height: normal; orphans: auto; text-align: start; text-indent: 0px; text-transform: none; white-space: normal; widows: auto; word-spacing: 0px; -webkit-text-size-adjust: auto; -webkit-text-stroke-width: 0px; background-color: #ffffff;" />
+指定した場合トランスセルトークンを払い出す</p>
+</td>
+</tr>
+<tr>
+<td style="border-left: Solid 1px #9b9b9b; border-right: Solid 1px #9b9b9b; border-bottom: Solid 1px #9b9b9b; vertical-align: top;">
+<p class="TableText" style="font-family: Verdana, sans-serif; font-size: 12px;">dc_owner</p>
+</td>
+<td style="border-right: Solid 1px #9b9b9b; border-bottom: Solid 1px #9b9b9b; vertical-align: top;">
+<p class="TableText" style="color: rgb(72, 72, 72); font-size: 12px; line-height: normal; orphans: auto; widows: auto; -webkit-text-size-adjust: auto; background-color: #ffffff; display: inline ! important ; font-family: Verdana, sans-serif; -webkit-text-stroke-width: 0px;">ULUUT昇格実行クエリ</p>
+</td>
+<td style="border-right: Solid 1px #9b9b9b; border-bottom: Solid 1px #9b9b9b; vertical-align: top;">
+<p class="TableText" style="font-family: Verdana, sans-serif; font-size: 12px;">String</p>
+</td>
+<td style="border-right: Solid 1px #9b9b9b; border-bottom: Solid 1px #9b9b9b; vertical-align: top;">
+<p class="TableText" style="font-family: Verdana, sans-serif; font-size: 12px;">×</p>
+</td>
+<td style="border-right: Solid 1px #9b9b9b; border-bottom: Solid 1px #9b9b9b; vertical-align: top;">
+<p class="TableText">trueのみ有効<br style="color: rgb(72, 72, 72); font-family: Verdana, sans-serif; font-size: 12px; font-style: normal; font-variant: normal; font-weight: normal; letter-spacing: normal; line-height: normal; orphans: auto; text-align: start; text-indent: 0px; text-transform: none; white-space: normal; widows: auto; word-spacing: 0px; -webkit-text-size-adjust: auto; -webkit-text-stroke-width: 0px; background-color: #ffffff;" />
+※このクエリを設定した場合、認証情報はCookieで返却されない</p>
+</td>
+</tr>
+<tr>
+<td style="border-left: Solid 1px #9b9b9b; border-right: Solid 1px #9b9b9b; border-bottom: Solid 1px #9b9b9b; vertical-align: top;">
+<p class="TableText" style="font-family: Verdana, sans-serif; font-size: 12px;">assertion</p>
+</td>
+<td style="border-right: Solid 1px #9b9b9b; border-bottom: Solid 1px #9b9b9b; vertical-align: top;">
+<p class="TableText">アクセストークン</p>
+</td>
+<td style="border-right: Solid 1px #9b9b9b; border-bottom: Solid 1px #9b9b9b; vertical-align: top;">
+<p class="TableText" style="font-family: Verdana, sans-serif; font-size: 12px;">String</p>
+</td>
+<td style="border-right: Solid 1px #9b9b9b; border-bottom: Solid 1px #9b9b9b; vertical-align: top;">
+<p class="TableText" style="font-family: Verdana, sans-serif; font-size: 12px;">○</p>
+</td>
+<td style="border-right: Solid 1px #9b9b9b; border-bottom: Solid 1px #9b9b9b; vertical-align: top;">
+<p class="TableText">有効なトランスセルトークン<br style="color: rgb(72, 72, 72); font-family: Verdana, sans-serif; font-size: 12px; font-style: normal; font-variant: normal; font-weight: normal; letter-spacing: normal; line-height: normal; orphans: auto; text-align: start; text-indent: 0px; text-transform: none; white-space: normal; widows: auto; word-spacing: 0px; -webkit-text-size-adjust: auto; -webkit-text-stroke-width: 0px; background-color: #ffffff;" />
+引数なしの場合トークン認証にはならない</p>
+</td>
+</tr>
+</table>
+<h3><span style="font-weight: bold;">リクエストヘッダ</span></h3>
+<p class="Paragraph2">なし</p>
+<h3><span style="font-weight: bold;">リクエストボディ</span></h3>
+<p class="Paragraph2" style="color: rgb(72, 72, 72); font-family: Verdana, sans-serif; font-size: 12px; line-height: normal; orphans: auto; widows: auto; -webkit-text-size-adjust: auto; background-color: #ffffff; display: inline ! important ;"><span style="-webkit-text-stroke-width: 0px;">リクエストクエリと同じ</span></p>
+<h3><span style="font-weight: bold;">リクエストサンプル</span></h3>
+<p class="Paragraph2">なし</p>
+<h2><span style="font-weight: bold;">レスポンス</span></h2>
+<h3><span style="orphans: 2; widows: 2; -webkit-text-size-adjust: auto; -webkit-text-stroke-width: 0px;">Forms Authentication Request</span></h3>
+<h4><span style="font-weight: bold;">ステータスコード</span></h4>
+<p class="Paragraph2">200</p>
+<h4><span style="font-weight: bold;">レスポンスヘッダ</span></h4>
+<table style="margin-left: 26pt;" cellspacing="0" width="96%">
+<col style="width: 23.482%;" />
+<col style="width: 39.878%;" />
+<col style="width: 36.64%;" />
+<tr>
+<th style="border: Solid 1px #9b9b9b;" bgcolor="#DADADA">
+<p class="GreyColumnHeading" style="font-weight: normal; margin-left: 0px;"><span style="font-weight: normal;">ヘッダ名</span></p>
+</th>
+<th style="border-top: Solid 1px #9b9b9b; border-right: Solid 1px #9b9b9b; border-bottom: Solid 1px #9b9b9b;" bgcolor="#DADADA">
+<p class="GreyColumnHeading" style="font-weight: normal; margin-left: 0px;"><span style="font-weight: normal;"><span style="font-weight: bold; font-size: 10pt;"><font size="2" style="font-size:10pt;">概要</font></span></span></p>
+</th>
+<th style="border-top: Solid 1px #9b9b9b; border-right: Solid 1px #9b9b9b; border-bottom: Solid 1px #9b9b9b;" bgcolor="#DADADA">
+<p class="GreyColumnHeading" style="font-weight: normal; margin-left: 0px;"><span style="font-weight: normal;">備考</span></p>
+</th>
+</tr>
+<tr>
+<td style="border-left: Solid 1px #9b9b9b; border-right: Solid 1px #9b9b9b; border-bottom: Solid 1px #9b9b9b;">
+<p class="TableText" style="font-family: Verdana, sans-serif; font-size: 12px;">Content-Type</p>
+</td>
+<td style="border-right: Solid 1px #9b9b9b; border-bottom: Solid 1px #9b9b9b;">
+<p class="TableText" style="font-family: Verdana, sans-serif; font-size: 12px;">Content-Type of Resource</p>
+</td>
+<td style="border-right: Solid 1px #9b9b9b; border-bottom: Solid 1px #9b9b9b;">
+<p class="TableText" style="font-family: Verdana, sans-serif; font-size: 12px;">&#160;</p>
+</td>
+</tr>
+</table>
+<h4><span style="font-weight: bold;">レスポンスボディ</span></h4>
+<p class="Paragraph2" style="color: rgb(72, 72, 72); font-family: Verdana, sans-serif; font-size: 12px; line-height: normal; orphans: auto; widows: auto; -webkit-text-size-adjust: auto; background-color: #ffffff; display: inline ! important ;"><span style="-webkit-text-stroke-width: 0px;">以下のHTMLフォームを返却する。</span></p>
+<p class="Figure"><img src="../../../../../Images/authform.JPG" alt="" style="border: Solid 1px #9b9b9b;" border="1" /></p>
+<h4><span style="font-weight: bold; font-size: 10pt;"><font size="2" style="font-size:10pt;">エラーメッセージ一覧</font></span></h4>
+<p class="Paragraph2"><a href="../../common/AppErrorMessages.htm"><span style="font-weight: bold; font-size: 10pt;"><font size="2" style="font-size:10pt;">エラーメッセージ一覧</font></span></a>を参照</p>
+<table style="margin-left: 26pt;" cellspacing="0" width="96%">
+<col style="width: 11.231%;" />
+<col style="width: 34.455%;" />
+<col style="width: 35.929%;" />
+<col style="width: 19.231%;" />
+<tr style="height: 21px;">
+<th style="border: Solid 1px #9b9b9b;" bgcolor="#DADADA">
+<p class="GreyColumnHeading" style="font-weight: normal; margin-left: 0px;"><span style="font-weight: normal;"><span style="font-size: 10pt; font-weight: bold;"><font size="2" style="font-size:10pt;">コード</font></span></span></p>
+</th>
+<th style="border-top: Solid 1px #9b9b9b; border-right: Solid 1px #9b9b9b; border-bottom: Solid 1px #9b9b9b;" bgcolor="#DADADA">
+<p class="GreyColumnHeading" style="font-weight: normal; margin-left: 0px;"><span style="font-weight: normal;">メッセージ</span></p>
+</th>
+<th style="border-top: Solid 1px #9b9b9b; border-right: Solid 1px #9b9b9b; border-bottom: Solid 1px #9b9b9b;" bgcolor="#DADADA">
+<p class="GreyColumnHeading" style="font-weight: normal; margin-left: 0px;"><span style="font-weight: normal;"><span style="font-weight: bold; font-size: 10pt;"><font size="2" style="font-size:10pt;">概要</font></span></span></p>
+</th>
+<th style="border-top: Solid 1px #9b9b9b; border-right: Solid 1px #9b9b9b; border-bottom: Solid 1px #9b9b9b;" bgcolor="#DADADA">
+<p class="GreyColumnHeading" style="font-weight: normal; margin-left: 0px;"><span style="font-weight: normal;">備考</span></p>
+</th>
+</tr>
+<tr style="height: 41px;">
+<td style="border-left: Solid 1px #9b9b9b; border-right: Solid 1px #9b9b9b; border-bottom: Solid 1px #9b9b9b; vertical-align: top;">
+<p class="TableText" style="font-family: Verdana, sans-serif; font-size: 12px;">302</p>
+</td>
+<td style="border-right: Solid 1px #9b9b9b; border-bottom: Solid 1px #9b9b9b; vertical-align: top;">
+<p class="TableText" style="font-family: Verdana, sans-serif; font-size: 12px;">Found</p>
+</td>
+<td style="border-right: Solid 1px #9b9b9b; border-bottom: Solid 1px #9b9b9b; vertical-align: top;">
+<p class="TableText">認可に失敗<br style="color: rgb(72, 72, 72); font-family: Verdana, sans-serif; font-size: 12px; font-style: normal; font-variant: normal; font-weight: normal; letter-spacing: normal; line-height: normal; orphans: auto; text-align: start; text-indent: 0px; text-transform: none; white-space: normal; widows: auto; word-spacing: 0px; -webkit-text-size-adjust: auto; -webkit-text-stroke-width: 0px; background-color: #ffffff;" />
+__html/errorにリダイレクトする</p>
+</td>
+<td style="border-right: Solid 1px #9b9b9b; border-bottom: Solid 1px #9b9b9b; vertical-align: top;">&#160;</td>
+</tr>
+<tr style="height: 22px;">
+<td style="border-left: Solid 1px #9b9b9b; border-right: Solid 1px #9b9b9b; border-bottom: Solid 1px #9b9b9b; vertical-align: top;">
+<p class="TableText" style="font-family: Verdana, sans-serif; font-size: 12px;">400</p>
+</td>
+<td style="border-right: Solid 1px #9b9b9b; border-bottom: Solid 1px #9b9b9b; vertical-align: top;">
+<p class="TableText" style="font-family: Verdana, sans-serif; font-size: 12px;">Bad Request</p>
+</td>
+<td style="border-right: Solid 1px #9b9b9b; border-bottom: Solid 1px #9b9b9b; vertical-align: top;">
+<p class="TableText">リクエストのパラメータが不正</p>
+</td>
+<td style="border-right: Solid 1px #9b9b9b; border-bottom: Solid 1px #9b9b9b; vertical-align: top;">&#160;</td>
+</tr>
+<tr style="height: 24px;">
+<td style="border-left: Solid 1px #9b9b9b; border-right: Solid 1px #9b9b9b; border-bottom: Solid 1px #9b9b9b; vertical-align: top;">
+<p class="TableText" style="font-family: Verdana, sans-serif; font-size: 12px;">404</p>
+</td>
+<td style="border-right: Solid 1px #9b9b9b; border-bottom: Solid 1px #9b9b9b; vertical-align: top;">
+<p class="TableText" style="font-family: Verdana, sans-serif; font-size: 12px;">Not Found</p>
+</td>
+<td style="border-right: Solid 1px #9b9b9b; border-bottom: Solid 1px #9b9b9b; vertical-align: top;">
+<p class="TableText">存在しないリソースを指定</p>
+</td>
+<td style="border-right: Solid 1px #9b9b9b; border-bottom: Solid 1px #9b9b9b; vertical-align: top;">&#160;</td>
+</tr>
+<tr style="height: 24px;">
+<td style="border-left: Solid 1px #9b9b9b; border-right: Solid 1px #9b9b9b; border-bottom: Solid 1px #9b9b9b; vertical-align: top;">
+<p class="TableText" style="font-family: Verdana, sans-serif; font-size: 12px;">405</p>
+</td>
+<td style="border-right: Solid 1px #9b9b9b; border-bottom: Solid 1px #9b9b9b; vertical-align: top;">
+<p class="TableText" style="font-family: Verdana, sans-serif; font-size: 12px;">Method Not Allowed</p>
+</td>
+<td style="border-right: Solid 1px #9b9b9b; border-bottom: Solid 1px #9b9b9b; vertical-align: top;">
+<p class="TableText">許可していないリクエストメソッドを指定</p>
+</td>
+<td style="border-right: Solid 1px #9b9b9b; border-bottom: Solid 1px #9b9b9b; vertical-align: top;">&#160;</td>
+</tr>
+</table>
+<h4><span style="font-weight: bold;">レスポンスサンプル</span></h4>
+<p class="Paragraph2">なし</p>
+<h3 style="orphans: 2; widows: 2; -webkit-text-size-adjust: auto;"><span style="-webkit-text-stroke-width: 0px;"><font class="">Request Token Authentication</font></span></h3>
+<h4 class="Paragraph"><span style="font-weight: bold;">ステータスコード</span></h4>
+<p class="Paragraph2">302</p>
+<p class="Paragraph2">&#160;ブラウザはredirect_uriにリダイレクトされる。&#160;redirect_uriに、「URLパラメータ」で示すフラグメントが格納される。</p>
+<table class="CodeTable" style="margin-left: 26pt; height: 47px;" cellspacing="0px" width="96%">
+<col style="width: 100%;" />
+<tr>
+<td style="border: Solid 1px #9b9b9b;" bgcolor="#E0E0E0">
+<p class="Code">{redirect_uri}#access_token={access_token}&amp;token_type=Bearer&amp;expires_in={expires_in}&amp;state={state}</p>
+</td>
+</tr>
+</table>
+<p class="Paragraph">&#160;</p>
+<table style="margin-left: 26pt;" cellspacing="0" width="96%">
+<col style="width: 17.712%;" />
+<col style="width: 30.567%;" />
+<col style="width: 51.721%;" />
+<tr>
+<th style="border-top: Solid 1px #9b9b9b; border-left: ridge 1px #9b9b9b; border-right: Ridge 1px #9b9b9b; border-bottom: Ridge 1px #9b9b9b;" bgcolor="#DADADA">
+<p class="GreyColumnHeading" style="font-weight: normal; margin-left: 0px;"><span style="font-weight: normal;"><span style="font-weight: bold; font-size: 10pt;"><font size="2" style="font-size:10pt;">項目名</font></span></span></p>
+</th>
+<th style="border-top: Solid 1px #9b9b9b; border-right: Ridge 1px #9b9b9b; border-bottom: Ridge 1px #9b9b9b;" bgcolor="#DADADA">
+<p class="GreyColumnHeading" style="font-weight: normal; margin-left: 0px;"><span style="font-weight: normal;"><span style="font-weight: bold; font-size: 10pt;"><font size="2" style="font-size:10pt;">概要</font></span></span></p>
+</th>
+<th style="border-top: Solid 1px #9b9b9b; border-right: Ridge 1px #9b9b9b; border-bottom: Ridge 1px #9b9b9b;" bgcolor="#DADADA">
+<p class="GreyColumnHeading" style="font-weight: normal; margin-left: 0px;"><span style="font-weight: normal;">備考</span></p>
+</th>
+</tr>
+<tr>
+<td style="border-left: ridge 1px #9b9b9b; border-right: Ridge 1px #9b9b9b; border-bottom: Ridge 1px #9b9b9b;">
+<p class="TableText" style="font-family: Verdana, sans-serif; font-size: 12px;">redirect_uri</p>
+</td>
+<td style="border-right: Ridge 1px #9b9b9b; border-bottom: Ridge 1px #9b9b9b;">
+<p class="TableText" style="color: rgb(72, 72, 72); font-size: 12px; line-height: normal; orphans: auto; widows: auto; -webkit-text-size-adjust: auto; background-color: #ffffff; display: inline ! important ; font-family: Verdana, sans-serif; -webkit-text-stroke-width: 0px;">クライアントのリダイレクトエンドポイントURL</p>
+</td>
+<td style="border-right: Ridge 1px #9b9b9b; border-bottom: Ridge 1px #9b9b9b;">
+<p class="TableText" style="color: rgb(72, 72, 72); font-size: 12px; line-height: normal; orphans: auto; widows: auto; -webkit-text-size-adjust: auto; background-color: #ffffff; display: inline ! important ; font-family: Verdana, sans-serif; -webkit-text-stroke-width: 0px;">リクエストの「redirect_uri」の値</p>
+</td>
+</tr>
+<tr>
+<td style="border-left: ridge 1px #9b9b9b; border-right: Ridge 1px #9b9b9b; border-bottom: Ridge 1px #9b9b9b;">
+<p class="TableText" style="font-family: Verdana, sans-serif; font-size: 12px;">access_token</p>
+</td>
+<td style="border-right: Ridge 1px #9b9b9b; border-bottom: Ridge 1px #9b9b9b;">
+<p class="TableText" style="color: rgb(72, 72, 72); font-size: 12px; line-height: normal; orphans: auto; widows: auto; -webkit-text-size-adjust: auto; background-color: #ffffff; display: inline ! important ; font-family: Verdana, sans-serif; -webkit-text-stroke-width: 0px;">認証・認可要求フォームで取得したアクセストークン</p>
+</td>
+<td style="border-right: Ridge 1px #9b9b9b; border-bottom: Ridge 1px #9b9b9b;">
+<p class="TableText" style="color: rgb(72, 72, 72); font-size: 12px; line-height: normal; orphans: auto; widows: auto; -webkit-text-size-adjust: auto; background-color: #ffffff; display: inline ! important ; font-family: Verdana, sans-serif; -webkit-text-stroke-width: 0px;">セルローカルトークンもしくは、トランスセルトークンを返却する</p>
+</td>
+</tr>
+<tr>
+<td style="border-left: ridge 1px #9b9b9b; border-right: Ridge 1px #9b9b9b; border-bottom: Ridge 1px #9b9b9b;">
+<p class="TableText" style="font-family: Verdana, sans-serif; font-size: 12px;">token_type</p>
+</td>
+<td style="border-right: Ridge 1px #9b9b9b; border-bottom: Ridge 1px #9b9b9b;">
+<p class="TableText" style="font-family: Verdana, sans-serif; font-size: 12px;">Bearer</p>
+</td>
+<td style="border-right: Ridge 1px #9b9b9b; border-bottom: Ridge 1px #9b9b9b;">&#160;</td>
+</tr>
+<tr>
+<td style="border-left: ridge 1px #9b9b9b; border-right: Ridge 1px #9b9b9b; border-bottom: Ridge 1px #9b9b9b;">
+<p class="TableText" style="font-family: Verdana, sans-serif; font-size: 12px;">expires_in</p>
+</td>
+<td style="border-right: Ridge 1px #9b9b9b; border-bottom: Ridge 1px #9b9b9b;">
+<p class="TableText">上記「access_token」の有効期限</p>
+</td>
+<td style="border-right: Ridge 1px #9b9b9b; border-bottom: Ridge 1px #9b9b9b;">
+<p class="TableText" style="color: rgb(72, 72, 72); font-size: 12px; line-height: normal; orphans: auto; widows: auto; -webkit-text-size-adjust: auto; background-color: #ffffff; display: inline ! important ; font-family: Verdana, sans-serif; -webkit-text-stroke-width: 0px;">1時間（3600秒）</p>
+</td>
+</tr>
+<tr>
+<td style="border-left: ridge 1px #9b9b9b; border-right: Ridge 1px #9b9b9b; border-bottom: Ridge 1px #9b9b9b;">
+<p class="TableText" style="font-family: Verdana, sans-serif; font-size: 12px;">state</p>
+</td>
+<td style="border-right: Ridge 1px #9b9b9b; border-bottom: Ridge 1px #9b9b9b;">
+<p class="TableText" style="color: rgb(72, 72, 72); font-size: 12px; line-height: normal; orphans: auto; widows: auto; -webkit-text-size-adjust: auto; background-color: #ffffff; display: inline ! important ; font-family: Verdana, sans-serif; -webkit-text-stroke-width: 0px;">リクエスト時に設定したstateの値</p>
+</td>
+<td style="border-right: Ridge 1px #9b9b9b; border-bottom: Ridge 1px #9b9b9b;">
+<p class="TableText" style="color: rgb(72, 72, 72); font-size: 12px; line-height: normal; orphans: auto; widows: auto; -webkit-text-size-adjust: auto; background-color: #ffffff; display: inline ! important ; font-family: Verdana, sans-serif; -webkit-text-stroke-width: 0px;">リクエストとコールバックの間で状態を維持するために使用するランダムな値</p>
+</td>
+</tr>
+</table>
+<h4><span style="font-weight: bold; font-size: 10pt;"><font size="2" style="font-size:10pt;">エラーメッセージ一覧</font></span></h4>
+<table style="margin-left: 26pt;" cellspacing="0" width="96%">
+<col style="width: 18.522%;" />
+<col style="width: 38.866%;" />
+<col style="width: 42.612%;" />
+<tr>
+<th style="border: Solid 1px #9b9b9b;" bgcolor="#DADADA">
+<p class="GreyColumnHeading" style="font-weight: normal; margin-left: 0px;"><span style="font-weight: normal;"><span style="font-weight: bold; font-size: 10pt;"><font size="2" style="font-size:10pt;">項目名</font></span></span></p>
+</th>
+<th style="border-top: Solid 1px #9b9b9b; border-right: Solid 1px #9b9b9b; border-bottom: Solid 1px #9b9b9b;" bgcolor="#DADADA">
+<p class="GreyColumnHeading" style="font-weight: normal; margin-left: 0px;"><span style="font-weight: normal;"><span style="font-weight: bold; font-size: 10pt;"><font size="2" style="font-size:10pt;">概要</font></span></span></p>
+</th>
+<th style="border-top: Solid 1px #9b9b9b; border-right: Solid 1px #9b9b9b; border-bottom: Solid 1px #9b9b9b;" bgcolor="#DADADA">
+<p class="GreyColumnHeading" style="font-weight: normal; margin-left: 0px;"><span style="font-weight: normal;">備考</span></p>
+</th>
+</tr>
+<tr>
+<td style="border-left: Solid 1px #9b9b9b; border-right: Solid 1px #9b9b9b; border-bottom: Solid 1px #9b9b9b; vertical-align: top;">
+<p class="TableText">redirect_uri</p>
+</td>
+<td style="border-right: Solid 1px #9b9b9b; border-bottom: Solid 1px #9b9b9b; vertical-align: top;">
+<p class="TableText">Redirect URL</p>
+</td>
+<td style="border-right: Solid 1px #9b9b9b; border-bottom: Solid 1px #9b9b9b; vertical-align: top;">
+<p class="TableText">リクエストの「redirect_uri」で指定された、<br style="color: rgb(72, 72, 72); font-family: Verdana, sans-serif; font-size: 12px; font-style: normal; font-variant: normal; font-weight: normal; letter-spacing: normal; line-height: normal; orphans: auto; text-align: start; text-indent: 0px; text-transform: none; white-space: normal; widows: auto; word-spacing: 0px; -webkit-text-size-adjust: auto; -webkit-text-stroke-width: 0px; background-color: #ffffff;" />
+クライアントのリダイレクトスプリクトのURL<br style="color: rgb(72, 72, 72); font-family: Verdana, sans-serif; font-size: 12px; font-style: normal; font-variant: normal; font-weight: normal; letter-spacing: normal; line-height: normal; orphans: auto; text-align: start; text-indent: 0px; text-transform: none; white-space: normal; widows: auto; word-spacing: 0px; -webkit-text-size-adjust: auto; -webkit-text-stroke-width: 0px; background-color: #ffffff;" />
+ただし、以下のエラー内容の場合はこの値は「セルのURL + __html/error」に設定される<br style="color: rgb(72, 72, 72); font-family: Verdana, sans-serif; font-size: 12px; font-style: normal; font-variant: normal; font-weight: normal; letter-spacing: normal; line-height: normal; orphans: auto; text-align: start; text-indent: 0px; text-transform: none; white-space: normal; widows: auto; word-spacing: 0px; -webkit-text-size-adjust: auto; -webkit-text-stroke-width: 0px; background-color: #ffffff;" />
+「redirect_uriがURL形式ではない」「client_idとredirect_uriのセルが異なる」</p>
+</td>
+</tr>
+<tr>
+<td style="border-left: Solid 1px #9b9b9b; border-right: Solid 1px #9b9b9b; border-bottom: Solid 1px #9b9b9b; vertical-align: top;">
+<p class="TableText">error</p>
+</td>
+<td style="border-right: Solid 1px #9b9b9b; border-bottom: Solid 1px #9b9b9b; vertical-align: top;">
+<p class="TableText">エラー内容を示すコード</p>
+</td>
+<td style="border-right: Solid 1px #9b9b9b; border-bottom: Solid 1px #9b9b9b; vertical-align: top;">
+<p class="TableText">「error」を参照</p>
+</td>
+</tr>
+<tr>
+<td style="border-left: Solid 1px #9b9b9b; border-right: Solid 1px #9b9b9b; border-bottom: Solid 1px #9b9b9b; vertical-align: top;">
+<p class="TableText">error_description</p>
+</td>
+<td style="border-right: Solid 1px #9b9b9b; border-bottom: Solid 1px #9b9b9b; vertical-align: top;">
+<p class="TableText">エラーの追加情報</p>
+</td>
+<td style="border-right: Solid 1px #9b9b9b; border-bottom: Solid 1px #9b9b9b; vertical-align: top;">
+<p class="TableText">例外メッセージなどを設定する</p>
+</td>
+</tr>
+<tr>
+<td style="border-left: Solid 1px #9b9b9b; border-right: Solid 1px #9b9b9b; border-bottom: Solid 1px #9b9b9b; vertical-align: top;">
+<p class="TableText">error_uri</p>
+</td>
+<td style="border-right: Solid 1px #9b9b9b; border-bottom: Solid 1px #9b9b9b; vertical-align: top;">
+<p class="TableText">エラーの追加情報のWebページのURI</p>
+</td>
+<td style="border-right: Solid 1px #9b9b9b; border-bottom: Solid 1px #9b9b9b; vertical-align: top;">
+<p class="TableText">空文字を返す<br style="color: rgb(72, 72, 72); font-family: Verdana, sans-serif; font-size: 12px; font-style: normal; font-variant: normal; font-weight: normal; letter-spacing: normal; line-height: normal; orphans: auto; text-align: start; text-indent: 0px; text-transform: none; white-space: normal; widows: auto; word-spacing: 0px; -webkit-text-size-adjust: auto; -webkit-text-stroke-width: 0px; background-color: #ffffff;" />
+※今後のエンハンスに備えて設定</p>
+</td>
+</tr>
+<tr>
+<td style="border-left: Solid 1px #9b9b9b; border-right: Solid 1px #9b9b9b; border-bottom: Solid 1px #9b9b9b; vertical-align: top;">
+<p class="TableText">state</p>
+</td>
+<td style="border-right: Solid 1px #9b9b9b; border-bottom: Solid 1px #9b9b9b; vertical-align: top;">
+<p class="TableText">リクエスト時に設定したstateの値</p>
+</td>
+<td style="border-right: Solid 1px #9b9b9b; border-bottom: Solid 1px #9b9b9b; vertical-align: top;">
+<p class="TableText">&#160;</p>
+</td>
+</tr>
+<tr>
+<td style="border-left: Solid 1px #9b9b9b; border-right: Solid 1px #9b9b9b; border-bottom: Solid 1px #9b9b9b; vertical-align: top;">
+<p class="TableText">code</p>
+</td>
+<td style="border-right: Solid 1px #9b9b9b; border-bottom: Solid 1px #9b9b9b; vertical-align: top;">
+<p class="TableText">personium.ioのエラーコード</p>
+</td>
+<td style="border-right: Solid 1px #9b9b9b; border-bottom: Solid 1px #9b9b9b; vertical-align: top;">
+<p class="TableText">&#160;</p>
+</td>
+</tr>
+<tr>
+<td style="border-left: Solid 1px #9b9b9b; border-right: Solid 1px #9b9b9b; border-bottom: Solid 1px #9b9b9b; vertical-align: top;">
+<p class="TableText">invalid_request</p>
+</td>
+<td style="border-right: Solid 1px #9b9b9b; border-bottom: Solid 1px #9b9b9b; vertical-align: top;">
+<p class="TableText">リクエストで必須パラメータが指定されていない<br style="color: rgb(72, 72, 72); font-family: Verdana, sans-serif; font-size: 12px; font-style: normal; font-variant: normal; font-weight: normal; letter-spacing: normal; line-height: normal; orphans: auto; text-align: start; text-indent: 0px; text-transform: none; white-space: normal; widows: auto; word-spacing: 0px; -webkit-text-size-adjust: auto; -webkit-text-stroke-width: 0px; background-color: #ffffff;" />
+リクエストパラメータの形式が不正<br style="color: rgb(72, 72, 72); font-family: Verdana, sans-serif; font-size: 12px; font-style: normal; font-variant: normal; font-weight: normal; letter-spacing: normal; line-height: normal; orphans: auto; text-align: start; text-indent: 0px; text-transform: none; white-space: normal; widows: auto; word-spacing: 0px; -webkit-text-size-adjust: auto; -webkit-text-stroke-width: 0px; background-color: #ffffff;" />
+アカウントロック中</p>
+</td>
+<td style="border-right: Solid 1px #9b9b9b; border-bottom: Solid 1px #9b9b9b; vertical-align: top;">
+<p class="TableText">&#160;</p>
+</td>
+</tr>
+<tr>
+<td style="border-left: Solid 1px #9b9b9b; border-right: Solid 1px #9b9b9b; border-bottom: Solid 1px #9b9b9b; vertical-align: top;">
+<p class="TableText">unauthorized_client</p>
+</td>
+<td style="border-right: Solid 1px #9b9b9b; border-bottom: Solid 1px #9b9b9b; vertical-align: top;">
+<p class="TableText">クライアントが認可されていない<br style="color: rgb(72, 72, 72); font-family: Verdana, sans-serif; font-size: 12px; font-style: normal; font-variant: normal; font-weight: normal; letter-spacing: normal; line-height: normal; orphans: auto; text-align: start; text-indent: 0px; text-transform: none; white-space: normal; widows: auto; word-spacing: 0px; -webkit-text-size-adjust: auto; -webkit-text-stroke-width: 0px; background-color: #ffffff;" />
+ユーザによってキャンセルボタンが押下された</p>
+</td>
+<td style="border-right: Solid 1px #9b9b9b; border-bottom: Solid 1px #9b9b9b; vertical-align: top;">
+<p class="TableText">&#160;</p>
+</td>
+</tr>
+<tr>
+<td style="border-left: Solid 1px #9b9b9b; border-right: Solid 1px #9b9b9b; border-bottom: Solid 1px #9b9b9b; vertical-align: top;">
+<p class="TableText">access_denied</p>
+</td>
+<td style="border-right: Solid 1px #9b9b9b; border-bottom: Solid 1px #9b9b9b; vertical-align: top;">
+<p class="TableText">client_idとredirect_uriのセルが異なる<br style="color: rgb(72, 72, 72); font-family: Verdana, sans-serif; font-size: 12px; font-style: normal; font-variant: normal; font-weight: normal; letter-spacing: normal; line-height: normal; orphans: auto; text-align: start; text-indent: 0px; text-transform: none; white-space: normal; widows: auto; word-spacing: 0px; -webkit-text-size-adjust: auto; -webkit-text-stroke-width: 0px; background-color: #ffffff;" />
+トランスセルトークン認証に失敗した場合</p>
+</td>
+<td style="border-right: Solid 1px #9b9b9b; border-bottom: Solid 1px #9b9b9b; vertical-align: top;">
+<p class="TableText">&#160;</p>
+</td>
+</tr>
+<tr>
+<td style="border-left: Solid 1px #9b9b9b; border-right: Solid 1px #9b9b9b; border-bottom: Solid 1px #9b9b9b; vertical-align: top;">
+<p class="TableText">unsupported_response_type</p>
+</td>
+<td style="border-right: Solid 1px #9b9b9b; border-bottom: Solid 1px #9b9b9b; vertical-align: top;">
+<p class="TableText">response_typeの値が不正</p>
+</td>
+<td style="border-right: Solid 1px #9b9b9b; border-bottom: Solid 1px #9b9b9b; vertical-align: top;">
+<p class="TableText">&#160;</p>
+</td>
+</tr>
+<tr>
+<td style="border-left: Solid 1px #9b9b9b; border-right: Solid 1px #9b9b9b; border-bottom: Solid 1px #9b9b9b; vertical-align: top;">
+<p class="TableText">server_error</p>
+</td>
+<td style="border-right: Solid 1px #9b9b9b; border-bottom: Solid 1px #9b9b9b; vertical-align: top;">
+<p class="TableText">サーバエラー</p>
+</td>
+<td style="border-right: Solid 1px #9b9b9b; border-bottom: Solid 1px #9b9b9b; vertical-align: top;">
+<p class="TableText">&#160;</p>
+</td>
+</tr>
+<tr>
+<td style="border-left: Solid 1px #9b9b9b; border-right: Solid 1px #9b9b9b; border-bottom: Solid 1px #9b9b9b; vertical-align: top;">
+<p class="TableText">Please, input user ID and password.</p>
+</td>
+<td style="border-right: Solid 1px #9b9b9b; border-bottom: Solid 1px #9b9b9b; vertical-align: top;">
+<p class="TableText">「username」もしくは「password」が未入力</p>
+</td>
+<td style="border-right: Solid 1px #9b9b9b; border-bottom: Solid 1px #9b9b9b; vertical-align: top;">
+<p class="TableText">&#160;</p>
+</td>
+</tr>
+<tr>
+<td style="border-left: Solid 1px #9b9b9b; border-right: Solid 1px #9b9b9b; border-bottom: Solid 1px #9b9b9b; vertical-align: top;">
+<p class="TableText">User ID or password is incorrect.</p>
+</td>
+<td style="border-right: Solid 1px #9b9b9b; border-bottom: Solid 1px #9b9b9b; vertical-align: top;">
+<p class="TableText">パスワード認証に失敗した場合</p>
+</td>
+<td style="border-right: Solid 1px #9b9b9b; border-bottom: Solid 1px #9b9b9b; vertical-align: top;">
+<p class="TableText">&#160;</p>
+</td>
+</tr>
+<tr>
+<td style="border-left: Solid 1px #9b9b9b; border-right: Solid 1px #9b9b9b; border-bottom: Solid 1px #9b9b9b; vertical-align: top;">
+<p class="TableText">Since the Expiration Date of the authentication passed,</p>
+<p class="TableText">You must be authorized again.</p>
+</td>
+<td style="border-right: Solid 1px #9b9b9b; border-bottom: Solid 1px #9b9b9b; vertical-align: top;">
+<p class="TableText">Cookie認証に失敗した場合</p>
+</td>
+<td style="border-right: Solid 1px #9b9b9b; border-bottom: Solid 1px #9b9b9b; vertical-align: top;">
+<p class="TableText">&#160;</p>
+</td>
+</tr>
+</table>
+<h4 style="orphans: 2; widows: 2;">Parameter Check Error</h4>
+<p class="Paragraph2">ブラウザはredirect_uriにリダイレクトされる。<br style="color: rgb(72, 72, 72); font-family: Verdana, sans-serif; font-size: 12px; font-style: normal; font-variant: normal; font-weight: normal; letter-spacing: normal; line-height: normal; orphans: auto; text-align: start; text-indent: 0px; text-transform: none; white-space: normal; widows: auto; word-spacing: 0px; -webkit-text-size-adjust: auto; -webkit-text-stroke-width: 0px; background-color: #ffffff;" />
+redirect_uriに、「パラメータチェックエラー」で示すフラグメントが格納される。</p>
+<p class="Paragraph2" style="font-weight: bold; color: rgb(72, 72, 72); font-family: Verdana, sans-serif; font-size: 12px; line-height: normal; orphans: auto; widows: auto; -webkit-text-size-adjust: auto; background-color: #ffffff; display: inline ! important ;">「redirect_uriがURL形式ではない」「client_idとredirect_uriのセルが異なる」「認可処理失敗」</p>
+<table class="CodeTable" style="margin-left: 26pt; height: 47px;" cellspacing="0px" width="96%">
+<col style="width: 100%;" />
+<tr>
+<td style="border: Solid 1px #9b9b9b;" bgcolor="#E0E0E0">
+<p class="Code">{redirect_uri}?code={code}</p>
+</td>
+</tr>
+</table>
+<p class="Paragraph2" style="font-weight: bold; color: rgb(72, 72, 72); font-family: Verdana, sans-serif; font-size: 12px; line-height: normal; orphans: auto; widows: auto; -webkit-text-size-adjust: auto; background-color: #ffffff; display: inline ! important ;">上記以外</p>
+<table class="CodeTable" style="margin-left: 26pt; height: 47px;" cellspacing="0px" width="96%">
+<col style="width: 100%;" />
+<tr>
+<td style="border: Solid 1px #9b9b9b;" bgcolor="#E0E0E0">
+<p class="Code">{redirect_uri}#error={error}&amp;error_description={error_description}&amp;state={state}&amp;code={code}</p>
+</td>
+</tr>
+</table>
+<h2><span style="font-weight: bold;">CURLサンプル</span></h2>
+<table class="CodeTable" style="margin-left: 26pt; height: 47px;" cellspacing="0px" width="96%">
+<col style="width: 100%;" />
+<tr>
+<td style="border: Solid 1px #9b9b9b;" bgcolor="#E0E0E0">
+<pre class="prettyprint Code">
+curl 'https://fqdn/cellname/__authz' -X POST -v -k \ <br />-d 'response_type=token&amp;client_id=https://fqdn/app&amp;redirect_uri=https://fqdn/app/__/redirect.html&amp;state=0000000111'
+</pre></td>
+</tr>
+</table>
+<p class="Paragraph">&#160;</p>
+<p class="Paragraph">&#160;</p>
+<br />
+<div style="border-top: Solid 3px #3a3a3a; width: 100%; position: relative; padding-top: 2px; padding-bottom: 2px; padding-right: 5px; background-color: #9b9b9b;" id="footer">
+<h6 style="text-align: right; margin-top: 5pt; margin-bottom: 5pt;">Copyright 2014 &#160;FUJITSU LIMITED</h6>
+</div>
+<script type="text/javascript" language="javascript1.2">
+//<![CDATA[
+<!--
+if (window.writeIntopicBar)
+        writeIntopicBar(0);
+
+
+highlightSearch();
+//-->
+//]]>
+</script>
+</body>
+</html>

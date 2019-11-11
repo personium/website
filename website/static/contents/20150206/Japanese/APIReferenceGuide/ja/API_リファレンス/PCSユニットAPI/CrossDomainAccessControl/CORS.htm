@@ -1,0 +1,257 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN"
+    "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+ <meta name="generator" content="Adobe RoboHelp 10" />
+<title>CORS対応</title>
+<link rel="StyleSheet" href="../../../../../default.css" type="text/css" />
+<script type="text/javascript" language="JavaScript">
+//<![CDATA[
+function reDo() {
+  if (innerWidth != origWidth || innerHeight != origHeight)
+     location.reload();
+}
+if ((parseInt(navigator.appVersion) == 4) && (navigator.appName == "Netscape")) {
+	origWidth = innerWidth;
+	origHeight = innerHeight;
+	onresize = reDo;
+}
+onerror = null; 
+//]]>
+</script>
+<style type="text/css">
+<!--
+div.WebHelpPopupMenu { position:absolute;
+left:0px;
+top:0px;
+z-index:4;
+visibility:hidden; }
+-->
+</style>
+<script type="text/javascript" language="javascript1.2" src="../../../../../whmsg.js" charset="utf-8"></script>
+<script type="text/javascript" language="javascript" src="../../../../../whver.js" charset="utf-8"></script>
+<script type="text/javascript" language="javascript1.2" src="../../../../../whutils.js" charset="utf-8"></script>
+<script type="text/javascript" language="javascript1.2" src="../../../../../whproxy.js" charset="utf-8"></script>
+<script type="text/javascript" language="javascript1.2" src="../../../../../whlang.js" charset="utf-8"></script>
+<script type="text/javascript" language="javascript1.2" src="../../../../../whtopic.js" charset="utf-8"></script>
+
+</head>
+<body><script type="text/javascript" language="javascript1.2">//<![CDATA[
+<!--
+if (window.gbWhTopic)
+{
+	var strUrl = document.location.href;
+	var bc = 0;
+	var n = strUrl.toLowerCase().indexOf("bc-");
+	if(n != -1)
+	{
+		document.location.href = strUrl.substring(0, n);
+		bc = strUrl.substring(n+3);
+	}
+
+	if (window.addTocInfo)
+	{
+	addTocInfo("API リファレンス\nPCSユニットAPI\nCrossDomainAccessControl\nCORS対応");
+addButton("show",BTN_TEXT,"表示","","","","",0,0,"","","");
+
+	}
+	if (window.writeBtnStyle)
+		writeBtnStyle();
+
+	if (window.writeIntopicBar)
+		writeIntopicBar(1);
+
+	
+	
+}
+else
+	if (window.gbIE4)
+		document.location.reload();
+
+onLoadHandler = function()
+{
+  if (window.setRelStartPage)
+	{
+	setTimeout("setRelStartPage('../../../../../Japanese.htm');", 1)
+
+    setTimeout("UpdateBreadCrumbsMarker();", 1);
+	}
+}
+
+if (window.addEventListener){  
+	window.addEventListener('load', onLoadHandler, false);   
+} else if (window.attachEvent){  
+	window.attachEvent('onload', onLoadHandler);  
+}
+
+function onSetStartPage()
+{
+  autoSync(1);
+  sendSyncInfo();
+  sendAveInfoOut();
+}
+//-->
+//]]></script>
+<script type="text/javascript" src="../../../../../ehlpdhtm.js" language="JavaScript1.2"></script>
+
+<h1>CORS対応</h1>
+<ul style="
+list-style:url('../../../../../arrow.png');">
+<li style="margin-left: -20px;">
+<h2 style="margin-left: 0px;"><span lang="JA" xml:lang="JA" style="line-height: 115%; font-family: 'MS Mincho'; 
+		 mso-ascii-font-family: Arial; mso-fareast-theme-font: minor-fareast; 
+		 mso-hansi-font-family: Arial; mso-bidi-font-family: Arial; mso-ansi-language: EN-US; 
+		 mso-fareast-language: JA; mso-bidi-language: AR-SA; font-weight: bold;">概要</span></h2>
+</li>
+</ul>
+<p style="margin-left: 40px;"><span style="font-family: Verdana, sans-serif; font-size: 10pt; color: #353d47;"><font size="2" color="#353d47" style="font-size:10.000000pt;">ペルソナコンテナのすべてのAPIは、一部例外を除き原則CORS(Cross Origin Resource Sharing)での利用を想定しています。</font></span></p>
+<p style="margin-left: 40px;">&#160;</p>
+<table class="CodeTable" style="margin-left: 26pt;" cellspacing="0px" width="96%">
+<col style="width: 100%;" />
+<tr>
+<td style="border: Solid 1px #9b9b9b; vertical-align: middle;">
+<pre class="prettyprint Code">
+<code>TODO 例外： Implicit Flowでの認証エンドポイント？？だけ？</code> 
+                
+</pre></td>
+</tr>
+</table>
+<p style="margin-left: 40px;">&#160;</p>
+<p style="margin-left: 40px;"><span style="color: rgb(72, 72, 72); font-family: Verdana, sans-serif; font-size: 12px; line-height: normal; orphans: auto; widows: auto; -webkit-text-stroke-width: 0px;">具体的には特段例外としての記述が無い場合、全APIエンドポイントがリクエストに応じて以下のレスポンスヘッダを返却します。</span></p>
+<ol style="margin-bottom: 1em; color: rgb(72, 72, 72); font-family: Verdana, sans-serif; font-size: 12px; line-height: normal; orphans: auto; widows: auto; -webkit-text-stroke-width: 0px; background-color: #ffffff;">
+<li style="list-style:none;display: inline">
+<ol style="margin-bottom: 1em; color: rgb(72, 72, 72); font-family: Verdana, sans-serif; font-size: 12px; line-height: normal; orphans: auto; widows: auto; -webkit-text-stroke-width: 0px; background-color: #ffffff;">
+<li>Access-Control-Allow-Origin</li>
+<li>Access-Control-Allow-Methods</li>
+<li>Access-Control-Allow-Headers</li>
+</ol>
+</li>
+</ol>
+<p class="Paragraph" style="color: rgb(72, 72, 72); font-family: Verdana, sans-serif; font-size: 12px; line-height: normal; orphans: auto; widows: auto; background-color: #ffffff; display: inline ! important ; -webkit-text-stroke-width: 0px;">これにより、JavaScriptなどのウェブブラウザ搭載のスクリプト言語でサーバとのHTTP非同期通信を行うため、XMLHttpRequest Level 2を使用することができます。</p>
+<ul style="
+list-style:url('../../../../../arrow.png');">
+<li style="margin-left: -20px;">
+<h2 style="margin-left: 0px;">Access-Control-Allow-Originレスポンスヘッダの返却</h2>
+</li>
+</ul>
+<p class="Paragraph"><span style="color: rgb(72, 72, 72); font-family: Verdana, sans-serif; font-size: 12px; line-height: normal; orphans: auto; widows: auto; -webkit-text-stroke-width: 0px; background-color: #ffffff; display: inline ! important ; float: none;">すべてのAPIにおいて、Access-Control-Allow-Originレスポンスヘッダとして*を返却します。</span><br style="color: rgb(72, 72, 72); font-family: Verdana, sans-serif; font-size: 12px; font-style: normal; font-variant: normal; font-weight: normal; letter-spacing: normal; line-height: normal; orphans: auto; text-align: start; text-indent: 0px; text-transform: none; white-space: normal; widows: auto; word-spacing: 0px; -webkit-text-stroke-width: 0px; background-color: #ffffff;" />
+<span style="color: rgb(72, 72, 72); font-family: Verdana, sans-serif; font-size: 12px; line-height: normal; orphans: auto; widows: auto; -webkit-text-stroke-width: 0px; background-color: #ffffff; display: inline ! important ; float: none;">Access-Control-Allow-Originレスポンスヘッダはアクセスを許可しているドメインを返却するものですが、ペルソナコンテナは全てのドメインからのアクセスを許可すべく</span></p>
+<p class="Paragraph" style="color: rgb(72, 72, 72); font-family: Verdana, sans-serif; font-size: 12px; line-height: normal; orphans: auto; widows: auto; background-color: #ffffff; display: inline ! important ;"><span style="-webkit-text-stroke-width: 0px;">このような振る舞いをします。</span></p>
+<p class="Paragraph"><span style="color: rgb(72, 72, 72); font-family: Verdana, sans-serif; font-size: 12px; line-height: normal; orphans: auto; widows: auto; -webkit-text-stroke-width: 0px; background-color: #ffffff; display: inline ! important ; float: none;">次に示すのは、Access-Control-Allow-Originのレスポンスヘッダの例です。</span></p>
+<table class="CodeTable" style="margin-left: 26pt;" cellspacing="0px" width="96%">
+<col style="width: 100%;" />
+<tr>
+<td style="border: Solid 1px #9b9b9b; vertical-align: middle;">
+<pre class="prettyprint Code">
+Access-Control-Allow-Origin: *          
+</pre></td>
+</tr>
+</table>
+<p class="Paragraph">&#160;</p>
+<ul style="
+list-style:url('../../../../../arrow.png');">
+<li style="margin-left: -20px;">
+<h2 style="margin-left: 0px;">ブラウザからのプレフライトリクエストへの対応</h2>
+</li>
+</ul>
+<p class="Paragraph"><span style="color: rgb(72, 72, 72); font-family: Verdana, sans-serif; font-size: 12px; line-height: normal; orphans: auto; widows: auto; -webkit-text-stroke-width: 0px; background-color: #ffffff; display: inline ! important ; float: none;">ブラウザからのプレフライトリクエストへの対応として、すべてのAPIにおいてOPTIONSメソッドのリクエストを発行すると以下の振る舞いをします。</span></p>
+<ol style="margin-bottom: 1em; color: rgb(72, 72, 72); font-family: Verdana, sans-serif; font-size: 12px; line-height: normal; orphans: auto; widows: auto; -webkit-text-stroke-width: 0px; background-color: #ffffff;">
+<li>
+<p style="margin-left: 48px;">Access-Control-Allow-Methods レスポンスヘッダの返却</p>
+</li>
+<li>
+<p style="margin-left: 48px;">Access-Control-Allow-Headers レスポンスヘッダの返却</p>
+</li>
+</ol>
+<h3><span style="orphans: auto; widows: auto; -webkit-text-stroke-width: 0px;">Access-Control-Allow-Methods レスポンスヘッダの返却</span></h3>
+<p class="Paragraph"><span style="color: rgb(72, 72, 72); font-family: Verdana, sans-serif; font-size: 12px; line-height: normal; orphans: auto; widows: auto; -webkit-text-stroke-width: 0px; background-color: #ffffff; display: inline ! important ; float: none;">すべてのAPIにおいてOPTIONSメソッドのリクエストを発行すると、Access-Control-Allow-Methodsレスポンスヘッダを返却します。</span><br style="color: rgb(72, 72, 72); font-family: Verdana, sans-serif; font-size: 12px; font-style: normal; font-variant: normal; font-weight: normal; letter-spacing: normal; line-height: normal; orphans: auto; text-align: start; text-indent: 0px; text-transform: none; white-space: normal; widows: auto; word-spacing: 0px; -webkit-text-stroke-width: 0px; background-color: #ffffff;" />
+<span style="color: rgb(72, 72, 72); font-family: Verdana, sans-serif; font-size: 12px; line-height: normal; orphans: auto; widows: auto; -webkit-text-stroke-width: 0px; background-color: #ffffff; display: inline ! important ; float: none;">Access-Control-Allow-Methodsレスポンスヘッダの内容は、APIのアクセス制御設定とAuthorizationヘッダの内容によって以下のように変化します。</span></p>
+<table style="margin-left: 26pt;" cellspacing="0" width="95.33%">
+<col style="width: 48.8%;" />
+<col style="width: 51.2%;" />
+<tr>
+<th style="border: Solid 1px #9b9b9b;" bgcolor="#353D47">
+<p class="GreyColumnHeading">条件</p>
+</th>
+<th style="border-top: Solid 1px #9b9b9b; border-right: Solid 1px #9b9b9b; border-bottom: Solid 1px #9b9b9b;" bgcolor="#353D47">
+<p class="GreyColumnHeading">結果</p>
+</th>
+</tr>
+<tr>
+<td style="border-left: Solid 1px #9b9b9b; border-right: Solid 1px #9b9b9b; border-bottom: Solid 1px #9b9b9b;">
+<p class="TableText" style="color: rgb(72, 72, 72); font-family: Verdana, sans-serif; font-size: 12px; line-height: normal; orphans: auto; widows: auto; background-color: #ffffff;"><span style="-webkit-text-stroke-width: 0px; display: inline ! important ; float: none;">公開（Authorizationヘッダなしでも読み取り可能）なリソース</span></p>
+</td>
+<td style="border-right: Solid 1px #9b9b9b; border-bottom: Solid 1px #9b9b9b;">
+<p class="TableText" style="color: rgb(72, 72, 72); font-family: Verdana, sans-serif; font-size: 12px; line-height: normal; orphans: auto; widows: auto; background-color: #ffffff;"><span style="-webkit-text-stroke-width: 0px; display: inline ! important ; float: none;">そのリソースがサポートするすべてのHTTPメソッドを返します。</span></p>
+</td>
+</tr>
+<tr>
+<td style="border-left: Solid 1px #9b9b9b; border-right: Solid 1px #9b9b9b; border-bottom: Solid 1px #9b9b9b;"><span style="color: rgb(72, 72, 72); font-family: Verdana, sans-serif; font-size: 12px; line-height: normal; orphans: auto; widows: auto; -webkit-text-stroke-width: 0px; background-color: #ffffff; display: inline ! important ; float: none;">非公開（公開でない）リソースへのAuthorizationヘッダなしでのOPTIONSリクエスト</span> &#160;</td>
+<td style="border-right: Solid 1px #9b9b9b; border-bottom: Solid 1px #9b9b9b;">
+<p class="TableText" style="color: rgb(72, 72, 72); font-family: Verdana, sans-serif; font-size: 12px; line-height: normal; orphans: auto; widows: auto; background-color: #ffffff;"><span style="-webkit-text-stroke-width: 0px; display: inline ! important ; float: none;">PCSがサポートしうるすべてのHTTPメソッドを返します。</span></p>
+</td>
+</tr>
+<tr>
+<td style="border-left: Solid 1px #9b9b9b; border-right: Solid 1px #9b9b9b; border-bottom: Solid 1px #9b9b9b;"><span style="color: rgb(72, 72, 72); font-family: Verdana, sans-serif; font-size: 12px; line-height: normal; orphans: auto; widows: auto; -webkit-text-stroke-width: 0px; background-color: #ffffff; display: inline ! important ; float: none;">非公開リソースへの有効な※AuthorizationヘッダつきでのOPTIONSリクエスト</span></td>
+<td style="border-right: Solid 1px #9b9b9b; border-bottom: Solid 1px #9b9b9b;">
+<p class="TableText" style="color: rgb(72, 72, 72); font-family: Verdana, sans-serif; font-size: 12px; line-height: normal; orphans: auto; widows: auto; background-color: #ffffff;"><span style="-webkit-text-stroke-width: 0px; display: inline ! important ; float: none;">そのリソースがサポートするすべてのHTTPメソッドを返します。</span></p>
+</td>
+</tr>
+</table>
+<p class="Paragraph"><span style="color: rgb(72, 72, 72); font-family: Verdana, sans-serif; font-size: 12px; line-height: normal; orphans: auto; widows: auto; -webkit-text-stroke-width: 0px; background-color: #ffffff; display: inline ! important ; float: none;">※ Authorizationヘッダつきのリクエストでは、そのヘッダ内容に応じて以下のエラーとなることもあります。</span></p>
+<ol style="margin-bottom: 1em; color: rgb(72, 72, 72); font-family: Verdana, sans-serif; font-size: 12px; line-height: normal; orphans: auto; widows: auto; -webkit-text-stroke-width: 0px; background-color: #ffffff;">
+<li style="list-style:none;display: inline">
+<ol style="margin-bottom: 1em; color: rgb(72, 72, 72); font-family: Verdana, sans-serif; font-size: 12px; line-height: normal; orphans: auto; widows: auto; -webkit-text-stroke-width: 0px; background-color: #ffffff;">
+<li>401: Authorizationヘッダの内容が無効である。</li>
+<li>403: アクセス制御等の状況によりリクエストが受け付けられない。（読み取りが許可されていない。）</li>
+</ol>
+</li>
+</ol>
+<p class="Paragraph"><span style="color: rgb(72, 72, 72); font-family: Verdana, sans-serif; font-size: 12px; line-height: normal; orphans: auto; widows: auto; -webkit-text-stroke-width: 0px; background-color: #ffffff; display: inline ! important ; float: none;">リクエストURLにて許可をしているリクエストメソッドを返却します。</span><br style="color: rgb(72, 72, 72); font-family: Verdana, sans-serif; font-size: 12px; font-style: normal; font-variant: normal; font-weight: normal; letter-spacing: normal; line-height: normal; orphans: auto; text-align: start; text-indent: 0px; text-transform: none; white-space: normal; widows: auto; word-spacing: 0px; -webkit-text-stroke-width: 0px; background-color: #ffffff;" />
+<span style="color: rgb(72, 72, 72); font-family: Verdana, sans-serif; font-size: 12px; line-height: normal; orphans: auto; widows: auto; -webkit-text-stroke-width: 0px; background-color: #ffffff; display: inline ! important ; float: none;">次に示すのは、Access-Control-Allow-Methodsのレスポンスヘッダの例です。</span></p>
+<table class="CodeTable" style="margin-left: 26pt;" cellspacing="0px" width="96%">
+<col style="width: 100%;" />
+<tr>
+<td style="border: Solid 1px #9b9b9b; vertical-align: middle;">
+<pre class="prettyprint Code">
+Access-Control-Allow-Origin: GET, OPTIONS
+</pre></td>
+</tr>
+</table>
+<p class="Paragraph">&#160;</p>
+<h3 style="orphans: auto; widows: auto;"><span style="-webkit-text-stroke-width: 0px;">Access-Control-Allow-Headers レスポンスヘッダの返却</span></h3>
+<p class="Paragraph2"><span style="orphans: auto; widows: auto; -webkit-text-stroke-width: 0px;">す</span><span style="color: rgb(72, 72, 72); font-family: Verdana, sans-serif; font-size: 12px; line-height: normal; orphans: auto; widows: auto; -webkit-text-stroke-width: 0px; background-color: #ffffff; display: inline ! important ; float: none;">べてのAPIにおいて、リクエストヘッダにAccess-Control-Request-Headersを指定した場合、Access-Control-Allow-Headersを返却します。</span><br style="color: rgb(72, 72, 72); font-family: Verdana, sans-serif; font-size: 12px; font-style: normal; font-variant: normal; font-weight: normal; letter-spacing: normal; line-height: normal; orphans: auto; text-align: start; text-indent: 0px; text-transform: none; white-space: normal; widows: auto; word-spacing: 0px; -webkit-text-stroke-width: 0px; background-color: #ffffff;" />
+<span style="color: rgb(72, 72, 72); font-family: Verdana, sans-serif; font-size: 12px; line-height: normal; orphans: auto; widows: auto; -webkit-text-stroke-width: 0px; background-color: #ffffff; display: inline ! important ; float: none;">クライアントが望むヘッダをすべて送付できるよう、Access-Control-Allow-Headersレスポンスヘッダで返される内容は、Access-Control-Request-Headersに指定された値をそのまま返却します。</span><br style="color: rgb(72, 72, 72); font-family: Verdana, sans-serif; font-size: 12px; font-style: normal; font-variant: normal; font-weight: normal; letter-spacing: normal; line-height: normal; orphans: auto; text-align: start; text-indent: 0px; text-transform: none; white-space: normal; widows: auto; word-spacing: 0px; -webkit-text-stroke-width: 0px; background-color: #ffffff;" />
+<span style="color: rgb(72, 72, 72); font-family: Verdana, sans-serif; font-size: 12px; line-height: normal; orphans: auto; widows: auto; -webkit-text-stroke-width: 0px; background-color: #ffffff; display: inline ! important ; float: none;">次に示すのは、Access-Control-Request-Headersに「sample」を指定した場合のレスポンスヘッダの例です。</span></p>
+<table class="CodeTable" style="margin-left: 26pt;" cellspacing="0px" width="96%">
+<col style="width: 100%;" />
+<tr>
+<td style="border: Solid 1px #9b9b9b; vertical-align: middle;">
+<pre class="prettyprint Code">
+Access-Control-Allow-Origin: sample
+</pre></td>
+</tr>
+</table>
+<p class="Paragraph2">&#160;</p>
+<ul style="
+list-style:url('../../../../../arrow.png');">
+<li style="margin-left: -20px;">
+<h2 style="margin-left: 0px;">参考</h2>
+</li>
+</ul>
+<p class="Paragraph"><span style="color: rgb(72, 72, 72); font-family: Verdana, sans-serif; font-size: 12px; line-height: normal; orphans: auto; widows: auto; -webkit-text-stroke-width: 0px; background-color: #ffffff; display: inline ! important ; float: none;">CORSの詳細については以下を参照してください。</span></p>
+<p class="Paragraph" style="color: #008080;"><a class="external" href="http://www.w3.org/TR/cors/" style="padding-left: 12px; background-image: url('http://minegishi.vpdc.sg.soft.fujitsu.com/pcs-spec/images/external.png'); font-family: Verdana, sans-serif; font-size: 12px; font-style: normal; font-variant: normal; font-weight: normal; letter-spacing: normal; line-height: normal; orphans: auto; text-align: start; text-indent: 0px; text-transform: none; white-space: normal; widows: auto; word-spacing: 0px; -webkit-text-stroke-width: 0px; background-color: #ffffff; background-position: 0% 60%; background-repeat: no-repeat no-repeat; color: #008080; text-decoration: none;">http://www.w3.org/TR/cors/</a></p>
+<p class="Paragraph" style="margin-left: 0px;">&#160;</p>
+<script type="text/javascript" language="javascript1.2">//<![CDATA[
+<!--
+if (window.writeIntopicBar)
+	writeIntopicBar(0);
+
+
+highlightSearch();
+//-->
+//]]></script>
+</body>
+</html>
