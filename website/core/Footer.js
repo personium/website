@@ -22,6 +22,9 @@ class Footer extends React.Component {
   }
 
   render() {
+    // The website doesn't use a docusaurus footer.
+    return null;
+
     return (
       <footer className="nav-footer" id="footer">
         <section className="sitemap">
