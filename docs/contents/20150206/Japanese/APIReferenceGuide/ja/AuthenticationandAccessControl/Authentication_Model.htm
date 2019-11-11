@@ -1,0 +1,554 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+<meta http-equiv="Content-Language" content="en-US" />
+ <meta name="generator" content="Adobe RoboHelp 10" />
+<title>認証モデル</title>
+<link rel="StyleSheet" href="../../../default.css" type="text/css" />
+<script type="text/javascript" language="JavaScript">
+//<![CDATA[
+function reDo() {
+  if (innerWidth != origWidth || innerHeight != origHeight)
+     location.reload();
+}
+if ((parseInt(navigator.appVersion) == 4) && (navigator.appName == "Netscape")) {
+	origWidth = innerWidth;
+	origHeight = innerHeight;
+	onresize = reDo;
+}
+onerror = null; 
+//]]>
+</script>
+<style type="text/css">
+<!--
+div.WebHelpPopupMenu { position:absolute;
+left:0px;
+top:0px;
+z-index:4;
+visibility:hidden; }
+-->
+</style>
+<script type="text/javascript" language="javascript1.2" src="../../../whmsg.js" charset="utf-8"></script>
+<script type="text/javascript" language="javascript" src="../../../whver.js" charset="utf-8"></script>
+<script type="text/javascript" language="javascript1.2" src="../../../whutils.js" charset="utf-8"></script>
+<script type="text/javascript" language="javascript1.2" src="../../../whproxy.js" charset="utf-8"></script>
+<script type="text/javascript" language="javascript1.2" src="../../../whlang.js" charset="utf-8"></script>
+<script type="text/javascript" language="javascript1.2" src="../../../whtopic.js" charset="utf-8"></script>
+
+</head>
+
+<body page-style="x-size: Letter;"><script type="text/javascript" language="javascript1.2">//<![CDATA[
+<!--
+if (window.gbWhTopic)
+{
+	var strUrl = document.location.href;
+	var bc = 0;
+	var n = strUrl.toLowerCase().indexOf("bc-");
+	if(n != -1)
+	{
+		document.location.href = strUrl.substring(0, n);
+		bc = strUrl.substring(n+3);
+	}
+
+	if (window.addTocInfo)
+	{
+	addTocInfo("認証とアクセス制御\n認証モデル");
+addButton("show",BTN_TEXT,"表示","","","","",0,0,"","","");
+
+	}
+	if (window.writeBtnStyle)
+		writeBtnStyle();
+
+	if (window.writeIntopicBar)
+		writeIntopicBar(1);
+
+	
+	
+}
+else
+	if (window.gbIE4)
+		document.location.reload();
+
+onLoadHandler = function()
+{
+  if (window.setRelStartPage)
+	{
+	setTimeout("setRelStartPage('../../../Japanese.htm');", 1)
+
+    setTimeout("UpdateBreadCrumbsMarker();", 1);
+	}
+}
+
+if (window.addEventListener){  
+	window.addEventListener('load', onLoadHandler, false);   
+} else if (window.attachEvent){  
+	window.attachEvent('onload', onLoadHandler);  
+}
+
+function onSetStartPage()
+{
+  autoSync(1);
+  sendSyncInfo();
+  sendAveInfoOut();
+}
+//-->
+//]]></script>
+<script type="text/javascript" src="../../../ehlpdhtm.js" language="JavaScript1.2"></script>
+
+<div style="width: 100%; position: relative;" id="header">
+	<p>&#160;</p>
+</div>
+<h1>認証モデル</h1>
+<p class="Paragraph"><span style="font-size: 12px; font-family: Verdana, sans-serif;">ペルソナコンテナの認証の枠組みは、OAuth2.0に基づいており、<br />
+アクセス主体として単純なユーザの認証のみでなく、アプリケーションとの組み合わせを<br />
+主体として捉えている。また、認証成功時にはその結果に基づき、アクセストークンを払い出し、<br />
+データへのアクセスはこのアクセストークンを用いて行う。</span> </p>
+<p class="Paragraph" style="font-size: 12px; font-family: Verdana, sans-serif;">OAuth2.0が定義する、4つの認可付与フローの内、ペルソナコンテナがサポートしているのは、</p>
+<p class="Bullet_1" style="font-size: 12px; 
+											 font-family: Verdana, sans-serif;"><span style="font-family:'Symbol'">&#183;</span><span style='word-spacing:normal; font:6.0pt "Times New Roman"'><font size="1" style="font-size:6pt;">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</font></span>Resource 
+ Owner Password Credentials Flow（以降、ROPCと略す）</p>
+<p class="Bullet_1" style="font-size: 12px; 
+											 font-family: Verdana, sans-serif;"><span style="font-family:'Symbol'">&#183;</span><span style='word-spacing:normal; font:6.0pt "Times New Roman"'><font size="1" style="font-size:6pt;">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</font></span>Implicit 
+ Flow（V1.0未対応）</p>
+<p class="Bullet_1" style="font-size: 12px; font-family: Verdana, sans-serif; 
+	 margin-left: 34px;">&#160;&#160;&#160;&#160;&#160;&#160;の２つである。</p>
+<p class="Bullet_1" style="font-size: 12px; font-family: Verdana, sans-serif; 
+	 margin-left: 34px;">&#160;</p>
+<p class="Paragraph" style="font-size: 12px; font-family: Verdana, sans-serif;">ペルソナコンテナでは、 
+ <strong>ユーザ認証</strong> と <strong>スキーマ認証</strong> の２つの枠組みが存在する。<br />
+ユーザ認証はセルでの認証後、別のセルへの認証が可能であり、これによってソーシャルな運用が可能になる。<br />
+スキーマ認証は、悪意のあるアプリケーションからデータを守るための機能であり、OAuthのクライアント認証の枠組みを使用している。</p>
+<ul>
+	<li style="list-style: url('../../../Images/arrow.png'); margin-left: -20px;"><h2>ユーザー認証</h2></li>
+</ul>
+<p class="Paragraph" style="font-weight: bold; font-size: 12px; font-family: Verdana, sans-serif;">アカウント認証</p>
+<p class="Paragraph"><span style="font-size: 12px; font-family: Verdana, sans-serif;">セルに作成済みのアカウント名とパスワードでの認証をし、トークンを取得する。<br />
+ROPCでの認可フローの一つ。</span> </p>
+<p class="Paragraph" style="font-weight: bold; font-size: 12px; font-family: Verdana, sans-serif;">Basic認証</p>
+<p class="Paragraph" style="font-size: 12px; font-family: Verdana, sans-serif;"><strong>(V1.0未対応)</strong><span 
+	 style="font-size: 12px; font-family: Verdana, sans-serif;"><br />
+認証APIでのトークン取得を行わずに、IDとパスワードによる認証だけでリソースへのアクセスを可能とする機能。<br />
+ROPCでの認可フローの一つ。</span></p>
+<p class="Paragraph" style="font-weight: bold; font-size: 12px; font-family: Verdana, sans-serif;">トランスセルユーザ認証</p>
+<p class="Paragraph" style="font-size: 12px; font-family: Verdana, sans-serif;">認証を行ったセルとは別のセルで行うユーザ認証</p>
+<ul>
+	<li style="list-style: url('../../../Images/arrow.png'); margin-left: -20px; 
+		 font-weight: bold; font-size: 16pt; font-family: Arial, sans-serif;"><h2 
+		 style="font-weight: bold; font-size: 16pt;">スキーマ認証（アプリ認証）</h2></li>
+</ul>
+<p class="Paragraph" style="font-size: 12px; font-family: Verdana, sans-serif;">ペルソナコンテナではアプリ認証のことをアプリのスキーマ単位で認証するためスキーマ認証と呼ぶ。<br />
+アプリの作者がアプリ内にアプリのIDとパスワードを組み込み、対応するアプリセル（スキーマセル）で認証を行う。<br />
+ROPCでの認可フローの一つ。</p>
+<p class="Paragraph"><span style="font-family: Verdana, sans-serif; font-size: 12px;">ペルソナコンテナを用いたアプリ開発においては、ImplicitFlowを用いない認証方式を取る場合、<br />
+セキュリティを担保するにはスキーマ認証が必須となります。</span></p>
+<ul>
+	<ul>
+		<li style="font-family: Verdana, sans-serif; font-size: 12px;"><p 
+			 class="Paragraph" style="font-family: Verdana, sans-serif; 
+			 font-size: 12px;">アプリセルとスキーマ認証を行うセルは異なるものである必要はなく、アプリセル内でのスキーマ認証も可能。</p></li>
+	</ul>
+</ul>
+<h3 style="font-weight: bold;">スキーマ認証手順</h3>
+<p class="Bullet_1" style="font-size: 12px; font-family: Verdana, sans-serif;">1. 
+ アプリセルへアプリ認証情報設定</p>
+<p class="Bullet_1" style="margin-left: 114px; 
+											 font-size: 12px; font-family: Verdana, sans-serif;"><span style="font-family:'Symbol'">&#183;</span><span style='word-spacing:normal; font:6.0pt "Times New Roman"'><font size="1" style="font-size:6pt;">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</font></span>アプリセルにアカウント作成→<a 
+	 href="../API_リファレンス/ペルソナコンテナAPI/CellレベルAPI/Cell_制御オブジェクト/Account/AccountCreate.htm" 
+	 class="wiki-page" style="font-size: 12px; font-family: Verdana, sans-serif;">Account登録</a>を参照。</p>
+<p class="Bullet_1" style="margin-left: 114px; 
+											 font-size: 12px; font-family: Verdana, sans-serif;"><span style="font-family:'Symbol'">&#183;</span><span style='word-spacing:normal; font:6.0pt "Times New Roman"'><font size="1" style="font-size:6pt;">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</font></span>アプリセルにロール作成→<a 
+	 href="../API_リファレンス/ペルソナコンテナAPI/CellレベルAPI/Cell_制御オブジェクト/Role/RoleCreate.htm" 
+	 class="wiki-page" style="font-size: 12px; font-family: Verdana, sans-serif;">Role登録</a>を参照。</p>
+<p class="Bullet_2" style="margin-left: 113px; 
+											 font-size: 12px; font-family: Verdana, sans-serif;"><span style="font-family:'Courier New'">o</span><span style='word-spacing:normal; font:6.0pt "Times New Roman"'><font size="1" style="font-size:6pt;">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</font></span>ロールの作成は任意</p>
+<p class="Bullet_2" style="margin-left: 113px; 
+											 font-size: 12px; font-family: Verdana, sans-serif;"><span style="font-family:'Courier New'">o</span><span style='word-spacing:normal; font:6.0pt "Times New Roman"'><font size="1" style="font-size:6pt;">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</font></span>最上位のスキーマ認証を行う場合はアプリセルに以下のRoleを作成する</p>
+<p class="Bullet_2" style="margin-left: 153px; font-size: 12px;">・ロール名：confidentialClient</p>
+<p class="Bullet_2" style="margin-left: 153px; font-size: 12px;">・ボックス名：__（メインボックス）</p>
+<p class="Bullet_1" style="margin-left: 114px; 
+											 font-size: 12px; font-family: Verdana, sans-serif;"><span style="font-family:'Symbol'">&#183;</span><span style='word-spacing:normal; font:6.0pt "Times New Roman"'><font size="1" style="font-size:6pt;">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</font></span>アカウントとロールの$links→<a 
+	 href="../API_リファレンス/ペルソナコンテナAPI/CellレベルAPI/Cell_制御オブジェクト/Role/RoleLink/RoleLinkCreate.htm" 
+	 class="wiki-page" style="font-size: 12px; font-family: Verdana, sans-serif;">$links登録</a>を参照。</p>
+<p class="Bullet_2" style="margin-left: 113px; 
+											 font-size: 12px; font-family: Verdana, sans-serif;"><span style="font-family:'Courier New'">o</span><span style='word-spacing:normal; font:6.0pt "Times New Roman"'><font size="1" style="font-size:6pt;">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</font></span>最上位のスキーマ認証を行う場合のみ実施</p>
+<p class="Bullet_1" style="color: #000000; font-family: Verdana, sans-serif; 
+	 font-size: 12px;">2. スキーマ認証の対象Box作成時にscheme属性を設定</p>
+<p class="Bullet_1" style="margin-left: 114px; 
+											 font-size: 12px; font-family: Verdana, sans-serif;"><span style="font-family:'Symbol'">&#183;</span><span style='word-spacing:normal; font:6.0pt "Times New Roman"'><font size="1" style="font-size:6pt;">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</font></span>Boxのscheme属性にアプリセルURLを設定する。</p>
+<p class="Bullet_2" style="margin-left: 113px; 
+											 font-size: 12px; font-family: Verdana, sans-serif;"><span style="font-family:'Courier New'">o</span><span style='word-spacing:normal; font:6.0pt "Times New Roman"'><font size="1" style="font-size:6pt;">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</font></span><a 
+	 href="../API_リファレンス/ペルソナコンテナAPI/CellレベルAPI/Cell_制御オブジェクト/Box/BoxCreate.htm" 
+	 class="wiki-page">Box作成</a>・<a href="../API_リファレンス/ペルソナコンテナAPI/CellレベルAPI/Cell_制御オブジェクト/Box/BoxUpdate.htm" 
+									 class="wiki-page">Box更新</a>を参照</p>
+<p class="Bullet_1" style="color: #000000; font-family: Verdana, sans-serif; 
+	 font-size: 12px;">3. スキーマ認証の対象リソースにスキーマレベル設定</p>
+<p class="Bullet_1" style="margin-left: 114px; 
+											 font-size: 12px; font-family: Verdana, sans-serif;"><span style="font-family:'Symbol'">&#183;</span><span style='word-spacing:normal; font:6.0pt "Times New Roman"'><font size="1" style="font-size:6pt;">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</font></span><a 
+	 href="http://minegishi.vpdc.sg.soft.fujitsu.com/pcs-spec/projects/serverapi/wiki/V1fd_acl_model" 
+	 class="wiki-page">アクセス制御モデル内の「スキーマ権限要求レベル」</a>を参照</p>
+<p class="Bullet_1" style="color: #000000; font-family: Verdana, sans-serif; 
+	 font-size: 12px;">4. アプリセルでのアカウント認証</p>
+<p class="Bullet_1" style="color: #000000; font-family: Verdana, sans-serif; 
+	 font-size: 12px;">5. データセルでのスキーマ認証</p>
+<p class="Bullet_1" style="color: #000000; font-family: Verdana, sans-serif; 
+	 font-size: 12px;">&#160;&#160;&#160;&#160;&#160;スキーマ認証はユーザ認証時にスキーマ認証情報も同時に送る</p>
+<p class="Bullet_1" style="color: #000000; font-family: Verdana, sans-serif; 
+	 font-size: 12px;">&#160;&#160;&#160;&#160;&#160;スキーマ認証の指定にはパラメータ指定とBasic認証の２種類の方法がある。</p>
+<p class="Bullet_2" style="font-size: 12px; font-family: Verdana, sans-serif; 
+	 margin-left: 33px;">&#160;</p>
+<h3 style="font-family: Arial, sans-serif; font-size: 14pt; font-weight: bold;">パラメータ指定</h3>
+<p class="Paragraph" style="font-family: Verdana, sans-serif; font-size: 12px;">パラメータは、Authorizationヘッダーで指定する方法と、リクエストボディのパラメータに指定する方法の2通りある。<br />
+両方で設定されている場合、Authorizationヘッダーのパラメータが優先される。</p>
+<p class="Bullet_1" style="font-size: 12px; 
+											 font-family: Verdana, sans-serif;"><span style="font-family:'Symbol'">&#183;</span><span style='word-spacing:normal; font:6.0pt "Times New Roman"'><font size="1" style="font-size:6pt;">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</font></span><span 
+	 style="font-weight: bold;">Authorizationヘッダーで指定</span><br />
+Authorizationヘッダーに以下の値を設定する（Basic認証）</p>
+<p style="font-size: 12px; font-family: Verdana, sans-serif;">&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&quot;Basic 
+ 【{{スキーマ認証元のアプリセルURL}:{スキーマ認証元から払い出されたトークン}}】&quot;</p>
+<p style="font-size: 12px; font-family: Verdana, sans-serif;">&#160;</p>
+<p class="Bullet_1" style="font-size: 12px; 
+											 font-family: Verdana, sans-serif;"><span style="font-family:'Symbol'">&#183;</span><span style='word-spacing:normal; font:6.0pt "Times New Roman"'><font size="1" style="font-size:6pt;">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</font></span><span 
+	 style="font-weight: bold;">リクエストボディのパラメータ</span><br />
+<a href="../API_リファレンス/ペルソナコンテナAPI/CellレベルAPI/認証/OAuth2TokenEndpoint.htm" 
+	 class="wiki-page" style="font-size: 12px; font-family: Verdana, sans-serif;">認証API(__auth)</a>内、「要求(Request)」-「リクエストボディ」-「client_id」と「client_secret」の内容を参照。</p>
+<ul>
+	<li style="list-style: url('../../../Images/arrow.png'); margin-left: -20px; 
+		 font-weight: bold;"><h2 style="font-weight: bold;">認可付与フローの選択</h2></li>
+</ul>
+<p class="Paragraph" style="font-size: 12px; font-family: Verdana, sans-serif;">OAuth2.0は、アプリケーションの形態を以下の３つに分類している。</p>
+<p class="Bullet_1" style="margin-left: 114px; 
+											 font-family: Verdana, sans-serif; 
+											 font-size: 12px;"><span style="font-family:'Symbol'">&#183;</span><span style='word-spacing:normal; font:6.0pt "Times New Roman"'><font size="1" style="font-size:6pt;">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</font></span>Webアプリケーション</p>
+<p class="Bullet_1" style="margin-left: 114px; 
+											 font-family: Verdana, sans-serif; 
+											 font-size: 12px;"><span style="font-family:'Symbol'">&#183;</span><span style='word-spacing:normal; font:6.0pt "Times New Roman"'><font size="1" style="font-size:6pt;">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</font></span>OSネイティブアプリケーション</p>
+<p class="Bullet_1" style="margin-left: 114px; 
+											 font-family: Verdana, sans-serif; 
+											 font-size: 12px;"><span style="font-family:'Symbol'">&#183;</span><span style='word-spacing:normal; font:6.0pt "Times New Roman"'><font size="1" style="font-size:6pt;">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</font></span>ブラウザRIA</p>
+<p class="Bullet_1" style="font-family: Verdana, sans-serif; margin-left: 34px; 
+	 font-size: 12px;">&#160;&#160;&#160;&#160;&#160;&#160;また、アプリを利用するエンドユーザにとって、そのアプリがエンドユーザのアカウント・パスワードを<br />
+与えれる事を許容出来るかという点も、認可付与フローの選択において重要である。<br />
+以上をまとめると、以下の様な使い分けをすべきである。</p>
+<p class="Paragraph" style="margin-left: 0px;">&#160;</p>
+<table style="margin-left: 26pt;" cellspacing="0" width="96%">
+	<col style="width: 17.486%;" />
+	<col style="width: 31.454%;" />
+	<col style="width: 26.227%;" />
+	<col style="width: 24.833%;" />
+	<tr>
+		<th style="border: Solid 1px #9b9b9b;" bgcolor="#353D47"><p class="GreyColumnHeading" 
+			 style="font-size: 12px; font-family: Verdana, sans-serif;">&#160;</p></th>
+		<th style="border-top: Solid 1px #9b9b9b; border-right: Solid 1px #9b9b9b; 
+			 border-bottom: Solid 1px #9b9b9b;" bgcolor="#353D47"><p class="GreyColumnHeading" 
+			 style="font-family: Verdana, sans-serif; font-size: 12px;">配布元が信頼出来るアプリ/特定ユーザ</p></th>
+		<th style="border-top: Solid 1px #9b9b9b; border-right: Solid 1px #9b9b9b; 
+			 border-bottom: Solid 1px #9b9b9b;" bgcolor="#353D47"><p class="GreyColumnHeading" 
+			 style="font-family: Verdana, sans-serif; font-size: 12px;">配布元が信頼出来るアプリ/不特定多数ユーザ</p></th>
+		<th style="border-top: Solid 1px #9b9b9b; border-right: Solid 1px #9b9b9b; 
+			 border-bottom: Solid 1px #9b9b9b;" bgcolor="#353D47"><p class="GreyColumnHeading" 
+			 style="font-family: Verdana, sans-serif; font-size: 12px;">配布元が信頼出来ないアプリ</p></th>
+	</tr>
+	<tr>
+		<td style="border-left: Solid 1px #9b9b9b; border-right: Solid 1px #9b9b9b; 
+			 border-bottom: Solid 1px #9b9b9b;"><p class="TableText" style="text-align: center; 
+													 font-size: 12px; font-family: Verdana, sans-serif;">Webアプリケーション</p></td>
+		<td style="border-right: Solid 1px #9b9b9b; border-bottom: Solid 1px #9b9b9b;"><p 
+			 class="TableText" style="font-size: 12px; font-family: Verdana, sans-serif;">ROPC 
+		 </p></td>
+		<td style="border-right: Solid 1px #9b9b9b; border-bottom: Solid 1px #9b9b9b;"><p 
+			 class="TableText" style="font-family: Verdana, sans-serif; 
+			 font-size: 12px;">ROPC </p></td>
+		<td style="border-right: Solid 1px #9b9b9b; border-bottom: Solid 1px #9b9b9b;"><p 
+			 class="TableText" style="font-size: 12px; font-family: Verdana, sans-serif;">×（Grant 
+		 Code Flow）</p></td>
+	</tr>
+	<tr>
+		<td style="border-left: Solid 1px #9b9b9b; border-right: Solid 1px #9b9b9b; 
+			 border-bottom: Solid 1px #9b9b9b;"><p class="TableText" style="text-align: center; 
+													 font-size: 12px; font-family: Verdana, sans-serif;">OSネイティブアプリケーション</p></td>
+		<td style="border-right: Solid 1px #9b9b9b; border-bottom: Solid 1px #9b9b9b;"><p 
+			 class="TableText" style="font-size: 12px; font-family: Verdana, sans-serif;">ROPC 
+		 </p></td>
+		<td style="border-right: Solid 1px #9b9b9b; border-bottom: Solid 1px #9b9b9b;"><p 
+			 class="TableText" style="font-family: Verdana, sans-serif; 
+			 font-size: 12px;">ImplicitFlow </p></td>
+		<td style="border-right: Solid 1px #9b9b9b; border-bottom: Solid 1px #9b9b9b;"><p 
+			 class="TableText" style="font-size: 12px; font-family: Verdana, sans-serif;">ImplicitFlow 
+		 </p></td>
+	</tr>
+	<tr>
+		<td style="border-left: Solid 1px #9b9b9b; border-right: Solid 1px #9b9b9b; 
+			 border-bottom: Solid 1px #9b9b9b;"><p class="TableText" style="text-align: center; 
+													 font-size: 12px; font-family: Verdana, sans-serif;">ブラウザRIA</p></td>
+		<td style="border-right: Solid 1px #9b9b9b; border-bottom: Solid 1px #9b9b9b;"><p 
+			 class="TableText" style="font-family: Verdana, sans-serif; 
+			 font-size: 12px;">ROPC </p></td>
+		<td style="border-right: Solid 1px #9b9b9b; border-bottom: Solid 1px #9b9b9b;"><p 
+			 class="TableText" style="font-family: Verdana, sans-serif; 
+			 font-size: 12px;">ImplicitFlow </p></td>
+		<td style="border-right: Solid 1px #9b9b9b; border-bottom: Solid 1px #9b9b9b;"><p 
+			 class="TableText" style="font-size: 12px; font-family: Verdana, sans-serif;">ImplicitFlow 
+		 </p></td>
+	</tr>
+</table>
+<p class="Paragraph" style="margin-left: 0px;">&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;<span 
+	 style="font-size: 12px; font-family: Verdana, sans-serif;">※アプリが配布されるのが、特定のユーザに限られる場合、ネイティブアプリやブラウザRIAから逆コンパイルやソース解析を行われた上で、<br />
+&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;フィッシングアプリ等の悪意あるアプリケーションを作成されるリスクが低い。また、仮に作成されたとしても漏洩元の特定が容易であるため、<br />
+&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;ROPCでの認証方式は許容出来る。ただし、スキーマ認証無しの場合、データ破壊の危険が飛躍的に高まるため、スキーマ認証は基本的に必須となる。</span></p>
+<ul>
+	<li style="list-style: url('../../../Images/arrow.png'); margin-left: -20px;"><h2>Implicit 
+	 Flow</h2></li>
+</ul>
+<p class="Paragraph"><strong>V1.3未対応</strong></p>
+<ul>
+	<li style="list-style: url('../../../Images/arrow.png'); margin-left: -20px; 
+		 font-weight: bold;"><h2 style="font-weight: bold;">認証結果のリフレッシュ</h2></li>
+</ul>
+<p class="Paragraph" style="color: #000000; font-size: 12px; font-family: Verdana, sans-serif;">認証時に発行されたリフレッシュトークンを用いて、アクセストークンのリフレッシュ（再取得）を行う。</p>
+<ul>
+	<li style="list-style: url('../../../Images/arrow.png'); margin-left: -20px; 
+		 font-weight: bold;"><h2 style="font-weight: bold;">トークンの種類</h2></li>
+</ul>
+<p class="Bullet_1" style="font-size: 12px; 
+											 font-family: Verdana, sans-serif; 
+											 font-weight: bold;"><span style="font-family:'Symbol'">&#183;</span><span style='word-spacing:normal; font:6.0pt "Times New Roman"'><font size="1" style="font-size:6pt;">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</font></span>アクセストークン</p>
+<p class="Bullet_1" style="font-size: 12px; 
+											 font-family: Verdana, sans-serif; 
+											 font-weight: bold;"><span style="font-family:'Symbol'">&#183;</span><span style='word-spacing:normal; font:6.0pt "Times New Roman"'><font size="1" style="font-size:6pt;">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</font></span>リフレッシュトークン</p>
+<h3 style="font-weight: bold;">アクセストークン</h3>
+<p class="Paragraph2"><span style="font-size: 12px; font-family: Verdana, sans-serif;">アクセストークンには 
+ <strong style="font-size: 12px; font-family: Verdana, sans-serif;">セルローカルトークン</strong> 
+ と、 <strong style="font-size: 12px; font-family: Verdana, sans-serif;">トランスセルトークン</strong> 
+ の２種類存在する。<br />
+２種の切り替えには認証API（_auth）のリクエスト時にdc_targetパラメータを指定する。</span> </p>
+<h4 style="font-weight: bold;">セルローカルトークン</h4>
+<p class="Paragraph2" style="font-size: 12px; font-family: Verdana, sans-serif;">トークン発行元のセルだけで利用するトークン。<br />
+取得したトークンは認証を行ったセル配下のリソースへのアクセスのみ有効となる。</p>
+<p class="Paragraph2" style="font-size: 12px; font-family: Verdana, sans-serif;"><strong>機能仕様</strong></p>
+<table style="left: 0px; top: 1992px; height: 23px; margin-left: 60px;" 
+		 width="812">
+	<col style="width: 36.003%;" />
+	<col width="607" />
+	<tr>
+		<td><span style="font-size: 12px; font-family: Verdana, sans-serif;">有効期限 
+		 </span></td>
+		<td><span style="font-size: 12px; font-family: Verdana, sans-serif;">トークン発行時から1時間 
+		 </span></td>
+	</tr>
+</table>
+<h4 style="font-weight: bold;">トランスセルトークン</h4>
+<p class="Paragraph2" style="font-size: 12px; font-family: Verdana, sans-serif;">認証を行ったセルとは別のセルで利用するトークン。<br />
+取得したトークンはdc_trgetパラメータにURLで指定したセルにのみ有効となる。<br />
+ただし、他のセルをトランスセルトークンが利用可能な状態とするには、<br />
+ExtCell・Relation・ExtRole等のセル制御オブジェクトによる環境設定が必須となる。</p>
+<p style="font-size: 12px; font-family: Verdana, sans-serif;">&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;また、トランスセルトークンには、x509証明書認証の仕組みが組み込まれており、<br />
+&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;ペルソナコンテナのCA局が認可した証明書を用いたトークンが必要となる。</p>
+<p><strong>&#160;&#160;&#160;&#160;&#160;&#160;&#160;</strong></p>
+<p><strong>&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;<span 
+	 style="font-size: 12px; font-family: Verdana, sans-serif;">機能仕様</span></strong></p>
+<p style="font-size: 12px; font-family: Verdana, sans-serif;">&#160;</p>
+<table style="margin-left: 60px;">
+	<tr>
+		<td><span style="font-size: 12px; font-family: Verdana, sans-serif;">有効期限 
+		 </span></td>
+		<td><span style="font-size: 12px; font-family: Verdana, sans-serif;">トークン発行時から1時間 
+		 </span></td>
+	</tr>
+</table>
+<h3 style="font-weight: bold;">リフレッシュトークン</h3>
+<p class="Paragraph2" style="font-size: 12px; font-family: Verdana, sans-serif;">取得しているアクセストークンの再発行を行うためのトークン。</p>
+<p style="font-size: 12px; font-family: Verdana, sans-serif;">&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;アクセストークンの有効期限は取得時から１時間と定義されているため、<br />
+&#160;&#160;&#160;&#160;&#160;&#160;&#160;長時間ペルソナコンテナへのアクセスが必要な場合、再度アカウント認証等を行なってアクセストークンを取得する必要が出てしまう。<br />
+&#160;&#160;&#160;&#160;&#160;&#160;&#160;そのような状態を回避するため、アクセストークンの有効期限が切れた場合に認証結果のリフレッシュを行うことで、<br />
+&#160;&#160;&#160;&#160;&#160;&#160;&#160;ペルソナコンテナへのデータアクセスを持続する。</p>
+<p style="font-size: 12px; font-family: Verdana, sans-serif;">&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;</p>
+<p style="font-size: 12px; font-family: Verdana, sans-serif;">&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;なお、アクセストークンの有効期限が切れていなくても、リフレッシュトークンによる再発行は可能。</p>
+<p><strong>&#160;&#160;</strong></p>
+<p><strong><span style="font-size: 12px; font-family: Verdana, sans-serif;">&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;機能仕様</span></strong></p>
+<p style="font-size: 12px; font-family: Verdana, sans-serif;">&#160;</p>
+<table style="margin-left: 60px;">
+	<tr>
+		<td><span style="font-size: 12px; font-family: Verdana, sans-serif;">有効期限 
+		 </span></td>
+		<td><span style="font-size: 12px; font-family: Verdana, sans-serif;">トークン発行時から24時間 
+		 </span></td>
+	</tr>
+</table>
+<ul>
+	<li style="list-style: url('../../../Images/arrow.png'); margin-left: -20px;"><h2>セルのリソースへのアクセス</h2></li>
+</ul>
+<p class="Paragraph">このセクションでは、認証方法およびセル情報へのアクセス方法について解説します。利用可能なアクセス方法は以下の2種類です。</p>
+<p class="Bullet_1"><span style="font-family:'Symbol'">&#183;</span><span style='word-spacing:normal; font:6.0pt "Times New Roman"'><font size="1" style="font-size:6pt;">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</font></span>アクセストークン</p>
+<p class="Bullet_1"><span style="font-family:'Symbol'">&#183;</span><span style='word-spacing:normal; font:6.0pt "Times New Roman"'><font size="1" style="font-size:6pt;">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</font></span>リフレッシュトークン</p>
+<h3 style="font-weight: bold;">アクセストークン</h3>
+<p class="Paragraph2">セル作成・セル更新・ボックス作成・アカウント作成といった操作を行う際にアクセストークンが必要です。アクセストークンは1時間有効です。</p>
+<p class="Paragraph2">具体的には、セルAのリソースへのアクセスプロセスでは、以下のプロセスが行われます。</p>
+<p class="Figure"><img src="../../../Images/AccessToken.gif" alt="" style="border: none;" 
+						 border="0" /></p>
+<p class="Figure" style="font-weight: bold;">Figure 1: アクセストークンを使ったリソースへのアクセス</p>
+<ol>
+	<li style="list-style: decimal; color: #353535; font-size: 10pt;"><p 
+		 class="Bullet_1">セルAに対するアカウント（パスワード）認証を行う。このアカウントは、以下のCURLコマンドの変数で正しい値を渡すことによって認証される。:</p></li>
+</ol>
+<p class="Code" style="margin-left: 120px;">grant_type=password&amp;username=[user 
+ name]&amp;password=[password]</p>
+<ol start="2" style="list-style: decimal;">
+	<li style="font-size: 10pt; color: #353535;"><p class="Bullet_1">レスポンスボディからアクセストークンを取得する。</p></li>
+	<li style="font-size: 10pt; color: #353535;"><p class="Bullet_1">リソースにアクセスするために、認証ヘッダにアクセストークンを設定する。 
+	 </p></li>
+</ol>
+<p class="Code" style="margin-left: 120px;">Authorization: Bearer [access 
+ token]</p>
+<p class="Indent1" style="margin-left: 96px;">以下のどの方法でもリソースにアクセスが可能。You 
+ can access resources using any of the following method:</p>
+<p class="Bullet_1" style="margin-left: 132px;"><span style="font-family:'Symbol'">&#183;</span><span style='word-spacing:normal; font:6.0pt "Times New Roman"'><font size="1" style="font-size:6pt;">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</font></span>PCSポータル</p>
+<p class="Bullet_1" style="margin-left: 132px;"><span style="font-family:'Symbol'">&#183;</span><span style='word-spacing:normal; font:6.0pt "Times New Roman"'><font size="1" style="font-size:6pt;">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</font></span>CURLコマンド 
+ (PCSポータルを使わないで、設定を行った場合も可)</p>
+<h4 style="font-weight: bold;">PCS ポータル</h4>
+<p class="Paragraph2">PCSポータルをつかってリソースへのアクセスする:</p>
+<ol>
+	<li style="list-style: decimal; font-family: Arial, sans-serif; font-size: 10pt; 
+		 color: #353535;"><p class="Bullet_1" style="text-indent: 0px; 
+							 margin-left: 48px; font-family: Arial, sans-serif;">有効なユーザ名とパスワードでログインする。正しいcredentialsに入れば、トップページが表示される。このページはあらゆるUnit 
+	 URLの下に現れる各Environmentに伴うUnit URLのリストを含んでいます。</p></li>
+	<li style="list-style: decimal; font-family: Arial, sans-serif; font-size: 10pt; 
+		 color: #353535;"><p class="Bullet_1" style="text-indent: 0px; 
+							 margin-left: 48px; font-family: Arial, sans-serif;">特定のEnvironmentをクリックする。各Environmentをクリックすると、Accessトークンが発行される。Accessトークンの値を見るには、ヘッダーに現れる‘Show 
+	 Access Token'アイコンをクリッ<span style="text-indent: 0px; font-family: Arial, sans-serif;">クする。</span></p></li>
+</ol>
+<p class="Indent1" style="margin-left: 84px;">Roleを作成して、ExtRoleを削除するのにAccessトークンを使用可能</p>
+<h4 style="font-weight: bold;">CURL コマンド</h4>
+<p class="Paragraph2">以下のCURLコマンドを用いてユーザー（アカウント）認証をし、アクセストークンの生成をする。</p>
+<table class="CodeTable" style="margin-left: 26pt;" cellspacing="0px" width="96%">
+	<col style="width: 100%;" />
+	<tr>
+		<td><p class="Code">curl -X POST https://fqdn/__auth\</p>
+		<p class="Code">&#160;-d &quot;dc_target=[unit URL]/&amp;dc_env=[environment 
+		 ID]&amp;grant_type=password&amp;username=[user name]&amp;password=[password]&quot;\</p>
+		<p class="Code">&#160;-i -k –v</p></td>
+	</tr>
+</table>
+<p class="Paragraph2">&#160;</p>
+<p class="Paragraph2">条件:</p>
+<p class="Paragraph2">dc_target:Unit URLを指定</p>
+<p class="Paragraph2">dc_env: Environment IDを指定</p>
+<p class="Paragraph2">&#160;</p>
+<p class="Paragraph2">PCS操作を行うためのアクセストークンが発行される。レスポンスボディ内の&quot;access_token&quot;パラメータがアクセストークンなっている。</p>
+<p class="Paragraph2">&#160;</p>
+<p class="Paragraph2">CURコマンドL内のヘッダーオプション(-H)に、以下のようにトークンの値を入れる。</p>
+<p class="Code" style="margin-left: 40px;">Authorization: Bearer [TOKEN]</p>
+<p class="Paragraph2">以下のCURLコマンドは、セルの作成時にアクセストークンをパスする手法。</p>
+<table class="CodeTable" style="margin-left: 26pt;" cellspacing="0px" width="96%">
+	<col style="width: 100%;" />
+	<tr>
+		<td><p class="Code">curl -X POST &quot;https://fj.baas.jp.fujitsu.com/__ctl/Cell&quot; 
+		 \</p>
+		<p class="Code">&#160;-d &quot;{\&quot;Name\&quot;:\&quot;SampleCellName\&quot;}&quot; 
+		 \</p>
+		<p class="Code">&#160;-H &quot;Accept:application/json&quot; \</p>
+		<p class="Code">&#160;-H &quot;Authorization:Bearer [TOKEN]” –i 
+		 –k -v</p></td>
+	</tr>
+</table>
+<h3 style="font-weight: bold;">リフレッシュトークン</h3>
+<p class="Paragraph2">取得しているアクセストークンの再発行を行うためのトークン。</p>
+<p class="Paragraph2">アクセストークンの有効期限は取得時から１時間と定義されているため、長時間ペルソナコンテナへのアクセスが必要な場合、</p>
+<p class="Paragraph2">再度アカウント認証等を行なってアクセストークンを取得する必要が出てしまう。</p>
+<p class="Paragraph2">そのような状態を回避するため、アクセストークンの有効期限が切れた場合に認証結果のリフレッシュを行うことで、</p>
+<p class="Paragraph2">ペルソナコンテナへのデータアクセスを持続する。</p>
+<p class="Paragraph2">&#160;</p>
+<p class="Paragraph2">なお、アクセストークンの有効期限が切れていなくても、リフレッシュトークンによる再発行は可能。</p>
+<p class="Paragraph2">以下は、CellAのリソースへのアクセスのプロセス：</p>
+<p class="Figure" style="color: #ff0000;"><img src="../../../Images/RefreshToken.gif" 
+												 alt="" style="border: none;" 
+												 border="0" /></p>
+<p class="Figure" style="font-weight: bold;">Figure 2: Access Resources 
+ using access token</p>
+<p class="Bullet_1">1. セルAでアカウント認証を行う。アカウントはCURLコマンドの以下のパラメータが正しい値で通過した場合、このアカウントが認証される。</p>
+<p class="var" style="margin-left: 120px; color: #000000;">grant_type=password&amp;username=[user 
+ name]&amp;password=[password]&amp;dc_target=[Unit URL]</p>
+<p class="Bullet_1">2. 1でのレスポンスボディからリフレッシュトークンを取得する。</p>
+<p class="Bullet_1">3. セルAで認証結果のリフレッシュを行う。</p>
+<p class="Code" style="margin-left: 120px;">grant_type=refresh_token&amp;refresh_token=[Refresh 
+ token above]</p>
+<p class="Bullet_1">4. 3でのレスポンスボディからアクセストークンを取得する。</p>
+<p class="Bullet_1">5. 4で取得したアクセストークンをAuthorizationヘッダーに設定し、リソースへアクセスする</p>
+<p class="Code" style="margin-left: 120px;">Authorization: Bearer [access 
+ token]</p>
+<p class="Paragraph2">アクセストークンの更新にはリフレッシュトークンが必要.</p>
+<p class="Paragraph2">PCSポータルを用いたリソースへのアクセス:</p>
+<p class="Bullet_1" style="text-indent: 0px; margin-left: 48px;">1. 有効なUsernameとPasswordと共にPortalにログインする 
+ あなたが正しいに証明書に入るとホームページが表示される。 このページはあらゆるUnit URLの下に現れるそれぞれのEnvironmentに伴うUnitURLのリストを含んでいる。 
+ </p>
+<p class="Bullet_1" style="text-indent: 0px; margin-left: 48px;">&#160;</p>
+<p class="Bullet_1" style="margin-left: 48px; text-indent: 0px;">2. 指定された環境をクリックする。 
+ それぞれのトークンをクリックするとき、アクセストークンが<span style="text-indent: 0px;">発生する。 また、それはリフレッシュトークンを発生させる。</span></p>
+<p class="Indent1" style="margin-left: 84px;">Refreshトークンは、新しいアクセストークンを得るのに使用されて、24時間有効。</p>
+<h4><span style="font-weight: bold;">CURLサンプル</span></h4>
+<p class="Paragraph2">以下のCURLコマンドを使うことでユーザ認証とリフレッシュトークンとユーザー(アカウント）認証が可能</p>
+<table class="CodeTable" style="margin-left: 26pt;" cellspacing="0px" width="96%">
+	<col style="width: 100%;" />
+	<tr>
+		<td><p class="Code">curl -X POST &quot;https://sashihara.vpdc.sg.soft.fujitsu.com/PCS_Portal_DEV/__auth&quot;\</p>
+		<p class="Code">&#160;-d &quot;dc_target=https://fj.baas.jp.fujitsu.com/&amp;dc_env=7c4aef11-4b5b-47f4-9720-169bd2edf62a&amp;grant_type=refresh_token&amp;refresh_token=RT~ta2ebeEM7o5570WyFj0YGjwuigG6mS8Z-1ZqHbN2lK08usa5ocS9ZjVXf_XKAZ4DWln_NNdR8SHpCJ-NXAD4Z58UFXYiKmmAkI5BgisgG-3uU3xsRm4dc0rHXPF4HcxpdTcC6YssXdgTeGN4Ic36Uv3huFbjb8Q39P6T2TCT9GnCHSFpCydJzCaGvc7YzrJdPMjX-0bqr76zXL4J6Mi6DQ&quot; 
+		 -i -k –v</p></td>
+	</tr>
+</table>
+<p class="Paragraph2">&#160;</p>
+<p class="Paragraph2">条件:</p>
+<p class="Paragraph2">dc_target:Unit URLを指定</p>
+<p class="Paragraph2">dc_env: Environment IDを指定</p>
+<ul>
+	<li style="list-style: url('../../../Images/arrow.png'); margin-left: -20px;"><h2>ユニットユーザ</h2></li>
+</ul>
+<p class="Paragraph">ユニットユーザとはセルのCRUD等の、ユニットレベルのAPIを操作するアクセス主体のこと。</p>
+<p class="Paragraph">ユニットユーザはユニットユーザトークン（Unit User Token (UUT)）を用いてAPIアクセスを行う。</p>
+<h4 style="font-weight: bold;">ユニットユーザ</h4>
+<p class="Paragraph2">ユニットユーザロールとは、ユニットユーザのロールとして、ペルソナコンテナが認識するロールのことである。<br />
+ペルソナコンテナはユニットユーザのロールとして以下を認識する。</p>
+<p class="Code" style="margin-left: 40px;">{issuerUrl}/__role/__/unitAdmin 
+ ユニット管理者</p>
+<p class="Paragraph2">ユニットユーザにはこのロールは強制的に適応され、他のロールが付与されていたとしてもそのロールは認識されない。</p>
+<p class="Paragraph2">ペルソナコンテナはユニットユーザのロールとして以下を認識する。</p>
+<h3>ユニットローカルユニットユーザトークン</h3>
+<p class="Paragraph2" style="color: #000000;">ユニットローカルユニットユーザトークン（以降、ULUUTと呼称する）とは、<br />
+ユニットユーザが通常のユーザ（アカウント）に対してユニットユーザと同等の権限を与えるため、<br />
+適切な設定とアカウント認証を行った際に払い出されるトークンのことである。</p>
+<p class="Paragraph2" style="color: #000000;">ULUUTはの設定はユニットユーザのみが実行可能である。<br />
+ULUUTはユニットユーザと同等の強い権限となるため、リフレッシュトークンの払い出しは行われない。</p>
+<p class="Paragraph2" style="color: #000000;">ULUUTの払い出しを行えるのは以下の条件を満たす認証を実施した場合である。</p>
+<p class="Paragraph2" style="color: #000000;">1. ULUUT発行候補のアカウントが属するセルに対して、PROPPATCHで設定を行う。 
+ </p>
+<p class="Bullet_1"><span style="font-family:'Symbol'">&#183;</span><span style='word-spacing:normal; font:6.0pt "Times New Roman"'><font size="1" style="font-size:6pt;">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</font></span>セルへのPROPPATCHはユニットユーザのみ実行可能。機能仕様は<a 
+	 href="../API_リファレンス/ペルソナコンテナAPI/CellレベルAPI/認証/authproppatch.htm" class="wiki-page">ULUUT昇格設定PROPPATCH</a>を参照。</p>
+<p class="Paragraph2">2. 上記で設定されたアカウントで認証（アカウント認証・リフレッシュ認証のみ可能）を行う。 </p>
+<p class="Bullet_1"><span style="font-family:'Symbol'">&#183;</span><span style='word-spacing:normal; font:6.0pt "Times New Roman"'><font size="1" style="font-size:6pt;">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</font></span>その際、「dc_owner=true」クエリを送信する。</p>
+<h4 style="font-style: normal; font-weight: bold;">機能仕様</h4>
+<p class="Paragraph2">　有効期限：トークン発行から1ヶ月</p>
+<h4><span style="font-weight: bold;">CURLサンプル</span></h4>
+<table class="CodeTable" style="margin-left: 26pt;" cellspacing="0px" width="96%">
+	<col style="width: 100%;" />
+	<tr>
+		<td><p class="Code">curl https://fqdn/cell1/__auth -X POST -v -k 
+		 \</p>
+		<p class="Code">-d 'grant_type=password&amp;username=user&amp;password=pass&amp;dc_owner=true'</p></td>
+	</tr>
+</table>
+<p class="Paragraph2">&#160;</p>
+<p class="Paragraph2">&#160;</p>
+<div style="width: 100%; position: relative;" id="footer">
+	<p>&#160;</p>
+</div>
+<script type="text/javascript" language="javascript1.2">//<![CDATA[
+<!--
+if (window.writeIntopicBar)
+	writeIntopicBar(0);
+
+
+highlightSearch();
+//-->
+//]]></script>
+</body>
+</html>

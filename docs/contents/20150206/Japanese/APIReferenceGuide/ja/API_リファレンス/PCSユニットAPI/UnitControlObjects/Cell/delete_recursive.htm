@@ -1,0 +1,466 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN"
+    "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+ <meta name="generator" content="Adobe RoboHelp 10" />
+<title>Cell再帰的削除</title>
+<link rel="StyleSheet" href="../../../../../../default.css" type="text/css" />
+<script type="text/javascript" language="JavaScript">
+//<![CDATA[
+function reDo() {
+  if (innerWidth != origWidth || innerHeight != origHeight)
+     location.reload();
+}
+if ((parseInt(navigator.appVersion) == 4) && (navigator.appName == "Netscape")) {
+	origWidth = innerWidth;
+	origHeight = innerHeight;
+	onresize = reDo;
+}
+onerror = null; 
+//]]>
+</script>
+<style type="text/css">
+<!--
+div.WebHelpPopupMenu { position:absolute;
+left:0px;
+top:0px;
+z-index:4;
+visibility:hidden; }
+-->
+</style>
+<script type="text/javascript" language="javascript1.2" src="../../../../../../whmsg.js" charset="utf-8"></script>
+<script type="text/javascript" language="javascript" src="../../../../../../whver.js" charset="utf-8"></script>
+<script type="text/javascript" language="javascript1.2" src="../../../../../../whutils.js" charset="utf-8"></script>
+<script type="text/javascript" language="javascript1.2" src="../../../../../../whproxy.js" charset="utf-8"></script>
+<script type="text/javascript" language="javascript1.2" src="../../../../../../whlang.js" charset="utf-8"></script>
+<script type="text/javascript" language="javascript1.2" src="../../../../../../whtopic.js" charset="utf-8"></script>
+
+</head>
+<body><script type="text/javascript" language="javascript1.2">//<![CDATA[
+<!--
+if (window.gbWhTopic)
+{
+	var strUrl = document.location.href;
+	var bc = 0;
+	var n = strUrl.toLowerCase().indexOf("bc-");
+	if(n != -1)
+	{
+		document.location.href = strUrl.substring(0, n);
+		bc = strUrl.substring(n+3);
+	}
+
+	if (window.addTocInfo)
+	{
+	addTocInfo("API リファレンス\nPCSユニットAPI\nUnitControlObjects\nCell\nCell再帰的削除");
+addButton("show",BTN_TEXT,"表示","","","","",0,0,"","","");
+
+	}
+	if (window.writeBtnStyle)
+		writeBtnStyle();
+
+	if (window.writeIntopicBar)
+		writeIntopicBar(1);
+
+	
+	
+}
+else
+	if (window.gbIE4)
+		document.location.reload();
+
+onLoadHandler = function()
+{
+  if (window.setRelStartPage)
+	{
+	setTimeout("setRelStartPage('../../../../../../Japanese.htm');", 1)
+
+    setTimeout("UpdateBreadCrumbsMarker();", 1);
+	}
+}
+
+if (window.addEventListener){  
+	window.addEventListener('load', onLoadHandler, false);   
+} else if (window.attachEvent){  
+	window.attachEvent('onload', onLoadHandler);  
+}
+
+function onSetStartPage()
+{
+  autoSync(1);
+  sendSyncInfo();
+  sendAveInfoOut();
+}
+//-->
+//]]></script>
+<script type="text/javascript" src="../../../../../../ehlpdhtm.js" language="JavaScript1.2"></script>
+
+<h1>Cell再帰的削除</h1>
+<ul style="
+list-style:url('../../../../../../arrow.png');">
+<li style="margin-left: -20px;">
+<h2><span lang="JA" xml:lang="JA" style="line-height: 115%; font-family: 'MS Mincho'; 
+		 mso-ascii-font-family: Arial; mso-fareast-theme-font: minor-fareast; 
+		 mso-hansi-font-family: Arial; mso-bidi-font-family: Arial; mso-ansi-language: EN-US; 
+		 mso-fareast-language: JA; mso-bidi-language: AR-SA; font-weight: bold;">概要</span></h2>
+</li>
+</ul>
+<ul style="margin-bottom: 1em; color: rgb(72, 72, 72); font-family: Verdana, sans-serif; font-size: 12px; line-height: normal; orphans: auto; widows: auto; -webkit-text-stroke-width: 0px; background-color: #ffffff;">
+<li>指定されたセル配下の関連データを全て削除する</li>
+<li><span style="background-color: #ffffff; display: inline ! important ; float: none;">削除対象のデータは下記API</span></li>
+</ul>
+
+<p class="Bullet_2"><span style="font-family:'Courier New'">o</span><span style='word-spacing:normal; font:6.0pt "Times New Roman"'><font size="1" style="font-size:6pt;">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</font></span>Box</p>
+
+<p class="Bullet_2"><span style="font-family:'Courier New'">o</span><span style='word-spacing:normal; font:6.0pt "Times New Roman"'><font size="1" style="font-size:6pt;">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</font></span>Account</p>
+
+<p class="Bullet_2"><span style="font-family:'Courier New'">o</span><span style='word-spacing:normal; font:6.0pt "Times New Roman"'><font size="1" style="font-size:6pt;">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</font></span>Role</p>
+
+<p class="Bullet_2"><span style="font-family:'Courier New'">o</span><span style='word-spacing:normal; font:6.0pt "Times New Roman"'><font size="1" style="font-size:6pt;">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</font></span>Relation</p>
+
+<p class="Bullet_2"><span style="font-family:'Courier New'">o</span><span style='word-spacing:normal; font:6.0pt "Times New Roman"'><font size="1" style="font-size:6pt;">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</font></span>ExtCell</p>
+
+<p class="Bullet_2"><span style="font-family:'Courier New'">o</span><span style='word-spacing:normal; font:6.0pt "Times New Roman"'><font size="1" style="font-size:6pt;">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</font></span>ExtRole</p>
+
+<p class="Bullet_2"><span style="font-family:'Courier New'">o</span><span style='word-spacing:normal; font:6.0pt "Times New Roman"'><font size="1" style="font-size:6pt;">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</font></span>ReceivedMessage</p>
+
+<p class="Bullet_2"><span style="font-family:'Courier New'">o</span><span style='word-spacing:normal; font:6.0pt "Times New Roman"'><font size="1" style="font-size:6pt;">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</font></span>SentMessage</p>
+
+<p class="Bullet_2"><span style="font-family:'Courier New'">o</span><span style='word-spacing:normal; font:6.0pt "Times New Roman"'><font size="1" style="font-size:6pt;">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</font></span>Collection</p>
+
+<p class="Bullet_2"><span style="font-family:'Courier New'">o</span><span style='word-spacing:normal; font:6.0pt "Times New Roman"'><font size="1" style="font-size:6pt;">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</font></span>AssociationEnd</p>
+
+<p class="Bullet_2"><span style="font-family:'Courier New'">o</span><span style='word-spacing:normal; font:6.0pt "Times New Roman"'><font size="1" style="font-size:6pt;">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</font></span>EntityType</p>
+
+<p class="Bullet_2"><span style="font-family:'Courier New'">o</span><span style='word-spacing:normal; font:6.0pt "Times New Roman"'><font size="1" style="font-size:6pt;">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</font></span>ComplexType</p>
+
+<p class="Bullet_2"><span style="font-family:'Courier New'">o</span><span style='word-spacing:normal; font:6.0pt "Times New Roman"'><font size="1" style="font-size:6pt;">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</font></span>Property</p>
+
+<p class="Bullet_2"><span style="font-family:'Courier New'">o</span><span style='word-spacing:normal; font:6.0pt "Times New Roman"'><font size="1" style="font-size:6pt;">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</font></span>ComplexTypeProperty</p>
+
+<p class="Bullet_2"><span style="font-family:'Courier New'">o</span><span style='word-spacing:normal; font:6.0pt "Times New Roman"'><font size="1" style="font-size:6pt;">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</font></span>$links</p>
+
+<p class="Bullet_2"><span style="font-family:'Courier New'">o</span><span style='word-spacing:normal; font:6.0pt "Times New Roman"'><font size="1" style="font-size:6pt;">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</font></span>ユーザデータ</p>
+
+<ul style="
+list-style:url('../../../../../../arrow.png');">
+<li style="margin-left: -20px;">
+<h2><span style="font-weight: bold;">必要な権限</span></h2>
+</li>
+</ul>
+<p class="Paragraph">&#160;</p>
+<ul style="
+list-style:url('../../../../../../arrow.png');">
+<li style="margin-left: -20px;">
+<h2><span style="font-weight: bold;">制限事項</span></h2>
+</li>
+</ul>
+<p class="Paragraph">なし</p>
+<ul style="
+list-style:url('../../../../../../arrow.png');">
+<li style="margin-left: -20px;">
+<h2><span style="font-weight: bold;">リクエスト</span></h2>
+</li>
+</ul>
+<h3><span style="font-weight: bold;">リクエストURL</span></h3>
+<table style="height: 47px; margin-left: 26pt;" cellspacing="0" width="96%">
+<col style="width: 100%;" />
+<tr>
+<td style="border: Solid 1px #9b9b9b;">
+<p class="Code"><span style="color: rgb(72, 72, 72); font-family: Verdana, sans-serif; font-size: 12px; line-height: normal; orphans: auto; text-indent: 0px; widows: auto; -webkit-text-stroke-width: 0px; background-color: #ffffff; display: inline ! important ; float: none;">/{CellName}</span></p>
+</td>
+</tr>
+</table>
+<h3><span style="font-weight: bold;">メソッド</span></h3>
+<p class="Paragraph2"><span style="color: rgb(72, 72, 72); font-family: Verdana, sans-serif; font-size: 12px; -webkit-text-stroke-width: 0px; display: inline ! important ; float: none;">DELETE</span></p>
+<h3><span style="font-weight: bold;">リクエストクエリ</span></h3>
+<p class="Paragraph2"><span style="color: rgb(72, 72, 72); font-family: Verdana, sans-serif; font-size: 12px; -webkit-text-stroke-width: 0px; display: inline ! important ; float: none;">なし</span></p>
+<h3><span style="font-weight: bold;">リクエストヘッダ</span></h3>
+<p class="Paragraph2" style="-webkit-text-stroke-width: 0px; text-decoration: underline;"><span><span><span style="font-family: 'Trebuchet MS', Verdana, sans-serif; color: rgb(85, 85, 85); font-size: 13px; line-height: normal; orphans: auto; widows: auto; -webkit-text-stroke-width: 0px; background-color: #ffffff; text-decoration: underline;"><u>共通リクエストヘッダー</u></span></span></span></p>
+<table style="margin-left: 26pt;" cellspacing="0" width="96%">
+<col style="width: 15.606%;" />
+<col style="width: 22.268%;" />
+<col style="width: 16.702%;" />
+<col style="width: 10.752%;" />
+<col style="width: 34.672%;" />
+<tr>
+<th style="border: Solid 1px #9b9b9b;" bgcolor="#353D47">
+<p class="GreyColumnHeading">ヘッダ名</p>
+</th>
+<th style="border-top: Solid 1px #9b9b9b; border-right: Solid 1px #9b9b9b; border-bottom: Solid 1px #9b9b9b;" bgcolor="#353D47">
+<p class="GreyColumnHeading">概要</p>
+</th>
+<th style="border-top: Solid 1px #9b9b9b; border-right: Solid 1px #9b9b9b; border-bottom: Solid 1px #9b9b9b;" bgcolor="#353D47">
+<p class="GreyColumnHeading">有効値</p>
+</th>
+<th style="border-top: Solid 1px #9b9b9b; border-right: Solid 1px #9b9b9b; border-bottom: Solid 1px #9b9b9b;" bgcolor="#353D47">
+<p class="GreyColumnHeading">必須</p>
+</th>
+<th style="border-top: Solid 1px #9b9b9b; border-right: Solid 1px #9b9b9b; border-bottom: Solid 1px #9b9b9b;" bgcolor="#353D47">
+<p class="GreyColumnHeading">備考</p>
+</th>
+</tr>
+<tr>
+<td style="border-left: Solid 1px #9b9b9b; border-right: Solid 1px #9b9b9b; border-bottom: Solid 1px #9b9b9b;">
+<p class="TableText" style="font-family: Verdana, sans-serif; font-size: 12px;">X-Dc-Version</p>
+</td>
+<td style="border-right: Solid 1px #9b9b9b; border-bottom: Solid 1px #9b9b9b;">
+<p class="TableText" style="font-family: Verdana, sans-serif; font-size: 12px;"><span style="color: rgb(72, 72, 72); line-height: normal; orphans: auto; widows: auto; -webkit-text-stroke-width: 0px; background-color: #ffffff; display: inline ! important ; float: none;">Data Cloud APIの実行バージョン</span></p>
+</td>
+<td style="border-right: Solid 1px #9b9b9b; border-bottom: Solid 1px #9b9b9b;">
+<p class="TableText" style="font-family: Verdana, sans-serif; font-size: 12px;">有効なバージョン</p>
+</td>
+<td style="border-right: Solid 1px #9b9b9b; border-bottom: Solid 1px #9b9b9b;">
+<p class="TableText" style="font-family: Verdana, sans-serif; font-size: 12px;">×</p>
+</td>
+<td style="border-right: Solid 1px #9b9b9b; border-bottom: Solid 1px #9b9b9b;">
+<p class="TableText" style="font-family: Verdana, sans-serif; font-size: 12px;">指定がない場合、最新のAPIバージョンが指定される</p>
+</td>
+</tr>
+<tr>
+<td style="border-left: Solid 1px #9b9b9b; border-right: Solid 1px #9b9b9b; border-bottom: Solid 1px #9b9b9b;">
+<p class="TableText" style="font-family: Verdana, sans-serif; font-size: 12px;">X-HTTP-Method-Override</p>
+</td>
+<td style="border-right: Solid 1px #9b9b9b; border-bottom: Solid 1px #9b9b9b;">
+<p class="TableText" style="font-family: Verdana, sans-serif; font-size: 12px;"><span style="color: rgb(72, 72, 72); line-height: normal; orphans: auto; widows: auto; -webkit-text-stroke-width: 0px; background-color: #ffffff; display: inline ! important ; float: none;">メソッドオーバーライド機能</span></p>
+</td>
+<td style="border-right: Solid 1px #9b9b9b; border-bottom: Solid 1px #9b9b9b;">
+<p class="TableText" style="font-family: Verdana, sans-serif; font-size: 12px;">任意</p>
+</td>
+<td style="border-right: Solid 1px #9b9b9b; border-bottom: Solid 1px #9b9b9b;">
+<p class="TableText" style="font-family: Verdana, sans-serif; font-size: 12px;">×</p>
+</td>
+<td style="border-right: Solid 1px #9b9b9b; border-bottom: Solid 1px #9b9b9b;">
+<p class="TableText" style="font-family: Verdana, sans-serif; font-size: 12px;"><span style="color: rgb(72, 72, 72); line-height: normal; orphans: auto; widows: auto; -webkit-text-stroke-width: 0px; background-color: #ffffff; display: inline ! important ; float: none;">POSTメソッドでリクエスト時にこの値を指定すると、指定した値がメソッドとして使用される</span></p>
+</td>
+</tr>
+<tr>
+<td style="border-left: Solid 1px #9b9b9b; border-right: Solid 1px #9b9b9b; border-bottom: Solid 1px #9b9b9b;">
+<p class="TableText" style="font-family: Verdana, sans-serif; font-size: 12px;">X-Override</p>
+</td>
+<td style="border-right: Solid 1px #9b9b9b; border-bottom: Solid 1px #9b9b9b;">
+<p class="TableText" style="font-family: Verdana, sans-serif; font-size: 12px;"><span style="color: rgb(72, 72, 72); line-height: normal; orphans: auto; widows: auto; -webkit-text-stroke-width: 0px; background-color: #ffffff; display: inline ! important ; float: none;">ヘッダーオーバライド機能</span></p>
+</td>
+<td style="border-right: Solid 1px #9b9b9b; border-bottom: Solid 1px #9b9b9b;">
+<p class="TableText" style="font-family: Verdana, sans-serif; font-size: 12px;"><span style="color: rgb(72, 72, 72); line-height: normal; orphans: auto; widows: auto; -webkit-text-stroke-width: 0px; background-color: #ffffff; display: inline ! important ; float: none;">${上書きするヘッダー名}:${値}</span></p>
+</td>
+<td style="border-right: Solid 1px #9b9b9b; border-bottom: Solid 1px #9b9b9b;">
+<p class="TableText" style="font-family: Verdana, sans-serif; font-size: 12px;">×</p>
+</td>
+<td style="border-right: Solid 1px #9b9b9b; border-bottom: Solid 1px #9b9b9b;">
+<p class="TableText" style="color: rgb(72, 72, 72); font-size: 12px; line-height: normal; orphans: auto; widows: auto; background-color: #ffffff; display: inline ! important ; font-family: Verdana, sans-serif; -webkit-text-stroke-width: 0px;">通常のHTTPヘッダの値を上書きします。複数のヘッダを上書きする場合はX-Overrideヘッダを複数指定する</p>
+</td>
+</tr>
+<tr>
+<td style="border-left: Solid 1px #9b9b9b; border-right: Solid 1px #9b9b9b; border-bottom: Solid 1px #9b9b9b;">
+<p class="TableText" style="font-family: Verdana, sans-serif; font-size: 12px;">X-Dc-RequestKey</p>
+</td>
+<td style="border-right: Solid 1px #9b9b9b; border-bottom: Solid 1px #9b9b9b;">
+<p class="TableText" style="font-family: Verdana, sans-serif; font-size: 12px;"><span style="color: rgb(72, 72, 72); line-height: normal; orphans: auto; widows: auto; -webkit-text-stroke-width: 0px; background-color: #ffffff; display: inline ! important ; float: none;">イベントログに出力するRequestKeyフィールドの値</span></p>
+</td>
+<td style="border-right: Solid 1px #9b9b9b; border-bottom: Solid 1px #9b9b9b;">
+<p class="TableText" style="font-family: Verdana, sans-serif; font-size: 12px;"><span style="color: rgb(72, 72, 72); line-height: normal; orphans: auto; widows: auto; -webkit-text-stroke-width: 0px; background-color: #ffffff; display: inline ! important ; float: none;">半角英数、-(半角ハイフン)と_(半角アンダーバー)</span><br style="color: rgb(72, 72, 72); font-family: Verdana, sans-serif; font-size: 12px; font-style: normal; font-variant: normal; font-weight: normal; letter-spacing: normal; line-height: normal; orphans: auto; text-align: start; text-indent: 0px; text-transform: none; white-space: normal; widows: auto; word-spacing: 0px; -webkit-text-stroke-width: 0px; background-color: #ffffff;" />
+<span style="color: rgb(72, 72, 72); line-height: normal; orphans: auto; widows: auto; -webkit-text-stroke-width: 0px; background-color: #ffffff; display: inline ! important ; float: none;">最大128文字</span></p>
+</td>
+<td style="border-right: Solid 1px #9b9b9b; border-bottom: Solid 1px #9b9b9b;">
+<p class="TableText" style="font-family: Verdana, sans-serif; font-size: 12px;">×</p>
+</td>
+<td style="border-right: Solid 1px #9b9b9b; border-bottom: Solid 1px #9b9b9b;">
+<p class="TableText" style="font-family: Verdana, sans-serif; font-size: 12px;"><span style="color: rgb(72, 72, 72); line-height: normal; orphans: auto; widows: auto; -webkit-text-stroke-width: 0px; background-color: #ffffff; display: inline ! important ; float: none;">指定がない場合、PCS-${UNIX時間}を設定する</span><br style="color: rgb(72, 72, 72); font-family: Verdana, sans-serif; font-size: 12px; font-style: normal; font-variant: normal; font-weight: normal; letter-spacing: normal; line-height: normal; orphans: auto; text-align: start; text-indent: 0px; text-transform: none; white-space: normal; widows: auto; word-spacing: 0px; -webkit-text-stroke-width: 0px; background-color: #ffffff;" />
+<span style="color: rgb(72, 72, 72); line-height: normal; orphans: auto; widows: auto; -webkit-text-stroke-width: 0px; background-color: #ffffff; display: inline ! important ; float: none;">V1.1.7以降で対応</span></p>
+</td>
+</tr>
+</table>
+<p class="Paragraph" style="font-family: 'Trebuchet MS', Verdana, sans-serif; color: rgb(85, 85, 85); font-size: 13px; line-height: normal; orphans: auto; widows: auto; background-color: #ffffff; -webkit-text-stroke-width: 0px; text-decoration: underline;">OData共通リクエストヘッダー</p>
+<table style="margin-left: 26pt;" cellspacing="0" width="96%">
+<col style="width: 15.606%;" />
+<col style="width: 22.268%;" />
+<col style="width: 16.702%;" />
+<col style="width: 10.752%;" />
+<col style="width: 34.672%;" />
+<tr>
+<th style="border: Solid 1px #9b9b9b;" bgcolor="#353D47">
+<p class="GreyColumnHeading">ヘッダ名</p>
+</th>
+<th style="border-top: Solid 1px #9b9b9b; border-right: Solid 1px #9b9b9b; border-bottom: Solid 1px #9b9b9b;" bgcolor="#353D47">
+<p class="GreyColumnHeading">概要</p>
+</th>
+<th style="border-top: Solid 1px #9b9b9b; border-right: Solid 1px #9b9b9b; border-bottom: Solid 1px #9b9b9b;" bgcolor="#353D47">
+<p class="GreyColumnHeading">有効値</p>
+</th>
+<th style="border-top: Solid 1px #9b9b9b; border-right: Solid 1px #9b9b9b; border-bottom: Solid 1px #9b9b9b;" bgcolor="#353D47">
+<p class="GreyColumnHeading">必須</p>
+</th>
+<th style="border-top: Solid 1px #9b9b9b; border-right: Solid 1px #9b9b9b; border-bottom: Solid 1px #9b9b9b;" bgcolor="#353D47">
+<p class="GreyColumnHeading">備考</p>
+</th>
+</tr>
+<tr>
+<td style="border-left: Solid 1px #9b9b9b; border-right: Solid 1px #9b9b9b; border-bottom: Solid 1px #9b9b9b;">
+<p class="TableText" style="font-family: Verdana, sans-serif; font-size: 12px;"><span style="color: rgb(72, 72, 72); line-height: normal; orphans: auto; widows: auto; -webkit-text-stroke-width: 0px; background-color: #ffffff; display: inline ! important ; float: none;">Authorization</span></p>
+</td>
+<td style="border-right: Solid 1px #9b9b9b; border-bottom: Solid 1px #9b9b9b;">
+<p class="TableText" style="color: rgb(72, 72, 72); font-family: Verdana, sans-serif; font-size: 12px; line-height: normal; orphans: auto; widows: auto; background-color: #ffffff; -webkit-text-stroke-width: 0px;"><span style="display: inline ! important ; float: none;">OAuth2.0形式で、認証情報を指定する</span></p>
+</td>
+<td style="border-right: Solid 1px #9b9b9b; border-bottom: Solid 1px #9b9b9b;">
+<p class="TableText" style="font-family: Verdana, sans-serif; font-size: 12px;"><span style="color: rgb(72, 72, 72); line-height: normal; orphans: auto; widows: auto; -webkit-text-stroke-width: 0px; background-color: #ffffff; display: inline ! important ; float: none;">Bearer {TokenValue}</span></p>
+</td>
+<td style="border-right: Solid 1px #9b9b9b; border-bottom: Solid 1px #9b9b9b;">
+<p class="TableText" style="font-family: Verdana, sans-serif; font-size: 12px;">○</p>
+</td>
+<td style="border-right: Solid 1px #9b9b9b; border-bottom: Solid 1px #9b9b9b;">
+<p class="TableText" style="color: rgb(72, 72, 72); font-family: Verdana, sans-serif; font-size: 12px; line-height: normal; orphans: auto; widows: auto; background-color: #ffffff; -webkit-text-stroke-width: 0px;"><span style="display: inline ! important ; float: none;">※認証トークンは認証トークン取得APIで取得したトークン</span></p>
+</td>
+</tr>
+<tr>
+<td style="border-left: Solid 1px #9b9b9b; border-right: Solid 1px #9b9b9b; border-bottom: Solid 1px #9b9b9b;">
+<p class="TableText" style="font-family: Verdana, sans-serif; font-size: 12px;"><span style="color: rgb(72, 72, 72); line-height: normal; orphans: auto; widows: auto; -webkit-text-stroke-width: 0px; background-color: #ffffff; display: inline ! important ; float: none;">X-Dc-Recursive</span></p>
+</td>
+<td style="border-right: Solid 1px #9b9b9b; border-bottom: Solid 1px #9b9b9b;">
+<p class="TableText" style="color: rgb(72, 72, 72); font-family: Verdana, sans-serif; font-size: 12px; line-height: normal; orphans: auto; widows: auto; background-color: #ffffff;"><span style="-webkit-text-stroke-width: 0px; display: inline ! important ; float: none;">一括削除の指定</span></p>
+</td>
+<td style="border-right: Solid 1px #9b9b9b; border-bottom: Solid 1px #9b9b9b;">
+<p class="TableText" style="font-family: Verdana, sans-serif; font-size: 12px;"><span style="color: rgb(72, 72, 72); line-height: normal; orphans: auto; widows: auto; -webkit-text-stroke-width: 0px; background-color: #ffffff; display: inline ! important ; float: none;">文字列</span></p>
+</td>
+<td style="border-right: Solid 1px #9b9b9b; border-bottom: Solid 1px #9b9b9b;">
+<p class="TableText" style="font-family: Verdana, sans-serif; font-size: 12px;">○</p>
+</td>
+<td style="border-right: Solid 1px #9b9b9b; border-bottom: Solid 1px #9b9b9b;">
+<p class="TableText" style="color: rgb(72, 72, 72); font-family: Verdana, sans-serif; font-size: 12px; line-height: normal; orphans: auto; widows: auto; background-color: #ffffff;"><span style="-webkit-text-stroke-width: 0px; display: inline ! important ; float: none;">trueの場合は一括削除APIを実施</span></p>
+<p class="TableText" style="color: rgb(72, 72, 72); font-family: Verdana, sans-serif; font-size: 12px; line-height: normal; orphans: auto; widows: auto; background-color: #ffffff;"><span style="-webkit-text-stroke-width: 0px; display: inline ! important ; float: none;">falseの場合およびヘッダの指定がなかった場合はエラーレスポンスコード412を返却</span></p>
+</td>
+</tr>
+</table>
+<h3>リクエストボディ</h3>
+<p class="Paragraph2">なし</p>
+<h3><span style="font-weight: bold;">リクエストサンプル</span></h3>
+<p class="Paragraph2">なし</p>
+<ul style="
+list-style:url('../../../../../../arrow.png');">
+<li style="margin-left: -20px;">
+<h2><span style="font-weight: bold;">レスポンス</span></h2>
+</li>
+</ul>
+<h3><span style="font-weight: bold;">ステータスコード</span></h3>
+<p class="Paragraph2"><span style="color: rgb(72, 72, 72); font-family: Verdana, sans-serif; font-size: 12px; -webkit-text-stroke-width: 0px; display: inline ! important ; float: none;">204</span></p>
+<table style="margin-left: 26pt;" cellspacing="0" width="100%">
+<col style="width: 15.467%;" />
+<col style="width: 27.986%;" />
+<col style="width: 27.986%;" />
+<col style="width: 28.562%;" />
+<tr>
+<th style="border: Solid 1px #9b9b9b;" bgcolor="#353D47">
+<p class="GreyColumnHeading">コード</p>
+</th>
+<th style="border-top: Solid 1px #9b9b9b; border-right: Solid 1px #9b9b9b; border-bottom: Solid 1px #9b9b9b;" bgcolor="#353D47">
+<p class="GreyColumnHeading">メッセージ</p>
+</th>
+<th style="border-top: Solid 1px #9b9b9b; border-right: Solid 1px #9b9b9b; border-bottom: Solid 1px #9b9b9b;" bgcolor="#353D47">
+<p class="GreyColumnHeading">概要</p>
+</th>
+<th style="border-top: Solid 1px #9b9b9b; border-right: Solid 1px #9b9b9b; border-bottom: Solid 1px #9b9b9b;" bgcolor="#353D47">
+<p class="GreyColumnHeading">備考</p>
+</th>
+</tr>
+<tr>
+<td>
+<p class="TableText" style="color: rgb(72, 72, 72); line-height: normal; orphans: auto; widows: auto; background-color: #ffffff; font-family: Verdana, sans-serif; -webkit-text-stroke-width: 0px; font-size: 12px;"><span style="display: inline ! important ; float: none;">400</span></p>
+</td>
+<td>
+<p class="TableText" style="color: rgb(72, 72, 72); line-height: normal; orphans: auto; widows: auto; background-color: #ffffff; font-family: Verdana, sans-serif; -webkit-text-stroke-width: 0px; font-size: 12px;"><span style="display: inline ! important ; float: none;">Bad Request</span></p>
+</td>
+<td>
+<p class="TableText" style="color: rgb(72, 72, 72); line-height: normal; orphans: auto; widows: auto; background-color: #ffffff; font-family: Verdana, sans-serif; -webkit-text-stroke-width: 0px; font-size: 12px;"><span style="display: inline ! important ; float: none;">リクエストヘッダの形式が不正</span></p>
+</td>
+<td>&#160;</td>
+</tr>
+<tr>
+<td>
+<p class="TableText" style="font-family: Verdana, sans-serif; font-size: 12px;"><span style="color: rgb(72, 72, 72); line-height: normal; orphans: auto; widows: auto; -webkit-text-stroke-width: 0px; background-color: #ffffff; display: inline ! important ; float: none;">409</span> &#160;</p>
+</td>
+<td>
+<p class="TableText" style="color: rgb(72, 72, 72); line-height: normal; orphans: auto; widows: auto; background-color: #ffffff; display: inline ! important ; font-family: Verdana, sans-serif; -webkit-text-stroke-width: 0px; font-size: 12px;">Conflict</p>
+</td>
+<td>
+<p class="TableText" style="font-family: Verdana, sans-serif; font-size: 12px;"><span style="color: rgb(72, 72, 72); line-height: normal; orphans: auto; widows: auto; -webkit-text-stroke-width: 0px; background-color: #ffffff; display: inline ! important ; float: none;">他のプロセスから削除対象のセル及び、配下のリソースへのアクセス状態が続き、リトライに失敗した場合</span></p>
+</td>
+<td>&#160;</td>
+</tr>
+</table>
+<p class="Paragraph2">&#160;</p>
+<h3><span style="font-weight: bold;">レスポンスヘッダ</span></h3>
+<table style="margin-left: 26pt;" cellspacing="0" width="96%">
+<col style="width: 21.478%;" />
+<col style="width: 38.862%;" />
+<col style="width: 39.661%;" />
+<tr>
+<th style="border: Solid 1px #9b9b9b;" bgcolor="#353D47">
+<p class="GreyColumnHeading">ヘッダ名</p>
+</th>
+<th style="border-top: Solid 1px #9b9b9b; border-right: Solid 1px #9b9b9b; border-bottom: Solid 1px #9b9b9b;" bgcolor="#353D47">
+<p class="GreyColumnHeading">概要</p>
+</th>
+<th style="border-top: Solid 1px #9b9b9b; border-right: Solid 1px #9b9b9b; border-bottom: Solid 1px #9b9b9b;" bgcolor="#353D47">
+<p class="GreyColumnHeading">備考</p>
+</th>
+</tr>
+<tr>
+<td>
+<p class="TableText" style="font-family: Verdana, sans-serif; font-size: 12px;"><span style="color: rgb(72, 72, 72); line-height: normal; orphans: auto; widows: auto; -webkit-text-stroke-width: 0px; background-color: #ffffff; display: inline ! important ; float: none;">X-Dc-Version</span></p>
+</td>
+<td>
+<p class="TableText" style="font-family: Verdana, sans-serif; font-size: 12px;"><span style="color: rgb(72, 72, 72); line-height: normal; orphans: auto; widows: auto; -webkit-text-stroke-width: 0px; background-color: #ffffff; display: inline ! important ; float: none;">Data Cloud APIの実行バージョン</span></p>
+</td>
+<td>
+<p class="TableText" style="font-family: Verdana, sans-serif; font-size: 12px;"><span style="color: rgb(72, 72, 72); line-height: normal; orphans: auto; widows: auto; -webkit-text-stroke-width: 0px; background-color: #ffffff; display: inline ! important ; float: none;">リクエストが処理されたAPIバージョン</span></p>
+</td>
+</tr>
+<tr>
+<td>
+<p class="TableText" style="font-family: Verdana, sans-serif; font-size: 12px;"><span style="color: rgb(72, 72, 72); line-height: normal; orphans: auto; widows: auto; -webkit-text-stroke-width: 0px; background-color: #ffffff; display: inline ! important ; float: none;">Access-Control-Allow-Origin</span></p>
+</td>
+<td>
+<p class="TableText" style="font-family: Verdana, sans-serif; font-size: 12px;"><span style="color: rgb(72, 72, 72); line-height: normal; orphans: auto; widows: auto; -webkit-text-stroke-width: 0px; background-color: #ffffff; display: inline ! important ; float: none;">クロスドメイン通信許可ヘッダー</span></p>
+</td>
+<td>
+<p class="TableText" style="font-family: Verdana, sans-serif; font-size: 12px;"><span style="color: rgb(72, 72, 72); line-height: normal; orphans: auto; widows: auto; -webkit-text-stroke-width: 0px; background-color: #ffffff; display: inline ! important ; float: none;">返却値は"*"固定</span></p>
+</td>
+</tr>
+</table>
+<h3><span style="font-weight: bold;">レスポンスボディ</span></h3>
+<p class="Paragraph2">なし</p>
+<h3><span style="font-weight: bold; font-size: 10pt;"><font size="2" style="font-size:10pt;">エラーメッセージ一覧</font></span></h3>
+<p class="Paragraph2"><a href="../../../../../en/Appendix/ErrorMessages.htm">Error Messages</a>を参照</p>
+<h3><span style="font-weight: bold;">レスポンスサンプル</span></h3>
+<p class="Paragraph2">なし</p>
+<ul style="
+list-style:url('../../../../../../arrow.png');">
+<li style="margin-left: -20px;">
+<h2><span style="font-weight: bold;">CURLサンプル</span></h2>
+</li>
+</ul>
+<h3>CURL Command</h3>
+<table style="margin-left: 26pt; height: 47px;" cellspacing="0" width="96%">
+<col style="width: 100%;" />
+<tr>
+<td style="border: Solid 1px #9b9b9b; vertical-align: middle;">
+<p class="Code">curl "https://fqdn/cellname" -X DELETE -v \</p>
+<p class="Code">-H "If-Match: *" \</p>
+<p class="Code">-H "Authorization: Bearer auth_token" -k \</p>
+<p class="Code">-H "X-Dc-Recursive: true" -k</p>
+</td>
+</tr>
+</table>
+<p class="Paragraph">&#160;</p>
+<script type="text/javascript" language="javascript1.2">//<![CDATA[
+<!--
+if (window.writeIntopicBar)
+	writeIntopicBar(0);
+
+
+highlightSearch();
+//-->
+//]]></script>
+</body>
+</html>

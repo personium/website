@@ -1,0 +1,267 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN"
+    "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<!-- saved from url=(0014)about:internet -->
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+<meta http-equiv="Content-Language" content="en-US" />
+<meta name="generator" content="Adobe RoboHelp 10" />
+<title>Overview</title>
+<link rel="StyleSheet" href="../../../../../../default.css" type="text/css" />
+<style type="text/css">
+/*<![CDATA[*/
+<!--
+.mainBreadCrumb a:link { color:#000000;
+background-color:transparent;
+text-decoration:none; }
+.mainBreadCrumb a:visited { color:#000000;
+background-color:transparent;
+text-decoration:none; }
+.mainBreadCrumb a:hover { color:#ff0000 ! important;
+cursor:pointer;
+text-decoration:underline; }
+p.mainBreadCrumb { margin-left:0px;
+margin-top:1px ! important; }
+h1 { padding-left:10px ! important; }
+-->
+/*]]>*/
+</style>
+
+<script type="text/javascript" language="JavaScript">
+//<![CDATA[
+function reDo() {
+  if (innerWidth != origWidth || innerHeight != origHeight)
+     location.reload();
+}
+if ((parseInt(navigator.appVersion) == 4) && (navigator.appName == "Netscape")) {
+        origWidth = innerWidth;
+        origHeight = innerHeight;
+        onresize = reDo;
+}
+onerror = null; 
+//]]>
+</script>
+<style type="text/css">
+/*<![CDATA[*/
+<!--
+div.WebHelpPopupMenu { position:absolute;
+left:0px;
+top:0px;
+z-index:4;
+visibility:hidden; }
+-->
+/*]]>*/
+</style>
+
+<script type="text/javascript" language="javascript1.2" src="../../../../../../whmsg.js" charset="utf-8">
+</script>
+<script type="text/javascript" language="javascript" src="../../../../../../whver.js" charset="utf-8">
+</script>
+<script type="text/javascript" language="javascript1.2" src="../../../../../../whutils.js" charset="utf-8">
+</script>
+<script type="text/javascript" language="javascript1.2" src="../../../../../../whproxy.js" charset="utf-8">
+</script>
+<script type="text/javascript" language="javascript1.2" src="../../../../../../whlang.js" charset="utf-8">
+</script>
+<script type="text/javascript" language="javascript1.2" src="../../../../../../whtopic.js" charset="utf-8">
+</script>
+</head>
+<body>
+<script type="text/javascript" language="javascript1.2">
+//<![CDATA[
+<!--
+if (window.gbWhTopic)
+{
+        var strUrl = document.location.href;
+        var bc = 0;
+        var n = strUrl.toLowerCase().indexOf("bc-");
+        if(n != -1)
+        {
+                document.location.href = strUrl.substring(0, n);
+                bc = strUrl.substring(n+3);
+        }
+
+        if (window.addTocInfo)
+        {
+        addTocInfo("REST API Reference\nCell Level APIs\nEvent\nOverview");
+addButton("show",BTN_TEXT,"Show","","","","",0,0,"","","");
+
+        }
+        if (window.writeBtnStyle)
+                writeBtnStyle();
+
+        if (window.writeIntopicBar)
+                writeIntopicBar(1);
+
+        
+        
+}
+else
+        if (window.gbIE4)
+                document.location.reload();
+
+onLoadHandler = function()
+{
+  if (window.setRelStartPage)
+        {
+        setTimeout("setRelStartPage('../../../../../../English.htm');", 1)
+
+    setTimeout("UpdateBreadCrumbsMarker();", 1);
+        }
+}
+
+if (window.addEventListener){  
+        window.addEventListener('load', onLoadHandler, false);   
+} else if (window.attachEvent){  
+        window.attachEvent('onload', onLoadHandler);  
+}
+
+function onSetStartPage()
+{
+  autoSync(1);
+  sendSyncInfo();
+  sendAveInfoOut();
+}
+//-->
+//]]>
+</script><script type="text/javascript" src="../../../../../../ehlpdhtm.js" language="JavaScript1.2">
+</script>
+<div style="width: 100%; position: relative;" id="header">
+<p style="font-size: 10pt;">&#160;</p>
+</div>
+<script type="text/javascript" language="javascript">
+//<![CDATA[
+document.write("<p  class=\"mainBreadCrumb\"   style=\"text-align:left;\" class=\"breadcrumbs\">");
+AddMasterBreadcrumbs("../../../../../../English.htm", "breadcrumbs", " &gt; ", "トップ", "../../../../../WelcometoPCSDocumentation.htm");
+document.write("<a class=\"breadcrumbs\" href=\"../../../PCSUnitAPIs/Overview.htm\">REST API Reference<\/a>  &gt;  <a class=\"breadcrumbs\" href=\"../CellLevelAPIOverview.htm\">Cell Level APIs<\/a>  &gt;  <a class=\"breadcrumbs\" href=\"EventOverview.htm\">Event<\/a>  &gt;  Overview<\/p>");
+//]]>
+</script>
+<hr style="border-left-width: 0px; margin-left: -6px;" size="1" width="101%" align="center" />
+<form><input type="image" value="Print" onclick="window.print();return false" name="Printer.png" src="../../../../../../Images/Printer.png" style="width: 16px; height: 16px; float: right; margin-top: -32px; margin-right: 2px;" /></form>
+<h1>Event Summary</h1>
+<h2>What is an Event?</h2>
+<p class="Paragraph" style="mso-margin-top-alt: auto; mso-margin-bottom-alt: auto; line-height: normal; background-color: #ffffff; font-size: 10.0pt;"><span style="mso-fareast-font-family: 'Times New Roman';">It is composed of the internal and external events defined by personium.io.</span></p>
+<p class="Figure" segoe="" important="" style="font-size: 10.0pt; line-height: 115%; font-family: ;"><img src="../../../../../../Description.PNG" alt="" style="border: none;" border="0" /></p>
+<h3>External Events</h3>
+<p class="Paragraph2" style="color: #ff0000;">API event reception&#160;at, I represents the event that accepts.&#160;</p>
+<p class="Paragraph2" style="color: #ff0000;">Event generated by an event reception API, processing is performed along with the contents of the event received.&#160;</p>
+<p class="Paragraph2" segoe="" important="" mso-fareast-font-family:="" times="" new="" line-height:="" background-color:="" mso-margin-top-alt:="" mso-margin-bottom-alt:="" color:="" style="font-size: 10.0pt; font-family: ;">In addition, the future, relay processing of events accepted by the message notification to other cells is possible.</p>
+<p class="Paragraph"><span segoe="" important="" mso-fareast-font-family:="" times="" new="" mso-ansi-language:="" mso-fareast-language:="" mso-bidi-language:="" color:="" style="font-size: 10.0pt; line-height: 115%; font-family: ;"><font size="2" style="font-size:10pt;">In the event reception desk, I want to output as an event log the contents of the event that occurred.</font></span></p>
+<h3>Internal Event</h3>
+<p class="Paragraph2" style="color: #ff0000;"><span segoe="" important="" background:="" style="font-size: 10.0pt; font-family: ;"><font size="2" style="font-size:10pt;">This indicates that the process to be executed based on the state management data held in the interior of the personium.io (OData/WebDAV/Service, etc.).</font></span><span class="apple-converted-space">&#160;</span></p>
+<p class="Paragraph2" style="color: #ff0000; background-color: #ffffff;"><span style="background: #ffffff;">Internal events as a representative, a request of personium.io API.</span></p>
+<p class="Paragraph2" segoe="" important="" color:="" style="mso-margin-top-alt: auto; mso-margin-bottom-alt: auto; line-height: normal; background-color: #ffffff; font-size: 10.0pt; font-family: ;"><span style="background: #ffffff;">I want to output as an event log the results in the response return when the personium.io API.</span></p>
+<h2>Event Log</h2>
+<h3 style="font-weight: normal;"><b style="font-weight: normal;">Event log management settings</b></h3>
+<p class="Paragraph2" style="color: #ff0000;"><b style="font-weight: normal;">L</b>og configuration update API<span class="apple-converted-space" style="background: #ffffff;">&#160;</span>output setting for the event log can by&#160;</p>
+<p class="Paragraph2" style="color: #ff0000;"><span style="background: #ffffff;">If you want to get the information set,</span>&#160;log setting acquisition API<span style="background: #ffffff;">&#160;to use.</span></p>
+<h3>Event log access method</h3>
+<p class="Paragraph2" style="color: #ff0000; background-color: #ffffff;"><span style="background: #ffffff;">To be managed by WebDAV on, the event log, perform the API for WebDAV access to the event log file.&#160;</span></p>
+<p class="Paragraph"><span segoe="" important="" color:="" background:="" style="font-size: 10.0pt; line-height: 115%; font-family: ;"><font size="2" style="font-size:10pt;">For more information, refer to the following APIs:</font></span></p>
+<p class="Bullet_1" style=" margin-left: 50px; text-indent: -30px;"><span class="rls-1-Bullets"><span style="font-family:'Symbol'">·</span></span><span style='word-spacing:normal; font:6.0pt "Times New Roman"'><font size="1" style="font-size:6pt;">&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;</font></span>Log files information acquisition API</p>
+<p class="Bullet_1" style=" margin-left: 50px; text-indent: -30px;"><span class="rls-1-Bullets"><span style="font-family:'Symbol'">·</span></span><span style='word-spacing:normal; font:6.0pt "Times New Roman"'><font size="1" style="font-size:6pt;">&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;</font></span><span style="color: #3f3f3f; text-decoration: none;"><font color="#3F3F3F">File logging API</font></span></p>
+<p class="Bullet_1" style=" margin-left: 50px; text-indent: -30px;"><span class="rls-1-Bullets"><span style="font-family:'Symbol'">·</span></span><span style='word-spacing:normal; font:6.0pt "Times New Roman"'><font size="1" style="font-size:6pt;">&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;</font></span><span style="color: #3f3f3f; text-decoration: none;"><font color="#3F3F3F">Log file deletion API</font></span></p>
+<h3>Event log retention period</h3>
+<p class="Paragraph" segoe="" important="" color:=""><span style="font-size: 10.0pt;"><font size="2" style="font-size:10pt;">Since the size of the event log file is increased in response to an event amount, to rotate the event log file at a constant amount.</font></span><span class="Apple-converted-space">&#160;</span></p>
+<p class="Paragraph" segoe="" important="" color:=""><span style="font-size: 10.0pt;"><font size="2" style="font-size:10pt;">Hold the number of generations of the event log file is rotated, the 12 largest generation.</font></span><span class="Apple-converted-space">&#160;</span></p>
+<p class="Paragraph" segoe="" important="" color:="" style="font-size: 10.0pt;"><span style="font-size: 10.0pt;"><font size="2" style="font-size:10pt;">It should be noted that, as the default 50MB, maximum size of the rotating at the time,</font></span><span class="Apple-converted-space" style="font-size: 10.0pt;"><font size="2" style="font-size:10pt;">&#160;</font></span><span style="font-size: 10.0pt;"><font size="2" style="font-size:10pt;">set the log update API</font></span><span class="Apple-converted-space" style="font-size: 10.0pt;"><font size="2" style="font-size:10pt;">&#160;</font></span><span style="font-size: 10.0pt;"><font size="2" style="font-size:10pt;">and can be set at.</font></span></p>
+<h3 segoe="" important="" color:="">Event Log Format</h3>
+<p segoe="" important="" color:="" class="Paragraph"><span style="font-size: 10.0pt;"><font size="2" style="font-size:10pt;">C</font></span><span style="color: rgb(72, 72, 72); font-family: Verdana, sans-serif; font-size: 12px; line-height: normal; orphans: auto; widows: auto; -webkit-text-stroke-width: 0px; display: inline ! important ; float: none; background-color: #ffffff;">SV format and the format of the event log,</span> <span style="font-family: Verdana, sans-serif; font-size: 12px; line-height: normal; orphans: auto; widows: auto; -webkit-text-stroke-width: 0px; display: inline ! important ; float: none; background-color: #ffffff; color: #ff0000;"><font color="red">I want to output in the following format.</font></span></p>
+<table class="TemplateTable" style="margin-left: 26pt;" cellspacing="0" width="96%">
+<col style="width: 33.333%;" />
+<col style="width: 33.333%;" />
+<col style="width: 33.333%;" />
+<tr>
+<td style="border: Solid 1px #9b9b9b;" bgcolor="#E9E9E9">
+<p class="GreyColumnHeading" style="font-weight: normal; margin-left: 0px;"><span style="font-weight: normal;">Item</span></p>
+</td>
+<td style="border-top: Solid 1px #9b9b9b; border-right: Solid 1px #9b9b9b; border-bottom: Solid 1px #9b9b9b;" bgcolor="#E9E9E9">
+<p class="GreyColumnHeading" style="font-weight: normal; margin-left: 0px;"><span style="font-weight: normal;">Description</span></p>
+</td>
+<td style="border-top: Solid 1px #9b9b9b; border-right: Solid 1px #9b9b9b; border-bottom: Solid 1px #9b9b9b;" bgcolor="#E9E9E9">
+<p class="GreyColumnHeading" style="font-weight: normal; margin-left: 0px;"><span style="font-weight: normal;">Remarks</span></p>
+</td>
+</tr>
+<tr>
+<td style="border-left: Solid 1px #9b9b9b; border-right: Solid 1px #9b9b9b; border-bottom: Solid 1px #9b9b9b;">
+<p class="TableText"><span style="color: rgb(72, 72, 72); font-family: Verdana, sans-serif; font-size: 12px; line-height: normal; orphans: auto; widows: auto; -webkit-text-stroke-width: 0px; display: inline ! important ; float: none; background-color: #ffffff;">Character encoding</span></p>
+</td>
+<td style="border-right: Solid 1px #9b9b9b; border-bottom: Solid 1px #9b9b9b;">
+<p class="TableText">UTF-8</p>
+</td>
+<td style="border-right: Solid 1px #9b9b9b; border-bottom: Solid 1px #9b9b9b;">
+<p class="TableText">&#160;</p>
+</td>
+</tr>
+<tr>
+<td style="border-left: Solid 1px #9b9b9b; border-right: Solid 1px #9b9b9b; border-bottom: Solid 1px #9b9b9b;">
+<p class="TableText">Delimiter</p>
+</td>
+<td style="border-right: Solid 1px #9b9b9b; border-bottom: Solid 1px #9b9b9b;">
+<p class="TableText">, (Comma-byte)</p>
+</td>
+<td style="border-right: Solid 1px #9b9b9b; border-bottom: Solid 1px #9b9b9b;">
+<p class="TableText">&#160;</p>
+</td>
+</tr>
+<tr>
+<td style="border-left: Solid 1px #9b9b9b; border-right: Solid 1px #9b9b9b; border-bottom: Solid 1px #9b9b9b;">
+<p class="TableText">Field value</p>
+</td>
+<td style="border-right: Solid 1px #9b9b9b; border-bottom: Solid 1px #9b9b9b;">
+<p class="TableText"><font class="">"Enclosed in (single-byte double quotes) the entire field<span class="Apple-converted-space">&#160;</span></font><br style="color: rgb(72, 72, 72); font-family: Verdana, sans-serif; font-size: 12px; font-style: normal; font-variant: normal; font-weight: normal; letter-spacing: normal; line-height: normal; orphans: auto; text-align: start; text-indent: 0px; text-transform: none; white-space: normal; widows: auto; word-spacing: 0px; -webkit-text-stroke-width: 0px; background-color: #ffffff;" />
+<font class="">if the field value to "have a (single-byte double quotes)" and duplicating (up to double quotes)</font></p>
+</td>
+<td style="border-right: Solid 1px #9b9b9b; border-bottom: Solid 1px #9b9b9b;">
+<p class="TableText">&#160;</p>
+</td>
+</tr>
+</table>
+<p segoe="" important="" color:="" class="Paragraph">&#160;</p>
+<h3 style="orphans: auto; widows: auto; -webkit-text-stroke-width: 0px;">Example</h3>
+<h4><font class="">External event output</font></h4>
+<table class="CodeTable" style="margin-left: 26pt; height: 47px;" cellspacing="0px" width="96%">
+<col />
+<tr>
+<td style="vertical-align: middle;">
+<p class="Code" style="mso-fareast-font-family: 'Times New Roman'; color: #484848;"><span style="mso-fareast-font-family: 'Times New Roman'; color: #484848;"><font color="#484848">2013-04-18 14:52:39.778 [thread-pool-1-38888(20)] [ERROR] EventLogger Req_animal-access_1001,client,https://fqdn/appCell/,https://fqdn/servicemanager/#admin,actionData,/svc/token_keeper,resultData</font></span></p>
+<p class="Code" style="mso-fareast-font-family: 'Times New Roman'; color: #484848;">2013-04-18 14:52:40.688 [thread-pool-1-38888(17)] [INFO ] EventLogger Req_animal-access_2001,client,https://fqdn/appCell/,https://fqdn/servicemanager/#admin,action,/svc/token_keeper,result</p>
+<p class="Code" style="mso-fareast-font-family: 'Times New Roman'; color: #484848;">2013-04-18 15:01:46.994 [thread-pool-1-38888(25)] [INFO ] EventLogger Req_animal-access_2001,client,https://fqdn/appCell/,https://fqdn/servicemanager/#admin,action,/svc/token_keeper,result</p>
+<p class="Code" style="mso-fareast-font-family: 'Times New Roman'; color: #484848;">2013-04-18 15:06:19.294 [thread-pool-1-38888(15)] [ERROR] EventLogger Req_animal-access_1001,client,https://fqdn/appCell/,https://fqdn/servicemanager/#admin,actionData,/svc/token_keeper,resultData</p>
+<p class="Code" style="mso-fareast-font-family: 'Times New Roman'; color: #484848;">2013-04-18 15:06:23.360 [thread-pool-1-38888(17)] [INFO ] EventLogger Req_animal-access_2001,client,https://fqdn/appCell/,https://fqdn/servicemanager/#admin,action,/svc/token_keeper,result</p>
+<p class="Code" style="mso-fareast-font-family: 'Times New Roman'; color: #484848;">2013-04-18 15:09:18.073 [thread-pool-1-38888(10)] [ERROR] EventLogger Req_animal-access_1001,client,https://fqdn/appCell/,https://fqdn/servicemanager/#admin,actionData,/svc/token_keeper,resultData</p>
+</td>
+</tr>
+</table>
+<h4><font class="">Internal event o</font>utput</h4>
+<table class="CodeTable" style="margin-left: 26pt; height: 47px;" cellspacing="0px" width="96%">
+<col style="width: 100%;" />
+<tr>
+<td>
+<p class="Code">2013-04-18 14:52:39.778 [thread-pool-1-38888(20)] [ERROR] EventLogger Req_animal-access_1001,server,https://fqdn/appCell/,https://fqdn/appCell/#staff,POST,/homeClinic/__auth,200</p>
+<p class="Code">2013-04-18 14:52:39.778 [thread-pool-1-38888(20)] [ERROR] EventLogger Req_animal-access_1001,server,https://fqdn/appCell/,https://fqdn/appCell/#staff,PROPFIND,/homeClinic/box/col/put_blog,207</p>
+<p class="Code">2013-04-18 14:52:39.779 [thread-pool-1-38888(20)] [ERROR] EventLogger Req_animal-access_1001,server,https://fqdn/appCell/,https://fqdn/appCell/#staff,PUT,/homeClinic/box/col/put_blog,204</p>
+<p class="Code">2013-04-18 14:52:39.780 [thread-pool-1-38888(20)] [ERROR] EventLogger Req_animal-access_1001,server,https://fqdn/appCell/,https://fqdn/appCell/#staff,GET,/homeClinic/box/col/blog_20130418,200</p>
+</td>
+</tr>
+</table>
+<p class="Paragraph">&#160;</p>
+<p class="Paragraph">&#160;</p>
+<br />
+<div style="border-top: Solid 3px #3a3a3a; width: 100%; position: relative; padding-top: 2px; padding-bottom: 2px; padding-right: 5px; background-color: #9b9b9b;" id="footer">
+<h6 style="text-align: right; margin-top: 5pt; margin-bottom: 5pt;">Copyright 2014 &#160;FUJITSU LIMITED</h6>
+</div>
+<script type="text/javascript" language="javascript1.2">
+//<![CDATA[
+<!--
+if (window.writeIntopicBar)
+        writeIntopicBar(0);
+
+
+highlightSearch();
+//-->
+//]]>
+</script>
+</body>
+</html>

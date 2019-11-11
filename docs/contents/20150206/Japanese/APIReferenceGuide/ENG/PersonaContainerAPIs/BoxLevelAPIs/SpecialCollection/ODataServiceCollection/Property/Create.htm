@@ -1,0 +1,1133 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<meta name="template" content="API Master.htt" />
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+<meta name="topic-check-list" content="Ran Smart Index" />
+<meta name="generator" content="Adobe RoboHelp 10" />
+<title>Create</title>
+<link rel="StyleSheet" href="../../../../../../../default.css" type="text/css" />
+<script type="text/javascript" src="../../../../../../../prettify.js"></script>
+</head>
+
+<body onload="prettyPrint()">
+<script type="text/javascript" src="../../../../../../../ehlpdhtm.js"></script>
+
+<div style="width: 100%; position: relative;" id="header">
+	<p>&#160;</p>
+</div>
+
+<?rh-placeholder type="breadcrumbs" ph-align="2" usetopicformat="0" home="Home" 
+ sep-char="&gt;" ph-style="font-family:Arial;font-size:9pt;font-weight: normal;font-style: normal;text-decoration: none;" ?>
+
+<h1>Register Property</h1>
+<ul style="list-style: url('../../../../../../../Images/arrow.png');">
+	<li style="margin-left: -20px;"><h2><span lang="JA" xml:lang="JA" style="line-height: 115%; font-family: 'MS Mincho'; 
+		 mso-ascii-font-family: Arial; mso-fareast-theme-font: minor-fareast; 
+		 mso-hansi-font-family: Arial; mso-bidi-font-family: Arial; mso-ansi-language: EN-US; 
+		 mso-fareast-language: JA; mso-bidi-language: AR-SA; font-weight: bold;">概要</span></h2></li>
+</ul>
+<p class="Paragraph">This API defines the properties that you specify for 
+ the user data</p>
+<ul style="list-style: url('../../../../../../../Images/arrow.png');">
+	<li style="margin-left: -20px;"><h2><span style="font-weight: bold;">必要な権限</span></h2></li>
+</ul>
+<p class="Paragraph">write</p>
+<ul style="list-style: url('../../../../../../../Images/arrow.png');">
+	<li style="margin-left: -20px;"><h2><span style="font-weight: bold;">制限事項</span></h2></li>
+</ul>
+<div>
+<p class="Bullet_1"><span style="font-family:'Symbol'">&#183;</span><span style='word-spacing:normal; font:6.0pt "Times New Roman"'>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</span>リクエストヘッダーのContent-Typeは全てapplication/jsonとして扱う</p>
+<p class="Bullet_1"><span style="font-family:'Symbol'">&#183;</span><span style='word-spacing:normal; font:6.0pt "Times New Roman"'>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</span>リクエストボディはjson形式のみ受け付ける</p>
+<p class="Bullet_1"><span style="font-family:'Symbol'">&#183;</span><span style='word-spacing:normal; font:6.0pt "Times New Roman"'>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</span>レスポンスヘッダーのContent-Typeはapplication/jsonのみをサポートし、レスポンスボディはjson形式とする</p>
+<p class="Bullet_1"><span style="font-family:'Symbol'">&#183;</span><span style='word-spacing:normal; font:6.0pt "Times New Roman"'>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</span>$formatクエリオプションにatom 
+ または xmlを指定した場合、エラーとはならないが、レスポンスボディのデータの保証はない</p>
+</div>
+<p class="Bullet_1"><span style="font-family:'Symbol'">&#183;</span><span style='word-spacing:normal; font:6.0pt "Times New Roman"'>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</span>If the user 
+ data using the EntityType associated target exists, Nullable can be registered 
+ only if the true</p>
+<p class="Bullet_1"><span style="font-family:'Symbol'">&#183;</span><span style='word-spacing:normal; font:6.0pt "Times New Roman"'>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</span><font><font>If 
+ you want to create a Property and Property of the same name that you have 
+ deleted, can be registered only if the same type</font></font><br />
+<font><font>(you will need to delete the EntityType, to re-create the Property 
+ If you want to change the type)</font></font></p>
+<p class="Bullet_1"><span style="font-family:'Symbol'">&#183;</span><span style='word-spacing:normal; font:6.0pt "Times New Roman"'>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</span><font><font>Edm.DateTime 
+ array of type can not be used</font></font></p>
+<p class="Bullet_1"><span style="font-family:'Symbol'">&#183;</span><span style='word-spacing:normal; font:6.0pt "Times New Roman"'>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</span><font><font>Check 
+ the scope of the DefaultValue of Edm.DateTime is not done properly</font></font></p>
+<p class="Bullet_1"><span style="font-family:'Symbol'">&#183;</span><span style='word-spacing:normal; font:6.0pt "Times New Roman"'>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</span>You can create 
+ one for EntityType, Property · ComplexTypeProperty together until 400</p>
+<p class="Bullet_1"><span style="font-family:'Symbol'">&#183;</span><span style='word-spacing:normal; font:6.0pt "Times New Roman"'>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</span>If you set 
+ the isKey / UniqueKey, reflected in schema is not</p>
+<ul style="list-style: url('../../../../../../../Images/arrow.png');">
+	<li style="margin-left: -20px;"><h2><span style="font-weight: bold;">リクエスト</span></h2></li>
+</ul>
+<h3><span style="font-weight: bold;">リクエストURL</span></h3>
+<table class="CodeTable" style="left: 0px; top: 536px; margin-left: 26pt;" cellspacing="0px" width="96%">
+	<col style="width: 100%;" />
+	<tr style="height: 4px;">
+		<td><p class="Code">/{Cell_name}/{Box_name}/{odata_colleciton_path}/$metadata/Property</p></td>
+	</tr>
+</table>
+<h3><span style="font-weight: bold;">メソッド</span></h3>
+<p class="Paragraph2">POST</p>
+<h3><span style="font-weight: bold;">リクエストクエリ</span></h3>
+<p class="Paragraph2">Query is ignored</p>
+<h3><span style="font-weight: bold;">リクエストヘッダ</span></h3>
+<div>
+<table style="margin-left: 26pt;" cellspacing="0" width="96%">
+	<col style="width: 22%;" />
+	<col style="width: 20%;" />
+	<col style="width: 20%;" />
+	<col style="width: 10%;" />
+	<col style="width: 28%;" />
+	<tr>
+		<th style="border: Solid 1px #9b9b9b;" bgcolor="#353D47"><p class="GreyColumnHeading"><font><font>Header 
+		 name</font></font></p></th>
+		<th style="border-top: Solid 1px #9b9b9b; border-right: Solid 1px #9b9b9b; 
+			 border-bottom: Solid 1px #9b9b9b;" bgcolor="#353D47"><p class="GreyColumnHeading"><font><font>Summary</font></font></p></th>
+		<th style="border-top: Solid 1px #9b9b9b; border-right: Solid 1px #9b9b9b; 
+			 border-bottom: Solid 1px #9b9b9b;" bgcolor="#353D47"><p class="GreyColumnHeading"><font><font>Valid 
+		 value</font></font></p></th>
+		<th style="border-top: Solid 1px #9b9b9b; border-right: Solid 1px #9b9b9b; 
+			 border-bottom: Solid 1px #9b9b9b;" bgcolor="#353D47"><p class="GreyColumnHeading"><font><font>Required</font></font></p></th>
+		<th style="border-top: Solid 1px #9b9b9b; border-right: Solid 1px #9b9b9b; 
+			 border-bottom: Solid 1px #9b9b9b;" bgcolor="#353D47"><p class="GreyColumnHeading"><font><font>Remarks</font></font></p></th>
+	</tr>
+</table>
+</div>
+<div>
+<table class="ParameterTable" style="margin-left: 26pt;" cellspacing="0px" width="96%">
+	<col style="width: 22%;" />
+	<col style="width: 20%;" />
+	<col style="width: 20%;" />
+	<col style="width: 10%;" />
+	<col style="width: 28%;" />
+	<tr>
+		<td style="border: Solid 1px #9b9b9b; vertical-align: top;"><p 
+			 class="TableText"><font><font>X-Dc-Version</font></font></p></td>
+		<td style="border-top: Solid 1px #9b9b9b; border-right: Solid 1px #9b9b9b; 
+			 border-bottom: Solid 1px #9b9b9b; vertical-align: top;"><p 
+			 class="TableText">Executable version of the Data Cloud API</p></td>
+		<td style="border-top: Solid 1px #9b9b9b; border-right: Solid 1px #9b9b9b; 
+			 border-bottom: Solid 1px #9b9b9b; vertical-align: top;"><p 
+			 class="TableText"><font><font>Valid version</font></font></p></td>
+		<td style="border-top: Solid 1px #9b9b9b; border-right: Solid 1px #9b9b9b; 
+			 border-bottom: Solid 1px #9b9b9b; vertical-align: top;"><p 
+			 class="TableText"><font><font>×</font></font></p></td>
+		<td style="border-top: Solid 1px #9b9b9b; border-right: Solid 1px #9b9b9b; 
+			 border-bottom: Solid 1px #9b9b9b; vertical-align: top;"><p 
+			 class="TableText">If not specified, the latest version of 
+		 API is specified</p></td>
+	</tr>
+</table>
+</div>
+<div>
+<table class="ParameterTable" style="margin-left: 26pt;" cellspacing="0px" width="96%">
+	<col style="width: 22%;" />
+	<col style="width: 20%;" />
+	<col style="width: 20%;" />
+	<col style="width: 10%;" />
+	<col style="width: 28%;" />
+	<tr>
+		<td style="border-left: solid 1px #9b9b9b; border-right: Solid 1px #9b9b9b; 
+			 border-bottom: Solid 1px #9b9b9b; vertical-align: top;"><p 
+			 class="TableText"><font><font>X-HTTP-Method-Override</font></font></p></td>
+		<td style="border-right: Solid 1px #9b9b9b; border-bottom: Solid 1px #9b9b9b; 
+			 vertical-align: top;"><p class="TableText" style="color: #353535;">Function 
+		 method override</p></td>
+		<td style="border-right: Solid 1px #9b9b9b; border-bottom: Solid 1px #9b9b9b; 
+			 vertical-align: top;"><p class="TableText"><font><font>Any</font></font></p></td>
+		<td style="border-right: Solid 1px #9b9b9b; border-bottom: Solid 1px #9b9b9b; 
+			 vertical-align: top;"><p class="TableText"><font><font>×</font></font></p></td>
+		<td style="border-right: Solid 1px #9b9b9b; border-bottom: Solid 1px #9b9b9b; 
+			 vertical-align: top;"><p class="TableText">If this value is 
+		 specified at the time of the request in the POST method, the specified 
+		 value is used as a method</p></td>
+	</tr>
+</table>
+</div>
+<div>
+<table class="ParameterTable" style="margin-left: 26pt;" cellspacing="0px" width="96%">
+	<col style="width: 22%;" />
+	<col style="width: 20%;" />
+	<col style="width: 20%;" />
+	<col style="width: 10%;" />
+	<col style="width: 28%;" />
+	<tr>
+		<td style="border-left: solid 1px #9b9b9b; border-right: Solid 1px #9b9b9b; 
+			 border-bottom: Solid 1px #9b9b9b; vertical-align: top;"><p 
+			 class="TableText"><font><font>X-Override</font></font></p></td>
+		<td style="border-right: Solid 1px #9b9b9b; border-bottom: Solid 1px #9b9b9b; 
+			 vertical-align: top;"><p class="TableText"><font><font>Header 
+		 override function</font></font></p></td>
+		<td style="border-right: Solid 1px #9b9b9b; border-bottom: Solid 1px #9b9b9b; 
+			 vertical-align: top;"><p class="TableText"><font><font>{Name 
+		 of the header to override} $: $ {value}</font></font></p></td>
+		<td style="border-right: Solid 1px #9b9b9b; border-bottom: Solid 1px #9b9b9b; 
+			 vertical-align: top;"><p class="TableText"><font><font>×</font></font></p></td>
+		<td style="border-right: Solid 1px #9b9b9b; border-bottom: Solid 1px #9b9b9b; 
+			 vertical-align: top;"><p class="TableText">Overrides the value 
+		 of the HTTP header.</p>
+		<p class="TableText" style="color: #353535;">If you want to override 
+		 multiple headers, specify multiple X-Override.</p></td>
+	</tr>
+</table>
+</div>
+<div>
+<table class="ParameterTable" style="margin-left: 26pt;" cellspacing="0px" width="96%">
+	<col style="width: 22%;" />
+	<col style="width: 20%;" />
+	<col style="width: 20%;" />
+	<col style="width: 10%;" />
+	<col style="width: 28%;" />
+	<tr>
+		<td style="border-left: Solid 1px #9b9b9b; border-right: Solid 1px #9b9b9b; 
+			 border-bottom: Solid 1px #9b9b9b; vertical-align: top;"><p 
+			 class="TableText">X-Dc-RequestKey</p></td>
+		<td style="border-right: Solid 1px #9b9b9b; border-bottom: Solid 1px #9b9b9b; 
+			 vertical-align: top;"><p class="TableText">Value of RequestKey 
+		 field to be output to the event log</p></td>
+		<td style="border-right: Solid 1px #9b9b9b; border-bottom: Solid 1px #9b9b9b; 
+			 vertical-align: top;"><p class="TableText">Alphanumeric characters: 
+		 up to 128</p>
+		<p class="TableText">_ (underscore) and - (hyphen)</p></td>
+		<td style="border-right: Solid 1px #9b9b9b; border-bottom: Solid 1px #9b9b9b; 
+			 vertical-align: top;"><p class="TableText">×</p></td>
+		<td style="border-right: Solid 1px #9b9b9b; border-bottom: Solid 1px #9b9b9b; 
+			 vertical-align: top;"><p class="TableText">If not specified 
+		 then set PCS-${UNIXtime}</p>
+		<p class="TableText">Supported for V1.1.7 or later</p></td>
+	</tr>
+</table>
+</div>
+<div>
+<table class="ParameterTable" style="margin-left: 26pt;" cellspacing="0px" width="96%">
+	<col style="width: 22%;" />
+	<col style="width: 20%;" />
+	<col style="width: 20%;" />
+	<col style="width: 10%;" />
+	<col style="width: 28%;" />
+	<tr>
+		<td style="border-left: solid 1px #9b9b9b; border-right: Solid 1px #9b9b9b; 
+			 border-bottom: Solid 1px #9b9b9b; vertical-align: top;"><p 
+			 class="TableText"><font><font>Authorization</font></font></p></td>
+		<td style="border-right: Solid 1px #9b9b9b; border-bottom: Solid 1px #9b9b9b; 
+			 vertical-align: top;"><p class="TableText">In the form of 
+		 OAuth2.0, specify the authentication information</p></td>
+		<td style="border-right: Solid 1px #9b9b9b; border-bottom: Solid 1px #9b9b9b; 
+			 vertical-align: top;"><p class="TableText"><font><font>Bearer{TokenValue}</font></font></p></td>
+		<td style="border-right: Solid 1px #9b9b9b; border-bottom: Solid 1px #9b9b9b; 
+			 vertical-align: top;"><p class="TableText"><font><font>○</font></font></p></td>
+		<td style="border-right: Solid 1px #9b9b9b; border-bottom: Solid 1px #9b9b9b; 
+			 vertical-align: top;"><p class="TableText">Authentication 
+		 token obtained in the acquisition API</p></td>
+	</tr>
+</table>
+</div>
+<div>
+<table class="ParameterTable" style="margin-left: 26pt;" cellspacing="0px" width="96%">
+	<col style="width: 22%;" />
+	<col style="width: 20%;" />
+	<col style="width: 20%;" />
+	<col style="width: 10%;" />
+	<col style="width: 28%;" />
+	<tr>
+		<td style="border-left: solid 1px #9b9b9b; border-right: Solid 1px #9b9b9b; 
+			 border-bottom: Solid 1px #9b9b9b; vertical-align: top;"><p 
+			 class="TableText">Contents-Type</p></td>
+		<td style="border-right: Solid 1px #9b9b9b; border-bottom: Solid 1px #9b9b9b; 
+			 vertical-align: top;"><p class="TableText"><font><font>Specifies 
+		 the format of the request body</font></font></p></td>
+		<td style="border-right: Solid 1px #9b9b9b; border-bottom: Solid 1px #9b9b9b; 
+			 vertical-align: top;"><p class="TableText"><font><font>application/json</font></font></p></td>
+		<td style="border-right: Solid 1px #9b9b9b; border-bottom: Solid 1px #9b9b9b; 
+			 vertical-align: top;"><p class="TableText"><font><font>×</font></font></p></td>
+		<td style="border-right: Solid 1px #9b9b9b; border-bottom: Solid 1px #9b9b9b; 
+			 vertical-align: top;"><p class="TableText">Default is treated 
+		 as [application/json]</p></td>
+	</tr>
+</table>
+</div>
+<div>
+<table class="ParameterTable" style="margin-left: 26pt;" cellspacing="0px" width="96%">
+	<col style="width: 22%;" />
+	<col style="width: 20%;" />
+	<col style="width: 20%;" />
+	<col style="width: 10%;" />
+	<col style="width: 28%;" />
+	<tr>
+		<td style="border-left: solid 1px #9b9b9b; border-right: Solid 1px #9b9b9b; 
+			 border-bottom: Solid 1px #9b9b9b; vertical-align: top;"><p 
+			 class="TableText"><font><font>Accept</font></font></p></td>
+		<td style="border-right: Solid 1px #9b9b9b; border-bottom: Solid 1px #9b9b9b; 
+			 vertical-align: top;"><p class="TableText"><font><font>Specifies 
+		 the format of the response body</font></font></p></td>
+		<td style="border-right: Solid 1px #9b9b9b; border-bottom: Solid 1px #9b9b9b; 
+			 vertical-align: top;"><p class="TableText"><font><font>application/json</font></font></p></td>
+		<td style="border-right: Solid 1px #9b9b9b; border-bottom: Solid 1px #9b9b9b; 
+			 vertical-align: top;"><p class="TableText"><font><font>×</font></font></p></td>
+		<td style="border-right: Solid 1px #9b9b9b; border-bottom: Solid 1px #9b9b9b; 
+			 vertical-align: top;"><p class="TableText">Default is treated 
+		 as [application/json]</p></td>
+	</tr>
+</table>
+</div>
+<h3>リクエストボディ</h3>
+<h4><font><font>Format</font></font></h4>
+<p class="Paragraph2">JSON</p>
+<div>
+<table style="margin-left: 26pt;" cellspacing="0" width="96%">
+	<col style="width: 22%;" />
+	<col style="width: 10%;" />
+	<col style="width: 10%;" />
+	<col style="width: 30%;" />
+	<col style="width: 28%;" />
+	<tr>
+		<th style="border: Solid 1px #9b9b9b;" bgcolor="#353D47"><p class="GreyColumnHeading"><span style="font-weight: bold; font-size: 10pt;">項目名</span></p></th>
+		<th style="border-top: Solid 1px #9b9b9b; border-right: Solid 1px #9b9b9b; 
+			 border-bottom: Solid 1px #9b9b9b;" bgcolor="#353D47"><p class="GreyColumnHeading">Namespace</p></th>
+		<th style="border-top: Solid 1px #9b9b9b; border-right: Solid 1px #9b9b9b; 
+			 border-bottom: Solid 1px #9b9b9b;" bgcolor="#353D47"><p class="GreyColumnHeading">Node Type</p></th>
+		<th style="border-top: Solid 1px #9b9b9b; border-right: Solid 1px #9b9b9b; 
+			 border-bottom: Solid 1px #9b9b9b;" bgcolor="#353D47"><p class="GreyColumnHeading"><span style="font-weight: bold; font-size: 10pt;">概要</span></p></th>
+		<th style="border-top: Solid 1px #9b9b9b; border-right: Solid 1px #9b9b9b; 
+			 border-bottom: Solid 1px #9b9b9b;" bgcolor="#353D47"><p class="GreyColumnHeading">備考</p></th>
+	</tr>
+</table>
+</div>
+<div>
+<table class="ParameterTable" style="margin-left: 26pt;" cellspacing="0px" width="96%">
+	<col style="width: 22%;" />
+	<col style="width: 20%;" />
+	<col style="width: 20%;" />
+	<col style="width: 10%;" />
+	<col style="width: 28%;" />
+	<tr>
+		<td style="border-left: solid 1px #9b9b9b; border-right: Solid 1px #9b9b9b; 
+			 border-bottom: Solid 1px #9b9b9b; vertical-align: top;"><p 
+			 class="TableText"><font><font>Name</font></font></p></td>
+		<td style="border-right: Solid 1px #9b9b9b; border-bottom: Solid 1px #9b9b9b; 
+			 vertical-align: top;"><p class="TableText"><font><font>Property 
+		 name</font></font></p></td>
+		<td style="border-right: Solid 1px #9b9b9b; border-bottom: Solid 1px #9b9b9b; 
+			 vertical-align: top;"><p class="TableText"><font class="goog-text-highlight">Number 
+		 of Digits: 1-128</font></p>
+		<p class="TableText"><span style="color: #ff0000;"><font class="goog-text-highlight" 
+		 color="#FF0000">Alphanumeric characters: _ (underscore) and - 
+		 (hyphen)</font></span></p>
+		<p class="TableText"><span style="font-size: 10.0pt; line-height: 115%; 
+									 mso-fareast-font-family: 'Times New Roman'; 
+									 mso-ansi-language: EN-US; mso-fareast-language: EN-US; 
+									 mso-bidi-language: AR-SA;">However, 
+		 you cannot specify underscore and hyphen as the first character</span> 
+		 </p></td>
+		<td style="border-right: Solid 1px #9b9b9b; border-bottom: Solid 1px #9b9b9b; 
+			 vertical-align: top;"><p class="TableText"><font><font>○</font></font></p></td>
+		<td style="border-right: Solid 1px #9b9b9b; border-bottom: Solid 1px #9b9b9b; 
+			 vertical-align: top;"><p class="TableText">&#160;</p></td>
+	</tr>
+</table>
+</div>
+<div>
+<table class="ParameterTable" style="margin-left: 26pt;" cellspacing="0px" width="96%">
+	<col style="width: 22%;" />
+	<col style="width: 20%;" />
+	<col style="width: 20%;" />
+	<col style="width: 10%;" />
+	<col style="width: 28%;" />
+	<tr>
+		<td style="border-left: Solid 1px #9b9b9b; border-right: Solid 1px #9b9b9b; 
+			 border-bottom: Solid 1px #9b9b9b; vertical-align: top;"><p 
+			 class="TableText"><font><font>_EntityType.Name</font></font></p></td>
+		<td style="border-right: Solid 1px #9b9b9b; border-bottom: Solid 1px #9b9b9b; 
+			 vertical-align: top;"><p class="TableText"><font><font>EntityType 
+		 name preceded by the string</font></font></p></td>
+		<td style="border-right: Solid 1px #9b9b9b; border-bottom: Solid 1px #9b9b9b; 
+			 vertical-align: top;"><p class="TableText"><font><font>Number 
+		 of Digits: 1-128</font></font><br />
+		<font><font>(up to underscore) and (hyphen) _ - alphanumeric characters: 
+		 character type</font></font><br />
+		<font><font>(up to underscore) is not specified and (hyphen) _ 
+		 - however, the first character</font></font></p></td>
+		<td style="border-right: Solid 1px #9b9b9b; border-bottom: Solid 1px #9b9b9b; 
+			 vertical-align: top;"><p class="TableText"><font><font>○</font></font></p></td>
+		<td style="border-right: Solid 1px #9b9b9b; border-bottom: Solid 1px #9b9b9b; 
+			 vertical-align: top;"><p class="TableText">&#160;</p></td>
+	</tr>
+</table>
+</div>
+<div>
+<table class="ParameterTable" style="margin-left: 26pt;" cellspacing="0px" width="96%">
+	<col style="width: 22%;" />
+	<col style="width: 20%;" />
+	<col style="width: 20%;" />
+	<col style="width: 10%;" />
+	<col style="width: 28%;" />
+	<tr>
+		<td style="border-left: solid 1px #9b9b9b; border-right: Solid 1px #9b9b9b; 
+			 border-bottom: Solid 1px #9b9b9b; vertical-align: top;"><p 
+			 class="TableText"><font><font>Type</font></font></p></td>
+		<td style="border-right: Solid 1px #9b9b9b; border-bottom: Solid 1px #9b9b9b; 
+			 vertical-align: top;"><p class="TableText"><font><font>Type 
+		 definition</font></font></p></td>
+		<td style="border-right: Solid 1px #9b9b9b; border-bottom: Solid 1px #9b9b9b; 
+			 vertical-align: top;"><p class="TableText"><font><font>Edm.Boolean 
+		 / Edm.String / Edm.Single / Edm.Int32 / Edm.DateTime / registered 
+		 name ComplexType</font></font></p></td>
+		<td style="border-right: Solid 1px #9b9b9b; border-bottom: Solid 1px #9b9b9b; 
+			 vertical-align: top;"><p class="TableText"><font><font>○</font></font></p></td>
+		<td style="border-right: Solid 1px #9b9b9b; border-bottom: Solid 1px #9b9b9b; 
+			 vertical-align: top;"><p class="TableText">&#160;</p></td>
+	</tr>
+</table>
+</div>
+<div>
+<table class="ParameterTable" style="margin-left: 26pt;" cellspacing="0px" width="96%">
+	<col style="width: 22%;" />
+	<col style="width: 20%;" />
+	<col style="width: 20%;" />
+	<col style="width: 10%;" />
+	<col style="width: 28%;" />
+	<tr>
+		<td style="border-left: solid 1px #9b9b9b; border-right: Solid 1px #9b9b9b; 
+			 border-bottom: Solid 1px #9b9b9b; vertical-align: top;"><p 
+			 class="TableText"><font><font>Nullable</font></font></p></td>
+		<td style="border-right: Solid 1px #9b9b9b; border-bottom: Solid 1px #9b9b9b; 
+			 vertical-align: top;"><p class="TableText"><font><font>Null 
+		 value allowed</font></font></p></td>
+		<td style="border-right: Solid 1px #9b9b9b; border-bottom: Solid 1px #9b9b9b; 
+			 vertical-align: top;"><p class="TableText"><font class="">true 
+		 / false</font><br />
+		<font class="">The default value is Null</font></p></td>
+		<td style="border-right: Solid 1px #9b9b9b; border-bottom: Solid 1px #9b9b9b; 
+			 vertical-align: top;"><p class="TableText"><font><font>×</font></font></p></td>
+		<td style="border-right: Solid 1px #9b9b9b; border-bottom: Solid 1px #9b9b9b; 
+			 vertical-align: top;"><p class="TableText">&#160;</p></td>
+	</tr>
+</table>
+</div>
+<div>
+<table class="ParameterTable" style="margin-left: 26pt;" cellspacing="0px" width="96%">
+	<col style="width: 22%;" />
+	<col style="width: 20%;" />
+	<col style="width: 20%;" />
+	<col style="width: 10%;" />
+	<col style="width: 28%;" />
+	<tr>
+		<td style="border-left: solid 1px #9b9b9b; border-right: Solid 1px #9b9b9b; 
+			 border-bottom: Solid 1px #9b9b9b; vertical-align: top;"><p 
+			 class="TableText"><font><font>DefaultValue</font></font></p></td>
+		<td style="border-right: Solid 1px #9b9b9b; border-bottom: Solid 1px #9b9b9b; 
+			 vertical-align: top;"><p class="TableText"><font><font>Default 
+		 value</font></font></p></td>
+		<td style="border-right: Solid 1px #9b9b9b; border-bottom: Solid 1px #9b9b9b; 
+			 vertical-align: top;"><p class="TableText">Refer to the below 
+		 table </p>
+		<p class="TableText">Default value is Null</p></td>
+		<td style="border-right: Solid 1px #9b9b9b; border-bottom: Solid 1px #9b9b9b; 
+			 vertical-align: top;"><p class="TableText"><font><font>×</font></font></p></td>
+		<td style="border-right: Solid 1px #9b9b9b; border-bottom: Solid 1px #9b9b9b; 
+			 vertical-align: top;"><p class="TableText">&#160;</p></td>
+	</tr>
+</table>
+</div>
+<div>
+<table class="ParameterTable" style="margin-left: 26pt;" cellspacing="0px" width="96%">
+	<col style="width: 22%;" />
+	<col style="width: 20%;" />
+	<col style="width: 20%;" />
+	<col style="width: 10%;" />
+	<col style="width: 28%;" />
+	<tr>
+		<td style="border-left: solid 1px #9b9b9b; border-right: Solid 1px #9b9b9b; 
+			 border-bottom: Solid 1px #9b9b9b; vertical-align: top;"><p 
+			 class="TableText"><font><font>CollectionKind</font></font></p></td>
+		<td style="border-right: Solid 1px #9b9b9b; border-bottom: Solid 1px #9b9b9b; 
+			 vertical-align: top;"><p class="TableText"><font><font>Array 
+		 type</font></font></p></td>
+		<td style="border-right: Solid 1px #9b9b9b; border-bottom: Solid 1px #9b9b9b; 
+			 vertical-align: top;"><p class="TableText">None / List<br />
+		Default value: &quot;None&quot; </p></td>
+		<td style="border-right: Solid 1px #9b9b9b; border-bottom: Solid 1px #9b9b9b; 
+			 vertical-align: top;"><p class="TableText"><font><font>×</font></font></p></td>
+		<td style="border-right: Solid 1px #9b9b9b; border-bottom: Solid 1px #9b9b9b; 
+			 vertical-align: top;"><p class="TableText">&#160;</p></td>
+	</tr>
+</table>
+</div>
+<div>
+<table class="ParameterTable" style="margin-left: 26pt;" cellspacing="0px" width="96%">
+	<col style="width: 22%;" />
+	<col style="width: 20%;" />
+	<col style="width: 20%;" />
+	<col style="width: 10%;" />
+	<col style="width: 28%;" />
+	<tr>
+		<td style="border-left: solid 1px #9b9b9b; border-right: Solid 1px #9b9b9b; 
+			 border-bottom: Solid 1px #9b9b9b; vertical-align: top;"><p 
+			 class="TableText"><font><font>IsKey</font></font></p></td>
+		<td style="border-right: Solid 1px #9b9b9b; border-bottom: Solid 1px #9b9b9b; 
+			 vertical-align: top;"><p class="TableText"><font><font>Primary 
+		 key setting</font></font></p></td>
+		<td style="border-right: Solid 1px #9b9b9b; border-bottom: Solid 1px #9b9b9b; 
+			 vertical-align: top;"><p class="TableText"><font><font>true 
+		 / false</font></font><br />
+		<font><font>default value is false</font></font></p></td>
+		<td style="border-right: Solid 1px #9b9b9b; border-bottom: Solid 1px #9b9b9b; 
+			 vertical-align: top;"><p class="TableText"><font><font>×</font></font></p></td>
+		<td style="border-right: Solid 1px #9b9b9b; border-bottom: Solid 1px #9b9b9b; 
+			 vertical-align: top;"><p class="TableText">&#160;</p></td>
+	</tr>
+</table>
+</div>
+<div>
+<table class="ParameterTable" style="margin-left: 26pt;" cellspacing="0px" width="96%">
+	<col style="width: 22%;" />
+	<col style="width: 20%;" />
+	<col style="width: 20%;" />
+	<col style="width: 10%;" />
+	<col style="width: 28%;" />
+	<tr>
+		<td style="border-left: solid 1px #9b9b9b; border-right: Solid 1px #9b9b9b; 
+			 border-bottom: Solid 1px #9b9b9b; vertical-align: top;"><p 
+			 class="TableText"><font><font>UniqueKey</font></font></p></td>
+		<td style="border-right: Solid 1px #9b9b9b; border-bottom: Solid 1px #9b9b9b; 
+			 vertical-align: top;"><p class="TableText"><font><font>Unique 
+		 key settings</font></font></p></td>
+		<td style="border-right: Solid 1px #9b9b9b; border-bottom: Solid 1px #9b9b9b; 
+			 vertical-align: top;"><p class="TableText"><font class="">Number 
+		 of Digits: 1-128</font></p>
+		<p class="TableText"><font class="">(up to underscore) and (hyphen) 
+		 _ - alphanumeric characters: character type</font></p>
+		<p class="TableText"><font><font class="">(up to underscore) is 
+		 not specified and (hyphen) _ - however, the first character</font></font></p></td>
+		<td style="border-right: Solid 1px #9b9b9b; border-bottom: Solid 1px #9b9b9b; 
+			 vertical-align: top;"><p class="TableText"><font><font>×</font></font></p></td>
+		<td style="border-right: Solid 1px #9b9b9b; border-bottom: Solid 1px #9b9b9b; 
+			 vertical-align: top;"><p class="TableText">&#160;</p></td>
+	</tr>
+</table>
+</div>
+<h4><font>Valid values ​​for DefaultValue</font></h4>
+<p class="Paragraph2">(Depending on type definition) the value of the Type, 
+ DefaultValue is the effective value of the following definition to define 
+ a string with a different type items also </p>
+<table style="margin-left: 26pt;" cellspacing="0" width="1024">
+	<col style="width: 22.548%;" />
+	<col style="width: 77.452%;" />
+	<tr>
+		<th style="border: Solid 1px #9b9b9b;" bgcolor="#353D47"><p class="GreyColumnHeading">Type Value</p></th>
+		<th style="border-top: Solid 1px #9b9b9b; border-right: Solid 1px #9b9b9b; 
+			 border-bottom: Solid 1px #9b9b9b;" bgcolor="#353D47"><p class="GreyColumnHeading"><span style="font-size: 10pt; font-weight: bold;">有効値</span></p></th>
+	</tr>
+	<tr>
+		<td style="border-left: solid 1px #9b9b9b; border-right: Solid 1px #9b9b9b; 
+			 border-bottom: Solid 1px #9b9b9b;"><p class="TableText"><font><font>Edm.String</font></font></p></td>
+		<td style="border-right: Solid 1px #9b9b9b; border-bottom: Solid 1px #9b9b9b;"><p 
+			 class="TableText"><font><font>Digits: 0 ~ 51200 byte</font></font><br />
+		<font><font>When using the &quot;\&quot; should be specified in 
+		 the &quot;\ \&quot;</font></font></p></td>
+	</tr>
+	<tr>
+		<td style="border-left: solid 1px #9b9b9b; border-right: Solid 1px #9b9b9b; 
+			 border-bottom: Solid 1px #9b9b9b;"><p class="TableText"><font><font>Edm.Int32</font></font></p></td>
+		<td style="border-right: Solid 1px #9b9b9b; border-bottom: Solid 1px #9b9b9b;"><p 
+			 class="TableText"><font><font>-2147483648 To 2147483647</font></font></p></td>
+	</tr>
+	<tr>
+		<td style="border-left: solid 1px #9b9b9b; border-right: Solid 1px #9b9b9b; 
+			 border-bottom: Solid 1px #9b9b9b;"><p class="TableText"><font><font>Edm.Single</font></font></p></td>
+		<td style="border-right: Solid 1px #9b9b9b; border-bottom: Solid 1px #9b9b9b;"><p 
+			 class="TableText"><font><font>1-5 orders of magnitude the 
+		 number of digits of the integer part</font></font><br />
+		<font><font>1-5 digits: the number of digits in the fractional 
+		 part</font></font></p></td>
+	</tr>
+	<tr>
+		<td style="border-left: solid 1px #9b9b9b; border-right: Solid 1px #9b9b9b; 
+			 border-bottom: Solid 1px #9b9b9b;"><p class="TableText"><font><font>Edm.Boolean</font></font></p></td>
+		<td style="border-right: Solid 1px #9b9b9b; border-bottom: Solid 1px #9b9b9b;"><p 
+			 class="TableText"><font><font>true / false</font></font></p></td>
+	</tr>
+	<tr>
+		<td style="border-left: solid 1px #9b9b9b; border-right: Solid 1px #9b9b9b; 
+			 border-bottom: Solid 1px #9b9b9b;"><p class="TableText"><font><font>Edm.DateTime</font></font></p></td>
+		<td style="border-right: Solid 1px #9b9b9b; border-bottom: Solid 1px #9b9b9b;"><p 
+			 class="TableText"><font class="">/ To a string in the form 
+		 of / ([time of long type]) Date</font><br />
+		<font class="">　Valid values ​​for [time of type long] is, 946684800000 
+		 (2000-01-01T00: 00:00 Z) ~ 32503680000000 (3000-01-01T00 : 00:00 
+		 Z)</font><br />
+		<span style="color: #ff0000;"><font class="" color="#FF0000">In 
+		 addition, as a reserved word can be specified following</font><br />
+		<font class="" color="#FF0000">　SYSUTCDATETIME (): server time</font></span></p></td>
+	</tr>
+</table>
+<h3><span style="font-weight: bold;">リクエストサンプル</span></h3>
+<table class="CodeTable" style="left: 0px; top: 1910px; margin-left: 26pt;" cellspacing="0px" width="1024">
+	<col style="width: 100%;" />
+	<tr>
+		<td><pre class="prettyprint">
+<p class="Code">{</p><p class="Code">&#160;&#160;&quot;Name&quot;: &quot;PetName&quot;,</p><p class="Code">&#160;&#160;&quot;_EntityType.Name&quot;: &quot;Profile&quot;,</p><p class="Code">&#160;&#160;&quot;Type&quot;: &quot;Edm.String&quot;,</p><p class="Code">&#160;&#160;&quot;Nullable&quot;: true,</p><p class="Code">&#160;&#160;&quot;DefaultValue&quot;: null,</p><p class="Code">&#160;&#160;&quot;CollectionKind&quot;: &quot;None&quot;,</p><p class="Code">&#160;&#160;&quot;IsKey&quot;: true,</p><p class="Code">&#160;&#160;&quot;UniqueKey&quot;: null,</p><p class="Code">}</p></pre></td>
+	</tr>
+</table>
+<ul style="list-style: url('../../../../../../../Images/arrow.png');">
+	<li style="margin-left: -20px;"><h2><span style="font-weight: bold;">レスポンス</span></h2></li>
+</ul>
+<h3><span style="font-weight: bold;">ステータスコード</span></h3>
+<p class="Paragraph2">201</p>
+<h3><span style="font-weight: bold;">レスポンスヘッダ</span></h3>
+<div>
+<table class="ParameterTable" style="margin-left: 26pt;" cellspacing="0px" width="96%">
+	<col style="width: 23.686%;" />
+	<col style="width: 30.236%;" />
+	<col style="width: 46.078%;" />
+	<tr>
+		<th style="border-top: Solid 1px #c0c0c0; border-left: solid 1px #9b9b9b; 
+			 border-right: Solid 1px #9b9b9b; border-bottom: Solid 1px #9b9b9b;" 
+			 bgcolor="#353D47"><p class="GreyColumnHeading"><font><font>Header 
+		 name</font></font></p></th>
+		<th style="border-top: Solid 1px #c0c0c0; border-right: Solid 1px #9b9b9b; 
+			 border-bottom: Solid 1px #9b9b9b;" bgcolor="#353D47"><p class="GreyColumnHeading"><font><font>Summary</font></font></p></th>
+		<th style="border-top: Solid 1px #c0c0c0; border-right: Solid 1px #9b9b9b; 
+			 border-bottom: Solid 1px #9b9b9b;" bgcolor="#353D47"><p class="GreyColumnHeading"><font><font>Remarks</font></font></p></th>
+	</tr>
+</table>
+</div>
+<div>
+<table style="margin-left: 26pt;" cellspacing="0" width="96%">
+	<col style="width: 23.686%;" />
+	<col style="width: 30.236%;" />
+	<col style="width: 46.078%;" />
+	<tr>
+		<td style="border-left: Solid 1px #9b9b9b; border-right: Solid 1px #9b9b9b; 
+			 border-bottom: Solid 1px #9b9b9b; vertical-align: top;"><p 
+			 class="TableText"><font><font>X-Dc-Version</font></font></p></td>
+		<td style="border-right: Solid 1px #9b9b9b; border-bottom: Solid 1px #9b9b9b; 
+			 vertical-align: top;"><p class="TableText">Running version 
+		 of the Data Cloud API</p></td>
+		<td style="border-right: Solid 1px #9b9b9b; border-bottom: Solid 1px #9b9b9b; 
+			 vertical-align: top;"><p class="TableText">API version that 
+		 the request is processed</p></td>
+	</tr>
+</table>
+</div>
+<div>
+<table style="margin-left: 26pt;" cellspacing="0" width="96%">
+	<col style="width: 23.686%;" />
+	<col style="width: 30.236%;" />
+	<col style="width: 46.078%;" />
+	<tr>
+		<td style="border-left: Solid 1px #9b9b9b; border-right: Solid 1px #9b9b9b; 
+			 border-bottom: Solid 1px #9b9b9b; vertical-align: top;"><p 
+			 class="TableText"><font><font>Access-Control-Allow-Origin</font></font></p></td>
+		<td style="border-right: Solid 1px #9b9b9b; border-bottom: Solid 1px #9b9b9b; 
+			 vertical-align: top;"><p class="TableText">Cross-domain communication 
+		 authorization header</p></td>
+		<td style="border-right: Solid 1px #9b9b9b; border-bottom: Solid 1px #9b9b9b; 
+			 vertical-align: top;"><p class="TableText">Fixed &quot;*&quot; 
+		 return value</p></td>
+	</tr>
+</table>
+</div>
+<div>
+<table class="ParameterTable" style="margin-left: 26pt;" cellspacing="0px" width="96%">
+	<col style="width: 23.686%;" />
+	<col style="width: 30.236%;" />
+	<col style="width: 46.078%;" />
+	<tr>
+		<td style="border-left: solid 1px #9b9b9b; border-right: Solid 1px #9b9b9b; 
+			 border-bottom: Solid 1px #9b9b9b;"><p class="TableText"><font><font>Content-Type</font></font></p></td>
+		<td style="border-right: Solid 1px #9b9b9b; border-bottom: Solid 1px #9b9b9b;"><p 
+			 class="TableText">Format of the data to be returned</p></td>
+		<td style="border-right: Solid 1px #9b9b9b; border-bottom: Solid 1px #9b9b9b;"><p 
+			 class="TableText">&#160;</p></td>
+	</tr>
+</table>
+</div>
+<div>
+<table style="margin-left: 26pt;" cellspacing="0" width="96%">
+	<col style="width: 23.686%;" />
+	<col style="width: 30.236%;" />
+	<col style="width: 46.078%;" />
+	<tr>
+		<td style="border-left: Solid 1px #9b9b9b; border-right: Solid 1px #9b9b9b; 
+			 border-bottom: Solid 1px #9b9b9b;"><p class="TableText"><font><font>Location</font></font></p></td>
+		<td style="border-right: Solid 1px #9b9b9b; border-bottom: Solid 1px #9b9b9b;"><p 
+			 class="TableText"><font><font>URL to the resource that was 
+		 created</font></font></p></td>
+		<td style="border-right: Solid 1px #9b9b9b; border-bottom: Solid 1px #9b9b9b;"><p 
+			 class="TableText">&#160;</p></td>
+	</tr>
+</table>
+</div>
+<div>
+<table style="margin-left: 26pt;" cellspacing="0" width="96%">
+	<col style="width: 23.686%;" />
+	<col style="width: 30.236%;" />
+	<col style="width: 46.078%;" />
+	<tr>
+		<td style="border-left: Solid 1px #9b9b9b; border-right: Solid 1px #9b9b9b; 
+			 border-bottom: Solid 1px #9b9b9b;"><p class="TableText"><font><font>ETag</font></font></p></td>
+		<td style="border-right: Solid 1px #9b9b9b; border-bottom: Solid 1px #9b9b9b;"><p 
+			 class="TableText"><font><font>Version of the resource information</font></font></p></td>
+		<td style="border-right: Solid 1px #9b9b9b; border-bottom: Solid 1px #9b9b9b;"><p 
+			 class="TableText">&#160;</p></td>
+	</tr>
+</table>
+</div>
+<div>
+<table style="margin-left: 26pt;" cellspacing="0" width="96%">
+	<col style="width: 23.686%;" />
+	<col style="width: 30.236%;" />
+	<col style="width: 46.078%;" />
+	<tr>
+		<td style="border-left: Solid 1px #9b9b9b; border-right: Solid 1px #9b9b9b; 
+			 border-bottom: Solid 1px #9b9b9b;"><p class="TableText"><font><font>DataServiceVersion</font></font></p></td>
+		<td style="border-right: Solid 1px #9b9b9b; border-bottom: Solid 1px #9b9b9b;"><p 
+			 class="TableText"><font><font>Version of OData</font></font></p></td>
+		<td style="border-right: Solid 1px #9b9b9b; border-bottom: Solid 1px #9b9b9b;"><p 
+			 class="TableText">&#160;</p></td>
+	</tr>
+</table>
+</div>
+<h3><span style="font-weight: bold;">レスポンスボディ</span></h3>
+<h4 class="Paragraph2">Common</h4>
+<p class="Paragraph2">Response, the JSON object is defined object (sub-objects) 
+ as well as the corresponding value of the type, (name) and key are as 
+ follows.</p>
+<div>
+<p class="Paragraph2" style="box-sizing: border-box; font-size: 10.0pt; 
+	 line-height: 115%; font-family: Arial, sans-serif; mso-fareast-font-family: 'Times New Roman'; 
+	 color: #353535;"><span style="mso-ansi-language: EN-US; mso-fareast-language: JA; 
+							 mso-bidi-language: AR-SA;">In response we 
+ get JSON Object, the JSON object is defined object (sub-objects)&#160;as 
+ well as the corresponding value of the type, (name) and key are as follows 
+ </span></p>
+<table style="margin-left: 26pt;" cellspacing="0" width="96%">
+	<col style="width: 16.028%;" />
+	<col style="width: 19.908%;" />
+	<col style="width: 22.636%;" />
+	<col style="width: 41.428%;" />
+	<tr>
+		<th style="border: Solid 1px #9b9b9b;" bgcolor="#353D47"><p class="GreyColumnHeading">Object</p></th>
+		<th style="border-top: Solid 1px #9b9b9b; border-right: Solid 1px #9b9b9b; 
+			 border-bottom: Solid 1px #9b9b9b;" bgcolor="#353D47"><p class="GreyColumnHeading">Name(Key)</p></th>
+		<th style="border-top: Solid 1px #9b9b9b; border-right: Solid 1px #9b9b9b; 
+			 border-bottom: Solid 1px #9b9b9b;" bgcolor="#353D47"><p class="GreyColumnHeading">Type</p></th>
+		<th style="border-top: Solid 1px #9b9b9b; border-right: Solid 1px #9b9b9b; 
+			 border-bottom: Solid 1px #9b9b9b;" bgcolor="#353D47"><p class="GreyColumnHeading">Value</p></th>
+	</tr>
+	<tr>
+		<td style="border-left: Solid 1px #9b9b9b; border-right: Solid 1px #9b9b9b; 
+			 border-bottom: Solid 1px #9b9b9b; vertical-align: top;"><p 
+			 class="TableText">Root</p></td>
+		<td style="border-right: Solid 1px #9b9b9b; border-bottom: Solid 1px #9b9b9b; 
+			 vertical-align: top;"><p class="TableText">d</p></td>
+		<td style="border-right: Solid 1px #9b9b9b; border-bottom: Solid 1px #9b9b9b; 
+			 vertical-align: top;"><p class="TableText">object</p></td>
+		<td style="border-right: Solid 1px #9b9b9b; border-bottom: Solid 1px #9b9b9b; 
+			 vertical-align: top;"><p class="TableText">Object {1}</p></td>
+	</tr>
+	<tr>
+		<td style="border-left: Solid 1px #9b9b9b; border-right: Solid 1px #9b9b9b; 
+			 border-bottom: Solid 1px #9b9b9b; vertical-align: top;"><p 
+			 class="TableText">{1}</p></td>
+		<td style="border-right: Solid 1px #9b9b9b; border-bottom: Solid 1px #9b9b9b; 
+			 vertical-align: top;"><p class="TableText">__count</p></td>
+		<td style="border-right: Solid 1px #9b9b9b; border-bottom: Solid 1px #9b9b9b; 
+			 vertical-align: top;"><p class="TableText">string</p></td>
+		<td style="border-right: Solid 1px #9b9b9b; border-bottom: Solid 1px #9b9b9b; 
+			 vertical-align: top;"><p class="TableText">Get number of results 
+		 in $inlinecount query</p></td>
+	</tr>
+	<tr>
+		<td style="border-left: Solid 1px #9b9b9b; border-right: Solid 1px #9b9b9b; 
+			 border-bottom: Solid 1px #9b9b9b; vertical-align: top;"><p 
+			 class="TableText">{1}</p></td>
+		<td style="border-right: Solid 1px #9b9b9b; border-bottom: Solid 1px #9b9b9b; 
+			 vertical-align: top;"><p class="TableText">results</p></td>
+		<td style="border-right: Solid 1px #9b9b9b; border-bottom: Solid 1px #9b9b9b; 
+			 vertical-align: top;"><p class="TableText">array</p></td>
+		<td style="border-right: Solid 1px #9b9b9b; border-bottom: Solid 1px #9b9b9b; 
+			 vertical-align: top;"><p class="TableText">Array object {2}</p></td>
+	</tr>
+	<tr>
+		<td style="border-left: Solid 1px #9b9b9b; border-right: Solid 1px #9b9b9b; 
+			 border-bottom: Solid 1px #9b9b9b; vertical-align: top;"><p 
+			 class="TableText">{2}</p></td>
+		<td style="border-right: Solid 1px #9b9b9b; border-bottom: Solid 1px #9b9b9b; 
+			 vertical-align: top;"><p class="TableText">__published</p></td>
+		<td style="border-right: Solid 1px #9b9b9b; border-bottom: Solid 1px #9b9b9b; 
+			 vertical-align: top;"><p class="TableText">string</p></td>
+		<td style="border-right: Solid 1px #9b9b9b; border-bottom: Solid 1px #9b9b9b; 
+			 vertical-align: top;"><p class="TableText">Creation date (UNIX 
+		 time)</p></td>
+	</tr>
+	<tr>
+		<td style="border-left: Solid 1px #9b9b9b; border-right: Solid 1px #9b9b9b; 
+			 border-bottom: Solid 1px #9b9b9b; vertical-align: top;"><p 
+			 class="TableText">{2}</p></td>
+		<td style="border-right: Solid 1px #9b9b9b; border-bottom: Solid 1px #9b9b9b; 
+			 vertical-align: top;"><p class="TableText">__updated</p></td>
+		<td style="border-right: Solid 1px #9b9b9b; border-bottom: Solid 1px #9b9b9b; 
+			 vertical-align: top;"><p class="TableText">string</p></td>
+		<td style="border-right: Solid 1px #9b9b9b; border-bottom: Solid 1px #9b9b9b; 
+			 vertical-align: top;"><p class="TableText">Update date (UNIX 
+		 time)</p></td>
+	</tr>
+	<tr>
+		<td style="border-left: Solid 1px #9b9b9b; border-right: Solid 1px #9b9b9b; 
+			 border-bottom: Solid 1px #9b9b9b; vertical-align: top;"><p 
+			 class="TableText">{2}</p></td>
+		<td style="border-right: Solid 1px #9b9b9b; border-bottom: Solid 1px #9b9b9b; 
+			 vertical-align: top;"><p class="TableText">__metadata</p></td>
+		<td style="border-right: Solid 1px #9b9b9b; border-bottom: Solid 1px #9b9b9b; 
+			 vertical-align: top;"><p class="TableText">object</p></td>
+		<td style="border-right: Solid 1px #9b9b9b; border-bottom: Solid 1px #9b9b9b; 
+			 vertical-align: top;"><p class="TableText">Object {3}</p></td>
+	</tr>
+	<tr>
+		<td style="border-left: Solid 1px #9b9b9b; border-right: Solid 1px #9b9b9b; 
+			 border-bottom: Solid 1px #9b9b9b; vertical-align: top;"><p 
+			 class="TableText">{3}</p></td>
+		<td style="border-right: Solid 1px #9b9b9b; border-bottom: Solid 1px #9b9b9b; 
+			 vertical-align: top;"><p class="TableText">etag</p></td>
+		<td style="border-right: Solid 1px #9b9b9b; border-bottom: Solid 1px #9b9b9b; 
+			 vertical-align: top;"><p class="TableText">string</p></td>
+		<td style="border-right: Solid 1px #9b9b9b; border-bottom: Solid 1px #9b9b9b; 
+			 vertical-align: top;"><p class="TableText">ETag value</p></td>
+	</tr>
+	<tr>
+		<td style="border-left: Solid 1px #9b9b9b; border-right: Solid 1px #9b9b9b; 
+			 border-bottom: Solid 1px #9b9b9b; vertical-align: top;"><p 
+			 class="TableText">{3}</p></td>
+		<td style="border-right: Solid 1px #9b9b9b; border-bottom: Solid 1px #9b9b9b; 
+			 vertical-align: top;"><p class="TableText">uri</p></td>
+		<td style="border-right: Solid 1px #9b9b9b; border-bottom: Solid 1px #9b9b9b; 
+			 vertical-align: top;"><p class="TableText">string</p></td>
+		<td style="border-right: Solid 1px #9b9b9b; border-bottom: Solid 1px #9b9b9b; 
+			 vertical-align: top;"><p class="TableText">URL to the resource 
+		 that you created</p></td>
+	</tr>
+</table>
+</div>
+<h4><font class="goog-text-highlight"><span class="goog-text-highlight" 
+											 style="box-sizing: border-box;">Property-</span><span 
+	 style="box-sizing: border-box;">specific</span></font></h4>
+<div>
+<table style="margin-left: 26pt;" cellspacing="0" width="96%">
+	<col style="width: 16.337%;" />
+	<col style="width: 20.611%;" />
+	<col style="width: 22.785%;" />
+	<col style="width: 40.801%;" />
+	<tr>
+		<th style="border: Solid 1px #9b9b9b;" bgcolor="#353D47"><p class="GreyColumnHeading">Object</p></th>
+		<th style="border-top: Solid 1px #9b9b9b; border-right: Solid 1px #9b9b9b; 
+			 border-bottom: Solid 1px #9b9b9b;" bgcolor="#353D47"><p class="GreyColumnHeading">Name(Key)</p></th>
+		<th style="border-top: Solid 1px #9b9b9b; border-right: Solid 1px #9b9b9b; 
+			 border-bottom: Solid 1px #9b9b9b;" bgcolor="#353D47"><p class="GreyColumnHeading">Type</p></th>
+		<th style="border-top: Solid 1px #9b9b9b; border-right: Solid 1px #9b9b9b; 
+			 border-bottom: Solid 1px #9b9b9b;" bgcolor="#353D47"><p class="GreyColumnHeading">Value</p></th>
+	</tr>
+	<tr>
+		<td style="border-left: Solid 1px #9b9b9b; border-right: Solid 1px #9b9b9b; 
+			 border-bottom: Solid 1px #9b9b9b;"><p class="TableText">{3}</p></td>
+		<td style="border-right: Solid 1px #9b9b9b; border-bottom: Solid 1px #9b9b9b;"><p 
+			 class="TableText">type</p></td>
+		<td style="border-right: Solid 1px #9b9b9b; border-bottom: Solid 1px #9b9b9b;"><p 
+			 class="TableText">string</p></td>
+		<td style="border-right: Solid 1px #9b9b9b; border-bottom: Solid 1px #9b9b9b;"><p 
+			 class="TableText">ODataSvcSchema.Property</p></td>
+	</tr>
+	<tr>
+		<td style="border-left: Solid 1px #9b9b9b; border-right: Solid 1px #9b9b9b; 
+			 border-bottom: Solid 1px #9b9b9b;"><p class="TableText">{2}</p></td>
+		<td style="border-right: Solid 1px #9b9b9b; border-bottom: Solid 1px #9b9b9b;"><p 
+			 class="TableText">Name</p></td>
+		<td style="border-right: Solid 1px #9b9b9b; border-bottom: Solid 1px #9b9b9b;"><p 
+			 class="TableText"><font><font>string</font></font></p></td>
+		<td style="border-right: Solid 1px #9b9b9b; border-bottom: Solid 1px #9b9b9b;"><p 
+			 class="TableText"><span style="-webkit-text-stroke-width: 0px;">Property 
+		 name</span></p></td>
+	</tr>
+	<tr>
+		<td style="border-left: Solid 1px #9b9b9b; border-right: Solid 1px #9b9b9b; 
+			 border-bottom: Solid 1px #9b9b9b;"><p class="TableText">{2}</p></td>
+		<td style="border-right: Solid 1px #9b9b9b; border-bottom: Solid 1px #9b9b9b;"><p 
+			 class="TableText">_EntityType.Name</p></td>
+		<td style="border-right: Solid 1px #9b9b9b; border-bottom: Solid 1px #9b9b9b;"><p 
+			 class="TableText">string</p></td>
+		<td style="border-right: Solid 1px #9b9b9b; border-bottom: Solid 1px #9b9b9b;"><p 
+			 class="TableText">EntityType name preceded by the string </p></td>
+	</tr>
+	<tr>
+		<td style="border-left: Solid 1px #9b9b9b; border-right: Solid 1px #9b9b9b; 
+			 border-bottom: Solid 1px #9b9b9b;"><p class="TableText">{2}</p></td>
+		<td style="border-right: Solid 1px #9b9b9b; border-bottom: Solid 1px #9b9b9b;"><p 
+			 class="TableText">Type</p></td>
+		<td style="border-right: Solid 1px #9b9b9b; border-bottom: Solid 1px #9b9b9b;"><p 
+			 class="TableText">string</p></td>
+		<td style="border-right: Solid 1px #9b9b9b; border-bottom: Solid 1px #9b9b9b;"><p 
+			 class="TableText">Type definition</p></td>
+	</tr>
+	<tr>
+		<td style="border-left: Solid 1px #9b9b9b; border-right: Solid 1px #9b9b9b; 
+			 border-bottom: Solid 1px #9b9b9b;"><p class="TableText">{2}</p></td>
+		<td style="border-right: Solid 1px #9b9b9b; border-bottom: Solid 1px #9b9b9b;"><p 
+			 class="TableText">Nullable</p></td>
+		<td style="border-right: Solid 1px #9b9b9b; border-bottom: Solid 1px #9b9b9b;"><p 
+			 class="TableText">boolean</p></td>
+		<td style="border-right: Solid 1px #9b9b9b; border-bottom: Solid 1px #9b9b9b;"><p 
+			 class="TableText">Null value allowed </p></td>
+	</tr>
+	<tr>
+		<td style="border-left: Solid 1px #9b9b9b; border-right: Solid 1px #9b9b9b; 
+			 border-bottom: Solid 1px #9b9b9b;"><p class="TableText">{2}</p></td>
+		<td style="border-right: Solid 1px #9b9b9b; border-bottom: Solid 1px #9b9b9b;"><p 
+			 class="TableText">IsDeclared</p></td>
+		<td style="border-right: Solid 1px #9b9b9b; border-bottom: Solid 1px #9b9b9b;"><p 
+			 class="TableText">boolean</p></td>
+		<td style="border-right: Solid 1px #9b9b9b; border-bottom: Solid 1px #9b9b9b;"><p 
+			 class="TableText" style="color: #ff0000;">Declared Kano authenticity</p></td>
+	</tr>
+	<tr>
+		<td style="border-left: Solid 1px #9b9b9b; border-right: Solid 1px #9b9b9b; 
+			 border-bottom: Solid 1px #9b9b9b;"><p class="TableText">{2}</p></td>
+		<td style="border-right: Solid 1px #9b9b9b; border-bottom: Solid 1px #9b9b9b;"><p 
+			 class="TableText">DefaultValue</p></td>
+		<td style="border-right: Solid 1px #9b9b9b; border-bottom: Solid 1px #9b9b9b;"><p 
+			 class="TableText">string</p></td>
+		<td style="border-right: Solid 1px #9b9b9b; border-bottom: Solid 1px #9b9b9b;"><p 
+			 class="TableText">Default value</p></td>
+	</tr>
+	<tr>
+		<td style="border-left: Solid 1px #9b9b9b; border-right: Solid 1px #9b9b9b; 
+			 border-bottom: Solid 1px #9b9b9b;"><p class="TableText">{2}</p></td>
+		<td style="border-right: Solid 1px #9b9b9b; border-bottom: Solid 1px #9b9b9b;"><p 
+			 class="TableText">CollectionKind</p></td>
+		<td style="border-right: Solid 1px #9b9b9b; border-bottom: Solid 1px #9b9b9b;"><p 
+			 class="TableText">string</p></td>
+		<td style="border-right: Solid 1px #9b9b9b; border-bottom: Solid 1px #9b9b9b;"><p 
+			 class="TableText">Array type</p></td>
+	</tr>
+	<tr>
+		<td style="border-left: Solid 1px #9b9b9b; border-right: Solid 1px #9b9b9b; 
+			 border-bottom: Solid 1px #9b9b9b;"><p class="TableText">{2}</p></td>
+		<td style="border-right: Solid 1px #9b9b9b; border-bottom: Solid 1px #9b9b9b;"><p 
+			 class="TableText">IsKey</p></td>
+		<td style="border-right: Solid 1px #9b9b9b; border-bottom: Solid 1px #9b9b9b;"><p 
+			 class="TableText">boolean</p></td>
+		<td style="border-right: Solid 1px #9b9b9b; border-bottom: Solid 1px #9b9b9b;"><p 
+			 class="TableText">Primary key setting</p></td>
+	</tr>
+	<tr>
+		<td style="border-left: Solid 1px #9b9b9b; border-right: Solid 1px #9b9b9b; 
+			 border-bottom: Solid 1px #9b9b9b;"><p class="TableText">{2}</p></td>
+		<td style="border-right: Solid 1px #9b9b9b; border-bottom: Solid 1px #9b9b9b;"><p 
+			 class="TableText">UniqueKey</p></td>
+		<td style="border-right: Solid 1px #9b9b9b; border-bottom: Solid 1px #9b9b9b;"><p 
+			 class="TableText">string</p></td>
+		<td style="border-right: Solid 1px #9b9b9b; border-bottom: Solid 1px #9b9b9b;"><p 
+			 class="TableText">Unique key settings</p></td>
+	</tr>
+</table>
+</div>
+<h3><span style="font-weight: bold; font-size: 10pt;">エラーメッセージ一覧</span></h3>
+<p class="Paragraph2">Refer to the <a href="../../../../../Appendix/ErrorMessages.htm">Error 
+ Messages</a>.</p>
+<div>
+<table style="margin-left: 26pt;" cellspacing="0" width="96%">
+	<col style="width: 25%;" />
+	<col style="width: 25%;" />
+	<col style="width: 25%;" />
+	<col style="width: 25%;" />
+	<tr>
+		<th style="border: Solid 1px #9b9b9b;" bgcolor="#353D47"><p class="GreyColumnHeading"><span style="font-size: 10pt; font-weight: bold;">コード</span></p></th>
+		<th style="border-top: Solid 1px #9b9b9b; border-right: Solid 1px #9b9b9b; 
+			 border-bottom: Solid 1px #9b9b9b;" bgcolor="#353D47"><p class="GreyColumnHeading">Message</p></th>
+		<th style="border-top: Solid 1px #9b9b9b; border-right: Solid 1px #9b9b9b; 
+			 border-bottom: Solid 1px #9b9b9b;" bgcolor="#353D47"><p class="GreyColumnHeading"><span style="font-weight: bold; font-size: 10pt;">概要</span></p></th>
+		<th style="border-top: Solid 1px #9b9b9b; border-right: Solid 1px #9b9b9b; 
+			 border-bottom: Solid 1px #9b9b9b;" bgcolor="#353D47"><p class="GreyColumnHeading">備考</p></th>
+	</tr>
+</table>
+</div>
+<div>
+<table class="ParameterTable" style="margin-left: 26pt;" cellspacing="0px" width="96%">
+	<col style="width: 25%;" />
+	<col style="width: 25%;" />
+	<col style="width: 25%;" />
+	<col style="width: 25%;" />
+	<tr>
+		<td style="border-left: Solid 1px #9b9b9b; border-right: Solid 1px #9b9b9b; 
+			 border-bottom: Solid 1px #9b9b9b; vertical-align: top;"><p 
+			 class="TableText">400</p></td>
+		<td style="border-right: Solid 1px #9b9b9b; border-bottom: Solid 1px #9b9b9b; 
+			 vertical-align: top;"><p class="TableText">Bad Request </p></td>
+		<td style="border-right: Solid 1px #9b9b9b; border-bottom: Solid 1px #9b9b9b; 
+			 vertical-align: top;"><p class="TableText">Incorrect format 
+		 of the request header</p>
+		<p class="TableText">Invalid request query</p></td>
+		<td style="border-right: Solid 1px #9b9b9b; border-bottom: Solid 1px #9b9b9b; 
+			 vertical-align: top;"><p class="TableText">&#160;</p></td>
+	</tr>
+</table>
+</div>
+<div>
+<table class="ParameterTable" style="margin-left: 26pt;" cellspacing="0px" width="96%">
+	<col style="width: 25%;" />
+	<col style="width: 25%;" />
+	<col style="width: 25%;" />
+	<col style="width: 25%;" />
+	<tr>
+		<td style="border-left: Solid 1px #9b9b9b; border-right: Solid 1px #9b9b9b; 
+			 border-bottom: Solid 1px #9b9b9b; vertical-align: top;"><p 
+			 class="TableText">401</p></td>
+		<td style="border-right: Solid 1px #9b9b9b; border-bottom: Solid 1px #9b9b9b; 
+			 vertical-align: top;"><p class="TableText">Unauthorized </p></td>
+		<td style="border-right: Solid 1px #9b9b9b; border-bottom: Solid 1px #9b9b9b; 
+			 vertical-align: top;"><p class="TableText">Authentication 
+		 token is invalid </p></td>
+		<td style="border-right: Solid 1px #9b9b9b; border-bottom: Solid 1px #9b9b9b; 
+			 vertical-align: top;"><p class="TableText">&#160;</p></td>
+	</tr>
+</table>
+</div>
+<div>
+<table class="ParameterTable" style="margin-left: 26pt;" cellspacing="0px" width="96%">
+	<col style="width: 25%;" />
+	<col style="width: 25%;" />
+	<col style="width: 25%;" />
+	<col style="width: 25%;" />
+	<tr>
+		<td style="border-left: Solid 1px #9b9b9b; border-right: Solid 1px #9b9b9b; 
+			 border-bottom: Solid 1px #9b9b9b; vertical-align: top;"><p 
+			 class="TableText">403</p></td>
+		<td style="border-right: Solid 1px #9b9b9b; border-bottom: Solid 1px #9b9b9b; 
+			 vertical-align: top;"><p class="TableText">Forbidden </p></td>
+		<td style="border-right: Solid 1px #9b9b9b; border-bottom: Solid 1px #9b9b9b; 
+			 vertical-align: top;"><p class="TableText">If the access rights 
+		 are insufficient </p></td>
+		<td style="border-right: Solid 1px #9b9b9b; border-bottom: Solid 1px #9b9b9b; 
+			 vertical-align: top;"><p class="TableText">&#160;</p></td>
+	</tr>
+</table>
+</div>
+<div>
+<table class="ParameterTable" style="margin-left: 26pt;" cellspacing="0px" width="96%">
+	<col style="width: 25%;" />
+	<col style="width: 25%;" />
+	<col style="width: 25%;" />
+	<col style="width: 25%;" />
+	<tr>
+		<td style="border-left: Solid 1px #9b9b9b; border-right: Solid 1px #9b9b9b; 
+			 border-bottom: Solid 1px #9b9b9b; vertical-align: top;"><p 
+			 class="TableText">404</p></td>
+		<td style="border-right: Solid 1px #9b9b9b; border-bottom: Solid 1px #9b9b9b; 
+			 vertical-align: top;"><p class="TableText">Not Found </p></td>
+		<td style="border-right: Solid 1px #9b9b9b; border-bottom: Solid 1px #9b9b9b; 
+			 vertical-align: top;"><p class="TableText">Specifies the resource 
+		 that does not exist </p></td>
+		<td style="border-right: Solid 1px #9b9b9b; border-bottom: Solid 1px #9b9b9b; 
+			 vertical-align: top;"><p class="TableText">&#160;</p></td>
+	</tr>
+</table>
+</div>
+<div>
+<table class="ParameterTable" style="margin-left: 26pt;" cellspacing="0px" width="96%">
+	<col style="width: 25%;" />
+	<col style="width: 25%;" />
+	<col style="width: 25%;" />
+	<col style="width: 25%;" />
+	<tr>
+		<td style="border-left: Solid 1px #9b9b9b; border-right: Solid 1px #9b9b9b; 
+			 border-bottom: Solid 1px #9b9b9b; vertical-align: top;"><p 
+			 class="TableText">405</p></td>
+		<td style="border-right: Solid 1px #9b9b9b; border-bottom: Solid 1px #9b9b9b; 
+			 vertical-align: top;"><p class="TableText">Method Not Allowed 
+		 </p></td>
+		<td style="border-right: Solid 1px #9b9b9b; border-bottom: Solid 1px #9b9b9b; 
+			 vertical-align: top;"><p class="TableText">Specifies 
+		 that the request method is not allowed</span></p></td>
+		<td style="border-right: Solid 1px #9b9b9b; border-bottom: Solid 1px #9b9b9b; 
+			 vertical-align: top;"><p class="TableText">&#160;</p></td>
+	</tr>
+</table>
+</div>
+<div>
+<table class="ParameterTable" style="margin-left: 26pt;" cellspacing="0px" width="96%">
+	<col style="width: 25%;" />
+	<col style="width: 25%;" />
+	<col style="width: 25%;" />
+	<col style="width: 25%;" />
+	<tr>
+		<td style="border-left: Solid 1px #9b9b9b; border-right: Solid 1px #9b9b9b; 
+			 border-bottom: Solid 1px #9b9b9b; vertical-align: top;"><p 
+			 class="TableText">409</p></td>
+		<td style="border-right: Solid 1px #9b9b9b; border-bottom: Solid 1px #9b9b9b; 
+			 vertical-align: top;"><p class="TableText">Conflict</p></td>
+		<td style="border-right: Solid 1px #9b9b9b; border-bottom: Solid 1px #9b9b9b; 
+			 vertical-align: top;"><p class="TableText">If the same &quot;Name&quot; 
+		 is present in the cell</p></td>
+		<td style="border-right: Solid 1px #9b9b9b; border-bottom: Solid 1px #9b9b9b; 
+			 vertical-align: top;"><p class="TableText">&#160;</p></td>
+	</tr>
+</table>
+</div>
+<div>
+<table class="ParameterTable" style="margin-left: 26pt;" cellspacing="0px" width="96%">
+	<col style="width: 25%;" />
+	<col style="width: 25%;" />
+	<col style="width: 25%;" />
+	<col style="width: 25%;" />
+	<tr>
+		<td style="border-left: Solid 1px #9b9b9b; border-right: Solid 1px #9b9b9b; 
+			 border-bottom: Solid 1px #9b9b9b; vertical-align: top;"><p 
+			 class="TableText">412</p></td>
+		<td style="border-right: Solid 1px #9b9b9b; border-bottom: Solid 1px #9b9b9b; 
+			 vertical-align: top;"><p class="TableText">Precondition Failed</p></td>
+		<td style="border-right: Solid 1px #9b9b9b; border-bottom: Solid 1px #9b9b9b; 
+			 vertical-align: top;"><p class="TableText">Specifies the version 
+		 that does not exist</p></td>
+		<td style="border-right: Solid 1px #9b9b9b; border-bottom: Solid 1px #9b9b9b; 
+			 vertical-align: top;"><p class="TableText">&#160;</p></td>
+	</tr>
+</table>
+</div>
+<h3><span style="font-weight: bold;">レスポンスサンプル</span></h3>
+<table class="CodeTable" style="margin-left: 26pt;" cellspacing="0px" width="96%">
+	<col style="width: 100%;" />
+	<tr>
+		<td><pre class="prettyprint">
+<p class="Code">{</p><p class="Code">&#160;&#160;&quot;d&quot;: {</p><p class="Code">&#160;&#160;&#160;&#160;&quot;results&quot;: {</p><p class="Code">&#160;&#160;&#160;&#160;&#160;&#160;&quot;_EntityType&quot;: {</p><p class="Code">&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&quot;__deferred&quot;: {</p><p class="Code">&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&quot;uri&quot;: &quot;https://fqdn/cellname/boxname/odatacolname/$metadata/Property\</p><p class="Code">&#160;(Name='PetName',_EntityType.Name='Profile')/_EntityType&quot; </p><p class="Code">&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;}</p><p class="Code">&#160;&#160;&#160;&#160;&#160;&#160;},</p><p class="Code">&#160;&#160;&#160;&#160;&#160;&#160;&quot;Name&quot;: &quot;PetName&quot;,</p><p class="Code">&#160;&#160;&#160;&#160;&#160;&#160;&quot;_EntityType.Name&quot;: &quot;Profile&quot;,</p><p class="Code">&#160;&#160;&#160;&#160;&#160;&#160;&quot;Type&quot;: &quot;Edm.String&quot;,</p><p class="Code">&#160;&#160;&#160;&#160;&#160;&#160;&quot;Nullable&quot;: true,</p><p class="Code">&#160;&#160;&#160;&#160;&#160;&#160;&quot;DefaultValue&quot;: null,</p><p class="Code">&#160;&#160;&#160;&#160;&#160;&#160;&quot;CollectionKind&quot;: &quot;None&quot;,</p><p class="Code">&#160;&#160;&#160;&#160;&#160;&#160;&quot;IsKey&quot;: true,</p><p class="Code">&#160;&#160;&#160;&#160;&#160;&#160;&quot;UniqueKey&quot;: null,</p><p class="Code">&#160;&#160;&#160;&#160;&#160;&#160;&quot;__published&quot;: &quot;/Date(1349434504818)/&quot;,</p><p class="Code">&#160;&#160;&#160;&#160;&#160;&#160;&quot;__updated&quot;: &quot;/Date(1349434504818)/&quot;,</p><p class="Code">&#160;&#160;&#160;&#160;&#160;&#160;&quot;__metadata&quot;: {</p><p class="Code">&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&quot;etag&quot;: &quot;1-1349434504818&quot;,</p><p class="Code">&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&quot;type&quot;: &quot;ODataSvcSchema.Property&quot;,</p><p class="Code">&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&quot;uri&quot;: &quot;https://fqdn/cellname/boxname/odatacolname/$metadata/Property\</p><p class="Code">(Name='PetName',_EntityType.Name='Profile')&quot; </p><p class="Code">&#160;&#160;&#160;&#160;&#160;&#160;}</p><p class="Code">&#160;&#160;&#160;&#160;}</p><p class="Code">&#160;&#160;}</p><p class="Code">}</p></pre></td>
+	</tr>
+</table>
+<ul style="list-style: url('../../../../../../../Images/arrow.png');">
+	<li style="margin-left: -20px;"><h2><span style="font-weight: bold;">CURLサンプル</span></h2></li>
+</ul>
+<h3>CURL Command</h3>
+<table class="CodeTable" style="margin-left: 26pt;" cellspacing="0px" width="96%">
+	<col style="width: 100%;" />
+	<tr>
+		<td><pre class="prettyprint">
+<p class="Code">curl 'https://fqdn/cellname/boxname/odatacolname/$metadata/Property' -X POST -v -i -k -s　\</p><p class="Code">-d '{</p><p class="Code">&#160;&#160;&quot;Name&quot;: &quot;PetName&quot;,</p><p class="Code">&#160;&#160;&quot;_EntityType.Name&quot;: &quot;Profile&quot;,</p><p class="Code">&#160;&#160;&quot;Type&quot;: &quot;Edm.String&quot;,</p><p class="Code">&#160;&#160;&quot;Nullable&quot;: true,</p><p class="Code">&#160;&#160;&quot;DefaultValue&quot;: null,</p><p class="Code">&#160;&#160;&quot;CollectionKind&quot;: &quot;None&quot;,</p><p class="Code">&#160;&#160;&quot;IsKey&quot;: true,</p><p class="Code">&#160;&#160;&quot;UniqueKey&quot;: null</p><p class="Code">}' -H 'Authorization:Bearer auth_token'</p></pre></td>
+	</tr>
+</table>
+<p class="Paragraph">&#160;</p>
+<p class="Paragraph">&#160;</p>
+<div style="border-top: Solid 4px #0080c0; width: 100%; 
+					 position: relative; background-color: #374049; padding-top: 7px; 
+					 padding-bottom: 7px; padding-right: 5px;" id="footer">
+	<p style="font-size: 8pt; color: #ffffff; text-align: right;"><span 
+	 style="mso-ascii-theme-font: minor-latin; mso-fareast-font-family: Calibri; 
+	 mso-fareast-theme-font: minor-latin; mso-hansi-theme-font: minor-latin; 
+	 mso-bidi-font-family: 'Times New Roman'; mso-bidi-theme-font: minor-bidi; 
+	 mso-ansi-language: EN-US; mso-fareast-language: EN-US; mso-bidi-language: AR-SA; 
+	 font-family: Arial, sans-serif;">All Rights Reserved,Copyright (C) 
+	 FUJITSU LIMITED 1998-2013</span> </p>
+</div>
+</body>
+</html>

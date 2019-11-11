@@ -1,0 +1,382 @@
+<!doctype html>
+<html lang="en">
+<!--
+
+Page    : index / MobApp
+Version : 1.0
+Author  : Colorlib
+URI     : https://colorlib.com
+
+ -->
+
+<head>
+    <title>Personium | Open Source PDS Software.</title>
+    <!-- Required meta tags -->
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+    <meta name="description" content="Mobland - Mobile App Landing Page Template">
+    <meta name="keywords" content="HTML5, bootstrap, mobile, app, landing, ios, android, responsive">
+    <link rel="icon" href="../../../images/favicon.ico" type="image/x-icon" />
+
+    <!-- Font -->
+    <link rel="dns-prefetch" href="//fonts.googleapis.com">
+    <link href="https://fonts.googleapis.com/css?family=Rubik:300,400,500" rel="stylesheet">
+
+    <!-- Bootstrap CSS -->
+    <link rel="stylesheet" href="../../../css/bootstrap.min.css">
+    <!-- Themify Icons -->
+    <link rel="stylesheet" href="../../../css/themify-icons.css">
+    <!-- Owl carousel -->
+    <link rel="stylesheet" href="../../../css/owl.carousel.min.css">
+    <!-- Main css -->
+    <link href="../../../css/style.css" rel="stylesheet">
+    <!--Google Material icon-->
+    <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet" />
+</head>
+
+<body data-spy="scroll" data-target="#navbar" data-offset="30">
+
+    <!-- Nav Menu -->
+
+    <div class="nav-menu fixed-top">
+        <div class="container">
+            <div class="row">
+                <div class="col-md-12">
+                    <nav class="navbar navbar-dark navbar-expand-lg">
+                        <a class="navbar-brand" href="../../../index.html">
+
+
+                            <img id="header-logo" class="navbar-nav-svg material-icons md-dark pmd-sm pmd-svg-icon" src="../../../images/logo-quantify-light.png" title="personium" alt="personium" width="225px">
+
+                        </a>
+
+                        <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbar" aria-controls="navbar" aria-expanded="false"
+                            aria-label="Toggle navigation">
+                            <span class="navbar-toggler-icon"></span>
+                        </button>
+                        <div class="collapse navbar-collapse" id="navbar">
+                            <ul class="navbar-nav ml-auto">
+
+                                <li class="nav-item">
+                                    <a href="https://personium.io/docs/ja/" target="_blank" class="btn btn-outline-light my-3 my-sm-0 ml-lg-3">Document</a>
+                                </li>
+
+                                <li class="nav-item dropdown">
+                                    <a class="nav-item nav-link dropdown-toggle mr-md-2" href="#" id="bd-versions" data-toggle="dropdown" aria-haspopup="true"
+                                        aria-expanded="false">
+                                        Languages</a>
+                                    <div class="dropdown-menu dropdown-menu-right" aria-labelledby="bd-versions">
+                                        <a class="dropdown-item active" href="index.html">English</a>
+                                        <a class="dropdown-item" href="../../../en/demo/pcui/index.html">Japanese</a>
+                                    </div>
+                                </li>
+                            </ul>
+
+
+                        </div>
+
+                    </nav>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <div class="bg-gradient a_header py-5" id="contact">
+        <div class="container">
+
+            <div class="center-block text-center">
+
+
+
+            </div>
+
+
+        </div>
+
+    </div>
+
+
+    <div class="section" id="pcui">
+
+        <div class="container">
+
+            <div id="home" class="section-title">
+                <small>Demo</small>
+                <h3>PCUI Manual</h3>
+            </div>
+
+            <div class="container">
+
+                <div class="t-member">
+
+                    <img src="../../../images/pcui_demo2.gif" style="width:100%;border:solid 3px #434343" title="pcuidemo" alt="pcuidemo">
+
+                </div>
+
+                <h3>Installation method</h3>
+
+                <h5>Operating environment</h5>
+
+                <p>The following environment is necessary to execute pcui.
+                    <br />・Ruby 2.X or higher
+                    <br />・rest-client
+                    <br />・rb-readline
+                    <br />
+                    <br />Please install the library with the gem command etc.
+                    <br />(Example) gem install rest-client</p>
+
+                <h5>Pcui installation</h5>
+
+                <p>Please get pcui from GitHub (https://github.com/fujitsu-pio/pcui) and place it in an arbitrary folder.Pcui
+                    works only with \"pcui.rb \".</p>
+
+                <h5>Run pcui</h5>
+
+                <p>Please execute like
+                    <br /> ・ ruby pcui.rb
+                    <br /> on the directory where \"pcui.rb\" resides.
+                </p>
+
+                <h5>Login to Cell</h5>
+
+                <p>When starting pcui for the first time, you need to enter the following four pieces of information.</p>
+                    <br>&nbsp;&nbsp;1)In this session, choosing whether to keep the log
+                    <br />&nbsp;&nbsp;2)URL of cell to login
+                    <br />&nbsp;&nbsp;3)Login account
+                    <br />&nbsp;&nbsp;4)Login password
+
+                    <p>Commands available in Cell mode</p>
+
+                    <p>Immediately after logging in with pcui, the user is at the top level of Cell. The commands available in Cell mode are as follows.</p>
+
+                    <div class="table-responsive">
+                        <table class="table table-bordered pcuitable">
+                            <tbody>
+                                <tr>
+                                    <td>username</td>
+                                    <td data-i18n="pcui-description4-1">Display the login account for this session.</td>
+                                </tr>
+                                <tr>
+                                    <td>token</td>
+                                    <td data-i18n="pcui-description4-2">Display the token for this session.</td>
+                                </tr>
+                                <tr>
+                                    <td>pwd</td>
+                                    <td data-i18n="pcui-description4-3">Display the current work location in URL format.</td>
+                                </tr>
+                                <tr>
+                                    <td>ls</td>
+                                    <td data-i18n="pcui-description4-4">Display assets in detailed format.</td>
+                                </tr>
+                                <tr>
+                                    <td>sl</td>
+                                    <td data-i18n="pcui-description4-5">Display assets in simplified format.</td>
+                                </tr>
+                                <tr>
+                                    <td>extcell</td>
+                                    <td data-i18n="pcui-description4-6">Display information on external cells that can be viewed in this session.</td>
+                                </tr>
+                                <tr>
+                                    <td>relation</td>
+                                    <td data-i18n="pcui-description4-7">Display information on relationships that can be viewed in this session.</td>
+                                </tr>
+                                <tr>
+                                    <td>role</td>
+                                    <td data-i18n="pcui-description4-8">Display information on roles that can be viewed in this session.</td>
+                                </tr>
+                                <tr>
+                                    <td>extrole</td>
+                                    <td data-i18n="pcui-description4-9">Display information on external roles that can be viewed in this session.</td>
+                                </tr>
+                                <tr>
+                                    <td>account</td>
+                                    <td data-i18n="pcui-description4-10">Display information on accounts that can be viewed in this session.</td>
+                                </tr>
+                                <tr>
+                                    <td>rcvmessage</td>
+                                    <td data-i18n="pcui-description4-11">Display received messages that can be viewed in this session.</td>
+                                </tr>
+                                <tr>
+                                    <td>sntmessage</td>
+                                    <td data-i18n="pcui-description4-12">Display sent messages that can be viewed in this session.</td>
+                                </tr>
+                                <tr>
+                                    <td>cd {Box}</td>
+                                    <td data-i18n="pcui-description4-13">Move to any Box under the current Cell. As a result, pcui switches from Cell mode to Box mode. For the commands that can be used in Box mode, refer to \"Box Usable Commands in Box Mode\".</td>
+                                </tr>
+                                <tr>
+                                    <td>mk {Box}</td>
+                                    <td data-i18n="pcui-description4-14">create a new Box.</td>
+                                </tr>
+                                <tr>
+                                    <td>acl</td>
+                                    <td data-i18n="pcui-description4-15">Displays the currently set privilege information.</td>
+                                </tr>
+                                <tr>
+                                    <td>rm {Box}</td>
+
+                                    <td data-i18n="pcui-description4-16">Delete the Box. It can not be deleted if there are assets in Box or when Box is linked with a role etc.</td>
+                                </tr>
+                                <tr>
+                                    <td>help(?)</td>
+                                    <td data-i18n="pcui-description4-17">Display a list of commands available in this mode.</td>
+                                </tr>
+                                <tr>
+                                    <td>quit(q)</td>
+                                    <td data-i18n="pcui-description4-18">Quit pcui.</td>
+                                </tr>
+                            </tbody>
+                        </table>
+                    </div>
+
+
+
+                    <h5>Commands available in Box mode</h5>
+                    <p>Commands available in Box mode are as follows.</p>
+
+                    <div class="table-responsive">
+                        <table class="table table-bordered pcuitable">
+                            <tbody>
+                                <tr>
+                                    <td>pwd</td>
+                                    <td data-i18n="pcui-description4-3">Display the current work location in URL format.</td>
+                                </tr>
+                                <tr>
+                                    <td>ls</td>
+                                    <td data-i18n="pcui-description4-4">Display assets in detailed format.</td>
+                                </tr>
+                                <tr>
+                                    <td>sl</td>
+                                    <td data-i18n="pcui-description4-5">Display assets in simplified format.</td>
+                                </tr>
+                                <tr>
+                                    <td>meta</td>
+                                    <td data-i18n="pcui-description5-1">Displays the metadata of Box.</td>
+                                </tr>
+                                <tr>
+                                    <td>url</td>
+                                    <td data-i18n="pcui-description5-2">Displays the URL of the Box.</td>
+                                </tr>
+                                <tr>
+                                    <td>cd ..</td>
+                                    <td data-i18n="pcui-description5-3">It switches from Box mode to Cell mode.</td>
+                                </tr>
+                                <tr>
+                                    <td>put {Path}</td>
+                                    <td data-i18n="pcui-description5-4">Upload any assets in the user's local environment to the current Box.The local environment is currently based on the current directory where pcui is running.</td>
+                                </tr>
+                                <tr>
+                                    <td>get {File}</td>
+                                    <td data-i18n="pcui-description5-5">Download any assets of the current Box to the user's local environment.The local environment is currently based on the current directory where pcui is running.</td>
+                                </tr>
+                                <tr>
+                                    <td>rm {File}</td>
+                                    <td data-i18n="pcui-description5-6">Deletes the asset specified by the current Box.</td>
+                                </tr>
+                                <tr>
+                                    <td>help(?)</td>
+                                    <td data-i18n="pcui-description4-17">"Display a list of commands available in this mode.</td>
+                                </tr>
+                                <tr>
+                                    <td>quit(q)</td>
+                                    <td data-i18n="pcui-description4-18">Quit pcui.</td>
+                                </tr>
+                            </tbody>
+                        </table>
+                    </div>
+
+                    <h5>Files generat by pcui</h5>
+                    <p>Pcui generates the following files in the current directory at the time of execution from the viewpoint of convenience and evidence.</p>
+
+                    <ol class="pcuiol">
+                        <li>logfile</li>
+                        <p>When answering yes to the question as to whether to leave the operation log when starting pcui, pcui outputs the log file with the name \"pcui-yyyymmdd.log\".In the log file, the command executed by the user in the session and its response are described.<br />If there is a log file of the current day, the session log within the day is added to the end of the existing log file.
+                        </p>
+                        <li>Connection information file</li>
+                        <p>Considering that the user repeatedly connects to the same Cell, pcui stores up to five URLs of successfully connected cells in the \"pcui.conf \" file.For next and subsequent connections, you can omit the url input by selecting the number assigned to each url.However, login account and password can not be omitted.If there are 5 or more connected urls, delete the information from the old url.<br />Since this connection information file is in JSON format, it is possible for users to register urls in advance or move to another environment.
+                        </p>
+                    </ol>
+
+                    <h5>Notes on using pcui</h5>
+
+                    <ol class="pcuiol">
+                        <li>Display command execution result</li>
+                        <p>The result of executing the command in each mode of pcui is <br /> \"# Accessing http: //personium.demo/cell1/__ctl/Box\" <br />As shown in, it is displayed as a line appended with #.
+                        </p>
+                        <li>Regarding setting of authority etc</li>
+                        <p>Pcui, current status, access authority It does not have the function to operate such as.If an error related to access authority etc. occurs as a result of the command execution, execute the API separately or execute the authority setting tool that can operate the access authority such as UnitManager.</p>
+                    </ol>
+
+                    <h5>Uninstall pcui</h5>
+                    <p>Pcui does not have assets other than the pcui set obtained with GitHub and the \"file generated by pcui\". When uninstalling, delete the pcui main body and the file generated by pcui.</p>
+
+            </div>
+
+
+        </div>
+
+    </div>
+    <!-- // end .section -->
+
+
+    <div class="bg-gradient py-5">
+        <div class="container">
+
+            <div class="center-block text-center">
+
+
+                <div class="social-icons">
+                    <li class="f-icon">
+                        <a href="https://twitter.com/personium_ja" target="_blank">
+                            <img src="../../../images/f_twitter.png" title="twitter" alt="twitter">
+                        </a>
+                    </li>
+
+                    <li class="f-icon">
+                        <a class="social-icons" href="https://slack.com/intl" target="_blank">
+                            <img src="../../../images/f_slack.png" title="slack" alt="slack">
+                        </a>
+                    </li>
+
+                    <li class="f-icon">
+                        <a href="https://github.com/personium" target="_blank">
+                            <img src="../../../images/f_github.png" title="github" alt="github">
+                        </a>
+                    </li>
+
+                    <!--                        <a href="https://twitter.com/personium_ja"><span class="ti-twitter-alt"></span></a>
+                        <a href="https://github.com/personium"><span class="ti-github"></span></a>-->
+                </div>
+
+            </div>
+
+
+        </div>
+
+    </div>
+    <!-- // end .section -->
+
+
+    <footer class="my-5 text-center">
+        <!-- Copyright removal is not prohibited! -->
+        <p class="mb-2">
+            <small>COPYRIGHT © 2017. ALL RIGHTS RESERVED. MOBAPP TEMPLATE BY
+                <a href="https://colorlib.com">COLORLIB</a>
+            </small>
+        </p>
+
+    </footer>
+
+    <!-- jQuery and Bootstrap -->
+    <script src="../../../js/jquery-3.2.1.min.js"></script>
+    <script src="../../../js/bootstrap.bundle.min.js"></script>
+    <!-- Plugins JS -->
+    <script src="../../../js/owl.carousel.min.js"></script>
+    <!-- Custom JS -->
+    <script src="../../js/script.js"></script>
+    <p id="page-top">
+        <a href="#home"></a>
+    </p>
+</body>
+
+</html>

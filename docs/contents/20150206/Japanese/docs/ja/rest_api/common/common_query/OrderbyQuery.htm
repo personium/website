@@ -1,0 +1,290 @@
+<?xml version="1.0" encoding="iso-2022-jp" ?>
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN"
+    "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<!-- saved from url=(0014)about:internet -->
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=iso-2022-jp" />
+<meta http-equiv="Content-Language" content="ja-JP" />
+<meta name="generator" content="Adobe RoboHelp 10" />
+<title>orderby</title>
+<link rel="StyleSheet" href="../../../../../default.css" type="text/css" />
+<style type="text/css">
+/*<![CDATA[*/
+<!--
+.mainBreadCrumb a:link { color:#000000;
+background-color:transparent;
+text-decoration:none; }
+.mainBreadCrumb a:visited { color:#000000;
+background-color:transparent;
+text-decoration:none; }
+.mainBreadCrumb a:hover { color:#ff0000 ! important;
+cursor:pointer;
+text-decoration:underline; }
+p.mainBreadCrumb { margin-left:0px;
+margin-top:1px ! important; }
+h1 { padding-left:10px ! important; }
+-->
+/*]]>*/
+</style>
+
+<script type="text/javascript" language="JavaScript">
+//<![CDATA[
+function reDo() {
+  if (innerWidth != origWidth || innerHeight != origHeight)
+     location.reload();
+}
+if ((parseInt(navigator.appVersion) == 4) && (navigator.appName == "Netscape")) {
+        origWidth = innerWidth;
+        origHeight = innerHeight;
+        onresize = reDo;
+}
+onerror = null; 
+//]]>
+</script>
+<style type="text/css">
+/*<![CDATA[*/
+<!--
+div.WebHelpPopupMenu { position:absolute;
+left:0px;
+top:0px;
+z-index:4;
+visibility:hidden; }
+-->
+/*]]>*/
+</style>
+
+<script type="text/javascript" language="javascript1.2" src="../../../../../whmsg.js" charset="utf-8">
+</script>
+<script type="text/javascript" language="javascript" src="../../../../../whver.js" charset="utf-8">
+</script>
+<script type="text/javascript" language="javascript1.2" src="../../../../../whutils.js" charset="utf-8">
+</script>
+<script type="text/javascript" language="javascript1.2" src="../../../../../whproxy.js" charset="utf-8">
+</script>
+<script type="text/javascript" language="javascript1.2" src="../../../../../whlang.js" charset="utf-8">
+</script>
+<script type="text/javascript" language="javascript1.2" src="../../../../../whtopic.js" charset="utf-8">
+</script>
+</head>
+<body>
+<script type="text/javascript" language="javascript1.2">
+//<![CDATA[
+<!--
+if (window.gbWhTopic)
+{
+        var strUrl = document.location.href;
+        var bc = 0;
+        var n = strUrl.toLowerCase().indexOf("bc-");
+        if(n != -1)
+        {
+                document.location.href = strUrl.substring(0, n);
+                bc = strUrl.substring(n+3);
+        }
+
+        if (window.addTocInfo)
+        {
+        addTocInfo("共通事項\nOData共通クエリ\n$orderby クエリ");
+addAvenueInfo("OData共通クエリ","","docs/ja/rest_api/common/common_query/TopQuery.htm");
+addButton("show",BTN_TEXT,"表示","","","","",0,0,"","","");
+
+        }
+        if (window.writeBtnStyle)
+                writeBtnStyle();
+
+        if (window.writeIntopicBar)
+                writeIntopicBar(1);
+
+        
+        
+}
+else
+        if (window.gbIE4)
+                document.location.reload();
+
+onLoadHandler = function()
+{
+  if (window.setRelStartPage)
+        {
+        setTimeout("setRelStartPage('../../../../../Japanese.htm');", 1)
+
+    setTimeout("UpdateBreadCrumbsMarker();", 1);
+        }
+}
+
+if (window.addEventListener){  
+        window.addEventListener('load', onLoadHandler, false);   
+} else if (window.attachEvent){  
+        window.attachEvent('onload', onLoadHandler);  
+}
+
+function onSetStartPage()
+{
+  autoSync(1);
+  sendSyncInfo();
+  sendAveInfoOut();
+}
+//-->
+//]]>
+</script><script type="text/javascript" src="../../../../../ehlpdhtm.js" language="JavaScript1.2">
+</script>
+<div style="width: 100%; position: relative;" id="header">
+<p style="font-size: 10pt;">&#160;</p>
+</div>
+<script type="text/javascript" language="javascript">
+//<![CDATA[
+document.write("<p  class=\"mainBreadCrumb\"   style=\"text-align:left;\" class=\"breadcrumbs\">");
+AddMasterBreadcrumbs("../../../../../Japanese.htm", "breadcrumbs", " &gt; ", "トップ", "../../../HomePage.htm");
+document.write("<a class=\"breadcrumbs\" href=\"OrderbyQuery.htm\">共通事項<\/a>  &gt;  <a class=\"breadcrumbs\" href=\"OrderbyQuery.htm\">OData共通クエリ<\/a>  &gt;  $orderby クエリ<\/p>");
+//]]>
+</script>
+<hr style="border-left-width: 0px; margin-left: -6px;" size="1" width="101%" align="center" />
+<form><input type="image" value="Print" onclick="window.print();return false" name="Printer.png" src="../../../../../Images/Printer.png" style="width: 16px; height: 16px; float: right; margin-top: -32px; margin-right: 2px;" /></form>
+<h1>$orderby <span style="-webkit-text-size-adjust: auto; -webkit-text-stroke-width: 0px;"><font class="">クエリ</font></span></h1>
+<h2 class="Paragraph"><span lang="JA" xml:lang="JA" style="line-height: 115%; mso-ascii-font-family: Arial; mso-fareast-theme-font: minor-fareast; mso-hansi-font-family: Arial; mso-bidi-font-family: Arial; mso-ansi-language: EN-US; mso-fareast-language: JA; mso-bidi-language: AR-SA; font-weight: bold; font-family: 'MS Gothic';">概要</span></h2>
+<p class="Paragraph" style="color: rgb(72, 72, 72); font-family: Verdana, sans-serif; font-size: 12.222222328186035px; font-style: normal; font-variant: normal; font-weight: normal; letter-spacing: normal; line-height: normal; orphans: auto; text-align: start; text-indent: 0px; text-transform: none; white-space: normal; widows: auto; word-spacing: 0px; -webkit-text-stroke-width: 0px; background-color: #ffffff;"><span style="color: rgb(72, 72, 72); font-family: Verdana, sans-serif; font-size: 12.222222328186035px; font-style: normal; font-variant: normal; font-weight: normal; letter-spacing: normal; line-height: normal; orphans: auto; text-transform: none; white-space: normal; widows: auto; word-spacing: 0px; -webkit-text-stroke-width: 0px; background-color: #ffffff;">一覧取得時に検索結果を並べ替える場合は$orderbyクエリを使用する</span></p>
+<p style="color: rgb(72, 72, 72); font-family: Verdana, sans-serif; font-size: 12.222222328186035px; font-style: normal; font-variant: normal; font-weight: normal; letter-spacing: normal; line-height: normal; orphans: auto; text-align: start; text-indent: 0px; text-transform: none; white-space: normal; widows: auto; word-spacing: 0px; -webkit-text-stroke-width: 0px; background-color: #ffffff;">&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;※$orderbyに存在しないプロパティ名を指定した場合は、指定された項目を無視する</p>
+<h2><span style="font-weight: bold;">リクエストクエリ</span></h2>
+<table class="CodeTable" style="height: 47px; margin-left: 26pt;" cellspacing="0px" width="94%">
+<col style="width: 100%;" />
+<tr>
+<td style="border: Solid 1px #9b9b9b; vertical-align: middle;">
+<p class="Code" style="font-weight: normal;">$orderby={sortKey} {option}, &#183; &#183; &#183;</p>
+</td>
+</tr>
+</table>
+<p class="Paragraph">&#160;</p>
+<p class="Paragraph">※ sortkey} = {propertyName} {<br />
+※ {sortkey}} <span style="color: rgb(72, 72, 72); font-family: Verdana, sans-serif; font-size: 12.222222328186035px; line-height: normal; orphans: auto; widows: auto; -webkit-text-stroke-width: 0px; background-color: #ffffff; display: inline ! important ; float: none;">{option}はカンマ区切りで複数指定可能</span></p>
+<p class="Paragraph">&#160;</p>
+<table style="margin-left: 26pt;" cellspacing="0" width="96%">
+<col style="width: 37.809%;" />
+<col style="width: 62.191%;" />
+<tr>
+<th style="border: Solid 1px #9b9b9b;" bgcolor="#DADADA">
+<p class="GreyColumnHeading" style="font-weight: normal; margin-left: 0px;">Path</p>
+</th>
+<th style="border-top: Solid 1px #9b9b9b; border-right: Solid 1px #9b9b9b; border-bottom: Solid 1px #9b9b9b;" bgcolor="#DADADA">
+<p class="GreyColumnHeading" style="font-weight: normal; margin-left: 0px;"><span style="font-weight: normal;"><span style="font-weight: bold; font-size: 10pt;"><font size="2" style="font-size:10pt;">概要</font></span></span></p>
+</th>
+</tr>
+<tr>
+<td style="border-left: Solid 1px #9b9b9b; border-right: Solid 1px #9b9b9b; border-bottom: Solid 1px #9b9b9b; vertical-align: top;">
+<p class="TableText" style="font-size: 12px; font-family: Verdana, sans-serif;">{PropertyName}</p>
+</td>
+<td style="border-right: Solid 1px #9b9b9b; border-bottom: Solid 1px #9b9b9b; vertical-align: top;">
+<p class="TableText"><span style="color: rgb(72, 72, 72); font-family: Verdana, sans-serif; font-size: 12.222222328186035px; line-height: normal; orphans: auto; widows: auto; -webkit-text-stroke-width: 0px; background-color: #ffffff; display: inline ! important ; float: none;">並び替えのキーに指定するプロパティ名</span></p>
+</td>
+</tr>
+<tr>
+<td style="border-left: Solid 1px #9b9b9b; border-right: Solid 1px #9b9b9b; border-bottom: Solid 1px #9b9b9b; vertical-align: top;">
+<p class="TableText" style="font-size: 12px; font-family: Verdana, sans-serif;">{Option}</p>
+</td>
+<td style="border-right: Solid 1px #9b9b9b; border-bottom: Solid 1px #9b9b9b; vertical-align: top;">
+<p class="TableText"><span style="color: rgb(72, 72, 72); font-family: Verdana, sans-serif; font-size: 12.222222328186035px; line-height: normal; orphans: auto; widows: auto; -webkit-text-stroke-width: 0px; background-color: #ffffff; display: inline ! important ; float: none;">並び替え方法</span><br style="color: rgb(72, 72, 72); font-family: Verdana, sans-serif; font-size: 12.222222328186035px; font-style: normal; font-variant: normal; font-weight: normal; letter-spacing: normal; line-height: normal; orphans: auto; text-align: start; text-indent: 0px; text-transform: none; white-space: normal; widows: auto; word-spacing: 0px; -webkit-text-stroke-width: 0px; background-color: #ffffff;" />
+<span style="color: rgb(72, 72, 72); font-family: Verdana, sans-serif; font-size: 12.222222328186035px; line-height: normal; orphans: auto; widows: auto; -webkit-text-stroke-width: 0px; background-color: #ffffff; display: inline ! important ; float: none;">asc:昇順</span><br style="color: rgb(72, 72, 72); font-family: Verdana, sans-serif; font-size: 12.222222328186035px; font-style: normal; font-variant: normal; font-weight: normal; letter-spacing: normal; line-height: normal; orphans: auto; text-align: start; text-indent: 0px; text-transform: none; white-space: normal; widows: auto; word-spacing: 0px; -webkit-text-stroke-width: 0px; background-color: #ffffff;" />
+<span style="color: rgb(72, 72, 72); font-family: Verdana, sans-serif; font-size: 12.222222328186035px; line-height: normal; orphans: auto; widows: auto; -webkit-text-stroke-width: 0px; background-color: #ffffff; display: inline ! important ; float: none;">desc:降順</span><br style="color: rgb(72, 72, 72); font-family: Verdana, sans-serif; font-size: 12.222222328186035px; font-style: normal; font-variant: normal; font-weight: normal; letter-spacing: normal; line-height: normal; orphans: auto; text-align: start; text-indent: 0px; text-transform: none; white-space: normal; widows: auto; word-spacing: 0px; -webkit-text-stroke-width: 0px; background-color: #ffffff;" />
+<span style="color: rgb(72, 72, 72); font-family: Verdana, sans-serif; font-size: 12.222222328186035px; line-height: normal; orphans: auto; widows: auto; -webkit-text-stroke-width: 0px; background-color: #ffffff; display: inline ! important ; float: none;">デフォルト値:asc</span></p>
+</td>
+</tr>
+</table>
+<h4><span style="font-weight: bold;">CURLサンプル</span></h4>
+<p style=" margin-left: 40px; text-indent: -20px;"><span class="rls-1-Number">1.</span><span style='word-spacing:normal; font:6.0pt "Times New Roman"'><font size="1" style="font-size:6pt;">&#160;&#160;&#160;&#160;&#160;</font></span><span style="font-size: 12px; font-family: Verdana, sans-serif;">Testプロパティで降順に並べ替えられた一覧を取得します</span></p>
+<table class="CodeTable" style="height: 47px; margin-left: 72px;" cellspacing="0px" width="93%">
+<col style="width: 100%;" />
+<tr>
+<td style="border: Solid 1px #9b9b9b; vertical-align: middle;">
+<p class="Code">$orderby=Test%20desc</p>
+</td>
+</tr>
+</table>
+<p style=" margin-left: 40px; text-indent: -20px;"><span class="rls-1-Number">2.</span><span style='word-spacing:normal; font:6.0pt "Times New Roman"'><font size="1" style="font-size:6pt;">&#160;&#160;&#160;&#160;&#160;</font></span><span style="font-size: 12px; font-family: Verdana, sans-serif;">ID で昇順に並べ替え、次にTestで降順に並べ替えられた一覧を取得します</span></p>
+<table class="CodeTable" style="height: 47px; margin-left: 72px;" cellspacing="0px" width="93%">
+<col style="width: 100%;" />
+<tr>
+<td style="border: Solid 1px #9b9b9b; vertical-align: middle;">
+<p class="Code">$orderby=ID%20asc,Test%20desc</p>
+</td>
+</tr>
+</table>
+<p class="Paragraph">&#160;</p>
+<h2>動作詳細</h2>
+<ul style="list-style: disc;">
+<li>
+<p class="Paragraph">null値を含む場合のソート順序</p>
+</li>
+</ul>
+<p class="Paragraph" style="margin-left: 59px;">昇順を指定した場合、降順を指定した場合ともにnullはソート結果の末尾になるようにソートします。</p>
+<p class="Paragraph" style="margin-left: 59px;">※ただし、マイナーバージョン 0.19.9を使用している場合は、以下の規則に従いソートします。</p>
+<div style="list-style: disc; margin-left: 2em">
+<ul style="list-style: disc;">
+<li>
+<p class="Paragraph">文字列型に対するソート</p>
+</li>
+<li style="list-style: none; display: inline">
+<ul style="list-style: disc;">
+<li>
+<p class="Paragraph">asc</p>
+</li>
+</ul>
+</li>
+</ul>
+</div>
+<p class="Paragraph" style="margin-left: 139px;">null⇒文字列</p>
+<div style="list-style: disc; margin-left: 4em">
+<ul style="list-style: disc;">
+<li>
+<p class="Paragraph">desc</p>
+</li>
+</ul>
+</div>
+<p class="Paragraph" style="margin-left: 139px;">文字列⇒null</p>
+<div style="list-style: disc; margin-left: 2em">
+<ul style="list-style: disc;">
+<li>
+<p class="Paragraph">数値型</p>
+</li>
+<li style="list-style: none; display: inline">
+<ul style="list-style: disc;">
+<li>
+<p class="Paragraph">asc</p>
+</li>
+</ul>
+</li>
+</ul>
+</div>
+<p class="Paragraph" style="margin-left: 139px;">負数⇒null⇒0⇒なし⇒正数</p>
+<div style="list-style: disc; margin-left: 4em">
+<ul style="list-style: disc;">
+<li>
+<p class="Paragraph">desc</p>
+</li>
+</ul>
+</div>
+<p class="Paragraph" style="margin-left: 139px;">正数⇒null⇒0⇒なし⇒負数</p>
+<ul style="list-style: disc;">
+<li>
+<p class="Paragraph">$orderbyに存在しないプロパティ名を指定した場合は、指定された項目を無視する</p>
+</li>
+<li>
+<p class="Paragraph">$orderbyに配列型のプロパティ名を指定した場合は、400エラーを返却する</p>
+</li>
+</ul>
+<p class="Paragraph">&#160;</p>
+<br />
+<div style="border-top: Solid 3px #3a3a3a; width: 100%; position: relative; padding-top: 2px; padding-bottom: 2px; padding-right: 5px; background-color: #9b9b9b;" id="footer">
+<h6 style="text-align: right; margin-top: 5pt; margin-bottom: 5pt;">Copyright 2014 &#160;FUJITSU LIMITED</h6>
+</div>
+<script type="text/javascript" language="javascript1.2">
+//<![CDATA[
+<!--
+if (window.writeIntopicBar)
+        writeIntopicBar(0);
+
+
+highlightSearch();
+//-->
+//]]>
+</script>
+</body>
+</html>

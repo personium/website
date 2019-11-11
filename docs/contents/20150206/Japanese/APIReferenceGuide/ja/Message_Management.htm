@@ -1,0 +1,192 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+<meta http-equiv="Content-Language" content="en-US" />
+ <meta name="generator" content="Adobe RoboHelp 10" />
+<title>メッセージ管理</title>
+<link rel="StyleSheet" href="../../default.css" type="text/css" />
+<script type="text/javascript" language="JavaScript">
+//<![CDATA[
+function reDo() {
+  if (innerWidth != origWidth || innerHeight != origHeight)
+     location.reload();
+}
+if ((parseInt(navigator.appVersion) == 4) && (navigator.appName == "Netscape")) {
+	origWidth = innerWidth;
+	origHeight = innerHeight;
+	onresize = reDo;
+}
+onerror = null; 
+//]]>
+</script>
+<style type="text/css">
+<!--
+div.WebHelpPopupMenu { position:absolute;
+left:0px;
+top:0px;
+z-index:4;
+visibility:hidden; }
+-->
+</style>
+<script type="text/javascript" language="javascript1.2" src="../../whmsg.js" charset="utf-8"></script>
+<script type="text/javascript" language="javascript" src="../../whver.js" charset="utf-8"></script>
+<script type="text/javascript" language="javascript1.2" src="../../whutils.js" charset="utf-8"></script>
+<script type="text/javascript" language="javascript1.2" src="../../whproxy.js" charset="utf-8"></script>
+<script type="text/javascript" language="javascript1.2" src="../../whlang.js" charset="utf-8"></script>
+<script type="text/javascript" language="javascript1.2" src="../../whtopic.js" charset="utf-8"></script>
+
+</head>
+
+<body page-style="x-size: Letter;"><script type="text/javascript" language="javascript1.2">//<![CDATA[
+<!--
+if (window.gbWhTopic)
+{
+	var strUrl = document.location.href;
+	var bc = 0;
+	var n = strUrl.toLowerCase().indexOf("bc-");
+	if(n != -1)
+	{
+		document.location.href = strUrl.substring(0, n);
+		bc = strUrl.substring(n+3);
+	}
+
+	if (window.addTocInfo)
+	{
+	addTocInfo("メッセージ管理");
+addButton("show",BTN_TEXT,"表示","","","","",0,0,"","","");
+
+	}
+	if (window.writeBtnStyle)
+		writeBtnStyle();
+
+	if (window.writeIntopicBar)
+		writeIntopicBar(1);
+
+	
+	
+}
+else
+	if (window.gbIE4)
+		document.location.reload();
+
+onLoadHandler = function()
+{
+  if (window.setRelStartPage)
+	{
+	setTimeout("setRelStartPage('../../Japanese.htm');", 1)
+
+    setTimeout("UpdateBreadCrumbsMarker();", 1);
+	}
+}
+
+if (window.addEventListener){  
+	window.addEventListener('load', onLoadHandler, false);   
+} else if (window.attachEvent){  
+	window.attachEvent('onload', onLoadHandler);  
+}
+
+function onSetStartPage()
+{
+  autoSync(1);
+  sendSyncInfo();
+  sendAveInfoOut();
+}
+//-->
+//]]></script>
+<script type="text/javascript" src="../../ehlpdhtm.js" language="JavaScript1.2"></script>
+
+<h1>メッセージ管理機能</h1>
+<p class="Paragraph" style="font-family: Verdana, sans-serif; font-size: 12px;">メッセージ管理機能は、Cell間のメッセージ交換を実現します。Cellは以下のメッセージ管理を行います。(下図)</p>
+<p class="Paragraph" style="margin-left: 71px; font-family: Verdana, sans-serif; 
+	 font-size: 12px;">1 .メッセージ送受信</p>
+<p class="Paragraph" style="margin-left: 71px; font-family: Verdana, sans-serif; 
+	 font-size: 12px;">2. メッセージ削除</p>
+<p class="Paragraph" style="margin-left: 71px; font-family: Verdana, sans-serif; 
+	 font-size: 12px;">3. メッセージ状態（既読/未読）の設定</p>
+<p class="Paragraph" style="margin-left: 71px; font-family: Verdana, sans-serif; 
+	 font-size: 12px;">4. 登録リクエストの承認および拒否</p>
+<p class="Paragraph" style="margin-left: 71px; font-family: Verdana, sans-serif; 
+	 font-size: 12px;">5. 通知リクエストの承認および拒否</p>
+<p class="Figure"><img src="../../Images/MessageManagement.gif" alt="" 
+						 style="border: none;" border="0" /></p>
+<ul>
+	<li style="list-style: url('../../Images/arrow.png'); margin-left: -20px;"><h2>目標セルの設定</h2></li>
+</ul>
+<p class="Paragraph" style="font-family: Verdana, sans-serif; font-size: 12px;">意図したCellにメッセージを送信するために、以下の目的を設定します。目標セルをセットアップするために以下の手順に従います。</p>
+<ol style="list-style: decimal;">
+	<ol style="list-style: decimal;">
+		<li style="color: #353535; font-family: Verdana, sans-serif; font-size: 12px;">Relation名を「ToRelation」パラメータとする</li>
+		<li style="color: #353535; font-family: Verdana, sans-serif; font-size: 12px;">目標CellのURLを「To」パラメータで指定する。2つ以上のCellに対して、Toパラメータを設定できる。</li>
+		<li style="color: #353535; font-family: Verdana, sans-serif; font-size: 12px;">もし、2つ以上のCellにメッセージを送信する場合、目的CellのURLはCSVに変換される。</li>
+	</ol>
+</ol>
+<p class="Figure" style="font-family: Arial, sans-serif;"><img src="../../Images/SetUpDestination.gif" 
+	 alt="" style="border: none;" border="0" /></p>
+<p class="Figure" style="font-family: Arial, sans-serif; font-weight: bold;">Figure 
+ 2: 目標セルの設定</p>
+<ul>
+	<li style="list-style: url('../../Images/arrow.png'); margin-left: -20px;"><h2>Relation登録/削除リクエスト</h2></li>
+</ul>
+<p class="Paragraph" style="font-family: Verdana, sans-serif; font-size: 12px;">Cellは他のCellに対して、「登録リクエスト」および「削除リクエスト」の構成設定のリクエストを送信します。</p>
+<p class="Paragraph" style="font-family: Verdana, sans-serif; font-size: 12px;">リクエストを受け取ったCellは、<a 
+	 href="API_リファレンス/ペルソナコンテナAPI/CellレベルAPI/Cell_制御オブジェクト/受信メッセージ/InmessageApprove.htm" 
+	 style="font-family: Verdana, sans-serif; font-size: 12px;">受信メッセージ承認API</a>を使って登録リクエストを承諾します。</p>
+<p class="Paragraph" style="font-family: Verdana, sans-serif; font-size: 12px;">同様にCellはリクエストを削除することもできる。下表はリクエストの登録/削除リクエストのひとつです。</p>
+<table style="margin-left: 26pt;" cellspacing="0" width="96%">
+	<col style="mso-width-source: userset; mso-width-alt: 5376;" width="147" />
+	<col style="mso-width-source: userset; mso-width-alt: 3693;" width="364" />
+	<col style="mso-width-source: userset; mso-width-alt: 11593;" width="379" />
+	<tr style="height: 15pt;">
+		<td class="xl65" style="border: Solid 1px #9b9b9b;" width="147" 
+			 bgcolor="#353D47"><p class="GreyColumnHeading" style="font-family: Verdana, sans-serif; 
+									 font-size: 12px;">&#160;</p></td>
+		<td class="xl65" style="border-top: Solid 1px #9b9b9b; border-right: Solid 1px #9b9b9b; 
+			 border-bottom: Solid 1px #9b9b9b;" bgcolor="#353D47"><p class="GreyColumnHeading" 
+			 style="font-family: Verdana, sans-serif; font-size: 12px;">承認</p></td>
+		<td class="xl65" style="border-top: Solid 1px #9b9b9b; border-right: Solid 1px #9b9b9b; 
+			 border-bottom: Solid 1px #9b9b9b;" bgcolor="#353D47"><p class="GreyColumnHeading" 
+			 style="font-family: Verdana, sans-serif; font-size: 12px;">拒否</p></td>
+	</tr>
+	<tr style="height: 15pt;">
+		<td class="xl64" style="border-left: Solid 1px #9b9b9b; border-right: Solid 1px #9b9b9b; 
+			 border-bottom: Solid 1px #9b9b9b; vertical-align: top;"><p 
+			 class="TableText" style="font-family: Verdana, sans-serif; 
+			 font-size: 12px;">登録リクエスト</p></td>
+		<td class="xl63" style="border-right: Solid 1px #9b9b9b; border-bottom: Solid 1px #9b9b9b; 
+			 vertical-align: top;"><p class="TableText" style="font-family: Verdana, sans-serif; 
+										 font-size: 12px;">Relation登録のリクエストを受け取ります。</p>
+		<p class="TableText" style="font-family: Verdana, sans-serif; font-size: 12px;">メッセージは承認され、セル間のRelationが発行されます。</p></td>
+		<td class="xl63" style="border-right: Solid 1px #9b9b9b; border-bottom: Solid 1px #9b9b9b; 
+			 vertical-align: top;"><p class="TableText" style="font-family: Verdana, sans-serif; 
+										 font-size: 12px;">リクエストを拒否します。</p></td>
+	</tr>
+	<tr style="height: 15pt;">
+		<td class="xl64" style="border-left: Solid 1px #9b9b9b; border-right: Solid 1px #9b9b9b; 
+			 border-bottom: Solid 1px #9b9b9b; vertical-align: top;"><p 
+			 class="TableText" style="font-family: Verdana, sans-serif; 
+			 font-size: 12px;">削除リクエスト</p></td>
+		<td class="xl63" style="border-right: Solid 1px #9b9b9b; border-bottom: Solid 1px #9b9b9b; 
+			 vertical-align: top;"><p class="TableText" style="font-family: Verdana, sans-serif; 
+										 font-size: 12px;">特定のCellとの関係性を削除します。</p>
+		<p class="TableText" style="font-family: Verdana, sans-serif; font-size: 12px;">他のセルに対し、関係の削除依頼を送信します。</p>
+		<p class="TableText" style="font-family: Verdana, sans-serif; font-size: 12px;">関係は取り除かれますが、ExtCellとRelationは削除されません。</p></td>
+		<td class="xl63" style="border-right: Solid 1px #9b9b9b; border-bottom: Solid 1px #9b9b9b; 
+			 vertical-align: top;"><p class="TableText" style="font-family: Verdana, sans-serif; 
+										 font-size: 12px;">依頼メッセージの状態が拒否に変わり、</p>
+		<p class="TableText" style="font-family: Verdana, sans-serif; font-size: 12px;">処理が終了します。</p></td>
+	</tr>
+</table>
+<p class="Paragraph">&#160;</p>
+<script type="text/javascript" language="javascript1.2">//<![CDATA[
+<!--
+if (window.writeIntopicBar)
+	writeIntopicBar(0);
+
+
+highlightSearch();
+//-->
+//]]></script>
+</body>
+</html>

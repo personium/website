@@ -1,0 +1,487 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+<meta http-equiv="Content-Language" content="en-US" />
+ <meta name="generator" content="Adobe RoboHelp 10" />
+<title>Authentication Model</title>
+<link rel="StyleSheet" href="../../../default.css" type="text/css" />
+<script type="text/javascript" language="JavaScript">
+//<![CDATA[
+function reDo() {
+  if (innerWidth != origWidth || innerHeight != origHeight)
+     location.reload();
+}
+if ((parseInt(navigator.appVersion) == 4) && (navigator.appName == "Netscape")) {
+	origWidth = innerWidth;
+	origHeight = innerHeight;
+	onresize = reDo;
+}
+onerror = null; 
+//]]>
+</script>
+<style type="text/css">
+<!--
+div.WebHelpPopupMenu { position:absolute;
+left:0px;
+top:0px;
+z-index:4;
+visibility:hidden; }
+-->
+</style>
+<script type="text/javascript" language="javascript1.2" src="../../../whmsg.js" charset="utf-8"></script>
+<script type="text/javascript" language="javascript" src="../../../whver.js" charset="utf-8"></script>
+<script type="text/javascript" language="javascript1.2" src="../../../whutils.js" charset="utf-8"></script>
+<script type="text/javascript" language="javascript1.2" src="../../../whproxy.js" charset="utf-8"></script>
+<script type="text/javascript" language="javascript1.2" src="../../../whlang.js" charset="utf-8"></script>
+<script type="text/javascript" language="javascript1.2" src="../../../whtopic.js" charset="utf-8"></script>
+
+</head>
+
+<body page-style="x-size: Letter;"><script type="text/javascript" language="javascript1.2">//<![CDATA[
+<!--
+if (window.gbWhTopic)
+{
+	var strUrl = document.location.href;
+	var bc = 0;
+	var n = strUrl.toLowerCase().indexOf("bc-");
+	if(n != -1)
+	{
+		document.location.href = strUrl.substring(0, n);
+		bc = strUrl.substring(n+3);
+	}
+
+	if (window.addTocInfo)
+	{
+	addTocInfo("Authentication and Access Control\nAuthentication Model");
+addButton("show",BTN_TEXT,"Show","","","","",0,0,"","","");
+
+	}
+	if (window.writeBtnStyle)
+		writeBtnStyle();
+
+	if (window.writeIntopicBar)
+		writeIntopicBar(1);
+
+	
+	
+}
+else
+	if (window.gbIE4)
+		document.location.reload();
+
+onLoadHandler = function()
+{
+  if (window.setRelStartPage)
+	{
+	setTimeout("setRelStartPage('../../../English.htm');", 1)
+
+    setTimeout("UpdateBreadCrumbsMarker();", 1);
+	}
+}
+
+if (window.addEventListener){  
+	window.addEventListener('load', onLoadHandler, false);   
+} else if (window.attachEvent){  
+	window.attachEvent('onload', onLoadHandler);  
+}
+
+function onSetStartPage()
+{
+  autoSync(1);
+  sendSyncInfo();
+  sendAveInfoOut();
+}
+//-->
+//]]></script>
+<script type="text/javascript" src="../../../ehlpdhtm.js" language="JavaScript1.2"></script>
+
+<div style="width: 100%; position: relative;" id="header">
+	<p>&#160;</p>
+</div>
+
+<script type="text/javascript" language="javascript">//<![CDATA[
+document.write("<p  style=\"text-align:right;font-family:Arial;font-size:9pt;font-weight: normal;font-style: normal;text-decoration: none;\">");
+AddMasterBreadcrumbs("../../../English.htm", "font-family:Arial;font-size:9pt;font-weight: normal;font-style: normal;text-decoration: none;", "&gt;", "Home", "../PCSAnOverview.htm");
+document.write("<a style=\"font-family:Arial;font-size:9pt;font-weight: normal;font-style: normal;text-decoration: none;\" href=\"AuthenticationModel.htm\">Authentication and Access Control<\/a> &gt; Authentication Model<\/p>");
+//]]></script>
+
+<h1>Authentication Model</h1>
+<p class="Paragraph">The PCS authentication is based on OAuth 2.0 framework. 
+ OAuth (Open Authorization) is an open protocol that allows secure API 
+ authorization in a simple and standardized way. The OAuth allows you to 
+ access resources of some other Cell for a limited period of time. This 
+ limited period becomes invalid after the defined period of time. </p>
+<p class="Paragraph">Accessing the PCS portal is not only based on the 
+ traditional client-server authentication model, but also based on the 
+ authentication model where the application issues tokens. These tokens 
+ are used to access data through various cells. </p>
+<p class="Paragraph">The PCS portal is supporting the following authorization 
+ flows:</p>
+<p class="Bullet_1"><span style="font-family:'Symbol'">&#183;</span><span style='word-spacing:normal; font:6.0pt "Times New Roman"'><font size="1" style="font-size:6pt;">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</font></span>Resource Owner 
+ Password Credentials (ROPC) flow</p>
+<p class="Bullet_1"><span style="font-family:'Symbol'">&#183;</span><span style='word-spacing:normal; font:6.0pt "Times New Roman"'><font size="1" style="font-size:6pt;">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</font></span>Implicit flow 
+ (not supported in Version 1.0)</p>
+<p class="Paragraph">The PCS portal consists of the following two authentication 
+ frameworks:</p>
+<p class="Bullet_1"><span style="font-family:'Symbol'">&#183;</span><span style='word-spacing:normal; font:6.0pt "Times New Roman"'><font size="1" style="font-size:6pt;">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</font></span>User authentication 
+ </p>
+<p class="Bullet_1"><span style="font-family:'Symbol'">&#183;</span><span style='word-spacing:normal; font:6.0pt "Times New Roman"'><font size="1" style="font-size:6pt;">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</font></span>Application 
+ authentication</p>
+<p class="Paragraph">When you get an authentication from one cell, you 
+ can get the authentication of another cell. This makes the social user 
+ authentication operation possible.</p>
+<ul>
+	<li style="list-style: url('../../../Images/arrow.png'); margin-left: -20px;"><h2>User 
+	 Authentication</h2></li>
+</ul>
+<p class="Paragraph">User authentication consists of:</p>
+<p class="Paragraph" style="font-weight: bold;">Account authentication</p>
+<p class="Paragraph">In account authentication, when an account is created 
+ in a cell with an account name and password, it also gets a token. </p>
+<p class="Paragraph" style="font-weight: bold;">Basic authentication</p>
+<p class="Paragraph">In basic authentication, you can access resources 
+ simply using your ID and password. You do not need token authentication.</p>
+<p class="Note">Note: </p>
+<p class="Paragraph2">This feature is not available in PCS Version 1.0.</p>
+<p class="Paragraph" style="font-weight: bold;">Trancell user authentication</p>
+<p class="Paragraph">In Transcell user authentication, when an account 
+ is created in a cell with an account name and password, it also gets a 
+ token. Further, it also generates a transcell token, which helps in accessing 
+ other cell.</p>
+<ul>
+	<li style="list-style: url('../../../Images/arrow.png'); margin-left: -20px;"><h2>Schema 
+	 Authentication</h2></li>
+</ul>
+<p class="Paragraph">PCS authenticates each application by its schema, 
+ known as schema authentication. Application cell (schema cell) corresponds 
+ authentication using ID and password in the Application.</p>
+<p class="Paragraph">For Persona container application development, you 
+ can use schema authentication instead of implicit flow based authentication 
+ to ensure the security.</p>
+<h3>Schema Authentication Process</h3>
+<ol>
+	<li style="list-style: decimal; color: #353535; font-size: 10pt;"><p 
+		 class="Bullet_1">Authentication required for Application cell</p></li>
+	<ol>
+		<li style="list-style: lower-alpha; font-size: 10pt; color: #353535;"><p 
+			 class="Bullet_2">Create an account in Application cell. See 
+		 Create Account.</p></li>
+		<li style="list-style: lower-alpha; font-size: 10pt; color: #353535;"><p 
+			 class="Bullet_2">[Optional] Create a role in Application cell. 
+		 See Create Role.</p></li>
+	</ol>
+</ol>
+<p class="Bullet_2" style="margin-left: 113px;"><span style="font-family:'Courier New'">o</span><span style='word-spacing:normal; font:6.0pt "Times New Roman"'><font size="1" style="font-size:6pt;">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</font></span>If 
+ you are creating a role, create the following role to authenticate the 
+ top-level schema.</p>
+<p class="Indent1" style="margin-left: 136px;">Role name：confidentialClient</p>
+<p class="Indent1" style="margin-left: 136px;">Box name：__（main box）</p>
+<ol style="list-style: lower-alpha;">
+	<ol start="3" style="list-style: lower-alpha;">
+		<li style="font-size: 10pt; color: #5b5b5b;"><p class="Bullet_2" 
+														 style="color: #353535;">Use 
+		 $links to create a link between the account and role. See Create 
+		 $links.<br />
+		This step is performed to authenticate the top-level schema.</p></li>
+	</ol>
+</ol>
+<ol start="2" style="list-style: lower-alpha;">
+	<li style="list-style: decimal; font-size: 10pt; color: #ff0000;"><p 
+		 class="Bullet_1" style="color: #ff0000;">TBD</p></li>
+</ol>
+<h3>Parameter Specification</h3>
+<p class="Paragraph">You can specify a parameter in the following ways. 
+ If you specify the parameter in all the ways, the Authorization header 
+ gets the priority.</p>
+<p class="Bullet_1"><span style="font-family:'Symbol'">&#183;</span><span style='word-spacing:normal; font:6.0pt "Times New Roman"'><font size="1" style="font-size:6pt;">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</font></span>Authorization 
+ header<br />
+You must setup the following values:</p>
+<p class="Code" style="margin-left: 80px;">&quot;Basic 【Base64Encode based 
+ value of{{App. cell URL of schema authentication}:{Token from the source 
+ schema authentication}}】&quot;</p>
+<p class="Bullet_1"><span style="font-family:'Symbol'">&#183;</span><span style='word-spacing:normal; font:6.0pt "Times New Roman"'><font size="1" style="font-size:6pt;">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</font></span>Request body<br />
+See Request -&gt; Request Body-&gt; client_id and client_secret details 
+ in API authentication.</p>
+<ul>
+	<li style="list-style: url('../../../Images/arrow.png'); margin-left: -20px;"><h2>Selection 
+	 of Grant Authorization Flow</h2></li>
+</ul>
+<p class="Paragraph">TBD</p>
+<ul>
+	<li style="list-style: url('../../../Images/arrow.png'); margin-left: -20px;"><h2>Implicit 
+	 Flow</h2></li>
+</ul>
+<p class="Paragraph">Not supported in V1.0</p>
+<ul>
+	<li style="list-style: url('../../../Images/arrow.png'); margin-left: -20px;"><h2>Refresh 
+	 of the Authentication Result</h2></li>
+</ul>
+<p class="Paragraph" style="color: #ff0000;">TBD</p>
+<ul>
+	<li style="list-style: url('../../../Images/arrow.png'); margin-left: -20px;"><h2>Types 
+	 of Tokens</h2></li>
+</ul>
+<p class="Paragraph">There are the following types of tokens:</p>
+<p class="Bullet_1"><span style="font-family:'Symbol'">&#183;</span><span style='word-spacing:normal; font:6.0pt "Times New Roman"'><font size="1" style="font-size:6pt;">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</font></span>Access token</p>
+<p class="Bullet_1"><span style="font-family:'Symbol'">&#183;</span><span style='word-spacing:normal; font:6.0pt "Times New Roman"'><font size="1" style="font-size:6pt;">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</font></span>Refresh token</p>
+<h3>Access Token</h3>
+<p class="Paragraph2">An Access Token refers to the credentials used to 
+ access protected resources. In case of PCS portal, you need an access 
+ token to access the particular Cell. When the access token expires, you 
+ must obtain a new access token via a refresh token.</p>
+<p class="Paragraph2">It is a string representing an authorization issued 
+ to the particular user (account). The Access Token is same for all the 
+ cells created under one environment.</p>
+<p class="Paragraph2">The PCS portal supports two types of Access Tokens: 
+ Local cell token and Trans cell token. </p>
+<h4>Local cell token</h4>
+<p class="Paragraph2">The local cell token refers to the token issued for 
+ the particular cell. This token is valid only to access the resource of 
+ the authenticated cell.</p>
+<p class="Paragraph2">The local cell token expires in 1 hour from the time 
+ of issue.</p>
+<h4>Transcell token</h4>
+<p class="Paragraph2">The transcell token is used to access authentication 
+ as well as other cells. This token is only valid for the Cell that is 
+ specified in the URL of the dc_target parameter.</p>
+<p class="Paragraph2">To make other cells use the transcell token, you 
+ must configure the cell control objects, such as ExtCell, Relation, and 
+ ExtRole.</p>
+<p class="Paragraph2">In addition, the x509 certificate authentication 
+ mechanism is incorporated in the transcell token that contains the CS-approved 
+ certificate.</p>
+<p class="Paragraph2">The transcell token expires in 1 hour from the time 
+ of issue.</p>
+<h3>Refresh Token</h3>
+<p class="Paragraph2">Refresh token is issued along with the access token. 
+ </p>
+<p class="Paragraph2">Refresh token refers to reissue the specified access 
+ token. An access token is valid for 1 hour from the time of issue. In 
+ order to keep using the PCS portal for a long time, the refresh token 
+ is keeps track of the time and as soon as the time is about to over it 
+ sends an issue request for the new access token. The refresh token can 
+ be reissued even though the access token is not expired. The refresh token 
+ expires in 24 hours from the time of issue.</p>
+<ul>
+	<li style="list-style: url('../../../Images/arrow.png'); margin-left: -20px;"><h2>Access 
+	 resources of Cells</h2></li>
+</ul>
+<p class="Paragraph">This section explains how you can authenticate and 
+ access Cell(s) resources. You can use the following methods to access 
+ the resources:</p>
+<p class="Bullet_1"><span style="font-family:'Symbol'">&#183;</span><span style='word-spacing:normal; font:6.0pt "Times New Roman"'><font size="1" style="font-size:6pt;">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</font></span>Access token</p>
+<p class="Bullet_1"><span style="font-family:'Symbol'">&#183;</span><span style='word-spacing:normal; font:6.0pt "Times New Roman"'><font size="1" style="font-size:6pt;">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</font></span>Refresh token</p>
+<h3>Access Token</h3>
+<p class="Paragraph2">You need Access token to perform operations, such 
+ as create cells, update cell, create box, and create account. The Access 
+ token is valid for one hour.</p>
+<p class="Paragraph2">For example, to access resources of Cell A, the following 
+ process is used:</p>
+<p class="Figure"><img src="../../../Images/AccessToken.gif" alt="" style="border: none;" 
+						 border="0" /></p>
+<p class="Figure" style="font-weight: bold;">Figure 1: Access Resources 
+ using access token</p>
+<ol>
+	<li style="list-style: decimal; color: #353535; font-size: 10pt;"><p 
+		 class="Bullet_1">Account (password) authentication for Cell A. 
+	 The account is authenticated by passing the correct values in the 
+	 following parameters of a curl command:</p></li>
+</ol>
+<p class="Code" style="margin-left: 120px;">grant_type=password&amp;username=[user 
+ name]&amp;password=[password]</p>
+<ol start="2" style="list-style: decimal;">
+	<li style="font-size: 10pt; color: #353535;"><p class="Bullet_1">You 
+	 will get the access token from the response body.</p></li>
+	<li style="font-size: 10pt; color: #353535;"><p class="Bullet_1">Set 
+	 the access token at authorization header to access the resources. 
+	 </p></li>
+</ol>
+<p class="Code" style="margin-left: 120px;">Authorization: Bearer [access 
+ token]</p>
+<p class="Indent1" style="margin-left: 96px;">You can access resources 
+ using any of the following method:</p>
+<p class="Bullet_1" style="margin-left: 132px;"><span style="font-family:'Symbol'">&#183;</span><span style='word-spacing:normal; font:6.0pt "Times New Roman"'><font size="1" style="font-size:6pt;">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</font></span>PCS 
+ portal</p>
+<p class="Bullet_1" style="margin-left: 132px;"><span style="font-family:'Symbol'">&#183;</span><span style='word-spacing:normal; font:6.0pt "Times New Roman"'><font size="1" style="font-size:6pt;">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</font></span>CURL 
+ Command (when using the setup without the PCS portal)</p>
+<h4>PCS Portal</h4>
+<p class="Paragraph2">To access the resources using PCS portal:</p>
+<ol>
+	<li style="list-style: decimal; font-family: Arial, sans-serif; font-size: 10pt; 
+		 color: #353535;"><p class="Bullet_1" style="text-indent: 0px; 
+							 margin-left: 48px; font-family: Arial, sans-serif;">Login 
+	 to the portal with valid Username and Password. If you enter the correct 
+	 credentials, the Home page appears. This page contains a list of Unit 
+	 URLs along with the respective environments appearing beneath every 
+	 Unit URL.</p></li>
+	<li style="list-style: decimal; font-family: Arial, sans-serif; font-size: 10pt; 
+		 color: #353535;"><p class="Bullet_1" style="font-family: Arial, sans-serif; 
+							 text-indent: 0px; margin-left: 48px;"><span 
+	 style="font-family: Arial, sans-serif;">Click the specified environment. 
+	 When you click the respective environment, the Access token is generated. 
+	 To view the value of the Access token, click ‘Show Access Token’ icon 
+	 appearing in the header.</span> </p></li>
+</ol>
+<p class="Indent1" style="margin-left: 84px;">You can use the Access token 
+ to perform operations, such as create cell, update account, create role, 
+ and delete external role.</p>
+<h4>CURL command</h4>
+<p class="Paragraph2">Use the following CURL command to authenticate the 
+ user (account) and generate the access token:</p>
+<table class="CodeTable" style="margin-left: 26pt;" cellspacing="0px" width="96%">
+	<col style="width: 100%;" />
+	<tr>
+		<td><p class="Code">curl -X POST https://fqdn/__auth\</p>
+		<p class="Code">&#160;-d &quot;dc_target=[unit URL]/&amp;dc_env=[environment 
+		 ID]&amp;grant_type=password&amp;username=[user name]&amp;password=[password]&quot;\</p>
+		<p class="Code">&#160;-i -k –v</p></td>
+	</tr>
+</table>
+<p class="Paragraph2">&#160;</p>
+<p class="Paragraph2">where:</p>
+<p class="Paragraph2">dc_target: contains the Unit URL</p>
+<p class="Paragraph2">dc_env: contains the Environment ID</p>
+<p class="Paragraph2">&#160;</p>
+<p class="Paragraph2">The access token is generated, which you can use 
+ to perform operations. You can get the value of access token from the 
+ “&quot;access_token&quot;:”parameter of the response rendered by the API.</p>
+<p class="Paragraph2">You should set the value of access token in the header 
+ (-H) part of the command.</p>
+<p class="Code" style="margin-left: 40px;">Authorization: Bearer token</p>
+<p class="Paragraph2">The following sample CURL command shows how to pass 
+ the Access token when you are creating a cell:</p>
+<table class="CodeTable" style="margin-left: 26pt;" cellspacing="0px" width="96%">
+	<col style="width: 100%;" />
+	<tr>
+		<td><p class="Code">curl -X POST &quot;https://fj.baas.jp.fujitsu.com/__ctl/Cell&quot; 
+		 \</p>
+		<p class="Code">&#160;-d &quot;{\&quot;Name\&quot;:\&quot;SampleCellName\&quot;}&quot; 
+		 \</p>
+		<p class="Code">&#160;-H &quot;Accept:application/json&quot; \</p>
+		<p class="Code">&#160;-H &quot;Authorization:Bearer TOKEN” –i –k 
+		 -v</p></td>
+	</tr>
+</table>
+<h3>Refresh Token</h3>
+<p class="Paragraph2">The Web server OAuth authentication flow provides 
+ a refresh token that can be used to obtain a new access token.</p>
+<p class="Paragraph2">Access tokens have a limited lifetime of one hour, 
+ which is specified by the session time-out in the PCS portal. If an application 
+ uses an expired access token, an “Expired access token” error is returned. 
+ </p>
+<p class="Paragraph2">The process to access resources of Cell A is as follows:</p>
+<p class="Figure" style="color: #ff0000;"><img src="../../../Images/RefreshToken.gif" 
+												 alt="" style="border: none;" 
+												 border="0" /></p>
+<p class="Figure" style="font-weight: bold;">Figure 2: Access Resources 
+ using access token</p>
+<ol>
+	<li style="list-style: decimal; color: #353535; font-size: 10pt;"><p 
+		 class="Bullet_1">Account (password) authentication for Cell A. 
+	 The account is authenticated by passing the correct values in the 
+	 following parameters of a curl command:</p></li>
+</ol>
+<p class="Code" style="margin-left: 120px;">grant_type=password&amp;username=[user 
+ name]&amp;password=[password]&amp;dc_target=[Unit URL]</p>
+<ol start="2" style="list-style: decimal;">
+	<li style="font-size: 10pt; color: #353535;"><p class="Bullet_1">You 
+	 will get the refresh token from the response body.</p></li>
+	<li style="font-size: 10pt; color: #353535;"><p class="Bullet_1">Refresh 
+	 the authentication result of Cell A</p></li>
+</ol>
+<p class="Code" style="margin-left: 120px;">grant_type=refresh_token&amp;refresh_token=[Refresh 
+ token above]</p>
+<ol start="4" style="list-style: decimal;">
+	<li style="font-size: 10pt; color: #353535;"><p class="Bullet_1">Get 
+	 the access token from response body of 3.</p></li>
+	<li style="font-size: 10pt; color: #353535;"><p class="Bullet_1">Set 
+	 the access token received from 4 at authorization header to access 
+	 the resources.</p></li>
+</ol>
+<p class="Code" style="margin-left: 120px;">Authorization: Bearer [access 
+ token]</p>
+<p class="Paragraph2">You need Refresh token to renew the Access token.</p>
+<p class="Paragraph2">To access resources using PCS portal:</p>
+<ol>
+	<li style="list-style: decimal; font-size: 10pt; color: #353535;"><p 
+		 class="Bullet_1" style="text-indent: 0px; margin-left: 48px;">Login 
+	 to the portal with valid Username and Password. If you enter the correct 
+	 credentials, the Home page appears. This page contains a list of Unit 
+	 URLs along with the respective environments appearing beneath every 
+	 Unit URL.</p></li>
+	<li style="list-style: decimal; font-size: 10pt; color: #353535;"><p 
+		 class="Bullet_1" style="margin-left: 48px; text-indent: 0px;">Click 
+	 the specified environment. When you click the respective environment, 
+	 the Access token is generated. It also generates the Refresh token. 
+	 </p></li>
+</ol>
+<p class="Indent1" style="margin-left: 84px;">The Refresh token is used 
+ to obtain a new access token and is valid for 24 hours.</p>
+<h4>CURL command</h4>
+<p class="Paragraph2">Use the following CURL command to authenticate the 
+ user (account) and generate the refresh token:</p>
+<table class="CodeTable" style="margin-left: 26pt;" cellspacing="0px" width="96%">
+	<col style="width: 100%;" />
+	<tr>
+		<td><p class="Code">curl -X POST &quot;https://sashihara.vpdc.sg.soft.fujitsu.com/PCS_Portal_DEV/__auth&quot;\</p>
+		<p class="Code">&#160;-d &quot;dc_target=https://fj.baas.jp.fujitsu.com/&amp;dc_env=7c4aef11-4b5b-47f4-9720-169bd2edf62a&amp;grant_type=refresh_token&amp;refresh_token=RT~ta2ebeEM7o5570WyFj0YGjwuigG6mS8Z-1ZqHbN2lK08usa5ocS9ZjVXf_XKAZ4DWln_NNdR8SHpCJ-NXAD4Z58UFXYiKmmAkI5BgisgG-3uU3xsRm4dc0rHXPF4HcxpdTcC6YssXdgTeGN4Ic36Uv3huFbjb8Q39P6T2TCT9GnCHSFpCydJzCaGvc7YzrJdPMjX-0bqr76zXL4J6Mi6DQ&quot; 
+		 -i -k –v</p></td>
+	</tr>
+</table>
+<p class="Paragraph2">&#160;</p>
+<p class="Paragraph2">where:</p>
+<p class="Paragraph2">dc_target: contains the Unit URL</p>
+<p class="Paragraph2">dc_env: contains the Environment ID</p>
+<h3>Trancell Token</h3>
+<p class="Paragraph2" style="color: #ff0000;">TBD</p>
+<h3>Access to the schema authentication setup resources on cell A</h3>
+<p class="Paragraph2" style="color: #ff0000;"><span style="color: #ff0000;"><font color="red" >TBD</font></span></p>
+<ul>
+	<li style="list-style: url('../../../Images/arrow.png'); margin-left: -20px;"><h2>Unit 
+	 User</h2></li>
+</ul>
+<p class="Paragraph">Refers to the owner of the particular Unit. The Unit 
+ user has a right to perform CRUD operations, such as create, read, update, 
+ and delete cell(s) and should be able to access unit level API operations. 
+ The unit user should have unit user token that helps to access API operations.</p>
+<p class="Paragraph">Each cell has a hidden attribute called owner, which 
+ sets the unit user name as the cell owner at the time of creating the 
+ cell.</p>
+<p class="Paragraph">To perform the CRUD operations on a cell, the attributes 
+ of owner and unit user should match. </p>
+<h3>Unit User Role</h3>
+<p class="Paragraph2">The unit user role helps in accessing the PCS portal. 
+ The PCS portal recognizes the following as the role of the unit user:</p>
+<p class="Code" style="margin-left: 40px;">{issuerUrl}/__role/__/unitAdmin 
+ Unit controller</p>
+<p class="Paragraph2">&#160;</p>
+<p class="Paragraph2">The unit user role allows the unit user to perform 
+ processes related to the particular unit.</p>
+<h3>Unit Local Unit User Token</h3>
+<p class="Paragraph2" style="color: #ff0000;"><span><span style="color: #ff0000;"><font color="red" >TBD</font></span></span></p>
+<p class="Paragraph2">&#160;</p>
+<p class="Paragraph2">&#160;</p>
+<div style="border-top: Solid 4px #0080c0; width: 100%; 
+					 position: relative; background-color: #374049; padding-top: 7px; 
+					 padding-bottom: 7px; padding-right: 5px;" id="footer">
+	<p style="font-size: 8pt; color: #ffffff; text-align: right;"><span 
+	 style="mso-ascii-theme-font: minor-latin; mso-fareast-font-family: Calibri; 
+	 mso-fareast-theme-font: minor-latin; mso-hansi-theme-font: minor-latin; 
+	 mso-bidi-font-family: 'Times New Roman'; mso-bidi-theme-font: minor-bidi; 
+	 mso-ansi-language: EN-US; mso-fareast-language: EN-US; mso-bidi-language: AR-SA; 
+	 font-family: Arial, sans-serif;">All Rights Reserved,Copyright (C) 
+	 FUJITSU LIMITED 1998-2014 </span></p>
+</div>
+<script type="text/javascript" language="javascript1.2">//<![CDATA[
+<!--
+if (window.writeIntopicBar)
+	writeIntopicBar(0);
+
+
+highlightSearch();
+//-->
+//]]></script>
+</body>
+</html>

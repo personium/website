@@ -1,0 +1,630 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<meta name="template" content="API Master.htt" />
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+<meta name="topic-check-list" content="Ran Smart Index" />
+<meta name="generator" content="Adobe RoboHelp 10" />
+<title>List</title>
+<link rel="StyleSheet" href="../../../../../../../default.css" type="text/css" />
+<script type="text/javascript" src="../../../../../../../prettify.js"></script>
+</head>
+
+<body onload="prettyPrint()">
+<script type="text/javascript" src="../../../../../../../ehlpdhtm.js"></script>
+
+<div style="width: 100%; position: relative;" id="header">
+	<p>&#160;</p>
+</div>
+
+<?rh-placeholder type="breadcrumbs" ph-align="2" usetopicformat="0" home="Home" 
+ sep-char="&gt;" ph-style="font-family:Arial;font-size:9pt;font-weight: normal;font-style: normal;text-decoration: none;" ?>
+
+<h1 class="Doubt">List Using Relation_NavProp</h1>
+<ul style="list-style: url('../../../../../../../Images/arrow.png');">
+	<li style="margin-left: -20px;"><h2><span lang="JA" xml:lang="JA" style="line-height: 115%; font-family: 'MS Mincho'; 
+		 mso-ascii-font-family: Arial; mso-fareast-theme-font: minor-fareast; 
+		 mso-hansi-font-family: Arial; mso-bidi-font-family: Arial; mso-ansi-language: EN-US; 
+		 mso-fareast-language: JA; mso-bidi-language: AR-SA; font-weight: bold;">概要</span></h2></li>
+</ul>
+<p class="Paragraph">This API retrieves <span style="color: #ff0000;">Retrieved 
+ via Navigation Property of Relation Box, ExtCell, ExtRole, the Role</span></p>
+<ul style="list-style: url('../../../../../../../Images/arrow.png');">
+	<li style="margin-left: -20px;"><h2><span style="font-weight: bold;">必要な権限</span></h2></li>
+</ul>
+<p class="Bullet_1"><span style="font-family:'Symbol'">&#183;</span><span style='word-spacing:normal; font:6.0pt "Times New Roman"'>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</span><font><font>If 
+ you want to get the Box</font></font><br />
+<font><font>Box-read</font></font></p>
+<p class="Bullet_1"><span style="font-family:'Symbol'">&#183;</span><span style='word-spacing:normal; font:6.0pt "Times New Roman"'>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</span><font><font>If 
+ you want to get ExtCell</font></font><br />
+<font><font>auth-read</font></font></p>
+<p class="Bullet_1"><span style="font-family:'Symbol'">&#183;</span><span style='word-spacing:normal; font:6.0pt "Times New Roman"'>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</span><font><font>If 
+ you get the ExtRole</font></font><br />
+<font><font>social</font></font></p>
+<p class="Bullet_1"><span style="font-family:'Symbol'">&#183;</span><span style='word-spacing:normal; font:6.0pt "Times New Roman"'>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</span><font><font 
+	 class="">If you want to get the role</font></font><br />
+<font><font class="">auth-read</font></font></p>
+<ul style="list-style: url('../../../../../../../Images/arrow.png');">
+	<li style="margin-left: -20px;"><h2><span style="font-weight: bold;">制限事項</span></h2></li>
+</ul>
+<div>
+<p class="Bullet_1"><span style="font-family:'Symbol'">&#183;</span><span style='word-spacing:normal; font:6.0pt "Times New Roman"'>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</span>リクエストヘッダーのContent-Typeは全てapplication/jsonとして扱う</p>
+<p class="Bullet_1"><span style="font-family:'Symbol'">&#183;</span><span style='word-spacing:normal; font:6.0pt "Times New Roman"'>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</span>リクエストボディはjson形式のみ受け付ける</p>
+<p class="Bullet_1"><span style="font-family:'Symbol'">&#183;</span><span style='word-spacing:normal; font:6.0pt "Times New Roman"'>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</span>レスポンスヘッダーのContent-Typeはapplication/jsonのみをサポートし、レスポンスボディはjson形式とする</p>
+<p class="Bullet_1"><span style="font-family:'Symbol'">&#183;</span><span style='word-spacing:normal; font:6.0pt "Times New Roman"'>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</span>$formatクエリオプションにatom 
+ または xmlを指定した場合、エラーとはならないが、レスポンスボディのデータの保証はない</p>
+</div>
+<ul style="list-style: url('../../../../../../../Images/arrow.png');">
+	<li style="margin-left: -20px;"><h2><span style="font-weight: bold;">リクエスト</span></h2></li>
+</ul>
+<h3><span style="font-weight: bold;">リクエストURL</span></h3>
+<h4 class="Paragraph2">Register a Box</h4>
+<table class="CodeTable" style="margin-left: 26pt;" cellspacing="0px" width="96%">
+	<col style="width: 100%;" />
+	<tr>
+		<td><p class="Code">/{Cell_name}/__ctl/Relation(Name='{relation_name}',_Box.Name='{box_name}')/_Box</p>
+		<p class="Code">Or,</p>
+		<p class="Code">/{Cell_name}/__ctl/Relation(Name='{relation_name}')/_Box</p>
+		<p class="Code">Or,</p>
+		<p class="Code">/{Cell_name}/__ctl/Relation('{relation_name}')/_Box</p></td>
+	</tr>
+</table>
+<h4>Register an ExtCell</h4>
+<table class="CodeTable" style="margin-left: 26pt;" cellspacing="0px" width="96%">
+	<col style="width: 100%;" />
+	<tr>
+		<td><p class="Code">/{Cell_name}/__ctl/Relation(Name='{relation_name}',_Box.Name='{box_name}')/_ExtCell</p>
+		<p class="Code">Or,</p>
+		<p class="Code">/{Cell_name}/__ctl/Relation(Name='{relation_name}')/_ExtCell</p>
+		<p class="Code">Or,</p>
+		<p class="Code">/{Cell_name}/__ctl/Relation('{relation_name}')/_ExtCell</p></td>
+	</tr>
+</table>
+<h4>Register an ExtRole</h4>
+<table class="CodeTable" style="margin-left: 26pt;" cellspacing="0px" width="96%">
+	<col style="width: 100%;" />
+	<tr>
+		<td><p class="Code">/{Cell_name}/__ctl/Relation(Name='{relation_name}',_Box.Name='{box_name}')/_ExtRole</p>
+		<p class="Code">Or,</p>
+		<p class="Code">/{Cell_name}/__ctl/Relation(Name='{relation_name}')/_ExtRole</p>
+		<p class="Code">Or,</p>
+		<p class="Code">/{Cell_name}/__ctl/Relation('{relation_name}')/_ExtRole</p></td>
+	</tr>
+</table>
+<h4>Register a Role</h4>
+<table class="CodeTable" style="margin-left: 26pt;" cellspacing="0px" width="96%">
+	<col style="width: 100%;" />
+	<tr>
+		<td><p class="Code">/{Cell_name}/__ctl/Relation(Name='{relation_name}',_Box.Name='{box_name}')/_Role</p>
+		<p class="Code">Or,</p>
+		<p class="Code">/{Cell_name}/__ctl/Relation(Name='{relation_name}')/_Role</p>
+		<p class="Code">Or,</p>
+		<p class="Code">/{Cell_name}/__ctl/Relation('{relation_name}')/_Role</p></td>
+	</tr>
+</table>
+<p class="Paragraph2">&#160;</p>
+<p class="Paragraph2">If you omit the _Box.Name parameter, specify the 
+ null value</p>
+<h3><span style="font-weight: bold;">メソッド</span></h3>
+<p class="Paragraph2"><font>GET</font></p>
+<h3><span style="font-weight: bold;">リクエストクエリ</span></h3>
+<p class="Paragraph2"><font><font>The following parameters are available 
+ for query.</font></font></p>
+<p class="Bullet_1"><span style="font-family:'Symbol'">&#183;</span><span style='word-spacing:normal; font:6.0pt "Times New Roman"'>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</span><a href="../../../../../../JAP/PersonaContainerAPIs/CellLevelAPIs/CommonAPIs/FilterQuery.htm">$filter 
+ query</a></p>
+<p class="Bullet_1"><span style="font-family:'Symbol'">&#183;</span><span style='word-spacing:normal; font:6.0pt "Times New Roman"'>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</span><a href="../../../../../../JAP/PersonaContainerAPIs/CellLevelAPIs/CommonAPIs/InlinecountQuery.htm">$inlinecount 
+ query</a></p>
+<p class="Bullet_1"><span style="font-family:'Symbol'">&#183;</span><span style='word-spacing:normal; font:6.0pt "Times New Roman"'>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</span><a href="../../../../../../JAP/PersonaContainerAPIs/CellLevelAPIs/CommonAPIs/OrderbyQuery.htm">$orderby 
+ query</a></p>
+<p class="Bullet_1"><span style="font-family:'Symbol'">&#183;</span><span style='word-spacing:normal; font:6.0pt "Times New Roman"'>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</span><a href="../../../../../../JAP/PersonaContainerAPIs/CellLevelAPIs/CommonAPIs/SelectQuery.htm">$select 
+ query</a></p>
+<p class="Bullet_1"><span style="font-family:'Symbol'">&#183;</span><span style='word-spacing:normal; font:6.0pt "Times New Roman"'>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</span><a href="../../../../../../JAP/PersonaContainerAPIs/CellLevelAPIs/CommonAPIs/ExpandQuery.htm">$expand 
+ query</a></p>
+<p class="Bullet_1"><span style="font-family:'Symbol'">&#183;</span><span style='word-spacing:normal; font:6.0pt "Times New Roman"'>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</span><a href="../../../../../../JAP/PersonaContainerAPIs/CellLevelAPIs/CommonAPIs/FormatQuery.htm">$format 
+ query</a></p>
+<p class="Bullet_1"><span style="font-family:'Symbol'">&#183;</span><span style='word-spacing:normal; font:6.0pt "Times New Roman"'>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</span><a href="../../../../../../JAP/PersonaContainerAPIs/CellLevelAPIs/CommonAPIs/TopQuery.htm">$top 
+ query</a></p>
+<p class="Bullet_1"><span style="font-family:'Symbol'">&#183;</span><span style='word-spacing:normal; font:6.0pt "Times New Roman"'>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</span><a href="../../../../../../JAP/PersonaContainerAPIs/CellLevelAPIs/CommonAPIs/SkipQuery.htm">$skip 
+ query</a></p>
+<p class="Bullet_1"><span style="font-family:'Symbol'">&#183;</span><span style='word-spacing:normal; font:6.0pt "Times New Roman"'>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</span><a href="../../../../../../JAP/PersonaContainerAPIs/CellLevelAPIs/CommonAPIs/FullTextSearchQuery.htm">Full-text 
+ search (q) queries</a> [Not fixed yet.]</p>
+<h3><span style="font-weight: bold;">リクエストヘッダ</span></h3>
+<div>
+<table style="margin-left: 26pt;" cellspacing="0" width="96%">
+	<col style="width: 22%;" />
+	<col style="width: 20%;" />
+	<col style="width: 20%;" />
+	<col style="width: 10%;" />
+	<col style="width: 28%;" />
+	<tr>
+		<th style="border: Solid 1px #9b9b9b;" bgcolor="#353D47"><p class="GreyColumnHeading"><font><font>Header 
+		 name</font></font></p></th>
+		<th style="border-top: Solid 1px #9b9b9b; border-right: Solid 1px #9b9b9b; 
+			 border-bottom: Solid 1px #9b9b9b;" bgcolor="#353D47"><p class="GreyColumnHeading"><font><font>Summary</font></font></p></th>
+		<th style="border-top: Solid 1px #9b9b9b; border-right: Solid 1px #9b9b9b; 
+			 border-bottom: Solid 1px #9b9b9b;" bgcolor="#353D47"><p class="GreyColumnHeading"><font><font>Valid 
+		 value</font></font></p></th>
+		<th style="border-top: Solid 1px #9b9b9b; border-right: Solid 1px #9b9b9b; 
+			 border-bottom: Solid 1px #9b9b9b;" bgcolor="#353D47"><p class="GreyColumnHeading"><font><font>Required</font></font></p></th>
+		<th style="border-top: Solid 1px #9b9b9b; border-right: Solid 1px #9b9b9b; 
+			 border-bottom: Solid 1px #9b9b9b;" bgcolor="#353D47"><p class="GreyColumnHeading"><font><font>Remarks</font></font></p></th>
+	</tr>
+</table>
+</div>
+<div>
+<table class="ParameterTable" style="margin-left: 26pt;" cellspacing="0px" width="96%">
+	<col style="width: 22%;" />
+	<col style="width: 20%;" />
+	<col style="width: 20%;" />
+	<col style="width: 10%;" />
+	<col style="width: 28%;" />
+	<tr>
+		<td style="border: Solid 1px #9b9b9b; vertical-align: top;"><p 
+			 class="TableText"><font><font>X-Dc-Version</font></font></p></td>
+		<td style="border-top: Solid 1px #9b9b9b; border-right: Solid 1px #9b9b9b; 
+			 border-bottom: Solid 1px #9b9b9b; vertical-align: top;"><p 
+			 class="TableText">Executable version of the Data Cloud API</p></td>
+		<td style="border-top: Solid 1px #9b9b9b; border-right: Solid 1px #9b9b9b; 
+			 border-bottom: Solid 1px #9b9b9b; vertical-align: top;"><p 
+			 class="TableText"><font><font>Valid version</font></font></p></td>
+		<td style="border-top: Solid 1px #9b9b9b; border-right: Solid 1px #9b9b9b; 
+			 border-bottom: Solid 1px #9b9b9b; vertical-align: top;"><p 
+			 class="TableText"><font><font>×</font></font></p></td>
+		<td style="border-top: Solid 1px #9b9b9b; border-right: Solid 1px #9b9b9b; 
+			 border-bottom: Solid 1px #9b9b9b; vertical-align: top;"><p 
+			 class="TableText">If not specified, the latest version of 
+		 API is specified</p></td>
+	</tr>
+</table>
+</div>
+<div>
+<table class="ParameterTable" style="margin-left: 26pt;" cellspacing="0px" width="96%">
+	<col style="width: 22%;" />
+	<col style="width: 20%;" />
+	<col style="width: 20%;" />
+	<col style="width: 10%;" />
+	<col style="width: 28%;" />
+	<tr>
+		<td style="border-left: solid 1px #9b9b9b; border-right: Solid 1px #9b9b9b; 
+			 border-bottom: Solid 1px #9b9b9b; vertical-align: top;"><p 
+			 class="TableText"><font><font>X-HTTP-Method-Override</font></font></p></td>
+		<td style="border-right: Solid 1px #9b9b9b; border-bottom: Solid 1px #9b9b9b; 
+			 vertical-align: top;"><p class="TableText" style="color: #353535;">Function 
+		 method override</p></td>
+		<td style="border-right: Solid 1px #9b9b9b; border-bottom: Solid 1px #9b9b9b; 
+			 vertical-align: top;"><p class="TableText"><font><font>Any</font></font></p></td>
+		<td style="border-right: Solid 1px #9b9b9b; border-bottom: Solid 1px #9b9b9b; 
+			 vertical-align: top;"><p class="TableText"><font><font>×</font></font></p></td>
+		<td style="border-right: Solid 1px #9b9b9b; border-bottom: Solid 1px #9b9b9b; 
+			 vertical-align: top;"><p class="TableText">If this value is 
+		 specified at the time of the request in the POST method, the specified 
+		 value is used as a method</p></td>
+	</tr>
+</table>
+</div>
+<div>
+<table class="ParameterTable" style="margin-left: 26pt;" cellspacing="0px" width="96%">
+	<col style="width: 22%;" />
+	<col style="width: 20%;" />
+	<col style="width: 20%;" />
+	<col style="width: 10%;" />
+	<col style="width: 28%;" />
+	<tr>
+		<td style="border-left: solid 1px #9b9b9b; border-right: Solid 1px #9b9b9b; 
+			 border-bottom: Solid 1px #9b9b9b; vertical-align: top;"><p 
+			 class="TableText"><font><font>X-Override</font></font></p></td>
+		<td style="border-right: Solid 1px #9b9b9b; border-bottom: Solid 1px #9b9b9b; 
+			 vertical-align: top;"><p class="TableText"><font><font>Header 
+		 override function</font></font></p></td>
+		<td style="border-right: Solid 1px #9b9b9b; border-bottom: Solid 1px #9b9b9b; 
+			 vertical-align: top;"><p class="TableText"><font><font>{Name 
+		 of the header to override} $: $ {value}</font></font></p></td>
+		<td style="border-right: Solid 1px #9b9b9b; border-bottom: Solid 1px #9b9b9b; 
+			 vertical-align: top;"><p class="TableText"><font><font>×</font></font></p></td>
+		<td style="border-right: Solid 1px #9b9b9b; border-bottom: Solid 1px #9b9b9b; 
+			 vertical-align: top;"><p class="TableText">Overrides the value 
+		 of the HTTP header.</p>
+		<p class="TableText" style="color: #353535;">If you want to override 
+		 multiple headers, specify multiple X-Override.</p></td>
+	</tr>
+</table>
+</div>
+<div>
+<table class="ParameterTable" style="margin-left: 26pt;" cellspacing="0px" width="96%">
+	<col style="width: 22%;" />
+	<col style="width: 20%;" />
+	<col style="width: 20%;" />
+	<col style="width: 10%;" />
+	<col style="width: 28%;" />
+	<tr>
+		<td style="border-left: Solid 1px #9b9b9b; border-right: Solid 1px #9b9b9b; 
+			 border-bottom: Solid 1px #9b9b9b; vertical-align: top;"><p 
+			 class="TableText">X-Dc-RequestKey</p></td>
+		<td style="border-right: Solid 1px #9b9b9b; border-bottom: Solid 1px #9b9b9b; 
+			 vertical-align: top;"><p class="TableText">Value of RequestKey 
+		 field to be output to the event log</p></td>
+		<td style="border-right: Solid 1px #9b9b9b; border-bottom: Solid 1px #9b9b9b; 
+			 vertical-align: top;"><p class="TableText">Alphanumeric characters: 
+		 up to 128</p>
+		<p class="TableText">_ (underscore) and - (hyphen)</p></td>
+		<td style="border-right: Solid 1px #9b9b9b; border-bottom: Solid 1px #9b9b9b; 
+			 vertical-align: top;"><p class="TableText">×</p></td>
+		<td style="border-right: Solid 1px #9b9b9b; border-bottom: Solid 1px #9b9b9b; 
+			 vertical-align: top;"><p class="TableText">If not specified 
+		 then set PCS-${UNIXtime}</p>
+		<p class="TableText">Supported for V1.1.7 or later</p></td>
+	</tr>
+</table>
+</div>
+<div>
+<table class="ParameterTable" style="margin-left: 26pt;" cellspacing="0px" width="96%">
+	<col style="width: 22%;" />
+	<col style="width: 20%;" />
+	<col style="width: 20%;" />
+	<col style="width: 10%;" />
+	<col style="width: 28%;" />
+	<tr>
+		<td style="border-left: solid 1px #9b9b9b; border-right: Solid 1px #9b9b9b; 
+			 border-bottom: Solid 1px #9b9b9b; vertical-align: top;"><p 
+			 class="TableText"><font><font>Authorization</font></font></p></td>
+		<td style="border-right: Solid 1px #9b9b9b; border-bottom: Solid 1px #9b9b9b; 
+			 vertical-align: top;"><p class="TableText">In the form of 
+		 OAuth2.0, specify the authentication information</p></td>
+		<td style="border-right: Solid 1px #9b9b9b; border-bottom: Solid 1px #9b9b9b; 
+			 vertical-align: top;"><p class="TableText"><font><font>Bearer{TokenValue}</font></font></p></td>
+		<td style="border-right: Solid 1px #9b9b9b; border-bottom: Solid 1px #9b9b9b; 
+			 vertical-align: top;"><p class="TableText"><font><font>○</font></font></p></td>
+		<td style="border-right: Solid 1px #9b9b9b; border-bottom: Solid 1px #9b9b9b; 
+			 vertical-align: top;"><p class="TableText">Authentication 
+		 token obtained in the acquisition API</p></td>
+	</tr>
+</table>
+</div>
+<div>
+<table class="ParameterTable" style="margin-left: 26pt;" cellspacing="0px" width="96%">
+	<col style="width: 22%;" />
+	<col style="width: 20%;" />
+	<col style="width: 20%;" />
+	<col style="width: 10%;" />
+	<col style="width: 28%;" />
+	<tr>
+		<td style="border-left: solid 1px #9b9b9b; border-right: Solid 1px #9b9b9b; 
+			 border-bottom: Solid 1px #9b9b9b; vertical-align: top;"><p 
+			 class="TableText"><font><font>Accept</font></font></p></td>
+		<td style="border-right: Solid 1px #9b9b9b; border-bottom: Solid 1px #9b9b9b; 
+			 vertical-align: top;"><p class="TableText"><font><font>Specifies 
+		 the format of the response body</font></font></p></td>
+		<td style="border-right: Solid 1px #9b9b9b; border-bottom: Solid 1px #9b9b9b; 
+			 vertical-align: top;"><p class="TableText"><font><font>application/json</font></font></p></td>
+		<td style="border-right: Solid 1px #9b9b9b; border-bottom: Solid 1px #9b9b9b; 
+			 vertical-align: top;"><p class="TableText"><font><font>×</font></font></p></td>
+		<td style="border-right: Solid 1px #9b9b9b; border-bottom: Solid 1px #9b9b9b; 
+			 vertical-align: top;"><p class="TableText">Default is treated 
+		 as [application/json]</p></td>
+	</tr>
+</table>
+</div>
+<h3>リクエストボディ</h3>
+<p class="Paragraph2">No</p>
+<h3><span style="font-weight: bold;">リクエストサンプル</span></h3>
+<p class="Paragraph2">No</p>
+<ul style="list-style: url('../../../../../../../Images/arrow.png');">
+	<li style="margin-left: -20px;"><h2><span style="font-weight: bold;">レスポンス</span></h2></li>
+</ul>
+<h3><span style="font-weight: bold;">ステータスコード</span></h3>
+<p class="Paragraph2"><font>200</font></p>
+<h3><span style="font-weight: bold;">レスポンスヘッダ</span></h3>
+<div>
+<table class="ParameterTable" style="margin-left: 26pt;" cellspacing="0px" width="96%">
+	<col style="width: 23.686%;" />
+	<col style="width: 30.236%;" />
+	<col style="width: 46.078%;" />
+	<tr>
+		<th style="border-top: Solid 1px #c0c0c0; border-left: solid 1px #9b9b9b; 
+			 border-right: Solid 1px #9b9b9b; border-bottom: Solid 1px #9b9b9b;" 
+			 bgcolor="#353D47"><p class="GreyColumnHeading"><font><font>Header 
+		 name</font></font></p></th>
+		<th style="border-top: Solid 1px #c0c0c0; border-right: Solid 1px #9b9b9b; 
+			 border-bottom: Solid 1px #9b9b9b;" bgcolor="#353D47"><p class="GreyColumnHeading"><font><font>Summary</font></font></p></th>
+		<th style="border-top: Solid 1px #c0c0c0; border-right: Solid 1px #9b9b9b; 
+			 border-bottom: Solid 1px #9b9b9b;" bgcolor="#353D47"><p class="GreyColumnHeading"><font><font>Remarks</font></font></p></th>
+	</tr>
+</table>
+</div>
+<div>
+<table style="margin-left: 26pt;" cellspacing="0" width="96%">
+	<col style="width: 23.686%;" />
+	<col style="width: 30.236%;" />
+	<col style="width: 46.078%;" />
+	<tr>
+		<td style="border-left: Solid 1px #9b9b9b; border-right: Solid 1px #9b9b9b; 
+			 border-bottom: Solid 1px #9b9b9b; vertical-align: top;"><p 
+			 class="TableText"><font><font>X-Dc-Version</font></font></p></td>
+		<td style="border-right: Solid 1px #9b9b9b; border-bottom: Solid 1px #9b9b9b; 
+			 vertical-align: top;"><p class="TableText">Running version 
+		 of the Data Cloud API</p></td>
+		<td style="border-right: Solid 1px #9b9b9b; border-bottom: Solid 1px #9b9b9b; 
+			 vertical-align: top;"><p class="TableText">API version that 
+		 the request is processed</p></td>
+	</tr>
+</table>
+</div>
+<div>
+<table style="margin-left: 26pt;" cellspacing="0" width="96%">
+	<col style="width: 23.686%;" />
+	<col style="width: 30.236%;" />
+	<col style="width: 46.078%;" />
+	<tr>
+		<td style="border-left: Solid 1px #9b9b9b; border-right: Solid 1px #9b9b9b; 
+			 border-bottom: Solid 1px #9b9b9b; vertical-align: top;"><p 
+			 class="TableText"><font><font>Access-Control-Allow-Origin</font></font></p></td>
+		<td style="border-right: Solid 1px #9b9b9b; border-bottom: Solid 1px #9b9b9b; 
+			 vertical-align: top;"><p class="TableText">Cross-domain communication 
+		 authorization header</p></td>
+		<td style="border-right: Solid 1px #9b9b9b; border-bottom: Solid 1px #9b9b9b; 
+			 vertical-align: top;"><p class="TableText">Fixed &quot;*&quot; 
+		 return value</p></td>
+	</tr>
+</table>
+</div>
+<div>
+<table class="ParameterTable" style="margin-left: 26pt;" cellspacing="0px" width="96%">
+	<col style="width: 23.686%;" />
+	<col style="width: 30.236%;" />
+	<col style="width: 46.078%;" />
+	<tr>
+		<td style="border-left: solid 1px #9b9b9b; border-right: Solid 1px #9b9b9b; 
+			 border-bottom: Solid 1px #9b9b9b;"><p class="TableText"><font><font>Content-Type</font></font></p></td>
+		<td style="border-right: Solid 1px #9b9b9b; border-bottom: Solid 1px #9b9b9b;"><p 
+			 class="TableText">Format of the data to be returned</p></td>
+		<td style="border-right: Solid 1px #9b9b9b; border-bottom: Solid 1px #9b9b9b;"><p 
+			 class="TableText">&#160;</p></td>
+	</tr>
+</table>
+</div>
+<div>
+<table style="margin-left: 26pt;" cellspacing="0" width="96%">
+	<col style="width: 23.686%;" />
+	<col style="width: 30.236%;" />
+	<col style="width: 46.078%;" />
+	<tr>
+		<td style="border-left: Solid 1px #9b9b9b; border-right: Solid 1px #9b9b9b; 
+			 border-bottom: Solid 1px #9b9b9b;"><p class="TableText"><font><font>DataServiceVersion</font></font></p></td>
+		<td style="border-right: Solid 1px #9b9b9b; border-bottom: Solid 1px #9b9b9b;"><p 
+			 class="TableText"><font><font>Version of OData</font></font></p></td>
+		<td style="border-right: Solid 1px #9b9b9b; border-bottom: Solid 1px #9b9b9b;"><p 
+			 class="TableText">&#160;</p></td>
+	</tr>
+</table>
+</div>
+<h3><span style="font-weight: bold;">レスポンスボディ</span></h3>
+<h4 class="Paragraph2">Common</h4>
+<p class="Paragraph2" style="box-sizing: border-box;"><font class="goog-text-highlight">Response, 
+ the JSON object is defined object (sub-objects)&#160;as well as the corresponding 
+ value of the type, (name) and key are as follows.</font></p>
+<div>
+<p class="Paragraph2" style="box-sizing: border-box; font-size: 10.0pt; 
+	 line-height: 115%; font-family: Arial, sans-serif; mso-fareast-font-family: 'Times New Roman'; 
+	 color: #353535;"><span style="mso-ansi-language: EN-US; mso-fareast-language: JA; 
+							 mso-bidi-language: AR-SA;">In response we 
+ get JSON Object, the JSON object is defined object (sub-objects)&#160;as 
+ well as the corresponding value of the type, (name) and key are as follows 
+ </span></p>
+<table style="margin-left: 26pt;" cellspacing="0" width="96%">
+	<col style="width: 16.028%;" />
+	<col style="width: 19.908%;" />
+	<col style="width: 22.636%;" />
+	<col style="width: 41.428%;" />
+	<tr>
+		<th style="border: Solid 1px #9b9b9b;" bgcolor="#353D47"><p class="GreyColumnHeading">Object</p></th>
+		<th style="border-top: Solid 1px #9b9b9b; border-right: Solid 1px #9b9b9b; 
+			 border-bottom: Solid 1px #9b9b9b;" bgcolor="#353D47"><p class="GreyColumnHeading">Name(Key)</p></th>
+		<th style="border-top: Solid 1px #9b9b9b; border-right: Solid 1px #9b9b9b; 
+			 border-bottom: Solid 1px #9b9b9b;" bgcolor="#353D47"><p class="GreyColumnHeading">Type</p></th>
+		<th style="border-top: Solid 1px #9b9b9b; border-right: Solid 1px #9b9b9b; 
+			 border-bottom: Solid 1px #9b9b9b;" bgcolor="#353D47"><p class="GreyColumnHeading">Value</p></th>
+	</tr>
+	<tr>
+		<td style="border-left: Solid 1px #9b9b9b; border-right: Solid 1px #9b9b9b; 
+			 border-bottom: Solid 1px #9b9b9b; vertical-align: top;"><p 
+			 class="TableText">Root</p></td>
+		<td style="border-right: Solid 1px #9b9b9b; border-bottom: Solid 1px #9b9b9b; 
+			 vertical-align: top;"><p class="TableText">d</p></td>
+		<td style="border-right: Solid 1px #9b9b9b; border-bottom: Solid 1px #9b9b9b; 
+			 vertical-align: top;"><p class="TableText">object</p></td>
+		<td style="border-right: Solid 1px #9b9b9b; border-bottom: Solid 1px #9b9b9b; 
+			 vertical-align: top;"><p class="TableText">Object {1}</p></td>
+	</tr>
+	<tr>
+		<td style="border-left: Solid 1px #9b9b9b; border-right: Solid 1px #9b9b9b; 
+			 border-bottom: Solid 1px #9b9b9b; vertical-align: top;"><p 
+			 class="TableText">{1}</p></td>
+		<td style="border-right: Solid 1px #9b9b9b; border-bottom: Solid 1px #9b9b9b; 
+			 vertical-align: top;"><p class="TableText">__count</p></td>
+		<td style="border-right: Solid 1px #9b9b9b; border-bottom: Solid 1px #9b9b9b; 
+			 vertical-align: top;"><p class="TableText">string</p></td>
+		<td style="border-right: Solid 1px #9b9b9b; border-bottom: Solid 1px #9b9b9b; 
+			 vertical-align: top;"><p class="TableText">Get number of results 
+		 in $inlinecount query</p></td>
+	</tr>
+	<tr>
+		<td style="border-left: Solid 1px #9b9b9b; border-right: Solid 1px #9b9b9b; 
+			 border-bottom: Solid 1px #9b9b9b; vertical-align: top;"><p 
+			 class="TableText">{1}</p></td>
+		<td style="border-right: Solid 1px #9b9b9b; border-bottom: Solid 1px #9b9b9b; 
+			 vertical-align: top;"><p class="TableText">results</p></td>
+		<td style="border-right: Solid 1px #9b9b9b; border-bottom: Solid 1px #9b9b9b; 
+			 vertical-align: top;"><p class="TableText">array</p></td>
+		<td style="border-right: Solid 1px #9b9b9b; border-bottom: Solid 1px #9b9b9b; 
+			 vertical-align: top;"><p class="TableText">Array object {2}</p></td>
+	</tr>
+	<tr>
+		<td style="border-left: Solid 1px #9b9b9b; border-right: Solid 1px #9b9b9b; 
+			 border-bottom: Solid 1px #9b9b9b; vertical-align: top;"><p 
+			 class="TableText">{2}</p></td>
+		<td style="border-right: Solid 1px #9b9b9b; border-bottom: Solid 1px #9b9b9b; 
+			 vertical-align: top;"><p class="TableText">__published</p></td>
+		<td style="border-right: Solid 1px #9b9b9b; border-bottom: Solid 1px #9b9b9b; 
+			 vertical-align: top;"><p class="TableText">string</p></td>
+		<td style="border-right: Solid 1px #9b9b9b; border-bottom: Solid 1px #9b9b9b; 
+			 vertical-align: top;"><p class="TableText">Creation date (UNIX 
+		 time)</p></td>
+	</tr>
+	<tr>
+		<td style="border-left: Solid 1px #9b9b9b; border-right: Solid 1px #9b9b9b; 
+			 border-bottom: Solid 1px #9b9b9b; vertical-align: top;"><p 
+			 class="TableText">{2}</p></td>
+		<td style="border-right: Solid 1px #9b9b9b; border-bottom: Solid 1px #9b9b9b; 
+			 vertical-align: top;"><p class="TableText">__updated</p></td>
+		<td style="border-right: Solid 1px #9b9b9b; border-bottom: Solid 1px #9b9b9b; 
+			 vertical-align: top;"><p class="TableText">string</p></td>
+		<td style="border-right: Solid 1px #9b9b9b; border-bottom: Solid 1px #9b9b9b; 
+			 vertical-align: top;"><p class="TableText">Update date (UNIX 
+		 time)</p></td>
+	</tr>
+	<tr>
+		<td style="border-left: Solid 1px #9b9b9b; border-right: Solid 1px #9b9b9b; 
+			 border-bottom: Solid 1px #9b9b9b; vertical-align: top;"><p 
+			 class="TableText">{2}</p></td>
+		<td style="border-right: Solid 1px #9b9b9b; border-bottom: Solid 1px #9b9b9b; 
+			 vertical-align: top;"><p class="TableText">__metadata</p></td>
+		<td style="border-right: Solid 1px #9b9b9b; border-bottom: Solid 1px #9b9b9b; 
+			 vertical-align: top;"><p class="TableText">object</p></td>
+		<td style="border-right: Solid 1px #9b9b9b; border-bottom: Solid 1px #9b9b9b; 
+			 vertical-align: top;"><p class="TableText">Object {3}</p></td>
+	</tr>
+	<tr>
+		<td style="border-left: Solid 1px #9b9b9b; border-right: Solid 1px #9b9b9b; 
+			 border-bottom: Solid 1px #9b9b9b; vertical-align: top;"><p 
+			 class="TableText">{3}</p></td>
+		<td style="border-right: Solid 1px #9b9b9b; border-bottom: Solid 1px #9b9b9b; 
+			 vertical-align: top;"><p class="TableText">etag</p></td>
+		<td style="border-right: Solid 1px #9b9b9b; border-bottom: Solid 1px #9b9b9b; 
+			 vertical-align: top;"><p class="TableText">string</p></td>
+		<td style="border-right: Solid 1px #9b9b9b; border-bottom: Solid 1px #9b9b9b; 
+			 vertical-align: top;"><p class="TableText">ETag value</p></td>
+	</tr>
+	<tr>
+		<td style="border-left: Solid 1px #9b9b9b; border-right: Solid 1px #9b9b9b; 
+			 border-bottom: Solid 1px #9b9b9b; vertical-align: top;"><p 
+			 class="TableText">{3}</p></td>
+		<td style="border-right: Solid 1px #9b9b9b; border-bottom: Solid 1px #9b9b9b; 
+			 vertical-align: top;"><p class="TableText">uri</p></td>
+		<td style="border-right: Solid 1px #9b9b9b; border-bottom: Solid 1px #9b9b9b; 
+			 vertical-align: top;"><p class="TableText">string</p></td>
+		<td style="border-right: Solid 1px #9b9b9b; border-bottom: Solid 1px #9b9b9b; 
+			 vertical-align: top;"><p class="TableText">URL to the resource 
+		 that you created</p></td>
+	</tr>
+</table>
+</div>
+<h4 class="Paragraph2" style="box-sizing: border-box;"><font class="goog-text-highlight"><span 
+	 class="goog-text-highlight">Relation</span><span>-specific</span></font></h4>
+<table style="margin-left: 26pt;" cellspacing="0" width="96%">
+	<col style="width: 16.337%;" />
+	<col style="width: 20.611%;" />
+	<col style="width: 22.785%;" />
+	<col style="width: 40.801%;" />
+	<tr>
+		<th style="border: Solid 1px #9b9b9b;" bgcolor="#353D47"><p class="GreyColumnHeading">Object</p></th>
+		<th style="border-top: Solid 1px #9b9b9b; border-right: Solid 1px #9b9b9b; 
+			 border-bottom: Solid 1px #9b9b9b;" bgcolor="#353D47"><p class="GreyColumnHeading">Name(Key)</p></th>
+		<th style="border-top: Solid 1px #9b9b9b; border-right: Solid 1px #9b9b9b; 
+			 border-bottom: Solid 1px #9b9b9b;" bgcolor="#353D47"><p class="GreyColumnHeading">Type</p></th>
+		<th style="border-top: Solid 1px #9b9b9b; border-right: Solid 1px #9b9b9b; 
+			 border-bottom: Solid 1px #9b9b9b;" bgcolor="#353D47"><p class="GreyColumnHeading">Value</p></th>
+	</tr>
+	<tr>
+		<td style="border-left: Solid 1px #9b9b9b; border-right: Solid 1px #9b9b9b; 
+			 border-bottom: Solid 1px #9b9b9b;"><p class="TableText">{3}</p></td>
+		<td style="border-right: Solid 1px #9b9b9b; border-bottom: Solid 1px #9b9b9b;"><p 
+			 class="TableText">type</p></td>
+		<td style="border-right: Solid 1px #9b9b9b; border-bottom: Solid 1px #9b9b9b;"><p 
+			 class="TableText">string</p></td>
+		<td style="border-right: Solid 1px #9b9b9b; border-bottom: Solid 1px #9b9b9b;"><p 
+			 class="TableText">CellCtl.Relation</p></td>
+	</tr>
+	<tr>
+		<td style="border-left: Solid 1px #9b9b9b; border-right: Solid 1px #9b9b9b; 
+			 border-bottom: Solid 1px #9b9b9b;"><p class="TableText">{2}</p></td>
+		<td style="border-right: Solid 1px #9b9b9b; border-bottom: Solid 1px #9b9b9b;"><p 
+			 class="TableText">Name</p></td>
+		<td style="border-right: Solid 1px #9b9b9b; border-bottom: Solid 1px #9b9b9b;"><p 
+			 class="TableText">string</p></td>
+		<td style="border-right: Solid 1px #9b9b9b; border-bottom: Solid 1px #9b9b9b;"><p 
+			 class="TableText">Relationship name</p></td>
+	</tr>
+	<tr>
+		<td style="border-left: Solid 1px #9b9b9b; border-right: Solid 1px #9b9b9b; 
+			 border-bottom: Solid 1px #9b9b9b;"><p class="TableText">{2}</p></td>
+		<td style="border-right: Solid 1px #9b9b9b; border-bottom: Solid 1px #9b9b9b;"><p 
+			 class="TableText">_Box.Name</p></td>
+		<td style="border-right: Solid 1px #9b9b9b; border-bottom: Solid 1px #9b9b9b;"><p 
+			 class="TableText"><font><font>string</font></font></p></td>
+		<td style="border-right: Solid 1px #9b9b9b; border-bottom: Solid 1px #9b9b9b;"><p 
+			 class="TableText">Box name of relationship target</p></td>
+	</tr>
+</table>
+<h3><span style="font-weight: bold; font-size: 10pt;">エラーメッセージ一覧</span></h3>
+<p class="Paragraph2">Refer to the <a href="../../../../../Appendix/ErrorMessages.htm">Error 
+ Messages</a>.</p>
+<h3><span style="font-weight: bold;">レスポンスサンプル</span></h3>
+<table class="CodeTable" style="margin-left: 26pt;" cellspacing="0px" width="96%">
+	<col style="width: 100%;" />
+	<tr>
+		<td><pre class="prettyprint">
+<p class="Code">{</p><p class="Code">&#160;&#160;&quot;d&quot;: {</p><p class="Code">&#160;&#160;&#160;&#160;&quot;results&quot;: {</p><p class="Code">&#160;&#160;&#160;&#160;&#160;&#160;&quot;Name&quot;: &quot;testrelation&quot;,</p><p class="Code">&#160;&#160;&#160;&#160;&#160;&#160;&quot;_Box.Name&quot;: &quot;testbox&quot;,</p><p class="Code">&#160;&#160;&#160;&#160;&#160;&#160;&quot;__metadata&quot;: { </p><p class="Code">&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&quot;uri&quot;: &quot;https://fqdn/cellname/__ctl/Relation(Name='testrelation',_Box.Name='testbox')&quot;,</p><p class="Code">&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&quot;type&quot;: &quot;CellCtl.relation&quot; </p><p class="Code">&#160;&#160;&#160;&#160;&#160;&#160;}, </p><p class="Code">&#160;&#160;&#160;&#160;&#160;&#160;&quot;__published&quot; : &quot;\/Date(1339128525502)\/&quot;, </p><p class="Code">&#160;&#160;&#160;&#160;&#160;&#160;&quot;__updated&quot; &#160;&#160;: &quot;\/Date(1339128525502)\/&quot; </p><p class="Code">&#160;&#160;&#160;&#160;}</p><p class="Code">&#160;&#160;}</p><p class="Code">}</p></pre></td>
+	</tr>
+</table>
+<ul style="list-style: url('../../../../../../../Images/arrow.png');">
+	<li style="margin-left: -20px;"><h2><span style="font-weight: bold;">CURLサンプル</span></h2></li>
+</ul>
+<h3>CURL Command</h3>
+<h4>If you want to create a Box</h4>
+<table class="CodeTable" style="margin-left: 26pt;" cellspacing="0px" width="96%">
+	<col style="width: 100%;" />
+	<tr>
+		<td><pre class="prettyprint">
+<p class="Code">curl &quot;https://fqdn/cellname/__ctl/Relation('relation')/_Box&quot;-X GET-v </p><p class="Code">&#160;-H 'Authorization:Bearer auth_token'-i-k</p></pre></td>
+	</tr>
+</table>
+<h4>If you want to create a ExtCell</h4>
+<table class="CodeTable" style="margin-left: 26pt;" cellspacing="0px" width="96%">
+	<col style="width: 100%;" />
+	<tr>
+		<td><pre class="prettyprint">
+<p class="Code">curl &quot;https://fqdn/cellname/__ctl/Relation('relation')/_ExtCell&quot;-X GET-v </p><p class="Code">&#160;-H 'Authorization:Bearer auth_token'-i-k</p></pre></td>
+	</tr>
+</table>
+<h4><font class="">If you want to create a ExtRole</font></h4>
+<table class="CodeTable" style="margin-left: 26pt;" cellspacing="0px" width="96%">
+	<col style="width: 100%;" />
+	<tr>
+		<td><pre class="prettyprint">
+<p class="Code">curl &quot;https://fqdn/cellname/__ctl/Relation ('relation')/_ExtRole&quot;-X GET-v </p><p class="Code">&#160;-H 'Authorization:Bearer auth_token'-i-k</p></pre></td>
+	</tr>
+</table>
+<h4>If you want to register a Role</h4>
+<table class="CodeTable" style="margin-left: 26pt;" cellspacing="0px" width="96%">
+	<col style="width: 100%;" />
+	<tr>
+		<td><pre class="prettyprint">
+<p class="Code">curl &quot;https://fqdn/cellname/__ctl/Relation ('relation')/_Role&quot;-X GET-v</p><p class="Code">&#160;-H 'Authorization:Bearer auth_token'-i-k</p></pre></td>
+	</tr>
+</table>
+<p class="Paragraph2">&#160;</p>
+<p class="Paragraph2">&#160;</p>
+<div style="border-top: Solid 4px #0080c0; width: 100%; 
+					 position: relative; background-color: #374049; padding-top: 7px; 
+					 padding-bottom: 7px; padding-right: 5px;" id="footer">
+	<p style="font-size: 8pt; color: #ffffff; text-align: right;"><span 
+	 style="mso-ascii-theme-font: minor-latin; mso-fareast-font-family: Calibri; 
+	 mso-fareast-theme-font: minor-latin; mso-hansi-theme-font: minor-latin; 
+	 mso-bidi-font-family: 'Times New Roman'; mso-bidi-theme-font: minor-bidi; 
+	 mso-ansi-language: EN-US; mso-fareast-language: EN-US; mso-bidi-language: AR-SA; 
+	 font-family: Arial, sans-serif;">All Rights Reserved,Copyright (C) 
+	 FUJITSU LIMITED 1998-2013</span> </p>
+</div>
+</body>
+</html>

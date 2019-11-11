@@ -1,0 +1,190 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+ <meta name="generator" content="Adobe RoboHelp 10" />
+<title>Role Class and Role Instance</title>
+<link rel="StyleSheet" href="../../../../default.css" type="text/css" />
+<script type="text/javascript" language="JavaScript">
+//<![CDATA[
+function reDo() {
+  if (innerWidth != origWidth || innerHeight != origHeight)
+     location.reload();
+}
+if ((parseInt(navigator.appVersion) == 4) && (navigator.appName == "Netscape")) {
+	origWidth = innerWidth;
+	origHeight = innerHeight;
+	onresize = reDo;
+}
+onerror = null; 
+//]]>
+</script>
+<style type="text/css">
+<!--
+div.WebHelpPopupMenu { position:absolute;
+left:0px;
+top:0px;
+z-index:4;
+visibility:hidden; }
+-->
+</style>
+<script type="text/javascript" language="javascript1.2" src="../../../../whmsg.js" charset="utf-8"></script>
+<script type="text/javascript" language="javascript" src="../../../../whver.js" charset="utf-8"></script>
+<script type="text/javascript" language="javascript1.2" src="../../../../whutils.js" charset="utf-8"></script>
+<script type="text/javascript" language="javascript1.2" src="../../../../whproxy.js" charset="utf-8"></script>
+<script type="text/javascript" language="javascript1.2" src="../../../../whlang.js" charset="utf-8"></script>
+<script type="text/javascript" language="javascript1.2" src="../../../../whtopic.js" charset="utf-8"></script>
+
+</head>
+
+<body page-style="x-size: Letter;"><script type="text/javascript" language="javascript1.2">//<![CDATA[
+<!--
+if (window.gbWhTopic)
+{
+	var strUrl = document.location.href;
+	var bc = 0;
+	var n = strUrl.toLowerCase().indexOf("bc-");
+	if(n != -1)
+	{
+		document.location.href = strUrl.substring(0, n);
+		bc = strUrl.substring(n+3);
+	}
+
+	if (window.addTocInfo)
+	{
+	addTocInfo("認証とアクセス制御\nロール操作\nロールクラス/ロールインスタンス");
+addButton("show",BTN_TEXT,"表示","","","","",0,0,"","","");
+
+	}
+	if (window.writeBtnStyle)
+		writeBtnStyle();
+
+	if (window.writeIntopicBar)
+		writeIntopicBar(1);
+
+	
+	
+}
+else
+	if (window.gbIE4)
+		document.location.reload();
+
+onLoadHandler = function()
+{
+  if (window.setRelStartPage)
+	{
+	setTimeout("setRelStartPage('../../../../Japanese.htm');", 1)
+
+    setTimeout("UpdateBreadCrumbsMarker();", 1);
+	}
+}
+
+if (window.addEventListener){  
+	window.addEventListener('load', onLoadHandler, false);   
+} else if (window.attachEvent){  
+	window.attachEvent('onload', onLoadHandler);  
+}
+
+function onSetStartPage()
+{
+  autoSync(1);
+  sendSyncInfo();
+  sendAveInfoOut();
+}
+//-->
+//]]></script>
+<script type="text/javascript" src="../../../../ehlpdhtm.js" language="JavaScript1.2"></script>
+
+<h1>ロールクラス/ロールインスタンス</h1>
+<ul>
+	<li style="list-style: url('../../../../Images/arrow.png'); margin-left: -20px;"><h2>ロールクラス</h2></li>
+</ul>
+<p class="Paragraph" style="font-size: 10.0pt; line-height: 115%; mso-fareast-font-family: Calibri; 
+	 mso-fareast-theme-font: minor-latin;"><span style="mso-ansi-language: EN-US; 
+												 mso-fareast-language: EN-US; 
+												 mso-bidi-language: AR-SA;">ロールクラスとは、アプリとして定義されるロールリソースを指す。</span></p>
+<p class="Paragraph" style="font-size: 10.0pt; line-height: 115%; mso-fareast-font-family: Calibri;"><span 
+	 style="mso-fareast-theme-font: minor-latin; mso-ansi-language: EN-US; 
+	 mso-fareast-language: EN-US; mso-bidi-language: AR-SA;">ト</span>ランスセルトークン内にそのトークンが持つロールクラスURLとして内部的に持ち、ExtRoleの設定比較の際に利用する。</p>
+<p class="Paragraph">以下のようなURLであらわされる。</p>
+<p class="Code" style="margin-left: 40px; font-weight: bold;">&#160;</p>
+<p class="Code" style="margin-left: 40px; font-weight: bold;">${スキーマURL}/__role/__/${ロール名}*</p>
+<p class="Paragraph">&#160;</p>
+<p class="Paragraph">スキーマURL:ロールが属するスキーマURL（アプリセルURL）</p>
+<p class="Paragraph">ロール名: ロール名</p>
+<h4>サンプル</h4>
+<table class="CodeTable" style="margin-left: 26pt;" cellspacing="0px" width="96%">
+	<col style="width: 100%;" />
+	<tr>
+		<td>https://fqdn/cell1/__role/__/doctor1</td>
+	</tr>
+</table>
+<ul>
+	<li style="list-style: url('../../../../Images/arrow.png'); margin-left: -20px;"><h2>ロールインスタンス</h2></li>
+</ul>
+<p class="Paragraph">ロールインスタンスとは、セルで個別に登録されるロールの実態を指す。<br />
+URL構造はロールリソースURLと同じ。</p>
+<ul>
+	<li style="list-style: url('../../../../Images/arrow.png'); margin-left: -20px;"><h2>概要</h2></li>
+</ul>
+<p class="Paragraph"><a href="../../../../../../../../../C:/Users/Owner/workspace/HCL-PCS_Repo/track_3/test/#Figure1:RoleClassandRoleInstance">&#160;図1</a> 
+ ロールクラスとロールインスタンスの使用方法</p>
+<p class="Figure"><img src="../../../../Images/RoleClassandRoleInstance.gif" 
+						 alt="" style="border: none;" border="0" /></p>
+<p class="Figure" style="font-weight: bold;"><a name="Figure1:RoleClassandRoleInstance" 
+												 id="Figure1:RoleClassandRoleInstance">Figure 
+ 1: ロールクラスとロールインスタンス</a></p>
+<ul>
+	<li style="list-style: url('../../../../Images/arrow.png'); margin-left: -20px;"><h2>ロールクラス/ロールインスタンス使用方法</h2></li>
+</ul>
+<p class="Paragraph">上記のようなセルの関係がある場合、ロールクラスURLとロールインスタンスURLは以下の様な使い分けを行う。</p>
+<h3>appCell</h3>
+<p class="Paragraph2">ExtRoleの「ExtRole」パラメータにdataCellAの「doctor」を設定する場合は、 
+ <strong>ロールクラスURL</strong> を設定する</p>
+<table class="CodeTable" style="margin-left: 26pt;" cellspacing="0px" width="96%">
+	<col style="width: 100%;" />
+	<tr>
+		<td>http://fqdn/appCell/__role/__/doctor</td>
+	</tr>
+</table>
+<p class="Paragraph2">&#160;</p>
+<p class="Paragraph2">ExtRoleの「ExtRole」パラメータにdataCellBの「doctor」を設定する場合は、 
+ <strong>ロールインスタンスURL</strong> を設定する</p>
+<table class="CodeTable" style="margin-left: 26pt;" cellspacing="0px" width="96%">
+	<col style="width: 100%;" />
+	<tr>
+		<td>http://fqdn/dataCellB/__role/__/doctor</td>
+	</tr>
+</table>
+<h3>dataCellA</h3>
+<p class="Paragraph2">自セル内で「doctor」を指定する時に <strong>ロールインスタンスURL</strong> 
+ を設定する</p>
+<table class="CodeTable" style="margin-left: 26pt;" cellspacing="0px" width="96%">
+	<col style="width: 100%;" />
+	<tr>
+		<td>http://fqdn/dataCellA/__role/Box_A/doctor</td>
+	</tr>
+</table>
+<h3>dataCellB</h3>
+<p class="Paragraph2">自セル内で「doctor」を指定する時に <strong>ロールインスタンスURL</strong> 
+ を設定する</p>
+<table class="CodeTable" style="margin-left: 26pt;" cellspacing="0px" width="96%">
+	<col style="width: 100%;" />
+	<tr>
+		<td>http://fqdn/dataCellB/__role/__/doctor</td>
+	</tr>
+</table>
+<p class="Paragraph2">&#160;</p>
+<p class="Paragraph2">&#160;</p>
+<script type="text/javascript" language="javascript1.2">//<![CDATA[
+<!--
+if (window.writeIntopicBar)
+	writeIntopicBar(0);
+
+
+highlightSearch();
+//-->
+//]]></script>
+</body>
+</html>

@@ -1,0 +1,180 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN"
+    "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+<meta http-equiv="Content-Language" content="en-US" />
+<meta name="generator" content="Adobe RoboHelp 10" />
+<title>CORS対応</title>
+<link rel="StyleSheet" href="../../../../../../default.css" type="text/css" />
+<script type="text/javascript" src="../../../../../../prettify.js" language="JavaScript1.2">
+</script>
+<script type="text/javascript" language="JavaScript">
+//<![CDATA[
+function reDo() {
+  if (innerWidth != origWidth || innerHeight != origHeight)
+     location.reload();
+}
+if ((parseInt(navigator.appVersion) == 4) && (navigator.appName == "Netscape")) {
+	origWidth = innerWidth;
+	origHeight = innerHeight;
+	onresize = reDo;
+}
+onerror = null; 
+//]]>
+</script>
+<style type="text/css">
+<!--
+div.WebHelpPopupMenu { position:absolute;
+left:0px;
+top:0px;
+z-index:4;
+visibility:hidden; }
+-->
+</style>
+<script type="text/javascript" language="javascript1.2" src="../../../../../../whmsg.js" charset="utf-8"></script>
+<script type="text/javascript" language="javascript" src="../../../../../../whver.js" charset="utf-8"></script>
+<script type="text/javascript" language="javascript1.2" src="../../../../../../whutils.js" charset="utf-8"></script>
+<script type="text/javascript" language="javascript1.2" src="../../../../../../whproxy.js" charset="utf-8"></script>
+<script type="text/javascript" language="javascript1.2" src="../../../../../../whlang.js" charset="utf-8"></script>
+<script type="text/javascript" language="javascript1.2" src="../../../../../../whtopic.js" charset="utf-8"></script>
+
+</head>
+<body onload="prettyPrint()"><script type="text/javascript" language="javascript1.2">//<![CDATA[
+<!--
+if (window.gbWhTopic)
+{
+	var strUrl = document.location.href;
+	var bc = 0;
+	var n = strUrl.toLowerCase().indexOf("bc-");
+	if(n != -1)
+	{
+		document.location.href = strUrl.substring(0, n);
+		bc = strUrl.substring(n+3);
+	}
+
+	if (window.addTocInfo)
+	{
+	addTocInfo("API リファレンス\nペルソナコンテナAPI\n共通仕様\nCrossDomainAccessControl\nCORS対応");
+addButton("show",BTN_TEXT,"表示","","","","",0,0,"","","");
+
+	}
+	if (window.writeBtnStyle)
+		writeBtnStyle();
+
+	if (window.writeIntopicBar)
+		writeIntopicBar(1);
+
+	
+	
+}
+else
+	if (window.gbIE4)
+		document.location.reload();
+
+onLoadHandler = function()
+{
+  if (window.setRelStartPage)
+	{
+	setTimeout("setRelStartPage('../../../../../../Japanese.htm');", 1)
+
+    setTimeout("UpdateBreadCrumbsMarker();", 1);
+	}
+}
+
+if (window.addEventListener){  
+	window.addEventListener('load', onLoadHandler, false);   
+} else if (window.attachEvent){  
+	window.attachEvent('onload', onLoadHandler);  
+}
+
+function onSetStartPage()
+{
+  autoSync(1);
+  sendSyncInfo();
+  sendAveInfoOut();
+}
+//-->
+//]]></script>
+<script type="text/javascript" src="../../../../../../ehlpdhtm.js" language="JavaScript1.2"></script>
+
+<h1>CORS Support</h1>
+<ul style="
+list-style:url('../../../../../../Images/arrow.png');">
+<li style="margin-left: -20px;">
+<h2>Overview</h2>
+</li>
+</ul>
+<p class="Paragraph">with web browser scripting languages ​​such as JavaScript persona container,</p>
+<p class="Paragraph">for receiving the HTTP communication with the server, providing a XMLHttpRequest Level 2.</p>
+<ul style="
+list-style:url('../../../../../../Images/arrow.png');">
+<li style="margin-left: -20px;">
+<h2 style="margin-left: 0px;">Access-Control-Allow-Origin</h2>
+</li>
+</ul>
+<p class="Paragraph">in all API and returns the Access-Control-Allow-Origin header to the response header.</p>
+<p class="Paragraph">The Access-Control-Allow-Origin, we will return the domains that are allowed to access.</p>
+<p class="Paragraph">Persona container is to allow access from all domains.</p>
+<p class="Paragraph">The following is an example of the response of the Access-Control-Allow-Origin.</p>
+<table class="CodeTable" style="height: 47px; margin-left: 26pt;" cellspacing="0px" width="96%">
+<col style="width: 100%;" />
+<tr>
+<td style="border: Solid 1px #9b9b9b;">
+<p class="Code">Access-Control-Allow-Origin: *</p>
+</td>
+</tr>
+</table>
+<ul style="
+list-style:url('../../../../../../Images/arrow.png');">
+<li style="margin-left: -20px;">
+<h2>Access-Control-Allow-Methods</h2>
+</li>
+</ul>
+<p class="Paragraph">in the API of all, if you specify the OPTIONS request method to return the Access-Control-Allow-Methods header to the response header.</p>
+<p class="Paragraph">In the Access-Control-Allow-Methods header, return the request method that is permitted in the request URL of API.</p>
+<p class="Paragraph">The following is an example of the response of the Access-Control-Allow-Methods.</p>
+<table class="CodeTable" style="height: 47px; margin-left: 26pt;" cellspacing="0px" width="96%">
+<col style="width: 100%;" />
+<tr>
+<td style="border: Solid 1px #9b9b9b;">
+<p class="Code">Access-Control-Allow-Methods: GET, OPTIONS</p>
+</td>
+</tr>
+</table>
+<ul style="
+list-style:url('../../../../../../Images/arrow.png');">
+<li style="margin-left: -20px;">
+<h2 style="margin-left: 0px;">Access-Control-Allow-Headers</h2>
+</li>
+</ul>
+<p class="Paragraph">only if all the API, you specify the Access-Control-Request-Headers in the request header, and returns the Access-Control-Allow-Headers.</p>
+<p class="Paragraph">In the Access-Control-Allow-Headers header, return the value that is specified in the Access-Control-Request-Headers.</p>
+<p class="Paragraph">The following is an example of a response if you specify the "sample" in the Access-Control-Request-Headers.</p>
+<table class="CodeTable" style="height: 47px; margin-left: 26pt;" cellspacing="0px" width="96%">
+<col style="width: 100%;" />
+<tr>
+<td style="border: Solid 1px #9b9b9b;">
+<p class="Code">Access-Control-Allow-Headers: sample</p>
+</td>
+</tr>
+</table>
+<ul style="
+list-style:url('../../../../../../Images/arrow.png');">
+<li style="margin-left: -20px;">
+<h2>Reference</h2>
+</li>
+</ul>
+<p class="Paragraph"><a href="http://www.w3.org/TR/cors/" target="_blank"><font class="">http://www.w3.org/TR/cors/</font></a></p>
+<script type="text/javascript" language="javascript1.2">//<![CDATA[
+<!--
+if (window.writeIntopicBar)
+	writeIntopicBar(0);
+
+
+highlightSearch();
+//-->
+//]]></script>
+</body>
+</html>

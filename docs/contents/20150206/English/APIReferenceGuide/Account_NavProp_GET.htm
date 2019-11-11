@@ -1,0 +1,136 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<meta name="template" content="API Master.htt" />
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+<meta http-equiv="Content-Language" content="en-US" />
+<meta name="generator" content="Adobe RoboHelp 10" />
+ <meta name="topic-check-list" content="Ran Smart Index" />
+<title>Template</title>
+<style type="text/css">/*<![CDATA[*/
+.mainBreadCrumb a:link,
+.mainBreadCrumb a:visited {
+	color: #000000;
+	background-color: transparent;
+	text-decoration: none;
+}
+.mainBreadCrumb a:hover {
+	color: #ff0000;
+	border-bottom: 1px solid #ff0000;
+	text-decoration: none;
+}
+p.mainBreadCrumb {
+	margin-left: 11px;
+	margin-top: -12px	 ! important ;
+}
+h1 {
+	padding-left: 10px	 ! important ;
+}
+/*]]>*/</style>
+</head>
+
+<body>
+<script type="text/javascript" src="../ehlpdhtm.js"></script>
+<div style="width: 100%; position: relative;" id="header">
+	<p style="font-size: 10pt;">&#160;</p>
+</div>
+
+<?rh-placeholder type="breadcrumbs" class="mainBreadCrumb" ph-align="0" 
+ usetopicformat="0" home="Home" sep-char=" &gt; " ph-style="font-family:Arial;font-size:9pt;font-weight: normal;font-style: normal;text-decoration: none;" ?>
+<hr style="border-left-width: 0px; margin-left: -6px;" size="1" width="101%" 
+	 align="center" />
+<input type="image" value="Print" onclick="window.print();return false" 
+		 name="http://sashihara.vpdc.sg.soft.fujitsu.com:8080/PCS_API_EN/English/Printer.png" 
+		 src="http://sashihara.vpdc.sg.soft.fujitsu.com:8080/PCS_API_EN/English/Printer.png" 
+		 style="width: 16px; height: 16px; float: right; margin-top: -32px; 
+		 margin-right: 22px;" /><input type="image" value="Print" onclick="window.print();return false" 
+										 name="http://sashihara.vpdc.sg.soft.fujitsu.com:8080/PCS_API_EN/English/PDF.png" 
+										 src="http://sashihara.vpdc.sg.soft.fujitsu.com:8080/PCS_API_EN/English/PDF.png" 
+										 style="width: 16px; height: 16px; 
+										 float: right; margin-top: -32px;" /><br />
+<script type="text/javascript">function CreatePDF()
+{
+	var doc = new jsPDF();
+
+// We'll make our own renderer to skip this editor
+var specialElementHandlers = {
+	'#editor': function(element, renderer){
+		return true;
+	}
+};
+
+// All units are in the set measurement for the document
+// This can be changed to "pt" (points), "mm" (Default), "cm", "in"
+doc.fromHTML($('#render_me').get(0), 15, 15, {
+	'width': 170, 
+	'elementHandlers': specialElementHandlers
+});
+}</script> 
+ 
+
+
+<h1>&lt;API Name&gt;</h1>
+<h2>Overview</h2>
+<table cellspacing="0" width="100%">
+	<col style="width: 100%;" />
+	<tr>
+		<td>&#160;</td>
+	</tr>
+</table>
+<p class="Paragraph">&#160;</p>
+<h2 id="制限事項">Limitations</h2>
+<h3 id="共通制限">Common Limit</h3>
+<p class="Paragraph">&#160;</p>
+<h3 id="OData制限">OData Limit</h3>
+<table class="5ColumnTable" style="border: Solid 0px #808080;" cellspacing="0" 
+		 width="100%" align="left">
+	<col style="width: 20%;" />
+	<col style="width: 20%;" />
+	<col style="width: 20%;" />
+	<col style="width: 20%;" />
+	<col style="width: 20%;" />
+	<tr class="t1st">
+		<td style="border: Solid 1px #808080;"><p class="GreyColumnHeading">Header Name</p></td>
+		<td style="border-top: Solid 1px #808080; border-right: Solid 1px #808080; 
+			 border-bottom: Solid 1px #808080;"><p class="GreyColumnHeading">Summary</p></td>
+		<td style="border-top: Solid 1px #808080; border-right: Solid 1px #808080; 
+			 border-bottom: Solid 1px #808080;"><p class="GreyColumnHeading">Valid Value</p></td>
+		<td style="border-top: Solid 1px #808080; border-right: Solid 1px #808080; 
+			 border-bottom: Solid 1px #808080;"><p class="GreyColumnHeading">Mandatory</p></td>
+		<td style="border-top: Solid 1px #808080; border-right: Solid 1px #808080; 
+			 border-bottom: Solid 1px #808080;"><p class="GreyColumnHeading">Remarks</p></td>
+	</tr>
+	<tr>
+		<td style="border-left: solid 1px #808080; border-right: Solid 1px #808080; 
+			 border-bottom: Solid 1px #808080;">&#160;</td>
+		<td style="border-right: Solid 1px #808080; border-bottom: Solid 1px #808080;">&#160;</td>
+		<td style="border-right: Solid 1px #808080; border-bottom: Solid 1px #808080;">&#160;</td>
+		<td style="border-right: Solid 1px #808080; border-bottom: Solid 1px #808080;">&#160;</td>
+		<td style="border-right: Solid 1px #808080; border-bottom: Solid 1px #808080;">&#160;</td>
+	</tr>
+	<tr>
+		<td style="border-left: solid 1px #808080; border-right: Solid 1px #808080; 
+			 border-bottom: Solid 1px #808080;">&#160;</td>
+		<td style="border-right: Solid 1px #808080; border-bottom: Solid 1px #808080;">&#160;</td>
+		<td style="border-right: Solid 1px #808080; border-bottom: Solid 1px #808080;">&#160;</td>
+		<td style="border-right: Solid 1px #808080; border-bottom: Solid 1px #808080;">&#160;</td>
+		<td style="border-right: Solid 1px #808080; border-bottom: Solid 1px #808080;">&#160;</td>
+	</tr>
+</table>
+<p class="Bullet_1">&#160;</p>
+
+
+<div style="border-top: Solid 3px #3a3a3a; width: 100%; 
+					 position: relative; padding-top: 7px; padding-bottom: 7px; 
+					 padding-right: 5px; background-color: #9b9b9b;" id="footer">
+	<p style="font-size: 8pt; text-align: right; color: #dadada;"><span 
+	 style="mso-ascii-theme-font: minor-latin; mso-fareast-font-family: Calibri; 
+	 mso-fareast-theme-font: minor-latin; mso-hansi-theme-font: minor-latin; 
+	 mso-bidi-font-family: 'Times New Roman'; mso-bidi-theme-font: minor-bidi; 
+	 mso-ansi-language: EN-US; mso-fareast-language: EN-US; mso-bidi-language: AR-SA; 
+	 font-family: Arial, sans-serif;">All Rights Reserved,Copyright (C) 
+	 FUJITSU LIMITED 1998-2013</span> </p>
+</div>
+</body>
+</html>

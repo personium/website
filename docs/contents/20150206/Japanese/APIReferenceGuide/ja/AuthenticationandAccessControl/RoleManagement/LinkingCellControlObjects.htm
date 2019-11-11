@@ -1,0 +1,137 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+<meta http-equiv="Content-Language" content="en-US" />
+ <meta name="generator" content="Adobe RoboHelp 10" />
+<title>Linking Cell Control Objects</title>
+<link rel="StyleSheet" href="../../../../default.css" type="text/css" />
+<script type="text/javascript" language="JavaScript">
+//<![CDATA[
+function reDo() {
+  if (innerWidth != origWidth || innerHeight != origHeight)
+     location.reload();
+}
+if ((parseInt(navigator.appVersion) == 4) && (navigator.appName == "Netscape")) {
+	origWidth = innerWidth;
+	origHeight = innerHeight;
+	onresize = reDo;
+}
+onerror = null; 
+//]]>
+</script>
+<style type="text/css">
+<!--
+div.WebHelpPopupMenu { position:absolute;
+left:0px;
+top:0px;
+z-index:4;
+visibility:hidden; }
+-->
+</style>
+<script type="text/javascript" language="javascript1.2" src="../../../../whmsg.js" charset="utf-8"></script>
+<script type="text/javascript" language="javascript" src="../../../../whver.js" charset="utf-8"></script>
+<script type="text/javascript" language="javascript1.2" src="../../../../whutils.js" charset="utf-8"></script>
+<script type="text/javascript" language="javascript1.2" src="../../../../whproxy.js" charset="utf-8"></script>
+<script type="text/javascript" language="javascript1.2" src="../../../../whlang.js" charset="utf-8"></script>
+<script type="text/javascript" language="javascript1.2" src="../../../../whtopic.js" charset="utf-8"></script>
+
+</head>
+
+<body page-style="x-size: Letter;"><script type="text/javascript" language="javascript1.2">//<![CDATA[
+<!--
+if (window.gbWhTopic)
+{
+	var strUrl = document.location.href;
+	var bc = 0;
+	var n = strUrl.toLowerCase().indexOf("bc-");
+	if(n != -1)
+	{
+		document.location.href = strUrl.substring(0, n);
+		bc = strUrl.substring(n+3);
+	}
+
+	if (window.addTocInfo)
+	{
+	addTocInfo("認証とアクセス制御\nロール操作\nセル制御オブジェクトの$links作成");
+addButton("show",BTN_TEXT,"表示","","","","",0,0,"","","");
+
+	}
+	if (window.writeBtnStyle)
+		writeBtnStyle();
+
+	if (window.writeIntopicBar)
+		writeIntopicBar(1);
+
+	
+	
+}
+else
+	if (window.gbIE4)
+		document.location.reload();
+
+onLoadHandler = function()
+{
+  if (window.setRelStartPage)
+	{
+	setTimeout("setRelStartPage('../../../../Japanese.htm');", 1)
+
+    setTimeout("UpdateBreadCrumbsMarker();", 1);
+	}
+}
+
+if (window.addEventListener){  
+	window.addEventListener('load', onLoadHandler, false);   
+} else if (window.attachEvent){  
+	window.attachEvent('onload', onLoadHandler);  
+}
+
+function onSetStartPage()
+{
+  autoSync(1);
+  sendSyncInfo();
+  sendAveInfoOut();
+}
+//-->
+//]]></script>
+<script type="text/javascript" src="../../../../ehlpdhtm.js" language="JavaScript1.2"></script>
+
+<h1>セル制御オブジェクトの$link作成</h1>
+<p class="Paragraph" style="background-color: #ffffff; font-size: 10.0pt;">他のセルに対し<a 
+	 href="IssueRoles.htm#Figure1:OtherCells-ExternalCell">ロールの発行</a>を行うには、ExtRole/ExtCell/Relation/Role/Account同士を結びつける必要があります。<br />
+結びつける方法は以下の２通りです。</p>
+<ol style="list-style: decimal;">
+	<li style="list-style: none; display: inline;"><ol style="list-style: decimal;">
+		<li style="font-family: Arial, sans-serif; font-size: 10pt; color: #353535;"><p 
+			 style="font-family: Arial, sans-serif; font-size: 10pt;">セル制御オブジェクト登録・更新APIの属性値として紐付ける<br />
+		　例）RoleとBoxの場合、Role作成時の_Box.Nameに設定する<br />
+		<strong>ただし、$linksによる紐付けも可能</strong></p></li>
+		<li style="font-family: Arial, sans-serif; font-size: 10pt; color: #353535;"><p 
+			 style="font-family: Arial, sans-serif; font-size: 10pt;">作成済みのセル制御オブジェクト同士を$linksで紐付ける<br />
+		　例）RoleとAccount</p></li>
+	</ol></li>
+</ol>
+<p class="Paragraph">&#160;</p>
+<p class="Figure"><img src="../../../../Images/LinkingCellControlObjects.gif" 
+						 alt="" style="border: none;" border="0" /></p>
+<p class="Figure" style="font-weight: bold;"><a name="Figure1:LinkingCellControlObjects" 
+												 id="Figure1:LinkingCellControlObjects">図1：セル制御オブジェクトの$link作成組み合わせ一覧 
+ </a></p>
+<p class="Paragraph">（凡例訳）</p>
+<p class="Paragraph">　0-1:n　Multiplicityをあらわす。（行のオブジェクト）：（列のオブジェクト）</p>
+<p class="Paragraph">&#160;　　　 　$links でのみ紐付け可能</p>
+<p class="Paragraph">　　　 &#160;　$linksに加えて、列のセル制御オブジェクト作成時のパラメータでも紐付け可能</p>
+<p class="Paragraph">&#160;</p>
+<p class="Paragraph">&#160;</p>
+<script type="text/javascript" language="javascript1.2">//<![CDATA[
+<!--
+if (window.writeIntopicBar)
+	writeIntopicBar(0);
+
+
+highlightSearch();
+//-->
+//]]></script>
+</body>
+</html>

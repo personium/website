@@ -1,0 +1,489 @@
+<?xml version="1.0" encoding="iso-2022-jp" ?>
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN"
+    "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<!-- saved from url=(0014)about:internet -->
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=iso-2022-jp" />
+<meta name="generator" content="Adobe RoboHelp 10" />
+<title>userodata_schema_schema</title>
+<link rel="StyleSheet" href="../../../../../../../../default.css" type="text/css" />
+<script type="text/javascript" src="../../../../../../../../prettify.js" language="JavaScript1.2">
+</script>
+<style type="text/css">
+/*<![CDATA[*/
+<!--
+.mainBreadCrumb a:link { color:#000000;
+background-color:transparent;
+text-decoration:none; }
+.mainBreadCrumb a:visited { color:#000000;
+background-color:transparent;
+text-decoration:none; }
+.mainBreadCrumb a:hover { color:#ff0000 ! important;
+cursor:pointer;
+text-decoration:underline; }
+p.mainBreadCrumb { margin-left:0px;
+margin-top:1px ! important; }
+h1 { padding-left:10px ! important; }
+-->
+/*]]>*/
+</style>
+
+<script type="text/javascript" language="JavaScript">
+//<![CDATA[
+function reDo() {
+  if (innerWidth != origWidth || innerHeight != origHeight)
+     location.reload();
+}
+if ((parseInt(navigator.appVersion) == 4) && (navigator.appName == "Netscape")) {
+        origWidth = innerWidth;
+        origHeight = innerHeight;
+        onresize = reDo;
+}
+onerror = null; 
+//]]>
+</script>
+<style type="text/css">
+/*<![CDATA[*/
+<!--
+div.WebHelpPopupMenu { position:absolute;
+left:0px;
+top:0px;
+z-index:4;
+visibility:hidden; }
+-->
+/*]]>*/
+</style>
+
+<script type="text/javascript" language="javascript1.2" src="../../../../../../../../whmsg.js" charset="utf-8">
+</script>
+<script type="text/javascript" language="javascript" src="../../../../../../../../whver.js" charset="utf-8">
+</script>
+<script type="text/javascript" language="javascript1.2" src="../../../../../../../../whutils.js" charset="utf-8">
+</script>
+<script type="text/javascript" language="javascript1.2" src="../../../../../../../../whproxy.js" charset="utf-8">
+</script>
+<script type="text/javascript" language="javascript1.2" src="../../../../../../../../whlang.js" charset="utf-8">
+</script>
+<script type="text/javascript" language="javascript1.2" src="../../../../../../../../whtopic.js" charset="utf-8">
+</script>
+</head>
+<body onload="prettyPrint()">
+<script type="text/javascript" language="javascript1.2">
+//<![CDATA[
+<!--
+if (window.gbWhTopic)
+{
+        var strUrl = document.location.href;
+        var bc = 0;
+        var n = strUrl.toLowerCase().indexOf("bc-");
+        if(n != -1)
+        {
+                document.location.href = strUrl.substring(0, n);
+                bc = strUrl.substring(n+3);
+        }
+
+        if (window.addTocInfo)
+        {
+        addButton("show",BTN_TEXT,"表示","","","","",0,0,"","","");
+
+        }
+        if (window.writeBtnStyle)
+                writeBtnStyle();
+
+        if (window.writeIntopicBar)
+                writeIntopicBar(1);
+
+        
+        
+}
+else
+        if (window.gbIE4)
+                document.location.reload();
+
+onLoadHandler = function()
+{
+  if (window.setRelStartPage)
+        {
+        setTimeout("setRelStartPage('../../../../../../../../Japanese.htm');", 1)
+
+    setTimeout("UpdateBreadCrumbsMarker();", 1);
+        }
+}
+
+if (window.addEventListener){  
+        window.addEventListener('load', onLoadHandler, false);   
+} else if (window.attachEvent){  
+        window.attachEvent('onload', onLoadHandler);  
+}
+
+function onSetStartPage()
+{
+  autoSync(1);
+  sendSyncInfo();
+  sendAveInfoOut();
+}
+//-->
+//]]>
+</script><script type="text/javascript" src="../../../../../../../../ehlpdhtm.js" language="JavaScript1.2">
+</script>
+<div style="width: 100%; position: relative;" id="header">
+<p style="font-size: 10pt;">&#160;</p>
+</div>
+<script type="text/javascript" language="javascript">
+//<![CDATA[
+document.write("<p  class=\"mainBreadCrumb\"  style=\"text-align:left;\" class=\"breadcrumbs\">");
+AddMasterBreadcrumbs("../../../../../../../../Japanese.htm", "breadcrumbs", " &gt; ", "トップ", "../../../../../../../ja/HomePage.htm");
+document.write("userodata_schema_schema<\/p>");
+//]]>
+</script>
+<hr style="border-left-width: 0px; margin-left: -6px;" size="1" width="101%" align="center" />
+<form><input type="image" value="Print" onclick="window.print();return false" name="Printer.png" src="../../../../../../../../Images/Printer.png" style="width: 16px; height: 16px; float: right; margin-top: -32px; margin-right: 2px;" /></form>
+<h1>User-Defined Data Schema ($metadata)</h1>
+<h2><span lang="JA" xml:lang="JA" style="line-height: 115%; mso-ascii-font-family: Arial; mso-fareast-theme-font: minor-fareast; mso-hansi-font-family: Arial; mso-bidi-font-family: Arial; mso-ansi-language: EN-US; mso-fareast-language: JA; mso-bidi-language: AR-SA; font-weight: bold; font-family: 'MS Gothic';">概要</span></h2>
+<p class="Paragraph">This API retrieves the schema information for performing the schema definition of the user data</p>
+<h2><span style="font-weight: bold;">必要な権限</span></h2>
+<p class="Paragraph">read</p>
+<h2><span style="font-weight: bold;">制限事項</span></h2>
+<p class="Paragraph">None</p>
+<h2><span style="font-weight: bold;">リクエスト</span></h2>
+<h3><span style="font-weight: bold;">リクエストURL</span></h3>
+<table class="CodeTable" style="margin-left: 26pt;" cellspacing="0px" width="96%">
+<col style="width: 100%;" />
+<tr>
+<td>
+<p class="Code">/{Cell_name}/{Box_name}/{odata_collection_path}/$metadata/$metadata</p>
+</td>
+</tr>
+</table>
+<h3><span style="font-weight: bold;">メソッド</span></h3>
+<p class="Paragraph">GET</p>
+<h3><span style="font-weight: bold;">リクエストクエリ</span></h3>
+<div>
+<table style="margin-left: 26pt;" cellspacing="0" width="96%">
+<col style="width: 22%;" />
+<col style="width: 20%;" />
+<col style="width: 20%;" />
+<col style="width: 10%;" />
+<col style="width: 28%;" />
+<tr>
+<th style="border: Solid 1px #9b9b9b;" bgcolor="#DADADA">
+<p class="GreyColumnHeading" style="font-weight: normal; margin-left: 0px;"><span style="font-weight: normal;"><span style="font-weight: bold; font-size: 10pt;"><font size="2" style="font-size:10pt;">項目名</font></span></span></p>
+</th>
+<th style="border-top: Solid 1px #9b9b9b; border-right: Solid 1px #9b9b9b; border-bottom: Solid 1px #9b9b9b;" bgcolor="#DADADA">
+<p class="GreyColumnHeading" style="font-weight: normal; margin-left: 0px;"><span style="font-weight: normal;"><span style="font-weight: bold; font-size: 10pt;"><font size="2" style="font-size:10pt;">概要</font></span></span></p>
+</th>
+<th style="border-top: Solid 1px #9b9b9b; border-right: Solid 1px #9b9b9b; border-bottom: Solid 1px #9b9b9b;" bgcolor="#DADADA">
+<p class="GreyColumnHeading" style="font-weight: normal; margin-left: 0px;"><span style="font-weight: normal;"><span style="font-size: 10pt; font-weight: bold;"><font size="2" style="font-size:10pt;">書式</font></span></span></p>
+</th>
+<th style="border-top: Solid 1px #9b9b9b; border-right: Solid 1px #9b9b9b; border-bottom: Solid 1px #9b9b9b;" bgcolor="#DADADA">
+<p class="GreyColumnHeading" style="font-weight: normal; margin-left: 0px;"><span style="font-weight: normal;"><span style="font-size: 10pt; font-weight: bold;"><font size="2" style="font-size:10pt;">必須</font></span></span></p>
+</th>
+<th style="border-top: Solid 1px #9b9b9b; border-right: Solid 1px #9b9b9b; border-bottom: Solid 1px #9b9b9b;" bgcolor="#DADADA">
+<p class="GreyColumnHeading" style="font-weight: normal; margin-left: 0px;"><span style="font-weight: normal;"><span style="font-size: 10pt; font-weight: bold;"><font size="2" style="font-size:10pt;">有効値</font></span></span></p>
+</th>
+</tr>
+</table>
+</div>
+<div>
+<table class="ParameterTable" style="margin-left: 26pt;" cellspacing="0px" width="96%">
+<col style="width: 22%;" />
+<col style="width: 20%;" />
+<col style="width: 20%;" />
+<col style="width: 10%;" />
+<col style="width: 28%;" />
+<tr>
+<td style="border-left: solid 1px #9b9b9b; border-right: Solid 1px #9b9b9b; border-bottom: Solid 1px #9b9b9b; vertical-align: top;">
+<p class="TableText" style="margin-left: 0px;">dc_cookie_peer</p>
+</td>
+<td style="border-right: Solid 1px #9b9b9b; border-bottom: Solid 1px #9b9b9b; vertical-align: top;">
+<p class="TableText" style="margin-left: 0px;">Authentication cookie value</p>
+</td>
+<td style="border-right: Solid 1px #9b9b9b; border-bottom: Solid 1px #9b9b9b; vertical-align: top;">
+<p class="TableText" style="margin-left: 0px;">Authentication cookie value that is returned from the server during authentication</p>
+</td>
+<td style="border-right: Solid 1px #9b9b9b; border-bottom: Solid 1px #9b9b9b; vertical-align: top;">
+<p class="TableText" style="margin-left: 0px;"><font><font>×</font></font></p>
+</td>
+<td style="border-right: Solid 1px #9b9b9b; border-bottom: Solid 1px #9b9b9b; vertical-align: top;">
+<p class="TableText" style="margin-left: 0px;">Valid only if there is no specification of the Authorization header</p>
+<p class="TableText" style="margin-left: 0px;">to specify if you want to use the authentication information of cookies</p>
+</td>
+</tr>
+</table>
+</div>
+<h3><span style="font-weight: bold;">リクエストヘッダ</span></h3>
+<div>
+<table class="ParameterTable" style="margin-left: 26pt;" cellspacing="0px" width="96%">
+<col style="width: 15.561%;" />
+<col style="width: 37.011%;" />
+<col style="width: 13.177%;" />
+<col style="width: 2.664%;" />
+<col style="width: 31.587%;" />
+<tr>
+<th style="border: Solid 1px #9b9b9b;" bgcolor="#DADADA">
+<p class="GreyColumnHeading" style="font-weight: normal; margin-left: 0px;"><span><font style="font-weight: normal;">Header name</font></span></p>
+</th>
+<th style="border-top: Solid 1px #9b9b9b; border-right: Solid 1px #9b9b9b; border-bottom: Solid 1px #9b9b9b;" bgcolor="#DADADA">
+<p class="GreyColumnHeading" style="font-weight: normal; margin-left: 0px;"><span><font style="font-weight: normal;">Summary</font></span></p>
+</th>
+<th style="border-top: Solid 1px #9b9b9b; border-right: Solid 1px #9b9b9b; border-bottom: Solid 1px #9b9b9b;" bgcolor="#DADADA">
+<p class="GreyColumnHeading" style="font-weight: normal; margin-left: 0px;"><span><font style="font-weight: normal;">Valid value</font></span></p>
+</th>
+<th style="border-top: Solid 1px #9b9b9b; border-right: Solid 1px #9b9b9b; border-bottom: Solid 1px #9b9b9b;" bgcolor="#DADADA">
+<p class="GreyColumnHeading" style="font-weight: normal; margin-left: 0px;"><span><font style="font-weight: normal;">Required</font></span></p>
+</th>
+<th style="border-top: Solid 1px #9b9b9b; border-right: Solid 1px #9b9b9b; border-bottom: Solid 1px #9b9b9b;" bgcolor="#DADADA">
+<p class="GreyColumnHeading" style="font-weight: normal; margin-left: 0px;"><span><font style="font-weight: normal;">Remarks</font></span></p>
+</th>
+</tr>
+</table>
+</div>
+<div>
+<table class="ParameterTable" style="margin-left: 26pt;" cellspacing="0px" width="96%">
+<col style="width: 22%;" />
+<col style="width: 20%;" />
+<col style="width: 20%;" />
+<col style="width: 10%;" />
+<col style="width: 28%;" />
+<tr>
+<td style="border-left: solid 1px #9b9b9b; border-right: Solid 1px #9b9b9b; border-bottom: Solid 1px #9b9b9b; vertical-align: top;">
+<p class="TableText"><font><font>X-Dc-Version</font></font></p>
+</td>
+<td style="border-right: Solid 1px #9b9b9b; border-bottom: Solid 1px #9b9b9b; vertical-align: top;">
+<p class="TableText">Executable version of the Data Cloud API</p>
+</td>
+<td style="border-right: Solid 1px #9b9b9b; border-bottom: Solid 1px #9b9b9b; vertical-align: top;">
+<p class="TableText"><font><font>Valid version</font></font></p>
+</td>
+<td style="border-right: Solid 1px #9b9b9b; border-bottom: Solid 1px #9b9b9b; vertical-align: top;">
+<p class="TableText"><font><font>×</font></font></p>
+</td>
+<td style="border-right: Solid 1px #9b9b9b; border-bottom: Solid 1px #9b9b9b; vertical-align: top;">
+<p class="TableText">If not specified, the latest version of API is specified</p>
+</td>
+</tr>
+</table>
+</div>
+<div>
+<table class="ParameterTable" style="margin-left: 26pt;" cellspacing="0px" width="96%">
+<col style="width: 22%;" />
+<col style="width: 20%;" />
+<col style="width: 20%;" />
+<col style="width: 10%;" />
+<col style="width: 28%;" />
+<tr>
+<td style="border-left: solid 1px #9b9b9b; border-right: Solid 1px #9b9b9b; border-bottom: Solid 1px #9b9b9b; vertical-align: top;">
+<p class="TableText"><font><font>X-HTTP-Method-Override</font></font></p>
+</td>
+<td style="border-right: Solid 1px #9b9b9b; border-bottom: Solid 1px #9b9b9b; vertical-align: top;">
+<p class="TableText" style="color: #353535;">Function method override</p>
+</td>
+<td style="border-right: Solid 1px #9b9b9b; border-bottom: Solid 1px #9b9b9b; vertical-align: top;">
+<p class="TableText"><font><font>Any</font></font></p>
+</td>
+<td style="border-right: Solid 1px #9b9b9b; border-bottom: Solid 1px #9b9b9b; vertical-align: top;">
+<p class="TableText"><font><font>×</font></font></p>
+</td>
+<td style="border-right: Solid 1px #9b9b9b; border-bottom: Solid 1px #9b9b9b; vertical-align: top;">
+<p class="TableText">If this value is specified at the time of the request in the POST method, the specified value is used as a method</p>
+</td>
+</tr>
+</table>
+</div>
+<div>
+<table class="ParameterTable" style="margin-left: 26pt;" cellspacing="0px" width="96%">
+<col style="width: 22%;" />
+<col style="width: 20%;" />
+<col style="width: 20%;" />
+<col style="width: 10%;" />
+<col style="width: 28%;" />
+<tr>
+<td style="border-left: solid 1px #9b9b9b; border-right: Solid 1px #9b9b9b; border-bottom: Solid 1px #9b9b9b; vertical-align: top;">
+<p class="TableText"><font><font>X-Override</font></font></p>
+</td>
+<td style="border-right: Solid 1px #9b9b9b; border-bottom: Solid 1px #9b9b9b; vertical-align: top;">
+<p class="TableText"><font><font>Header override function</font></font></p>
+</td>
+<td style="border-right: Solid 1px #9b9b9b; border-bottom: Solid 1px #9b9b9b; vertical-align: top;">
+<p class="TableText"><font><font>{Name of the header to override} $: $ {value}</font></font></p>
+</td>
+<td style="border-right: Solid 1px #9b9b9b; border-bottom: Solid 1px #9b9b9b; vertical-align: top;">
+<p class="TableText"><font><font>×</font></font></p>
+</td>
+<td style="border-right: Solid 1px #9b9b9b; border-bottom: Solid 1px #9b9b9b; vertical-align: top;">
+<p class="TableText">Overrides the value of the HTTP header.</p>
+<p class="TableText" style="color: #353535;">If you want to override multiple headers, specify multiple X-Override.</p>
+</td>
+</tr>
+</table>
+</div>
+<div>
+<table class="ParameterTable" style="margin-left: 26pt;" cellspacing="0px" width="96%">
+<col style="width: 22%;" />
+<col style="width: 20%;" />
+<col style="width: 20%;" />
+<col style="width: 10%;" />
+<col style="width: 28%;" />
+<tr>
+<td style="border-left: Solid 1px #9b9b9b; border-right: Solid 1px #9b9b9b; border-bottom: Solid 1px #9b9b9b; vertical-align: top;">
+<p class="TableText">X-Dc-RequestKey</p>
+</td>
+<td style="border-right: Solid 1px #9b9b9b; border-bottom: Solid 1px #9b9b9b; vertical-align: top;">
+<p class="TableText">Value of RequestKey field to be output to the event log</p>
+</td>
+<td style="border-right: Solid 1px #9b9b9b; border-bottom: Solid 1px #9b9b9b; vertical-align: top;">
+<p class="TableText">Alphanumeric characters: up to 128, _ (underscore), and - (hyphen)</p>
+</td>
+<td style="border-right: Solid 1px #9b9b9b; border-bottom: Solid 1px #9b9b9b; vertical-align: top;">
+<p class="TableText">×</p>
+</td>
+<td style="border-right: Solid 1px #9b9b9b; border-bottom: Solid 1px #9b9b9b; vertical-align: top;">
+<p class="TableText">If not specified then set PCS-${UNIXtime}</p>
+</td>
+</tr>
+</table>
+</div>
+<h3><span style="font-weight: bold;">リクエストボディ</span></h3>
+<p class="Paragraph">None</p>
+<h3><span style="font-weight: bold;">リクエストサンプル</span></h3>
+<p class="Paragraph">None</p>
+<h2><span style="font-weight: bold;">レスポンス</span></h2>
+<h3><span style="font-weight: bold;">ステータスコード</span></h3>
+<p class="Paragraph">200</p>
+<h3><span style="font-weight: bold;">レスポンスヘッダ</span></h3>
+<div>
+<table class="ParameterTable" style="margin-left: 26pt;" cellspacing="0px" width="96%">
+<col style="width: 23.686%;" />
+<col style="width: 30.236%;" />
+<col style="width: 46.078%;" />
+<tr>
+<th style="border-top: Solid 1px #c0c0c0; border-left: solid 1px #9b9b9b; border-right: Solid 1px #9b9b9b; border-bottom: Solid 1px #9b9b9b;" bgcolor="#DADADA">
+<p class="GreyColumnHeading" style="font-weight: normal; margin-left: 0px;"><span><font style="font-weight: normal;">Item name</font></span></p>
+</th>
+<th style="border-top: Solid 1px #c0c0c0; border-right: Solid 1px #9b9b9b; border-bottom: Solid 1px #9b9b9b;" bgcolor="#DADADA">
+<p class="GreyColumnHeading" style="font-weight: normal; margin-left: 0px;"><span><font style="font-weight: normal;">Summary</font></span></p>
+</th>
+<th style="border-top: Solid 1px #c0c0c0; border-right: Solid 1px #9b9b9b; border-bottom: Solid 1px #9b9b9b;" bgcolor="#DADADA">
+<p class="GreyColumnHeading" style="font-weight: normal; margin-left: 0px;"><span><font style="font-weight: normal;">Remarks</font></span></p>
+</th>
+</tr>
+</table>
+</div>
+<div>
+<table style="margin-left: 26pt;" cellspacing="0" width="96%">
+<col style="width: 23.686%;" />
+<col style="width: 30.236%;" />
+<col style="width: 46.078%;" />
+<tr>
+<td style="border-left: Solid 1px #9b9b9b; border-right: Solid 1px #9b9b9b; border-bottom: Solid 1px #9b9b9b; vertical-align: top;">
+<p class="TableText"><font><font>X-Dc-Version</font></font></p>
+</td>
+<td style="border-right: Solid 1px #9b9b9b; border-bottom: Solid 1px #9b9b9b; vertical-align: top;">
+<p class="TableText">Running version of the Data Cloud API</p>
+</td>
+<td style="border-right: Solid 1px #9b9b9b; border-bottom: Solid 1px #9b9b9b; vertical-align: top;">
+<p class="TableText">API version that the request is processed</p>
+</td>
+</tr>
+</table>
+</div>
+<div>
+<table style="margin-left: 26pt;" cellspacing="0" width="96%">
+<col style="width: 23.686%;" />
+<col style="width: 30.236%;" />
+<col style="width: 46.078%;" />
+<tr>
+<td style="border-left: Solid 1px #9b9b9b; border-right: Solid 1px #9b9b9b; border-bottom: Solid 1px #9b9b9b; vertical-align: top;">
+<p class="TableText"><font><font>Access-Control-Allow-Origin</font></font></p>
+</td>
+<td style="border-right: Solid 1px #9b9b9b; border-bottom: Solid 1px #9b9b9b; vertical-align: top;">
+<p class="TableText">Cross-domain communication authorization header</p>
+</td>
+<td style="border-right: Solid 1px #9b9b9b; border-bottom: Solid 1px #9b9b9b; vertical-align: top;">
+<p class="TableText">Fixed "*" return value</p>
+</td>
+</tr>
+</table>
+</div>
+<div>
+<table class="ParameterTable" style="margin-left: 26pt;" cellspacing="0px" width="96%">
+<col style="width: 23.686%;" />
+<col style="width: 30.236%;" />
+<col style="width: 46.078%;" />
+<tr>
+<td style="border-left: solid 1px #9b9b9b; border-right: Solid 1px #9b9b9b; border-bottom: Solid 1px #9b9b9b;">
+<p class="TableText"><font><font>Content-Type</font></font></p>
+</td>
+<td style="border-right: Solid 1px #9b9b9b; border-bottom: Solid 1px #9b9b9b;">
+<p class="TableText">Format of the data to be returned</p>
+</td>
+<td style="border-right: Solid 1px #9b9b9b; border-bottom: Solid 1px #9b9b9b;">
+<p class="TableText">"application/xml"</p>
+</td>
+</tr>
+</table>
+</div>
+<div>
+<table style="margin-left: 26pt;" cellspacing="0" width="96%">
+<col style="width: 23.686%;" />
+<col style="width: 30.236%;" />
+<col style="width: 46.078%;" />
+<tr>
+<td style="border-left: Solid 1px #9b9b9b; border-right: Solid 1px #9b9b9b; border-bottom: Solid 1px #9b9b9b;">
+<p class="TableText"><font><font>DataServiceVersion</font></font></p>
+</td>
+<td style="border-right: Solid 1px #9b9b9b; border-bottom: Solid 1px #9b9b9b;">
+<p class="TableText"><font><font>Version of OData</font></font></p>
+</td>
+<td style="border-right: Solid 1px #9b9b9b; border-bottom: Solid 1px #9b9b9b;">
+<p class="TableText">&#160;</p>
+</td>
+</tr>
+</table>
+</div>
+<h3><span style="font-weight: bold;">レスポンスボディ</span></h3>
+<table class="CodeTable" style="margin-left: 26pt;" cellspacing="0px" width="96%">
+<col style="width: 100%;" />
+<tr>
+<td>
+<pre class="prettyprint">
+<br />&lt;edmx:Edmx Version='1.0' xmlns:edmx='http://schemas.microsoft.com/ado/2007/06/edmx'\<br /> xmlns:d='http://schemas.microsoft.com/ado/2007/08/dataservices' \<br />xmlns:m='http://schemas.microsoft.com/ado/2007/08/dataservices/metadata' xmlns:dc='urn:x-dc1:xmlns'&gt;<br />  &lt;edmx:DataServices m:DataServiceVersion='1.0'&gt;<br />    &lt;Schema xmlns='http://schemas.microsoft.com/ado/2006/04/edm' Namespace='ODataSvcSchema'&gt;<br />      &lt;EntityType Name='EntityType'&gt;<br />        &lt;Key&gt;<br />          &lt;PropertyRef Name='Name'/&gt;<br />        &lt;/Key&gt;<br />        &lt;Property Name='Name' Type='Edm.String' Nullable='false' \<br />        dc:Format='regEx(&amp;apos;^[a-zA-Z0-9][a-zA-Z0-9-_]{0,127}$&amp;apos;)'/&gt;<br />        &lt;Property Name='__published' Type='Edm.DateTime' Nullable='false'\<br />        DefaultValue='SYSUTCDATETIME()' Precision='3'/&gt;<br />        &lt;Property Name='__updated' Type='Edm.DateTime' Nullable='false'\<br />        DefaultValue='SYSUTCDATETIME()' Precision='3'/&gt;<br />        &lt;NavigationProperty Name='_AssociationEnd' Relationship='ODataSvcSchema.EntityType-AssociationEnd-assoc' \<br />FromRole='EntityType-AssociationEnd' ToRole='AssociationEnd-EntityType'/&gt;<br />        &lt;NavigationProperty Name='_Property' Relationship='ODataSvcSchema.EntityType-Property-assoc'\<br /> FromRole='EntityType-Property' ToRole='Property-EntityType'/&gt;<br />      &lt;/EntityType&gt;<br />      &lt;EntityType Name='AssociationEnd'&gt;<br />        &lt;Key&gt;<br />          &lt;PropertyRef Name='Name'/&gt;<br />          &lt;PropertyRef Name='_EntityType.Name'/&gt;<br />        &lt;/Key&gt;<br />        &lt;Property Name='Name' Type='Edm.String' Nullable='false'\<br />        dc:Format='regEx(&amp;apos;^[a-zA-Z0-9][a-zA-Z0-9-_]{0,127}$&amp;apos;)'/&gt;<br />        &lt;Property Name='Multiplicity' Type='Edm.String' Nullable='false'\<br />        dc:Format='regEx(&amp;apos;0\.\.1|1|\*&amp;apos;)'/&gt;<br />        &lt;Property Name='_EntityType.Name' Type='Edm.String' Nullable='false'\<br />        dc:Format='regEx(&amp;apos;^[a-zA-Z0-9][a-zA-Z0-9-_]{0,127}$&amp;apos;)'/&gt;<br />        &lt;Property Name='__published' Type='Edm.DateTime' Nullable='false'\<br />         DefaultValue='SYSUTCDATETIME()' Precision='3'/&gt;<br />        &lt;Property Name='__updated' Type='Edm.DateTime' Nullable='false'\<br />        DefaultValue='SYSUTCDATETIME()' Precision='3'/&gt;<br />        &lt;NavigationProperty Name='_EntityType' Relationship='ODataSvcSchema.EntityType-AssociationEnd-assoc' \<br />FromRole='AssociationEnd-EntityType' ToRole='EntityType-AssociationEnd'/&gt;<br />        &lt;NavigationProperty Name='_AssociationEnd' Relationship='ODataSvcSchema.AssociationEnd-AssociationEnd-assoc'\<br />FromRole='AssociationEnd-AssociationEnd' ToRole='AssociationEnd-AssociationEnd'/&gt;<br />      &lt;/EntityType&gt;<br />      &lt;EntityType Name='Property'&gt;<br />        &lt;Key&gt;<br />          &lt;PropertyRef Name='Name'/&gt;<br />          &lt;PropertyRef Name='_EntityType.Name'/&gt;<br />        &lt;/Key&gt;<br />        &lt;Property Name='Name' Type='Edm.String' Nullable='false'\<br />        dc:Format='regEx(&amp;apos;^[a-zA-Z0-9][a-zA-Z0-9-_]{0,127}$&amp;apos;)'/&gt;<br />        &lt;Property Name='_EntityType.Name' Type='Edm.String' Nullable='false'\<br />        dc:Format='regEx(&amp;apos;^[a-zA-Z0-9][a-zA-Z0-9-_]{0,127}$&amp;apos;)'/&gt;<br />        &lt;Property Name='Type' Type='Edm.String' Nullable='false'/&gt;<br />        &lt;Property Name='Nullable' Type='Edm.Boolean' Nullable='false' DefaultValue='true'/&gt;<br />        &lt;Property Name='DefaultValue' Type='Edm.String' Nullable='true'/&gt;<br />        &lt;Property Name='CollectionKind' Type='Edm.String' Nullable='true' DefaultValue='None'/&gt;<br />        &lt;Property Name='IsKey' Type='Edm.Boolean' Nullable='false' DefaultValue='false'/&gt;<br />        &lt;Property Name='UniqueKey' Type='Edm.String' Nullable='true'\<br />        dc:Format='regEx(&amp;apos;^[a-zA-Z0-9][a-zA-Z0-9-_]{0,127}$&amp;apos;)'/&gt;<br />        &lt;Property Name='__published' Type='Edm.DateTime' Nullable='false'\<br />        DefaultValue='SYSUTCDATETIME()' Precision='3'/&gt;<br />        &lt;Property Name='__updated' Type='Edm.DateTime' Nullable='false'\<br />         DefaultValue='SYSUTCDATETIME()' Precision='3'/&gt;<br />        &lt;NavigationProperty Name='_EntityType' Relationship='ODataSvcSchema.EntityType-Property-assoc'\<br />FromRole='Property-EntityType' ToRole='EntityType-Property'/&gt;<br />      &lt;/EntityType&gt;<br />      &lt;EntityType Name='ComplexType'&gt;<br />        &lt;Key&gt;<br />          &lt;PropertyRef Name='Name'/&gt;<br />        &lt;/Key&gt;<br />        &lt;Property Name='Name' Type='Edm.String' Nullable='false'\<br />         dc:Format='regEx(&amp;apos;^[a-zA-Z0-9][a-zA-Z0-9-_]{0,127}$&amp;apos;)'/&gt;<br />        &lt;Property Name='__published' Type='Edm.DateTime' Nullable='false'\<br />        DefaultValue='SYSUTCDATETIME()' Precision='3'/&gt;<br />        &lt;Property Name='__updated' Type='Edm.DateTime' Nullable='false'\<br />        DefaultValue='SYSUTCDATETIME()' Precision='3'/&gt;<br />        &lt;NavigationProperty Name='_ComplexTypeProperty'\<br />        Relationship='ODataSvcSchema.ComplexType-ComplexTypeProperty-assoc'\<br />       FromRole='ComplexType-ComplexTypeProperty' ToRole='ComplexTypeProperty-ComplexType'/&gt;<br />      &lt;/EntityType&gt;<br />      &lt;EntityType Name='ComplexTypeProperty'&gt;<br />        &lt;Key&gt;<br />          &lt;PropertyRef Name='Name'/&gt;<br />          &lt;PropertyRef Name='_ComplexType.Name'/&gt;<br />        &lt;/Key&gt;<br />        &lt;Property Name='Name' Type='Edm.String' Nullable='false'\<br />        dc:Format='regEx(&amp;apos;^[a-zA-Z0-9][a-zA-Z0-9-_]{0,127}$&amp;apos;)'/&gt;<br />        &lt;Property Name='_ComplexType.Name' Type='Edm.String' Nullable='false'\<br />        dc:Format='regEx(&amp;apos;^[a-zA-Z0-9][a-zA-Z0-9-_]{0,127}$&amp;apos;)'/&gt;<br />        &lt;Property Name='Type' Type='Edm.String' Nullable='false'/&gt;<br />        &lt;Property Name='Nullable' Type='Edm.Boolean' Nullable='false' DefaultValue='true'/&gt;<br />        &lt;Property Name='DefaultValue' Type='Edm.String' Nullable='true'/&gt;<br />        &lt;Property Name='CollectionKind' Type='Edm.String' Nullable='true' DefaultValue='None'/&gt;<br />        &lt;Property Name='__published' Type='Edm.DateTime' Nullable='false'\<br />        DefaultValue='SYSUTCDATETIME()' Precision='3'/&gt;<br />        &lt;Property Name='__updated' Type='Edm.DateTime' Nullable='false'\<br />        DefaultValue='SYSUTCDATETIME()' Precision='3'/&gt;<br />        &lt;NavigationProperty Name='_ComplexType' Relationship='ODataSvcSchema.ComplexType-ComplexTypeProperty-assoc' \<br />FromRole='ComplexTypeProperty-ComplexType' ToRole='ComplexType-ComplexTypeProperty'/&gt;<br />      &lt;/EntityType&gt;<br />      &lt;Association Name='EntityType-AssociationEnd-assoc'&gt;<br />        &lt;Role='EntityType-AssociationEnd' Type='ODataSvcSchema.EntityType' Multiplicity='0..1'/&gt;<br />        &lt;End Role='AssociationEnd-EntityType' Type='ODataSvcSchema.AssociationEnd' Multiplicity='*'/&gt;<br />      &lt;/Association&gt;<br />      &lt;Association Name='AssociationEnd-AssociationEnd-assoc'&gt;<br />        &lt;End Role='AssociationEnd-AssociationEnd'\<br />         Type='ODataSvcSchema.AssociationEnd' Multiplicity='0..1'/&gt;<br />        &lt;End Role='AssociationEnd-AssociationEnd'\<br />         Type='ODataSvcSchema.AssociationEnd' Multiplicity='0..1'/&gt;<br />      &lt;/Association&gt;<br />      &lt;Association Name='EntityType-Property-assoc'&gt;<br />        &lt;End Role='EntityType-Property' Type='ODataSvcSchema.EntityType' Multiplicity='1'/&gt;<br />        &lt;End Role='Property-EntityType' Type='ODataSvcSchema.Property' Multiplicity='*'/&gt;<br />      &lt;/Association&gt;<br />      &lt;Association Name='ComplexType-ComplexTypeProperty-assoc'&gt;<br />        &lt;End Role='ComplexType-ComplexTypeProperty' Type='ODataSvcSchema.ComplexType' Multiplicity='1'/&gt;<br />        &lt;End Role='ComplexTypeProperty-ComplexType'\<br />         Type='ODataSvcSchema.ComplexTypeProperty' Multiplicity='*'/&gt;<br />      &lt;/Association&gt;<br />      &lt;EntityContainer Name='ODataSvcSchema' m:IsDefaultEntityContainer='true'&gt;<br />        &lt;EntitySet Name='ComplexType' EntityType='ODataSvcSchema.ComplexType'/&gt;<br />        &lt;EntitySet Name='ComplexTypeProperty' EntityType='ODataSvcSchema.ComplexTypeProperty'/&gt;<br />        &lt;EntitySet Name='AssociationEnd' EntityType='ODataSvcSchema.AssociationEnd'/&gt;<br />        &lt;EntitySet Name='EntityType' EntityType='ODataSvcSchema.EntityType'/&gt;<br />        &lt;EntitySet Name='Property' EntityType='ODataSvcSchema.Property'/&gt;<br />        &lt;AssociationSet Name='EntityType-AssociationEnd-assoc'\<br />         Association='ODataSvcSchema.EntityType-AssociationEnd-assoc'&gt;<br />          &lt;End Role='EntityType-AssociationEnd' EntitySet='EntityType'/&gt;<br />          &lt;End Role='AssociationEnd-EntityType' EntitySet='AssociationEnd'/&gt;<br />        &lt;/AssociationSet&gt;<br />        &lt;AssociationSet Name='AssociationEnd-AssociationEnd-assoc'\<br />         Association='ODataSvcSchema.AssociationEnd-AssociationEnd-assoc'&gt;<br />          &lt;End Role='AssociationEnd-AssociationEnd' EntitySet='AssociationEnd'/&gt;<br />          &lt;End Role='AssociationEnd-AssociationEnd' EntitySet='AssociationEnd'/&gt;<br />        &lt;/AssociationSet&gt;<br />        &lt;AssociationSet Name='EntityType-Property-assoc'\<br />        Association='ODataSvcSchema.EntityType-Property-assoc'&gt;<br />          &lt;End Role='EntityType-Property' EntitySet='EntityType'/&gt;<br />          &lt;End Role='Property-EntityType' EntitySet='Property'/&gt;<br />        &lt;/AssociationSet&gt;<br />        &lt;AssociationSet Name='ComplexType-ComplexTypeProperty-assoc'\<br />        Association='ODataSvcSchema.ComplexType-ComplexTypeProperty-assoc'&gt;<br />          &lt;End Role='ComplexType-ComplexTypeProperty' EntitySet='ComplexType'/&gt;<br />          &lt;End Role='ComplexTypeProperty-ComplexType' EntitySet='ComplexTypeProperty'/&gt;<br />        &lt;/AssociationSet&gt;<br />      &lt;/EntityContainer&gt;<br />    &lt;/Schema&gt;<br />  &lt;/edmx:DataServices&gt;<br />&lt;/edmx:Edmx&gt;
+</pre></td>
+</tr>
+</table>
+<h3><span style="font-weight: bold; font-size: 10pt;"><font size="2" style="font-size:10pt;">エラーメッセージ一覧</font></span></h3>
+<p class="Paragraph">Refer to the <a href="../../../../../../Appendix/ErrorMessages.htm">Error Messages</a>.</p>
+<h3><span style="font-weight: bold;">レスポンスサンプル</span></h3>
+<p class="Paragraph">None</p>
+<h2><span style="font-weight: bold;">CURLコマンド(UNIX)</span></h2>
+<h3>Syntax</h3>
+<table class="CodeTable" style="margin-left: 26pt;" cellspacing="0px" width="96%">
+<col style="width: 100%;" />
+<tr>
+<td>
+<pre class="prettyprint">
+<br />curl -X GET 'https://fqdn/CellName/BoxName/OdataColName/$metadata/$metadata' -v -k
+</pre></td>
+</tr>
+</table>
+<p class="Paragraph">&#160;</p>
+<p class="Paragraph">&#160;</p>
+<p class="Paragraph">&#160;</p>
+<br />
+<div style="border-top: Solid 3px #3a3a3a; width: 100%; position: relative; padding-top: 2px; padding-bottom: 2px; padding-right: 5px; background-color: #9b9b9b;" id="footer">
+<h6 style="text-align: right; margin-top: 5pt; margin-bottom: 5pt;">Copyright 2014 &#160;FUJITSU LIMITED</h6>
+</div>
+<script type="text/javascript" language="javascript1.2">
+//<![CDATA[
+<!--
+if (window.writeIntopicBar)
+        writeIntopicBar(0);
+
+
+highlightSearch();
+//-->
+//]]>
+</script>
+</body>
+</html>

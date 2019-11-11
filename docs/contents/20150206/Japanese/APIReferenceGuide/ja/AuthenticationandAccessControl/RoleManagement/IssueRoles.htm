@@ -1,0 +1,228 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+<meta http-equiv="Content-Language" content="en-US" />
+ <meta name="generator" content="Adobe RoboHelp 10" />
+<title>Issue Roles</title>
+<link rel="StyleSheet" href="../../../../default.css" type="text/css" />
+<script type="text/javascript" language="JavaScript">
+//<![CDATA[
+function reDo() {
+  if (innerWidth != origWidth || innerHeight != origHeight)
+     location.reload();
+}
+if ((parseInt(navigator.appVersion) == 4) && (navigator.appName == "Netscape")) {
+	origWidth = innerWidth;
+	origHeight = innerHeight;
+	onresize = reDo;
+}
+onerror = null; 
+//]]>
+</script>
+<style type="text/css">
+<!--
+div.WebHelpPopupMenu { position:absolute;
+left:0px;
+top:0px;
+z-index:4;
+visibility:hidden; }
+-->
+</style>
+<script type="text/javascript" language="javascript1.2" src="../../../../whmsg.js" charset="utf-8"></script>
+<script type="text/javascript" language="javascript" src="../../../../whver.js" charset="utf-8"></script>
+<script type="text/javascript" language="javascript1.2" src="../../../../whutils.js" charset="utf-8"></script>
+<script type="text/javascript" language="javascript1.2" src="../../../../whproxy.js" charset="utf-8"></script>
+<script type="text/javascript" language="javascript1.2" src="../../../../whlang.js" charset="utf-8"></script>
+<script type="text/javascript" language="javascript1.2" src="../../../../whtopic.js" charset="utf-8"></script>
+
+</head>
+
+<body page-style="x-size: Letter;"><script type="text/javascript" language="javascript1.2">//<![CDATA[
+<!--
+if (window.gbWhTopic)
+{
+	var strUrl = document.location.href;
+	var bc = 0;
+	var n = strUrl.toLowerCase().indexOf("bc-");
+	if(n != -1)
+	{
+		document.location.href = strUrl.substring(0, n);
+		bc = strUrl.substring(n+3);
+	}
+
+	if (window.addTocInfo)
+	{
+	addTocInfo("認証とアクセス制御\nロール操作\nロール発行");
+addButton("show",BTN_TEXT,"表示","","","","",0,0,"","","");
+
+	}
+	if (window.writeBtnStyle)
+		writeBtnStyle();
+
+	if (window.writeIntopicBar)
+		writeIntopicBar(1);
+
+	
+	
+}
+else
+	if (window.gbIE4)
+		document.location.reload();
+
+onLoadHandler = function()
+{
+  if (window.setRelStartPage)
+	{
+	setTimeout("setRelStartPage('../../../../Japanese.htm');", 1)
+
+    setTimeout("UpdateBreadCrumbsMarker();", 1);
+	}
+}
+
+if (window.addEventListener){  
+	window.addEventListener('load', onLoadHandler, false);   
+} else if (window.attachEvent){  
+	window.attachEvent('onload', onLoadHandler);  
+}
+
+function onSetStartPage()
+{
+  autoSync(1);
+  sendSyncInfo();
+  sendAveInfoOut();
+}
+//-->
+//]]></script>
+<script type="text/javascript" src="../../../../ehlpdhtm.js" language="JavaScript1.2"></script>
+
+<h1>Role発行</h1>
+<p class="Paragraph">以下に対してRole設定ができます</p>
+<p class="Bullet_1"><span style="font-family:'Symbol'">&#183;</span><span style='word-spacing:normal; font:6.0pt "Times New Roman"'><font size="1" style="font-size:6pt;">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</font></span>セル内のユーザ</p>
+<p class="Bullet_1"><span style="font-family:'Symbol'">&#183;</span><span style='word-spacing:normal; font:6.0pt "Times New Roman"'><font size="1" style="font-size:6pt;">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</font></span>その他のセルのユーザ</p>
+<ul>
+	<li style="list-style: url('../../../../Images/arrow.png'); margin-left: -20px;"><h2>セル内のユーザ</h2></li>
+</ul>
+<p class="Paragraph">該当セルに所属するユーザ（Account）に、Roleの発行ができます（Roleを登録するには<a 
+	 href="CreateRoles.htm">Role作成API</a>を参照）。</p>
+<p class="Paragraph">複数セルにRoleを紐付けるためには、それぞれのCellにRoleをリンクする必要があります（<a 
+	 href="../../API_リファレンス/ペルソナコンテナAPI/CellレベルAPI/Cell_制御オブジェクト/Role/RoleLink/RoleLinkCreate.htm">Role_$links登録API</a>を参照）。</p>
+<ul>
+	<li style="list-style: url('../../../../Images/arrow.png'); margin-left: -20px;"><h2>その他の 
+	 セルのユーザ</h2></li>
+</ul>
+<p class="Paragraph"><span style="font-size: 10.0pt; font-family: Arial, sans-serif;"><font size="2" style="font-size:10pt;">以下の3つのCell制御オブジェクトを用いて、ユーザに対してRole発行ができます</font></span></p>
+<p class="Bullet_1"><span style="font-family:'Symbol'">&#183;</span><span style='word-spacing:normal; font:6.0pt "Times New Roman"'><font size="1" style="font-size:6pt;">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</font></span><span style="font-size: 10.0pt; 
+	 font-family: Arial, sans-serif;"><font size="2" style="font-size:10pt;">ExtCell</font></span></p>
+<p class="Bullet_1"><span style="font-family:'Symbol'">&#183;</span><span style='word-spacing:normal; font:6.0pt "Times New Roman"'><font size="1" style="font-size:6pt;">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</font></span><span style="font-size: 10.0pt; 
+	 font-family: Arial, sans-serif;"><font size="2" style="font-size:10pt;">Relation</font></span></p>
+<p class="Bullet_1" style="font-size: 10.0pt; 
+											 font-family: Arial, sans-serif;"><span style="font-family:'Symbol'">&#183;</span><span style='word-spacing:normal; font:6.0pt "Times New Roman"'><font size="1" style="font-size:6pt;">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</font></span>ExtRole</p>
+<h3>ExtCell</h3>
+<p class="Paragraph2">ExtCellは、ある特定のセルが意識すべき外部のセルです。 ExtCellはそれに割り当てられたRoleに基づくCellにアクセスできます。</p>
+<p class="Paragraph2"><a href="../../../../../../../../../ᢩC:/Users/Owner/workspace/HCL-PCS_Repo/track_3/test/#Figure1:OtherCells-ExternalCell">図 
+ 1</a> は外部セルBに、主セルAがアクセスする概念図です。</p>
+<p class="Paragraph2">&#160;</p>
+<p class="Figure"><img src="../../../../Images/RolewithExtCell.gif" alt="" 
+						 style="border: none;" border="0" /></p>
+<p class="Figure" style="font-weight: bold;"><a name="Figure1:OtherCells-ExternalCell" 
+												 id="Figure1:OtherCells-ExternalCell">図 
+ 1: OtherCells - ExtCell</a></p>
+<p class="Paragraph2">&#160;</p>
+<p class="Paragraph2" style="background-color: #ffffff; font-size: 10.0pt; 
+	 font-family: Arial, sans-serif;">特定のセルに対して、外部セルを登録する方法は以下の通りです。</p>
+<ol style="list-style: decimal;">
+	<li style="list-style: none; display: inline;"><ol style="list-style: decimal;">
+		<li style="font-size: 10pt; color: #353535;"><p style="font-size: 10pt;">特定のセル 
+		 A にExtCell<span style="font-size: 10pt;"><font size="2" style="font-size:10pt;">を登録する.</font></span></p></li>
+		<li style="font-size: 10pt; color: #353535;"><p style="font-size: 10pt;">CellA内のパラメータにCellBのURLを定義する。</p></li>
+		<li style="font-size: 10pt; color: #353535;"><p style="font-size: 10pt;">CellBの特定のユーザー（アカウント）のCellAへの認証アクセスを有効にする<span 
+		 style="font-size: 10pt;"><font size="2" style="font-size:10pt;">。</font></span></p></li>
+		<li style="font-size: 10pt; color: #353535;"><p style="font-size: 10pt;">認証プロセスは、トークンの値をパスすることでdc_targetのパラメータを使う。</p></li>
+		<li style="font-size: 10pt; color: #353535;"><p style="font-size: 10pt;">このトークン値は特定のユーザー（アカウント）を有効にする。</p></li>
+	</ol></li>
+</ol>
+<p class="Indent1" style="margin-left: 84px; text-indent: -48px;">Roleに関する$linksの詳細情報は<a 
+	 href="../../API_リファレンス/ペルソナコンテナAPI/CellレベルAPI/Cell_制御オブジェクト/Role/RoleLink/RoleLinkCreate.htm">Role 
+ $links API</a>を参照。</p>
+<p class="Indent1" style="margin-left: 84px; text-indent: -48px;">RBACに基づき、CellBのユーザは、従業員のRoleを使って、CellAへアクセスが可能になります。</p>
+<h3>Relation</h3>
+<p class="Paragraph2">Relationは、主セルと外部セルの間の関係性をあらわします。</p>
+<p class="Paragraph2"><a href="../../../../../../../../../ᢩC:/Users/Owner/workspace/HCL-PCS_Repo/track_3/test/#Figure2:OtherCells-Relation">図 
+ 2</a> は、本説明における主セルと外部セルの間の関係性です。</p>
+<p class="Paragraph2">&#160;</p>
+<p class="Figure"><img src="../../../../Images/RolewithRelation.gif" alt="" 
+						 style="border: none;" border="0" /></p>
+<p class="Figure" style="font-weight: bold;"><a name="Figure2:OtherCells-Relation" 
+												 id="Figure2:OtherCells-Relation">図2: 
+ その他のセル - Relation</a></p>
+<p class="Paragraph2">以下の方法で、主セルに複数の外部セルを登録します。</p>
+<ol style="list-style: decimal;">
+	<li style="list-style: none; display: inline;"><ol style="list-style: decimal;">
+		<li style="font-size: 10pt; color: #353535;"><p style="font-size: 10pt;">CellAに「ExtCell」を複数作成し、それぞれ「CellB」「CellC」のセルURLをパラメータとして定義する。</p></li>
+		<li style="font-size: 10pt; color: #353535;"><p style="font-size: 10pt;"><span 
+		 style="font-size: 10pt;"><font size="2" style="font-size:10pt;">CellAに「Relation」を作成し(図ではEmpBenefit)、複数のExtCellにそれぞれ$linksで結びつけを行う。</font></span></p></li>
+		<li style="font-size: 10pt; color: #353535;"><p style="font-size: 10pt;">CellAのロールとRelationを$linksで結びつけを行う。</p></li>
+		<li style="font-size: 10pt; color: #353535;"><p style="font-size: 10pt;">CellBでuserがアカウント認証（dc_target=【CellAのセルURL】を指定）し、取得したトークンでCellAにトランスセルユーザ認証する。</p></li>
+	</ol></li>
+</ol>
+<p class="Indent1" style="margin-left: 84px; text-indent: -48px;">上記までの設定と認証で、CellBのuserはCellAでは「Role」に属するアクセス主体として認識されます。（<span 
+	 style="text-indent: -48px;">※CellCでも同様）</span></p>
+<p class="Indent1" style="margin-left: 84px; text-indent: -48px;">Roleに関する$linksの詳細情報は<a 
+	 href="../../API_リファレンス/ペルソナコンテナAPI/CellレベルAPI/Cell_制御オブジェクト/Role/RoleLink/RoleLinkCreate.htm">Role 
+ $links API</a>を参照。</p>
+<p class="Indent1" style="margin-left: 84px; text-indent: -48px;">RBACに基づき、CellBとCellCのユーザは、従業員のRoleを使って、CellAへアクセスが可能になります。</p>
+<h3>External Role</h3>
+<p class="Paragraph2" style="font-size: 10.0pt; font-family: Arial, sans-serif;">External 
+ Roleは、主セルの中に登録され、主セルのユーザの外部セルへのアクセスを補助します。 </p>
+<p class="Paragraph2" style="font-size: 10.0pt; font-family: Arial, sans-serif;">外部ロールのアクセス権を通して、外部セルにアクセスするために、外部ロールをセルのユーザに与えます。</p>
+<p class="Paragraph2" style="font-size: 10.0pt; font-family: Arial, sans-serif;">この特定の外部セルは、Enviromentの同異を問いません。</p>
+<p class="Paragraph2" style="font-size: 10.0pt; font-family: Arial, sans-serif;">特定のセルにアクセスするために、以下の2つの条件があります。</p>
+<p 
+	 class="Bullet_1"><span style="font-family:'Symbol'">&#183;</span><span style='word-spacing:normal; font:6.0pt "Times New Roman"'><font size="1" style="font-size:6pt;">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</font></span>外部セルのロールで外部ロールを写像する</p>
+<p 
+	 class="Bullet_1"><span style="font-family:'Symbol'">&#183;</span><span style='word-spacing:normal; font:6.0pt "Times New Roman"'><font size="1" style="font-size:6pt;">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</font></span><span style="font-size: 10.0pt; font-family: Arial, sans-serif;"><font size="2" style="font-size:10pt;">&#160;これらの2つのセルのRelationを定義する</font></span></p>
+<p class="Paragraph2" style="font-size: 10.0pt; font-family: Arial, sans-serif;"><a 
+	 href="../../../../../../../../../ᢩC:/Users/Owner/workspace/HCL-PCS_Repo/track_3/test/#Figure3:OtherCells-ExternalRole">図 
+ 3</a>は、External Roleを使った、その他のセルの関係を示したものです。</p>
+<p class="Figure" style="font-size: 10.0pt; font-family: Arial, sans-serif;"><img 
+	 src="../../../../Images/RolewithExtRole.gif" alt="" style="border: none;" 
+	 border="0" /></p>
+<p class="Figure" style="font-size: 10.0pt; font-family: Arial, sans-serif; 
+	 font-weight: bold;"><a name="Figure3:OtherCells-ExternalRole" id="Figure3:OtherCells-ExternalRole">図3: 
+ その他のセル - External Role</a></p>
+<p class="Paragraph2" style="font-size: 10.0pt; font-family: Arial, sans-serif; 
+	 background-color: #ffffff;">以下の方法で、主セルに複数の外部ロールを登録します。</p>
+<ol style="list-style: decimal;">
+	<li style="list-style: none; display: inline;"><ol style="list-style: decimal;">
+		<li style="font-size: 10pt; color: #353535;"><p style="font-size: 10pt;">CellAに「ExtCell」を複数作成し、それぞれ「CellB」「CellC」のセルURLをパラメータとして定義する。</p></li>
+		<li style="font-size: 10pt; color: #353535;"><p style="font-size: 10pt; 
+														 color: #353535;">CellAに「Relation」を作成し、複数のExtCellにそれぞれ$linksで結びつけを行う。</p></li>
+		<li style="font-size: 10pt; color: #353535;"><p style="font-size: 10pt; 
+														 color: #353535;">CellAに「ExtRole」を作成し、パラメータに「role2」を指定する。</p></li>
+		<li style="font-size: 10pt; color: #353535;"><p style="font-size: 10pt; 
+														 color: #353535;">CellAのExtRoleとRelationを$linksで結びつけを行う。</p></li>
+		<li style="font-size: 10pt; color: #353535;"><p style="font-size: 10pt; 
+														 color: #353535;">CellAのroleとRelationを$linksで結びつけを行う。</p></li>
+		<li style="font-size: 10pt; color: #353535;"><p style="font-size: 10pt; 
+														 color: #353535;">CellBでuserがアカウント認証（dc_target=【CellAのセルURL】を指定）し、取得したトークンでCellAにトランスセルユーザ認証する。</p></li>
+	</ol></li>
+</ol>
+<p class="Indent1" style="margin-left: 84px; font-size: 10.0pt; font-family: Arial, sans-serif; 
+	 text-indent: -48px;">上記までの設定と認証で、CellBのuserはCellAでは「Role」に属するアクセス主体として認識される。（※CellCでも同様）</p>
+<p class="Indent1" style="margin-left: 84px; text-indent: -48px;">Roleに関する$linksの詳細情報は<a 
+	 href="../../API_リファレンス/ペルソナコンテナAPI/CellレベルAPI/Cell_制御オブジェクト/Role/RoleLink/RoleLinkCreate.htm">Role 
+ $links API</a>を参照。</p>
+<p class="Indent1" style="margin-left: 84px; text-indent: -48px;">RBACに基づき、CellBとCellCのユーザは、従業員のRoleを使って、CellAへアクセスが可能になります。</p>
+<script type="text/javascript" language="javascript1.2">//<![CDATA[
+<!--
+if (window.writeIntopicBar)
+	writeIntopicBar(0);
+
+
+highlightSearch();
+//-->
+//]]></script>
+</body>
+</html>

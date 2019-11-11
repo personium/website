@@ -1,0 +1,272 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+<meta http-equiv="Content-Language" content="en-US" />
+<meta name="generator" content="Adobe RoboHelp 10" />
+<title>$select クエリ</title>
+<link rel="StyleSheet" href="../../../../default.css" type="text/css" />
+<script type="text/javascript" language="JavaScript">
+//<![CDATA[
+function reDo() {
+  if (innerWidth != origWidth || innerHeight != origHeight)
+     location.reload();
+}
+if ((parseInt(navigator.appVersion) == 4) && (navigator.appName == "Netscape")) {
+	origWidth = innerWidth;
+	origHeight = innerHeight;
+	onresize = reDo;
+}
+onerror = null; 
+//]]>
+</script>
+<style type="text/css">
+<!--
+div.WebHelpPopupMenu { position:absolute;
+left:0px;
+top:0px;
+z-index:4;
+visibility:hidden; }
+-->
+</style>
+<script type="text/javascript" language="javascript1.2" src="../../../../whmsg.js" charset="utf-8"></script>
+<script type="text/javascript" language="javascript" src="../../../../whver.js" charset="utf-8"></script>
+<script type="text/javascript" language="javascript1.2" src="../../../../whutils.js" charset="utf-8"></script>
+<script type="text/javascript" language="javascript1.2" src="../../../../whproxy.js" charset="utf-8"></script>
+<script type="text/javascript" language="javascript1.2" src="../../../../whlang.js" charset="utf-8"></script>
+<script type="text/javascript" language="javascript1.2" src="../../../../whtopic.js" charset="utf-8"></script>
+
+</head>
+
+<body><script type="text/javascript" language="javascript1.2">//<![CDATA[
+<!--
+if (window.gbWhTopic)
+{
+	var strUrl = document.location.href;
+	var bc = 0;
+	var n = strUrl.toLowerCase().indexOf("bc-");
+	if(n != -1)
+	{
+		document.location.href = strUrl.substring(0, n);
+		bc = strUrl.substring(n+3);
+	}
+
+	if (window.addTocInfo)
+	{
+	addTocInfo("付録\n共通API\n$select クエリ");
+addButton("show",BTN_TEXT,"表示","","","","",0,0,"","","");
+
+	}
+	if (window.writeBtnStyle)
+		writeBtnStyle();
+
+	if (window.writeIntopicBar)
+		writeIntopicBar(1);
+
+	
+	
+}
+else
+	if (window.gbIE4)
+		document.location.reload();
+
+onLoadHandler = function()
+{
+  if (window.setRelStartPage)
+	{
+	setTimeout("setRelStartPage('../../../../Japanese.htm');", 1)
+
+    setTimeout("UpdateBreadCrumbsMarker();", 1);
+	}
+}
+
+if (window.addEventListener){  
+	window.addEventListener('load', onLoadHandler, false);   
+} else if (window.attachEvent){  
+	window.attachEvent('onload', onLoadHandler);  
+}
+
+function onSetStartPage()
+{
+  autoSync(1);
+  sendSyncInfo();
+  sendAveInfoOut();
+}
+//-->
+//]]></script>
+<script type="text/javascript" src="../../../../ehlpdhtm.js" language="JavaScript1.2"></script>
+
+<div style="width: 100%; position: relative;" id="header">
+	<p>&#160;</p>
+</div>
+
+<script type="text/javascript" language="javascript">//<![CDATA[
+document.write("<p  style=\"text-align:right;font-family:Arial;font-size:9pt;font-weight: normal;font-style: normal;text-decoration: none;\">");
+AddMasterBreadcrumbs("../../../../Japanese.htm", "font-family:Arial;font-size:9pt;font-weight: normal;font-style: normal;text-decoration: none;", "&gt;", "Home", "../../What_is_Persona_Container_Server.htm");
+document.write("<a style=\"font-family:Arial;font-size:9pt;font-weight: normal;font-style: normal;text-decoration: none;\" href=\"../AppErrorMessages.htm\">付録<\/a> &gt; <a style=\"font-family:Arial;font-size:9pt;font-weight: normal;font-style: normal;text-decoration: none;\" href=\"SkipQuery.htm\">共通API<\/a> &gt; $select クエリ<\/p>");
+//]]></script>
+
+<h1>$select <span style="-webkit-text-size-adjust: auto; -webkit-text-stroke-width: 0px;"><font 
+	 class="">クエリ</font></span></h1>
+<ul style="
+list-style:url('../../../../Images/arrow.png');">
+	<li style="margin-left: -20px;"><h2><span lang="JA" xml:lang="JA" style="line-height: 115%; mso-ascii-font-family: Arial; 
+		 mso-fareast-theme-font: minor-fareast; mso-hansi-font-family: Arial; 
+		 mso-bidi-font-family: Arial; mso-ansi-language: EN-US; mso-fareast-language: JA; 
+		 mso-bidi-language: AR-SA; font-weight: bold; font-family: 'MS Gothic';">概要</span></h2></li>
+</ul>
+<p class="Paragraph" style="color: rgb(72, 72, 72); font-family: Verdana, sans-serif; 
+	 font-size: 12.222222328186035px; line-height: normal; orphans: auto; 
+	 widows: auto; background-color: #ffffff; display: inline	 ! important ;"><span 
+	 style="-webkit-text-stroke-width: 0px;">返却するプロパティを指定する場合、$selectクエリを使用する</span></p>
+<p class="Paragraph"><span style="color: rgb(72, 72, 72); font-family: Verdana, sans-serif; 
+							 font-size: 12.222222328186035px; line-height: normal; 
+							 orphans: auto; widows: auto; -webkit-text-stroke-width: 0px; 
+							 background-color: #ffffff; display: inline	 ! important ; 
+							 float: none;">省略した場合は、取得したすべてのプロパティを返却する</span><br 
+	 style="color: rgb(72, 72, 72); font-family: Verdana, sans-serif; font-size: 12.222222328186035px; 
+	 font-style: normal; font-variant: normal; font-weight: normal; letter-spacing: normal; 
+	 line-height: normal; orphans: auto; text-align: start; text-indent: 0px; 
+	 text-transform: none; white-space: normal; widows: auto; word-spacing: 0px; 
+	 -webkit-text-stroke-width: 0px; background-color: #ffffff;" />
+<span style="color: rgb(72, 72, 72); font-family: Verdana, sans-serif; 
+		 font-size: 12.222222328186035px; line-height: normal; orphans: auto; 
+		 widows: auto; -webkit-text-stroke-width: 0px; background-color: #ffffff; 
+		 display: inline	 ! important ; float: none;">ただし、以下のプロパティについては$selectに指定しなくても、必ず返却する</span> 
+ &#160;</p>
+<p class="Bullet_1"><span style="font-family:'Symbol'">&#183;</span><span style='word-spacing:normal; font:6.0pt "Times New Roman"'><font size="1" style="font-size:6pt;">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</font></span>__id</p>
+<p class="Bullet_1"><span style="font-family:'Symbol'">&#183;</span><span style='word-spacing:normal; font:6.0pt "Times New Roman"'><font size="1" style="font-size:6pt;">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</font></span>__published</p>
+<p class="Bullet_1"><span style="font-family:'Symbol'">&#183;</span><span style='word-spacing:normal; font:6.0pt "Times New Roman"'><font size="1" style="font-size:6pt;">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</font></span>__updated</p>
+<p class="Bullet_1"><span style="font-family:'Symbol'">&#183;</span><span style='word-spacing:normal; font:6.0pt "Times New Roman"'><font size="1" style="font-size:6pt;">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</font></span>__metadata</p>
+<p class="Paragraph"><span style="color: rgb(72, 72, 72); font-family: Verdana, sans-serif; 
+							 font-size: 12.222222328186035px; line-height: normal; 
+							 orphans: auto; widows: auto; -webkit-text-stroke-width: 0px; 
+							 background-color: #ffffff; display: inline	 ! important ; 
+							 float: none;">※$selectに存在しないプロパティ名を指定した場合、指定された項目を無視する</span><br 
+	 style="color: rgb(72, 72, 72); font-family: Verdana, sans-serif; font-size: 12.222222328186035px; 
+	 font-style: normal; font-variant: normal; font-weight: normal; letter-spacing: normal; 
+	 line-height: normal; orphans: auto; text-align: start; text-indent: 0px; 
+	 text-transform: none; white-space: normal; widows: auto; word-spacing: 0px; 
+	 -webkit-text-stroke-width: 0px; background-color: #ffffff;" />
+<span style="color: rgb(72, 72, 72); font-family: Verdana, sans-serif; 
+		 font-size: 12.222222328186035px; line-height: normal; orphans: auto; 
+		 widows: auto; -webkit-text-stroke-width: 0px; background-color: #ffffff; 
+		 display: inline	 ! important ; float: none;">※$selectで指定したDynamicプロパティの値がNULLの場合は、プロパティ値を取得することはできない</span><br 
+	 style="color: rgb(72, 72, 72); font-family: Verdana, sans-serif; font-size: 12.222222328186035px; 
+	 font-style: normal; font-variant: normal; font-weight: normal; letter-spacing: normal; 
+	 line-height: normal; orphans: auto; text-align: start; text-indent: 0px; 
+	 text-transform: none; white-space: normal; widows: auto; word-spacing: 0px; 
+	 -webkit-text-stroke-width: 0px; background-color: #ffffff;" />
+<span style="color: rgb(72, 72, 72); font-family: Verdana, sans-serif; 
+		 font-size: 12.222222328186035px; line-height: normal; orphans: auto; 
+		 widows: auto; -webkit-text-stroke-width: 0px; background-color: #ffffff; 
+		 display: inline	 ! important ; float: none;">※プロパティ名は「'」(シングルクォート)で囲わずに指定する</span> 
+ </p>
+<ul style="
+list-style:url('../../../../Images/arrow.png');">
+	<li style="margin-left: -20px;"><h2><span style="font-weight: bold;">リクエストクエリ</span></h2></li>
+</ul>
+<table style="margin-left: 26pt; height: 47px;" cellspacing="0" width="96%">
+	<col style="width: 100%;" />
+	<tr>
+		<td style="border: Solid 1px #9b9b9b; vertical-align: middle;"><p 
+			 class="Code"><strong style="color: rgb(72, 72, 72); font-family: Verdana, sans-serif; 
+									 font-size: 12.222222328186035px; line-height: normal; 
+									 orphans: auto; text-indent: 0px; widows: auto; 
+									 -webkit-text-stroke-width: 0px; background-color: #ffffff;">$select={propertyName}</strong> 
+		 </p></td>
+	</tr>
+</table>
+<p class="Paragraph">&#160;</p>
+<p class="Paragraph"><span style="color: rgb(72, 72, 72); font-family: Verdana, sans-serif; 
+							 font-size: 12.222222328186035px; line-height: normal; 
+							 orphans: auto; widows: auto; -webkit-text-stroke-width: 0px; 
+							 background-color: #ffffff; display: inline	 ! important ; 
+							 float: none;">※省略時は $select=* となる</span> </p>
+<p class="Paragraph">&#160;</p>
+<table style="margin-left: 26pt;" cellspacing="0" width="96%">
+	<col style="width: 29.449%;" />
+	<col style="width: 70.551%;" />
+	<tr>
+		<th style="border: Solid 1px #9b9b9b;" bgcolor="#353D47"><p class="GreyColumnHeading">Path</p></th>
+		<th style="border-top: Solid 1px #9b9b9b; border-right: Solid 1px #9b9b9b; 
+			 border-bottom: Solid 1px #9b9b9b;" bgcolor="#353D47"><p class="GreyColumnHeading"><span style="font-weight: bold; font-size: 10pt;"><font size="2" style="font-size:10pt;">概要</font></span></p></th>
+	</tr>
+	<tr>
+		<td style="border-left: Solid 1px #9b9b9b; border-right: Solid 1px #9b9b9b; 
+			 border-bottom: Solid 1px #9b9b9b; vertical-align: top;"><p 
+			 class="TableText"><font><font>{PropertyName}</font></font></p></td>
+		<td style="border-right: Solid 1px #9b9b9b; border-bottom: Solid 1px #9b9b9b; 
+			 vertical-align: top;"><p class="TableText"><span style="color: rgb(72, 72, 72); 
+		 font-family: Verdana, sans-serif; font-size: 12.222222328186035px; 
+		 line-height: normal; orphans: auto; widows: auto; -webkit-text-stroke-width: 0px; 
+		 background-color: #ffffff; display: inline	 ! important ; float: none;">返却するプロパティ名</span><br 
+		 style="color: rgb(72, 72, 72); font-family: Verdana, sans-serif; 
+		 font-size: 12.222222328186035px; font-style: normal; font-variant: normal; 
+		 font-weight: normal; letter-spacing: normal; line-height: normal; 
+		 orphans: auto; text-align: start; text-indent: 0px; text-transform: none; 
+		 white-space: normal; widows: auto; word-spacing: 0px; -webkit-text-stroke-width: 0px; 
+		 background-color: #ffffff;" />
+		<span style="color: rgb(72, 72, 72); font-family: Verdana, sans-serif; 
+				 font-size: 12.222222328186035px; line-height: normal; 
+				 orphans: auto; widows: auto; -webkit-text-stroke-width: 0px; 
+				 background-color: #ffffff; display: inline	 ! important ; 
+				 float: none;">複数指定する場合はカンマ区切りで指定する</span> </p></td>
+	</tr>
+</table>
+<h3><span style="font-weight: bold;">CURLサンプル</span></h3>
+<ol style="list-style: decimal;">
+	<li><p class="Paragraph"><span style="color: rgb(72, 72, 72); font-family: Verdana, sans-serif; 
+									 font-size: 12.222222328186035px; line-height: normal; 
+									 orphans: auto; widows: auto; -webkit-text-stroke-width: 0px; 
+									 background-color: #ffffff; display: inline	 ! important ; 
+									 float: none;">NameとCategoryを返却する</span> 
+	 &#160;</p></li>
+</ol>
+<table style="height: 47px; margin-left: 75px;" cellspacing="0" width="93%">
+	<col style="width: 100%;" />
+	<tr>
+		<td style="border: Solid 1px #9b9b9b; vertical-align: middle;"><p 
+			 class="Code">$select=Name,Category</p></td>
+	</tr>
+</table>
+<ol start="2" style="list-style: decimal;">
+	<li><p class="Paragraph"><span style="color: rgb(72, 72, 72); font-family: Verdana, sans-serif; 
+									 font-size: 12.222222328186035px; line-height: normal; 
+									 orphans: auto; widows: auto; -webkit-text-stroke-width: 0px; 
+									 background-color: #ffffff; display: inline	 ! important ; 
+									 float: none;">すべてのプロパティを返却する</span> 
+	 &#160;</p></li>
+</ol>
+<table style="height: 47px; margin-left: 75px;" cellspacing="0" width="93%">
+	<col style="width: 100%;" />
+	<tr>
+		<td style="border: Solid 1px #9b9b9b; vertical-align: middle;"><p 
+			 class="Code">$Select=*</p></td>
+	</tr>
+</table>
+<p class="Paragraph">&#160;</p>
+<p class="Paragraph">&#160;</p>
+<div style="border-top: Solid 4px #0080c0; width: 100%; 
+					 position: relative; background-color: #374049; padding-top: 7px; 
+					 padding-bottom: 7px; padding-right: 5px;" id="footer">
+	<p style="font-size: 8pt; color: #ffffff; text-align: right;"><span 
+	 style="mso-ascii-theme-font: minor-latin; mso-fareast-font-family: Calibri; 
+	 mso-fareast-theme-font: minor-latin; mso-hansi-theme-font: minor-latin; 
+	 mso-bidi-font-family: 'Times New Roman'; mso-bidi-theme-font: minor-bidi; 
+	 mso-ansi-language: EN-US; mso-fareast-language: EN-US; mso-bidi-language: AR-SA; 
+	 font-family: Arial, sans-serif;">All Rights Reserved,Copyright (C) 
+	 FUJITSU LIMITED 1998-2013</span> </p>
+</div>
+<script type="text/javascript" language="javascript1.2">//<![CDATA[
+<!--
+if (window.writeIntopicBar)
+	writeIntopicBar(0);
+
+
+highlightSearch();
+//-->
+//]]></script>
+</body>
+</html>

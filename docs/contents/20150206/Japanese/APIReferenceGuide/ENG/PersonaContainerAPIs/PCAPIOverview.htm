@@ -1,0 +1,652 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<meta name="template" content="API Master.htt" />
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+<meta name="topic-check-list" content="Ran Smart Index" />
+<meta name="generator" content="Adobe RoboHelp 10" />
+<title>Overview</title>
+<link rel="StyleSheet" href="../../../default.css" type="text/css" />
+</head>
+
+<body>
+<script type="text/javascript" src="../../../ehlpdhtm.js"></script>
+
+<div style="width: 100%; position: relative;" id="header">
+	<p>&#160;</p>
+</div>
+
+<?rh-placeholder type="breadcrumbs" ph-align="2" usetopicformat="0" home="Home" 
+ sep-char="&gt;" ph-style="font-family:Arial;font-size:9pt;font-weight: normal;font-style: normal;text-decoration: none;" ?>
+
+<h1><span lang="JA" xml:lang="JA" style="line-height: 115%; font-family: 'MS Mincho'; 
+		 mso-ascii-font-family: Arial; mso-fareast-theme-font: minor-fareast; 
+		 mso-hansi-font-family: Arial; mso-bidi-font-family: Arial; mso-ansi-language: EN-US; 
+		 mso-fareast-language: JA; mso-bidi-language: AR-SA; font-weight: bold;">概要</span></h1>
+<p class="Paragraph" style="font-family: Arial, sans-serif;"><span style="font-family: Arial, sans-serif;">Persona 
+ Container APIs are divided into two the following categories:</span></p>
+<p class="Bullet_1"><span style="font-family:'Symbol'">&#183;</span><span style='word-spacing:normal; font:6.0pt "Times New Roman"'>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</span><span><font 
+	 class="">Cell Level APIs</font></span></p>
+<p class="Bullet_1"><span style="font-family:'Symbol'">&#183;</span><span style='word-spacing:normal; font:6.0pt "Times New Roman"'>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</span><span>Box 
+ Level APIs</span></p>
+<ul>
+	<li style="list-style: url('../../../Images/arrow.png'); margin-left: -20px;"><h2><span 
+	 style="font-family: Arial, sans-serif;"><span style="font-family: Arial, sans-serif;">C</span>ell 
+	 Level APIs</span></h2></li>
+</ul>
+<h3><span style="font-family: Arial, sans-serif;">O</span>verview</h3>
+<p class="Paragraph2">Cell Level APIs consist of functions, such as building 
+ authentication mechanism to authenticate an application, social graph, 
+ generate and manage Box, event handling messages, etc. </p>
+<p class="Paragraph2">It is implemented in the form of a control object. 
+ The Cell level APIs are further divided into the following categories:</p>
+<h3 style="font-family: Arial, sans-serif;"><span style="font-family: Arial, sans-serif;">Authentication 
+ (authentication)</span></h3>
+<p class="Bullet_1" style="font-family: Arial, sans-serif;"><span style="font-family:'Symbol'">&#183;</span><span style='word-spacing:normal; font:6.0pt "Times New Roman"'>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</span><a 
+	 href="CellLevelAPIs/Authentication/OAuth2TokenEndpoint.htm">OAuth2 
+ Token Endpoint (OAuth2 Token endpoint)</a></p>
+<p class="Bullet_1" style="font-family: Arial, sans-serif;"><span style="font-family:'Symbol'">&#183;</span><span style='word-spacing:normal; font:6.0pt "Times New Roman"'>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</span><font 
+	 class=""><a href="CellLevelAPIs/Authentication/OAuth2AuthorizationEndpoint.htm">OAuth2 
+ Authorization Endpoint (OAuth2 authorization endpoint API (__authz))</a></font></p>
+<p class="Bullet_1" style="font-family: Arial, sans-serif;"><span style="font-family:'Symbol'">&#183;</span><span style='word-spacing:normal; font:6.0pt "Times New Roman"'>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</span><a 
+	 href="CellLevelAPIs/Authentication/authproppatch.htm">auth_proppatch 
+ (ULUUT elevation setting PROPPATCH)</a></p>
+<p class="Bullet_1" style="font-family: Arial, sans-serif;"><span style="font-family:'Symbol'">&#183;</span><span style='word-spacing:normal; font:6.0pt "Times New Roman"'>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</span><a 
+	 href="CellLevelAPIs/Authentication/PasswordChange.htm">Password Change 
+ (Change Password)</a></p>
+<h3><span style="font-family: Arial, sans-serif;"><span style="font-family: Arial, sans-serif;">A</span>ccess 
+ Control (access control)</span></h3>
+<p class="Bullet_1" style="font-family: Arial, sans-serif;"><span style="font-family:'Symbol'">&#183;</span><span style='word-spacing:normal; font:6.0pt "Times New Roman"'>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</span><a 
+	 href="CellLevelAPIs/AccessControl/CellACL.htm">Cell ACL</a></p>
+<p class="Bullet_1" style="font-family: Arial, sans-serif;"><span style="font-family:'Symbol'">&#183;</span><span style='word-spacing:normal; font:6.0pt "Times New Roman"'>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</span><a 
+	 href="CellLevelAPIs/AccessControl/CellPROPFIND.htm">Cell PROPFIND</a></p>
+<p class="Bullet_1" style="font-family: Arial, sans-serif;"><span style="font-family:'Symbol'">&#183;</span><span style='word-spacing:normal; font:6.0pt "Times New Roman"'>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</span><a 
+	 href="CellLevelAPIs/AccessControl/CellPROPPATCH.htm">Cell PROPPATCH</a></p>
+<h3><span style="font-family: Arial, sans-serif;">M</span>essaging</h3>
+<p class="Bullet_1"><span style="font-family:'Symbol'">&#183;</span><span style='word-spacing:normal; font:6.0pt "Times New Roman"'>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</span><span><font 
+	 style="font-family: Arial, sans-serif;" face="Arial">Sending Message 
+ (message transmission)</font></span></p>
+<h3><span style="font-family: Arial, sans-serif;">E</span>vent (event)</h3>
+<p class="Bullet_1" style="font-family: Arial, sans-serif;"><span style="font-family:'Symbol'">&#183;</span><span style='word-spacing:normal; font:6.0pt "Times New Roman"'>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</span><a 
+	 href="CellLevelAPIs/Event/Overview.htm">Overview</a></p>
+<h4><span style="font-family: Arial, sans-serif;">E</span>vent Manipulation 
+ (event handling)</h4>
+<p class="Bullet_1"><span style="font-family:'Symbol'">&#183;</span><span style='word-spacing:normal; font:6.0pt "Times New Roman"'>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</span><span><a href="file:///C:/Users/harinder.sehgal/Desktop/HTML Pages/V1fd_event_create.html" 
+	 class="wiki-page"><font style="font-family: Arial, sans-serif;" face="Arial">External 
+ event reception</font></a></span></p>
+<p class="Bullet_1"><span style="font-family:'Symbol'">&#183;</span><span style='word-spacing:normal; font:6.0pt "Times New Roman"'>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</span><span><a href="file:///C:/Users/harinder.sehgal/Desktop/HTML Pages/V1fd_event_bus_connection.html" 
+	 class="wiki-page new"><font style="font-family: Arial, sans-serif;" 
+								 face="Arial">Event bus connection</font></a> 
+ (Not Implemented Yet)</span></p>
+<p class="Bullet_1"><span style="font-family:'Symbol'">&#183;</span><span style='word-spacing:normal; font:6.0pt "Times New Roman"'>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</span><span><a href="file:///C:/Users/harinder.sehgal/Desktop/HTML Pages/V1fd_event_listener_create.html" 
+	 class="wiki-page new"><font style="font-family: Arial, sans-serif;" 
+								 face="Arial">Event listener registration</font></a> 
+ (Not Implemented Yet)</span></p>
+<p class="Bullet_1"><span style="font-family:'Symbol'">&#183;</span><span style='word-spacing:normal; font:6.0pt "Times New Roman"'>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</span><span><a href="file:///C:/Users/harinder.sehgal/Desktop/HTML Pages/V1fd_event_listener_list.html" 
+	 class="wiki-page new"><font style="font-family: Arial, sans-serif;" 
+								 face="Arial">Event listener list acquisition</font></a> 
+ (Not Implemented Yet)</span></p>
+<p class="Bullet_1"><span style="font-family:'Symbol'">&#183;</span><span style='word-spacing:normal; font:6.0pt "Times New Roman"'>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</span><span><a href="file:///C:/Users/harinder.sehgal/Desktop/HTML Pages/V1fd_event_listener_delete.html" 
+	 class="wiki-page new">Delete event listener</a> (Not Implemented Yet)</span></p>
+<h4><span style="font-family: Arial, sans-serif;"><span><span>E</span></span>vent 
+ Logging (logging of events)</span></h4>
+<p class="Bullet_1"><span style="font-family:'Symbol'">&#183;</span><span style='word-spacing:normal; font:6.0pt "Times New Roman"'>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</span><span>LogFile_List 
+ (log files list acquisition) (Not Implemented Yet)</span></p>
+<p class="Bullet_1" style="font-family: Arial, sans-serif;"><span style="font-family:'Symbol'">&#183;</span><span style='word-spacing:normal; font:6.0pt "Times New Roman"'>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</span><a 
+	 href="CellLevelAPIs/Event/EventLogging/EventLogGet.htm">LogFile_Get 
+ (file logging)</a></p>
+<p class="Bullet_1"><span style="font-family:'Symbol'">&#183;</span><span style='word-spacing:normal; font:6.0pt "Times New Roman"'>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</span><span>LogFile_Delete 
+ (log file deletion) (Not Implemented Yet)</span></p>
+<p class="Bullet_1"><span style="font-family:'Symbol'">&#183;</span><span style='word-spacing:normal; font:6.0pt "Times New Roman"'>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</span><span><font 
+	 style="font-family: Arial, sans-serif;" face="Arial">Log setting acquisition</font> 
+ (Not Implemented Yet)</span></p>
+<p class="Bullet_1"><span style="font-family:'Symbol'">&#183;</span><span style='word-spacing:normal; font:6.0pt "Times New Roman"'>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</span><span><font 
+	 style="font-family: Arial, sans-serif;" face="Arial">Log configuration 
+ update</font> (Not Implemented Yet)</span></p>
+<h3>Cell Control Objects (Cell control object)</h3>
+<h4>OData Schema</h4>
+<p class="Bullet_1" style="font-family: Arial, sans-serif;"><span style="font-family:'Symbol'">&#183;</span><span style='word-spacing:normal; font:6.0pt "Times New Roman"'>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</span><a 
+	 href="CellLevelAPIs/CellControlObjects/ODataSchema/EDMX.htm">EDMX 
+ (EDMX acquisition ($ metadata))</a></p>
+<p class="Bullet_1" style="font-family: Arial, sans-serif;"><span style="font-family:'Symbol'">&#183;</span><span style='word-spacing:normal; font:6.0pt "Times New Roman"'>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</span><a 
+	 href="CellLevelAPIs/CellControlObjects/ODataSchema/AtomPubServiceDocument.htm">AtomPub 
+ Service Document (AtomPub service document acquisition)</a></p>
+<h4>Account</h4>
+<p class="Bullet_1" style="font-family: Arial, sans-serif;"><span style="font-family:'Symbol'">&#183;</span><span style='word-spacing:normal; font:6.0pt "Times New Roman"'>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</span><a 
+	 href="CellLevelAPIs/CellControlObjects/Account/AccountCreate.htm">create</a></p>
+<p class="Bullet_1" style="font-family: Arial, sans-serif;"><span style="font-family:'Symbol'">&#183;</span><span style='word-spacing:normal; font:6.0pt "Times New Roman"'>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</span><a 
+	 href="CellLevelAPIs/CellControlObjects/Account/AccountRetrieve.htm">retrieve</a></p>
+<p class="Bullet_1" style="font-family: Arial, sans-serif;"><span style="font-family:'Symbol'">&#183;</span><span style='word-spacing:normal; font:6.0pt "Times New Roman"'>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</span><a 
+	 href="CellLevelAPIs/CellControlObjects/Account/AccountUpdate.htm">update</a></p>
+<p class="Bullet_1" style="font-family: Arial, sans-serif;"><span style="font-family:'Symbol'">&#183;</span><span style='word-spacing:normal; font:6.0pt "Times New Roman"'>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</span><a 
+	 href="CellLevelAPIs/CellControlObjects/Account/AccountDelete.htm">delete</a></p>
+<p class="Bullet_1" style="font-family: Arial, sans-serif;"><span style="font-family:'Symbol'">&#183;</span><span style='word-spacing:normal; font:6.0pt "Times New Roman"'>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</span><a 
+	 href="CellLevelAPIs/CellControlObjects/Account/AccountSearch.htm">search</a></p>
+<p class="Bullet_1" style="font-family: Arial, sans-serif;"><span style="font-family:'Symbol'">&#183;</span><span style='word-spacing:normal; font:6.0pt "Times New Roman"'>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</span><a 
+	 href="CellLevelAPIs/CellControlObjects/Account/AccountLink/AccountLinkCreate.htm">account_links_create</a> 
+ </p>
+<p class="Bullet_1"><span style="font-family:'Symbol'">&#183;</span><span style='word-spacing:normal; font:6.0pt "Times New Roman"'>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</span><font style="font-family: Arial, sans-serif;" 
+	 face="Arial"><a href="CellLevelAPIs/CellControlObjects/Account/AccountLink/AccountLinkUpdate.htm">account_links_update</a></font>(Not 
+ Yet Implemented)</p>
+<p class="Bullet_1" style="font-family: Arial, sans-serif;"><span style="font-family:'Symbol'">&#183;</span><span style='word-spacing:normal; font:6.0pt "Times New Roman"'>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</span><a 
+	 href="CellLevelAPIs/CellControlObjects/Account/AccountLink/AccountLinkDelete.htm">account_links_delete</a> 
+ </p>
+<p class="Bullet_1" style="font-family: Arial, sans-serif;"><span style="font-family:'Symbol'">&#183;</span><span style='word-spacing:normal; font:6.0pt "Times New Roman"'>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</span><a 
+	 href="CellLevelAPIs/CellControlObjects/Account/AccountLink/AccountLinkList.htm">account_links_list</a> 
+ </p>
+<p class="Bullet_1" style="font-family: Arial, sans-serif;"><span style="font-family:'Symbol'">&#183;</span><span style='word-spacing:normal; font:6.0pt "Times New Roman"'>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</span><a 
+	 href="CellLevelAPIs/CellControlObjects/Account/AccountNavigationProperty/AccountNavPropCreate.htm">account_navpro_create</a> 
+ </p>
+<p class="Bullet_1" style="font-family: Arial, sans-serif;"><span style="font-family:'Symbol'">&#183;</span><span style='word-spacing:normal; font:6.0pt "Times New Roman"'>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</span><a 
+	 href="CellLevelAPIs/CellControlObjects/Account/AccountNavigationProperty/AccountNavPropList.htm">account_navpro_list</a> 
+ </p>
+<h4>Box</h4>
+<p class="Bullet_1" style="font-family: Arial, sans-serif;"><span style="font-family:'Symbol'">&#183;</span><span style='word-spacing:normal; font:6.0pt "Times New Roman"'>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</span><a 
+	 href="CellLevelAPIs/CellControlObjects/Box/BoxCreate.htm">create</a></p>
+<p class="Bullet_1" style="font-family: Arial, sans-serif;"><span style="font-family:'Symbol'">&#183;</span><span style='word-spacing:normal; font:6.0pt "Times New Roman"'>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</span><a 
+	 href="CellLevelAPIs/CellControlObjects/Box/BoxRetrive.htm">retrieve</a></p>
+<p class="Bullet_1" style="font-family: Arial, sans-serif;"><span style="font-family:'Symbol'">&#183;</span><span style='word-spacing:normal; font:6.0pt "Times New Roman"'>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</span><a 
+	 href="CellLevelAPIs/CellControlObjects/Box/BoxUpdate.htm">update</a></p>
+<p class="Bullet_1" style="font-family: Arial, sans-serif;"><span style="font-family:'Symbol'">&#183;</span><span style='word-spacing:normal; font:6.0pt "Times New Roman"'>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</span><a 
+	 href="CellLevelAPIs/CellControlObjects/Box/BoxDelete.htm">delete</a></p>
+<p class="Bullet_1" style="font-family: Arial, sans-serif;"><span style="font-family:'Symbol'">&#183;</span><span style='word-spacing:normal; font:6.0pt "Times New Roman"'>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</span><a 
+	 href="CellLevelAPIs/CellControlObjects/Box/BoxSearch.htm">search</a></p>
+<p class="Bullet_1" style="font-family: Arial, sans-serif;"><span style="font-family:'Symbol'">&#183;</span><span style='word-spacing:normal; font:6.0pt "Times New Roman"'>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</span><a 
+	 href="CellLevelAPIs/CellControlObjects/Box/BoxImport.htm">Import</a></p>
+<p class="Bullet_1" style="font-family: Arial, sans-serif;"><span style="font-family:'Symbol'">&#183;</span><span style='word-spacing:normal; font:6.0pt "Times New Roman"'>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</span><a 
+	 href="CellLevelAPIs/CellControlObjects/Box/BoxLink/BoxLinkCreate.htm">box_links_create</a></p>
+<p class="Bullet_1"><span style="font-family:'Symbol'">&#183;</span><span style='word-spacing:normal; font:6.0pt "Times New Roman"'>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</span><font style="font-family: Arial, sans-serif;" 
+	 face="Arial"><a href="CellLevelAPIs/CellControlObjects/Box/BoxLink/BoxLinkUpdate.htm">box_links_update</a></font>(Not 
+ Yet Implemented)</p>
+<p class="Bullet_1" style="font-family: Arial, sans-serif;"><span style="font-family:'Symbol'">&#183;</span><span style='word-spacing:normal; font:6.0pt "Times New Roman"'>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</span><a 
+	 href="CellLevelAPIs/CellControlObjects/Box/BoxLink/BoxLinkDelete.htm">box_links_delete</a></p>
+<p class="Bullet_1" style="font-family: Arial, sans-serif;"><span style="font-family:'Symbol'">&#183;</span><span style='word-spacing:normal; font:6.0pt "Times New Roman"'>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</span><a 
+	 href="CellLevelAPIs/CellControlObjects/Box/BoxLink/BoxLinkList.htm">box_links_list</a></p>
+<p class="Bullet_1" style="font-family: Arial, sans-serif;"><span style="font-family:'Symbol'">&#183;</span><span style='word-spacing:normal; font:6.0pt "Times New Roman"'>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</span><a 
+	 href="CellLevelAPIs/CellControlObjects/Box/BoxLinkNavigationProperty/BoxLinkNavPropCreate.htm">box_links_navpro_create</a></p>
+<p class="Bullet_1" style="font-family: Arial, sans-serif;"><span style="font-family:'Symbol'">&#183;</span><span style='word-spacing:normal; font:6.0pt "Times New Roman"'>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</span><a 
+	 href="CellLevelAPIs/CellControlObjects/Box/BoxLinkNavigationProperty/BoxLinkNavPropList.htm">box_links_navpro_list</a></p>
+<h4>Role</h4>
+<p class="Bullet_1" style="font-family: Arial, sans-serif;"><span style="font-family:'Symbol'">&#183;</span><span style='word-spacing:normal; font:6.0pt "Times New Roman"'>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</span><a 
+	 href="CellLevelAPIs/CellControlObjects/Role/RoleCreate.htm">create</a></p>
+<p class="Bullet_1" style="font-family: Arial, sans-serif;"><span style="font-family:'Symbol'">&#183;</span><span style='word-spacing:normal; font:6.0pt "Times New Roman"'>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</span><a 
+	 href="CellLevelAPIs/CellControlObjects/Role/RoleRetrieve.htm">retrieve</a></p>
+<p class="Bullet_1" style="font-family: Arial, sans-serif;"><span style="font-family:'Symbol'">&#183;</span><span style='word-spacing:normal; font:6.0pt "Times New Roman"'>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</span><a 
+	 href="CellLevelAPIs/CellControlObjects/Role/RoleUpdate.htm">update</a></p>
+<p class="Bullet_1" style="font-family: Arial, sans-serif;"><span style="font-family:'Symbol'">&#183;</span><span style='word-spacing:normal; font:6.0pt "Times New Roman"'>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</span><a 
+	 href="CellLevelAPIs/CellControlObjects/Role/RoleDelete.htm">delete</a></p>
+<p class="Bullet_1" style="font-family: Arial, sans-serif;"><span style="font-family:'Symbol'">&#183;</span><span style='word-spacing:normal; font:6.0pt "Times New Roman"'>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</span><a 
+	 href="CellLevelAPIs/CellControlObjects/Role/RoleSearch.htm">search</a></p>
+<p class="Bullet_1" style="font-family: Arial, sans-serif;"><span style="font-family:'Symbol'">&#183;</span><span style='word-spacing:normal; font:6.0pt "Times New Roman"'>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</span><a 
+	 href="CellLevelAPIs/CellControlObjects/Role/RoleLink/RoleLinkCreate.htm">role_link_create</a></p>
+<p class="Bullet_1"><span style="font-family:'Symbol'">&#183;</span><span style='word-spacing:normal; font:6.0pt "Times New Roman"'>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</span><font style="font-family: Arial, sans-serif;" 
+	 face="Arial"><a href="CellLevelAPIs/CellControlObjects/Role/RoleLink/RoleLinkUpdate.htm">role_links_update</a></font> 
+ (Not Yet Implemented)</p>
+<p class="Bullet_1" style="font-family: Arial, sans-serif;"><span style="font-family:'Symbol'">&#183;</span><span style='word-spacing:normal; font:6.0pt "Times New Roman"'>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</span><a 
+	 href="CellLevelAPIs/CellControlObjects/Role/RoleLink/RoleLinkDelete.htm">role_links_delete</a></p>
+<p class="Bullet_1" style="font-family: Arial, sans-serif;"><span style="font-family:'Symbol'">&#183;</span><span style='word-spacing:normal; font:6.0pt "Times New Roman"'>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</span><a 
+	 href="CellLevelAPIs/CellControlObjects/Role/RoleLink/RoleLinkList.htm">role_links_list</a></p>
+<p class="Bullet_1" style="font-family: Arial, sans-serif;"><span style="font-family:'Symbol'">&#183;</span><span style='word-spacing:normal; font:6.0pt "Times New Roman"'>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</span><a 
+	 href="CellLevelAPIs/CellControlObjects/Role/RoleNavigationProperty/RoleNavPropCreate.htm">role_navpro_create</a></p>
+<p class="Bullet_1" style="font-family: Arial, sans-serif;"><span style="font-family:'Symbol'">&#183;</span><span style='word-spacing:normal; font:6.0pt "Times New Roman"'>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</span><a 
+	 href="CellLevelAPIs/CellControlObjects/Role/RoleNavigationProperty/RoleNavPropList.htm">role_navpro_list</a></p>
+<h4>ExtCell</h4>
+<p class="Bullet_1" style="font-family: Arial, sans-serif;"><span style="font-family:'Symbol'">&#183;</span><span style='word-spacing:normal; font:6.0pt "Times New Roman"'>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</span><a 
+	 href="CellLevelAPIs/CellControlObjects/ExternalCell/ExtCellCreate.htm">extcell_create</a></p>
+<p class="Bullet_1" style="font-family: Arial, sans-serif;"><span style="font-family:'Symbol'">&#183;</span><span style='word-spacing:normal; font:6.0pt "Times New Roman"'>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</span><a 
+	 href="CellLevelAPIs/CellControlObjects/ExternalCell/ExtCellGet.htm">extcell_get</a> 
+ </p>
+<p class="Bullet_1" style="font-family: Arial, sans-serif;"><span style="font-family:'Symbol'">&#183;</span><span style='word-spacing:normal; font:6.0pt "Times New Roman"'>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</span><a 
+	 href="CellLevelAPIs/CellControlObjects/ExternalCell/ExtCellUpdate.htm">extcell_update</a> 
+ </p>
+<p class="Bullet_1" style="font-family: Arial, sans-serif;"><span style="font-family:'Symbol'">&#183;</span><span style='word-spacing:normal; font:6.0pt "Times New Roman"'>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</span><a 
+	 href="CellLevelAPIs/CellControlObjects/ExternalCell/ExtCellDelete.htm">extcell_delete</a></p>
+<p class="Bullet_1" style="font-family: Arial, sans-serif;"><span style="font-family:'Symbol'">&#183;</span><span style='word-spacing:normal; font:6.0pt "Times New Roman"'>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</span><a 
+	 href="CellLevelAPIs/CellControlObjects/ExternalCell/ExtCellList.htm">extcell_list</a> 
+ </p>
+<p class="Bullet_1" style="font-family: Arial, sans-serif;"><span style="font-family:'Symbol'">&#183;</span><span style='word-spacing:normal; font:6.0pt "Times New Roman"'>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</span><a 
+	 href="CellLevelAPIs/CellControlObjects/ExternalCell/ExternalCellLink/ExtCellLinkCreate.htm">extcell_links_create</a> 
+ </p>
+<p class="Bullet_1"><span style="font-family:'Symbol'">&#183;</span><span style='word-spacing:normal; font:6.0pt "Times New Roman"'>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</span><font style="font-family: Arial, sans-serif;" 
+	 face="Arial"><a href="CellLevelAPIs/CellControlObjects/ExternalCell/ExternalCellLink/ExtCellLinkUpdate.htm">extcell_links_update</a></font>(Not 
+ Yet Implemented)</p>
+<p class="Bullet_1" style="font-family: Arial, sans-serif;"><span style="font-family:'Symbol'">&#183;</span><span style='word-spacing:normal; font:6.0pt "Times New Roman"'>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</span><a 
+	 href="CellLevelAPIs/CellControlObjects/ExternalCell/ExternalCellLink/ExtCellLinkDelete.htm">extcell_links_delete</a></p>
+<p class="Bullet_1" style="font-family: Arial, sans-serif;"><span style="font-family:'Symbol'">&#183;</span><span style='word-spacing:normal; font:6.0pt "Times New Roman"'>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</span><a 
+	 href="CellLevelAPIs/CellControlObjects/ExternalCell/ExternalCellLink/ExtCellLinkList.htm">extcell_links_list</a></p>
+<p class="Bullet_1" style="font-family: Arial, sans-serif;"><span style="font-family:'Symbol'">&#183;</span><span style='word-spacing:normal; font:6.0pt "Times New Roman"'>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</span><a 
+	 href="CellLevelAPIs/CellControlObjects/ExternalCell/ExternalCellNavigationProperty/ExtCellNavPropCreate.htm">extcell_navpro_create</a></p>
+<p class="Bullet_1" style="font-family: Arial, sans-serif;"><span style="font-family:'Symbol'">&#183;</span><span style='word-spacing:normal; font:6.0pt "Times New Roman"'>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</span><a 
+	 href="CellLevelAPIs/CellControlObjects/ExternalCell/ExternalCellNavigationProperty/ExtCellNavPropList.htm">extcell_navpro_list</a></p>
+<h4>Relation</h4>
+<p class="Bullet_1" style="font-family: Arial, sans-serif;"><span style="font-family:'Symbol'">&#183;</span><span style='word-spacing:normal; font:6.0pt "Times New Roman"'>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</span><a 
+	 href="CellLevelAPIs/CellControlObjects/Relation/RelCreate.htm">create</a></p>
+<p class="Bullet_1" style="font-family: Arial, sans-serif;"><span style="font-family:'Symbol'">&#183;</span><span style='word-spacing:normal; font:6.0pt "Times New Roman"'>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</span><a 
+	 href="CellLevelAPIs/CellControlObjects/Relation/RelRetrieve.htm">retrieve</a></p>
+<p class="Bullet_1" style="font-family: Arial, sans-serif;"><span style="font-family:'Symbol'">&#183;</span><span style='word-spacing:normal; font:6.0pt "Times New Roman"'>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</span><a 
+	 href="CellLevelAPIs/CellControlObjects/Relation/RelUpdate.htm">update</a></p>
+<p class="Bullet_1" style="font-family: Arial, sans-serif;"><span style="font-family:'Symbol'">&#183;</span><span style='word-spacing:normal; font:6.0pt "Times New Roman"'>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</span><a 
+	 href="CellLevelAPIs/CellControlObjects/Relation/RelDelete.htm">delete</a></p>
+<p class="Bullet_1" style="font-family: Arial, sans-serif;"><span style="font-family:'Symbol'">&#183;</span><span style='word-spacing:normal; font:6.0pt "Times New Roman"'>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</span><a 
+	 href="CellLevelAPIs/CellControlObjects/Relation/RelSearch.htm">search</a></p>
+<p class="Bullet_1" style="font-family: Arial, sans-serif;"><span style="font-family:'Symbol'">&#183;</span><span style='word-spacing:normal; font:6.0pt "Times New Roman"'>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</span><a 
+	 href="CellLevelAPIs/CellControlObjects/Relation/RelationLink/RelLinkCreate.htm">creating 
+ links</a></p>
+<p class="Bullet_1"><span style="font-family:'Symbol'">&#183;</span><span style='word-spacing:normal; font:6.0pt "Times New Roman"'>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</span><font style="font-family: Arial, sans-serif;" 
+	 face="Arial"><a href="CellLevelAPIs/CellControlObjects/Relation/RelationLink/RelLinkUpdate.htm">Update 
+ Links</a></font> (Not Yet Implemented)</p>
+<p class="Bullet_1" style="font-family: Arial, sans-serif;"><span style="font-family:'Symbol'">&#183;</span><span style='word-spacing:normal; font:6.0pt "Times New Roman"'>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</span><a 
+	 href="CellLevelAPIs/CellControlObjects/Relation/RelationLink/RelLinkDelete.htm">delete 
+ links</a></p>
+<p class="Bullet_1" style="font-family: Arial, sans-serif;"><span style="font-family:'Symbol'">&#183;</span><span style='word-spacing:normal; font:6.0pt "Times New Roman"'>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</span><a 
+	 href="CellLevelAPIs/CellControlObjects/Relation/RelationLink/RelLinkRetrieve.htm">retrieve 
+ links list</a></p>
+<p class="Bullet_1" style="font-family: Arial, sans-serif;"><span style="font-family:'Symbol'">&#183;</span><span style='word-spacing:normal; font:6.0pt "Times New Roman"'>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</span><a 
+	 href="CellLevelAPIs/CellControlObjects/Relation/RelationLinkNavigationProperty/RelLinkNavPropCreate.htm">relation_links_navpro_create 
+ (NavProp via Register)</a></p>
+<p class="Bullet_1" style="font-family: Arial, sans-serif;"><span style="font-family:'Symbol'">&#183;</span><span style='word-spacing:normal; font:6.0pt "Times New Roman"'>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</span><a 
+	 href="CellLevelAPIs/CellControlObjects/Relation/RelationLinkNavigationProperty/RelLinkNavPropList.htm">relation_links_navpro_list 
+ (NavProp via list)</a></p>
+<h4>ExtRole</h4>
+<p class="Bullet_1" style="font-family: Arial, sans-serif;"><span style="font-family:'Symbol'">&#183;</span><span style='word-spacing:normal; font:6.0pt "Times New Roman"'>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</span><a 
+	 href="CellLevelAPIs/CellControlObjects/ExternalRole/ExtRoleCreate.htm">extrole_create 
+ (ExtRole registration)</a></p>
+<p class="Bullet_1" style="font-family: Arial, sans-serif;"><span style="font-family:'Symbol'">&#183;</span><span style='word-spacing:normal; font:6.0pt "Times New Roman"'>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</span><a 
+	 href="CellLevelAPIs/CellControlObjects/ExternalRole/ExtRoleGet.htm">extrole_get 
+ (ExtRole acquisition)</a></p>
+<p class="Bullet_1" style="font-family: Arial, sans-serif;"><span style="font-family:'Symbol'">&#183;</span><span style='word-spacing:normal; font:6.0pt "Times New Roman"'>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</span><a 
+	 href="CellLevelAPIs/CellControlObjects/ExternalRole/ExtRoleUpdate.htm">extrole_update 
+ (ExtRole update)</a></p>
+<p class="Bullet_1" style="font-family: Arial, sans-serif;"><span style="font-family:'Symbol'">&#183;</span><span style='word-spacing:normal; font:6.0pt "Times New Roman"'>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</span><a 
+	 href="CellLevelAPIs/CellControlObjects/ExternalRole/ExtRoleDelete.htm">extrole_delete 
+ (ExtRole Delete)</a></p>
+<p class="Bullet_1" style="font-family: Arial, sans-serif;"><span style="font-family:'Symbol'">&#183;</span><span style='word-spacing:normal; font:6.0pt "Times New Roman"'>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</span><a 
+	 href="CellLevelAPIs/CellControlObjects/ExternalRole/ExtRoleList.htm">extrole_list 
+ (ExtRole List)</a></p>
+<p class="Bullet_1" style="font-family: Arial, sans-serif;"><span style="font-family:'Symbol'">&#183;</span><span style='word-spacing:normal; font:6.0pt "Times New Roman"'>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</span><a 
+	 href="CellLevelAPIs/CellControlObjects/ExternalRole/ExternalRoleLink/ExtRoleLinkCreate.htm">extrole_links_create 
+ ($ links registration)</a></p>
+<p class="Bullet_1"><span style="font-family:'Symbol'">&#183;</span><span style='word-spacing:normal; font:6.0pt "Times New Roman"'>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</span><font style="font-family: Arial, sans-serif;" 
+	 face="Arial"><a href="CellLevelAPIs/CellControlObjects/ExternalRole/ExternalRoleLink/ExtRoleLinkUpdate.htm">extrole_links_update</a></font>(Not 
+ Yet Implemented)</p>
+<p class="Bullet_1" style="font-family: Arial, sans-serif;"><span style="font-family:'Symbol'">&#183;</span><span style='word-spacing:normal; font:6.0pt "Times New Roman"'>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</span><a 
+	 href="CellLevelAPIs/CellControlObjects/ExternalRole/ExternalRoleLink/ExtRoleLinkDelete.htm">extrole_links_delete</a></p>
+<p class="Bullet_1" style="font-family: Arial, sans-serif;"><span style="font-family:'Symbol'">&#183;</span><span style='word-spacing:normal; font:6.0pt "Times New Roman"'>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</span><a 
+	 href="CellLevelAPIs/CellControlObjects/ExternalRole/ExternalRoleLink/ExtRoleLinkList.htm">extrole_links_lisit</a></p>
+<p class="Bullet_1" style="font-family: Arial, sans-serif;"><span style="font-family:'Symbol'">&#183;</span><span style='word-spacing:normal; font:6.0pt "Times New Roman"'>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</span><a 
+	 href="CellLevelAPIs/CellControlObjects/ExternalCell/ExternalCellNavigationProperty/ExtCellNavPropCreate.htm">extrole_navpro_create</a></p>
+<p class="Bullet_1" style="font-family: Arial, sans-serif;"><span style="font-family:'Symbol'">&#183;</span><span style='word-spacing:normal; font:6.0pt "Times New Roman"'>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</span><a 
+	 href="CellLevelAPIs/CellControlObjects/ExternalRole/ExternalRoleNavigationProperty/ExtRoleNavPropList.htm">extrole_navpro_list</a></p>
+<h4>Sent Message (outgoing messages)</h4>
+<p class="Bullet_1" style="font-family: Arial, sans-serif;"><span style="font-family:'Symbol'">&#183;</span><span style='word-spacing:normal; font:6.0pt "Times New Roman"'>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</span><a 
+	 href="CellLevelAPIs/CellControlObjects/SentMessage/OutmessageList.htm">outmessage_list 
+ (outgoing messages list acquisition)</a></p>
+<p class="Bullet_1" style="font-family: Arial, sans-serif;"><span style="font-family:'Symbol'">&#183;</span><span style='word-spacing:normal; font:6.0pt "Times New Roman"'>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</span><a 
+	 href="CellLevelAPIs/CellControlObjects/SentMessage/OutmessageGet.htm">outmessage_get 
+ (send message retrieval)</a></p>
+<p class="Bullet_1" style="font-family: Arial, sans-serif;"><span style="font-family:'Symbol'">&#183;</span><span style='word-spacing:normal; font:6.0pt "Times New Roman"'>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</span><a 
+	 href="CellLevelAPIs/CellControlObjects/SentMessage/OutmessagDelete.htm">outmessage_delete 
+ (send message deletion)</a></p>
+<h4>Received Message (received message)</h4>
+<p class="Bullet_1" style="font-family: Arial, sans-serif;"><span style="font-family:'Symbol'">&#183;</span><span style='word-spacing:normal; font:6.0pt "Times New Roman"'>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</span><a 
+	 href="CellLevelAPIs/CellControlObjects/ReceivedMessage/InmessageList.htm">inmessage_list 
+ (incoming message list acquisition)</a></p>
+<p class="Bullet_1" style="font-family: Arial, sans-serif;"><span style="font-family:'Symbol'">&#183;</span><span style='word-spacing:normal; font:6.0pt "Times New Roman"'>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</span><a 
+	 href="CellLevelAPIs/CellControlObjects/ReceivedMessage/InmessageGet.htm">inmessage_get 
+ (incoming message retrieval)</a></p>
+<p class="Bullet_1" style="font-family: Arial, sans-serif;"><span style="font-family:'Symbol'">&#183;</span><span style='word-spacing:normal; font:6.0pt "Times New Roman"'>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</span><a 
+	 href="CellLevelAPIs/CellControlObjects/ReceivedMessage/InmessageDelete.htm">inmessage_delete 
+ (received message Delete)</a></p>
+<p class="Bullet_1" style="font-family: Arial, sans-serif;"><span style="font-family:'Symbol'">&#183;</span><span style='word-spacing:normal; font:6.0pt "Times New Roman"'>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</span><a 
+	 href="CellLevelAPIs/CellControlObjects/ReceivedMessage/InmessageApprove.htm">inmessage_approve 
+ (message approval)</a></p>
+<ul>
+	<li style="font-family: Arial, sans-serif; list-style: url('../../../Images/arrow.png'); 
+		 margin-left: -20px;"><h2><span style="font-family: Arial, sans-serif;">Box 
+	 Level APIs</span></h2></li>
+</ul>
+<h3>Overview</h3>
+<p class="Paragraph2">Box Level API manipulates the data based on WebDAV.</p>
+<p class="Paragraph2">Placement and acquisition of files, create and manage 
+ folders (collection), enumeration of files and folders, setting and reference 
+ of the access can be controlled as if it were a regular file system.</p>
+<p class="Paragraph2">Further, since it supports the special collection 
+ following can be not only data files like, to handle data in various forms.</p>
+<table style="margin-left: 26pt;" cellspacing="0" width="96%">
+	<col style="width: 37.149%;" />
+	<col style="width: 43.188%;" />
+	<col style="width: 19.663%;" />
+	<tr>
+		<th style="border: Solid 1px #9b9b9b;" bgcolor="#353D47"><p class="GreyColumnHeading">Special Collections</p></th>
+		<th style="border-top: Solid 1px #9b9b9b; border-right: Solid 1px #9b9b9b; 
+			 border-bottom: Solid 1px #9b9b9b;" bgcolor="#353D47"><p class="GreyColumnHeading">Use</p></th>
+		<th style="border-top: Solid 1px #9b9b9b; border-right: Solid 1px #9b9b9b; 
+			 border-bottom: Solid 1px #9b9b9b;" bgcolor="#353D47"><p class="GreyColumnHeading">備考</p></th>
+	</tr>
+	<tr>
+		<td style="border-left: Solid 1px #9b9b9b; border-right: Solid 1px #9b9b9b; 
+			 border-bottom: Solid 1px #9b9b9b;"><p class="TableText"><span><font 
+		 style="font-family: Arial, sans-serif;" face="Arial">OData Service 
+		 Collection</font></span></p></td>
+		<td style="border-right: Solid 1px #9b9b9b; border-bottom: Solid 1px #9b9b9b;"><p 
+			 class="TableText"><span><font style="font-family: Arial, sans-serif;" 
+											 face="Arial">Relational data</font></span></p></td>
+		<td style="border-right: Solid 1px #9b9b9b; border-bottom: Solid 1px #9b9b9b;"><p 
+			 class="TableText">&#160;</p></td>
+	</tr>
+	<tr>
+		<td style="border-left: Solid 1px #9b9b9b; border-right: Solid 1px #9b9b9b; 
+			 border-bottom: Solid 1px #9b9b9b;"><p class="TableText"><span><font 
+		 style="font-family: Arial, sans-serif;" face="Arial">Engine Service 
+		 Collection</font></span></p></td>
+		<td style="border-right: Solid 1px #9b9b9b; border-bottom: Solid 1px #9b9b9b;"><p 
+			 class="TableText"><span><font style="font-family: Arial, sans-serif;" 
+											 face="Arial">Running customization 
+		 logic</font></span></p></td>
+		<td style="border-right: Solid 1px #9b9b9b; border-bottom: Solid 1px #9b9b9b;"><p 
+			 class="TableText">&#160;</p></td>
+	</tr>
+	<tr>
+		<td style="border-left: Solid 1px #9b9b9b; border-right: Solid 1px #9b9b9b; 
+			 border-bottom: Solid 1px #9b9b9b;"><p class="TableText"><span><font 
+		 style="font-family: Arial, sans-serif;" face="Arial">CALDAV Collection</font></span></p></td>
+		<td style="border-right: Solid 1px #9b9b9b; border-bottom: Solid 1px #9b9b9b;"><p 
+			 class="TableText"><span><font style="font-family: Arial, sans-serif;" 
+											 face="Arial">Calendar data</font></span></p></td>
+		<td style="border-right: Solid 1px #9b9b9b; border-bottom: Solid 1px #9b9b9b;"><p 
+			 class="TableText"><span><font style="font-family: Arial, sans-serif;" 
+											 face="Arial">Not implemented</font></span></p></td>
+	</tr>
+	<tr>
+		<td style="border-left: Solid 1px #9b9b9b; border-right: Solid 1px #9b9b9b; 
+			 border-bottom: Solid 1px #9b9b9b;"><p class="TableText"><span><font 
+		 style="font-family: Arial, sans-serif;" face="Arial">Link Collection</font></span></p></td>
+		<td style="border-right: Solid 1px #9b9b9b; border-bottom: Solid 1px #9b9b9b;"><p 
+			 class="TableText"><span><font style="font-family: Arial, sans-serif;" 
+											 face="Arial">Alias ​​to a 
+		 specific area of other Box and other Cell</font></span></p></td>
+		<td style="border-right: Solid 1px #9b9b9b; border-bottom: Solid 1px #9b9b9b;"><p 
+			 class="TableText"><span><font style="font-family: Arial, sans-serif;" 
+											 face="Arial">Not implemented</font></span></p></td>
+	</tr>
+</table>
+<p class="Paragraph">&#160;</p>
+<p class="Paragraph2">Special Collections These can also be created on 
+ any path of WebDAV space on Box provides.</p>
+<h3>Normal WebDAV Operations</h3>
+<h4>Files Manipulation</h4>
+<p class="Bullet_1" style="font-family: Arial, sans-serif;"><span style="font-family:'Symbol'">&#183;</span><span style='word-spacing:normal; font:6.0pt "Times New Roman"'>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</span><a 
+	 href="BoxLevelAPIs/NormalWebDAVOperations/FilesManipulation/filecreate.htm">file_create 
+ (file registration PUT)</a></p>
+<p class="Bullet_1" style="font-family: Arial, sans-serif;"><span style="font-family:'Symbol'">&#183;</span><span style='word-spacing:normal; font:6.0pt "Times New Roman"'>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</span><a 
+	 href="BoxLevelAPIs/NormalWebDAVOperations/FilesManipulation/fileget.htm">file_get 
+ (file acquisition GET)</a></p>
+<p class="Bullet_1" style="font-family: Arial, sans-serif;"><span style="font-family:'Symbol'">&#183;</span><span style='word-spacing:normal; font:6.0pt "Times New Roman"'>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</span><a 
+	 href="BoxLevelAPIs/NormalWebDAVOperations/FilesManipulation/filedelete.htm">file_delete 
+ (file Delete DELETE)</a></p>
+<p class="Bullet_1" style="font-family: Arial, sans-serif;"><span style="font-family:'Symbol'">&#183;</span><span style='word-spacing:normal; font:6.0pt "Times New Roman"'>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</span><a 
+	 href="BoxLevelAPIs/NormalWebDAVOperations/FilesManipulation/collectionpropfind.htm">collection_propfind 
+ (file setting acquisition PROPFIND)</a></p>
+<p class="Bullet_1" style="font-family: Arial, sans-serif;"><span style="font-family:'Symbol'">&#183;</span><span style='word-spacing:normal; font:6.0pt "Times New Roman"'>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</span><a 
+	 href="BoxLevelAPIs/NormalWebDAVOperations/FilesManipulation/collectionproppatch.htm">collection_proppatch 
+ (file settings apply PROPPATCH)</a></p>
+<h4>Collection Manipulation</h4>
+<p class="Bullet_1" style="font-family: Arial, sans-serif;"><span style="font-family:'Symbol'">&#183;</span><span style='word-spacing:normal; font:6.0pt "Times New Roman"'>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</span><a 
+	 href="BoxLevelAPIs/NormalWebDAVOperations/CollectionManipulation/collectionmkcoldavcol.htm">collection_mkcol_davcol 
+ (collection created MKCOL)</a></p>
+<p class="Bullet_1" style="font-family: Arial, sans-serif;"><span style="font-family:'Symbol'">&#183;</span><span style='word-spacing:normal; font:6.0pt "Times New Roman"'>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</span><a 
+	 href="BoxLevelAPIs/NormalWebDAVOperations/CollectionManipulation/collectiondelete.htm">collection_delete 
+ (collection Delete DELETE)</a></p>
+<p class="Bullet_1" style="font-family: Arial, sans-serif;"><span style="font-family:'Symbol'">&#183;</span><span style='word-spacing:normal; font:6.0pt "Times New Roman"'>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</span><a 
+	 href="BoxLevelAPIs/NormalWebDAVOperations/CollectionManipulation/collection_propfind.htm">collection_propfind 
+ (collection setting acquisition PROPFIND)</a></p>
+<p class="Bullet_1" style="font-family: Arial, sans-serif;"><span style="font-family:'Symbol'">&#183;</span><span style='word-spacing:normal; font:6.0pt "Times New Roman"'>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</span><a 
+	 href="BoxLevelAPIs/NormalWebDAVOperations/CollectionManipulation/collectionproppatch.htm">collection_proppatch 
+ (collection setting applied PROPPATCH)</a></p>
+<h4>ACL Configuration</h4>
+<p class="Paragraph2">ACL settings can be against (including a special 
+ collection) collection and all files.</p>
+<p class="Bullet_1" style="font-family: Arial, sans-serif;"><span style="font-family:'Symbol'">&#183;</span><span style='word-spacing:normal; font:6.0pt "Times New Roman"'>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</span><a 
+	 href="BoxLevelAPIs/NormalWebDAVOperations/ACLConfiguration/ACLConfiguration.htm">ACL 
+ Configuration (ACL setting)</a></p>
+<p class="Bullet_1"><span style="font-family:'Symbol'">&#183;</span><span style='word-spacing:normal; font:6.0pt "Times New Roman"'>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</span><span>I can 
+ be obtained with the PROPFIND method ACL settings.</span></p>
+<h3 style="font-family: Arial, sans-serif;">Special Collection: OData Service 
+ Collection</h3>
+<h4 style="font-family: Arial, sans-serif;">Overview</h4>
+<p class="Bullet_1" style="font-family: Arial, sans-serif;"><span style="font-family:'Symbol'">&#183;</span><span style='word-spacing:normal; font:6.0pt "Times New Roman"'>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</span><a 
+	 href="BoxLevelAPIs/SpecialCollection/ODataServiceCollection/Overview.htm">userodata_model 
+ (model of user OData)</a></p>
+<h4 style="font-family: Arial, sans-serif;">Schema Definition</h4>
+<p class="Bullet_1" style="font-family: Arial, sans-serif;"><span style="font-family:'Symbol'">&#183;</span><span style='word-spacing:normal; font:6.0pt "Times New Roman"'>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</span><a 
+	 href="BoxLevelAPIs/SpecialCollection/ODataServiceCollection/SchemaDefinition/userodataschemaservicedocument.htm">userodata_schema_servicedocument 
+ (Service document acquisition)</a></p>
+<p class="Bullet_1" style="font-family: Arial, sans-serif;"><span style="font-family:'Symbol'">&#183;</span><span style='word-spacing:normal; font:6.0pt "Times New Roman"'>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</span><a 
+	 href="BoxLevelAPIs/SpecialCollection/ODataServiceCollection/SchemaDefinition/userodataschemaschema.htm">userodata_schema_schema 
+ (schema acquisition ($ metadata / $ metadata))</a></p>
+<h4>EntityType</h4>
+<p class="Bullet_1" style="font-family: Arial, sans-serif;"><span style="font-family:'Symbol'">&#183;</span><span style='word-spacing:normal; font:6.0pt "Times New Roman"'>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</span><a 
+	 href="BoxLevelAPIs/SpecialCollection/ODataServiceCollection/EntityType/Create.htm">create</a></p>
+<p class="Bullet_1" style="font-family: Arial, sans-serif;"><span style="font-family:'Symbol'">&#183;</span><span style='word-spacing:normal; font:6.0pt "Times New Roman"'>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</span><a href="BoxLevelAPIs/SpecialCollection/ODataServiceCollection/EntityType/Get.htm">retrieve</a></p>
+<p class="Bullet_1" style="font-family: Arial, sans-serif;"><span style="font-family:'Symbol'">&#183;</span><span style='word-spacing:normal; font:6.0pt "Times New Roman"'>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</span><a 
+	 href="BoxLevelAPIs/SpecialCollection/ODataServiceCollection/EntityType/Update.htm">update</a></p>
+<p class="Bullet_1" style="font-family: Arial, sans-serif;"><span style="font-family:'Symbol'">&#183;</span><span style='word-spacing:normal; font:6.0pt "Times New Roman"'>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</span><a 
+	 href="BoxLevelAPIs/SpecialCollection/ODataServiceCollection/EntityType/Delete.htm">delete</a></p>
+<p class="Bullet_1" style="font-family: Arial, sans-serif;"><span style="font-family:'Symbol'">&#183;</span><span style='word-spacing:normal; font:6.0pt "Times New Roman"'>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</span><a href="BoxLevelAPIs/SpecialCollection/ODataServiceCollection/EntityType/List.htm">search</a></p>
+<p class="Bullet_1" style="font-family: Arial, sans-serif;"><span style="font-family:'Symbol'">&#183;</span><span style='word-spacing:normal; font:6.0pt "Times New Roman"'>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</span><a 
+	 href="BoxLevelAPIs/SpecialCollection/ODataServiceCollection/EntityType/EntityTypesLinks/Create.htm">entitytype_links_create</a></p>
+<p class="Bullet_1"><span style="font-family:'Symbol'">&#183;</span><span style='word-spacing:normal; font:6.0pt "Times New Roman"'>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</span><font style="font-family: Arial, sans-serif;" 
+	 face="Arial"><a href="BoxLevelAPIs/SpecialCollection/ODataServiceCollection/EntityType/EntityTypesLinks/Update.htm">entitytype_links_update</a> 
+ </font>(Not Yet Implemented)</p>
+<p class="Bullet_1" style="font-family: Arial, sans-serif;"><span style="font-family:'Symbol'">&#183;</span><span style='word-spacing:normal; font:6.0pt "Times New Roman"'>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</span><a 
+	 href="BoxLevelAPIs/SpecialCollection/ODataServiceCollection/EntityType/EntityTypesLinks/Delete.htm">entitytype_links_delete</a></p>
+<p class="Bullet_1" style="font-family: Arial, sans-serif;"><span style="font-family:'Symbol'">&#183;</span><span style='word-spacing:normal; font:6.0pt "Times New Roman"'>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</span><a 
+	 href="BoxLevelAPIs/SpecialCollection/ODataServiceCollection/EntityType/EntityTypesLinks/List.htm">entitytype_links_list</a></p>
+<p class="Bullet_1" style="font-family: Arial, sans-serif;"><span style="font-family:'Symbol'">&#183;</span><span style='word-spacing:normal; font:6.0pt "Times New Roman"'>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</span><a 
+	 href="BoxLevelAPIs/SpecialCollection/ODataServiceCollection/EntityType/EntityTypeNavigationProperty/List.htm">entitytype_navpro_list</a></p>
+<h4>AssociationEnd</h4>
+<p class="Bullet_1" style="font-family: Arial, sans-serif;"><span style="font-family:'Symbol'">&#183;</span><span style='word-spacing:normal; font:6.0pt "Times New Roman"'>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</span><a 
+	 href="BoxLevelAPIs/SpecialCollection/ODataServiceCollection/AssociationEnd/Create.htm" 
+	 class="wiki-page">assocend_create (AssociationEnd registration)</a></p>
+<p class="Bullet_1" style="font-family: Arial, sans-serif;"><span style="font-family:'Symbol'">&#183;</span><span style='word-spacing:normal; font:6.0pt "Times New Roman"'>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</span><a 
+	 href="BoxLevelAPIs/SpecialCollection/ODataServiceCollection/AssociationEnd/Get.htm" 
+	 class="wiki-page">assocend_get (AssociationEnd acquisition)</a></p>
+<p class="Bullet_1"><span style="font-family:'Symbol'">&#183;</span><span style='word-spacing:normal; font:6.0pt "Times New Roman"'>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</span><span>AssociationEnd 
+ update [update is impossible]</span></p>
+<p class="Bullet_1" style="font-family: Arial, sans-serif;"><span style="font-family:'Symbol'">&#183;</span><span style='word-spacing:normal; font:6.0pt "Times New Roman"'>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</span><a 
+	 href="BoxLevelAPIs/SpecialCollection/ODataServiceCollection/AssociationEnd/Delete.htm" 
+	 class="wiki-page">assocend_delete (AssociationEnd Delete)</a></p>
+<p class="Bullet_1" style="font-family: Arial, sans-serif;"><span style="font-family:'Symbol'">&#183;</span><span style='word-spacing:normal; font:6.0pt "Times New Roman"'>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</span><a 
+	 href="BoxLevelAPIs/SpecialCollection/ODataServiceCollection/AssociationEnd/List.htm" 
+	 class="wiki-page">assocend_list (AssociationEnd List)</a></p>
+<p class="Bullet_1" style="font-family: Arial, sans-serif;"><span style="font-family:'Symbol'">&#183;</span><span style='word-spacing:normal; font:6.0pt "Times New Roman"'>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</span><a 
+	 href="BoxLevelAPIs/SpecialCollection/ODataServiceCollection/AssociationEnd/AssociationEndLinks/Create.htm" 
+	 class="wiki-page">assocend_links_create ($ links registration)</a></p>
+<p class="Bullet_1"><span style="font-family:'Symbol'">&#183;</span><span style='word-spacing:normal; font:6.0pt "Times New Roman"'>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</span><span>$ Links 
+ [update update is impossible]</span></p>
+<p class="Bullet_1" style="font-family: Arial, sans-serif;"><span style="font-family:'Symbol'">&#183;</span><span style='word-spacing:normal; font:6.0pt "Times New Roman"'>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</span><a 
+	 href="BoxLevelAPIs/SpecialCollection/ODataServiceCollection/AssociationEnd/AssociationEndLinks/Delete.htm" 
+	 class="wiki-page">assocend_links_delete ($ links removed)</a></p>
+<p class="Bullet_1" style="font-family: Arial, sans-serif;"><span style="font-family:'Symbol'">&#183;</span><span style='word-spacing:normal; font:6.0pt "Times New Roman"'>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</span><a 
+	 href="BoxLevelAPIs/SpecialCollection/ODataServiceCollection/AssociationEnd/AssociationEndLinks/List.htm" 
+	 class="wiki-page">assocend_links_list ($ links list)</a></p>
+<p class="Bullet_1" style="font-family: Arial, sans-serif;"><span style="font-family:'Symbol'">&#183;</span><span style='word-spacing:normal; font:6.0pt "Times New Roman"'>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</span><a 
+	 href="../../JAP/PersonaContainerAPIs/BoxLevelAPIs/SpecialCollection/ODataServiceCollection/AssociationEnd/AssociationEndNavigationProperty/List.htm" 
+	 class="wiki-page new">assocend_navpro_list (NavProp via list)</a></p>
+<h4>ComplexType</h4>
+<p class="Bullet_1" style="font-family: Arial, sans-serif;"><span style="font-family:'Symbol'">&#183;</span><span style='word-spacing:normal; font:6.0pt "Times New Roman"'>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</span><a 
+	 href="BoxLevelAPIs/SpecialCollection/ODataServiceCollection/ComplexType/Create.htm">complextype_create</a></p>
+<p class="Bullet_1" style="font-family: Arial, sans-serif;"><span style="font-family:'Symbol'">&#183;</span><span style='word-spacing:normal; font:6.0pt "Times New Roman"'>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</span><a 
+	 href="BoxLevelAPIs/SpecialCollection/ODataServiceCollection/ComplexType/Get.htm">complextype_get</a></p>
+<p class="Bullet_1"><span style="font-family:'Symbol'">&#183;</span><span style='word-spacing:normal; font:6.0pt "Times New Roman"'>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</span><font style="font-family: Arial, sans-serif;" 
+	 face="Arial"><a href="BoxLevelAPIs/SpecialCollection/ODataServiceCollection/ComplexType/Update.htm">complextype_update</a> 
+ </font>(Not Implemented. Will Return status code 501.)</p>
+<p class="Bullet_1" style="font-family: Arial, sans-serif;"><span style="font-family:'Symbol'">&#183;</span><span style='word-spacing:normal; font:6.0pt "Times New Roman"'>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</span><a 
+	 href="BoxLevelAPIs/SpecialCollection/ODataServiceCollection/ComplexType/Delete.htm">complextype_delete</a> 
+ </p>
+<p class="Bullet_1" style="font-family: Arial, sans-serif;"><span style="font-family:'Symbol'">&#183;</span><span style='word-spacing:normal; font:6.0pt "Times New Roman"'>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</span><a 
+	 href="BoxLevelAPIs/SpecialCollection/ODataServiceCollection/ComplexType/List.htm">complextype_list</a></p>
+<p class="Bullet_1"><span style="font-family:'Symbol'">&#183;</span><span style='word-spacing:normal; font:6.0pt "Times New Roman"'>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</span><font style="font-family: Arial, sans-serif;" 
+	 face="Arial"><a href="BoxLevelAPIs/SpecialCollection/ODataServiceCollection/ComplexType/ComplexTypeLinks/Create.htm">complextype_links_create</a> 
+ </font>(Not Implemented. Will Return status code 501.)</p>
+<p class="Bullet_1"><span style="font-family:'Symbol'">&#183;</span><span style='word-spacing:normal; font:6.0pt "Times New Roman"'>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</span><font style="font-family: Arial, sans-serif;" 
+	 face="Arial"><a href="BoxLevelAPIs/SpecialCollection/ODataServiceCollection/ComplexType/ComplexTypeLinks/Update.htm">complextype_links_update</a></font>(Not 
+ Implemented. Will Return status code 501.)</p>
+<p class="Bullet_1"><span style="font-family:'Symbol'">&#183;</span><span style='word-spacing:normal; font:6.0pt "Times New Roman"'>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</span><font style="font-family: Arial, sans-serif;" 
+	 face="Arial"><a href="BoxLevelAPIs/SpecialCollection/ODataServiceCollection/ComplexType/ComplexTypeLinks/Delete.htm">complextype_links_delete</a> 
+ </font>(Not Implemented. Will Return status code 501.)</p>
+<p class="Bullet_1"><span style="font-family:'Symbol'">&#183;</span><span style='word-spacing:normal; font:6.0pt "Times New Roman"'>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</span><font style="font-family: Arial, sans-serif;" 
+	 face="Arial"><a href="BoxLevelAPIs/SpecialCollection/ODataServiceCollection/ComplexType/ComplexTypeLinks/List.htm">complextype_links_list</a></font>(Not 
+ Implemented. Will Return status code 501.)</p>
+<h4>Property</h4>
+<p class="Bullet_1" style="font-family: Arial, sans-serif;"><span style="font-family:'Symbol'">&#183;</span><span style='word-spacing:normal; font:6.0pt "Times New Roman"'>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</span><a 
+	 href="BoxLevelAPIs/SpecialCollection/ODataServiceCollection/Property/Create.htm">property_create</a> 
+ </p>
+<p class="Bullet_1" style="font-family: Arial, sans-serif;"><span style="font-family:'Symbol'">&#183;</span><span style='word-spacing:normal; font:6.0pt "Times New Roman"'>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</span><a 
+	 href="BoxLevelAPIs/SpecialCollection/ODataServiceCollection/Property/Get.htm">property_get</a> 
+ </p>
+<p class="Bullet_1"><span style="font-family:'Symbol'">&#183;</span><span style='word-spacing:normal; font:6.0pt "Times New Roman"'>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</span><font style="font-family: Arial, sans-serif;" 
+	 face="Arial"><a href="BoxLevelAPIs/SpecialCollection/ODataServiceCollection/Property/Update.htm">property_update</a> 
+ </font>(Not Implemented. Will Return status code 501.)</p>
+<p class="Bullet_1" style="font-family: Arial, sans-serif;"><span style="font-family:'Symbol'">&#183;</span><span style='word-spacing:normal; font:6.0pt "Times New Roman"'>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</span><a 
+	 href="BoxLevelAPIs/SpecialCollection/ODataServiceCollection/Property/Delete.htm">property_delete</a> 
+ </p>
+<p class="Bullet_1" style="font-family: Arial, sans-serif;"><span style="font-family:'Symbol'">&#183;</span><span style='word-spacing:normal; font:6.0pt "Times New Roman"'>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</span><a 
+	 href="BoxLevelAPIs/SpecialCollection/ODataServiceCollection/Property/List.htm">property_list</a> 
+ </p>
+<p class="Bullet_1"><span style="font-family:'Symbol'">&#183;</span><span style='word-spacing:normal; font:6.0pt "Times New Roman"'>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</span><font style="font-family: Arial, sans-serif;" 
+	 face="Arial"><a href="BoxLevelAPIs/SpecialCollection/ODataServiceCollection/Property/PropertyLinks/Create.htm">property_links_create</a> 
+ </font>(Not Implemented. Will Return status code 501.)</p>
+<p class="Bullet_1"><span style="font-family:'Symbol'">&#183;</span><span style='word-spacing:normal; font:6.0pt "Times New Roman"'>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</span><font style="font-family: Arial, sans-serif;" 
+	 face="Arial"><a href="BoxLevelAPIs/SpecialCollection/ODataServiceCollection/Property/PropertyLinks/Update.htm">property_links_update</a> 
+ </font>(Not Implemented. Will Return status code 501.)</p>
+<p class="Bullet_1"><span style="font-family:'Symbol'">&#183;</span><span style='word-spacing:normal; font:6.0pt "Times New Roman"'>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</span><font style="font-family: Arial, sans-serif;" 
+	 face="Arial"><a href="BoxLevelAPIs/SpecialCollection/ODataServiceCollection/Property/PropertyLinks/Delete.htm">property_links_delete</a> 
+ </font>(Not Implemented. Will Return status code 501.)</p>
+<p class="Bullet_1"><span style="font-family:'Symbol'">&#183;</span><span style='word-spacing:normal; font:6.0pt "Times New Roman"'>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</span><font style="font-family: Arial, sans-serif;" 
+	 face="Arial"><a href="BoxLevelAPIs/SpecialCollection/ODataServiceCollection/Property/PropertyLinks/List.htm">property_links_list</a> 
+ </font>(Not Implemented. Will Return status code 501.)</p>
+<h4>ComplexTypeProperty</h4>
+<p class="Bullet_1" style="font-family: Arial, sans-serif;"><span style="font-family:'Symbol'">&#183;</span><span style='word-spacing:normal; font:6.0pt "Times New Roman"'>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</span><a 
+	 href="BoxLevelAPIs/SpecialCollection/ODataServiceCollection/ComplexTypeProperty/Create.htm">complextype_property_create</a></p>
+<p class="Bullet_1" style="font-family: Arial, sans-serif;"><span style="font-family:'Symbol'">&#183;</span><span style='word-spacing:normal; font:6.0pt "Times New Roman"'>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</span><a 
+	 href="BoxLevelAPIs/SpecialCollection/ODataServiceCollection/ComplexTypeProperty/Get.htm">complextype_property_get 
+ </a></p>
+<p class="Bullet_1"><span style="font-family:'Symbol'">&#183;</span><span style='word-spacing:normal; font:6.0pt "Times New Roman"'>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</span><font style="font-family: Arial, sans-serif;" 
+	 face="Arial"><a href="BoxLevelAPIs/SpecialCollection/ODataServiceCollection/ComplexTypeProperty/Update.htm">ComplexTypeProperty 
+ update</a></font> (Not Implemented. Will Return status code 501.)</p>
+<p class="Bullet_1" style="font-family: Arial, sans-serif;"><span style="font-family:'Symbol'">&#183;</span><span style='word-spacing:normal; font:6.0pt "Times New Roman"'>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</span><a 
+	 href="BoxLevelAPIs/SpecialCollection/ODataServiceCollection/ComplexTypeProperty/Delete.htm">complextype_property_delete</a> 
+ </p>
+<p class="Bullet_1" style="font-family: Arial, sans-serif;"><span style="font-family:'Symbol'">&#183;</span><span style='word-spacing:normal; font:6.0pt "Times New Roman"'>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</span><a 
+	 href="BoxLevelAPIs/SpecialCollection/ODataServiceCollection/ComplexTypeProperty/List.htm">complextype_property_list</a> 
+ </p>
+<p class="Bullet_1"><span style="font-family:'Symbol'">&#183;</span><span style='word-spacing:normal; font:6.0pt "Times New Roman"'>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</span><font style="font-family: Arial, sans-serif;" 
+	 face="Arial"><a href="BoxLevelAPIs/SpecialCollection/ODataServiceCollection/ComplexTypeProperty/ComplexTypePropertyLinks/Create.htm">$ 
+ Links registration</a></font> (Not Implemented. Will Return status code 
+ 501.)</p>
+<p class="Bullet_1"><span style="font-family:'Symbol'">&#183;</span><span style='word-spacing:normal; font:6.0pt "Times New Roman"'>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</span><font style="font-family: Arial, sans-serif;" 
+	 face="Arial"><a href="BoxLevelAPIs/SpecialCollection/ODataServiceCollection/ComplexTypeProperty/ComplexTypePropertyLinks/Update.htm">$ 
+ Links update</a></font> (Not Implemented. Will Return status code 501.)</p>
+<p class="Bullet_1"><span style="font-family:'Symbol'">&#183;</span><span style='word-spacing:normal; font:6.0pt "Times New Roman"'>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</span><font style="font-family: Arial, sans-serif;" 
+	 face="Arial"><a href="BoxLevelAPIs/SpecialCollection/ODataServiceCollection/ComplexTypeProperty/ComplexTypePropertyLinks/Delete.htm">$ 
+ Links Delete</a></font> (Not Implemented. Will Return status code 501.)</p>
+<p class="Bullet_1"><span style="font-family:'Symbol'">&#183;</span><span style='word-spacing:normal; font:6.0pt "Times New Roman"'>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</span><font style="font-family: Arial, sans-serif;" 
+	 face="Arial"><a href="BoxLevelAPIs/SpecialCollection/ODataServiceCollection/ComplexTypeProperty/ComplexTypePropertyLinks/List.htm">$ 
+ Links list</a></font> (Not Implemented. Will Return status code 501.)</p>
+<h4>Data Manipulation</h4>
+<p class="Bullet_1" style="font-family: Arial, sans-serif;"><span style="font-family:'Symbol'">&#183;</span><span style='word-spacing:normal; font:6.0pt "Times New Roman"'>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</span><a 
+	 href="BoxLevelAPIs/SpecialCollection/ODataServiceCollection/DataManipulation/SchemaDefinition/schemaget.htm">schema_get</a></p>
+<p class="Bullet_1" style="font-family: Arial, sans-serif;"><span style="font-family:'Symbol'">&#183;</span><span style='word-spacing:normal; font:6.0pt "Times New Roman"'>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</span><a 
+	 href="BoxLevelAPIs/SpecialCollection/ODataServiceCollection/DataManipulation/SchemaDefinition/userodataservicedocument.htm">userodata_servicedocument</a> 
+ </p>
+<p class="Bullet_1" style="font-family: Arial, sans-serif;"><span style="font-family:'Symbol'">&#183;</span><span style='word-spacing:normal; font:6.0pt "Times New Roman"'>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</span><a 
+	 href="BoxLevelAPIs/SpecialCollection/ODataServiceCollection/DataManipulation/userodataget.htm">userodata_get</a> 
+ </p>
+<p class="Bullet_1" style="font-family: Arial, sans-serif;"><span style="font-family:'Symbol'">&#183;</span><span style='word-spacing:normal; font:6.0pt "Times New Roman"'>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</span><a 
+	 href="BoxLevelAPIs/SpecialCollection/ODataServiceCollection/DataManipulation/userodatacreate.htm">userodata_create</a> 
+ </p>
+<p class="Bullet_1" style="font-family: Arial, sans-serif;"><span style="font-family:'Symbol'">&#183;</span><span style='word-spacing:normal; font:6.0pt "Times New Roman"'>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</span><a 
+	 href="BoxLevelAPIs/SpecialCollection/ODataServiceCollection/DataManipulation/userodataupdate.htm">userodata_update</a></p>
+<p class="Bullet_1" style="font-family: Arial, sans-serif;"><span style="font-family:'Symbol'">&#183;</span><span style='word-spacing:normal; font:6.0pt "Times New Roman"'>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</span><a 
+	 href="BoxLevelAPIs/SpecialCollection/ODataServiceCollection/DataManipulation/userodatamerge.htm">userodata_merge</a> 
+ </p>
+<p class="Bullet_1" style="font-family: Arial, sans-serif;"><span style="font-family:'Symbol'">&#183;</span><span style='word-spacing:normal; font:6.0pt "Times New Roman"'>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</span><a 
+	 href="BoxLevelAPIs/SpecialCollection/ODataServiceCollection/DataManipulation/userodatadelete.htm">userodata_delete</a> 
+ </p>
+<p class="Bullet_1" style="font-family: Arial, sans-serif;"><span style="font-family:'Symbol'">&#183;</span><span style='word-spacing:normal; font:6.0pt "Times New Roman"'>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</span><a 
+	 href="BoxLevelAPIs/SpecialCollection/ODataServiceCollection/DataManipulation/userodatalist.htm">userodata_list</a> 
+ </p>
+<p class="Bullet_1" style="font-family: Arial, sans-serif;"><span style="font-family:'Symbol'">&#183;</span><span style='word-spacing:normal; font:6.0pt "Times New Roman"'>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</span><a 
+	 href="BoxLevelAPIs/SpecialCollection/ODataServiceCollection/DataManipulation/userodatabatch.htm">userodata_batch</a> 
+ </p>
+<p class="Bullet_1" style="font-family: Arial, sans-serif;"><span style="font-family:'Symbol'">&#183;</span><span style='word-spacing:normal; font:6.0pt "Times New Roman"'>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</span><a 
+	 href="BoxLevelAPIs/SpecialCollection/ODataServiceCollection/DataManipulation/DataManipulationLinks/userodatalinkscreate.htm">userodata_links_create</a> 
+ </p>
+<p class="Bullet_1"><span style="font-family:'Symbol'">&#183;</span><span style='word-spacing:normal; font:6.0pt "Times New Roman"'>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</span><font style="font-family: Arial, sans-serif;" 
+	 face="Arial"><a href="BoxLevelAPIs/SpecialCollection/ODataServiceCollection/DataManipulation/DataManipulationLinks/userodatalinksupdate.htm">userodata_links_update</a></font> 
+ (Not Yet Implemented)</p>
+<p class="Bullet_1" style="font-family: Arial, sans-serif;"><span style="font-family:'Symbol'">&#183;</span><span style='word-spacing:normal; font:6.0pt "Times New Roman"'>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</span><a 
+	 href="BoxLevelAPIs/SpecialCollection/ODataServiceCollection/DataManipulation/DataManipulationLinks/userodatalinksdelete.htm">userodata_links_delete</a> 
+ </p>
+<p class="Bullet_1" style="font-family: Arial, sans-serif;"><span style="font-family:'Symbol'">&#183;</span><span style='word-spacing:normal; font:6.0pt "Times New Roman"'>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</span><a 
+	 href="BoxLevelAPIs/SpecialCollection/ODataServiceCollection/DataManipulation/DataManipulationLinks/userodatalinkslist.htm">userodata_links_list</a> 
+ </p>
+<p class="Bullet_1" style="font-family: Arial, sans-serif;"><span style="font-family:'Symbol'">&#183;</span><span style='word-spacing:normal; font:6.0pt "Times New Roman"'>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</span><a 
+	 href="BoxLevelAPIs/SpecialCollection/ODataServiceCollection/DataManipulation/DataManipulationNavigationProperty/userodatanavpropcreate.htm">userodata_navprop_create</a> 
+ </p>
+<p class="Bullet_1" style="font-family: Arial, sans-serif;"><span style="font-family:'Symbol'">&#183;</span><span style='word-spacing:normal; font:6.0pt "Times New Roman"'>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</span><a 
+	 href="BoxLevelAPIs/SpecialCollection/ODataServiceCollection/DataManipulation/DataManipulationNavigationProperty/userodatanavproplist.htm">userodata_navprop_list</a> 
+ </p>
+<h3>Special Collection: Engine Service Collection</h3>
+<p class="Paragraph2">It is possible to drive this to register the server-side 
+ logic that Cell user and PCS application creates.</p>
+<p class="Paragraph2">By the beginning, to register as a file to the user 
+ logic, and to associate with the path by performing a set of service collection, 
+ it is possible to drive the user logic to the request from the path of 
+ any of the underlying collection.</p>
+<h4>User Logic Files Manipulations</h4>
+<p class="Bullet_1" style="font-family: Arial, sans-serif;"><span style="font-family:'Symbol'">&#183;</span><span style='word-spacing:normal; font:6.0pt "Times New Roman"'>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</span><a 
+	 href="BoxLevelAPIs/SpecialCollection/EngineServiceCollection/UserLogicFilesManipulations/ServiceFileCreate.htm">service_file_create</a></p>
+<p class="Bullet_1" style="font-family: Arial, sans-serif;"><span style="font-family:'Symbol'">&#183;</span><span style='word-spacing:normal; font:6.0pt "Times New Roman"'>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</span><a 
+	 href="BoxLevelAPIs/SpecialCollection/EngineServiceCollection/UserLogicFilesManipulations/ServiceFileGet.htm">service_file_get</a></p>
+<p class="Bullet_1" style="font-family: Arial, sans-serif;"><span style="font-family:'Symbol'">&#183;</span><span style='word-spacing:normal; font:6.0pt "Times New Roman"'>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</span><a 
+	 href="BoxLevelAPIs/SpecialCollection/EngineServiceCollection/UserLogicFilesManipulations/ServiceFileDelete.htm">service_file_delete</a></p>
+<h4>Service Collection Configuration</h4>
+<p class="Bullet_1" style="font-family: Arial, sans-serif;"><span style="font-family:'Symbol'">&#183;</span><span style='word-spacing:normal; font:6.0pt "Times New Roman"'>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</span><a 
+	 href="BoxLevelAPIs/SpecialCollection/EngineServiceCollection/ServiceCollectionConfiguration/CollectionProppatchService.htm">collection_proppatch_service</a></p>
+<h4>Service Execution (service execution)</h4>
+<p class="Bullet_1" style="font-family: Arial, sans-serif;"><span style="font-family:'Symbol'">&#183;</span><span style='word-spacing:normal; font:6.0pt "Times New Roman"'>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</span><a 
+	 href="BoxLevelAPIs/SpecialCollection/EngineServiceCollection/ServiceExecution/ServiceExec.htm">service_exec</a></p>
+<ul>
+	<li style="font-family: Arial, sans-serif; list-style: url('../../../Images/arrow.png'); 
+		 margin-left: -20px;"><h2>Common Specification (common specifications)</h2></li>
+</ul>
+<h3>Limitations (limit)</h3>
+<p class="Bullet_1"><span style="font-family:'Symbol'">&#183;</span><span style='word-spacing:normal; font:6.0pt "Times New Roman"'>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</span><font style="font-family: Arial, sans-serif;" 
+	 face="Arial"><a href="../../JAP/PersonaContainerAPIs/CommonSpecification/Limitations/APICommonLimit.htm" 
+					 class="wiki-page">(For various restriction of API) 
+ API common_limit</a></font> [Not fixed yet.]</p>
+<h3>Cross Domain Access Control</h3>
+<p class="Bullet_1" style="font-family: Arial, sans-serif;"><span style="font-family:'Symbol'">&#183;</span><span style='word-spacing:normal; font:6.0pt "Times New Roman"'>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</span><acronym 
+	 title="CORS support"><a href="../../JAP/PersonaContainerAPIs/CommonSpecification/CrossDomainAccessControl/CORS.htm" 
+							 class="wiki-page">CORS</a></acronym></p>
+<p class="Bullet_1" style="font-family: Arial, sans-serif;"><span style="font-family:'Symbol'">&#183;</span><span style='word-spacing:normal; font:6.0pt "Times New Roman"'>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</span><a 
+	 href="../../JAP/PersonaContainerAPIs/CommonSpecification/CrossDomainAccessControl/crossdomainPolicyFiles.htm" 
+	 class="wiki-page">crossdomain Policy File (cross-domain policy files)</a></p>
+<p class="Paragraph">&#160;</p>
+<p class="Paragraph">&#160;</p>
+<div style="border-top: Solid 4px #0080c0; width: 100%; 
+					 position: relative; background-color: #374049; padding-top: 7px; 
+					 padding-bottom: 7px; padding-right: 5px;" id="footer">
+	<p style="font-size: 8pt; color: #ffffff; text-align: right;"><span 
+	 style="mso-ascii-theme-font: minor-latin; mso-fareast-font-family: Calibri; 
+	 mso-fareast-theme-font: minor-latin; mso-hansi-theme-font: minor-latin; 
+	 mso-bidi-font-family: 'Times New Roman'; mso-bidi-theme-font: minor-bidi; 
+	 mso-ansi-language: EN-US; mso-fareast-language: EN-US; mso-bidi-language: AR-SA; 
+	 font-family: Arial, sans-serif;">All Rights Reserved,Copyright (C) 
+	 FUJITSU LIMITED 1998-2013</span> </p>
+</div>
+</body>
+</html>

@@ -1,0 +1,268 @@
+<!DOCTYPE HTML>
+<!--
+	Twenty by HTML5 UP
+	html5up.net | @ajlkn
+	Free for personal and commercial use under the CCA 3.0 license (html5up.net/license)
+-->
+<html lang="ja">
+
+	<base href="//personium.io/"/>
+	<head>
+		<title>Personium | Open Source PDS/BaaS Software.</title>
+		<meta http-equiv="content-type" content="text/html; charset=utf-8" />
+		<meta name="description" content="An interconnectable open source PDS (Personal Data Store) server envisioning world wide web of protected data APIs. " />
+		<meta name="keywords" content="BaaS,Personal,Data,Open" />
+		<noscript>
+			<link rel="stylesheet" href="css/skel.css" />
+			<link rel="stylesheet" href="css/style.css" />
+			<link rel="stylesheet" href="css/style-wide.css" />
+			<link rel="stylesheet" href="css/style-noscript.css" />
+			<link rel="shortcut icon" href="css/images/favicon.ico">
+		</noscript>
+		<!--[if lte IE 8]><link rel="stylesheet" href="css/ie/v8.css" /><![endif]-->
+		<!--[if lte IE 9]><link rel="stylesheet" href="css/ie/v9.css" /><![endif]-->
+		<!--[if lte IE 8]><script src="css/ie/html5shiv.js"></script><![endif]-->
+		<script src="js/jquery.min.js"></script>
+		<script src="js/jquery.dropotron.min.js"></script>
+		<script src="js/jquery.scrolly.min.js"></script>
+		<script src="js/jquery.scrollgress.min.js"></script>
+		<script src="bower_components/i18next/i18next.min.js"></script>
+		<script src="js/skel.min.js"></script>
+		<script src="js/skel-layers.min.js"></script>
+		<script src="js/demo_init.js"></script>
+		<script>
+			(function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
+				(i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
+					m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
+			})(window,document,'script','//www.google-analytics.com/analytics.js','ga');
+
+			ga('create', 'UA-57274327-1', 'auto');
+			ga('send', 'pageview');
+
+			i18n.init(function(t) {
+				$("#translate").i18n();
+			});
+		</script>
+                <style type="text/css">
+                        table.ex {
+				width: 90%; /* 表の幅 */
+				margin-bottom: 30px; /* 表の下マージン */
+				border: 1px #c0c0c0 solid; /* 大枠の境界線 */
+				border-collapse: collapse;
+				font-size: 80%;
+			}
+
+			/* --- セル --- */
+			table.ex th,table.ex td { /* width: 20%; */ /* セルの幅（セルの幅を均等にする場合） */
+				padding: 6px 8px; /* セルのパディング（上下、左右） */
+				border: 1px #c0c0c0 solid; /* セルの境界線 */
+			}
+
+			/* --- 見出しセル --- */
+			table.ex thead th {
+				background-color: #deefff; /* 見出しセルの背景色 */
+				text-align: center;
+			}
+
+			/* --- フッタセル --- */
+			table.ex tfoot td {
+				background-color: #f5f5f5; /* フッタセルの背景色 */
+			}
+
+			/* --- データセル --- */
+			table.ex tbody td {
+				background-color: #ffffff; /* データセルの背景色 */
+			}
+                </style>
+	</head>
+
+	<body class="index"  id="translate">
+		<div id="page-wrapper">
+			<header id="header" class="container">
+				<h1 id="logo"><a href="./" class="btn fit scrolly" onclick="ga('send', 'event', 'inner', 'click', '#');">Personium</a></h1>
+				<nav id="nav">
+					<ul>
+						<li class="current"><a href="./#cta" class="button fit scrolly" onclick="ga('send', 'event', 'inner', 'click', '#cta');">Resources</a></li>
+						<li class ="current"><a href="./demo/#main">Demo</a></li>
+						<li class="submenu">
+							<a href="" >Languages</a>
+							<ul>
+								<li><a href="demo/pcui?setLng=en-US#main">English</a></li>
+								<li><a href="demo/pcui?setLng=ja#main">Japanese</a></li>
+							</ul>
+						</li>
+						<li><a href="https://github.com/personium/io" class="button special" target="_blank" rel="external" onclick="ga('send', 'event', 'outer', 'click', 'https://github.com/personium/io');">Fork me on GitHub</a></li>
+					</ul>
+				</nav>
+			</header>
+
+			<div id="main-wrapper">
+				<div class="wrapper style3">
+				   <h2 data-i18n="pcui-title"></h2>
+                                   <h2 data-i18n="pcui-demo-title"></h2>
+                                   <img src="images/pcui_demo2.gif" style="width:100%;border:solid 3px #000000"><br><br>
+				   <h2 data-i18n="pcui-overview"></h2><br>
+                                   <h3 data-i18n="pcui-view1"></h3><br>
+				   <p data-i18n="[html]pcui-description"></p>
+                                   <h3 data-i18n="pcui-view2"></h3><br>
+                                   <p data-i18n="[html]pcui-description1"></p>
+                                   <h2 data-i18n="pcui-overview2"></h2><br>
+                                   <p data-i18n="[html]pcui-description2"></p>
+                                   <h3 data-i18n="pcui-view3"></h3><br>
+                                   <p data-i18n="[html]pcui-description3"></p>
+                                   <h3 data-i18n="pcui-view4"></h3><br>
+				   <p data-i18n="[html]pcui-description4"></p>
+                                   <table class="ex">
+                                       <tr>
+                                           <td>username</td>
+                                           <td data-i18n="pcui-description4-1"></td>
+                                       </tr>
+                                       <tr>
+                                           <td>token</td>
+                                           <td data-i18n="pcui-description4-2"></td>
+                                       </tr>
+                                       <tr>
+                                           <td>pwd</td>
+                                           <td data-i18n="pcui-description4-3"></td>
+                                       </tr>
+                                       <tr>
+                                           <td>ls</td>
+                                           <td data-i18n="pcui-description4-4"></td>
+                                       </tr>
+                                       <tr>
+                                           <td>sl</td>
+                                           <td data-i18n="pcui-description4-5"></td>
+                                       </tr>
+                                       <tr>
+                                           <td>extcell</td>
+                                           <td data-i18n="pcui-description4-6"></td>
+                                       </tr>
+                                       <tr>
+                                           <td>relation</td>
+                                           <td data-i18n="pcui-description4-7"></td>
+                                       </tr>
+                                       <tr>
+                                           <td>role</td>
+                                           <td data-i18n="pcui-description4-8"></td>
+                                       </tr>
+                                       <tr>
+                                           <td>extrole</td>
+                                           <td data-i18n="pcui-description4-9"></td>
+                                       </tr>
+                                       <tr>
+                                           <td>account</td>
+                                           <td data-i18n="pcui-description4-10"></td>
+                                       </tr>
+                                       <tr>
+                                           <td>rcvmessage</td>
+                                           <td data-i18n="pcui-description4-11"></td>
+                                       </tr>
+                                       <tr>
+                                           <td>sntmessage</td>
+                                           <td data-i18n="pcui-description4-12"></td>
+                                       </tr>
+                                       <tr>
+                                           <td>cd {Box}</td>
+                                           <td data-i18n="pcui-description4-13"></td>
+                                       </tr>
+                                       <tr>
+                                           <td>mk {Box}</td>
+                                           <td data-i18n="pcui-description4-14"></td>
+                                       </tr>
+                                       <tr>
+                                           <td>acl</td>
+                                           <td data-i18n="pcui-description4-15"></td>
+                                       </tr>
+                                       <tr>
+                                           <td>rm {Box}</td>
+                                           <td data-i18n="pcui-description4-16"></td>
+                                       </tr>
+                                       <tr>
+                                           <td>help(?)</td>
+                                           <td data-i18n="pcui-description4-17"></td>
+                                       </tr>
+                                       <tr>
+                                           <td>quit(q)</td>
+                                           <td data-i18n="pcui-description4-18"></td>
+                                       </tr>
+                                   </table>
+                                   <h3 data-i18n="pcui-view5"></h3><br>
+                                   <p data-i18n="[html]pcui-description5"></p>
+                                   <table class="ex">
+                                       <tr>
+                                           <td>pwd</td>
+                                           <td data-i18n="pcui-description4-3"></td>
+                                       </tr>
+                                       <tr>
+                                           <td>ls</td>
+                                           <td data-i18n="pcui-description4-4"></td>
+                                       </tr>
+                                       <tr>
+                                           <td>sl</td>
+                                           <td data-i18n="pcui-description4-5"></td>
+                                       </tr>
+                                       <tr>
+                                           <td>meta</td>
+                                           <td data-i18n="pcui-description5-1"></td>
+                                       </tr>
+                                       <tr>
+                                           <td>url</td>
+                                           <td data-i18n="pcui-description5-2"></td>
+                                       </tr>
+                                       <tr>
+                                           <td>cd ..</td>
+                                           <td data-i18n="pcui-description5-3"></td>
+                                       </tr>
+                                       <tr>
+                                           <td>put {Path}</td>
+                                           <td data-i18n="pcui-description5-4"></td>
+                                       </tr>
+                                       <tr>
+                                           <td>get {File}</td>
+                                           <td data-i18n="pcui-description5-5"></td>
+                                       </tr>
+                                       <tr>
+                                           <td>rm {File}</td>
+                                           <td data-i18n="pcui-description5-6"></td>
+                                       </tr>
+                                       <tr>
+                                           <td>help(?)</td>
+                                           <td data-i18n="pcui-description4-17"></td>
+                                       </tr>
+                                       <tr>
+                                           <td>quit(q)</td>
+                                           <td data-i18n="pcui-description4-18"></td>
+                                       </tr>
+                                   </table>
+                                   <h3 data-i18n="pcui-view6"></h3><br>
+                                   <p data-i18n="[html]pcui-description6"></p>
+                                   <p data-i18n="[html]pcui-description6-1"></p>
+                                   <p data-i18n="[html]pcui-description6-2"></p>
+                                   <h3 data-i18n="pcui-view7"></h3><br>
+                                   <p data-i18n="[html]pcui-description7-1"></p>
+                                   <p data-i18n="[html]pcui-description7-2"></p>
+                                   <h3 data-i18n="pcui-view8"></h3><br>
+                                   <p data-i18n="[html]pcui-description8"></p>
+				</div>
+			</div>
+
+
+			<!-- Footer -->
+				<footer id="footer">
+
+					<ul class="icons">
+						<li><a href="#" class="icon circle fa-twitter"><span class="label">Twitter</span></a></li>
+						<li><a href="#" class="icon circle fa-google-plus"><span class="label">Google+</span></a></li>
+						<li><a href="#" class="icon circle fa-github"><span class="label">Github</span></a></li>
+					</ul>
+
+				<ul class="copyright">
+					<li>Design: <a href="//html5up.net" rel="external" target="_blank" rel="external" onclick="ga('send', 'event', 'outer', 'click', '//html5up.net');">HTML5 UP</a></li>
+				</ul>
+
+				</footer>
+
+		</div>
+
+	</body>
+</html>
