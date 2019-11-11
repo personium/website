@@ -22,6 +22,7 @@ const users = [
 
 const siteConfig = {
   customDocsPath : 'src',
+  docsUrl: 'personium-docs-test',
   title: 'Test Site', // Title for your website.
   tagline: 'A website for testing',
   url: 'https://your-docusaurus-test-site.com', // Your website URL
