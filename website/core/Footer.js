@@ -22,9 +22,6 @@ class Footer extends React.Component {
   }
 
   render() {
-    // The website doesn't use a docusaurus footer.
-    return null;
-
     return (
       <footer className="nav-footer" id="footer">
         <section className="sitemap">
@@ -39,40 +36,36 @@ class Footer extends React.Component {
             )}
           </a>
           <div>
-            <h5>Docs</h5>
-            <a href={this.docUrl('doc1.html', this.props.language)}>
+            <h5>Documentation</h5>
+            {/* <a href={this.docUrl('doc1.html', this.props.language)}>
               Getting Started (or other categories)
+            </a> */}
+            <a href="https://personium.io/docs/en/overview/001_Introduction.html">
+              Introduction
             </a>
-            <a href={this.docUrl('doc2.html', this.props.language)}>
-              Guides (or other categories)
+            <a href="https://personium.io/docs/en/server-operator/">
+              Server Software Operator's Guide
             </a>
-            <a href={this.docUrl('doc3.html', this.props.language)}>
-              API Reference (or other categories)
+            <a href="https://personium.io/docs/en/app-developer/">
+              Application Developer's Guide
+            </a>
+            <a href="https://personium.io/docs/en/apiref/current/000_Rest_API_Reference.html">
+              API Reference
             </a>
           </div>
           <div>
             <h5>Community</h5>
-            <a href={this.pageUrl('users.html', this.props.language)}>
+            {/* <a href={this.pageUrl('users.html', this.props.language)}>
               User Showcase
-            </a>
-            <a
+            </a> */}
+            {/* <a
               href="https://stackoverflow.com/questions/tagged/"
               target="_blank"
               rel="noreferrer noopener">
               Stack Overflow
-            </a>
-            <a href="https://discordapp.com/">Project Chat</a>
-            <a
-              href="https://twitter.com/"
-              target="_blank"
-              rel="noreferrer noopener">
-              Twitter
-            </a>
-          </div>
-          <div>
-            <h5>More</h5>
-            <a href={`${this.props.config.baseUrl}blog`}>Blog</a>
-            <a href="https://github.com/">GitHub</a>
+            </a> */}
+            <a href="https://personium-io.slack.com/">Slack</a>
+            <a href="https://github.com/personium">GitHub</a>
             <a
               className="github-button"
               href={this.props.config.repoUrl}
@@ -82,6 +75,12 @@ class Footer extends React.Component {
               data-count-aria-label="# stargazers on GitHub"
               aria-label="Star this project on GitHub">
               Star
+            </a>
+            <a
+              href="https://twitter.com/personium"
+              target="_blank"
+              rel="noreferrer noopener">
+              Twitter
             </a>
             {this.props.config.twitterUsername && (
               <div className="social">
@@ -108,16 +107,23 @@ class Footer extends React.Component {
               </div>
             )}
           </div>
+          <div>
+            <h5>More</h5>
+            <a href={`${this.props.config.baseUrl}blog`}>News</a>
+            <a href="https://drive.google.com/drive/u/1/folders/1VWGpfCbPOLY2TCa7Lh2jbcsZ5Bp0WV4q">
+              Draft Docs
+            </a>
+          </div>
         </section>
 
         <a
-          href="https://opensource.facebook.com/"
+          href="https://personium.io/"
           target="_blank"
           rel="noreferrer noopener"
           className="fbOpenSource">
           <img
             src={`${this.props.config.baseUrl}img/logo-quantify-light.png`}
-            alt="Facebook Open Source"
+            alt="Personium Project"
             width="170"
             height="45"
           />
