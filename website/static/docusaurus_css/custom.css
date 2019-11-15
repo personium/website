@@ -1,12 +1,12 @@
 /* your custom css */
 
-.fixedHeaderContainer {
+/* .fixedHeaderContainer {
   display: none;
-}
+} */
 
-.singleRowMobileNav.navPusher {
+/* .singleRowMobileNav.navPusher {
   padding-top: 80px!important;
-}
+} */
 
 @media only screen and (min-device-width: 360px) and (max-device-width: 736px) {
 }
