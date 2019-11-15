@@ -22,37 +22,40 @@ const users = [
 
 const siteConfig = {
   customDocsPath : 'src',
-  docsUrl: 'personium-docs-test',
-  title: 'Test Site', // Title for your website.
-  tagline: 'A website for testing',
-  url: 'https://your-docusaurus-test-site.com', // Your website URL
+  docsUrl: '',
+  title: '', // Title for your website.
+  tagline: 'A website for Personium',
+  url: 'https://personium.io', // Your website URL
   baseUrl: '/', // Base URL for your project */
   // For github.io type URLs, you would set the url and baseUrl like:
   //   url: 'https://facebook.github.io',
   //   baseUrl: '/test-site/',
 
   // Used for publishing and more
-  projectName: 'test-site',
-  organizationName: 'facebook',
+  projectName: 'personium',
+  organizationName: 'Fujitsu Limited',
   // For top-level user or org sites, the organization is still the same.
   // e.g., for the https://JoelMarcey.github.io site, it would be set like...
   //   organizationName: 'JoelMarcey'
 
   // For no header links in the top nav bar -> headerLinks: [],
   headerLinks: [
-    // {doc: 'doc1', label: 'Docs'},
-    // {doc: 'doc4', label: 'API'},
+    {href: 'https://personium.io/docs/en/overview/001_Introduction.html', label: 'Introduction'},
+    {href: 'https://personium.io/docs/en', label: 'User Guide'},
+    {href: 'https://personium.io/docs/en/apiref/current/000_Rest_API_Reference.html', label: 'API Reference'},
+    {blog: true, label: 'News'},
     // {page: 'help', label: 'Help'},
-    // {blog: true, label: 'Blog'},
   ],
+
+  blogSidebarTitle: { default: 'Recent News', all: 'All News' },
 
   // If you have users set above, you add it here:
   users,
 
   /* path to images for header/footer */
   headerIcon: 'img/logo-quantify-light.png',
-  footerIcon: 'img/logo-quantify-light.png',
-  favicon: 'img/logo-quantify-light.png',
+  footerIcon: 'images/favicon.ico',
+  favicon: 'images/favicon.ico',
 
   /* Colors for website */
   colors: {
@@ -109,6 +112,10 @@ const siteConfig = {
   // You may provide arbitrary config keys to be used as needed by your
   // template. For example, if you need your repo's URL...
   //   repoUrl: 'https://github.com/facebook/test-site',
+  repoUrl: 'https://github.com/personium/personium-core',
+
+  // twitter
+  twitterUsername: 'personium',
 
   separateCss: ['css', 'en', 'ja'],
   stylesheets: ['/docusaurus_css/custom.css'],
