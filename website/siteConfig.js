@@ -24,7 +24,10 @@ const siteConfig = {
   customDocsPath : 'src',
   docsUrl: '',
   title: '', // Title for your website.
-  tagline: 'A website for Personium',
+  tagline: [
+    'An interconnectable open source PDS (Personal Data Store) server ',
+    'envisioning world wide web of protected data APIs.',
+  ].join(''),
   url: 'https://personium.io', // Your website URL
   baseUrl: '/', // Base URL for your project */
   // For github.io type URLs, you would set the url and baseUrl like:
