@@ -8,6 +8,10 @@
   padding-top: 80px!important;
 } */
 
+.fixedHeaderContainer header img {
+  height: 150%!important;
+}
+
 @media only screen and (min-device-width: 360px) and (max-device-width: 736px) {
 }
 
