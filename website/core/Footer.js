@@ -66,7 +66,7 @@ class Footer extends React.Component {
             </a> */}
             <a href="https://personium-io.slack.com/">Slack</a>
             <a href="https://github.com/personium">GitHub</a>
-            <a
+            {/* <a
               className="github-button"
               href={this.props.config.repoUrl}
               data-icon="octicon-star"
@@ -75,7 +75,7 @@ class Footer extends React.Component {
               data-count-aria-label="# stargazers on GitHub"
               aria-label="Star this project on GitHub">
               Star
-            </a>
+            </a> */}
             <a
               href="https://twitter.com/personium"
               target="_blank"
