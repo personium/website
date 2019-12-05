@@ -1,3 +1,3 @@
-# personium-docs-test
+# Personium Documentation
 
-Now developing...
+Now developing.
