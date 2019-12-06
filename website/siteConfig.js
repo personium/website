@@ -28,15 +28,15 @@ const siteConfig = {
     'An interconnectable open source PDS (Personal Data Store) server ',
     'envisioning world wide web of protected data APIs.',
   ].join(''),
-  url: 'https://personium.io', // Your website URL
+  url: 'https://personium.github.io', // Your website URL
   baseUrl: '/', // Base URL for your project */
   // For github.io type URLs, you would set the url and baseUrl like:
   //   url: 'https://facebook.github.io',
-  //   baseUrl: '/test-site/',
+  //   baseUrl: '/test-site//',
 
   // Used for publishing and more
-  projectName: 'personium',
-  organizationName: 'Fujitsu Limited',
+  projectName: 'new-docs',
+  organizationName: 'personium',
   // For top-level user or org sites, the organization is still the same.
   // e.g., for the https://JoelMarcey.github.io site, it would be set like...
   //   organizationName: 'JoelMarcey'
