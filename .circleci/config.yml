@@ -19,8 +19,7 @@ jobs:
             git config --global user.email "personiumio@gmail.com"
             git config --global user.name "personiumio"
             echo "machine github.com login personiumio password $GITHUB_TOKEN" > ~/.netrc
-            cd website && yarn install
-            GIT_USER=personiumio CURRENT_BRANCH=master yarn run publish-gh-pages
+            cd website && yarn install && GIT_USER=personiumio yarn run publish-gh-pages
 
 workflows:
   version: 2
