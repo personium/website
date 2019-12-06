@@ -32,10 +32,10 @@ const siteConfig = {
   baseUrl: '/', // Base URL for your project */
   // For github.io type URLs, you would set the url and baseUrl like:
   //   url: 'https://facebook.github.io',
-  //   baseUrl: '/test-site//',
+  //   baseUrl: '/test-site/',
 
   // Used for publishing and more
-  projectName: 'new-docs',
+  projectName: 'personium.github.io',
   organizationName: 'personium',
   // For top-level user or org sites, the organization is still the same.
   // e.g., for the https://JoelMarcey.github.io site, it would be set like...
