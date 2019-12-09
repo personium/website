@@ -1,5 +1,5 @@
 #!/bin/bash -xe
-BUILD_DIR='./build/personium/'
+BUILD_DIR='./build/personium.github.io/'
 
 sed -i \
   -e 's|<title>[^<>]*</title>|<title>News - Personium</title>|g' \
