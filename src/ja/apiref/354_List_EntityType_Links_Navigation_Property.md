@@ -1,4 +1,8 @@
-# Property更新
+---
+id: 354_List_EntityType_Links_Navigation_Property
+title: Property更新
+sidebar_label: Property更新
+---
 ## 概要
 既存のProperty情報を更新する
 ### 必要な権限

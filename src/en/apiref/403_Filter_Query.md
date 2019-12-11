@@ -1,4 +1,8 @@
-# $filter Query
+---
+id: 403_Filter_Query
+title: $filter Query
+sidebar_label: $filter Query
+---
 
 ## Overview
 

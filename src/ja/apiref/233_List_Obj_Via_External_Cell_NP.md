@@ -1,4 +1,8 @@
-# ExtCellのNavigation Property経由での他オブジェクト一覧取得
+---
+id: 233_List_Obj_Via_External_Cell_NP
+title: ExtCellのNavigation Property経由での他オブジェクト一覧取得
+sidebar_label: ExtCellのNavigation Property経由での他オブジェクト一覧取得
+---
 ## 概要
 セル制御オブジェクトをNavigation Property経由で取得する
 

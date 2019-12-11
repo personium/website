@@ -1,4 +1,8 @@
-# Error Messages
+---
+id: 004_Error_Messages
+title: Error Messages
+sidebar_label: Error Messages
+---
 
 ## Authentication API
 

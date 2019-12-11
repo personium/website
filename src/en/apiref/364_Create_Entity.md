@@ -1,4 +1,8 @@
-# Create Entity
+---
+id: 364_Create_Entity
+title: Create Entity
+sidebar_label: Create Entity
+---
 
 ## Overview
 

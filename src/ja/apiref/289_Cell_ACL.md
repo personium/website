@@ -1,4 +1,8 @@
-# Cell Level アクセス制御設定
+---
+id: 289_Cell_ACL
+title: Cell Level アクセス制御設定
+sidebar_label: Cell Level アクセス制御設定
+---
 ## 概要
 Cell Level のアクセス制御機能を提供する。
 

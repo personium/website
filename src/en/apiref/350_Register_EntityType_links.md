@@ -1,4 +1,8 @@
-# Link other objects with EntityType
+---
+id: 350_Register_EntityType_links
+title: Link other objects with EntityType
+sidebar_label: Link other objects with EntityType
+---
 
 ## Overview
 

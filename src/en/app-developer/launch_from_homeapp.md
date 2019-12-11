@@ -1,4 +1,8 @@
-# Launch application from Home application
+---
+id: launch_from_homeapp
+title: Launch application from Home application
+sidebar_label: Launch application from Home application
+---
 
 There are various forms of Personium applications, but here we will explain about the applications launched from the most standard Home application.  
 

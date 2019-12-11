@@ -1,4 +1,8 @@
-# Link other objects with Entity
+---
+id: 373_Link_User_Data
+title: Link other objects with Entity
+sidebar_label: Link other objects with Entity
+---
 
 ## Overview
 

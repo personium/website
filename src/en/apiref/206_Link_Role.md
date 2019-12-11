@@ -1,4 +1,8 @@
-# Link other objects with Role
+---
+id: 206_Link_Role
+title: Link other objects with Role
+sidebar_label: Link other objects with Role
+---
 
 ## Overview
 

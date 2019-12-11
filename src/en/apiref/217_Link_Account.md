@@ -1,4 +1,8 @@
-# Link other objects with Account
+---
+id: 217_Link_Account
+title: Link other objects with Account
+sidebar_label: Link other objects with Account
+---
 
 ## Overview
 

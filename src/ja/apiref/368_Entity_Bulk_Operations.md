@@ -1,4 +1,8 @@
-# Entity一括操作($batch)
+---
+id: 368_Entity_Bulk_Operations
+title: Entity一括操作($batch)
+sidebar_label: Entity一括操作($batch)
+---
 ## 概要
 ODataEntityに対して、一覧取得や一件取得、登録、更新、削除といった一括操作を行う
 ### 必要な権限

@@ -1,4 +1,8 @@
-# Boxインストール
+---
+id: 302_Box_Installation
+title: Boxインストール
+sidebar_label: Boxインストール
+---
 ## 概要
 barファイルを使って指定されたパスにBoxをインストールする。barファイルフォーマットについては 「[barファイル](301_Bar_File.md)」を参照。  
 本APIは非同期通信方式を採用しているため、本APIではBoxインストールを受け付けた後、即復帰する。  

@@ -1,4 +1,8 @@
-# Retrieve List of Rule
+---
+id: 2A2_List_Rule
+title: Retrieve List of Rule
+sidebar_label: Retrieve List of Rule
+---
 ## Overview
 Obtain a list of existing Rule information
 

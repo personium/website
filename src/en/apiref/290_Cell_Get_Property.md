@@ -1,4 +1,8 @@
-# Retrieve Properties
+---
+id: 290_Cell_Get_Property
+title: Retrieve Properties
+sidebar_label: Retrieve Properties
+---
 
 ## Overview
 

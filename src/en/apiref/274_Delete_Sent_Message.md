@@ -1,4 +1,8 @@
-# Delete SentMessage
+---
+id: 274_Delete_Sent_Message
+title: Delete SentMessage
+sidebar_label: Delete SentMessage
+---
 
 ## Overview
 

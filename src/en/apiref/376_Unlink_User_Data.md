@@ -1,4 +1,8 @@
-# Unlink Entity with other objects
+---
+id: 376_Unlink_User_Data
+title: Unlink Entity with other objects
+sidebar_label: Unlink Entity with other objects
+---
 
 ## Overview
 

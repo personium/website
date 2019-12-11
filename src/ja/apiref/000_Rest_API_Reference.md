@@ -1,4 +1,8 @@
-# Personium API リファレンス  
+---
+id: 000_Rest_API_Reference
+title: Personium API リファレンス  
+sidebar_label: Personium API リファレンス  
+---
 API リファレンスへようこそ。  ここではPersoniumが提供するすべてのAPIに関する技術的な詳細仕様を記述しています。
 本リファレンス内のリクエストURLの変数については[リクエストURLの変数一覧](005_Variable_of_Request_URL.md)を参照してください。
 

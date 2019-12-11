@@ -1,4 +1,8 @@
-# Retrieve AssociationEnd
+---
+id: 320_Retrieve_AssociationEnd
+title: Retrieve AssociationEnd
+sidebar_label: Retrieve AssociationEnd
+---
 
 ## Overview
 

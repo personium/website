@@ -1,4 +1,8 @@
-# Retrieve List of Relation
+---
+id: 235_List_Relation
+title: Retrieve List of Relation
+sidebar_label: Retrieve List of Relation
+---
 
 ## Overview
 

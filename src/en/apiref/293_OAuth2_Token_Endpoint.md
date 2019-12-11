@@ -1,4 +1,8 @@
-# OAuth 2.0 Token Endpoint
+---
+id: 293_OAuth2_Token_Endpoint
+title: OAuth 2.0 Token Endpoint
+sidebar_label: OAuth 2.0 Token Endpoint
+---
 
 ## Overview
 

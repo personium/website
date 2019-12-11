@@ -1,4 +1,8 @@
-# Personiumのテスト
+---
+id: personium_tests
+title: Personiumのテスト
+sidebar_label: Personiumのテスト
+---
 
 ## 概要
 

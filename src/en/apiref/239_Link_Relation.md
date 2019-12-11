@@ -1,4 +1,8 @@
-# Link other objects with Relation
+---
+id: 239_Link_Relation
+title: Link other objects with Relation
+sidebar_label: Link other objects with Relation
+---
 
 ## Overview
 

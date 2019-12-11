@@ -1,4 +1,8 @@
-# Retrieve links list from Role to other objects
+---
+id: 207_List_Role_links
+title: Retrieve links list from Role to other objects
+sidebar_label: Retrieve links list from Role to other objects
+---
 
 ## Overview
 

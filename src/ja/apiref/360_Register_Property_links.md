@@ -1,4 +1,8 @@
-# Propertyと他オブジェクトとのリンク
+---
+id: 360_Register_Property_links
+title: Propertyと他オブジェクトとのリンク
+sidebar_label: Propertyと他オブジェクトとのリンク
+---
 ## 概要
 Propertyに$linkで指定したODataリソースを紐付ける  
 以下のODataリソースと紐付けることができる  

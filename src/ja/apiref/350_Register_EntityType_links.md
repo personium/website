@@ -1,4 +1,8 @@
-# EntityTypeと他オブジェクトとのリンク
+---
+id: 350_Register_EntityType_links
+title: EntityTypeと他オブジェクトとのリンク
+sidebar_label: EntityTypeと他オブジェクトとのリンク
+---
 ## 概要
 EntityTypeの$links情報を登録する
 ### 必要な権限

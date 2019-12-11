@@ -1,4 +1,8 @@
-# $expand Query
+---
+id: 405_Expand_Query
+title: $expand Query
+sidebar_label: $expand Query
+---
 
 ## Overview
 

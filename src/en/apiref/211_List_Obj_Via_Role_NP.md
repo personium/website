@@ -1,4 +1,8 @@
-# Retrieve other objects list via Role's Navigation Property
+---
+id: 211_List_Obj_Via_Role_NP
+title: Retrieve other objects list via Role's Navigation Property
+sidebar_label: Retrieve other objects list via Role's Navigation Property
+---
 
 ## Overview
 

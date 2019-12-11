@@ -1,4 +1,8 @@
-# Personium認証Plugin開発ガイド
+---
+id: Personium_AuthenticationPluginDeveloperManual
+title: Personium認証Plugin開発ガイド
+sidebar_label: Personium認証Plugin開発ガイド
+---
 
 この文書はPersonium認証Pluginの開発マニュアルです。
 

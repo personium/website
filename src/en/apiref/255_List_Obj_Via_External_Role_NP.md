@@ -1,4 +1,8 @@
-# Retrieve other objects list via ExtRole's Navigation Property
+---
+id: 255_List_Obj_Via_External_Role_NP
+title: Retrieve other objects list via ExtRole's Navigation Property
+sidebar_label: Retrieve other objects list via ExtRole's Navigation Property
+---
 
 ## Overview
 

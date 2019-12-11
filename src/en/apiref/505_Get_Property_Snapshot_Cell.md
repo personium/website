@@ -1,4 +1,8 @@
-# Retrieve Cell snapshot file setting
+---
+id: 505_Get_Property_Snapshot_Cell
+title: Retrieve Cell snapshot file setting
+sidebar_label: Retrieve Cell snapshot file setting
+---
 
 ## Overview
 

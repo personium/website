@@ -1,4 +1,8 @@
-# EntityType登録
+---
+id: 345_Create_EntityType
+title: EntityType登録
+sidebar_label: EntityType登録
+---
 ## 概要
 ユーザデータのEntityTypeを登録する
 

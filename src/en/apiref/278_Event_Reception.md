@@ -1,4 +1,8 @@
-# Accept External Event
+---
+id: 278_Event_Reception
+title: Accept External Event
+sidebar_label: Accept External Event
+---
 
 ## Overview
 

@@ -1,4 +1,8 @@
-# Create Collection
+---
+id: 306_Create_Collection
+title: Create Collection
+sidebar_label: Create Collection
+---
 
 ## Overview
 

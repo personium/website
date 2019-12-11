@@ -1,4 +1,8 @@
-# Personium How to participate in document maintenance / improvement  
+---
+id: README
+title: Personium How to participate in document maintenance / improvement  
+sidebar_label: Personium How to participate in document maintenance / improvement  
+---
 In the open source project Personium, not only code but also document contribution are welcome.If you are interested in helping to improve the document, please follow the steps below to add and modify the document, please pullrequest on GitHub.
 
 > __Please prepare a GitHub account__

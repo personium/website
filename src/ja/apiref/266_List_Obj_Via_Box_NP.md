@@ -1,4 +1,8 @@
-# BoxのNavigation Property経由での他オブジェクト一覧取得
+---
+id: 266_List_Obj_Via_Box_NP
+title: BoxのNavigation Property経由での他オブジェクト一覧取得
+sidebar_label: BoxのNavigation Property経由での他オブジェクト一覧取得
+---
 ## 概要
 セル制御オブジェクトをNavigation Property経由で取得する
 ### 必要な権限

@@ -1,4 +1,8 @@
-# Box partial update
+---
+id: 2B0_Partial_Update_Box
+title: Box partial update
+sidebar_label: Box partial update
+---
 
 ## Overview
 

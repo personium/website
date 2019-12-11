@@ -1,4 +1,8 @@
-# Streamコレクションの操作可能メソッド取得
+---
+id: 390_Options_Stream_Collection
+title: Streamコレクションの操作可能メソッド取得
+sidebar_label: Streamコレクションの操作可能メソッド取得
+---
 ## 概要
 Streamコレクションで操作可能なメソッドをトークンの権限に応じて返却する。
 

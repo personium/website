@@ -1,4 +1,8 @@
-# Cellスナップショットファイル取得
+---
+id: 504_Get_Snapshot_Cell
+title: Cellスナップショットファイル取得
+sidebar_label: Cellスナップショットファイル取得
+---
 ## 概要
 Cellスナップショットファイルを取得する。  
 If-None-Matchヘッダに指定されたETag値によって、返却される内容が異なる。  

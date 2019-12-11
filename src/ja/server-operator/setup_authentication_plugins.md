@@ -1,4 +1,8 @@
-# 認証Pluginのセットアップ
+---
+id: setup_authentication_plugins
+title: 認証Pluginのセットアップ
+sidebar_label: 認証Pluginのセットアップ
+---
 ## 認証Plugin
 認証PluginはCellが持つOAuth2トークンエンドポイントの振舞を拡張するためのものです。  
 認証Pluginをユニットに導入することで、そのユニット上のすべてのCellのOAuth2トークンエンドポイントにはプラグインに定義された拡張された振舞が追加されます。  

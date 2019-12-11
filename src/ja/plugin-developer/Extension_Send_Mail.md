@@ -1,4 +1,8 @@
-# Extension: メール送信機能
+---
+id: Extension_Send_Mail
+title: Extension: メール送信機能
+sidebar_label: Extension: メール送信機能
+---
 ## メール送信機能仕様
 
 Engine Script内から本Extensionの設定パラメタとして設定されたSMTPサーバを経由してメール送信を行うことを可能とする Extension です。

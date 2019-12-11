@@ -1,4 +1,8 @@
-# Cellのモデル
+---
+id: 005_Model_construction
+title: Cellのモデル
+sidebar_label: Cellのモデル
+---
 
 #### メッセージのモデル
 

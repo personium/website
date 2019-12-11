@@ -1,4 +1,8 @@
-# Account登録
+---
+id: 212_Create_Account
+title: Account登録
+sidebar_label: Account登録
+---
 ## 概要
 Accountを登録する
 

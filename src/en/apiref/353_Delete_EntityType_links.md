@@ -1,4 +1,8 @@
-# Unlink EntityType with other objects
+---
+id: 353_Delete_EntityType_links
+title: Unlink EntityType with other objects
+sidebar_label: Unlink EntityType with other objects
+---
 
 ## Overview
 

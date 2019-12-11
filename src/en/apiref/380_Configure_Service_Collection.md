@@ -1,4 +1,8 @@
-# Apply Settings Service Collection Source
+---
+id: 380_Configure_Service_Collection
+title: Apply Settings Service Collection Source
+sidebar_label: Apply Settings Service Collection Source
+---
 
 ## Overview
 

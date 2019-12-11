@@ -1,4 +1,8 @@
-# OData Service Collection (OSC)の使い方
+---
+id: using_odata
+title: OData Service Collection (OSC)の使い方
+sidebar_label: OData Service Collection (OSC)の使い方
+---
 
 PersoniumのOData Service Collection (OSC)はBox内に作成できるリレーショナルデータを扱うことのできる空間です。
 単数または複数のテーブルをつくってデータを管理したり検索したりといったことをOData (v2)プロトコルを通じて行うことができます。

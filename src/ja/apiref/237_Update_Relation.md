@@ -1,4 +1,8 @@
-# Relation更新
+---
+id: 237_Update_Relation
+title: Relation更新
+sidebar_label: Relation更新
+---
 ## 概要
 既存のRelation情報を更新する
 ### 必要な権限

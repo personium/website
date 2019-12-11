@@ -1,4 +1,8 @@
-# 用語集
+---
+id: 008_Glossary
+title: 用語集
+sidebar_label: 用語集
+---
 
 ##### [A](#anc_a) | [B](#anc_b) | [C](#anc_c) | D | [E](#anc_e) | [F](#anc_f) | G | H | [I](#anc_i) | J | K | L | [M](#anc_m) | [N](#anc_n) | [O](#anc_o) | [P](#anc_p) | Q | [R](#anc_r) | [S](#anc_s) | [T](#anc_t) | [U](#anc_u) | V | [W](#anc_w) | X | Y | Z
 

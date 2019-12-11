@@ -1,4 +1,8 @@
-# 認証モデル
+---
+id: 003_Auth
+title: 認証モデル
+sidebar_label: 認証モデル
+---
 Personimは、業界標準のOAuth2 Authorization Frameworkを使用して、多くのタイプのアプリケーションが安全にPersoniumのリソースにアクセスできるようにします。
 
 さらに、Personiumは、セル間の信頼に基づいて許可フローを提供します。

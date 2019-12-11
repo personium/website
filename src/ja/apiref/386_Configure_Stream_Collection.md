@@ -1,4 +1,8 @@
-# Streamコレクションソース設定変更
+---
+id: 386_Configure_Stream_Collection
+title: Streamコレクションソース設定変更
+sidebar_label: Streamコレクションソース設定変更
+---
 ## 概要
 Streamコレクションソースの設定を変更する
 

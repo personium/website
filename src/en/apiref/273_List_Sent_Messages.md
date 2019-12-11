@@ -1,4 +1,8 @@
-# Retrieve List of SentMessage
+---
+id: 273_List_Sent_Messages
+title: Retrieve List of SentMessage
+sidebar_label: Retrieve List of SentMessage
+---
 
 ## Overview
 

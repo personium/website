@@ -1,4 +1,8 @@
-# Cellエクスポート状態取得
+---
+id: 502_Progress_of_Export_Cell
+title: Cellエクスポート状態取得
+sidebar_label: Cellエクスポート状態取得
+---
 ## 概要
 Cellエクスポートの状態を取得する。Cellエクスポート状態には、以下の情報が含まれる。
 * Cellエクスポートの状態

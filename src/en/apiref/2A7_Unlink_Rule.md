@@ -1,4 +1,8 @@
-# Unlink Rule with other objects
+---
+id: 2A7_Unlink_Rule
+title: Unlink Rule with other objects
+sidebar_label: Unlink Rule with other objects
+---
 ## Overview
 
 Release the link with Box linked from Rule.

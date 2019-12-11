@@ -1,4 +1,8 @@
-# Roleと他オブジェクトとのリンク解除
+---
+id: 209_Unlink_Role
+title: Roleと他オブジェクトとのリンク解除
+sidebar_label: Roleと他オブジェクトとのリンク解除
+---
 ## 概要
 Roleとの$links情報を削除する
 

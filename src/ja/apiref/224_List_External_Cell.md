@@ -1,4 +1,8 @@
-# ExtCell一覧取得
+---
+id: 224_List_External_Cell
+title: ExtCell一覧取得
+sidebar_label: ExtCell一覧取得
+---
 ## 概要
 既存のExtCell情報の一覧を取得する
 ### 必要な権限

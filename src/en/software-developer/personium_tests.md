@@ -1,4 +1,8 @@
-# Personium Tests
+---
+id: personium_tests
+title: Personium Tests
+sidebar_label: Personium Tests
+---
 
 ## Overview
 

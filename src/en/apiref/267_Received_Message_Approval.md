@@ -1,4 +1,8 @@
-# Change Message status  (unread, read, approve)
+---
+id: 267_Received_Message_Approval
+title: Change Message status  (unread, read, approve)
+sidebar_label: Change Message status  (unread, read, approve)
+---
 
 ## Overview
 * approve/reject Message  

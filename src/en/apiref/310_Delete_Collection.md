@@ -1,4 +1,8 @@
-# Delete collection
+---
+id: 310_Delete_Collection
+title: Delete collection
+sidebar_label: Delete collection
+---
 
 ## Overview
 

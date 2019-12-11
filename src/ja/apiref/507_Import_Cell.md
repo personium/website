@@ -1,4 +1,8 @@
-# Cellインポート
+---
+id: 507_Import_Cell
+title: Cellインポート
+sidebar_label: Cellインポート
+---
 ## 概要
 CellスナップショットファイルからCellのデータをインポートする。  
 CellスナップショットファイルはPersoniumUnit内の特殊な領域(Cellスナップショット領域)のものを使用する。  

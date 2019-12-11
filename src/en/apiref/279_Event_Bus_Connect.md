@@ -1,4 +1,8 @@
-# Web Socket Connection to the Event Bus
+---
+id: 279_Event_Bus_Connect
+title: Web Socket Connection to the Event Bus
+sidebar_label: Web Socket Connection to the Event Bus
+---
 
 ## Overview
 

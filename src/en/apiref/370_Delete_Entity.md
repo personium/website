@@ -1,4 +1,8 @@
-# Delete Entity
+---
+id: 370_Delete_Entity
+title: Delete Entity
+sidebar_label: Delete Entity
+---
 
 ## Overview
 

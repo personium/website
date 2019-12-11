@@ -1,4 +1,8 @@
-# Delete Relation
+---
+id: 238_Delete_Relation
+title: Delete Relation
+sidebar_label: Delete Relation
+---
 
 ## Overview
 

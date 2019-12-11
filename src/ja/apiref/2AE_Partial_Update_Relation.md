@@ -1,4 +1,8 @@
-# Relation部分更新
+---
+id: 2AE_Partial_Update_Relation
+title: Relation部分更新
+sidebar_label: Relation部分更新
+---
 ## 概要
 既存のRelation情報を部分更新する
 ### 必要な権限

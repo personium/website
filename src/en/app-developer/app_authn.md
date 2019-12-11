@@ -1,4 +1,8 @@
-# App authentication
+---
+id: app_authn
+title: App authentication
+sidebar_label: App authentication
+---
 ## What is App authentication?
 When Personium Box utilizes some kind of service that utilizes data associated with individuals, an entity that owns Cells,
 It includes implementations aimed at providing a mechanism that prevents other services from illegally accessing or modifying the data.

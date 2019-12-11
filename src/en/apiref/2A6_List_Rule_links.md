@@ -1,4 +1,8 @@
-# Retrieve links list from Rule to other objects
+---
+id: 2A6_List_Rule_links
+title: Retrieve links list from Rule to other objects
+sidebar_label: Retrieve links list from Rule to other objects
+---
 ## Overview
 Get a list of OData resources associated with Rule  
 You can specify the following OData resources  

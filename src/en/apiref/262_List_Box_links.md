@@ -1,4 +1,8 @@
-# Retrieve links list from Box to other objects
+---
+id: 262_List_Box_links
+title: Retrieve links list from Box to other objects
+sidebar_label: Retrieve links list from Box to other objects
+---
 
 ## Overview
 

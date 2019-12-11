@@ -1,4 +1,8 @@
-# Link other objects with Property
+---
+id: 360_Register_Property_links
+title: Link other objects with Property
+sidebar_label: Link other objects with Property
+---
 
 ## Overview
 

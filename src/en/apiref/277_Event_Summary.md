@@ -1,4 +1,8 @@
-# Events Overview
+---
+id: 277_Event_Summary
+title: Events Overview
+sidebar_label: Events Overview
+---
 ## Event Model
 It consists of an external event defined by [event reception API](278_Event_Reception.md) and an internal event defined within Personium.
 

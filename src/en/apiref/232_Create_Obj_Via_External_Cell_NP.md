@@ -1,4 +1,8 @@
-# Create other objects via ExtCell's Navigation Property
+---
+id: 232_Create_Obj_Via_External_Cell_NP
+title: Create other objects via ExtCell's Navigation Property
+sidebar_label: Create other objects via ExtCell's Navigation Property
+---
 
 ## Overview
 

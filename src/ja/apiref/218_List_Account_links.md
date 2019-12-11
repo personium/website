@@ -1,4 +1,8 @@
-# Accountと他オブジェクトとのリンク一覧取得
+---
+id: 218_List_Account_links
+title: Accountと他オブジェクトとのリンク一覧取得
+sidebar_label: Accountと他オブジェクトとのリンク一覧取得
+---
 ## 概要
 Accountに紐付いたODataリソースを一覧取得する  
 以下のODataリソースを指定することができる

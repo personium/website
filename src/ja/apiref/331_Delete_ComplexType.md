@@ -1,4 +1,8 @@
-# ComplexType削除
+---
+id: 331_Delete_ComplexType
+title: ComplexType削除
+sidebar_label: ComplexType削除
+---
 ## 概要
 既存のComplexType情報を削除する  
 PropertyまたはComplexTypePropertyのTypeとして使用されている場合は削除できない

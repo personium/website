@@ -1,4 +1,8 @@
-# Delete ReceivedMessage
+---
+id: 270_Delete_Received_Message
+title: Delete ReceivedMessage
+sidebar_label: Delete ReceivedMessage
+---
 
 ## Overview
 

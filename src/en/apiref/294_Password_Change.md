@@ -1,4 +1,8 @@
-# Change Password(\_\_mypassword)
+---
+id: 294_Password_Change
+title: Change Password(\_\_mypassword)
+sidebar_label: Change Password(\_\_mypassword)
+---
 
 ## Overview
 

@@ -1,4 +1,8 @@
-# Send stream collection
+---
+id: 387_Stream_Collection_Send
+title: Send stream collection
+sidebar_label: Send stream collection
+---
 
 ## Overview
 Send data to stream collection queue and topic

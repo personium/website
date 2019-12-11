@@ -1,4 +1,8 @@
-# Roleと他オブジェクトとのリンク
+---
+id: 206_Link_Role
+title: Roleと他オブジェクトとのリンク
+sidebar_label: Roleと他オブジェクトとのリンク
+---
 ## 概要
 Roleに$linksで指定したODataリソースを紐付ける
 * Account

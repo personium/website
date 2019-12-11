@@ -1,4 +1,8 @@
-# Create other objects via Rule's Navigation Property
+---
+id: 2A8_Create_Obj_Via_Rule_NP
+title: Create other objects via Rule's Navigation Property
+sidebar_label: Create other objects via Rule's Navigation Property
+---
 
 ## Overview
 

@@ -1,4 +1,8 @@
-# POST acceptance at OAuth2.0 Authorization Endpoint
+---
+id: 292p_OAuth2_Authorization_Endpoint
+title: POST acceptance at OAuth2.0 Authorization Endpoint
+sidebar_label: POST acceptance at OAuth2.0 Authorization Endpoint
+---
 
 ## Overview
 POST Method is accepted at OAuth2 Authorization Endpoint.

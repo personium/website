@@ -1,4 +1,8 @@
-# RoleのNavigation Property経由での他オブジェクト一覧取得
+---
+id: 211_List_Obj_Via_Role_NP
+title: RoleのNavigation Property経由での他オブジェクト一覧取得
+sidebar_label: RoleのNavigation Property経由での他オブジェクト一覧取得
+---
 ## 概要
 セル制御オブジェクトをNavigation Property経由で取得する
 ### 必要な権限

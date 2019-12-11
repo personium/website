@@ -1,4 +1,8 @@
-# Delete ExtRole
+---
+id: 249_Delete_External_Role
+title: Delete ExtRole
+sidebar_label: Delete ExtRole
+---
 
 ## Overview
 

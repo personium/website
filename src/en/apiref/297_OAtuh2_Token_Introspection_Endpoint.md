@@ -1,4 +1,8 @@
-# OAuth 2.0 Token Introspection Endpoint
+---
+id: 297_OAtuh2_Token_Introspection_Endpoint
+title: OAuth 2.0 Token Introspection Endpoint
+sidebar_label: OAuth 2.0 Token Introspection Endpoint
+---
 ## Overview
 It is the API endpoint that acquires the contents of the token. Implements RFC 7662.
 

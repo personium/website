@@ -1,4 +1,8 @@
-# Retrieve List of Property
+---
+id: 356_List_Property
+title: Retrieve List of Property
+sidebar_label: Retrieve List of Property
+---
 
 ## Overview
 

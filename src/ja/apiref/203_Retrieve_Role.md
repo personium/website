@@ -1,4 +1,8 @@
-# Role取得
+---
+id: 203_Retrieve_Role
+title: Role取得
+sidebar_label: Role取得
+---
 ## 概要
 既存のRole情報を取得する
 ### 必要な権限

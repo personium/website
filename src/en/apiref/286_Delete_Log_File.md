@@ -1,4 +1,8 @@
-# Delete Log File
+---
+id: 286_Delete_Log_File
+title: Delete Log File
+sidebar_label: Delete Log File
+---
 
 ## Overview
 

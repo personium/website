@@ -1,4 +1,8 @@
-# Extcell_$links更新
+---
+id: 230_Update_External_Cell_links
+title: Extcell_$links更新
+sidebar_label: Extcell_$links更新
+---
 ## 概要
 Extcellに紐付いたODataリソースを更新する<br>以下のODataリソースを指定することができる
 

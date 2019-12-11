@@ -1,4 +1,8 @@
-# スキーマ取得（$metadata）
+---
+id: 316_User_Defined_Data_Schema
+title: スキーマ取得（$metadata）
+sidebar_label: スキーマ取得（$metadata）
+---
 ## 概要
 ユーザデータのスキーマ定義を行うためのスキーマ情報を取得する
 

@@ -1,4 +1,8 @@
-# Relation partial update
+---
+id: 2AE_Partial_Update_Relation
+title: Relation partial update
+sidebar_label: Relation partial update
+---
 
 ## Overview
 

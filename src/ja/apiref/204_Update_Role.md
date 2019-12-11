@@ -1,4 +1,8 @@
-# Role更新
+---
+id: 204_Update_Role
+title: Role更新
+sidebar_label: Role更新
+---
 ## 概要
 既存のRole情報を更新する
 ### 必要な権限

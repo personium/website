@@ -1,4 +1,8 @@
-# Retrieve ExtCell
+---
+id: 225_Retrieve_External_Cell
+title: Retrieve ExtCell
+sidebar_label: Retrieve ExtCell
+---
 
 ## Overview
 

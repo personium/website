@@ -1,4 +1,8 @@
-# Cellスナップショットファイル登録更新
+---
+id: 503_Register_and_Update_Snapshot_Cell
+title: Cellスナップショットファイル登録更新
+sidebar_label: Cellスナップショットファイル登録更新
+---
 ## 概要
 Cellスナップショットを登録・更新する。
 

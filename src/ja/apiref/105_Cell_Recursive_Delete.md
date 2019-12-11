@@ -1,4 +1,8 @@
-# Cell再帰削除
+---
+id: 105_Cell_Recursive_Delete
+title: Cell再帰削除
+sidebar_label: Cell再帰削除
+---
 ## 概要
 * 指定されたセル配下の関連データを全て削除する
 * 削除対象のデータは下記API

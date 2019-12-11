@@ -1,4 +1,8 @@
-# Cell公開鍵取得
+---
+id: 298_Get_Cell_Certs
+title: Cell公開鍵取得
+sidebar_label: Cell公開鍵取得
+---
 ## 概要
 OpenID ConnectのID Tokenの検証に利用可能な公開鍵情報を取得する。  
 公開鍵情報には、以下の情報が含まれる。

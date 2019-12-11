@@ -1,4 +1,8 @@
-# AssociationEnd一覧取得
+---
+id: 319_List_AssociationEnd
+title: AssociationEnd一覧取得
+sidebar_label: AssociationEnd一覧取得
+---
 ## 概要
 既存のAssociationEnd情報の一覧を取得する
 

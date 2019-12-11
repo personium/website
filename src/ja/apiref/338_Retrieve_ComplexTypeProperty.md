@@ -1,4 +1,8 @@
-# ComplexTypeProperty取得
+---
+id: 338_Retrieve_ComplexTypeProperty
+title: ComplexTypeProperty取得
+sidebar_label: ComplexTypeProperty取得
+---
 ## 概要
 既存のComplexTypeProperty情報を取得する
 

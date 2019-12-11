@@ -1,4 +1,8 @@
-# SentMessage取得
+---
+id: 272_Retrieve_Sent_Message
+title: SentMessage取得
+sidebar_label: SentMessage取得
+---
 ## 概要
 送信メッセージ情報を取得する
 ### 必要な権限

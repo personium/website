@@ -1,4 +1,8 @@
-# Relationと他オブジェクトとのリンク
+---
+id: 239_Link_Relation
+title: Relationと他オブジェクトとのリンク
+sidebar_label: Relationと他オブジェクトとのリンク
+---
 ## 概要
 Relationに$linksで指定したODataリソースを紐付ける  
 以下のODataリソースと紐付けることができる  

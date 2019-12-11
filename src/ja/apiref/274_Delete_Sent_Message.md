@@ -1,4 +1,8 @@
-# SentMessage削除
+---
+id: 274_Delete_Sent_Message
+title: SentMessage削除
+sidebar_label: SentMessage削除
+---
 ## 概要
 存在する送信メッセージを削除する  
 ### 必要な権限

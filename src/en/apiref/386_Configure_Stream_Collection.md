@@ -1,4 +1,8 @@
-# Change settings Stream collection source
+---
+id: 386_Configure_Stream_Collection
+title: Change settings Stream collection source
+sidebar_label: Change settings Stream collection source
+---
 
 ## Overview
 Change stream collection source settings

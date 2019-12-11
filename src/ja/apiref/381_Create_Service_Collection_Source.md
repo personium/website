@@ -1,4 +1,8 @@
-# サービスコレクションソース作成
+---
+id: 381_Create_Service_Collection_Source
+title: サービスコレクションソース作成
+sidebar_label: サービスコレクションソース作成
+---
 ## 概要
 サービスソース情報を登録・更新する
 ### 必要な権限

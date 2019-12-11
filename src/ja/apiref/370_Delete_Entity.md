@@ -1,4 +1,8 @@
-# Entity削除
+---
+id: 370_Delete_Entity
+title: Entity削除
+sidebar_label: Entity削除
+---
 ## 概要
 ユーザデータのEntityを一件削除します。
 ### 必要な権限

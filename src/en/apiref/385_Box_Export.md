@@ -1,4 +1,8 @@
-# Export Box
+---
+id: 385_Box_Export
+title: Export Box
+sidebar_label: Export Box
+---
 
 ## Overview
 Export the bar file in the specified box. For the bar file format, see "[ bar file ](301_Bar_File.md)".  

@@ -1,4 +1,8 @@
-# Install Box
+---
+id: 302_Box_Installation
+title: Install Box
+sidebar_label: Install Box
+---
 
 ## Overview
 

@@ -1,4 +1,8 @@
-# Role in Personium
+---
+id: Roles
+title: Role in Personium
+sidebar_label: Role in Personium
+---
 
 ## API protection with role-based access control
 

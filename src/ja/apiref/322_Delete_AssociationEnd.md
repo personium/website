@@ -1,4 +1,8 @@
-# AssociationEnd削除
+---
+id: 322_Delete_AssociationEnd
+title: AssociationEnd削除
+sidebar_label: AssociationEnd削除
+---
 ## 概要
 既存のAssociationEnd情報を削除する
 ### 必要な権限

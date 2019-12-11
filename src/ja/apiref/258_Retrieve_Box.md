@@ -1,4 +1,8 @@
-# Box取得
+---
+id: 258_Retrieve_Box
+title: Box取得
+sidebar_label: Box取得
+---
 ## 概要
 既存のBox情報を取得する
 

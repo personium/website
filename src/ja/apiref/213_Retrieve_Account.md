@@ -1,4 +1,8 @@
-# Account取得
+---
+id: 213_Retrieve_Account
+title: Account取得
+sidebar_label: Account取得
+---
 ## 概要
 既存のAccount情報を取得する
 ### 必要な権限

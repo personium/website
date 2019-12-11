@@ -1,4 +1,8 @@
-# Entity作成
+---
+id: 364_Create_Entity
+title: Entity作成
+sidebar_label: Entity作成
+---
 ## 概要
 ユーザデータのEntityを作成します。
 ### 必要な権限

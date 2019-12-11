@@ -1,4 +1,8 @@
-# ExtRole partial update
+---
+id: 2AF_Partial_Update_External_Role
+title: ExtRole partial update
+sidebar_label: ExtRole partial update
+---
 
 ## Overview
 

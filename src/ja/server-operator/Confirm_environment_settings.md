@@ -1,4 +1,8 @@
-# Ansible で構築したユニットの環境情報
+---
+id: Confirm_environment_settings
+title: Ansible で構築したユニットの環境情報
+sidebar_label: Ansible で構築したユニットの環境情報
+---
 
 -------------------------------------------------
 

@@ -1,4 +1,8 @@
-# Personium API Reference
+---
+id: 000_Rest_API_Reference
+title: Personium API Reference
+sidebar_label: Personium API Reference
+---
 Welcome to the Personium API Reference.  This reference describes technical detailed specifications related to all of the APIs provided by Personium.
 Please refer to [Request URL variable list](005_Variable_of_Request_URL.md) for the variable of the request URL in this reference.
 

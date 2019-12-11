@@ -1,4 +1,8 @@
-# Server Software Operator's Guide  
+---
+id: README
+title: Server Software Operator's Guide  
+sidebar_label: Server Software Operator's Guide  
+---
 
 It is a document for people who use Personium's server software to build Personium units, who build/deploy/configure Personium server programs, and who wish to provide / operate a PDS service environment using Personium.
 

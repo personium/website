@@ -1,4 +1,8 @@
-# SentMessage一覧取得
+---
+id: 273_List_Sent_Messages
+title: SentMessage一覧取得
+sidebar_label: SentMessage一覧取得
+---
 ## 概要
 送信メッセージ情報の一覧を取得する
 ### 必要な権限

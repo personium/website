@@ -1,4 +1,8 @@
-# Retrieve List of Internal Rule information
+---
+id: 2AA_List_Internal_Rule
+title: Retrieve List of Internal Rule information
+sidebar_label: Retrieve List of Internal Rule information
+---
 
 ## Overview
 Retrieve list of internal rule information

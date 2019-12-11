@@ -1,4 +1,8 @@
-# Retrieve links list from AssociationEnd to other objects
+---
+id: 324_List_AssociationEnd_links
+title: Retrieve links list from AssociationEnd to other objects
+sidebar_label: Retrieve links list from AssociationEnd to other objects
+---
 
 ## Overview
 

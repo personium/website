@@ -1,4 +1,8 @@
-# Retrieve links list from Relation to other objects
+---
+id: 240_List_Relation_links
+title: Retrieve links list from Relation to other objects
+sidebar_label: Retrieve links list from Relation to other objects
+---
 
 ## Overview
 

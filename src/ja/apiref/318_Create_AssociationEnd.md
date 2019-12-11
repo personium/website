@@ -1,4 +1,8 @@
-# AssociationEnd登録
+---
+id: 318_Create_AssociationEnd
+title: AssociationEnd登録
+sidebar_label: AssociationEnd登録
+---
 ## 概要
 ユーザデータのAssociationEndを登録する
 ### 必要な権限

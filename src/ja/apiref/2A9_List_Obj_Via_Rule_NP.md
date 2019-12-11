@@ -1,4 +1,8 @@
-# RuleのNavigation Property経由での他オブジェクト一覧取得
+---
+id: 2A9_List_Obj_Via_Rule_NP
+title: RuleのNavigation Property経由での他オブジェクト一覧取得
+sidebar_label: RuleのNavigation Property経由での他オブジェクト一覧取得
+---
 ## 概要
 セル制御オブジェクトをNavigation Property経由で取得する
 ### 必要な権限

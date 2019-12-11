@@ -1,4 +1,8 @@
-# Delete Service Collection Source
+---
+id: 383_Delete_Service_Collection_Source
+title: Delete Service Collection Source
+sidebar_label: Delete Service Collection Source
+---
 
 ## Overview
 

@@ -1,4 +1,8 @@
-# Retrieve Cell
+---
+id: 102_Retrieve_Cell
+title: Retrieve Cell
+sidebar_label: Retrieve Cell
+---
 
 ## Overview
 

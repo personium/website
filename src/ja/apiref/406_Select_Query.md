@@ -1,4 +1,8 @@
-# $select クエリ
+---
+id: 406_Select_Query
+title: $select クエリ
+sidebar_label: $select クエリ
+---
 ## 概要
 返却するプロパティを指定する場合、$selectクエリを使用する  
 省略した場合は、取得したすべてのプロパティを返却する  

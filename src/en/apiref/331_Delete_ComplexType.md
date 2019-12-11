@@ -1,4 +1,8 @@
-# Delete ComplexType
+---
+id: 331_Delete_ComplexType
+title: Delete ComplexType
+sidebar_label: Delete ComplexType
+---
 
 ## Overview
 

@@ -1,4 +1,8 @@
-# Cellエクスポート
+---
+id: 501_Export_Cell
+title: Cellエクスポート
+sidebar_label: Cellエクスポート
+---
 ## 概要
 Cell内の全てのデータをCellスナップショットファイルとしてエクスポートする。 
 スナップショットファイルはPersoniumUnit内の特殊な領域(Cellスナップショット領域)に作成される。  

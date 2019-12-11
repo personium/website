@@ -1,4 +1,8 @@
-# Retrieve links list from Account to other objects
+---
+id: 218_List_Account_links
+title: Retrieve links list from Account to other objects
+sidebar_label: Retrieve links list from Account to other objects
+---
 
 ## Overview
 

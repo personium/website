@@ -1,4 +1,8 @@
-# Retrieve links list from ExtRole to other objects
+---
+id: 251_List_External_Role_links
+title: Retrieve links list from ExtRole to other objects
+sidebar_label: Retrieve links list from ExtRole to other objects
+---
 
 ## Overview
 

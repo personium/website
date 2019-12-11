@@ -1,4 +1,8 @@
-# Relation\_$links update
+---
+id: 241_Update_Relation_links
+title: Relation\_$links update
+sidebar_label: Relation\_$links update
+---
 
 ## Overview
 

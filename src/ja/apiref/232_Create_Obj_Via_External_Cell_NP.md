@@ -1,4 +1,8 @@
-# ExtCellのNavigation Property経由での他オブジェクト登録
+---
+id: 232_Create_Obj_Via_External_Cell_NP
+title: ExtCellのNavigation Property経由での他オブジェクト登録
+sidebar_label: ExtCellのNavigation Property経由での他オブジェクト登録
+---
 ## 概要
 ExtCellの様々なNavigation Property経由で、他のCell制御オブジェクトを登録する。
 

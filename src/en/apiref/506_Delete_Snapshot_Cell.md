@@ -1,4 +1,8 @@
-# Cell snapshot file delete
+---
+id: 506_Delete_Snapshot_Cell
+title: Cell snapshot file delete
+sidebar_label: Cell snapshot file delete
+---
 
 ## Overview
 

@@ -1,4 +1,8 @@
-# ExtRole削除
+---
+id: 249_Delete_External_Role
+title: ExtRole削除
+sidebar_label: ExtRole削除
+---
 ## 概要
 ExtRoleを削除する
 ### 必要な権限

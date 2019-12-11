@@ -1,4 +1,8 @@
-# Link other objects with ExtRole
+---
+id: 250_Link_External_Role
+title: Link other objects with ExtRole
+sidebar_label: Link other objects with ExtRole
+---
 
 ## Overview
 

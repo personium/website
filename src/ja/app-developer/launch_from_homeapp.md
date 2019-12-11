@@ -1,4 +1,8 @@
-# Homeアプリからのアプリ起動
+---
+id: launch_from_homeapp
+title: Homeアプリからのアプリ起動
+sidebar_label: Homeアプリからのアプリ起動
+---
 
 Personiumアプリには様々な形態がありますが、ここでは最も標準的なHomeアプリから起動されるアプリについて以下を説明します。
 

@@ -1,4 +1,8 @@
-# Retrieve Cell snapshot file
+---
+id: 504_Get_Snapshot_Cell
+title: Retrieve Cell snapshot file
+sidebar_label: Retrieve Cell snapshot file
+---
 
 ## Overview
 

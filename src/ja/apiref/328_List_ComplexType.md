@@ -1,4 +1,8 @@
-# ComplexType一覧取得
+---
+id: 328_List_ComplexType
+title: ComplexType一覧取得
+sidebar_label: ComplexType一覧取得
+---
 ## 概要
 既存のComplexType情報の一覧を取得する
 

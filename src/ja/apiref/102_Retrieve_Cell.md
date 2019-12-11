@@ -1,4 +1,8 @@
-# Cell取得
+---
+id: 102_Retrieve_Cell
+title: Cell取得
+sidebar_label: Cell取得
+---
 ## 概要
 既存のCell情報を取得する
 

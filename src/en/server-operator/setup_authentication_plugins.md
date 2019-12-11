@@ -1,4 +1,8 @@
-# Setup Authentication Plugins
+---
+id: setup_authentication_plugins
+title: Setup Authentication Plugins
+sidebar_label: Setup Authentication Plugins
+---
 ## Authentication Plugins
 The Authentication Plugin is intended to extend the behavior of OAuth 2 token End Point of Cell.  
 By introducing an Authentication Plugin into the unit, the expanded behavior defined for the plugin is added to the OAuth 2 token end point of all Cells on that unit.  

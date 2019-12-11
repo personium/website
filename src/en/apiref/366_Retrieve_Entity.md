@@ -1,4 +1,8 @@
-# Retrieve Entity
+---
+id: 366_Retrieve_Entity
+title: Retrieve Entity
+sidebar_label: Retrieve Entity
+---
 
 ## Overview
 

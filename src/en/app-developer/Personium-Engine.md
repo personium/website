@@ -1,4 +1,8 @@
-# Personium Engine
+---
+id: Personium-Engine
+title: Personium Engine
+sidebar_label: Personium Engine
+---
 ## Overview
 
 Personium Engine is a mechanism for registering simple server side logic(Engine Script) and running it. Access to the Engine is done via the Engine Service Collection (ESC) created in Box.  

@@ -1,4 +1,8 @@
-# Create AssociationEnd
+---
+id: 318_Create_AssociationEnd
+title: Create AssociationEnd
+sidebar_label: Create AssociationEnd
+---
 
 ## Overview
 

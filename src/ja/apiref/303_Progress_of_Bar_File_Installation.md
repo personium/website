@@ -1,4 +1,8 @@
-# Boxメタデータ取得
+---
+id: 303_Progress_of_Bar_File_Installation
+title: Boxメタデータ取得
+sidebar_label: Boxメタデータ取得
+---
 ## 概要
 Boxのメタデータを取得する。メタデータには、以下の情報が含まれる。  
 * Boxの状態  

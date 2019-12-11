@@ -1,4 +1,8 @@
-# Stream Collection受信
+---
+id: 388_Stream_Collection_Receive
+title: Stream Collection受信
+sidebar_label: Stream Collection受信
+---
 ## 概要
 Stream Collectionのqueueからデータを受信する
 

@@ -1,4 +1,8 @@
-# Proxy exclusion setting  
+---
+id: proxy_exclusion_setting
+title: Proxy exclusion setting  
+sidebar_label: Proxy exclusion setting  
+---
 
 ## Procedure  
 

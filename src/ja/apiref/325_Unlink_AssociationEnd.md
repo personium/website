@@ -1,4 +1,8 @@
-# AssociationEndと他オブジェクトとのリンク解除
+---
+id: 325_Unlink_AssociationEnd
+title: AssociationEndと他オブジェクトとのリンク解除
+sidebar_label: AssociationEndと他オブジェクトとのリンク解除
+---
 ## 概要
 AssociationEndの$links情報を削除する
 ### 必要な権限

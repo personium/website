@@ -1,4 +1,8 @@
-# ComplexTypeProperty一覧取得
+---
+id: 337_List_ComplexTypeProperty
+title: ComplexTypeProperty一覧取得
+sidebar_label: ComplexTypeProperty一覧取得
+---
 ## 概要
 既存のComplexTypeProperty情報の一覧を取得する
 

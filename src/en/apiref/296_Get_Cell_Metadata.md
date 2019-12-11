@@ -1,4 +1,8 @@
-# Retrieve Cell Metadata
+---
+id: 296_Get_Cell_Metadata
+title: Retrieve Cell Metadata
+sidebar_label: Retrieve Cell Metadata
+---
 
 ## Overview
 

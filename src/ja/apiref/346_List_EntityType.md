@@ -1,4 +1,8 @@
-# EntityType一覧取得
+---
+id: 346_List_EntityType
+title: EntityType一覧取得
+sidebar_label: EntityType一覧取得
+---
 ## 概要
 既存のEntityType情報の一覧を取得する
 

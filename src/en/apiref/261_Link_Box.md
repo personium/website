@@ -1,4 +1,8 @@
-# Link other objects with Box
+---
+id: 261_Link_Box
+title: Link other objects with Box
+sidebar_label: Link other objects with Box
+---
 
 ## Overview
 

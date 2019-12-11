@@ -1,4 +1,8 @@
-# ReceivedMessage削除
+---
+id: 270_Delete_Received_Message
+title: ReceivedMessage削除
+sidebar_label: ReceivedMessage削除
+---
 ## 概要
 存在する受信メッセージを削除する  
 ### 必要な権限

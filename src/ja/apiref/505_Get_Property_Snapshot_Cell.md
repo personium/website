@@ -1,4 +1,8 @@
-# Cellスナップショットファイル設定取得
+---
+id: 505_Get_Property_Snapshot_Cell
+title: Cellスナップショットファイル設定取得
+sidebar_label: Cellスナップショットファイル設定取得
+---
 ## 概要
 Cellスナップショットファイルプロパティを取得する。
 

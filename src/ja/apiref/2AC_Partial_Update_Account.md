@@ -1,4 +1,8 @@
-# Account部分更新
+---
+id: 2AC_Partial_Update_Account
+title: Account部分更新
+sidebar_label: Account部分更新
+---
 ## 概要
 既存のAccount情報を部分更新する
 

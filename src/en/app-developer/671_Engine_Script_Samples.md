@@ -1,4 +1,8 @@
-# Engine Script Samples
+---
+id: 671_Engine_Script_Samples
+title: Engine Script Samples
+sidebar_label: Engine Script Samples
+---
 
 ## Basic Form
 

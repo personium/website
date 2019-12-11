@@ -1,4 +1,8 @@
-# Retrieve Account
+---
+id: 213_Retrieve_Account
+title: Retrieve Account
+sidebar_label: Retrieve Account
+---
 
 ## Overview
 

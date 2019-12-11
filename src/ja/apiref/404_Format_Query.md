@@ -1,4 +1,8 @@
-# $formatクエリ
+---
+id: 404_Format_Query
+title: $formatクエリ
+sidebar_label: $formatクエリ
+---
 ## 概要
 $formatクエリを指定すると、クエリオプションによって指定されたメディアタイプでレスポンスが返却される。  
 $formatのクエリオプション有効値は下表の通り。

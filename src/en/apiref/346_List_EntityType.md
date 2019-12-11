@@ -1,4 +1,8 @@
-# Retrieve List of EntityType
+---
+id: 346_List_EntityType
+title: Retrieve List of EntityType
+sidebar_label: Retrieve List of EntityType
+---
 
 ## Overview
 

@@ -1,4 +1,8 @@
-# Delete ComplexTypeProperty
+---
+id: 340_Delete_ComplexTypeProperty
+title: Delete ComplexTypeProperty
+sidebar_label: Delete ComplexTypeProperty
+---
 
 ## Overview
 

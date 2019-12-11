@@ -1,4 +1,8 @@
-# ComplexTypeと他オブジェクトとのリンク解除
+---
+id: 335_Delete_ComplexType_links
+title: ComplexTypeと他オブジェクトとのリンク解除
+sidebar_label: ComplexTypeと他オブジェクトとのリンク解除
+---
 ## 概要
 ComplexType の$link情報を削除する  
 

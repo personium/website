@@ -1,4 +1,8 @@
-# Retrieve schema ($ metadata)
+---
+id: 316_User_Defined_Data_Schema
+title: Retrieve schema ($ metadata)
+sidebar_label: Retrieve schema ($ metadata)
+---
 
 ## Overview
 

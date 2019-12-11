@@ -1,4 +1,8 @@
-# Common Limitations on HTTP Implementation of Personium
+---
+id: 003_Common_Limitations_on_HTTP_Implementation
+title: Common Limitations on HTTP Implementation of Personium
+sidebar_label: Common Limitations on HTTP Implementation of Personium
+---
 
 
 ## Request

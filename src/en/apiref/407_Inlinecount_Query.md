@@ -1,4 +1,8 @@
-# $inlinecount  Query
+---
+id: 407_Inlinecount_Query
+title: $inlinecount  Query
+sidebar_label: $inlinecount  Query
+---
 
 ## Overview
 

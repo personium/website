@@ -1,4 +1,8 @@
-# ファイル取得
+---
+id: 311_Get_WebDav
+title: ファイル取得
+sidebar_label: ファイル取得
+---
 ## 概要
 特定のWebDav情報を取得する  
 If-None-Matchヘッダに指定されたETag値によって、返却される内容が異なる  

@@ -1,4 +1,8 @@
-# ExtRole部分更新
+---
+id: 2AF_Partial_Update_External_Role
+title: ExtRole部分更新
+sidebar_label: ExtRole部分更新
+---
 ## 概要
 ExtRoleを部分更新する
 ### 必要な権限

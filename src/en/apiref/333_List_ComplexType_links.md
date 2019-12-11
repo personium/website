@@ -1,4 +1,8 @@
-# Retrieve links list from ComplexType to other objects
+---
+id: 333_List_ComplexType_links
+title: Retrieve links list from ComplexType to other objects
+sidebar_label: Retrieve links list from ComplexType to other objects
+---
 
 ## Overview
 

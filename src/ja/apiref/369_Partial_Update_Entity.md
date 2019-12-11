@@ -1,4 +1,8 @@
-# Entity部分更新
+---
+id: 369_Partial_Update_Entity
+title: Entity部分更新
+sidebar_label: Entity部分更新
+---
 ## 概要
 ユーザデータのEntityを部分更新します
 ### 必要な権限

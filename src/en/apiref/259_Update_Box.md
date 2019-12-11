@@ -1,4 +1,8 @@
-# Update Box
+---
+id: 259_Update_Box
+title: Update Box
+sidebar_label: Update Box
+---
 
 ## Overview
 

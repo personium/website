@@ -1,4 +1,8 @@
-# ComplexTypeProperty登録
+---
+id: 336_Create_ComplexTypeProperty
+title: ComplexTypeProperty登録
+sidebar_label: ComplexTypeProperty登録
+---
 ## 概要
 ユーザデータに指定するComplexTypePropertyを定義する
 

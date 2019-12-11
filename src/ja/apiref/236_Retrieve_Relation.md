@@ -1,4 +1,8 @@
-# Relation取得
+---
+id: 236_Retrieve_Relation
+title: Relation取得
+sidebar_label: Relation取得
+---
 ## 概要
 既存のRelation情報を取得する
 ### 必要な権限

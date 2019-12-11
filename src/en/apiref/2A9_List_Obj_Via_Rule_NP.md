@@ -1,4 +1,8 @@
-# Retrieval of other objects list via Rule's Navigation Property
+---
+id: 2A9_List_Obj_Via_Rule_NP
+title: Retrieval of other objects list via Rule's Navigation Property
+sidebar_label: Retrieval of other objects list via Rule's Navigation Property
+---
 ## Overview
 Acquire cell control object via Navigation Property
 ### Required Permissions

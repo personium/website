@@ -1,4 +1,8 @@
-# Retrieve Relation
+---
+id: 236_Retrieve_Relation
+title: Retrieve Relation
+sidebar_label: Retrieve Relation
+---
 
 ## Overview
 

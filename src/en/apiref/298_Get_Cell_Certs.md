@@ -1,4 +1,8 @@
-# Retrieve Cell Publickkey info
+---
+id: 298_Get_Cell_Certs
+title: Retrieve Cell Publickkey info
+sidebar_label: Retrieve Cell Publickkey info
+---
 
 ## Overview
 

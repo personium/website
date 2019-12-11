@@ -1,4 +1,8 @@
-# Unitメタデータ取得
+---
+id: 107_Get_Unit_Metadata
+title: Unitメタデータ取得
+sidebar_label: Unitメタデータ取得
+---
 ## 概要
 Unitのメタデータを取得する。メタデータには、以下の情報が含まれる。  
 * UnitのURL

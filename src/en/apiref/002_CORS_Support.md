@@ -1,4 +1,8 @@
-# CORS (Cross Origin Resource Sharing) Support
+---
+id: 002_CORS_Support
+title: CORS (Cross Origin Resource Sharing) Support
+sidebar_label: CORS (Cross Origin Resource Sharing) Support
+---
 
 ## Overview
 

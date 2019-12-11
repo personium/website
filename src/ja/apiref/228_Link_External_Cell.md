@@ -1,4 +1,8 @@
-# Extcellと他オブジェクトとのリンク
+---
+id: 228_Link_External_Cell
+title: Extcellと他オブジェクトとのリンク
+sidebar_label: Extcellと他オブジェクトとのリンク
+---
 ## 概要
 ExtCellに$linksで指定したODataリソースを紐付ける  
 以下のODataリソースと紐付けることができる  

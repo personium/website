@@ -1,4 +1,8 @@
-# Rule削除
+---
+id: 2A4_Delete_Rule
+title: Rule削除
+sidebar_label: Rule削除
+---
 ## 概要
 登録されているRuleを削除する
 

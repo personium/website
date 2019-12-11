@@ -1,4 +1,8 @@
-# Box作成
+---
+id: 256_Create_Box
+title: Box作成
+sidebar_label: Box作成
+---
 ## 概要
 新規Boxを作成する
 

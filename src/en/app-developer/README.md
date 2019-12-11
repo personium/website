@@ -1,4 +1,8 @@
-# Application Developer's Guide
+---
+id: README
+title: Application Developer's Guide
+sidebar_label: Application Developer's Guide
+---
 
 It is a document for people who want to develop  PDS applications using Personium's API
 

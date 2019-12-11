@@ -1,4 +1,8 @@
-# プロパティ取得
+---
+id: 290_Cell_Get_Property
+title: プロパティ取得
+sidebar_label: プロパティ取得
+---
 ## 概要
 セルのプロパティを取得する
 

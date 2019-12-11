@@ -1,4 +1,8 @@
-# Cellメタデータ取得
+---
+id: 296_Get_Cell_Metadata
+title: Cellメタデータ取得
+sidebar_label: Cellメタデータ取得
+---
 ## 概要
 Cellのメタデータを取得する。メタデータには、以下の情報が含まれる。  
 * Cellの名前

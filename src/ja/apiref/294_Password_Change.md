@@ -1,4 +1,8 @@
-# パスワード変更(\__mypassword)
+---
+id: 294_Password_Change
+title: パスワード変更(\__mypassword)
+sidebar_label: パスワード変更(\__mypassword)
+---
 ## 概要
 Accountのパスワードに関する操作を行うAPI
 ### 自アカウントのパスワード変更

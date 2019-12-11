@@ -1,4 +1,8 @@
-# Rule更新
+---
+id: 2A3_Update_Rule
+title: Rule更新
+sidebar_label: Rule更新
+---
 ## 概要
 既存のRule情報を更新する
 

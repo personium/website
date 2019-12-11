@@ -1,4 +1,8 @@
-# Old Version API References
+---
+id: 990_Old_Version_API_Ref
+title: Old Version API References
+sidebar_label: Old Version API References
+---
 
 ### Ver. 1.7 series
 

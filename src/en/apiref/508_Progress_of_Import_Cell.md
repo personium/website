@@ -1,4 +1,8 @@
-# Retrieve cell import status
+---
+id: 508_Progress_of_Import_Cell
+title: Retrieve cell import status
+sidebar_label: Retrieve cell import status
+---
 
 ## Overview
 

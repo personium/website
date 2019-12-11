@@ -1,4 +1,8 @@
-# Ruleから紐づいたBoxとのリンクを解除
+---
+id: 2A7_Unlink_Rule
+title: Ruleから紐づいたBoxとのリンクを解除
+sidebar_label: Ruleから紐づいたBoxとのリンクを解除
+---
 ## 概要
 
 Ruleから紐づいたBoxとのリンクを解除する。

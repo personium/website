@@ -1,4 +1,8 @@
-# ExtRoleのNavigation Property経由での他オブジェクト登録
+---
+id: 254_Create_Obj_Via_External_Role_NP
+title: ExtRoleのNavigation Property経由での他オブジェクト登録
+sidebar_label: ExtRoleのNavigation Property経由での他オブジェクト登録
+---
 ## 概要
 Cell制御オブジェクトNavigation Property経由で登録し、同時に$linksを登録する。
 ### 必要な権限

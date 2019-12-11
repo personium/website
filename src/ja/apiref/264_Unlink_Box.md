@@ -1,4 +1,8 @@
-# Boxと他オブジェクトとのリンク解除
+---
+id: 264_Unlink_Box
+title: Boxと他オブジェクトとのリンク解除
+sidebar_label: Boxと他オブジェクトとのリンク解除
+---
 ## 概要
 Boxとの$links情報を削除する
 ### 必要な権限

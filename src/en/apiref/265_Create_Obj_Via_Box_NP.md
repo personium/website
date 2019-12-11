@@ -1,4 +1,8 @@
-# Create other objects via Box's Navigation Property
+---
+id: 265_Create_Obj_Via_Box_NP
+title: Create other objects via Box's Navigation Property
+sidebar_label: Create other objects via Box's Navigation Property
+---
 
 ## Overview
 

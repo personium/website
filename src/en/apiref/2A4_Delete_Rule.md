@@ -1,4 +1,8 @@
-# Delete Rule
+---
+id: 2A4_Delete_Rule
+title: Delete Rule
+sidebar_label: Delete Rule
+---
 ## Overview
 Delete registered Rule
 

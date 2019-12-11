@@ -1,4 +1,8 @@
-# Account更新
+---
+id: 215_Update_Account
+title: Account更新
+sidebar_label: Account更新
+---
 ## 概要
 既存のAccount情報を更新する
 

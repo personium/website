@@ -1,4 +1,8 @@
-# Relation登録
+---
+id: 234_Create_Relation
+title: Relation登録
+sidebar_label: Relation登録
+---
 ## 概要
 Relationを登録する
 

@@ -1,4 +1,8 @@
-# Retrieve Rule
+---
+id: 2A1_Retrieve_Rule
+title: Retrieve Rule
+sidebar_label: Retrieve Rule
+---
 ## Overview
 Acquire existing Rule information
 

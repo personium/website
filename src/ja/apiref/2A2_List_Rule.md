@@ -1,4 +1,8 @@
-# Rule一覧取得
+---
+id: 2A2_List_Rule
+title: Rule一覧取得
+sidebar_label: Rule一覧取得
+---
 ## 概要
 既存のRule情報の一覧を取得する
 

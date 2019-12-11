@@ -1,4 +1,8 @@
-# ExtRoleと他オブジェクトとのリンク解除
+---
+id: 253_Unlink_External_Role
+title: ExtRoleと他オブジェクトとのリンク解除
+sidebar_label: ExtRoleと他オブジェクトとのリンク解除
+---
 ## 概要
 ExtRoleに紐付いたRoleの$links情報を削除する  
 

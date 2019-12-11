@@ -1,4 +1,8 @@
-# Cell削除
+---
+id: 104_Delete_Cell
+title: Cell削除
+sidebar_label: Cell削除
+---
 ## 概要
 存在するCellを削除する  
 Cellに紐付くBox,Account,Role,ExtCell,ExtRole,Relationがある場合は409となり削除は行わない

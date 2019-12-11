@@ -1,4 +1,8 @@
-# $inlinecount クエリ
+---
+id: 407_Inlinecount_Query
+title: $inlinecount クエリ
+sidebar_label: $inlinecount クエリ
+---
 ## 概要
 一覧取得時に取得結果件数を指定する場合は$inlinecountクエリを使用する  
 省略した場合は、レスポンスに取得結果件数を含まない

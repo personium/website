@@ -1,4 +1,8 @@
-# Entity collective operation($batch)
+---
+id: 368_Entity_Bulk_Operations
+title: Entity collective operation($batch)
+sidebar_label: Entity collective operation($batch)
+---
 
 ## Overview
 

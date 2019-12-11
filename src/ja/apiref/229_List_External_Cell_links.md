@@ -1,4 +1,8 @@
-# ExtCellと他オブジェクトとのリンク一覧取得
+---
+id: 229_List_External_Cell_links
+title: ExtCellと他オブジェクトとのリンク一覧取得
+sidebar_label: ExtCellと他オブジェクトとのリンク一覧取得
+---
 ## 概要
 ExtCellに紐付いたODataリソースを一覧取得する  
 以下のODataリソースを指定することができる  

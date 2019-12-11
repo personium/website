@@ -1,4 +1,8 @@
-# Link other objects with ComplexType
+---
+id: 332_Register_ComplexType_links
+title: Link other objects with ComplexType
+sidebar_label: Link other objects with ComplexType
+---
 
 ## Overview
 

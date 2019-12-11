@@ -1,4 +1,8 @@
-# EntityのNavigation Property経由での他オブジェクト登録
+---
+id: 377_Create_Entity_Via_NP
+title: EntityのNavigation Property経由での他オブジェクト登録
+sidebar_label: EntityのNavigation Property経由での他オブジェクト登録
+---
 ## 概要
 ユーザデータのEntityをNavigation Property経由で作成します。
 ### 必要な権限

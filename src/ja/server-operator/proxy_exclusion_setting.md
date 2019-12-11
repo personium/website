@@ -1,4 +1,8 @@
-# プロキシ除外設定
+---
+id: proxy_exclusion_setting
+title: プロキシ除外設定
+sidebar_label: プロキシ除外設定
+---
 
 ## 設定手順
 

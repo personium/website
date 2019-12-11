@@ -1,4 +1,8 @@
-# Account削除
+---
+id: 216_Delete_Account
+title: Account削除
+sidebar_label: Account削除
+---
 ## 概要
 既存のAccount情報を削除する
 

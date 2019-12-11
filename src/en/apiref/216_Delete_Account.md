@@ -1,4 +1,8 @@
-# Delete Account
+---
+id: 216_Delete_Account
+title: Delete Account
+sidebar_label: Delete Account
+---
 
 ## Overview
 

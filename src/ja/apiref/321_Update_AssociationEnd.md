@@ -1,4 +1,8 @@
-# AssociationEnd更新
+---
+id: 321_Update_AssociationEnd
+title: AssociationEnd更新
+sidebar_label: AssociationEnd更新
+---
 ## 概要
 既存のAssociationEnd情報を更新する
 ### 必要な権限

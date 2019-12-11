@@ -1,4 +1,8 @@
-# Ruleと他オブジェクト（Box）とのリンク
+---
+id: 2A5_Link_Rule
+title: Ruleと他オブジェクト（Box）とのリンク
+sidebar_label: Ruleと他オブジェクト（Box）とのリンク
+---
 ## 概要
 Ruleに$linksで指定したODataリソースを紐付ける  
 以下のODataリソースと紐付けることができる  

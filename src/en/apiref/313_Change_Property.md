@@ -1,4 +1,8 @@
-# Change file setting
+---
+id: 313_Change_Property
+title: Change file setting
+sidebar_label: Change file setting
+---
 
 ## Overview
 

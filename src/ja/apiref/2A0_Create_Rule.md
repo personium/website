@@ -1,4 +1,8 @@
-# Rule作成
+---
+id: 2A0_Create_Rule
+title: Rule作成
+sidebar_label: Rule作成
+---
 ## 概要
 新規のイベント処理ルールを作成する。
 

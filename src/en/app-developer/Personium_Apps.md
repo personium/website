@@ -1,4 +1,8 @@
-# Personium App  
+---
+id: Personium_Apps
+title: Personium App  
+sidebar_label: Personium App  
+---
 ## Overview  
 Personium interface is basically REST API based and does not provide any GUI tools.  However, it is better to provide GUI tools to end-users.  
 

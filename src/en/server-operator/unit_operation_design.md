@@ -1,4 +1,8 @@
-# Operation design and setting of Unit
+---
+id: unit_operation_design
+title: Operation design and setting of Unit
+sidebar_label: Operation design and setting of Unit
+---
 When Personium Unit is introduced, it is necessary to do the operation design and to set it according to it.
 
 ## Personium and PKI

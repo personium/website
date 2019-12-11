@@ -1,4 +1,8 @@
-# Engine Extensionの実装及び配備仕様
+---
+id: EngineExtension_Imple_and_Deploy
+title: Engine Extensionの実装及び配備仕様
+sidebar_label: Engine Extensionの実装及び配備仕様
+---
 ## JavaScript内から、Extension経由で利用可能なクラスの仕様
 
 ### 注意事項

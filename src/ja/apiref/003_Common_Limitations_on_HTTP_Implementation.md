@@ -1,4 +1,8 @@
-# PersoniumのHTTP実装に関する制限事項
+---
+id: 003_Common_Limitations_on_HTTP_Implementation
+title: PersoniumのHTTP実装に関する制限事項
+sidebar_label: PersoniumのHTTP実装に関する制限事項
+---
 
 
 ## リクエスト

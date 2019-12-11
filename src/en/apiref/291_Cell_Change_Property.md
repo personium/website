@@ -1,4 +1,8 @@
-# Change Properties
+---
+id: 291_Cell_Change_Property
+title: Change Properties
+sidebar_label: Change Properties
+---
 
 ## Overview
 

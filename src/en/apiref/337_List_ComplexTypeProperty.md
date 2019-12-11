@@ -1,4 +1,8 @@
-# Retrieve List of ComplexTypeProperty
+---
+id: 337_List_ComplexTypeProperty
+title: Retrieve List of ComplexTypeProperty
+sidebar_label: Retrieve List of ComplexTypeProperty
+---
 
 ## Overview
 

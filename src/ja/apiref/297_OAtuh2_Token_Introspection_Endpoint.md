@@ -1,4 +1,8 @@
-# OAuth 2.0 Token Introspection Endpoint
+---
+id: 297_OAtuh2_Token_Introspection_Endpoint
+title: OAuth 2.0 Token Introspection Endpoint
+sidebar_label: OAuth 2.0 Token Introspection Endpoint
+---
 ## 概要
 トークンの内容を取得するAPIのエンドポイントです。 RFC7662を実装しています。
 

@@ -1,4 +1,8 @@
-# Update Entity
+---
+id: 367_Update_Entity
+title: Update Entity
+sidebar_label: Update Entity
+---
 
 ## Overview
 

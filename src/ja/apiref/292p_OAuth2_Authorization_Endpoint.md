@@ -1,4 +1,8 @@
-# OAuth2.0 認可エンドポイントにおける POST の受け入れ
+---
+id: 292p_OAuth2_Authorization_Endpoint
+title: OAuth2.0 認可エンドポイントにおける POST の受け入れ
+sidebar_label: OAuth2.0 認可エンドポイントにおける POST の受け入れ
+---
 
 ## 概要
 OAuth 2.0 認可エンドポイントでは、POSTメソッドを受け付けます。

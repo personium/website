@@ -1,4 +1,8 @@
-# ExtCell削除
+---
+id: 227_Delete_External_Cell
+title: ExtCell削除
+sidebar_label: ExtCell削除
+---
 ## 概要
 既存のExtCell情報を削除する
 

@@ -1,4 +1,8 @@
-# Accountと他オブジェクトとのリンク
+---
+id: 217_Link_Account
+title: Accountと他オブジェクトとのリンク
+sidebar_label: Accountと他オブジェクトとのリンク
+---
 ## 概要
 Accountに$linksで指定したODataリソースを紐付ける  
 以下のODataリソースと紐付けることができる

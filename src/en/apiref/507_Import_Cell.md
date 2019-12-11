@@ -1,4 +1,8 @@
-# Import Cell
+---
+id: 507_Import_Cell
+title: Import Cell
+sidebar_label: Import Cell
+---
 
 ## Overview
 

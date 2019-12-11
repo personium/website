@@ -1,4 +1,8 @@
-# Client registration & authentication
+---
+id: 004_Client_auth
+title: Client registration & authentication
+sidebar_label: Client registration & authentication
+---
 To register client, following steps are required.
 
 ### 1. Create a cell used for client registration & authentication (application cell)

@@ -1,4 +1,8 @@
-# Retrieve other objects list via Entity's Navigation Property
+---
+id: 378_List_Entity_Via_NP
+title: Retrieve other objects list via Entity's Navigation Property
+sidebar_label: Retrieve other objects list via Entity's Navigation Property
+---
 
 ## Overview
 

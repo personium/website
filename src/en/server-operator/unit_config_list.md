@@ -1,4 +1,8 @@
-# Unit configurations
+---
+id: unit_config_list
+title: Unit configurations
+sidebar_label: Unit configurations
+---
 The unit configuration file is a java property file named "personium-unit-config.properties" which manages the setting of Personium unit.  
 To configure a Personium unit, just place this file at a specified location and start the servlet container.  
 

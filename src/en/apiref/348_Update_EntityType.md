@@ -1,4 +1,8 @@
-# Update EntityType
+---
+id: 348_Update_EntityType
+title: Update EntityType
+sidebar_label: Update EntityType
+---
 
 ## Overview
 

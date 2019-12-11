@@ -1,4 +1,8 @@
-# Cell GUI developer's Guide
+---
+id: README
+title: Cell GUI developer's Guide
+sidebar_label: Cell GUI developer's Guide
+---
 
 Documents for people who want to develop GUI that manages Personium's Cell
 

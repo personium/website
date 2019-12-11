@@ -1,4 +1,8 @@
-# ExtRole一覧取得
+---
+id: 246_List_External_Role
+title: ExtRole一覧取得
+sidebar_label: ExtRole一覧取得
+---
 ## 概要
 既存のExtRole情報の一覧を取得する
 ### 必要な権限

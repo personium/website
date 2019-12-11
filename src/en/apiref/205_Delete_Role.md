@@ -1,4 +1,8 @@
-# Delete Role
+---
+id: 205_Delete_Role
+title: Delete Role
+sidebar_label: Delete Role
+---
 
 ## Overview
 

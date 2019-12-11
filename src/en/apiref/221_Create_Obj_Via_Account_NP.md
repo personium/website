@@ -1,4 +1,8 @@
-# Create other objects via Account's Navigation Property
+---
+id: 221_Create_Obj_Via_Account_NP
+title: Create other objects via Account's Navigation Property
+sidebar_label: Create other objects via Account's Navigation Property
+---
 
 ## Overview
 

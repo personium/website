@@ -1,4 +1,8 @@
-# Rule内部情報一覧取得
+---
+id: 2AA_List_Internal_Rule
+title: Rule内部情報一覧取得
+sidebar_label: Rule内部情報一覧取得
+---
 ## 概要
 システム内部のRule情報の一覧を取得する
 

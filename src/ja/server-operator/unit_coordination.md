@@ -1,4 +1,8 @@
-# Unit間連携の設定方法
+---
+id: unit_coordination
+title: Unit間連携の設定方法
+sidebar_label: Unit間連携の設定方法
+---
 
 ## 概要
 

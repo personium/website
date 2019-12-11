@@ -1,4 +1,8 @@
-# $expand クエリ
+---
+id: 405_Expand_Query
+title: $expand クエリ
+sidebar_label: $expand クエリ
+---
 ## 概要
 $expandクエリにNavigationProperty名を指定することで、関連情報を展開して取得することが可能。  
 一覧取得時の関連情報の展開は最大100件まで展開する。  

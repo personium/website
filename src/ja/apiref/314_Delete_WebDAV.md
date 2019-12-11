@@ -1,4 +1,8 @@
-# ファイル削除
+---
+id: 314_Delete_WebDAV
+title: ファイル削除
+sidebar_label: ファイル削除
+---
 ## 概要
 存在するWebDav情報を削除する
 

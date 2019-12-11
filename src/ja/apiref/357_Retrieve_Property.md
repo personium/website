@@ -1,4 +1,8 @@
-# Property取得
+---
+id: 357_Retrieve_Property
+title: Property取得
+sidebar_label: Property取得
+---
 ## 概要
 既存のProperty情報を取得する
 ### 必要な権限

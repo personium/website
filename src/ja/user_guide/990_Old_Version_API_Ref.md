@@ -1,4 +1,8 @@
-# 古いバージョンのAPIリファレンス
+---
+id: 990_Old_Version_API_Ref
+title: 古いバージョンのAPIリファレンス
+sidebar_label: 古いバージョンのAPIリファレンス
+---
 
 ### Ver. 1.7系
 

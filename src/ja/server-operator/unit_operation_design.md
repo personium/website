@@ -1,4 +1,8 @@
-# Unitの運用設計と設定
+---
+id: unit_operation_design
+title: Unitの運用設計と設定
+sidebar_label: Unitの運用設計と設定
+---
 Personium Unitの導入にあたっては、運用設計を行いそれに応じた設定をすることが必要です。
 <br>
 ## PersoniumとPKI

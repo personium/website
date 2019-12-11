@@ -1,4 +1,8 @@
-# Box Level アクセス制御設定
+---
+id: 315_Configure_Access_Control
+title: Box Level アクセス制御設定
+sidebar_label: Box Level アクセス制御設定
+---
 ## 概要
 Box Level のアクセス制御機能を提供する
 

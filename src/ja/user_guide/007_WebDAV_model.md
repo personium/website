@@ -1,4 +1,8 @@
-# WebDAV モデル
+---
+id: 007_WebDAV_model
+title: WebDAV モデル
+sidebar_label: WebDAV モデル
+---
 
 ### WebDAVとは
 * WebDAVは、Webサーバに対して直接ファイルのコピーや削除を行ったり、ファイル所有者や更新日時などのファイル情報を  

@@ -1,4 +1,8 @@
-# Full-text Search (q) Query
+---
+id: 408_Full_Text_Search_Query
+title: Full-text Search (q) Query
+sidebar_label: Full-text Search (q) Query
+---
 
 ## Overview
 

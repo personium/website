@@ -1,4 +1,8 @@
-# Cell作成
+---
+id: 100_Create_Cell
+title: Cell作成
+sidebar_label: Cell作成
+---
 ## 概要
 新規Cellを作成する
 ### 必要な権限

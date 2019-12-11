@@ -1,4 +1,8 @@
-# Delete file
+---
+id: 314_Delete_WebDAV
+title: Delete file
+sidebar_label: Delete file
+---
 
 ## Overview
 

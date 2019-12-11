@@ -1,4 +1,8 @@
-# Unlink Account with other objects
+---
+id: 220_Unlink_Account
+title: Unlink Account with other objects
+sidebar_label: Unlink Account with other objects
+---
 
 ## Overview
 

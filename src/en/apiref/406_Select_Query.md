@@ -1,4 +1,8 @@
-# $select  Query
+---
+id: 406_Select_Query
+title: $select  Query
+sidebar_label: $select  Query
+---
 
 ## Overview
 

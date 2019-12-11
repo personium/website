@@ -1,4 +1,8 @@
-# Cellルート取得
+---
+id: 200_Cell_Root
+title: Cellルート取得
+sidebar_label: Cellルート取得
+---
 ## 概要
 Cellルートとして設定されているHTMLファイルを取得する。
 

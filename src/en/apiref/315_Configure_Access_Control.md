@@ -1,4 +1,8 @@
-# Box Level Access Control Configuration
+---
+id: 315_Configure_Access_Control
+title: Box Level Access Control Configuration
+sidebar_label: Box Level Access Control Configuration
+---
 
 ## Overview
 

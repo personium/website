@@ -1,4 +1,8 @@
-# Box削除
+---
+id: 260_Delete_Box
+title: Box削除
+sidebar_label: Box削除
+---
 ## 概要
 存在するBoxを削除する
 ### 必要な権限

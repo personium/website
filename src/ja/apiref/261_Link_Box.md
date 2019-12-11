@@ -1,4 +1,8 @@
-# Boxと他オブジェクトとのリンク
+---
+id: 261_Link_Box
+title: Boxと他オブジェクトとのリンク
+sidebar_label: Boxと他オブジェクトとのリンク
+---
 ## 概要
 Boxに$linksで指定したODataリソースを紐付ける  
 以下のODataリソースと紐付けることができる  

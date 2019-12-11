@@ -1,4 +1,8 @@
-# Unlink Extcell with other objects
+---
+id: 231_Unlink_External_Cell
+title: Unlink Extcell with other objects
+sidebar_label: Unlink Extcell with other objects
+---
 
 ## Overview
 

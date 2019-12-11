@@ -1,4 +1,8 @@
-# Account partial update
+---
+id: 2AC_Partial_Update_Account
+title: Account partial update
+sidebar_label: Account partial update
+---
 
 ## Overview
 

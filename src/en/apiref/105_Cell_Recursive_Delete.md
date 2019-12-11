@@ -1,4 +1,8 @@
-# Cell Recursive Delete
+---
+id: 105_Cell_Recursive_Delete
+title: Cell Recursive Delete
+sidebar_label: Cell Recursive Delete
+---
 
 ## Overview
 

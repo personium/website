@@ -1,4 +1,8 @@
-# Entityと他オブジェクトとのリンク
+---
+id: 373_Link_User_Data
+title: Entityと他オブジェクトとのリンク
+sidebar_label: Entityと他オブジェクトとのリンク
+---
 ## 概要
 ユーザデータのEntityに$linksで指定したODataリソースを紐付ける  
 以下のODataリソースと紐付けることができる  

@@ -1,4 +1,8 @@
-# Unlink Box with other objects
+---
+id: 264_Unlink_Box
+title: Unlink Box with other objects
+sidebar_label: Unlink Box with other objects
+---
 
 ## Overview
 

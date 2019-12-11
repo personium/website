@@ -1,4 +1,8 @@
-# Boxエクスポート
+---
+id: 385_Box_Export
+title: Boxエクスポート
+sidebar_label: Boxエクスポート
+---
 ## 概要
 指定されたBoxをbarファイル形式でエクスポートする。barファイルフォーマットについては 「[barファイル](301_Bar_File.md)」を参照。  
 

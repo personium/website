@@ -1,4 +1,8 @@
-# アクセス制御モデル
+---
+id: 006_Access_Control
+title: アクセス制御モデル
+sidebar_label: アクセス制御モデル
+---
 
 ## ACL
 ACLによるアクセス主体へアクセス制御は、[WebDAV ACL](https://www.ietf.org/rfc/rfc3744)をロールベースアクセスコントロールに応用したもので行なっている。  

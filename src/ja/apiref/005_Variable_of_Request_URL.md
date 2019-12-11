@@ -1,4 +1,8 @@
-# リクエストURLの変数一覧
+---
+id: 005_Variable_of_Request_URL
+title: リクエストURLの変数一覧
+sidebar_label: リクエストURLの変数一覧
+---
 ## 概要
 APIリファレンスのリクエストURLで使われている変数についての説明
 

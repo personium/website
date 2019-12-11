@@ -1,4 +1,8 @@
-# Unlink Property with other objects
+---
+id: 363_Delete_Property_links
+title: Unlink Property with other objects
+sidebar_label: Unlink Property with other objects
+---
 
 ## Overview
 

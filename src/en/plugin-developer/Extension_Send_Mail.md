@@ -1,4 +1,8 @@
-# Extension: Email sending function
+---
+id: Extension_Send_Mail
+title: Extension: Email sending function
+sidebar_label: Extension: Email sending function
+---
 ## Mail transmission function specification
 
 Mail is sent from within UserScript via the mail server in Personium. For UserScript, it is exposed as MailSender class of _p.extension scope.

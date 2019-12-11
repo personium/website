@@ -1,4 +1,8 @@
-# ComplexTypeProperty削除
+---
+id: 340_Delete_ComplexTypeProperty
+title: ComplexTypeProperty削除
+sidebar_label: ComplexTypeProperty削除
+---
 ## 概要
 既存のComplexTypeProperty情報を削除する
 ### 必要な権限

@@ -1,4 +1,8 @@
-# ULUUT昇格設定
+---
+id: 106_UUT_Elevation_Setting
+title: ULUUT昇格設定
+sidebar_label: ULUUT昇格設定
+---
 ## 概要
 UUT（Unit User Token）昇格設定を変更する
 

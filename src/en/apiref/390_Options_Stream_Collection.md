@@ -1,4 +1,8 @@
-# Get operational method of Stream collection
+---
+id: 390_Options_Stream_Collection
+title: Get operational method of Stream collection
+sidebar_label: Get operational method of Stream collection
+---
 
 ## Overview
 Return the methods that can be operated on Stream collection according to the token's authority.

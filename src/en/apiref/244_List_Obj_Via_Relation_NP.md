@@ -1,4 +1,8 @@
-# Retrieve other objects list via Relation's Navigation Property
+---
+id: 244_List_Obj_Via_Relation_NP
+title: Retrieve other objects list via Relation's Navigation Property
+sidebar_label: Retrieve other objects list via Relation's Navigation Property
+---
 
 ## Overview
 

@@ -1,4 +1,8 @@
-# Create service collection source
+---
+id: 381_Create_Service_Collection_Source
+title: Create service collection source
+sidebar_label: Create service collection source
+---
 
 ## Overview
 

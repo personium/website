@@ -1,4 +1,8 @@
-# Create ExtCell
+---
+id: 223_Create_External_Cell
+title: Create ExtCell
+sidebar_label: Create ExtCell
+---
 
 ## Overview
 

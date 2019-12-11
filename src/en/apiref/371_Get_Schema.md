@@ -1,4 +1,8 @@
-# Schema acquisition ($metadata)
+---
+id: 371_Get_Schema
+title: Schema acquisition ($metadata)
+sidebar_label: Schema acquisition ($metadata)
+---
 
 ## Overview
 

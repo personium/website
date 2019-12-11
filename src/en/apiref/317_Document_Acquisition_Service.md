@@ -1,4 +1,8 @@
-# Retrieve service document
+---
+id: 317_Document_Acquisition_Service
+title: Retrieve service document
+sidebar_label: Retrieve service document
+---
 
 ## Overview
 

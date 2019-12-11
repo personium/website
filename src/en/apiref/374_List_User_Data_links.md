@@ -1,4 +1,8 @@
-# Retrieve links list from Entity to other objects
+---
+id: 374_List_User_Data_links
+title: Retrieve links list from Entity to other objects
+sidebar_label: Retrieve links list from Entity to other objects
+---
 
 ## Overview
 

@@ -1,4 +1,8 @@
-# Relation_$links更新
+---
+id: 241_Update_Relation_links
+title: Relation_$links更新
+sidebar_label: Relation_$links更新
+---
 ## 概要
 Relationに紐付いたODataリソースを更新する<br>以下のODataリソースを指定できる
 * Box

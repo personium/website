@@ -1,4 +1,8 @@
-# Change collection settings
+---
+id: 308_Change_Property
+title: Change collection settings
+sidebar_label: Change collection settings
+---
 
 ## Overview
 

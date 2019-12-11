@@ -1,4 +1,8 @@
-# Create Rule
+---
+id: 2A0_Create_Rule
+title: Create Rule
+sidebar_label: Create Rule
+---
 ## Overview
 Create a new event processing rule.
 

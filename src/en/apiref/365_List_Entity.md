@@ -1,4 +1,8 @@
-# Retrieve List of Entities
+---
+id: 365_List_Entity
+title: Retrieve List of Entities
+sidebar_label: Retrieve List of Entities
+---
 
 ## Overview
 

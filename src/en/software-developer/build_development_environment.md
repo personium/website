@@ -1,4 +1,8 @@
-# Build development environment
+---
+id: build_development_environment
+title: Build development environment
+sidebar_label: Build development environment
+---
 
 ## Target OS
 Windows

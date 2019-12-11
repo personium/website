@@ -1,4 +1,8 @@
-# サービス実行
+---
+id: 384_Service_Execution
+title: サービス実行
+sidebar_label: サービス実行
+---
 ## 概要
 登録されたサービスを実行する
 ### 必要な権限

@@ -1,4 +1,8 @@
-# サービスドキュメント取得
+---
+id: 317_Document_Acquisition_Service
+title: サービスドキュメント取得
+sidebar_label: サービスドキュメント取得
+---
 ## 概要
 ユーザデータのスキーマ定義を行うためのODataサービスのサービスドキュメントを取得する。
 

@@ -1,4 +1,8 @@
-# bar File
+---
+id: 301_Bar_File
+title: bar File
+sidebar_label: bar File
+---
 
 bar is the file format specified as the request body of the box installation API.  
 The bar file stores various data located in Odata/WebDAV/Service defined under the box and is archived in the ZIP format.  

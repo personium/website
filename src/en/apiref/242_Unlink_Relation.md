@@ -1,4 +1,8 @@
-# Unlink Relation with other objects
+---
+id: 242_Unlink_Relation
+title: Unlink Relation with other objects
+sidebar_label: Unlink Relation with other objects
+---
 
 ## Overview
 

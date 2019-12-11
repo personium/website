@@ -1,4 +1,8 @@
-# Create/Update Cell snapshot file 
+---
+id: 503_Register_and_Update_Snapshot_Cell
+title: Create/Update Cell snapshot file 
+sidebar_label: Create/Update Cell snapshot file 
+---
 
 ## Overview
 

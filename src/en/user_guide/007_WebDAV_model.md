@@ -1,4 +1,8 @@
-# WebDAV Model
+---
+id: 007_WebDAV_model
+title: WebDAV Model
+sidebar_label: WebDAV Model
+---
 
 ### What is WebDAV
 * Web Distributed Authoring and Versioning (WebDAV) is an extension to HTTP 1.1 that allows you to edit and manage files on remote Web servers. WebDAV supports the following features:

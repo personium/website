@@ -1,4 +1,8 @@
-# サービスコレクションソース削除
+---
+id: 383_Delete_Service_Collection_Source
+title: サービスコレクションソース削除
+sidebar_label: サービスコレクションソース削除
+---
 ## 概要
 サービスソース情報を削除する
 ### 必要な権限

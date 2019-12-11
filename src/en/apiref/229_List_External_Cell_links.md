@@ -1,4 +1,8 @@
-# Retrieve links list from ExtCell to other objects
+---
+id: 229_List_External_Cell_links
+title: Retrieve links list from ExtCell to other objects
+sidebar_label: Retrieve links list from ExtCell to other objects
+---
 
 ## Overview
 

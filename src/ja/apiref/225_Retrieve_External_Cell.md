@@ -1,4 +1,8 @@
-# ExtCell取得
+---
+id: 225_Retrieve_External_Cell
+title: ExtCell取得
+sidebar_label: ExtCell取得
+---
 ## 概要
 既存のExtCell情報を取得する
 

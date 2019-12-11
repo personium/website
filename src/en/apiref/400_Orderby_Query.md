@@ -1,4 +1,8 @@
-# $orderby Query
+---
+id: 400_Orderby_Query
+title: $orderby Query
+sidebar_label: $orderby Query
+---
 
 ## Overview
 

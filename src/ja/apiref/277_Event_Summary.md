@@ -1,4 +1,8 @@
-# イベントの概要
+---
+id: 277_Event_Summary
+title: イベントの概要
+sidebar_label: イベントの概要
+---
 ## イベントモデル
 [イベント受付API](278_Event_Reception.md)にて定義された外部イベント、およびPersonium内部で定義された内部イベントから構成されます。
 

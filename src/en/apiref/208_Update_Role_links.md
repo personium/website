@@ -1,4 +1,8 @@
-# Role\_$links update
+---
+id: 208_Update_Role_links
+title: Role\_$links update
+sidebar_label: Role\_$links update
+---
 
 ## Overview
 

@@ -1,4 +1,8 @@
-# Stream Collection送信
+---
+id: 387_Stream_Collection_Send
+title: Stream Collection送信
+sidebar_label: Stream Collection送信
+---
 ## 概要
 Stream Collectionのqueueやtopicにデータを送信する
 

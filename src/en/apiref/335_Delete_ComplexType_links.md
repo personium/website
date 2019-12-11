@@ -1,4 +1,8 @@
-# Unlink ComplexType with other objects
+---
+id: 335_Delete_ComplexType_links
+title: Unlink ComplexType with other objects
+sidebar_label: Unlink ComplexType with other objects
+---
 
 ## Overview
 

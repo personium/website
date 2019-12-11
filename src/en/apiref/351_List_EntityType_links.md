@@ -1,4 +1,8 @@
-# Retrieve links list from EntityType to other objects
+---
+id: 351_List_EntityType_links
+title: Retrieve links list from EntityType to other objects
+sidebar_label: Retrieve links list from EntityType to other objects
+---
 
 ## Overview
 

@@ -1,4 +1,8 @@
-# ComplexTypeProperty更新
+---
+id: 339_Update_ComplexTypeProperty
+title: ComplexTypeProperty更新
+sidebar_label: ComplexTypeProperty更新
+---
 ## 概要
 既存のComplexTypeProperty情報を更新する
 

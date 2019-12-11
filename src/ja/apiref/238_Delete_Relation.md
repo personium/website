@@ -1,4 +1,8 @@
-# Relation削除
+---
+id: 238_Delete_Relation
+title: Relation削除
+sidebar_label: Relation削除
+---
 ## 概要
 既存のRelation情報を削除する
 ### 必要な権限

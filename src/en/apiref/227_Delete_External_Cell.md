@@ -1,4 +1,8 @@
-# Delete ExtCell
+---
+id: 227_Delete_External_Cell
+title: Delete ExtCell
+sidebar_label: Delete ExtCell
+---
 
 ## Overview
 

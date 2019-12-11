@@ -1,4 +1,8 @@
-# Entity一覧取得
+---
+id: 365_List_Entity
+title: Entity一覧取得
+sidebar_label: Entity一覧取得
+---
 ## 概要
 OData サービスコレクション内に定義された特定のEntityセットからEntity一覧を取得します。
 

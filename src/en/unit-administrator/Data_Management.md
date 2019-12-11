@@ -1,4 +1,8 @@
-# Data management
+---
+id: Data_Management
+title: Data management
+sidebar_label: Data management
+---
 ### Two types of data management
 Personium manages user's data with Elasticsearch and file system.<br>Data on Elasticsearch is OData interface, data on file system follows WebDAV interface.
 

@@ -1,4 +1,8 @@
-# ExtRoleのNavigation Property経由での他オブジェクト一覧取得
+---
+id: 255_List_Obj_Via_External_Role_NP
+title: ExtRoleのNavigation Property経由での他オブジェクト一覧取得
+sidebar_label: ExtRoleのNavigation Property経由での他オブジェクト一覧取得
+---
 ## 概要
 セル制御オブジェクトをNavigation Property経由で取得する
 ### 必要な権限

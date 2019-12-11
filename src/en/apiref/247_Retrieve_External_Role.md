@@ -1,4 +1,8 @@
-# Retrieve ExtRole
+---
+id: 247_Retrieve_External_Role
+title: Retrieve ExtRole
+sidebar_label: Retrieve ExtRole
+---
 
 ## Overview
 

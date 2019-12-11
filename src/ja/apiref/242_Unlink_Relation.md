@@ -1,4 +1,8 @@
-# Relationと他オブジェクトとのリンク解除
+---
+id: 242_Unlink_Relation
+title: Relationと他オブジェクトとのリンク解除
+sidebar_label: Relationと他オブジェクトとのリンク解除
+---
 ## 概要
 Relationとの$links情報を削除する  
 以下のODataリソースを指定できる  

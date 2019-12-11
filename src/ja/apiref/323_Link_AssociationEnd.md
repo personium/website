@@ -1,4 +1,8 @@
-# AssociationEndと他オブジェクトとのリンク
+---
+id: 323_Link_AssociationEnd
+title: AssociationEndと他オブジェクトとのリンク
+sidebar_label: AssociationEndと他オブジェクトとのリンク
+---
 ## 概要
 ユーザデータスキーマのAssociationEndのリンク情報を登録する  
 

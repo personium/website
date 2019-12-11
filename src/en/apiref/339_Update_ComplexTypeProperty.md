@@ -1,4 +1,8 @@
-# Update ComplexTypeProperty
+---
+id: 339_Update_ComplexTypeProperty
+title: Update ComplexTypeProperty
+sidebar_label: Update ComplexTypeProperty
+---
 
 ## Overview
 

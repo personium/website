@@ -1,4 +1,8 @@
-# Engine Extension implementation and deployment specification
+---
+id: EngineExtension_Imple_and_Deploy
+title: Engine Extension implementation and deployment specification
+sidebar_label: Engine Extension implementation and deployment specification
+---
 ## Specifications of classes available from JavaScript via Extension
 
 ### Notes

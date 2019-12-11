@@ -1,4 +1,8 @@
-# Propertyと他オブジェクトとのリンク解除
+---
+id: 363_Delete_Property_links
+title: Propertyと他オブジェクトとのリンク解除
+sidebar_label: Propertyと他オブジェクトとのリンク解除
+---
 ## 概要
  $ linkのPropertyを削除する
 ### 必要な権限

@@ -1,4 +1,8 @@
-# $skip Query
+---
+id: 402_Skip_Query
+title: $skip Query
+sidebar_label: $skip Query
+---
 
 ## Overview
 

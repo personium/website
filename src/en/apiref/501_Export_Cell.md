@@ -1,4 +1,8 @@
-# Export Cell
+---
+id: 501_Export_Cell
+title: Export Cell
+sidebar_label: Export Cell
+---
 
 ## Overview
 

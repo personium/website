@@ -1,4 +1,8 @@
-# BoxのNavigation Property経由での他オブジェクト登録
+---
+id: 265_Create_Obj_Via_Box_NP
+title: BoxのNavigation Property経由での他オブジェクト登録
+sidebar_label: BoxのNavigation Property経由での他オブジェクト登録
+---
 ## 概要
 以下のCell制御オブジェクトをBoxのNavigation Property経由で登録する
 * Role

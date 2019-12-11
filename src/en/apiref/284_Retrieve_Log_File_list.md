@@ -1,4 +1,8 @@
-# Retrieve List of Log File
+---
+id: 284_Retrieve_Log_File_list
+title: Retrieve List of Log File
+sidebar_label: Retrieve List of Log File
+---
 
 ## Overview
 

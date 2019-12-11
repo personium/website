@@ -1,4 +1,8 @@
-# EntityTypeと他オブジェクトとのリンク解除
+---
+id: 353_Delete_EntityType_links
+title: EntityTypeと他オブジェクトとのリンク解除
+sidebar_label: EntityTypeと他オブジェクトとのリンク解除
+---
 ## 概要
 Entity Typeの$link情報を削除する
 ### 必要な権限

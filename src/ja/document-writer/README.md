@@ -1,4 +1,8 @@
-# Personium ドキュメント整備・改善への参加方法  
+---
+id: README
+title: Personium ドキュメント整備・改善への参加方法  
+sidebar_label: Personium ドキュメント整備・改善への参加方法  
+---
 オープンソースプロジェクトPersoniumでは、コードだけでなくドキュメント貢献も大歓迎です。  
 ドキュメントの改善にご協力いただける方は、以下の手順に従いドキュメントの追加および改変を実施しGitHub上でのPull Requestをお願い致します。  
 

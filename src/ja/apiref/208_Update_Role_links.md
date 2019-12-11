@@ -1,4 +1,8 @@
-# Role_$links更新
+---
+id: 208_Update_Role_links
+title: Role_$links更新
+sidebar_label: Role_$links更新
+---
 ## 概要
 Roleの$link情報を更新する
 

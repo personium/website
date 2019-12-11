@@ -1,4 +1,8 @@
-# Server Plugin Developer's Guide  
+---
+id: README
+title: Server Plugin Developer's Guide  
+sidebar_label: Server Plugin Developer's Guide  
+---
 
 A document for people who want to develop and use plugins to extend Personium's server function.
 Currently two types of extension mechanisms are available.

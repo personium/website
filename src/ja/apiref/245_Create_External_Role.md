@@ -1,4 +1,8 @@
-# ExtRole登録
+---
+id: 245_Create_External_Role
+title: ExtRole登録
+sidebar_label: ExtRole登録
+---
 ## 概要
 ExtRoleを登録する
 ### 必要な権限

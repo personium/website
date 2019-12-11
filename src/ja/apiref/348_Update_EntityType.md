@@ -1,4 +1,8 @@
-# EntityType更新
+---
+id: 348_Update_EntityType
+title: EntityType更新
+sidebar_label: EntityType更新
+---
 ## 概要
 既存のEntityType情報を更新する
 

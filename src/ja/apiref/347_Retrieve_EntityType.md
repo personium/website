@@ -1,4 +1,8 @@
-# EntityType取得
+---
+id: 347_Retrieve_EntityType
+title: EntityType取得
+sidebar_label: EntityType取得
+---
 ## 概要
 既存のEntityType情報を取得する
 

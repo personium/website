@@ -1,4 +1,8 @@
-# Create other objects via Role's Navigation Property
+---
+id: 210_Create_Obj_Via_Role_NP
+title: Create other objects via Role's Navigation Property
+sidebar_label: Create other objects via Role's Navigation Property
+---
 
 ## Overview
 

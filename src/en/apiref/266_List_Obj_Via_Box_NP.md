@@ -1,4 +1,8 @@
-# Retrieve other objects list via Box's Navigation Property
+---
+id: 266_List_Obj_Via_Box_NP
+title: Retrieve other objects list via Box's Navigation Property
+sidebar_label: Retrieve other objects list via Box's Navigation Property
+---
 
 ## Overview
 

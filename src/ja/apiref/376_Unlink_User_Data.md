@@ -1,4 +1,8 @@
-# Entityと他オブジェクトとのリンク解除
+---
+id: 376_Unlink_User_Data
+title: Entityと他オブジェクトとのリンク解除
+sidebar_label: Entityと他オブジェクトとのリンク解除
+---
 ## 概要
 ユーザデータのEntityとの$links情報を削除する
 ### 制限事項

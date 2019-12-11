@@ -1,4 +1,8 @@
-# Create Account
+---
+id: 212_Create_Account
+title: Create Account
+sidebar_label: Create Account
+---
 
 ## Overview
 

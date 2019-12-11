@@ -1,4 +1,8 @@
-# Access control model
+---
+id: 006_Access_Control
+title: Access control model
+sidebar_label: Access control model
+---
 
 ## ACL
 The access control to the access subject by the ACL is done by applying [WebDAV ACL](http://www.ietf.org/rfc/rfc3744) to role based access control.  

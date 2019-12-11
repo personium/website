@@ -1,4 +1,8 @@
-# EntityのNavigation Property経由での他オブジェクト一覧取得
+---
+id: 378_List_Entity_Via_NP
+title: EntityのNavigation Property経由での他オブジェクト一覧取得
+sidebar_label: EntityのNavigation Property経由での他オブジェクト一覧取得
+---
 ## 概要
 ユーザデータのEntity一覧をNavigation Property経由で取得します。
 ### 必要な権限

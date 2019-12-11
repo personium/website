@@ -1,4 +1,8 @@
-# Retrieve other objects list via ExtCell's Navigation Property
+---
+id: 233_List_Obj_Via_External_Cell_NP
+title: Retrieve other objects list via ExtCell's Navigation Property
+sidebar_label: Retrieve other objects list via ExtCell's Navigation Property
+---
 
 ## Overview
 

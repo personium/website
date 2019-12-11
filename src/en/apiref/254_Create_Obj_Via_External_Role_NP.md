@@ -1,4 +1,8 @@
-# Create other objects via ExtRole's Navigation Property
+---
+id: 254_Create_Obj_Via_External_Role_NP
+title: Create other objects via ExtRole's Navigation Property
+sidebar_label: Create other objects via ExtRole's Navigation Property
+---
 
 ## Overview
 

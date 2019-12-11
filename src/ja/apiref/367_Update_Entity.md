@@ -1,4 +1,8 @@
-# Entity更新
+---
+id: 367_Update_Entity
+title: Entity更新
+sidebar_label: Entity更新
+---
 ## 概要
 ユーザデータのEntityを更新します。
 ### 必要な権限

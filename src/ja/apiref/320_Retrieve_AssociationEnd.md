@@ -1,4 +1,8 @@
-# AssociationEnd取得
+---
+id: 320_Retrieve_AssociationEnd
+title: AssociationEnd取得
+sidebar_label: AssociationEnd取得
+---
 ## 概要
 既存のAssociationEnd情報を取得する
 

@@ -1,4 +1,8 @@
-# Delete EntityType
+---
+id: 349_Delete_EntityType
+title: Delete EntityType
+sidebar_label: Delete EntityType
+---
 
 ## Overview
 

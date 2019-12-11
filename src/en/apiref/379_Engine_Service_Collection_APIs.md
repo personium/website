@@ -1,4 +1,8 @@
-# What is Engine Service Collection
+---
+id: 379_Engine_Service_Collection_APIs
+title: What is Engine Service Collection
+sidebar_label: What is Engine Service Collection
+---
 
 You can register Personium application and server side logic created by Cell user and run it.
 

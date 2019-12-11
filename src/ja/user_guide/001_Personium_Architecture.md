@@ -1,4 +1,8 @@
-# Personiumのアーキテクチャ
+---
+id: 001_Personium_Architecture
+title: Personiumのアーキテクチャ
+sidebar_label: Personiumのアーキテクチャ
+---
 
 ## 基本となる3階層のオブジェクト
 Personiumはデータ主体中心のICT実現のため以下3階層の基本オブジェクトを定義しています。

@@ -1,4 +1,8 @@
-# Retrieve List of ExtRole
+---
+id: 246_List_External_Role
+title: Retrieve List of ExtRole
+sidebar_label: Retrieve List of ExtRole
+---
 
 ## Overview
 

@@ -1,4 +1,8 @@
-# OAuth 2.0 Authorization Endpoint
+---
+id: 292_OAuth2_Authorization_Endpoint
+title: OAuth 2.0 Authorization Endpoint
+sidebar_label: OAuth 2.0 Authorization Endpoint
+---
 
 ## Overview
 OAuth 2.0 Authorization Endpoint of a Cell. Usually it returns an HTML to render on Web Browsers, however depending on the state of Cookies and so on, it may directly redirect to the specified URL with grant code, access token or id token.

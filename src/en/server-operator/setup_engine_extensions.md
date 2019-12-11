@@ -1,4 +1,8 @@
-# Setup Engine Extensions
+---
+id: setup_engine_extensions
+title: Setup Engine Extensions
+sidebar_label: Setup Engine Extensions
+---
 Engine Extension is a mechanism for extending the function of Engine Library.  
 For details [Personium Engine](../app-developer/Personium-Engine.md) please.  
 

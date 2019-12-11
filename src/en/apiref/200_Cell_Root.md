@@ -1,4 +1,8 @@
-# Retrieve Cell Root
+---
+id: 200_Cell_Root
+title: Retrieve Cell Root
+sidebar_label: Retrieve Cell Root
+---
 
 ## Overview
 

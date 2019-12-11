@@ -1,4 +1,8 @@
-# Update Cell
+---
+id: 103_Update_Cell
+title: Update Cell
+sidebar_label: Update Cell
+---
 
 ## Overview
 

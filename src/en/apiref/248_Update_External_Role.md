@@ -1,4 +1,8 @@
-# Update ExtRole
+---
+id: 248_Update_External_Role
+title: Update ExtRole
+sidebar_label: Update ExtRole
+---
 
 ## Overview
 

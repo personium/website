@@ -1,4 +1,8 @@
-# ファイル登録更新
+---
+id: 312_Register_and_Update_WebDAV
+title: ファイル登録更新
+sidebar_label: ファイル登録更新
+---
 ## 概要
 WebDav情報を登録・更新する。
 ### 必要な権限

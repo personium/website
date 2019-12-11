@@ -1,4 +1,8 @@
-# ReceivedMessage取得
+---
+id: 269_Retrieve_Received_Message
+title: ReceivedMessage取得
+sidebar_label: ReceivedMessage取得
+---
 ## 概要
 受信メッセージ情報を取得する
 ### 必要な権限

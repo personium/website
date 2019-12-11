@@ -1,4 +1,8 @@
-# Link other objects with Extcel
+---
+id: 228_Link_External_Cell
+title: Link other objects with Extcel
+sidebar_label: Link other objects with Extcel
+---
 
 ## Overview
 

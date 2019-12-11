@@ -1,4 +1,8 @@
-# Retrieve List of ReceivedMessage
+---
+id: 268_List_Received_Messages
+title: Retrieve List of ReceivedMessage
+sidebar_label: Retrieve List of ReceivedMessage
+---
 
 ## Overview
 

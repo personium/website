@@ -1,4 +1,8 @@
-# RelationのNavigation Property経由での他オブジェクト登録
+---
+id: 243_Create_Obj_Via_Relation_NP
+title: RelationのNavigation Property経由での他オブジェクト登録
+sidebar_label: RelationのNavigation Property経由での他オブジェクト登録
+---
 ## 概要
 RelationのNavigation Property経由で他のCell制御オブジェクト登録する。
 

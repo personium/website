@@ -1,4 +1,8 @@
-# CORS(Cross Origin Resource Sharing)対応
+---
+id: 002_CORS_Support
+title: CORS(Cross Origin Resource Sharing)対応
+sidebar_label: CORS(Cross Origin Resource Sharing)対応
+---
 ## 概要
 PersoniumのすべてのAPIは、一部例外を除き原則CORS(Cross Origin Resource Sharing)での利用を想定しています。  
 具体的には特段例外としての記述が無い場合、全APIエンドポイントがリクエストに応じて以下のレスポンスヘッダを返却します。

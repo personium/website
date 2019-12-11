@@ -1,4 +1,8 @@
-# Retrieve BoxURL
+---
+id: 304_Get_Box_URL
+title: Retrieve BoxURL
+sidebar_label: Retrieve BoxURL
+---
 
 ## Overview
 

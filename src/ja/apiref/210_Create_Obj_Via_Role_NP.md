@@ -1,4 +1,8 @@
-# RoleのNavigation Property経由での他オブジェクト登録
+---
+id: 210_Create_Obj_Via_Role_NP
+title: RoleのNavigation Property経由での他オブジェクト登録
+sidebar_label: RoleのNavigation Property経由での他オブジェクト登録
+---
 ## 概要
 
 RoleのNavigation Property経由での他のCell制御オブジェクトを登録します。これにより最初からリンクされた形でオブジェクト登録が可能です。

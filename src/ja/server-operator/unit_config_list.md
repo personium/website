@@ -1,4 +1,8 @@
-# Unitの設定一覧
+---
+id: unit_config_list
+title: Unitの設定一覧
+sidebar_label: Unitの設定一覧
+---
 
 ユニット設定ファイルは、Personiumユニットの設定を行うための
 "personium-unit-config.properties" という名前のjavaプロパティファイルです。このファイルを所定の場所に配置しサーブレットコンテナを起動すると、ユニットはこのファイルで定義された項目はその設定値を使い、定義されていない項目についてはデフォルトの設定値を使って動作します。

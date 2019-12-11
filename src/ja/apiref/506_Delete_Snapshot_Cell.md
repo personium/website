@@ -1,4 +1,8 @@
-# Cellスナップショットファイル削除
+---
+id: 506_Delete_Snapshot_Cell
+title: Cellスナップショットファイル削除
+sidebar_label: Cellスナップショットファイル削除
+---
 ## 概要
 存在するCellスナップショットファイルを削除する
 

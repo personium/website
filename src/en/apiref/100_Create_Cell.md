@@ -1,4 +1,8 @@
-# Create Cell
+---
+id: 100_Create_Cell
+title: Create Cell
+sidebar_label: Create Cell
+---
 
 ## Overview
 

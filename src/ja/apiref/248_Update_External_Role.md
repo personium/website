@@ -1,4 +1,8 @@
-# ExtRole更新
+---
+id: 248_Update_External_Role
+title: ExtRole更新
+sidebar_label: ExtRole更新
+---
 ## 概要
 ExtRoleを更新する
 ### 必要な権限

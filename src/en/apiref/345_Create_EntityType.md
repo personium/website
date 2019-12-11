@@ -1,4 +1,8 @@
-# Create EntityType
+---
+id: 345_Create_EntityType
+title: Create EntityType
+sidebar_label: Create EntityType
+---
 
 ## Overview
 

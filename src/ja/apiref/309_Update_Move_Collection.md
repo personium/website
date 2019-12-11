@@ -1,4 +1,8 @@
-# コレクション移動名称変更
+---
+id: 309_Update_Move_Collection
+title: コレクション移動名称変更
+sidebar_label: コレクション移動名称変更
+---
 ## 概要
 WebDAVコレクションの名前の変更及びWebDAVファイルの移動/名前の変更。  
 ※ プロパティの変更は出来ない

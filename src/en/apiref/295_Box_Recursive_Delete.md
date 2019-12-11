@@ -1,4 +1,8 @@
-# Delete Recursive Box
+---
+id: 295_Box_Recursive_Delete
+title: Delete Recursive Box
+sidebar_label: Delete Recursive Box
+---
 
 ## Overview
 

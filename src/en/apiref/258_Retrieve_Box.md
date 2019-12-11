@@ -1,4 +1,8 @@
-# Retrieve Box
+---
+id: 258_Retrieve_Box
+title: Retrieve Box
+sidebar_label: Retrieve Box
+---
 
 ## Overview
 

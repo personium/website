@@ -1,4 +1,8 @@
-# Server Developer's Guide  
+---
+id: README
+title: Server Developer's Guide  
+sidebar_label: Server Developer's Guide  
+---
 
 It is a document for people who are interested in contributing to the development of the Personium's server program itself.
 

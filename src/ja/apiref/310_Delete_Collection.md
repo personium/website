@@ -1,4 +1,8 @@
-# コレクション削除
+---
+id: 310_Delete_Collection
+title: コレクション削除
+sidebar_label: コレクション削除
+---
 ## 概要
 コレクションを削除する
 

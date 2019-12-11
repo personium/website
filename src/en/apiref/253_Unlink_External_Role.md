@@ -1,4 +1,8 @@
-# Unlink ExtRole with other objects
+---
+id: 253_Unlink_External_Role
+title: Unlink ExtRole with other objects
+sidebar_label: Unlink ExtRole with other objects
+---
 
 ## Overview
 

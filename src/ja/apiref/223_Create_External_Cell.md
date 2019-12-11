@@ -1,4 +1,8 @@
-# ExtCell登録
+---
+id: 223_Create_External_Cell
+title: ExtCell登録
+sidebar_label: ExtCell登録
+---
 ## 概要
 新規ExtCellを作成する
 

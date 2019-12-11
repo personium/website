@@ -1,4 +1,8 @@
-# Delete Property
+---
+id: 359_Delete_Property
+title: Delete Property
+sidebar_label: Delete Property
+---
 
 ## Overview
 

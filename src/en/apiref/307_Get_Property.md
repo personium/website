@@ -1,4 +1,8 @@
-# Retrieve file setting
+---
+id: 307_Get_Property
+title: Retrieve file setting
+sidebar_label: Retrieve file setting
+---
 
 ## Overview
 

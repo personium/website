@@ -1,4 +1,8 @@
-# Variable list of request URL
+---
+id: 005_Variable_of_Request_URL
+title: Variable list of request URL
+sidebar_label: Variable list of request URL
+---
 ## Overview
 Descriptions of the variables used in the API reference request URL
 

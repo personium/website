@@ -1,4 +1,8 @@
-# Personium Architecture  
+---
+id: 001_Personium_Architecture
+title: Personium Architecture  
+sidebar_label: Personium Architecture  
+---
 
 ## Basic three-layered objects
 Personium defines the following three layered basic objects in order to achieve a new ICT model centered around data subjects.

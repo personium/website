@@ -1,4 +1,8 @@
-# Cellインポート状態取得
+---
+id: 508_Progress_of_Import_Cell
+title: Cellインポート状態取得
+sidebar_label: Cellインポート状態取得
+---
 ## 概要
 Cellインポートの状態を取得する。Cellインポート状態には、以下の情報が含まれる。
 * Cellインポートの状態

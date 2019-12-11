@@ -1,4 +1,8 @@
-# Box再帰削除
+---
+id: 295_Box_Recursive_Delete
+title: Box再帰削除
+sidebar_label: Box再帰削除
+---
 ## 概要
 * 指定されたBox、Box配下のデータ、Boxとリンクしているデータを全て削除する。
 * 削除対象のデータは下記

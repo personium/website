@@ -1,4 +1,8 @@
-# Retrieve of collection settings
+---
+id: 305_Get_Property
+title: Retrieve of collection settings
+sidebar_label: Retrieve of collection settings
+---
 
 ## Overview
 

@@ -1,4 +1,8 @@
-# Link other objects with AssociationEnd
+---
+id: 323_Link_AssociationEnd
+title: Link other objects with AssociationEnd
+sidebar_label: Link other objects with AssociationEnd
+---
 
 ## Overview
 

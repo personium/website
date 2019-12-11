@@ -1,4 +1,8 @@
-# Retrieve SentMessage
+---
+id: 272_Retrieve_Sent_Message
+title: Retrieve SentMessage
+sidebar_label: Retrieve SentMessage
+---
 
 ## Overview
 

@@ -1,4 +1,8 @@
-# Web Socket connection to Stream Collection
+---
+id: 389_Stream_Collection_Connect
+title: Web Socket connection to Stream Collection
+sidebar_label: Web Socket connection to Stream Collection
+---
 
 ## Overview
 You can receive the data sent to the topic of Stream Collection in real time.  

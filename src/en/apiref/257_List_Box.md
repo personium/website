@@ -1,4 +1,8 @@
-# Retrieve List of Box
+---
+id: 257_List_Box
+title: Retrieve List of Box
+sidebar_label: Retrieve List of Box
+---
 
 ## Overview
 

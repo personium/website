@@ -1,4 +1,8 @@
-# Property Update
+---
+id: 354_List_EntityType_Links_Navigation_Property
+title: Property Update
+sidebar_label: Property Update
+---
 
 ## Overview
 

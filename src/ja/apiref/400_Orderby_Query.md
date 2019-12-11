@@ -1,4 +1,8 @@
-# $orderby クエリ
+---
+id: 400_Orderby_Query
+title: $orderby クエリ
+sidebar_label: $orderby クエリ
+---
 ## 概要
 一覧取得時に検索結果を並べ替える場合は$orderbyクエリを使用する  
 ※$orderbyに存在しないプロパティ名を指定した場合は、指定された項目を無視する

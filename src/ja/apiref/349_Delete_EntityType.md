@@ -1,4 +1,8 @@
-# EntityType削除
+---
+id: 349_Delete_EntityType
+title: EntityType削除
+sidebar_label: EntityType削除
+---
 ## 概要
 既存のEntityType情報を削除する
 

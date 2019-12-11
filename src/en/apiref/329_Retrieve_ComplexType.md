@@ -1,4 +1,8 @@
-# Retrieve ComplexType
+---
+id: 329_Retrieve_ComplexType
+title: Retrieve ComplexType
+sidebar_label: Retrieve ComplexType
+---
 
 ## Overview
 

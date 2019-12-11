@@ -1,4 +1,8 @@
-# Role partial update
+---
+id: 2AB_Partial_Update_Role
+title: Role partial update
+sidebar_label: Role partial update
+---
 
 ## Overview
 

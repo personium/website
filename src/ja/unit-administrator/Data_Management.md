@@ -1,4 +1,8 @@
-# データの管理
+---
+id: Data_Management
+title: データの管理
+sidebar_label: データの管理
+---
 ### 2種類のデータ管理
 PersoniumではユーザのデータをElasticsearchとファイルシステムで管理している。<br>Elasticsearch上のデータはOData、ファイルシステム上のデータはWebDAVのインターフェースに従っている。
 

@@ -1,4 +1,8 @@
-# Update Extcell
+---
+id: 226_Update_External_Cell
+title: Update Extcell
+sidebar_label: Update Extcell
+---
 
 ## Overview
 

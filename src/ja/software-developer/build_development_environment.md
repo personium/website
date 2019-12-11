@@ -1,4 +1,8 @@
-# 開発用環境の構築手順
+---
+id: build_development_environment
+title: 開発用環境の構築手順
+sidebar_label: 開発用環境の構築手順
+---
 
 ## 対象OS
 Windows

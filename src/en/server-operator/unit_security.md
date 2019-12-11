@@ -1,4 +1,8 @@
-# Security of Unit (setting that recommends change from default)
+---
+id: unit_security
+title: Security of Unit (setting that recommends change from default)
+sidebar_label: Security of Unit (setting that recommends change from default)
+---
 
 ## Overview
 

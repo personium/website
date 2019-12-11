@@ -1,4 +1,8 @@
-# Role部分更新
+---
+id: 2AB_Partial_Update_Role
+title: Role部分更新
+sidebar_label: Role部分更新
+---
 ## 概要
 既存のRole情報を部分更新する
 ### 必要な権限

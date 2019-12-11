@@ -1,4 +1,8 @@
-# Retrieve Box Meta Data
+---
+id: 303_Progress_of_Bar_File_Installation
+title: Retrieve Box Meta Data
+sidebar_label: Retrieve Box Meta Data
+---
 
 ## Overview
 

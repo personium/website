@@ -1,4 +1,8 @@
-# Box部分更新
+---
+id: 2B0_Partial_Update_Box
+title: Box部分更新
+sidebar_label: Box部分更新
+---
 ## 概要
 既存のBox情報を部分更新する
 

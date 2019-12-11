@@ -1,4 +1,8 @@
-# Accountと他オブジェクトとのリンク解除
+---
+id: 220_Unlink_Account
+title: Accountと他オブジェクトとのリンク解除
+sidebar_label: Accountと他オブジェクトとのリンク解除
+---
 ## 概要
 Accountとの$links情報を削除する
 

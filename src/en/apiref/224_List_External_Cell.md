@@ -1,4 +1,8 @@
-# Retrieve List of ExtCell
+---
+id: 224_List_External_Cell
+title: Retrieve List of ExtCell
+sidebar_label: Retrieve List of ExtCell
+---
 
 ## Overview
 

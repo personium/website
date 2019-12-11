@@ -1,4 +1,8 @@
-# Entity取得
+---
+id: 366_Retrieve_Entity
+title: Entity取得
+sidebar_label: Entity取得
+---
 ## 概要
 ユーザデータのEntityを一件取得します。
 ### 必要な権限

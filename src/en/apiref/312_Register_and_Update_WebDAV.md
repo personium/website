@@ -1,4 +1,8 @@
-#  Create/Update file
+---
+id: 312_Register_and_Update_WebDAV
+title:  Create/Update file
+sidebar_label:  Create/Update file
+---
 
 ## Overview
 

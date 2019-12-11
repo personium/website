@@ -1,4 +1,8 @@
-# Create ExtRole
+---
+id: 245_Create_External_Role
+title: Create ExtRole
+sidebar_label: Create ExtRole
+---
 
 ## Overview
 

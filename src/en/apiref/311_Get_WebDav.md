@@ -1,4 +1,8 @@
-# Retrieve file
+---
+id: 311_Get_WebDav
+title: Retrieve file
+sidebar_label: Retrieve file
+---
 
 ## Overview
 

@@ -1,4 +1,8 @@
-# Retrieve other objects list via Account's Navigation Property
+---
+id: 222_List_Obj_Via_Account_NP
+title: Retrieve other objects list via Account's Navigation Property
+sidebar_label: Retrieve other objects list via Account's Navigation Property
+---
 
 ## Overview
 

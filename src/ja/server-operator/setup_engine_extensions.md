@@ -1,4 +1,8 @@
-# Engine Extensionのセットアップ
+---
+id: setup_engine_extensions
+title: Engine Extensionのセットアップ
+sidebar_label: Engine Extensionのセットアップ
+---
 Engine ExtensionはEngine Libraryの機能を拡張するための機構です。  
 詳細は[Personium Engine](../app-developer/Personium-Engine.md)をご覧ください。  
 

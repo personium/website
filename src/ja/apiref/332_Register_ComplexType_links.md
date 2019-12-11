@@ -1,4 +1,8 @@
-# ComplexTypeと他オブジェクトとのリンク
+---
+id: 332_Register_ComplexType_links
+title: ComplexTypeと他オブジェクトとのリンク
+sidebar_label: ComplexTypeと他オブジェクトとのリンク
+---
 ## 概要
 ComplexTypeに$linkで指定したODataリソースを紐付ける  
 以下のODataリソースと紐付けることができる  

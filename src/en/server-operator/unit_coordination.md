@@ -1,4 +1,8 @@
-# How to set coordination between units
+---
+id: unit_coordination
+title: How to set coordination between units
+sidebar_label: How to set coordination between units
+---
 
 ## Overview
 

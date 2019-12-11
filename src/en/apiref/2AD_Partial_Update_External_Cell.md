@@ -1,4 +1,8 @@
-# Extcell partial update
+---
+id: 2AD_Partial_Update_External_Cell
+title: Extcell partial update
+sidebar_label: Extcell partial update
+---
 
 ## Overview
 

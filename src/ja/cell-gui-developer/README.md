@@ -1,4 +1,8 @@
-# Cell GUI開発者向けガイド
+---
+id: README
+title: Cell GUI開発者向けガイド
+sidebar_label: Cell GUI開発者向けガイド
+---
 
 CellのGUIを開発したい人向けのドキュメントです
 

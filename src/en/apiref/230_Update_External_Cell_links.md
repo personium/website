@@ -1,4 +1,8 @@
-# Extcell $links update
+---
+id: 230_Update_External_Cell_links
+title: Extcell $links update
+sidebar_label: Extcell $links update
+---
 
 ## Overview
 

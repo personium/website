@@ -1,4 +1,8 @@
-# Delete AssociationEnd
+---
+id: 322_Delete_AssociationEnd
+title: Delete AssociationEnd
+sidebar_label: Delete AssociationEnd
+---
 
 ## Overview
 

@@ -1,4 +1,8 @@
-# Send Message
+---
+id: 271_Send_Message
+title: Send Message
+sidebar_label: Send Message
+---
 
 ## Overview
 

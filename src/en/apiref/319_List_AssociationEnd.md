@@ -1,4 +1,8 @@
-# Retrieve List of AssociationEnd
+---
+id: 319_List_AssociationEnd
+title: Retrieve List of AssociationEnd
+sidebar_label: Retrieve List of AssociationEnd
+---
 
 ## Overview
 

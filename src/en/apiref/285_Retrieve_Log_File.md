@@ -1,4 +1,8 @@
-# Retrieve Log File
+---
+id: 285_Retrieve_Log_File
+title: Retrieve Log File
+sidebar_label: Retrieve Log File
+---
 
 ## Overview
 

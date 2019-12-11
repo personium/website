@@ -1,4 +1,8 @@
-# Move and Rename collection
+---
+id: 309_Update_Move_Collection
+title: Move and Rename collection
+sidebar_label: Move and Rename collection
+---
 
 ## Overview
 

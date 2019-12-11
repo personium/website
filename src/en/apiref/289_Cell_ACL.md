@@ -1,4 +1,8 @@
-# Cell Level Access Control Configuration
+---
+id: 289_Cell_ACL
+title: Cell Level Access Control Configuration
+sidebar_label: Cell Level Access Control Configuration
+---
 
 ## Overview
 

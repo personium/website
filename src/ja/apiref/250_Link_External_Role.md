@@ -1,4 +1,8 @@
-# ExtRoleと他オブジェクトとのリンク
+---
+id: 250_Link_External_Role
+title: ExtRoleと他オブジェクトとのリンク
+sidebar_label: ExtRoleと他オブジェクトとのリンク
+---
 ## 概要
 ExtRoleに$linksで指定したRoleのODataリソースを紐付ける
 ### 制限事項

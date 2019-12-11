@@ -1,4 +1,8 @@
-# AssociationEndと他オブジェクトとのリンク一覧取得
+---
+id: 324_List_AssociationEnd_links
+title: AssociationEndと他オブジェクトとのリンク一覧取得
+sidebar_label: AssociationEndと他オブジェクトとのリンク一覧取得
+---
 ## 概要
 AssociationEndに紐付いたODataリソースを一覧取得する  
 以下のODataリソースを指定することができる  

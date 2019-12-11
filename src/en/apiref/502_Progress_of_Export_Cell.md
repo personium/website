@@ -1,4 +1,8 @@
-# Retrieve cell export status
+---
+id: 502_Progress_of_Export_Cell
+title: Retrieve cell export status
+sidebar_label: Retrieve cell export status
+---
 
 ## Overview
 

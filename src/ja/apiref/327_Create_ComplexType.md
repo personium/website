@@ -1,4 +1,8 @@
-# ComplexType登録
+---
+id: 327_Create_ComplexType
+title: ComplexType登録
+sidebar_label: ComplexType登録
+---
 ## 概要
 ユーザデータのプロパティに指定するComplexTypeの型を定義する
 

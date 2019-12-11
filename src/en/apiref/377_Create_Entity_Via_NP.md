@@ -1,4 +1,8 @@
-# Create other objects via Entity's Navigation Property
+---
+id: 377_Create_Entity_Via_NP
+title: Create other objects via Entity's Navigation Property
+sidebar_label: Create other objects via Entity's Navigation Property
+---
 
 ## Overview
 

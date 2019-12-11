@@ -1,4 +1,8 @@
-# Create Box
+---
+id: 256_Create_Box
+title: Create Box
+sidebar_label: Create Box
+---
 
 ## Overview
 

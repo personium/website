@@ -1,4 +1,8 @@
-# Engine Script のサンプル
+---
+id: 671_Engine_Script_Samples
+title: Engine Script のサンプル
+sidebar_label: Engine Script のサンプル
+---
 
 ## 基本形
 

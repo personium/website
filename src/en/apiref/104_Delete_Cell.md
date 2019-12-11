@@ -1,4 +1,8 @@
-# Delete Cell
+---
+id: 104_Delete_Cell
+title: Delete Cell
+sidebar_label: Delete Cell
+---
 
 ## Overview
 

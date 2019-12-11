@@ -1,4 +1,8 @@
-# Unit User
+---
+id: Unit-User
+title: Unit User
+sidebar_label: Unit User
+---
 ## What is a Unit User?
 A unit user is an entity that operates a unit level API such as CRUD of a cell.  
 The unit user performs API access using a unit user token (Unit User Token (UUT)) or a unit master token (Unit Master Token (UMT))

@@ -1,4 +1,8 @@
-# $top Query
+---
+id: 401_Top_Query
+title: $top Query
+sidebar_label: $top Query
+---
 
 ## Overview
 

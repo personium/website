@@ -1,4 +1,8 @@
-# $format Query
+---
+id: 404_Format_Query
+title: $format Query
+sidebar_label: $format Query
+---
 
 ## Overview
 

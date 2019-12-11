@@ -1,4 +1,8 @@
-# Box更新
+---
+id: 259_Update_Box
+title: Box更新
+sidebar_label: Box更新
+---
 ## 概要
 既存のBox情報を更新する
 

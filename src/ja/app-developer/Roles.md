@@ -1,4 +1,8 @@
-# Personiumにおけるロール
+---
+id: Roles
+title: Personiumにおけるロール
+sidebar_label: Personiumにおけるロール
+---
 
 ## ロールベースアクセス制御によるAPI保護
 

@@ -1,4 +1,8 @@
-# Retrieve Log File Information
+---
+id: 283_Log_File_Information_Acquisition
+title: Retrieve Log File Information
+sidebar_label: Retrieve Log File Information
+---
 
 ## Overview
 

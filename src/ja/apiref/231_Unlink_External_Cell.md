@@ -1,4 +1,8 @@
-# Extcellと他オブジェクトとのリンク解除
+---
+id: 231_Unlink_External_Cell
+title: Extcellと他オブジェクトとのリンク解除
+sidebar_label: Extcellと他オブジェクトとのリンク解除
+---
 ## 概要
 ExtCellとの$links情報を削除する
 

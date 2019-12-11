@@ -1,4 +1,8 @@
-# Create Property
+---
+id: 355_Create_Property
+title: Create Property
+sidebar_label: Create Property
+---
 
 ## Overview
 

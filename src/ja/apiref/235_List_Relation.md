@@ -1,4 +1,8 @@
-# Relation一覧取得
+---
+id: 235_List_Relation
+title: Relation一覧取得
+sidebar_label: Relation一覧取得
+---
 ## 概要
 既存のRelation情報の一覧を取得する
 

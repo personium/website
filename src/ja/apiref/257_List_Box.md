@@ -1,4 +1,8 @@
-# Box一覧取得
+---
+id: 257_List_Box
+title: Box一覧取得
+sidebar_label: Box一覧取得
+---
 ## 概要
 既存のBox情報の一覧を取得する
 

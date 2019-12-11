@@ -1,4 +1,8 @@
-# Stream Collection への Web Socket 接続
+---
+id: 389_Stream_Collection_Connect
+title: Stream Collection への Web Socket 接続
+sidebar_label: Stream Collection への Web Socket 接続
+---
 
 ## 概要
 Stream Collectionのtopicへ送信されたデータをリアルタイムに受信することができます。  

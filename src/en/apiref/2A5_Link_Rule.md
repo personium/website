@@ -1,4 +1,8 @@
-# Link other objects with Rule
+---
+id: 2A5_Link_Rule
+title: Link other objects with Rule
+sidebar_label: Link other objects with Rule
+---
 ## Overview
 You can link Rule to OData resource below  
 linking OData resource specified by $ links

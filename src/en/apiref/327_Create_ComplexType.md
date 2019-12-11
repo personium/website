@@ -1,4 +1,8 @@
-# Create ComplexType
+---
+id: 327_Create_ComplexType
+title: Create ComplexType
+sidebar_label: Create ComplexType
+---
 
 ## Overview
 

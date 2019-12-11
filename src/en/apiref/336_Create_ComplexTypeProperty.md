@@ -1,4 +1,8 @@
-# Create ComplexTypeProperty
+---
+id: 336_Create_ComplexTypeProperty
+title: Create ComplexTypeProperty
+sidebar_label: Create ComplexTypeProperty
+---
 
 ## Overview
 

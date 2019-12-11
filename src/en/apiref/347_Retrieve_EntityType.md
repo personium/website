@@ -1,4 +1,8 @@
-# Retrieve EntityType
+---
+id: 347_Retrieve_EntityType
+title: Retrieve EntityType
+sidebar_label: Retrieve EntityType
+---
 
 ## Overview
 

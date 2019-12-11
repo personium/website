@@ -1,4 +1,8 @@
-# Delete Box
+---
+id: 260_Delete_Box
+title: Delete Box
+sidebar_label: Delete Box
+---
 
 ## Overview
 

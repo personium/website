@@ -1,4 +1,8 @@
-# Entity partial update
+---
+id: 369_Partial_Update_Entity
+title: Entity partial update
+sidebar_label: Entity partial update
+---
 
 ## Overview
 

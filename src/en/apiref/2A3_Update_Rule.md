@@ -1,4 +1,8 @@
-# Update Rule
+---
+id: 2A3_Update_Rule
+title: Update Rule
+sidebar_label: Update Rule
+---
 ## Overview
 Update existing Rule information
 

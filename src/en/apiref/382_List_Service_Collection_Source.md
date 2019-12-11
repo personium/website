@@ -1,4 +1,8 @@
-# Retrieve service collection source
+---
+id: 382_List_Service_Collection_Source
+title: Retrieve service collection source
+sidebar_label: Retrieve service collection source
+---
 
 ## Overview
 

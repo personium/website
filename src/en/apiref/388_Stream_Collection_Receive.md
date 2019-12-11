@@ -1,4 +1,8 @@
-# Receive stream collection
+---
+id: 388_Stream_Collection_Receive
+title: Receive stream collection
+sidebar_label: Receive stream collection
+---
 
 ## Overview
 Receive data from stream collection queue

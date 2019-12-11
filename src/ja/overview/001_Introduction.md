@@ -1,4 +1,8 @@
-# Personiumとは何ですか？
+---
+id: 001_Introduction
+title: Personiumとは何ですか？
+sidebar_label: Personiumとは何ですか？
+---
 
 Personium(ペルソニアム)はオープンソースのPDS (Personal Data Store) サーバソフトウェアです。
 

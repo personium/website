@@ -1,4 +1,8 @@
-# Create other objects via Relation's Navigation Property
+---
+id: 243_Create_Obj_Via_Relation_NP
+title: Create other objects via Relation's Navigation Property
+sidebar_label: Create other objects via Relation's Navigation Property
+---
 
 ## Overview
 

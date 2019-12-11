@@ -1,4 +1,8 @@
-# Environment information on units constructed by Ansible
+---
+id: Confirm_environment_settings
+title: Environment information on units constructed by Ansible
+sidebar_label: Environment information on units constructed by Ansible
+---
 
 -------------------------------------------------
 

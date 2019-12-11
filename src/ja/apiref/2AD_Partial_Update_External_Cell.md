@@ -1,4 +1,8 @@
-# ExtCell部分更新
+---
+id: 2AD_Partial_Update_External_Cell
+title: ExtCell部分更新
+sidebar_label: ExtCell部分更新
+---
 ## 概要
 既存のExtCell情報を部分更新する
 

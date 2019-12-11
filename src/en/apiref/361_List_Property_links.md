@@ -1,4 +1,8 @@
-# Retrieve links list from Property to other objects
+---
+id: 361_List_Property_links
+title: Retrieve links list from Property to other objects
+sidebar_label: Retrieve links list from Property to other objects
+---
 
 ## Overview
 

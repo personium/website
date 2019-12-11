@@ -1,4 +1,8 @@
-# Property削除
+---
+id: 359_Delete_Property
+title: Property削除
+sidebar_label: Property削除
+---
 ## 概要
 既存のProperty情報を削除する
 ### 必要な権限

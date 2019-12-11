@@ -1,4 +1,8 @@
-# Update AssociationEnd
+---
+id: 321_Update_AssociationEnd
+title: Update AssociationEnd
+sidebar_label: Update AssociationEnd
+---
 
 ## Overview
 
