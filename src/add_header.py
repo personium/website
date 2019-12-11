@@ -3,6 +3,22 @@ from os import path
 import shutil
 import sys
 
+"""
+This script cannot add header to following files:
+- en/installation_guide/*.md
+- en/plugin-developer/Personium_AuthenticationPluginDeveloperManual.md
+- en/server-operator/setup_percell.md
+- en/server-operator/setup_virtual_image.md
+- en/server-operator/setup.md
+- en/unit-administrator/tutorial.md
+- ja/app-developer/Personium_Apps.md
+- ja/installation_guide/*.md
+- ja/server-operator/setup_percell.md
+- ja/server-operator/setup_virtual_image.md
+- ja/server-operator/setup.md
+- ja/unit-administrator/tutorial.md
+"""
+
 def add_header(dirpath, filename):
   fullpath = path.join(dirpath, filename)
   print(fullpath)
