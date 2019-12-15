@@ -1,39 +1,24 @@
 {
   "ja": {
-    "README": [
-      "ja/README"
+    "はじめに": [
+      "ja/README",
+      "ja/overview/001_Introduction"
     ],
-    "app-developer": [
-      "ja/app-developer/README",
-      "ja/app-developer/671_Engine_Script_Samples",
-      "ja/app-developer/app_authn",
-      "ja/app-developer/launch_from_homeapp",
-      "ja/app-developer/Personium-Engine",
-      "ja/app-developer/Personium_Apps",
-      "ja/app-developer/Roles",
-      "ja/app-developer/using_odata"
+    "基本概念": [
+      "ja/user_guide/001_Personium_Architecture",
+      "ja/user_guide/003_Auth",
+      "ja/user_guide/004_Client_auth",
+      "ja/user_guide/005_Model_construction",
+      "ja/user_guide/007_WebDAV_model",
+      "ja/user_guide/008_Glossary",
+      "ja/user_guide/990_Old_Version_API_Ref"
     ],
-    "cell-gui-developer": [
-      "ja/cell-gui-developer/README"
-    ],
-    "document-writer": [
-      "ja/document-writer/README"
-    ],
-    "installation_guide": [
+    "インストール": [
       "ja/installation_guide/001_Readme_before_installation",
       "ja/installation_guide/002_Build_from_Source",
       "ja/installation_guide/003_Install_To_LocalMachine"
     ],
-    "overview": [
-      "ja/overview/001_Introduction"
-    ],
-    "plugin-developer": [
-      "ja/plugin-developer/README",
-      "ja/plugin-developer/EngineExtension_Imple_and_Deploy",
-      "ja/plugin-developer/Extension_Send_Mail",
-      "ja/plugin-developer/Personium_AuthenticationPluginDeveloperManual"
-    ],
-    "server-operator": [
+    "サーバー構築・運用": [
       "ja/server-operator/README",
       "ja/server-operator/Confirm_environment_settings",
       "ja/server-operator/faq",
@@ -48,25 +33,36 @@
       "ja/server-operator/unit_operation_design",
       "ja/server-operator/unit_security"
     ],
-    "software-developer": [
-      "ja/software-developer/README",
-      "ja/software-developer/build_development_environment",
-      "ja/software-developer/personium_tests"
-    ],
-    "unit-administrator": [
+    "ユニット管理": [
       "ja/unit-administrator/README",
       "ja/unit-administrator/Data_Management",
       "ja/unit-administrator/tutorial",
       "ja/unit-administrator/Unit-User"
     ],
-    "user_guide": [
-      "ja/user_guide/001_Personium_Architecture",
-      "ja/user_guide/003_Auth",
-      "ja/user_guide/004_Client_auth",
-      "ja/user_guide/005_Model_construction",
-      "ja/user_guide/007_WebDAV_model",
-      "ja/user_guide/008_Glossary",
-      "ja/user_guide/990_Old_Version_API_Ref"
+    "アプリ開発": [
+      "ja/app-developer/README",
+      "ja/app-developer/671_Engine_Script_Samples",
+      "ja/app-developer/app_authn",
+      "ja/app-developer/launch_from_homeapp",
+      "ja/app-developer/Personium-Engine",
+      "ja/app-developer/Personium_Apps",
+      "ja/app-developer/Roles",
+      "ja/app-developer/using_odata",
+      "ja/cell-gui-developer/README"
+    ],
+    "サーバープラグイン開発": [
+      "ja/plugin-developer/README",
+      "ja/plugin-developer/EngineExtension_Imple_and_Deploy",
+      "ja/plugin-developer/Extension_Send_Mail",
+      "ja/plugin-developer/Personium_AuthenticationPluginDeveloperManual"
+    ],
+    "サーバー開発": [
+      "ja/software-developer/README",
+      "ja/software-developer/build_development_environment",
+      "ja/software-developer/personium_tests"
+    ],
+    "ドキュメント開発": [
+      "ja/document-writer/README"
     ]
   },
   "en": {
