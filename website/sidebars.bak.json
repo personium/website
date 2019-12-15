@@ -1,0 +1,21 @@
+{
+  "ja": {
+    "Personium ドキュメント": ["ja/README"],
+    "サーバ開発者向けガイド": [
+      "ja/software-developer/README",
+      "ja/software-developer/build_development_environment",
+      "ja/software-developer/personium_tests"
+    ]
+  },
+  "en": {
+    "README": ["en/README"]
+  },
+  "docs": {
+    "Docusaurus": ["doc1"],
+    "First Category": ["doc2"],
+    "Second Category": ["doc3", "test"]
+  },
+  "docs-other": {
+    "First Category": ["doc4", "doc5", "intro"]
+  }
+}

@@ -1,16 +1,140 @@
 {
   "ja": {
-    "README": ["ja/README"]
+    "README": [
+      "ja/README"
+    ],
+    "app-developer": [
+      "ja/app-developer/README",
+      "ja/app-developer/671_Engine_Script_Samples",
+      "ja/app-developer/app_authn",
+      "ja/app-developer/launch_from_homeapp",
+      "ja/app-developer/Personium-Engine",
+      "ja/app-developer/Personium_Apps",
+      "ja/app-developer/Roles",
+      "ja/app-developer/using_odata"
+    ],
+    "cell-gui-developer": [
+      "ja/cell-gui-developer/README"
+    ],
+    "document-writer": [
+      "ja/document-writer/README"
+    ],
+    "installation_guide": [
+      "ja/installation_guide/001_Readme_before_installation",
+      "ja/installation_guide/002_Build_from_Source",
+      "ja/installation_guide/003_Install_To_LocalMachine"
+    ],
+    "overview": [
+      "ja/overview/001_Introduction"
+    ],
+    "plugin-developer": [
+      "ja/plugin-developer/README",
+      "ja/plugin-developer/EngineExtension_Imple_and_Deploy",
+      "ja/plugin-developer/Extension_Send_Mail",
+      "ja/plugin-developer/Personium_AuthenticationPluginDeveloperManual"
+    ],
+    "server-operator": [
+      "ja/server-operator/README",
+      "ja/server-operator/Confirm_environment_settings",
+      "ja/server-operator/faq",
+      "ja/server-operator/proxy_exclusion_setting",
+      "ja/server-operator/setup",
+      "ja/server-operator/setup_authentication_plugins",
+      "ja/server-operator/setup_engine_extensions",
+      "ja/server-operator/setup_percell",
+      "ja/server-operator/setup_virtual_image",
+      "ja/server-operator/unit_config_list",
+      "ja/server-operator/unit_coordination",
+      "ja/server-operator/unit_operation_design",
+      "ja/server-operator/unit_security"
+    ],
+    "software-developer": [
+      "ja/software-developer/README",
+      "ja/software-developer/build_development_environment",
+      "ja/software-developer/personium_tests"
+    ],
+    "unit-administrator": [
+      "ja/unit-administrator/README",
+      "ja/unit-administrator/Data_Management",
+      "ja/unit-administrator/tutorial",
+      "ja/unit-administrator/Unit-User"
+    ],
+    "user_guide": [
+      "ja/user_guide/001_Personium_Architecture",
+      "ja/user_guide/003_Auth",
+      "ja/user_guide/004_Client_auth",
+      "ja/user_guide/005_Model_construction",
+      "ja/user_guide/007_WebDAV_model",
+      "ja/user_guide/008_Glossary",
+      "ja/user_guide/990_Old_Version_API_Ref"
+    ]
   },
   "en": {
-    "README": ["en/README"]
-  },
-  "docs": {
-    "Docusaurus": ["doc1"],
-    "First Category": ["doc2"],
-    "Second Category": ["doc3", "test"]
-  },
-  "docs-other": {
-    "First Category": ["doc4", "doc5", "intro"]
+    "README": [
+      "en/README"
+    ],
+    "app-developer": [
+      "en/app-developer/README",
+      "en/app-developer/671_Engine_Script_Samples",
+      "en/app-developer/app_authn",
+      "en/app-developer/launch_from_homeapp",
+      "en/app-developer/Personium-Engine",
+      "en/app-developer/Personium_Apps",
+      "en/app-developer/Roles",
+      "en/app-developer/using_odata"
+    ],
+    "cell-gui-developer": [
+      "en/cell-gui-developer/README"
+    ],
+    "document-writer": [
+      "en/document-writer/README"
+    ],
+    "installation_guide": [
+      "en/installation_guide/001_Readme_before_installation",
+      "en/installation_guide/002_Build_from_Source",
+      "en/installation_guide/003_Install_To_LocalMachine"
+    ],
+    "overview": [
+      "en/overview/001_Introduction"
+    ],
+    "plugin-developer": [
+      "en/plugin-developer/README",
+      "en/plugin-developer/EngineExtension_Imple_and_Deploy",
+      "en/plugin-developer/Extension_Send_Mail",
+      "en/plugin-developer/Personium_AuthenticationPluginDeveloperManual"
+    ],
+    "server-operator": [
+      "en/server-operator/README",
+      "en/server-operator/Confirm_environment_settings",
+      "en/server-operator/proxy_exclusion_setting",
+      "en/server-operator/setup",
+      "en/server-operator/setup_authentication_plugins",
+      "en/server-operator/setup_engine_extensions",
+      "en/server-operator/setup_virtual_image",
+      "en/server-operator/unit_config_list",
+      "en/server-operator/unit_coordination",
+      "en/server-operator/unit_operation_design",
+      "en/server-operator/unit_security"
+    ],
+    "software-developer": [
+      "en/software-developer/README",
+      "en/software-developer/build_development_environment",
+      "en/software-developer/personium_tests"
+    ],
+    "unit-administrator": [
+      "en/unit-administrator/README",
+      "en/unit-administrator/Data_Management",
+      "en/unit-administrator/tutorial",
+      "en/unit-administrator/Unit-User"
+    ],
+    "user_guide": [
+      "en/user_guide/001_Personium_Architecture",
+      "en/user_guide/003_Auth",
+      "en/user_guide/004_Client_auth",
+      "en/user_guide/005_Model_construction",
+      "en/user_guide/007_WebDAV_model",
+      "en/user_guide/008_Glossary",
+      "en/user_guide/990_Old_Version_API_Ref"
+    ]
   }
 }
