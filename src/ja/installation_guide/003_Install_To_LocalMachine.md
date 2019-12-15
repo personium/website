@@ -1,3 +1,8 @@
+---
+id: 003_Install_To_LocalMachine
+title: ローカルマシンへのインストール
+sidebar_label: ローカルマシンへのインストール
+---
 
 ###概要
 

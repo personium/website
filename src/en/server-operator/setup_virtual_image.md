@@ -1,5 +1,8 @@
-Getting Started with Personium using Virtual image
-----------------------------------------------------
+---
+id: setup_virtual_image
+title: Getting Started with Personium using Virtual image
+sidebar_label: Getting Started with Personium using Virtual image
+---
 
 Overview
 --------

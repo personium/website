@@ -1,5 +1,8 @@
-Getting Started with Personium using Ansible
---------------------------------------------
+---
+id: setup
+title: Getting Started with Personium using Ansible
+sidebar_label: Getting Started with Personium using Ansible
+---
 
 Overview
 --------

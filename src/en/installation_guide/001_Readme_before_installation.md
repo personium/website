@@ -1,3 +1,9 @@
+---
+id: 001_Readme_before_installation
+title: Readme before installation
+sidebar_label: Readme before installation
+---
+
 Please read following information before using Personium.
 
 ## HTTPS is a MUST

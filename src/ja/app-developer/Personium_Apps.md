@@ -1,3 +1,9 @@
+---
+id: Personium_Apps
+title: Personiumアプリ
+sidebar_label: Personiumアプリ
+---
+
 > Personiumアプリ規約はあまり明文化されておらず、新たにアプリ開発に取り組むディベロッパーに対する障壁となっているため、まずはこのWikiにおいてドラフトのドラフトとして、体裁等はさておき情報公開のために記述していくこととする。  
 ## Personiumアプリについて  
 

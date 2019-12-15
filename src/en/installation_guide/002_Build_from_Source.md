@@ -1,3 +1,9 @@
+---
+id: 002_Build_from_Source
+title: Build from source
+sidebar_label: Build from source
+---
+
 #### Retrieve Source Codes
 
 Clone the following repositories.

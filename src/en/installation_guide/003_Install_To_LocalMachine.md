@@ -1,3 +1,9 @@
+---
+id: 003_Install_To_LocalMachine
+title: Install to local machine
+sidebar_label: Install to local machine
+---
+
 #### Overview
 
 With this procedure, you can set up a Personium unit on 1VM using vagrant + ansible.

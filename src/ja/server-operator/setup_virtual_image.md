@@ -1,5 +1,8 @@
-仮想イメージを使ってPersoniumを始めよう。
----------------------------------------
+---
+id: setup_virtual_image
+title: 仮想イメージを使ってPersoniumを始めよう
+sidebar_label: 仮想イメージを使ってPersoniumを始めよう
+---
 
 概要
 ----

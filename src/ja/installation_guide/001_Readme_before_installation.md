@@ -1,3 +1,9 @@
+---
+id: 001_Readme_before_installation
+title: インストール前の注意事項
+sidebar_label: インストール前の注意事項
+---
+
 Personiumを使用する前に、以下の情報をお読みください。
 
 ## HTTPSは必須です

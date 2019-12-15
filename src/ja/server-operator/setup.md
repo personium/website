@@ -1,5 +1,8 @@
-Ansibleを使ってPersoniumを始めよう。
-------------------------------------
+---
+id: setup
+title: Ansibleを使ってPersoniumを始めよう
+sidebar_label: Ansibleを使ってPersoniumを始めよう
+---
 
 概要
 ----

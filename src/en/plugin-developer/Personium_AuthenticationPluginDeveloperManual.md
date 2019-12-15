@@ -1,13 +1,10 @@
-
 ---
 id: Personium_AuthenticationPluginDeveloperManual
 title: Personium Authentication Plugin Developer Manual
 sidebar_label: Personium Authentication Plugin Developer Manual
 ---
 
-# Personium Authentication Plugin Developer Manual
-
-This is a document of  Personium Authentication Plugin Developer Manual.
+This is a document of Personium Authentication Plugin Developer Manual.
 
 ## Documents
 
