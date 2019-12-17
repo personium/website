@@ -65,6 +65,36 @@
       "ja/document-writer/README"
     ]
   },
+  "ja-api": {
+    "API Reference": ["ja/apiref/000_Rest_API_Reference"],
+    "Unit Level API": [
+      "ja/apiref/100_Create_Cell"
+    ],
+    "Cell Level API": [
+      "ja/apiref/292_OAuth2_Authorization_Endpoint"
+    ],
+    "Box Level API": [
+      "ja/apiref/306_Create_Collection"
+    ],
+    "Common": [
+      "ja/apiref/005_Variable_of_Request_URL"
+    ]
+  },
+  "en-api": {
+    "API Reference": ["en/apiref/000_Rest_API_Reference"],
+    "Unit Level API": [
+      "en/apiref/100_Create_Cell"
+    ],
+    "Cell Level API": [
+      "en/apiref/292_OAuth2_Authorization_Endpoint"
+    ],
+    "Box Level API": [
+      "en/apiref/306_Create_Collection"
+    ],
+    "Common": [
+      "en/apiref/005_Variable_of_Request_URL"
+    ]
+  },
   "en": {
     "README": [
       "en/README"
