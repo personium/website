@@ -44,7 +44,7 @@ const siteConfig = {
   // For no header links in the top nav bar -> headerLinks: [],
   headerLinks: [
     {href: '/ja/README', label: 'Documentation'},
-    {href: 'https://personium.io/docs/en/apiref/current/000_Rest_API_Reference.html', label: 'API Reference'},
+    {href: '/ja/apiref/000_Rest_API_Reference', label: 'API Reference'},
     {blog: true, label: 'News'},
     // {page: 'help', label: 'Help'},
   ],
