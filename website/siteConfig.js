@@ -49,6 +49,7 @@ const siteConfig = {
     // {page: 'help', label: 'Help'},
   ],
 
+  blogSidebarCount: 10,
   blogSidebarTitle: { default: 'Recent News', all: 'All News' },
 
   // If you have users set above, you add it here:
