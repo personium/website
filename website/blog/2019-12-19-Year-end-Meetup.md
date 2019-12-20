@@ -1,9 +1,9 @@
 ---
-title: Personium Year-end Meetup 2019 was held
+title: Personium Year-end Meetup 2019 held in Tokyo
 author: Yasufumi Tochiori
 ---
 
-Personium Year-end Meetup 2019 was held in PLY Tokyo.  
+Personium Year-end Meetup 2019 was held in PLY Tokyo on Dec. 18, 2019.  
 
 <img
   src="/images/news/year-end-meetup-2019.jpg"
@@ -11,9 +11,12 @@ Personium Year-end Meetup 2019 was held in PLY Tokyo.
   title="Personium Year-end Meetup 2019"
 />
 
-The presentation slides are published. (Japanese)
+The presentations are available here. (Japanese)
 
 <!--truncate-->
+
+Connpass (Japanese)  
+https://personium.connpass.com/event/158508/
 
 <iframe src="https://drive.google.com/file/d/1-9_xbBj7H16e05pQVD9tmkVyDaxel7UV/preview" width="640" height="400"></iframe>
 
