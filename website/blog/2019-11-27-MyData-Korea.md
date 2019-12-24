@@ -1,7 +1,7 @@
 ---
 title: MyData Korea installed Personium Unit successfully
 author: Dixon Siu
-authorTwitter: dixon_siu
+authorURL: https://twitter.com/dixon_siu
 ---
 
 Personium Unit was successfully installed and configured by MyData Korea on Nov. 27, 2019.  
