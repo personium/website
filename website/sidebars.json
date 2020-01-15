@@ -1,166 +1,85 @@
 {
-  "ja": {
-    "はじめに": [
-      "ja/README",
-      "ja/overview/001_Introduction"
-    ],
-    "基本概念": [
-      "ja/user_guide/001_Personium_Architecture",
-      "ja/user_guide/003_Auth",
-      "ja/user_guide/004_Client_auth",
-      "ja/user_guide/005_Model_construction",
-      "ja/user_guide/007_WebDAV_model",
-      "ja/user_guide/008_Glossary",
-      "ja/user_guide/990_Old_Version_API_Ref"
-    ],
-    "インストール": [
-      "ja/installation_guide/001_Readme_before_installation",
-      "ja/installation_guide/002_Build_from_Source",
-      "ja/installation_guide/003_Install_To_LocalMachine"
-    ],
-    "サーバー構築・運用": [
-      "ja/server-operator/README",
-      "ja/server-operator/Confirm_environment_settings",
-      "ja/server-operator/faq",
-      "ja/server-operator/proxy_exclusion_setting",
-      "ja/server-operator/setup",
-      "ja/server-operator/setup_authentication_plugins",
-      "ja/server-operator/setup_engine_extensions",
-      "ja/server-operator/setup_percell",
-      "ja/server-operator/setup_virtual_image",
-      "ja/server-operator/unit_config_list",
-      "ja/server-operator/unit_coordination",
-      "ja/server-operator/unit_operation_design",
-      "ja/server-operator/unit_security"
-    ],
-    "ユニット管理": [
-      "ja/unit-administrator/README",
-      "ja/unit-administrator/Data_Management",
-      "ja/unit-administrator/tutorial",
-      "ja/unit-administrator/Unit-User"
-    ],
-    "アプリ開発": [
-      "ja/app-developer/README",
-      "ja/app-developer/671_Engine_Script_Samples",
-      "ja/app-developer/app_authn",
-      "ja/app-developer/launch_from_homeapp",
-      "ja/app-developer/Personium-Engine",
-      "ja/app-developer/Personium_Apps",
-      "ja/app-developer/Roles",
-      "ja/app-developer/using_odata",
-      "ja/cell-gui-developer/README"
-    ],
-    "サーバープラグイン開発": [
-      "ja/plugin-developer/README",
-      "ja/plugin-developer/EngineExtension_Imple_and_Deploy",
-      "ja/plugin-developer/Extension_Send_Mail",
-      "ja/plugin-developer/Personium_AuthenticationPluginDeveloperManual"
-    ],
-    "サーバー開発": [
-      "ja/software-developer/README",
-      "ja/software-developer/build_development_environment",
-      "ja/software-developer/personium_tests"
-    ],
-    "ドキュメント開発": [
-      "ja/document-writer/README"
-    ]
-  },
-  "ja-api": {
-    "API Reference": ["ja/apiref/000_Rest_API_Reference"],
+  "api": {
+    "API Reference": ["apiref/000_Rest_API_Reference"],
     "Unit Level API": [
-      "ja/apiref/100_Create_Cell"
+      "apiref/100_Create_Cell"
     ],
     "Cell Level API": [
-      "ja/apiref/292_OAuth2_Authorization_Endpoint"
+      "apiref/292_OAuth2_Authorization_Endpoint"
     ],
     "Box Level API": [
-      "ja/apiref/306_Create_Collection"
+      "apiref/306_Create_Collection"
     ],
     "Common": [
-      "ja/apiref/005_Variable_of_Request_URL"
-    ]
-  },
-  "en-api": {
-    "API Reference": ["en/apiref/000_Rest_API_Reference"],
-    "Unit Level API": [
-      "en/apiref/100_Create_Cell"
-    ],
-    "Cell Level API": [
-      "en/apiref/292_OAuth2_Authorization_Endpoint"
-    ],
-    "Box Level API": [
-      "en/apiref/306_Create_Collection"
-    ],
-    "Common": [
-      "en/apiref/005_Variable_of_Request_URL"
+      "apiref/005_Variable_of_Request_URL"
     ]
   },
   "en": {
     "README": [
-      "en/README"
+      "README"
     ],
     "app-developer": [
-      "en/app-developer/README",
-      "en/app-developer/671_Engine_Script_Samples",
-      "en/app-developer/app_authn",
-      "en/app-developer/launch_from_homeapp",
-      "en/app-developer/Personium-Engine",
-      "en/app-developer/Personium_Apps",
-      "en/app-developer/Roles",
-      "en/app-developer/using_odata"
+      "app-developer/README",
+      "app-developer/671_Engine_Script_Samples",
+      "app-developer/app_authn",
+      "app-developer/launch_from_homeapp",
+      "app-developer/Personium-Engine",
+      "app-developer/Personium_Apps",
+      "app-developer/Roles",
+      "app-developer/using_odata"
     ],
     "cell-gui-developer": [
-      "en/cell-gui-developer/README"
+      "cell-gui-developer/README"
     ],
     "document-writer": [
-      "en/document-writer/README"
+      "document-writer/README"
     ],
     "installation_guide": [
-      "en/installation_guide/001_Readme_before_installation",
-      "en/installation_guide/002_Build_from_Source",
-      "en/installation_guide/003_Install_To_LocalMachine"
+      "installation_guide/001_Readme_before_installation",
+      "installation_guide/002_Build_from_Source",
+      "installation_guide/003_Install_To_LocalMachine"
     ],
     "overview": [
-      "en/overview/001_Introduction"
+      "overview/001_Introduction"
     ],
     "plugin-developer": [
-      "en/plugin-developer/README",
-      "en/plugin-developer/EngineExtension_Imple_and_Deploy",
-      "en/plugin-developer/Extension_Send_Mail",
-      "en/plugin-developer/Personium_AuthenticationPluginDeveloperManual"
+      "plugin-developer/README",
+      "plugin-developer/EngineExtension_Imple_and_Deploy",
+      "plugin-developer/Extension_Send_Mail",
+      "plugin-developer/Personium_AuthenticationPluginDeveloperManual"
     ],
     "server-operator": [
-      "en/server-operator/README",
-      "en/server-operator/Confirm_environment_settings",
-      "en/server-operator/proxy_exclusion_setting",
-      "en/server-operator/setup",
-      "en/server-operator/setup_authentication_plugins",
-      "en/server-operator/setup_engine_extensions",
-      "en/server-operator/setup_virtual_image",
-      "en/server-operator/unit_config_list",
-      "en/server-operator/unit_coordination",
-      "en/server-operator/unit_operation_design",
-      "en/server-operator/unit_security"
+      "server-operator/README",
+      "server-operator/Confirm_environment_settings",
+      "server-operator/proxy_exclusion_setting",
+      "server-operator/setup",
+      "server-operator/setup_authentication_plugins",
+      "server-operator/setup_engine_extensions",
+      "server-operator/setup_virtual_image",
+      "server-operator/unit_config_list",
+      "server-operator/unit_coordination",
+      "server-operator/unit_operation_design",
+      "server-operator/unit_security"
     ],
     "software-developer": [
-      "en/software-developer/README",
-      "en/software-developer/build_development_environment",
-      "en/software-developer/personium_tests"
+      "software-developer/README",
+      "software-developer/build_development_environment",
+      "software-developer/personium_tests"
     ],
     "unit-administrator": [
-      "en/unit-administrator/README",
-      "en/unit-administrator/Data_Management",
-      "en/unit-administrator/tutorial",
-      "en/unit-administrator/Unit-User"
+      "unit-administrator/README",
+      "unit-administrator/Data_Management",
+      "unit-administrator/tutorial",
+      "unit-administrator/Unit-User"
     ],
     "user_guide": [
-      "en/user_guide/001_Personium_Architecture",
-      "en/user_guide/003_Auth",
-      "en/user_guide/004_Client_auth",
-      "en/user_guide/005_Model_construction",
-      "en/user_guide/007_WebDAV_model",
-      "en/user_guide/008_Glossary",
-      "en/user_guide/990_Old_Version_API_Ref"
+      "user_guide/001_Personium_Architecture",
+      "user_guide/003_Auth",
+      "user_guide/004_Client_auth",
+      "user_guide/005_Model_construction",
+      "user_guide/007_WebDAV_model",
+      "user_guide/008_Glossary",
+      "user_guide/990_Old_Version_API_Ref"
     ]
   }
 }
