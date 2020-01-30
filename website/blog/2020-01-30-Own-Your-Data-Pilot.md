@@ -10,7 +10,7 @@ During the winter vacation, [OwnYourData](https://www.ownyourdata.eu/)'s chief e
 1. Retrieve Personium Cell access token to access the data store  
 1. Store and remove JSON files  
 
-Even though our goal (interoperability of personal data store) is still far away, [MyData](https://mydata.org) movement continues to drive collabrations among subject matter experts and passionate participants. Persererance will finally lead us to our goal.  
+Even though our goal (interoperability of personal data store) is still far away, [MyData](https://mydata.org) movement continues to drive collaborations among subject matter experts and passionate participants. Perseverance will finally lead us to our goal.  
 
 We will provide the following improvements for the next stage.  
 
@@ -37,4 +37,3 @@ Fill in the authentication information.
 <img src="https://dixonsiu.demo-jp.personium.io/MyData/images/TallyZoo-Update01-img05.png" width="150px" >  
 1. Click the wrench icon to access the Delete menu.   
 <img src="https://dixonsiu.demo-jp.personium.io/MyData/images/TallyZoo-Update01-img06.png" width="150px" >  
-
