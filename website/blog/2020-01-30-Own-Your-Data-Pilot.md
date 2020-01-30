@@ -23,6 +23,7 @@ We will provide the following improvements for the next stage.
 Original news here: https://personium.io/blog/2019/12/09/Own-Your-Data-Pilot/  
 
 <!--truncate-->
+
 ## Demo  
 1. Access http://tally.oydapp.eu/ and select Personium from the dropdown menu (Type:)  
 Fill in the authentication information.  
