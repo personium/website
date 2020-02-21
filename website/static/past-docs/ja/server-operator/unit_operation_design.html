@@ -1,0 +1,100 @@
+<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml" lang="" xml:lang="">
+<head>
+  <!-- default template -->
+  <meta charset="utf-8" />
+  <meta name="generator" content="pandoc" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=yes" />
+  <link rel="icon" href="/images/favicon.ico" type="image/x-icon"/>
+  <title>unit_operation_design</title>
+  <script type="text/javascript">
+      var path = location.pathname.split('/');
+      var pathRoot = [ path[0], path[1], '' ].join('/');
+      var pathLang = [ path[0], path[1], path[2] , ''].join('/');
+
+      document.write('<link rel="stylesheet" href="' + pathRoot + 'personium.css" type="text/css" />');
+      document.write('<link rel="stylesheet" href="' + pathLang + 'locale.css" type="text/css" />');
+      var ps = document.createElement('script');
+      ps.src = pathRoot + 'personium_docs.js';
+      var s = document.getElementsByTagName('script')[0];
+      s.parentNode.insertBefore(ps, s);
+    
+      ps2 = document.createElement('script');
+      ps2.src = pathRoot + 'apiref_versions.js';
+      s = document.getElementsByTagName('script')[0];
+      s.parentNode.insertBefore(ps2, s);
+  </script>
+  <link href="https://fonts.googleapis.com/css?family=Raleway" rel="stylesheet">
+  <link href="https://fonts.googleapis.com/css?family=Open+Sans" rel="stylesheet">
+  
+  <!--[if lt IE 9]>
+    <script src="//cdnjs.cloudflare.com/ajax/libs/html5shiv/3.7.3/html5shiv-printshiv.min.js"></script>
+  <![endif]-->
+</head>
+<body>
+  <header>
+    <nav>
+    <div id="logo"><a href="/"><img src="https://personium.io/images/logo-quantify-dark.png"></a></div>
+    <ul>
+      <li class="submenu">
+        <a href="#" >Introduction</a>
+        <ul>
+            <li><a href="javascript:p.toPage('/overview/001_Introduction.html');">What's Personium?</a></li>
+            <li><a href="javascript:p.toPage('/user_guide/001_Personium_Architecture.html');">Architecture</a></li>
+            <li><a href="javascript:p.toPage('/user_guide/008_Glossary.html');">Glossary</a></li>
+        </ul>
+      </li>
+      <li class="submenu">
+        <a href="#" >User Guide</a>
+        <ul>
+            <li><a href="javascript:p.toPage('/app-developer/');">for App Developer</a></li>
+            <li><a href="javascript:p.toPage('/cell-gui-developer/');">for Cell GUI Developer</a></li>
+            <li><a href="javascript:p.toPage('/unit-administrator/');">for Unit Administrator</a></li>
+            <li><a href="javascript:p.toPage('/server-operator/');">for Server Software Operator</a></li>
+            <li><a href="javascript:p.toPage('/document-writer/');">for Documentation Contributor</a></li>
+            <li><a href="javascript:p.toPage('/plugin-developer/');">for Server Plugin Developer</a></li>
+            <li><a href="javascript:p.toPage('/software-developer/');">for Server Developer</a></li>
+        </ul>
+      </li>
+      <li class="submenu">
+        <a href="#" >API Reference</a>
+        <ul id="api-ref-list">
+            <li><a href="javascript:p.toPage('/user_guide/990_Old_Version_API_Ref.html');">older versions</a></li>
+        </ul>
+      </li>
+      <li class="submenu">
+        <a href="#" >Languages</a>
+        <ul>
+            <li><a href="javascript:p.setLang('en');">English</a></li>
+            <li><a href="javascript:p.setLang('ja');">Japanese</a></li>
+        </ul>
+      </li>
+    </ul>
+    </nav>
+  </header>
+
+<div id="container">
+<h1>Unitの運用設計と設定</h1>
+<p>Personium Unitの導入にあたっては、運用設計を行いそれに応じた設定をすることが必要です。 <br></p>
+<h2>PersoniumとPKI</h2>
+<p>PersoniumのユニットはwebやOpenIDのようなDecentralizedなBaaS/PDSサーバで、相互に信頼関係のリンクを定義することで、別々のサーバインフラに立てられたPersoniumサーバ群が連携してインフラをまたがってデータの共有や利活用を行えることを特長としています。</p>
+<p>インフラをこえてPersoniumサーバ間で相互の信頼関係を確立するために、Personiumは内部でPKIの枠組みを使っています。具体的には、PersoniumでCellをまたがったやり取りに用いられているTrans-Cell AccessTokenはSAML2.0のAssertion形式となっており、Assertionで用いる電子署名としてPKIの代表的な仕様であるx.509を使用したものを採用しています。</p>
+<p>ユニットがSAML発行のための電子署名を行うため、それぞれ固有のX.509の秘密鍵と証明書を持つ必要があります。また受取った証明書を検証、信頼判断する際に用いるための材料もユニットに設定する必要があります。 <br></p>
+<h2>Unit秘密鍵と証明書の作成と設定</h2>
+<p>X509の秘密鍵と証明書を作成します。証明書は適切なルート認証局での署名が必要です。 また、Unitとして受け入れるルート認証局の証明書を設定する必要もあります。（執筆予定） <br></p>
+<h2>Unit User 管理設計</h2>
+<p>まずはじめに、Unit管理者はそのUnitを自身のみが占有的に用いるのか、他の人に使わせるのかに応じて、Unit Userをつかうのかどうかを決定します。</p>
+<p>Unit Userを使わない場合はUnit Master Tokenを使ってUnitレベルの操作を行います。 Unit Userを使う場合は、次にUnit User管理機構をどのように調達するのかを決定します。 既に外部に存在する利用者管理機構を使う場合は、SAML形式のトークンを生成する実装が必要となります。 この実装にあたってはUnitに設定する秘密鍵と証明書のペアが必要になることに留意してください。Unit User名として使える文字列は、UTF-8の文字列であれば何の制約もありません。 これはUnit 所有者が既に持っている利用者IDとの接続を考えてのことです。</p>
+<p>外部の利用者管理機構が存在せず新設の必要もない場合は、Unit User管理機構としてCellを使うこともできます。 特定CellをUnit User管理機構として用いた場合はUnitUser名は PersoniumサブジェクトURL ({Cell URL}#{アカウント名})となります。 <br></p>
+<h2>Data Bundle 設計</h2>
+<p>Data Bundle とはPersoniumユニットに格納されるデータのバックアップ・リストアの単位です。具体的にはPersoniumの現実装が採用しているバックエンドであるESとファイルシステムに保存される情報は、このData Bundle名によって分離されて保存されます。 Unit管理者はデータのバックアップ運用や予見されるマイグレーション計画などに合わせて、どのような単位でDataBundleを切ってゆくのかを設計する必要があります。多くの場合はUnitユーザ名をそのままData Bundle名として使えば問題ありません。すべてのユニットユーザのデータを一つのデータバンドルとして保存したり、ユニットユーザの所属組織毎またはユニットユーザ名のプレフィクスなどに応じてデータバンドルを分けたい場合は、Data Bundle名決定関数を定義します。 DataBundle 名として使用可能な文字には以下の制限があります。そのため、Data Bundle名決定関数の作成にあたっては、このことに留意する必要があります。 デフォルトでは、Data Bundle名決定関数は以下のロジックとなっています。 <br></p>
+<ol>
+<li>&quot;#&quot; 記号があった場合は、それより後の文字列のみを使う</li>
+<li>DataBundle名として使用できない文字についてはエスケープを行う。</li>
+</ol>
+<p>特定CellをUnit User管理機構として用いた場合はUnitUser名は PersoniumサブジェクトURL {Cell URL}#{アカウント名}となりますが、上記デフォルトData Bundle名決定関数を使った場合は、DataBundle名としてはUnit User管理Cellのアカウント名が使われることとなります。</p>
+</div>
+  <footer><nav>The Personium project is provided under the Apache 2.0 license. </nav></footer>
+</body>
+</html>
+

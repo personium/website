@@ -1,0 +1,243 @@
+<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml" lang="" xml:lang="">
+<head>
+  <!-- default template -->
+  <meta charset="utf-8" />
+  <meta name="generator" content="pandoc" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=yes" />
+  <link rel="icon" href="/images/favicon.ico" type="image/x-icon"/>
+  <title>unit_security</title>
+  <style type="text/css">
+div.sourceLine, a.sourceLine { display: inline-block; min-height: 1.25em; }
+a.sourceLine { pointer-events: none; color: inherit; text-decoration: inherit; }
+.sourceCode { overflow: visible; }
+code.sourceCode { white-space: pre; }
+@media print {
+code.sourceCode { white-space: pre-wrap; }
+div.sourceLine, a.sourceLine { text-indent: -1em; padding-left: 1em; }
+}
+pre.numberSource div.sourceLine, .numberSource a.sourceLine
+  { position: relative; }
+pre.numberSource div.sourceLine::before, .numberSource a.sourceLine::before
+  { content: attr(data-line-number);
+    position: absolute; left: -5em; text-align: right; vertical-align: baseline;
+    border: none; pointer-events: all;
+    -webkit-touch-callout: none; -webkit-user-select: none;
+    -khtml-user-select: none; -moz-user-select: none;
+    -ms-user-select: none; user-select: none;
+    padding: 0 4px; width: 4em; }
+pre.numberSource { margin-left: 3em; border-left: 1px solid #aaaaaa; color: #aaaaaa;  padding-left: 4px; }
+@media screen {
+a.sourceLine::before { text-decoration: underline; color: initial; }
+}
+code span.kw { color: #007020; font-weight: bold; } /* Keyword */
+code span.dt { color: #902000; } /* DataType */
+code span.dv { color: #40a070; } /* DecVal */
+code span.bn { color: #40a070; } /* BaseN */
+code span.fl { color: #40a070; } /* Float */
+code span.ch { color: #4070a0; } /* Char */
+code span.st { color: #4070a0; } /* String */
+code span.co { color: #60a0b0; font-style: italic; } /* Comment */
+code span.ot { color: #007020; } /* Other */
+code span.al { color: #ff0000; font-weight: bold; } /* Alert */
+code span.fu { color: #06287e; } /* Function */
+code span.er { color: #ff0000; font-weight: bold; } /* Error */
+code span.wa { color: #60a0b0; font-weight: bold; font-style: italic; } /* Warning */
+code span.cn { color: #880000; } /* Constant */
+code span.sc { color: #4070a0; } /* SpecialChar */
+code span.vs { color: #4070a0; } /* VerbatimString */
+code span.ss { color: #bb6688; } /* SpecialString */
+code span.im { } /* Import */
+code span.va { color: #19177c; } /* Variable */
+code span.cf { color: #007020; font-weight: bold; } /* ControlFlow */
+code span.op { color: #666666; } /* Operator */
+code span.bu { } /* BuiltIn */
+code span.ex { } /* Extension */
+code span.pp { color: #bc7a00; } /* Preprocessor */
+code span.at { color: #7d9029; } /* Attribute */
+code span.do { color: #ba2121; font-style: italic; } /* Documentation */
+code span.an { color: #60a0b0; font-weight: bold; font-style: italic; } /* Annotation */
+code span.cv { color: #60a0b0; font-weight: bold; font-style: italic; } /* CommentVar */
+code span.in { color: #60a0b0; font-weight: bold; font-style: italic; } /* Information */
+  </style>
+  <script type="text/javascript">
+      var path = location.pathname.split('/');
+      var pathRoot = [ path[0], path[1], '' ].join('/');
+      var pathLang = [ path[0], path[1], path[2] , ''].join('/');
+
+      document.write('<link rel="stylesheet" href="' + pathRoot + 'personium.css" type="text/css" />');
+      document.write('<link rel="stylesheet" href="' + pathLang + 'locale.css" type="text/css" />');
+      var ps = document.createElement('script');
+      ps.src = pathRoot + 'personium_docs.js';
+      var s = document.getElementsByTagName('script')[0];
+      s.parentNode.insertBefore(ps, s);
+    
+      ps2 = document.createElement('script');
+      ps2.src = pathRoot + 'apiref_versions.js';
+      s = document.getElementsByTagName('script')[0];
+      s.parentNode.insertBefore(ps2, s);
+  </script>
+  <link href="https://fonts.googleapis.com/css?family=Raleway" rel="stylesheet">
+  <link href="https://fonts.googleapis.com/css?family=Open+Sans" rel="stylesheet">
+  
+  <!--[if lt IE 9]>
+    <script src="//cdnjs.cloudflare.com/ajax/libs/html5shiv/3.7.3/html5shiv-printshiv.min.js"></script>
+  <![endif]-->
+</head>
+<body>
+  <header>
+    <nav>
+    <div id="logo"><a href="/"><img src="https://personium.io/images/logo-quantify-dark.png"></a></div>
+    <ul>
+      <li class="submenu">
+        <a href="#" >Introduction</a>
+        <ul>
+            <li><a href="javascript:p.toPage('/overview/001_Introduction.html');">What's Personium?</a></li>
+            <li><a href="javascript:p.toPage('/user_guide/001_Personium_Architecture.html');">Architecture</a></li>
+            <li><a href="javascript:p.toPage('/user_guide/008_Glossary.html');">Glossary</a></li>
+        </ul>
+      </li>
+      <li class="submenu">
+        <a href="#" >User Guide</a>
+        <ul>
+            <li><a href="javascript:p.toPage('/app-developer/');">for App Developer</a></li>
+            <li><a href="javascript:p.toPage('/cell-gui-developer/');">for Cell GUI Developer</a></li>
+            <li><a href="javascript:p.toPage('/unit-administrator/');">for Unit Administrator</a></li>
+            <li><a href="javascript:p.toPage('/server-operator/');">for Server Software Operator</a></li>
+            <li><a href="javascript:p.toPage('/document-writer/');">for Documentation Contributor</a></li>
+            <li><a href="javascript:p.toPage('/plugin-developer/');">for Server Plugin Developer</a></li>
+            <li><a href="javascript:p.toPage('/software-developer/');">for Server Developer</a></li>
+        </ul>
+      </li>
+      <li class="submenu">
+        <a href="#" >API Reference</a>
+        <ul id="api-ref-list">
+            <li><a href="javascript:p.toPage('/user_guide/990_Old_Version_API_Ref.html');">older versions</a></li>
+        </ul>
+      </li>
+      <li class="submenu">
+        <a href="#" >Languages</a>
+        <ul>
+            <li><a href="javascript:p.setLang('en');">English</a></li>
+            <li><a href="javascript:p.setLang('ja');">Japanese</a></li>
+        </ul>
+      </li>
+    </ul>
+    </nav>
+  </header>
+
+<div id="container">
+<h1>Security of Unit (setting that recommends change from default)</h1>
+<h2>Overview</h2>
+<p>When creating a Personium unit using Ansible, unit master token with strong authority is enabled by default. In this chapter, we will explain the setting to recommend change from default.</p>
+<p>Recommended settings are as follows.</p>
+<ol>
+<li>Invalidating the unit master token</li>
+<li>Management of unit management account</li>
+</ol>
+<h2>Invalidating unit master token</h2>
+<p>The unit master token is supposed to be used at the time of development and testing, and in many cases except special cases, it should be invalidated from the security point of view in the production operation. However, the newly created Personium does not have a cell or account to be used for unit management. Therefore, an arbitrary unit master token is set up before Ansible execution and it is built with it enabled.</p>
+<h3>Unit master token invalidation procedure</h3>
+<p>The unit master token can be invalidated by performing the following procedure on the server on which the AP service runs.</p>
+<ol>
+<li><p>Modification of 'personium-unit-config.properties'</p>
+<pre class="sourceCode sh" id="cb1"><code class="sourceCode bash"><div class="sourceLine" id="cb1-1" data-line-number="1"><span class="ex">vi</span> /personium/personium-core/conf/18888/personium-unit-config.properties</div></code></pre>
+<ul>
+<li>Unit master token can be invalidated by commenting out the io.personium.core.masterToken parameter.</li>
+</ul>
+<p>eg.</p>
+<pre class="sourceCode sh" id="cb2"><code class="sourceCode bash"><div class="sourceLine" id="cb2-1" data-line-number="1"><span class="ex">...</span></div>
+<div class="sourceLine" id="cb2-2" data-line-number="2"><span class="co">##### Major Settings Items #####</span></div>
+<div class="sourceLine" id="cb2-3" data-line-number="3"><span class="co"># Unit Master Token.</span></div>
+<div class="sourceLine" id="cb2-4" data-line-number="4"><span class="co"># Blank string should be configured in production use to disable it.</span></div>
+<div class="sourceLine" id="cb2-5" data-line-number="5"><span class="co"># io.personium.core.masterToken=                                       &lt;- Comment out this parameter</span></div>
+<div class="sourceLine" id="cb2-6" data-line-number="6"><span class="co">#</span></div>
+<div class="sourceLine" id="cb2-7" data-line-number="7"><span class="ex">...</span></div></code></pre></li>
+<li><p>Restart Tomcat</p>
+<pre class="sourceCode sh" id="cb3"><code class="sourceCode bash"><div class="sourceLine" id="cb3-1" data-line-number="1"><span class="ex">systemctl</span> restart tomcat</div></code></pre></li>
+</ol>
+<h2>Managing unit management accounts</h2>
+<p>As an account to manage Personium units with Ansible, we have created unit user named unitadmin by default. unitadmin can perform operations such as adding, changing, and deleting resources such as all cells and boxes. Therefore, in an environment built with Ansible, the security level is lowered because it is an account name to be used commonly.</p>
+<p>It is necessary to carry out the combination of the following measures in production use.</p>
+<ol>
+<li>Change the unitadmin account password regularly</li>
+<li>Rename and use the unitadmin account</li>
+<li>Rename and use unitadmin Cell</li>
+<li>Build and use a unit user management mechanism externally</li>
+</ol>
+<h3>Change unit user's password</h3>
+<ol>
+<li><p>Get unit management token (unit user token) accessible to Cell as administrator authority. Access as an administrator authority means to operate with authority to create and erase Cell. The unit user token is acquired using the unit management account information acquired in <a href="./Confirm_environment_settings.html">Environment information on units constructed by Ansible</a>. <br> Use the OAuth 2 Token endpoint API. (Tokens acquired once are valid for 1 hour)</p>
+<pre class="sourceCode sh" id="cb4"><code class="sourceCode bash"><div class="sourceLine" id="cb4-1" data-line-number="1"><span class="ex">curl</span> <span class="st">&quot;https://{Personium_FQDN}/unitadmin/__token&quot;</span> \</div>
+<div class="sourceLine" id="cb4-2" data-line-number="2">-X POST -i -k \</div>
+<div class="sourceLine" id="cb4-3" data-line-number="3">-d <span class="st">&quot;grant_type=password&amp;username={unitadmin_account}&amp;password={unitudmin_password}&amp;p_target=https://{Personium_FQDN}/&quot;</span> \</div>
+<div class="sourceLine" id="cb4-4" data-line-number="4">-H <span class="st">&quot;Content-Type: application/x-www-form-urlencoded&quot;</span></div></code></pre>
+<p>If it succeeds, the response is returned from the API in JSON format.      The value of &quot;access_token&quot; acquired here becomes the unit user token.</p>
+<pre class="sourceCode json" id="cb5"><code class="sourceCode json"><div class="sourceLine" id="cb5-1" data-line-number="1"><span class="fu">{</span></div>
+<div class="sourceLine" id="cb5-2" data-line-number="2"><span class="dt">&quot;access_token&quot;</span><span class="fu">:</span><span class="st">&quot;PEFzc........(snip)........W9uPg&quot;</span><span class="fu">,</span></div>
+<div class="sourceLine" id="cb5-3" data-line-number="3"><span class="dt">&quot;refresh_token_expires_in&quot;</span><span class="fu">:</span><span class="dv">86400</span><span class="fu">,</span></div>
+<div class="sourceLine" id="cb5-4" data-line-number="4"><span class="dt">&quot;refresh_token&quot;</span><span class="fu">:</span><span class="st">&quot;RA~tw........(snip)........EeWsQ&quot;</span><span class="fu">,</span></div>
+<div class="sourceLine" id="cb5-5" data-line-number="5"><span class="dt">&quot;token_type&quot;</span><span class="fu">:</span><span class="st">&quot;Bearer&quot;</span><span class="fu">,</span></div>
+<div class="sourceLine" id="cb5-6" data-line-number="6"><span class="dt">&quot;expires_in&quot;</span><span class="fu">:</span><span class="dv">3600</span><span class="fu">,</span></div>
+<div class="sourceLine" id="cb5-7" data-line-number="7"><span class="dt">&quot;p_target&quot;</span><span class="fu">:</span><span class="st">&quot;https://{Personium_FQDN}/&quot;</span></div>
+<div class="sourceLine" id="cb5-8" data-line-number="8"><span class="fu">}</span></div></code></pre></li>
+<li><p>We will change the password using the acquired token. Password change can be changed by specifying an arbitrary password in 'X-Personium-Credential' in the request header of <a href="../apiref/current/215_Update_Account.html">Account Update API</a>.     In this example, &quot;abcd 1234&quot; is the changed password.</p>
+<blockquote>
+<p><strong>(Note)</strong><br />
+<strong>Because the unit management account has strong authority, please specify the password that is hard to guess as the changed password.</strong></p>
+</blockquote>
+<pre class="sourceCode sh" id="cb6"><code class="sourceCode bash"><div class="sourceLine" id="cb6-1" data-line-number="1"><span class="ex">curl</span> <span class="st">&quot;https://{Personium_FQDN}/unitadmin/__ctl/Account(&#39;{unitadmin_account}&#39;)&quot;</span> \</div>
+<div class="sourceLine" id="cb6-2" data-line-number="2">-X PUT -i -k \</div>
+<div class="sourceLine" id="cb6-3" data-line-number="3">-d <span class="st">&quot;{</span><span class="dt">\&quot;</span><span class="st">Name</span><span class="dt">\&quot;</span><span class="st">:</span><span class="dt">\&quot;</span><span class="st">{unitadmin_account}</span><span class="dt">\&quot;</span><span class="st">}&quot;</span> \</div>
+<div class="sourceLine" id="cb6-4" data-line-number="4">-H <span class="st">&quot;X-Personium-Credential:abcd1234&quot;</span> -H <span class="st">&quot;Content-Type: application/json&quot;</span> -H <span class="st">&quot;Authorization:Bearer {Token}&quot;</span></div></code></pre>
+<p>This API does not return a json style response (body). It is successful if response code 204 returns.</p>
+<pre><code>HTTP/1.1 204 No Content</code></pre>
+<blockquote>
+<p><strong>(Note)</strong><br />
+<strong>When forgetting the changed &quot;unit management password&quot;, it is necessary to change the unit management password by using the master token.</strong>　　</p>
+</blockquote></li>
+</ol>
+<h3>Rename and use the unitadmin account</h3>
+<p>The default configuration makes it easy to find out which account to obtain a token with strong privileges. Renaming the unitadmin account eliminates this condition. In this example, &quot;administrator&quot; is the new account.</p>
+<pre class="sourceCode sh" id="cb8"><code class="sourceCode bash"><div class="sourceLine" id="cb8-1" data-line-number="1"><span class="ex">curl</span> <span class="st">&quot;https://unitadmin.{Personium_FQDN}/__ctl/Account(&#39;unitadmin&#39;)&quot;</span> \</div>
+<div class="sourceLine" id="cb8-2" data-line-number="2">-X PUT -i -k \</div>
+<div class="sourceLine" id="cb8-3" data-line-number="3">-H <span class="st">&quot;X-Personium-Credential:{unitadmin_password}&quot;</span> -H <span class="st">&quot;Content-Type: application/json&quot;</span> -H <span class="st">&quot;Authorization: Bearer {Token}&quot;</span> \</div>
+<div class="sourceLine" id="cb8-4" data-line-number="4">-d <span class="st">&quot;{</span><span class="dt">\&quot;</span><span class="st">Name</span><span class="dt">\&quot;</span><span class="st">:</span><span class="dt">\&quot;</span><span class="st">administrator</span><span class="dt">\&quot;</span><span class="st">}&quot;</span></div></code></pre>
+<blockquote>
+<p><strong>(Note)</strong><br />
+<strong>After execution, existing Cell which has been created with unitadmin token can not be accessed except master token.</strong></p>
+</blockquote>
+<h3>Rename and use unitadmin Cell</h3>
+<p>The default configuration makes it easy to find the endpoint URL to get a token with strong privileges. Renaming the unitadmin Cell eliminates this condition. In this example, &quot;personium-admin&quot; is the modified Cell name.</p>
+<pre class="sourceCode sh" id="cb9"><code class="sourceCode bash"><div class="sourceLine" id="cb9-1" data-line-number="1"><span class="ex">curl</span> <span class="st">&quot;https://{Personium_FQDN}/__ctl/Cell(Name=&#39;unitadmin&#39;)&quot;</span> \</div>
+<div class="sourceLine" id="cb9-2" data-line-number="2">-X PUT -i -k \</div>
+<div class="sourceLine" id="cb9-3" data-line-number="3">-H <span class="st">&quot;Authorization: Bearer {Token}&quot;</span> -H <span class="st">&quot;Content-Type: application/json&quot;</span> \</div>
+<div class="sourceLine" id="cb9-4" data-line-number="4">-d <span class="st">&quot;{</span><span class="dt">\&quot;</span><span class="st">Name</span><span class="dt">\&quot;</span><span class="st">:</span><span class="dt">\&quot;</span><span class="st">personium-admin</span><span class="dt">\&quot;</span><span class="st">}&quot;</span></div></code></pre>
+<p>It is set in the unit-config.properties file on the AP server that the unitadmin Cell is a special Cell that can issue unit user tokens. It is also necessary to change the settings on the unit-config.properties file in order for the renamed Cell to continue to have the same privileges.</p>
+<ol>
+<li><p>Modification of 'personium-unit-config.properties'</p>
+<pre class="sourceCode sh" id="cb10"><code class="sourceCode bash"><div class="sourceLine" id="cb10-1" data-line-number="1"><span class="ex">vi</span> /personium/personium-core/conf/18888/personium-unit-config.properties</div></code></pre>
+<ul>
+<li>Modify the io.personium.core.unitUser.issuers parameter to give the renamed Cell the same permissions.</li>
+</ul>
+<p>eg.</p>
+<pre class="sourceCode sh" id="cb11"><code class="sourceCode bash"><div class="sourceLine" id="cb11-1" data-line-number="1"><span class="ex">...</span></div>
+<div class="sourceLine" id="cb11-2" data-line-number="2"><span class="co"># befor</span></div>
+<div class="sourceLine" id="cb11-3" data-line-number="3"><span class="ex">io.personium.core.unitUser.issuers</span>=personium-localunit:/unitadmin/</div>
+<div class="sourceLine" id="cb11-4" data-line-number="4"><span class="co"># after</span></div>
+<div class="sourceLine" id="cb11-5" data-line-number="5"><span class="ex">io.personium.core.unitUser.issuers</span>=personium-localunit:/personium-admin/</div>
+<div class="sourceLine" id="cb11-6" data-line-number="6"><span class="ex">...</span></div></code></pre></li>
+<li><p>Restart Tomcat</p>
+<pre class="sourceCode sh" id="cb12"><code class="sourceCode bash"><div class="sourceLine" id="cb12-1" data-line-number="1"><span class="ex">systemctl</span> restart tomcat</div></code></pre></li>
+</ol>
+<blockquote>
+<p><strong>(Note)</strong><br />
+<strong>After execution, existing Cell which has been created with unitadmin token can not be accessed except master token.</strong></p>
+</blockquote>
+<h3>Build and use a unit user management mechanism externally</h3>
+<p>If you have a separate mechanism for issuing tokens that meet the unit user token requirements, you do not need to use the unitadmin Cell itself.</p>
+</div>
+  <footer><nav>The Personium project is provided under the Apache 2.0 license. </nav></footer>
+</body>
+</html>
+

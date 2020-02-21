@@ -1,0 +1,1517 @@
+<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml" lang="" xml:lang="">
+<head>
+  <!-- default template -->
+  <meta charset="utf-8" />
+  <meta name="generator" content="pandoc" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=yes" />
+  <link rel="icon" href="/images/favicon.ico" type="image/x-icon"/>
+  <title>unit_config_list</title>
+  <script type="text/javascript">
+      var path = location.pathname.split('/');
+      var pathRoot = [ path[0], path[1], '' ].join('/');
+      var pathLang = [ path[0], path[1], path[2] , ''].join('/');
+
+      document.write('<link rel="stylesheet" href="' + pathRoot + 'personium.css" type="text/css" />');
+      document.write('<link rel="stylesheet" href="' + pathLang + 'locale.css" type="text/css" />');
+      var ps = document.createElement('script');
+      ps.src = pathRoot + 'personium_docs.js';
+      var s = document.getElementsByTagName('script')[0];
+      s.parentNode.insertBefore(ps, s);
+    
+      ps2 = document.createElement('script');
+      ps2.src = pathRoot + 'apiref_versions.js';
+      s = document.getElementsByTagName('script')[0];
+      s.parentNode.insertBefore(ps2, s);
+  </script>
+  <link href="https://fonts.googleapis.com/css?family=Raleway" rel="stylesheet">
+  <link href="https://fonts.googleapis.com/css?family=Open+Sans" rel="stylesheet">
+  
+  <!--[if lt IE 9]>
+    <script src="//cdnjs.cloudflare.com/ajax/libs/html5shiv/3.7.3/html5shiv-printshiv.min.js"></script>
+  <![endif]-->
+</head>
+<body>
+  <header>
+    <nav>
+    <div id="logo"><a href="/"><img src="https://personium.io/images/logo-quantify-dark.png"></a></div>
+    <ul>
+      <li class="submenu">
+        <a href="#" >Introduction</a>
+        <ul>
+            <li><a href="javascript:p.toPage('/overview/001_Introduction.html');">What's Personium?</a></li>
+            <li><a href="javascript:p.toPage('/user_guide/001_Personium_Architecture.html');">Architecture</a></li>
+            <li><a href="javascript:p.toPage('/user_guide/008_Glossary.html');">Glossary</a></li>
+        </ul>
+      </li>
+      <li class="submenu">
+        <a href="#" >User Guide</a>
+        <ul>
+            <li><a href="javascript:p.toPage('/app-developer/');">for App Developer</a></li>
+            <li><a href="javascript:p.toPage('/cell-gui-developer/');">for Cell GUI Developer</a></li>
+            <li><a href="javascript:p.toPage('/unit-administrator/');">for Unit Administrator</a></li>
+            <li><a href="javascript:p.toPage('/server-operator/');">for Server Software Operator</a></li>
+            <li><a href="javascript:p.toPage('/document-writer/');">for Documentation Contributor</a></li>
+            <li><a href="javascript:p.toPage('/plugin-developer/');">for Server Plugin Developer</a></li>
+            <li><a href="javascript:p.toPage('/software-developer/');">for Server Developer</a></li>
+        </ul>
+      </li>
+      <li class="submenu">
+        <a href="#" >API Reference</a>
+        <ul id="api-ref-list">
+            <li><a href="javascript:p.toPage('/user_guide/990_Old_Version_API_Ref.html');">older versions</a></li>
+        </ul>
+      </li>
+      <li class="submenu">
+        <a href="#" >Languages</a>
+        <ul>
+            <li><a href="javascript:p.setLang('en');">English</a></li>
+            <li><a href="javascript:p.setLang('ja');">Japanese</a></li>
+        </ul>
+      </li>
+    </ul>
+    </nav>
+  </header>
+
+<div id="container">
+<h1>Unitの設定一覧</h1>
+<p>ユニット設定ファイルは、Personiumユニットの設定を行うための &quot;personium-unit-config.properties&quot; という名前のjavaプロパティファイルです。このファイルを所定の場所に配置しサーブレットコンテナを起動すると、ユニットはこのファイルで定義された項目はその設定値を使い、定義されていない項目についてはデフォルトの設定値を使って動作します。</p>
+<h2>デフォルト設定値</h2>
+<p>ユニット設定のデフォルト設定値はGitHubソース上の &quot;personium-unit-config-default.properties&quot; ファイル(war ファイルに同梱)で定義されています。 このファイル自体に変更を加えることでもユニット設定は切替わりますが、非推奨です。</p>
+<h2>ユニット設定ファイルの配置場所</h2>
+<p>ユニット設定ファイルの配置場所はJavaのシステムプロパティで指定可能です。</p>
+<pre><code>io.personium.configurationFile={ファイル名まで含めたPath}</code></pre>
+<p>指定された場所にファイルが存在しない、またはシステムプロパティで場所が指定されていない場合、クラスパス上の&quot;personium-unit-config.properties&quot;を読み込みます。</p>
+<p>personium-unit-config.propertiesが正しく読み取られたかどうかを確認するには、起動ログをご確認ください。</p>
+<h4>ユニット設定ファイルのキー名について</h4>
+<p>すべてのキーは、以下のキープレフィックスを持ちます。</p>
+<pre><code>io.personium.core.</code></pre>
+<p>例としてユニット証明書の設定には次のキーを使用する必要があります。</p>
+<pre><code>io.personium.core.x509.crt</code></pre>
+<h3>変更必須設定</h3>
+<p>Personiumを運用する上でデフォルトから変更を必須としている設定です。これら設定を変更せずにPersoniumユニットを起動すると、正しく動作しなかったり、セキュリティ上の問題が発生します。必ず設定を行ってください。</p>
+<table style="width:33%;">
+<colgroup>
+<col style="width: 5%" />
+<col style="width: 5%" />
+<col style="width: 5%" />
+<col style="width: 5%" />
+<col style="width: 5%" />
+<col style="width: 5%" />
+</colgroup>
+<thead>
+<tr class="header">
+<th style="text-align: left;">キー</th>
+<th style="text-align: left;">説明</th>
+<th style="text-align: left;">値</th>
+<th style="text-align: left;">記載例</th>
+<th style="text-align: left;">使用コンポーネント</th>
+<th style="text-align: left;">備考</th>
+</tr>
+</thead>
+<tbody>
+<tr class="odd">
+<td style="text-align: left;">x509.key</td>
+<td style="text-align: left;">X509秘密鍵を配置したパス</td>
+<td style="text-align: left;">PEM形式秘密鍵のフルパス</td>
+<td style="text-align: left;">/opt/x509/localhost.key</td>
+<td style="text-align: left;">core, engine</td>
+<td style="text-align: left;"><br></td>
+</tr>
+<tr class="even">
+<td style="text-align: left;">x509.crt</td>
+<td style="text-align: left;">X509証明書を配置したパス</td>
+<td style="text-align: left;">PEM形式証明書のフルパス</td>
+<td style="text-align: left;">/opt/x509/localhost.crt</td>
+<td style="text-align: left;">core, engine</td>
+<td style="text-align: left;"><br></td>
+</tr>
+<tr class="odd">
+<td style="text-align: left;">x509.root</td>
+<td style="text-align: left;">X509ルート証明書を配置したパス</td>
+<td style="text-align: left;">信頼すべきPEM形式ルート証明書のフルパス<br>スペース区切りで複数指定可能</td>
+<td style="text-align: left;">/opt/x509/personium_ca.crt</td>
+<td style="text-align: left;">core, engine</td>
+<td style="text-align: left;">何も指定しなければ(キーの定義もしない)、Personiumプロジェクト公式CAの証明書は自動的に信頼されます。</td>
+</tr>
+<tr class="even">
+<td style="text-align: left;">security.secret16</td>
+<td style="text-align: left;">トークンとファイル生成時の暗号化キー</td>
+<td style="text-align: left;">16桁の16進文字列</td>
+<td style="text-align: left;">secret16abcdefgh</td>
+<td style="text-align: left;">core, engine</td>
+<td style="text-align: left;"><br></td>
+</tr>
+<tr class="odd">
+<td style="text-align: left;">unitUser.issuers</td>
+<td style="text-align: left;">ユニットユーザトークン発⾏者として認定する文字列<br>セルURLを指定することでそのセルをユニットユーザトークン発行者として指定できます</td>
+<td style="text-align: left;">URL<br>スペース区切りで複数指定可能</td>
+<td style="text-align: left;">http://localhost:8080/UnitUserCell/</td>
+<td style="text-align: left;">core</td>
+<td style="text-align: left;"><br></td>
+</tr>
+</tbody>
+</table>
+<h3>変更任意設定</h3>
+<p>Personiumを運用する上でデフォルトからの変更を任意としている設定です。</p>
+<h4>基本設定</h4>
+<table style="width:33%;">
+<colgroup>
+<col style="width: 5%" />
+<col style="width: 5%" />
+<col style="width: 5%" />
+<col style="width: 5%" />
+<col style="width: 5%" />
+<col style="width: 5%" />
+</colgroup>
+<thead>
+<tr class="header">
+<th style="text-align: left;">キー</th>
+<th style="text-align: left;">説明</th>
+<th style="text-align: left;">値</th>
+<th style="text-align: left;">デフォルト値</th>
+<th style="text-align: left;">使用コンポーネント</th>
+<th style="text-align: left;">備考</th>
+</tr>
+</thead>
+<tbody>
+<tr class="odd">
+<td style="text-align: left;">version</td>
+<td style="text-align: left;">バージョン</td>
+<td style="text-align: left;">文字列</td>
+<td style="text-align: left;"></td>
+<td style="text-align: left;">core, engine</td>
+<td style="text-align: left;"><br></td>
+</tr>
+<tr class="even">
+<td style="text-align: left;">thread.pool.num</td>
+<td style="text-align: left;">スレッドプール数</td>
+<td style="text-align: left;">int</td>
+<td style="text-align: left;">20</td>
+<td style="text-align: left;">core</td>
+<td style="text-align: left;">v1.5.4～v1.6.9。PersoniumUnit全体のスレッドプール数。v1.6.10以降は機能ごとにスレッドプールを分割。</td>
+</tr>
+<tr class="odd">
+<td style="text-align: left;">thread.pool.num.io.cell</td>
+<td style="text-align: left;">Cell Export/Importで使用するスレッドプール数</td>
+<td style="text-align: left;">int</td>
+<td style="text-align: left;">10</td>
+<td style="text-align: left;">core</td>
+<td style="text-align: left;">v1.6.10以降。</td>
+</tr>
+<tr class="even">
+<td style="text-align: left;">thread.pool.num.io.box</td>
+<td style="text-align: left;">Box Export/Installで使用するスレッドプール数</td>
+<td style="text-align: left;">int</td>
+<td style="text-align: left;">20</td>
+<td style="text-align: left;">core</td>
+<td style="text-align: left;">v1.6.10以降。</td>
+</tr>
+<tr class="odd">
+<td style="text-align: left;">thread.pool.num.misc</td>
+<td style="text-align: left;">汎用スレッドプール数</td>
+<td style="text-align: left;">int</td>
+<td style="text-align: left;">10</td>
+<td style="text-align: left;">core</td>
+<td style="text-align: left;">v1.6.10以降。</td>
+</tr>
+<tr class="even">
+<td style="text-align: left;">plugin.path</td>
+<td style="text-align: left;">Personiumプラグイン配置先パス</td>
+<td style="text-align: left;">プラグイン配置先フルパス</td>
+<td style="text-align: left;">/personium/personium-core/plugins</td>
+<td style="text-align: left;">core</td>
+<td style="text-align: left;"><br></td>
+</tr>
+<tr class="odd">
+<td style="text-align: left;">unitScheme</td>
+<td style="text-align: left;">ユニットのスキーム設定</td>
+<td style="text-align: left;">&quot;http&quot; または &quot;https&quot;</td>
+<td style="text-align: left;">https</td>
+<td style="text-align: left;">core</td>
+<td style="text-align: left;">開発用途にhttpを設定することも可能ですが、運用時には必ずhttpsを設定してください。</td>
+</tr>
+<tr class="even">
+<td style="text-align: left;">unitPort</td>
+<td style="text-align: left;">ユニットのポート番号</td>
+<td style="text-align: left;">ポート番号</td>
+<td style="text-align: left;"></td>
+<td style="text-align: left;">core</td>
+<td style="text-align: left;">v1.6.0以降。UnitURLが &quot;https://p-host:8080/&quot; の場合、unitPortは8080になります。UnitURLが &quot;https://p-host/&quot; の場合、unitPortは設定しません。</td>
+</tr>
+<tr class="odd">
+<td style="text-align: left;">masterToken</td>
+<td style="text-align: left;">マスタートークン</td>
+<td style="text-align: left;">トークン文字列</td>
+<td style="text-align: left;"></td>
+<td style="text-align: left;">core, engine</td>
+<td style="text-align: left;">デフォルトは無効です。開発用途などで設定することもできますが、運用時には設定しないでください。</td>
+</tr>
+<tr class="even">
+<td style="text-align: left;">pathBasedCellUrl.enabled</td>
+<td style="text-align: left;">セルにアクセスするURL形式</td>
+<td style="text-align: left;">true:path based cell url<br>false:per cell fqdn url</td>
+<td style="text-align: left;">v1.7.5以前:true<br>v1.7.6以降:false</td>
+<td style="text-align: left;">core</td>
+<td style="text-align: left;">v1.7.0以降</td>
+</tr>
+</tbody>
+</table>
+<h4>Cell</h4>
+<table style="width:33%;">
+<colgroup>
+<col style="width: 5%" />
+<col style="width: 5%" />
+<col style="width: 5%" />
+<col style="width: 5%" />
+<col style="width: 5%" />
+<col style="width: 5%" />
+</colgroup>
+<thead>
+<tr class="header">
+<th style="text-align: left;">キー</th>
+<th style="text-align: left;">説明</th>
+<th style="text-align: left;">値</th>
+<th style="text-align: left;">デフォルト値</th>
+<th style="text-align: left;">使用コンポーネント</th>
+<th style="text-align: left;">備考</th>
+</tr>
+</thead>
+<tbody>
+<tr class="odd">
+<td style="text-align: left;">cell.relayhtmlurl.default</td>
+<td style="text-align: left;">Cellルート取得API実行時にアクセスするURL</td>
+<td style="text-align: left;">URL</td>
+<td style="text-align: left;"></td>
+<td style="text-align: left;">core</td>
+<td style="text-align: left;">v1.6.15以降。</td>
+</tr>
+<tr class="even">
+<td style="text-align: left;">cell.authorizationhtmlurl.default</td>
+<td style="text-align: left;">OAuth2.0 認可エンドポイントAPIの認証フォームリクエスト実行時にアクセスするURL</td>
+<td style="text-align: left;">URL</td>
+<td style="text-align: left;"></td>
+<td style="text-align: left;">core</td>
+<td style="text-align: left;">v1.6.15以降。</td>
+</tr>
+<tr class="odd">
+<td style="text-align: left;">cell.authorizationpasswordchangehtmlurl.default</td>
+<td style="text-align: left;">OAuth2.0 認可エンドポイントAPIのパスワード変更フォームリクエスト実行時にアクセスするURL</td>
+<td style="text-align: left;">URL</td>
+<td style="text-align: left;"></td>
+<td style="text-align: left;">core</td>
+<td style="text-align: left;">v1.7.7以降。</td>
+</tr>
+</tbody>
+</table>
+<h4>OData</h4>
+<table style="width:33%;">
+<colgroup>
+<col style="width: 5%" />
+<col style="width: 5%" />
+<col style="width: 5%" />
+<col style="width: 5%" />
+<col style="width: 5%" />
+<col style="width: 5%" />
+</colgroup>
+<thead>
+<tr class="header">
+<th style="text-align: left;">キー</th>
+<th style="text-align: left;">説明</th>
+<th style="text-align: left;">値</th>
+<th style="text-align: left;">デフォルト値</th>
+<th style="text-align: left;">使用コンポーネント</th>
+<th style="text-align: left;">備考</th>
+</tr>
+</thead>
+<tbody>
+<tr class="odd">
+<td style="text-align: left;">odata.batch.bulkRequestMaxSize</td>
+<td style="text-align: left;">$batch処理を行う際のリクエスト最大件数</td>
+<td style="text-align: left;">Int</td>
+<td style="text-align: left;">1000</td>
+<td style="text-align: left;">core</td>
+<td style="text-align: left;"><br></td>
+</tr>
+<tr class="even">
+<td style="text-align: left;">odata.batch.timeoutInMillis</td>
+<td style="text-align: left;">$batch処理のタイムアウト時間(msec)</td>
+<td style="text-align: left;">Long</td>
+<td style="text-align: left;">270000</td>
+<td style="text-align: left;">core</td>
+<td style="text-align: left;"><br></td>
+</tr>
+<tr class="odd">
+<td style="text-align: left;">odata.batch.sleepInMillis</td>
+<td style="text-align: left;">$batch処理のスリープ時間(msec)</td>
+<td style="text-align: left;">Long</td>
+<td style="text-align: left;">50</td>
+<td style="text-align: left;">core</td>
+<td style="text-align: left;"><br></td>
+</tr>
+<tr class="even">
+<td style="text-align: left;">odata.batch.sleepIntervalInMillis</td>
+<td style="text-align: left;">$batch処理のスリープ間隔(msec)</td>
+<td style="text-align: left;">Long</td>
+<td style="text-align: left;">1000</td>
+<td style="text-align: left;">core</td>
+<td style="text-align: left;"><br></td>
+</tr>
+<tr class="odd">
+<td style="text-align: left;">odata.links.NtoN.maxnum</td>
+<td style="text-align: left;">N:Nの$linksが作成可能な最大件数</td>
+<td style="text-align: left;">Int</td>
+<td style="text-align: left;">v1.7.5以前:10000<br>v1.7.6以降:150000</td>
+<td style="text-align: left;">core</td>
+<td style="text-align: left;"><br></td>
+</tr>
+<tr class="even">
+<td style="text-align: left;">odata.query.expand.top.maxnum</td>
+<td style="text-align: left;">$expand指定時の$top最大数</td>
+<td style="text-align: left;">Int</td>
+<td style="text-align: left;">100</td>
+<td style="text-align: left;">core</td>
+<td style="text-align: left;"><br></td>
+</tr>
+<tr class="odd">
+<td style="text-align: left;">odata.expand.retrieve.maxnum</td>
+<td style="text-align: left;">$expandの最大展開数（一件取得時）</td>
+<td style="text-align: left;">Int</td>
+<td style="text-align: left;">1000</td>
+<td style="text-align: left;">core</td>
+<td style="text-align: left;"><br></td>
+</tr>
+<tr class="even">
+<td style="text-align: left;">odata.query.top.maxnum</td>
+<td style="text-align: left;">$topの最大値数</td>
+<td style="text-align: left;">Int</td>
+<td style="text-align: left;">10000</td>
+<td style="text-align: left;">core</td>
+<td style="text-align: left;"><br></td>
+</tr>
+<tr class="odd">
+<td style="text-align: left;">odata.query.skip.maxnum</td>
+<td style="text-align: left;">$skipの最大値数</td>
+<td style="text-align: left;">Int</td>
+<td style="text-align: left;">100000</td>
+<td style="text-align: left;">core</td>
+<td style="text-align: left;"><br></td>
+</tr>
+<tr class="even">
+<td style="text-align: left;">odata.query.top.defaultnum</td>
+<td style="text-align: left;">一覧取得時のデフォルト返却件数</td>
+<td style="text-align: left;">Int</td>
+<td style="text-align: left;">25</td>
+<td style="text-align: left;">core</td>
+<td style="text-align: left;"><br></td>
+</tr>
+<tr class="odd">
+<td style="text-align: left;">odata.query.expand.property.maxnum.list</td>
+<td style="text-align: left;">$expandのプロパティの最大値数（一覧取得時）</td>
+<td style="text-align: left;">Int</td>
+<td style="text-align: left;">2</td>
+<td style="text-align: left;">core</td>
+<td style="text-align: left;"><br></td>
+</tr>
+<tr class="even">
+<td style="text-align: left;">odata.query.expand.property.maxnum.retrieve</td>
+<td style="text-align: left;">$expandのプロパティの最大値数（一件取得時）</td>
+<td style="text-align: left;">Int</td>
+<td style="text-align: left;">10</td>
+<td style="text-align: left;">core</td>
+<td style="text-align: left;"><br></td>
+</tr>
+</tbody>
+</table>
+<h4>アカウント</h4>
+<table style="width:33%;">
+<colgroup>
+<col style="width: 5%" />
+<col style="width: 5%" />
+<col style="width: 5%" />
+<col style="width: 5%" />
+<col style="width: 5%" />
+<col style="width: 5%" />
+</colgroup>
+<thead>
+<tr class="header">
+<th style="text-align: left;">キー</th>
+<th style="text-align: left;">説明</th>
+<th style="text-align: left;">値</th>
+<th style="text-align: left;">デフォルト値</th>
+<th style="text-align: left;">使用コンポーネント</th>
+<th style="text-align: left;">備考</th>
+</tr>
+</thead>
+<tbody>
+<tr class="odd">
+<td style="text-align: left;">account.lastauthenticated.enabled</td>
+<td style="text-align: left;">パスワード認証成功時に、Accountの最終ログイン時刻を更新するか</td>
+<td style="text-align: left;">true:更新する<br>false:更新しない</td>
+<td style="text-align: left;">true</td>
+<td style="text-align: left;">core</td>
+<td style="text-align: left;">～v1.7.4<br>v1.7.5で廃止<br>最終更新日時を記録すると認証処理内部で登録処理が⾏われるため、書き込みの多重ロックの影響を受けます（ロック範囲はセル単位）。<br>また書き込みが発生するため性能の低下が発生します。<br>Basic認証はこの設定で最終ログイン日時の記録は行われません。</td>
+</tr>
+</tbody>
+</table>
+<h4>WebDAV</h4>
+<table>
+<thead>
+<tr class="header">
+<th style="text-align: left;">キー</th>
+<th style="text-align: left;">説明</th>
+<th style="text-align: left;">値</th>
+<th style="text-align: left;">デフォルト値</th>
+<th style="text-align: left;">使用コンポーネント</th>
+<th style="text-align: left;">備考</th>
+</tr>
+</thead>
+<tbody>
+<tr class="odd">
+<td style="text-align: left;">dav.childresource.maxnum</td>
+<td style="text-align: left;">コレクションの子要素の最大数</td>
+<td style="text-align: left;">Int</td>
+<td style="text-align: left;">1024</td>
+<td style="text-align: left;">core</td>
+<td style="text-align: left;"><br></td>
+</tr>
+<tr class="even">
+<td style="text-align: left;">dav.depth.maxnum</td>
+<td style="text-align: left;">コレクションの階層の深さの最大数</td>
+<td style="text-align: left;">Int</td>
+<td style="text-align: left;">50</td>
+<td style="text-align: left;">core</td>
+<td style="text-align: left;"><br></td>
+</tr>
+</tbody>
+</table>
+<h4>セキュリティ</h4>
+<table style="width:33%;">
+<colgroup>
+<col style="width: 5%" />
+<col style="width: 5%" />
+<col style="width: 5%" />
+<col style="width: 5%" />
+<col style="width: 5%" />
+<col style="width: 5%" />
+</colgroup>
+<thead>
+<tr class="header">
+<th style="text-align: left;">キー</th>
+<th style="text-align: left;">説明</th>
+<th style="text-align: left;">値</th>
+<th style="text-align: left;">デフォルト値</th>
+<th style="text-align: left;">使用コンポーネント</th>
+<th style="text-align: left;">備考</th>
+</tr>
+</thead>
+<tbody>
+<tr class="odd">
+<td style="text-align: left;">security.dav.encrypt.enabled</td>
+<td style="text-align: left;">WebDAVファイルを暗号化するか</td>
+<td style="text-align: left;">true:暗号化する<br>false:暗号化しない</td>
+<td style="text-align: left;">false</td>
+<td style="text-align: left;">core</td>
+<td style="text-align: left;">v1.5.1以降</td>
+</tr>
+<tr class="even">
+<td style="text-align: left;">security.auth.password.regex</td>
+<td style="text-align: left;">パスワード制限</td>
+<td style="text-align: left;">文字列<br>正規表現パターン</td>
+<td style="text-align: left;">^[a-zA-Z0-9-_!$*=^`{|}~.@]{6,32}$</td>
+<td style="text-align: left;">core</td>
+<td style="text-align: left;">v1.7.5以降<br>※パスワードの文字数は1〜256です。制限に関係なく、257文字以上のパスワードを設定することはできません。</td>
+</tr>
+<tr class="odd">
+<td style="text-align: left;">security.auth.password.hashAlgorithm</td>
+<td style="text-align: left;">パスワードのハッシュアルゴリズム</td>
+<td style="text-align: left;">文字列<br>&quot;scrypt&quot;または&quot;sha-256&quot;</td>
+<td style="text-align: left;">scrypt</td>
+<td style="text-align: left;">core</td>
+<td style="text-align: left;">v1.7.8以降<br>※&quot;scrypt&quot;を推奨<br>※&quot;sha-256&quot;は非推奨（旧方式のハッシュアルゴリズム。後に削除する予定。）</td>
+</tr>
+<tr class="even">
+<td style="text-align: left;">security.auth.password.scrypt.cpuCost</td>
+<td style="text-align: left;">scryptハッシュのCPUコスト</td>
+<td style="text-align: left;">Int<br>2のべき乗</td>
+<td style="text-align: left;">16384</td>
+<td style="text-align: left;">core</td>
+<td style="text-align: left;">v1.7.8以降</td>
+</tr>
+<tr class="odd">
+<td style="text-align: left;">security.auth.password.scrypt.memoryCost</td>
+<td style="text-align: left;">scryptハッシュのメモリコスト</td>
+<td style="text-align: left;">Int</td>
+<td style="text-align: left;">8</td>
+<td style="text-align: left;">core</td>
+<td style="text-align: left;">v1.7.8以降</td>
+</tr>
+<tr class="even">
+<td style="text-align: left;">security.auth.password.scrypt.parallelization</td>
+<td style="text-align: left;">scryptハッシュの並列化数</td>
+<td style="text-align: left;">Int</td>
+<td style="text-align: left;">1</td>
+<td style="text-align: left;">core</td>
+<td style="text-align: left;">v1.7.8以降</td>
+</tr>
+<tr class="odd">
+<td style="text-align: left;">security.auth.password.scrypt.keyLength</td>
+<td style="text-align: left;">scryptハッシュのキー長</td>
+<td style="text-align: left;">Int</td>
+<td style="text-align: left;">32</td>
+<td style="text-align: left;">core</td>
+<td style="text-align: left;">v1.7.8以降</td>
+</tr>
+<tr class="even">
+<td style="text-align: left;">security.auth.password.scrypt.saltLength</td>
+<td style="text-align: left;">scryptハッシュのソルト長</td>
+<td style="text-align: left;">Int</td>
+<td style="text-align: left;">64</td>
+<td style="text-align: left;">core</td>
+<td style="text-align: left;">v1.7.8以降</td>
+</tr>
+<tr class="odd">
+<td style="text-align: left;">security.auth.password.salt</td>
+<td style="text-align: left;">SHA256アルゴリズム使用時のパスワードハッシュソルト値</td>
+<td style="text-align: left;">16桁の16進文字列</td>
+<td style="text-align: left;">saltijkl</td>
+<td style="text-align: left;">core</td>
+<td style="text-align: left;">scrypt使用時は無効</td>
+</tr>
+<tr class="even">
+<td style="text-align: left;">security.token.defaultScope.ropc</td>
+<td style="text-align: left;">ROPCでのアクセストークン発行時に付与されるデフォルト (最大) スコープ</td>
+<td style="text-align: left;">スペース区切りのスコープ情報</td>
+<td style="text-align: left;">root</td>
+<td style="text-align: left;">core</td>
+<td style="text-align: left;">v1.7.18以降</td>
+</tr>
+<tr class="odd">
+<td style="text-align: left;">security.token.defaultScope.assertion</td>
+<td style="text-align: left;">assertionでのアクセストークン発行時に付与されるデフォルト (最大) スコープ</td>
+<td style="text-align: left;">スペース区切りのスコープ情報</td>
+<td style="text-align: left;">root</td>
+<td style="text-align: left;">core</td>
+<td style="text-align: left;">v1.7.18以降</td>
+</tr>
+<tr class="even">
+<td style="text-align: left;">security.token.defaultScope.grant_code</td>
+<td style="text-align: left;">grant_codeでのアクセストークン発行時に付与されるデフォルト (最大) スコープ</td>
+<td style="text-align: left;">スペース区切りのスコープ情報</td>
+<td style="text-align: left;">root</td>
+<td style="text-align: left;">core</td>
+<td style="text-align: left;">v1.7.18以降</td>
+</tr>
+</tbody>
+</table>
+<h4>Lock</h4>
+<table style="width:33%;">
+<colgroup>
+<col style="width: 5%" />
+<col style="width: 5%" />
+<col style="width: 5%" />
+<col style="width: 5%" />
+<col style="width: 5%" />
+<col style="width: 5%" />
+</colgroup>
+<thead>
+<tr class="header">
+<th style="text-align: left;">キー</th>
+<th style="text-align: left;">説明</th>
+<th style="text-align: left;">値</th>
+<th style="text-align: left;">デフォルト値</th>
+<th style="text-align: left;">使用コンポーネント</th>
+<th style="text-align: left;">備考</th>
+</tr>
+</thead>
+<tbody>
+<tr class="odd">
+<td style="text-align: left;">lock.type</td>
+<td style="text-align: left;">Lockのタイプ</td>
+<td style="text-align: left;">&quot;memcached&quot;:Memcached<br>&quot;inProcess&quot;:InProcess</td>
+<td style="text-align: left;">memcached</td>
+<td style="text-align: left;">core</td>
+<td style="text-align: left;"><br></td>
+</tr>
+<tr class="even">
+<td style="text-align: left;">lock.accountlock.time</td>
+<td style="text-align: left;">アカウントロックの有効期限(sec)<br>認証失敗時にそのアカウントの認証をロックし、認証を失敗させる期間</td>
+<td style="text-align: left;">Int</td>
+<td style="text-align: left;">1</td>
+<td style="text-align: left;">core</td>
+<td style="text-align: left;">～v1.7.4<br>v1.7.5で廃止</td>
+</tr>
+<tr class="odd">
+<td style="text-align: left;">lock.retry.times</td>
+<td style="text-align: left;">ロック取得時のリトライ回数</td>
+<td style="text-align: left;">Int</td>
+<td style="text-align: left;">50</td>
+<td style="text-align: left;">core</td>
+<td style="text-align: left;"><br></td>
+</tr>
+<tr class="even">
+<td style="text-align: left;">lock.retry.interval</td>
+<td style="text-align: left;">ロック取得リトライ時の間隔(msec)</td>
+<td style="text-align: left;">Long</td>
+<td style="text-align: left;">100</td>
+<td style="text-align: left;">core</td>
+<td style="text-align: left;"><br></td>
+</tr>
+<tr class="odd">
+<td style="text-align: left;">lock.cell.retry.times</td>
+<td style="text-align: left;">セルロック取得時のリトライ回数</td>
+<td style="text-align: left;">Int</td>
+<td style="text-align: left;">50</td>
+<td style="text-align: left;">core</td>
+<td style="text-align: left;"><br></td>
+</tr>
+<tr class="even">
+<td style="text-align: left;">lock.cell.retry.interval</td>
+<td style="text-align: left;">セルロック取得リトライ時の間隔(msec)</td>
+<td style="text-align: left;">Long</td>
+<td style="text-align: left;">100</td>
+<td style="text-align: left;">core</td>
+<td style="text-align: left;"><br></td>
+</tr>
+<tr class="odd">
+<td style="text-align: left;">lock.memcached.host</td>
+<td style="text-align: left;">ロックをmemcachedに保持する際のmemcachedホスト名</td>
+<td style="text-align: left;">ホスト名</td>
+<td style="text-align: left;">localhost</td>
+<td style="text-align: left;">core</td>
+<td style="text-align: left;"><br></td>
+</tr>
+<tr class="even">
+<td style="text-align: left;">lock.memcached.port</td>
+<td style="text-align: left;">ロックをmemcachedに保持する際のmemcachedポート番号</td>
+<td style="text-align: left;">ポート番号</td>
+<td style="text-align: left;">11211</td>
+<td style="text-align: left;">core</td>
+<td style="text-align: left;"><br></td>
+</tr>
+<tr class="odd">
+<td style="text-align: left;">lock.memcached.opTimeout</td>
+<td style="text-align: left;">ロック用memcached operationタイムアウト値(msec)</td>
+<td style="text-align: left;">Long</td>
+<td style="text-align: left;">12000</td>
+<td style="text-align: left;">core</td>
+<td style="text-align: left;"><br></td>
+</tr>
+</tbody>
+</table>
+<h4>認証</h4>
+<table style="width:33%;">
+<colgroup>
+<col style="width: 5%" />
+<col style="width: 5%" />
+<col style="width: 5%" />
+<col style="width: 5%" />
+<col style="width: 5%" />
+<col style="width: 5%" />
+</colgroup>
+<thead>
+<tr class="header">
+<th style="text-align: left;">キー</th>
+<th style="text-align: left;">説明</th>
+<th style="text-align: left;">値</th>
+<th style="text-align: left;">デフォルト値</th>
+<th style="text-align: left;">使用コンポーネント</th>
+<th style="text-align: left;">備考</th>
+</tr>
+</thead>
+<tbody>
+<tr class="odd">
+<td style="text-align: left;">authn.account.lockCount</td>
+<td style="text-align: left;">アカウントロックの閾値<br>連続した認証失敗時にそのアカウントをロックし、認証を失敗させる回数</td>
+<td style="text-align: left;">Int<br>0～100</td>
+<td style="text-align: left;">0</td>
+<td style="text-align: left;">core</td>
+<td style="text-align: left;">v1.7.5以降<br>0に設定するとアカウントロックを行いません</td>
+</tr>
+<tr class="even">
+<td style="text-align: left;">authn.account.lockTime</td>
+<td style="text-align: left;">アカウントロック期間(sec)<br>連続した認証失敗時にそのアカウントをロックし、認証を失敗させる期間<br></td>
+<td style="text-align: left;">Int<br>0～2592000（30日）</td>
+<td style="text-align: left;">0</td>
+<td style="text-align: left;">core</td>
+<td style="text-align: left;">v1.7.5以降<br>0に設定するとアカウントロックを行いません</td>
+</tr>
+<tr class="odd">
+<td style="text-align: left;">authn.account.validAuthnInterval</td>
+<td style="text-align: left;">有効な認証間隔(sec)<br>認証間隔よりも短い間隔で認証試行を失敗させる</td>
+<td style="text-align: left;">Int</td>
+<td style="text-align: left;">1</td>
+<td style="text-align: left;">core</td>
+<td style="text-align: left;">v1.7.5以降</td>
+</tr>
+</tbody>
+</table>
+<h4>Elasticsearch</h4>
+<table style="width:33%;">
+<colgroup>
+<col style="width: 5%" />
+<col style="width: 5%" />
+<col style="width: 5%" />
+<col style="width: 5%" />
+<col style="width: 5%" />
+<col style="width: 5%" />
+</colgroup>
+<thead>
+<tr class="header">
+<th style="text-align: left;">キー</th>
+<th style="text-align: left;">説明</th>
+<th style="text-align: left;">値</th>
+<th style="text-align: left;">デフォルト値</th>
+<th style="text-align: left;">使用コンポーネント</th>
+<th style="text-align: left;">備考</th>
+</tr>
+</thead>
+<tbody>
+<tr class="odd">
+<td style="text-align: left;">es.hosts</td>
+<td style="text-align: left;">Elasticsearch ホスト名</td>
+<td style="text-align: left;">Elasticsearchのノードを{host:port}形式で指定<br>カンマ区切りで複数指定可能</td>
+<td style="text-align: left;">localhost:9300</td>
+<td style="text-align: left;">core, engine</td>
+<td style="text-align: left;">接続可能なノードが１つでも指定されていれば動作可能です。</td>
+</tr>
+<tr class="even">
+<td style="text-align: left;">es.cluster.name</td>
+<td style="text-align: left;">Elasticsearch クラスタ名</td>
+<td style="text-align: left;">文字列</td>
+<td style="text-align: left;">clusterpersonium</td>
+<td style="text-align: left;">core, engine</td>
+<td style="text-align: left;"><br></td>
+</tr>
+<tr class="odd">
+<td style="text-align: left;">es.unitPrefix</td>
+<td style="text-align: left;">Elasticsearchを使用する際、index生成時のindex名に用いるプレフィックス</td>
+<td style="text-align: left;">文字列</td>
+<td style="text-align: left;">u0</td>
+<td style="text-align: left;">core, engine</td>
+<td style="text-align: left;">通常はユニット名を指定します。</td>
+</tr>
+<tr class="even">
+<td style="text-align: left;">es.topnum</td>
+<td style="text-align: left;">Elasticsearch の検索結果出力上限数</td>
+<td style="text-align: left;">Int</td>
+<td style="text-align: left;">10000</td>
+<td style="text-align: left;">core</td>
+<td style="text-align: left;"><br></td>
+</tr>
+<tr class="odd">
+<td style="text-align: left;">es.retryTimes</td>
+<td style="text-align: left;">エラー発生時のリトライ回数</td>
+<td style="text-align: left;">Int</td>
+<td style="text-align: left;">3</td>
+<td style="text-align: left;">core</td>
+<td style="text-align: left;"><br></td>
+</tr>
+<tr class="even">
+<td style="text-align: left;">es.retryInterval</td>
+<td style="text-align: left;">エラー発生時のリトライ間隔(msec)</td>
+<td style="text-align: left;">Int</td>
+<td style="text-align: left;">1500</td>
+<td style="text-align: left;">core</td>
+<td style="text-align: left;"><br></td>
+</tr>
+<tr class="odd">
+<td style="text-align: left;">es.index.numberOfShards</td>
+<td style="text-align: left;">Elasticsearch シャード数</td>
+<td style="text-align: left;">Int</td>
+<td style="text-align: left;">10</td>
+<td style="text-align: left;">core</td>
+<td style="text-align: left;">v1.7.5以降</td>
+</tr>
+<tr class="even">
+<td style="text-align: left;">es.index.numberOfReplicas</td>
+<td style="text-align: left;">Elasticsearch レプリカ数</td>
+<td style="text-align: left;">Int</td>
+<td style="text-align: left;">0</td>
+<td style="text-align: left;">core</td>
+<td style="text-align: left;">v1.7.5以降</td>
+</tr>
+<tr class="odd">
+<td style="text-align: left;">es.index.maxResultWindow</td>
+<td style="text-align: left;">Elasticsearch 最大結果表示数</td>
+<td style="text-align: left;">Long</td>
+<td style="text-align: left;">v1.7.6以前:110000<br>v1.7.7以降:150000</td>
+<td style="text-align: left;">core</td>
+<td style="text-align: left;">v1.7.5以降</td>
+</tr>
+<tr class="even">
+<td style="text-align: left;">es.index.merge.scheduler.maxThreadCount</td>
+<td style="text-align: left;">Elasticsearch マージスケジューラの最大スレッド数</td>
+<td style="text-align: left;">Int</td>
+<td style="text-align: left;"><br></td>
+<td style="text-align: left;">core</td>
+<td style="text-align: left;">v1.7.5以降</td>
+</tr>
+</tbody>
+</table>
+<h4>BinaryData</h4>
+<table style="width:33%;">
+<colgroup>
+<col style="width: 5%" />
+<col style="width: 5%" />
+<col style="width: 5%" />
+<col style="width: 5%" />
+<col style="width: 5%" />
+<col style="width: 5%" />
+</colgroup>
+<thead>
+<tr class="header">
+<th style="text-align: left;">キー</th>
+<th style="text-align: left;">説明</th>
+<th style="text-align: left;">値</th>
+<th style="text-align: left;">デフォルト値</th>
+<th style="text-align: left;">使用コンポーネント</th>
+<th style="text-align: left;">備考</th>
+</tr>
+</thead>
+<tbody>
+<tr class="odd">
+<td style="text-align: left;">binaryData.physical.delete.mode</td>
+<td style="text-align: left;">ファイル削除時に物理削除するか</td>
+<td style="text-align: left;">true:物理削除<br>false:論理削除</td>
+<td style="text-align: left;">true</td>
+<td style="text-align: left;">core</td>
+<td style="text-align: left;">論理削除時は削除されたファイルが残り続けるためディスクを圧迫する可能性があります。</td>
+</tr>
+<tr class="even">
+<td style="text-align: left;">binaryData.fsync.enabled</td>
+<td style="text-align: left;">ファイルへの書き込み時にfsyncを有効にするか</td>
+<td style="text-align: left;">true:有効<br>false:無効</td>
+<td style="text-align: left;">false</td>
+<td style="text-align: left;">core, engine</td>
+<td style="text-align: left;">有効にした場合WebDAVのファイルを書き込む際にfsyncを行うためWebDAV登録性能が劣化します。<br>バックアップをスナップショットなどで取得したりディスクへの書き込みを厳密にする必要がある場合は有効にします。</td>
+</tr>
+<tr class="odd">
+<td style="text-align: left;">binaryData.dav.retry.count</td>
+<td style="text-align: left;">Davファイルのハードリンク作成/改名/削除時のリトライ回数</td>
+<td style="text-align: left;">Int</td>
+<td style="text-align: left;">100</td>
+<td style="text-align: left;">core</td>
+<td style="text-align: left;"><br></td>
+</tr>
+<tr class="even">
+<td style="text-align: left;">binaryData.dav.retry.interval</td>
+<td style="text-align: left;">Davファイルのハードリンク作成/改名/削除時のリトライ間隔(msec)</td>
+<td style="text-align: left;">Long</td>
+<td style="text-align: left;">50</td>
+<td style="text-align: left;">core</td>
+<td style="text-align: left;"><br></td>
+</tr>
+</tbody>
+</table>
+<h4>BlobStore</h4>
+<table style="width:33%;">
+<colgroup>
+<col style="width: 5%" />
+<col style="width: 5%" />
+<col style="width: 5%" />
+<col style="width: 5%" />
+<col style="width: 5%" />
+<col style="width: 5%" />
+</colgroup>
+<thead>
+<tr class="header">
+<th style="text-align: left;">キー</th>
+<th style="text-align: left;">説明</th>
+<th style="text-align: left;">値</th>
+<th style="text-align: left;">デフォルト値</th>
+<th style="text-align: left;">使用コンポーネント</th>
+<th style="text-align: left;">備考</th>
+</tr>
+</thead>
+<tbody>
+<tr class="odd">
+<td style="text-align: left;">blobStore.root</td>
+<td style="text-align: left;">blobデータを格納するルートパス</td>
+<td style="text-align: left;">ディレクトリのフルパス</td>
+<td style="text-align: left;">/personium_nfs/personium-core/dav</td>
+<td style="text-align: left;">core, engine</td>
+<td style="text-align: left;"><br></td>
+</tr>
+</tbody>
+</table>
+<h4>ユーザデータ</h4>
+<table style="width:33%;">
+<colgroup>
+<col style="width: 5%" />
+<col style="width: 5%" />
+<col style="width: 5%" />
+<col style="width: 5%" />
+<col style="width: 5%" />
+<col style="width: 5%" />
+</colgroup>
+<thead>
+<tr class="header">
+<th style="text-align: left;">キー</th>
+<th style="text-align: left;">説明</th>
+<th style="text-align: left;">値</th>
+<th style="text-align: left;">デフォルト値</th>
+<th style="text-align: left;">使用コンポーネント</th>
+<th style="text-align: left;">備考</th>
+</tr>
+</thead>
+<tbody>
+<tr class="odd">
+<td style="text-align: left;">box.odata.schema.MaxEntityTypes</td>
+<td style="text-align: left;">EntityTypeの最大数</td>
+<td style="text-align: left;">Int</td>
+<td style="text-align: left;">100</td>
+<td style="text-align: left;">core</td>
+<td style="text-align: left;"><br></td>
+</tr>
+<tr class="even">
+<td style="text-align: left;">box.odata.schema.MaxProperties</td>
+<td style="text-align: left;">EntityTypeに含まれるプロパティの最大数</td>
+<td style="text-align: left;">Int</td>
+<td style="text-align: left;">400</td>
+<td style="text-align: left;">core</td>
+<td style="text-align: left;"><br></td>
+</tr>
+<tr class="odd">
+<td style="text-align: left;">box.odata.schema.property.LayerLimits.SimpleType</td>
+<td style="text-align: left;">各階層のSimpleTypeの最大数</td>
+<td style="text-align: left;">Int<br>カンマ区切り</td>
+<td style="text-align: left;">*,50,30,10</td>
+<td style="text-align: left;">core</td>
+<td style="text-align: left;"><br></td>
+</tr>
+<tr class="even">
+<td style="text-align: left;">box.odata.schema.property.LayerLimits.ComplexType</td>
+<td style="text-align: left;">各階層のComplexTypeの最大数</td>
+<td style="text-align: left;">Int<br>カンマ区切り</td>
+<td style="text-align: left;">20,5,2,0</td>
+<td style="text-align: left;">core</td>
+<td style="text-align: left;"><br></td>
+</tr>
+</tbody>
+</table>
+<h4>Event</h4>
+<table style="width:33%;">
+<colgroup>
+<col style="width: 5%" />
+<col style="width: 5%" />
+<col style="width: 5%" />
+<col style="width: 5%" />
+<col style="width: 5%" />
+<col style="width: 5%" />
+</colgroup>
+<thead>
+<tr class="header">
+<th style="text-align: left;">キー</th>
+<th style="text-align: left;">説明</th>
+<th style="text-align: left;">値</th>
+<th style="text-align: left;">デフォルト値</th>
+<th style="text-align: left;">使用コンポーネント</th>
+<th style="text-align: left;">備考</th>
+</tr>
+</thead>
+<tbody>
+<tr class="odd">
+<td style="text-align: left;">event.log.current.dir</td>
+<td style="text-align: left;">イベントログファイルの格納ディレクトリ</td>
+<td style="text-align: left;">ディレクトリのフルパス</td>
+<td style="text-align: left;">/personium_nfs/personium-core/eventlog</td>
+<td style="text-align: left;">core</td>
+<td style="text-align: left;"><br></td>
+</tr>
+<tr class="even">
+<td style="text-align: left;">event.hop.maxnum</td>
+<td style="text-align: left;">あるイベントを契機としたイベント処理を繰り返す最大数</td>
+<td style="text-align: left;">Int</td>
+<td style="text-align: left;">3</td>
+<td style="text-align: left;">core</td>
+<td style="text-align: left;">v1.6.2以降。0に設定するとルールによるイベント処理は行われなくなります。</td>
+</tr>
+</tbody>
+</table>
+<h4>キャッシュ</h4>
+<table style="width:33%;">
+<colgroup>
+<col style="width: 5%" />
+<col style="width: 5%" />
+<col style="width: 5%" />
+<col style="width: 5%" />
+<col style="width: 5%" />
+<col style="width: 5%" />
+</colgroup>
+<thead>
+<tr class="header">
+<th style="text-align: left;">キー</th>
+<th style="text-align: left;">説明</th>
+<th style="text-align: left;">値</th>
+<th style="text-align: left;">デフォルト値</th>
+<th style="text-align: left;">使用コンポーネント</th>
+<th style="text-align: left;">備考</th>
+</tr>
+</thead>
+<tbody>
+<tr class="odd">
+<td style="text-align: left;">cache.type</td>
+<td style="text-align: left;">キャッシュのタイプ</td>
+<td style="text-align: left;">&quot;memcached&quot;:memcachedでキャッシュ<br>&quot;none&quot;:キャッシュ無効</td>
+<td style="text-align: left;">memcached</td>
+<td style="text-align: left;">core</td>
+<td style="text-align: left;">noneにした場合管理情報を毎回Elasticsearchに問い合わせるためElasticsearchの負荷が上昇します。</td>
+</tr>
+<tr class="even">
+<td style="text-align: left;">cache.cell.enabled</td>
+<td style="text-align: left;">Cellのキャッシュを有効とするか</td>
+<td style="text-align: left;">true:有効<br>false:無効</td>
+<td style="text-align: left;">true</td>
+<td style="text-align: left;">core</td>
+<td style="text-align: left;"><br></td>
+</tr>
+<tr class="odd">
+<td style="text-align: left;">cache.box.enabled</td>
+<td style="text-align: left;">Boxのキャッシュを有効とするか</td>
+<td style="text-align: left;">true:有効<br>false:無効</td>
+<td style="text-align: left;">true</td>
+<td style="text-align: left;">core</td>
+<td style="text-align: left;"><br></td>
+</tr>
+<tr class="even">
+<td style="text-align: left;">cache.schema.enabled</td>
+<td style="text-align: left;">Schemaのキャッシュを有効とするか</td>
+<td style="text-align: left;">true:有効<br>false:無効</td>
+<td style="text-align: left;">true</td>
+<td style="text-align: left;">core</td>
+<td style="text-align: left;"><br></td>
+</tr>
+<tr class="odd">
+<td style="text-align: left;">cache.memcached.host</td>
+<td style="text-align: left;">memcachedホスト名</td>
+<td style="text-align: left;">ホスト名</td>
+<td style="text-align: left;">localhost</td>
+<td style="text-align: left;">core</td>
+<td style="text-align: left;"><br></td>
+</tr>
+<tr class="even">
+<td style="text-align: left;">cache.memcached.port</td>
+<td style="text-align: left;">memcachedポート番号</td>
+<td style="text-align: left;">ポート番号</td>
+<td style="text-align: left;">11212</td>
+<td style="text-align: left;">core</td>
+<td style="text-align: left;"><br></td>
+</tr>
+<tr class="odd">
+<td style="text-align: left;">cache.memcached.opTimeout</td>
+<td style="text-align: left;">memcached operationタイムアウト値(msec)</td>
+<td style="text-align: left;">Long</td>
+<td style="text-align: left;">12000</td>
+<td style="text-align: left;">core</td>
+<td style="text-align: left;"><br></td>
+</tr>
+<tr class="even">
+<td style="text-align: left;">cache.memcached.expiresin</td>
+<td style="text-align: left;">キャッシュ有効期間(sec)</td>
+<td style="text-align: left;">Int</td>
+<td style="text-align: left;">86400</td>
+<td style="text-align: left;">core</td>
+<td style="text-align: left;"><br></td>
+</tr>
+</tbody>
+</table>
+<h4>Engine</h4>
+<p>&quot;engine.host&quot;, &quot;engine.port&quot;, &quot;engine.path&quot;はCoreからEngineへアクセスする際に使用します。</p>
+<pre><code>http://{engine.host}:{engine.port}/{engine.path}</code></pre>
+<table style="width:33%;">
+<colgroup>
+<col style="width: 5%" />
+<col style="width: 5%" />
+<col style="width: 5%" />
+<col style="width: 5%" />
+<col style="width: 5%" />
+<col style="width: 5%" />
+</colgroup>
+<thead>
+<tr class="header">
+<th style="text-align: left;">キー</th>
+<th style="text-align: left;">説明</th>
+<th style="text-align: left;">値</th>
+<th style="text-align: left;">デフォルト値</th>
+<th style="text-align: left;">使用コンポーネント</th>
+<th style="text-align: left;">備考</th>
+</tr>
+</thead>
+<tbody>
+<tr class="odd">
+<td style="text-align: left;">engine.host</td>
+<td style="text-align: left;">Engineサーバのホスト名</td>
+<td style="text-align: left;">ホスト名</td>
+<td style="text-align: left;">localhost</td>
+<td style="text-align: left;">core</td>
+<td style="text-align: left;"><br></td>
+</tr>
+<tr class="even">
+<td style="text-align: left;">engine.port</td>
+<td style="text-align: left;">Engineサーバのポート番号</td>
+<td style="text-align: left;">ポート番号</td>
+<td style="text-align: left;">8080</td>
+<td style="text-align: left;">core</td>
+<td style="text-align: left;"><br></td>
+</tr>
+<tr class="odd">
+<td style="text-align: left;">engine.path</td>
+<td style="text-align: left;">Engineのパス</td>
+<td style="text-align: left;">パス</td>
+<td style="text-align: left;">personium-engine</td>
+<td style="text-align: left;">core</td>
+<td style="text-align: left;"><br></td>
+</tr>
+<tr class="even">
+<td style="text-align: left;">engine.script.cache.maxNum</td>
+<td style="text-align: left;">Engineスクリプトのキャッシュ最大登録数</td>
+<td style="text-align: left;">Int</td>
+<td style="text-align: left;">100000</td>
+<td style="text-align: left;">engine</td>
+<td style="text-align: left;">最大登録数を超えた場合、最終アクセス日時の古いものから削除されます。<br>v1.5.19以降</td>
+</tr>
+<tr class="odd">
+<td style="text-align: left;">engine.script.connection.timeout</td>
+<td style="text-align: left;">Engineスクリプトのコネクションタイムアウト時間(msec)</td>
+<td style="text-align: left;">Int</td>
+<td style="text-align: left;">50000</td>
+<td style="text-align: left;">engine</td>
+<td style="text-align: left;">Engineスクリプト内でAPIを呼び出す際のコネクションタイムアウト時間を設定。<br>v1.5.21以降</td>
+</tr>
+</tbody>
+</table>
+<h4>barファイル</h4>
+<table style="width:33%;">
+<colgroup>
+<col style="width: 5%" />
+<col style="width: 5%" />
+<col style="width: 5%" />
+<col style="width: 5%" />
+<col style="width: 5%" />
+<col style="width: 5%" />
+</colgroup>
+<thead>
+<tr class="header">
+<th style="text-align: left;">キー</th>
+<th style="text-align: left;">説明</th>
+<th style="text-align: left;">値</th>
+<th style="text-align: left;">デフォルト値</th>
+<th style="text-align: left;">使用コンポーネント</th>
+<th style="text-align: left;">備考</th>
+</tr>
+</thead>
+<tbody>
+<tr class="odd">
+<td style="text-align: left;">bar.file.maxSize</td>
+<td style="text-align: left;">barファイルの最大ファイルサイズ(MB)</td>
+<td style="text-align: left;">Long</td>
+<td style="text-align: left;">100</td>
+<td style="text-align: left;">core</td>
+<td style="text-align: left;"><br></td>
+</tr>
+<tr class="even">
+<td style="text-align: left;">bar.entry.maxSize</td>
+<td style="text-align: left;">barファイル内エントリの最大ファイルサイズ(MB)</td>
+<td style="text-align: left;">Long</td>
+<td style="text-align: left;">10</td>
+<td style="text-align: left;">core</td>
+<td style="text-align: left;"><br></td>
+</tr>
+<tr class="odd">
+<td style="text-align: left;">bar.userdata.linksOutputStreamSize</td>
+<td style="text-align: left;">ユーザデータのリンク処理時にレスポンスを返却するサイズ</td>
+<td style="text-align: left;">Long</td>
+<td style="text-align: left;">5</td>
+<td style="text-align: left;">core</td>
+<td style="text-align: left;"><br></td>
+</tr>
+<tr class="even">
+<td style="text-align: left;">bar.userdata.bulkSize</td>
+<td style="text-align: left;">ユーザデータの一括登録件数</td>
+<td style="text-align: left;">Long</td>
+<td style="text-align: left;">1000</td>
+<td style="text-align: left;">core</td>
+<td style="text-align: left;"><br></td>
+</tr>
+<tr class="odd">
+<td style="text-align: left;">bar.installfile.dir</td>
+<td style="text-align: left;">barファイルやログ詳細の格納用ルートディレクトリ</td>
+<td style="text-align: left;">ディレクトリのフルパス</td>
+<td style="text-align: left;">/personium_nfs/personium-core/barInstall</td>
+<td style="text-align: left;">core</td>
+<td style="text-align: left;"><br></td>
+</tr>
+<tr class="even">
+<td style="text-align: left;">bar.progress.expireInSec</td>
+<td style="text-align: left;">memcachedに格納するbarインストール処理状況の有効期限(sec)</td>
+<td style="text-align: left;">Int</td>
+<td style="text-align: left;">259200</td>
+<td style="text-align: left;">core</td>
+<td style="text-align: left;"><br></td>
+</tr>
+</tbody>
+</table>
+<h4>OpenID Connect</h4>
+<table style="width:33%;">
+<colgroup>
+<col style="width: 5%" />
+<col style="width: 5%" />
+<col style="width: 5%" />
+<col style="width: 5%" />
+<col style="width: 5%" />
+<col style="width: 5%" />
+</colgroup>
+<thead>
+<tr class="header">
+<th style="text-align: left;">キー</th>
+<th style="text-align: left;">説明</th>
+<th style="text-align: left;">値</th>
+<th style="text-align: left;">デフォルト値</th>
+<th style="text-align: left;">使用コンポーネント</th>
+<th style="text-align: left;">備考</th>
+</tr>
+</thead>
+<tbody>
+<tr class="odd">
+<td style="text-align: left;">oidc.google.trustedClientIds</td>
+<td style="text-align: left;">Google OpenID Connectにおいて、このユニットが信頼するClientID<br>スペース区切りで複数指定可能</td>
+<td style="text-align: left;">文字列</td>
+<td style="text-align: left;">*</td>
+<td style="text-align: left;">core</td>
+<td style="text-align: left;">&quot;*&quot;を指定した場合全てのClientIDを信頼する<br><b>将来的にPlugin独自設定として移動予定</b></td>
+</tr>
+</tbody>
+</table>
+<h4>CellSnapshot</h4>
+<table style="width:33%;">
+<colgroup>
+<col style="width: 5%" />
+<col style="width: 5%" />
+<col style="width: 5%" />
+<col style="width: 5%" />
+<col style="width: 5%" />
+<col style="width: 5%" />
+</colgroup>
+<thead>
+<tr class="header">
+<th style="text-align: left;">キー</th>
+<th style="text-align: left;">説明</th>
+<th style="text-align: left;">値</th>
+<th style="text-align: left;">デフォルト値</th>
+<th style="text-align: left;">使用コンポーネント</th>
+<th style="text-align: left;">備考</th>
+</tr>
+</thead>
+<tbody>
+<tr class="odd">
+<td style="text-align: left;">cellSnapshot.root</td>
+<td style="text-align: left;">snapshotデータを格納するルートパス</td>
+<td style="text-align: left;">ディレクトリのフルパス</td>
+<td style="text-align: left;">/personium_nfs/personium-core/snapshot</td>
+<td style="text-align: left;">core</td>
+<td style="text-align: left;">v1.5.4以降</td>
+</tr>
+</tbody>
+</table>
+<h4>EventBus</h4>
+<table style="width:33%;">
+<colgroup>
+<col style="width: 5%" />
+<col style="width: 5%" />
+<col style="width: 5%" />
+<col style="width: 5%" />
+<col style="width: 5%" />
+<col style="width: 5%" />
+</colgroup>
+<thead>
+<tr class="header">
+<th style="text-align: left;">キー</th>
+<th style="text-align: left;">説明</th>
+<th style="text-align: left;">値</th>
+<th style="text-align: left;">デフォルト値</th>
+<th style="text-align: left;">使用コンポーネント</th>
+<th style="text-align: left;">備考</th>
+</tr>
+</thead>
+<tbody>
+<tr class="odd">
+<td style="text-align: left;">eventbus.mq</td>
+<td style="text-align: left;">メッセージキュー</td>
+<td style="text-align: left;">activemq<br>kafka</td>
+<td style="text-align: left;">activemq</td>
+<td style="text-align: left;">core</td>
+<td style="text-align: left;">使用するメッセージキューを選択します<br>v1.6.8以降</td>
+</tr>
+<tr class="even">
+<td style="text-align: left;">eventbus.broker</td>
+<td style="text-align: left;">メッセージキューのbroker URL</td>
+<td style="text-align: left;">URL</td>
+<td style="text-align: left;">tcp://localhost:61616</td>
+<td style="text-align: left;">core</td>
+<td style="text-align: left;">v1.7.4以降</td>
+</tr>
+<tr class="odd">
+<td style="text-align: left;">eventbus.queue</td>
+<td style="text-align: left;">イベントのキュー名</td>
+<td style="text-align: left;">文字列</td>
+<td style="text-align: left;">personium_event_queue</td>
+<td style="text-align: left;">core</td>
+<td style="text-align: left;">v1.6.0以降</td>
+</tr>
+<tr class="even">
+<td style="text-align: left;">eventbus.topic.all</td>
+<td style="text-align: left;">イベントのトピック名</td>
+<td style="text-align: left;">文字列</td>
+<td style="text-align: left;">personium_event_topic</td>
+<td style="text-align: left;">core</td>
+<td style="text-align: left;">v1.6.0以降</td>
+</tr>
+<tr class="odd">
+<td style="text-align: left;">eventbus.topic.rule</td>
+<td style="text-align: left;">ルールイベントのトピック名</td>
+<td style="text-align: left;">文字列</td>
+<td style="text-align: left;">personium_event_topic_rule</td>
+<td style="text-align: left;">core</td>
+<td style="text-align: left;">v1.6.0以降</td>
+</tr>
+<tr class="even">
+<td style="text-align: left;">eventbus.eventProcessing.thread.num</td>
+<td style="text-align: left;">イベント処理用スレッド数</td>
+<td style="text-align: left;">Int</td>
+<td style="text-align: left;">1</td>
+<td style="text-align: left;">core</td>
+<td style="text-align: left;">v1.6.8以降</td>
+</tr>
+</tbody>
+</table>
+<h4>Rule</h4>
+<table>
+<thead>
+<tr class="header">
+<th style="text-align: left;">キー</th>
+<th style="text-align: left;">説明</th>
+<th style="text-align: left;">値</th>
+<th style="text-align: left;">デフォルト値</th>
+<th style="text-align: left;">使用コンポーネント</th>
+<th style="text-align: left;">備考</th>
+</tr>
+</thead>
+<tbody>
+<tr class="odd">
+<td style="text-align: left;">rule.timerEvent.thread.num</td>
+<td style="text-align: left;">タイマーイベント送信用のスレッド数</td>
+<td style="text-align: left;">Int</td>
+<td style="text-align: left;">1</td>
+<td style="text-align: left;">core</td>
+<td style="text-align: left;">v1.6.8以降</td>
+</tr>
+</tbody>
+</table>
+<h4>Stream Collection</h4>
+<table style="width:33%;">
+<colgroup>
+<col style="width: 5%" />
+<col style="width: 5%" />
+<col style="width: 5%" />
+<col style="width: 5%" />
+<col style="width: 5%" />
+<col style="width: 5%" />
+</colgroup>
+<thead>
+<tr class="header">
+<th style="text-align: left;">キー</th>
+<th style="text-align: left;">説明</th>
+<th style="text-align: left;">値</th>
+<th style="text-align: left;">デフォルト値</th>
+<th style="text-align: left;">使用コンポーネント</th>
+<th style="text-align: left;">備考</th>
+</tr>
+</thead>
+<tbody>
+<tr class="odd">
+<td style="text-align: left;">stream.mq</td>
+<td style="text-align: left;">メッセージキュー</td>
+<td style="text-align: left;">activemq<br>kafka</td>
+<td style="text-align: left;"></td>
+<td style="text-align: left;">core</td>
+<td style="text-align: left;">使用するメッセージキューを選択します。何も設定しなければStream Collectionは無効になります<br>v1.7.4以降</td>
+</tr>
+<tr class="even">
+<td style="text-align: left;">stream.broker</td>
+<td style="text-align: left;">メッセージキューのbroker URL</td>
+<td style="text-align: left;">URL</td>
+<td style="text-align: left;"></td>
+<td style="text-align: left;">core</td>
+<td style="text-align: left;">v1.7.4以降</td>
+</tr>
+<tr class="odd">
+<td style="text-align: left;">stream.username</td>
+<td style="text-align: left;">brokerへの認証に使用するユーザ名</td>
+<td style="text-align: left;">文字列</td>
+<td style="text-align: left;"></td>
+<td style="text-align: left;">core</td>
+<td style="text-align: left;">認証の必要のないbrokerには設定しないでください<br>v1.7.4以降</td>
+</tr>
+<tr class="even">
+<td style="text-align: left;">stream.password</td>
+<td style="text-align: left;">brokerへの認証に使用するパスワード</td>
+<td style="text-align: left;">文字列</td>
+<td style="text-align: left;"></td>
+<td style="text-align: left;">core</td>
+<td style="text-align: left;">認証の必要のないbrokerには設定しないでください<br>v1.7.4以降</td>
+</tr>
+<tr class="odd">
+<td style="text-align: left;">stream.expiresIn</td>
+<td style="text-align: left;">Streamに送信するメッセージの有効期間(sec)</td>
+<td style="text-align: left;">Int</td>
+<td style="text-align: left;">3600</td>
+<td style="text-align: left;">core</td>
+<td style="text-align: left;">activemqのみ有効<br>v1.7.4以降</td>
+</tr>
+</tbody>
+</table>
+<h4>Token Introspection</h4>
+<table style="width:33%;">
+<colgroup>
+<col style="width: 5%" />
+<col style="width: 5%" />
+<col style="width: 5%" />
+<col style="width: 5%" />
+<col style="width: 5%" />
+<col style="width: 5%" />
+</colgroup>
+<thead>
+<tr class="header">
+<th style="text-align: left;">キー</th>
+<th style="text-align: left;">説明</th>
+<th style="text-align: left;">値</th>
+<th style="text-align: left;">デフォルト値</th>
+<th style="text-align: left;">使用コンポーネント</th>
+<th style="text-align: left;">備考</th>
+</tr>
+</thead>
+<tbody>
+<tr class="odd">
+<td style="text-align: left;">introspect.username</td>
+<td style="text-align: left;">ユーザ名</td>
+<td style="text-align: left;">文字列</td>
+<td style="text-align: left;"></td>
+<td style="text-align: left;">core</td>
+<td style="text-align: left;">Resource ServerからToken Introspectionにアクセスする際のBasic認証用<br>v1.7.4以降</td>
+</tr>
+<tr class="even">
+<td style="text-align: left;">introspect.password</td>
+<td style="text-align: left;">パスワード</td>
+<td style="text-align: left;">文字列</td>
+<td style="text-align: left;"></td>
+<td style="text-align: left;">core</td>
+<td style="text-align: left;">Resource ServerからToken Introspectionにアクセスする際のBasic認証用<br>v1.7.4以降</td>
+</tr>
+</tbody>
+</table>
+</div>
+  <footer><nav>The Personium project is provided under the Apache 2.0 license. </nav></footer>
+</body>
+</html>
+

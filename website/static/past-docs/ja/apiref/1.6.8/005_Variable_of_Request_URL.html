@@ -1,0 +1,223 @@
+<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml" lang="" xml:lang="">
+<head>
+  <!-- default template -->
+  <meta charset="utf-8" />
+  <meta name="generator" content="pandoc" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=yes" />
+  <title>005_Variable_of_Request_URL</title>
+  <script type="text/javascript">
+      var path = location.pathname.split('/');
+      var pathRoot = [ path[0], path[1], '' ].join('/');
+      var pathLang = [ path[0], path[1], path[2] , ''].join('/');
+
+      //load style sheets
+      document.write('<link rel="stylesheet" href="' + pathRoot + 'personium.css" type="text/css" />');
+      document.write('<link rel="stylesheet" href="' + pathLang + 'locale.css" type="text/css" />');
+      //load personium_docs.js
+      var ps = document.createElement('script');
+      ps.src = pathRoot + 'personium_docs.js';
+      var s = document.getElementsByTagName('script')[0];
+      s.parentNode.insertBefore(ps, s);
+    
+      //load apiref_versions.js
+      ps2 = document.createElement('script');
+      ps2.src = pathRoot + 'apiref_versions.js';
+      s = document.getElementsByTagName('script')[0];
+      s.parentNode.insertBefore(ps2, s);
+
+  </script>
+  <link href="https://fonts.googleapis.com/css?family=Raleway" rel="stylesheet">
+  <link href="https://fonts.googleapis.com/css?family=Open+Sans" rel="stylesheet">
+  
+  <!--[if lt IE 9]>
+    <script src="//cdnjs.cloudflare.com/ajax/libs/html5shiv/3.7.3/html5shiv-printshiv.min.js"></script>
+  <![endif]-->
+</head>
+<body>
+  <header>
+    <nav>
+    <div id="logo"><a href="/">Personium</a></div>
+    <ul>
+      <li class="submenu">
+        <a href="" >Introduction</a>
+        <ul>
+            <li><a href="javascript:p.toPage('/overview/001_Introduction.html');">What's Personium?</a></li>
+            <li><a href="javascript:p.toPage('/user_guide/001_Personium_Architecture.html');">Architecture</a></li>
+            <li><a href="javascript:p.toPage('/user_guide/008_Glossary.html');">Glossary</a></li>
+        </ul>
+      </li>
+      <li class="submenu">
+        <a href="" >User Guide</a>
+        <ul>
+            <li><a href="javascript:p.toPage('/app-developer/');">for App Developer</a></li>
+            <li><a href="javascript:p.toPage('/cell-client-developer/');">for Cell App Developer</a></li>
+            <li><a href="javascript:p.toPage('/unit-administrator/');">for Unit Administrator</a></li>
+            <li><a href="javascript:p.toPage('/server-operator/');">for Server Software Operator</a></li>
+            <li><a href="javascript:p.toPage('/document-writer/');">for Documentation Contributor</a></li>
+            <li><a href="javascript:p.toPage('/plugin-developer/');">for Server Plugin Developer</a></li>
+            <li><a href="javascript:p.toPage('/software-developer/');">for Server Developer</a></li>
+        </ul>
+      </li>
+      <li class="submenu">
+        <a href="" >API Reference</a>
+        <ul id="api-ref-list">
+            <li><a href="javascript:p.toPage('/user_guide/990_Old_Version_API_Ref.html');">older versions</a></li>
+        </ul>
+      </li>
+      <li class="submenu">
+        <a href="" >Languages</a>
+        <ul>
+            <li><a href="javascript:p.setLang('en');">English</a></li>
+            <li><a href="javascript:p.setLang('ja');">Japanese</a></li>
+        </ul>
+      </li>
+    </ul>
+    </nav>
+  </header>
+
+<div id="container">
+<h1>リクエストURLの変数一覧</h1>
+<h2>概要</h2>
+<p>APIリファレンスのリクエストURLで使われている変数についての説明</p>
+<h2>変数一覧</h2>
+<table style="width:17%;">
+<colgroup>
+<col style="width: 5%" />
+<col style="width: 5%" />
+<col style="width: 5%" />
+</colgroup>
+<thead>
+<tr class="header">
+<th style="text-align: left;">変数名</th>
+<th style="text-align: left;">概要</th>
+<th style="text-align: left;">備考</th>
+</tr>
+</thead>
+<tbody>
+<tr class="odd">
+<td style="text-align: left;">{UnitFQDN}</td>
+<td style="text-align: left;">Personiumが動作しているサーバのFQDN<br>Unitとは複数のCellをホストするサーバを指す</td>
+<td style="text-align: left;"></td>
+</tr>
+<tr class="even">
+<td style="text-align: left;">{CellName}</td>
+<td style="text-align: left;">Cell名<br>Cellとはデータ主体ごとのData Stroreを指す</td>
+<td style="text-align: left;"></td>
+</tr>
+<tr class="odd">
+<td style="text-align: left;">{BoxName}</td>
+<td style="text-align: left;">Box名<br>Boxとはアプリケーションに用いるデータを格納する領域を指す</td>
+<td style="text-align: left;"></td>
+</tr>
+<tr class="even">
+<td style="text-align: left;">{SchemaURL}</td>
+<td style="text-align: left;">SchemaのURL<br>SchemaとはPersonium内に格納されたSchemaを指す</td>
+<td style="text-align: left;"></td>
+</tr>
+<tr class="odd">
+<td style="text-align: left;">{RoleName}</td>
+<td style="text-align: left;">Role名<br>RoleとはCellに対して定義される有効な「役割」を指す</td>
+<td style="text-align: left;"></td>
+</tr>
+<tr class="even">
+<td style="text-align: left;">{AccountName}</td>
+<td style="text-align: left;">Account名<br>AccountとはCellでのユーザ認証手段を表す</td>
+<td style="text-align: left;"></td>
+</tr>
+<tr class="odd">
+<td style="text-align: left;">{ExtCellURL}</td>
+<td style="text-align: left;">ExtCellのURL<br>ExtCell（外部Cell）とはあるCellから見たとき外にある他のCellを指す</td>
+<td style="text-align: left;"></td>
+</tr>
+<tr class="even">
+<td style="text-align: left;">{RelationName}</td>
+<td style="text-align: left;">Relation名<br>Relationとは自身（自Cell）と他者（外部Cell）との関係を示す</td>
+<td style="text-align: left;"></td>
+</tr>
+<tr class="odd">
+<td style="text-align: left;">{ExtRoleURL}</td>
+<td style="text-align: left;">ExtRoleのURL<br>ExtRole（外部Role）とは特定の関係にある外部Cell群において特定の役割（Role）を付与された利用者主体を指す</td>
+<td style="text-align: left;"></td>
+</tr>
+<tr class="even">
+<td style="text-align: left;">{LogName}</td>
+<td style="text-align: left;">ログファイル名</td>
+<td style="text-align: left;"></td>
+</tr>
+<tr class="odd">
+<td style="text-align: left;">{MessageID}</td>
+<td style="text-align: left;">MessageのID<br>MessageとはCell間で送受信可能なメッセージを指す</td>
+<td style="text-align: left;"></td>
+</tr>
+<tr class="even">
+<td style="text-align: left;">{CollectionName}</td>
+<td style="text-align: left;">Collection名<br>Collectionとは通常のファイルシステムでいうところのフォルダ・ディレクトリに相当する</td>
+<td style="text-align: left;"></td>
+</tr>
+<tr class="odd">
+<td style="text-align: left;">{ResourcePath}</td>
+<td style="text-align: left;">リソースへのパス<br>Box配下のCollectionとファイルが対象となる</td>
+<td style="text-align: left;"></td>
+</tr>
+<tr class="even">
+<td style="text-align: left;">{OdataCollectionName}</td>
+<td style="text-align: left;">OdataCollection名<br>OdataCollectionとはユーザーがODataプロトコルで任意のリレーショナルデータを扱うための特殊WebDAV拡張コレクションを指す</td>
+<td style="text-align: left;"></td>
+</tr>
+<tr class="odd">
+<td style="text-align: left;">{EntityTypeName}</td>
+<td style="text-align: left;">EntityType名<br>EntityTypeとはデータの構造をEntityDataModel(EDM)であらわすための定義体を指す</td>
+<td style="text-align: left;">Entityの上位概念</td>
+</tr>
+<tr class="even">
+<td style="text-align: left;">{AssociationEndName}</td>
+<td style="text-align: left;">AssociationEnd名<br>AssociationEndとはAssociationを構成するエンドポイントとなっているEntityTypeを指す</td>
+<td style="text-align: left;"></td>
+</tr>
+<tr class="odd">
+<td style="text-align: left;">{ComplexTypeName}</td>
+<td style="text-align: left;">ComplexType名<br>ComplexTypeとは下位属性を伴った属性を持つPropertyを指す</td>
+<td style="text-align: left;">ComplexTypePropertyの上位概念</td>
+</tr>
+<tr class="even">
+<td style="text-align: left;">{PropertyName}</td>
+<td style="text-align: left;">Property名<br>各EntityTypeの列頭の値を指し、RDBにおけるテーブルの項目名に相当する</td>
+<td style="text-align: left;"></td>
+</tr>
+<tr class="odd">
+<td style="text-align: left;">{ComplexTypePropertyName}</td>
+<td style="text-align: left;">ComplexTypeProperty名<br>ComplexTypePropertyとはComplexTypeの下位属性の名称を指す</td>
+<td style="text-align: left;">ComplexTypeの下位属性</td>
+</tr>
+<tr class="even">
+<td style="text-align: left;">{EntityName}</td>
+<td style="text-align: left;">Entity名<br>Entityとはデータの記録構造を指し、RDBにおけるテーブル1行分に相当する</td>
+<td style="text-align: left;">EntityTypeの下位属性</td>
+</tr>
+<tr class="odd">
+<td style="text-align: left;">{EntityID}</td>
+<td style="text-align: left;">EntityのID</td>
+<td style="text-align: left;"></td>
+</tr>
+<tr class="even">
+<td style="text-align: left;">{NavigationPropertyName}</td>
+<td style="text-align: left;">NavigationProperty名<br>NavigationPropertyとはEntityDataModelやODataのデータ構造において、Associationの一方のEndから別のEndへのナビゲーションを表すPropertyを指す</td>
+<td style="text-align: left;"></td>
+</tr>
+<tr class="odd">
+<td style="text-align: left;">{ServiceSourceName}</td>
+<td style="text-align: left;">ServiceSource名<br>ServiceとはServiceCollectionに登録されたユーザ定義のサーバサイドロジックを指す</td>
+<td style="text-align: left;"></td>
+</tr>
+<tr class="even">
+<td style="text-align: left;">{ServiceName}</td>
+<td style="text-align: left;">Service名<br>Serviceを実行する際に用いられる</td>
+<td style="text-align: left;">ServiceSource名から拡張子を除いたもの</td>
+</tr>
+</tbody>
+</table>
+</div>
+  <footer><nav>The Personium project is provided under the Apache 2.0 license. </nav></footer>
+</body>
+</html>

@@ -1,0 +1,263 @@
+<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml" lang="" xml:lang="">
+<head>
+  <!-- default template -->
+  <meta charset="utf-8" />
+  <meta name="generator" content="pandoc" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=yes" />
+  <link rel="icon" href="/images/favicon.ico" type="image/x-icon"/>
+  <title>008_Glossary</title>
+  <script type="text/javascript">
+      var path = location.pathname.split('/');
+      var pathRoot = [ path[0], path[1], '' ].join('/');
+      var pathLang = [ path[0], path[1], path[2] , ''].join('/');
+
+      document.write('<link rel="stylesheet" href="' + pathRoot + 'personium.css" type="text/css" />');
+      document.write('<link rel="stylesheet" href="' + pathLang + 'locale.css" type="text/css" />');
+      var ps = document.createElement('script');
+      ps.src = pathRoot + 'personium_docs.js';
+      var s = document.getElementsByTagName('script')[0];
+      s.parentNode.insertBefore(ps, s);
+    
+      ps2 = document.createElement('script');
+      ps2.src = pathRoot + 'apiref_versions.js';
+      s = document.getElementsByTagName('script')[0];
+      s.parentNode.insertBefore(ps2, s);
+  </script>
+  <link href="https://fonts.googleapis.com/css?family=Raleway" rel="stylesheet">
+  <link href="https://fonts.googleapis.com/css?family=Open+Sans" rel="stylesheet">
+  
+  <!--[if lt IE 9]>
+    <script src="//cdnjs.cloudflare.com/ajax/libs/html5shiv/3.7.3/html5shiv-printshiv.min.js"></script>
+  <![endif]-->
+</head>
+<body>
+  <header>
+    <nav>
+    <div id="logo"><a href="/"><img src="https://personium.io/images/logo-quantify-dark.png"></a></div>
+    <ul>
+      <li class="submenu">
+        <a href="#" >Introduction</a>
+        <ul>
+            <li><a href="javascript:p.toPage('/overview/001_Introduction.html');">What's Personium?</a></li>
+            <li><a href="javascript:p.toPage('/user_guide/001_Personium_Architecture.html');">Architecture</a></li>
+            <li><a href="javascript:p.toPage('/user_guide/008_Glossary.html');">Glossary</a></li>
+        </ul>
+      </li>
+      <li class="submenu">
+        <a href="#" >User Guide</a>
+        <ul>
+            <li><a href="javascript:p.toPage('/app-developer/');">for App Developer</a></li>
+            <li><a href="javascript:p.toPage('/cell-gui-developer/');">for Cell GUI Developer</a></li>
+            <li><a href="javascript:p.toPage('/unit-administrator/');">for Unit Administrator</a></li>
+            <li><a href="javascript:p.toPage('/server-operator/');">for Server Software Operator</a></li>
+            <li><a href="javascript:p.toPage('/document-writer/');">for Documentation Contributor</a></li>
+            <li><a href="javascript:p.toPage('/plugin-developer/');">for Server Plugin Developer</a></li>
+            <li><a href="javascript:p.toPage('/software-developer/');">for Server Developer</a></li>
+        </ul>
+      </li>
+      <li class="submenu">
+        <a href="#" >API Reference</a>
+        <ul id="api-ref-list">
+            <li><a href="javascript:p.toPage('/user_guide/990_Old_Version_API_Ref.html');">older versions</a></li>
+        </ul>
+      </li>
+      <li class="submenu">
+        <a href="#" >Languages</a>
+        <ul>
+            <li><a href="javascript:p.setLang('en');">English</a></li>
+            <li><a href="javascript:p.setLang('ja');">Japanese</a></li>
+        </ul>
+      </li>
+    </ul>
+    </nav>
+  </header>
+
+<div id="container">
+<h1>用語集</h1>
+<h5><a href="#anc_a">A</a> | <a href="#anc_b">B</a> | <a href="#anc_c">C</a> | D | <a href="#anc_e">E</a> | <a href="#anc_f">F</a> | G | H | <a href="#anc_i">I</a> | J | K | L | <a href="#anc_m">M</a> | <a href="#anc_n">N</a> | <a href="#anc_o">O</a> | <a href="#anc_p">P</a> | Q | <a href="#anc_r">R</a> | <a href="#anc_s">S</a> | <a href="#anc_t">T</a> | <a href="#anc_u">U</a> | V | <a href="#anc_w">W</a> | X | Y | Z</h5>
+<h2><a name="anc_a"> A</a></h2>
+<h3>ACL</h3>
+<p><font size=1>[一般]</font> Access Control Listの略称。<br />
+オブジェクトに付与するユーザのアクセス権限を列挙したリスト。PersoniumにおいてはCell,Boxに設定することができる。オブジェクトに付与した権限によって、どのユーザがアクセスを許可されているか、どのような制御命令の使用が許可されているかを定義する。<br />
+（例：Read:読込許可、Write:編集許可、Read/Write:読込/編集許可）</p>
+<h3>Account</h3>
+<p><font size=1>[Personium]</font> セル制御オブジェクトの一つ。そのセルでのユーザ認証手段を表し１セルに複数の登録が可能。基本タイプ（デフォルトで選択される）ではアカウント名やパスワードといった情報によって構成される。またプラグインを導入することでOpenID Connectをはじめとする他の認証手段に対応させることも可能。個人のセルで複数の認証手段を登録するのに用いてもよいし、組織のセルで組織構成員を認証するのに用いてもよい。</p>
+<h3>Association</h3>
+<p><font size=1>[OData]</font> 2つ以上のEntityType（RDBにおけるテーブル）間の関係性を示す。1対のAssociationEndとその間の$linksによって構成される。<br />
+「1対1」「1対多」「多対多」の種類に分けて扱われる。</p>
+<h3>AssociationEnd</h3>
+<p><font size=1>[OData]</font> Associationを構成するエンドポイントとなっているEntityType。1対のAssociationEndとその間の$linksによってAssociationが構成される。</p>
+<h3>Authentication</h3>
+<p><font size=1>[一般]</font> 認証。Personiumのアカウント認証では、作成済みのアカウント名とパスワードでの認証を行い、トークンを取得する方式を採用している。</p>
+<h2><a name="anc_b"> B</a></h2>
+<h3>bar ファイル</h3>
+<p><font size=1>[Personium]</font> box archive ファイルの略称。Boxの構成内容をまとめたアーカイブファイル。<br />
+フォルダ内の階層構造でWebDAVコレクションの階層構造を表し、その階層毎にファイルを格納することで、WebDAV内に格納するファイルを保持する。 詳細は<a href="../apiref/current/301_Bar_File.html">barファイル</a>参照。</p>
+<h3>Box</h3>
+<p><font size=1>[Personium]</font> アプリケーションに用いるデータを格納する領域。自身もWebDAVコレクションの一つである。一意の名前とスキーマURLを持つ。Cellは、Box未作成でも初期状態で1つのBox（メインボックス） を持ち、削除は不可。</p>
+<h3>Box インストール</h3>
+<p><font size=1>[Personium]</font> barファイルを用いて、Boxを作成すること。詳細は<a href="../apiref/current/302_Box_Installation.html">Boxインストール</a>APIを参照。</p>
+<h3>Box レベル ACL</h3>
+<p><font size=1>[Personium]</font> Box配下のリソース対するACL。詳細は<a href="../apiref/current/006_Access_Control.html">アクセス制御モデル</a>参照。</p>
+<h2><a name="anc_c"> C</a></h2>
+<h3>Cell</h3>
+<p><font size=1>[Personium]</font> データ主体ごとのData Strore。個人で使う場合はPDS(Personal Data Store)となる。Personiumでは、データ主体という概念を人のみでなく組織やモノなどにも拡張したモデル化を行っているため、組織やモノのデータストアとしても使うことが可能。<br />
+（例、私のCell, あなたのCell, ○○会社のCell, ○○部のCell, 私の車のCell）</p>
+<h3>Cell制御オブジェクト</h3>
+<p><font size=1>[Personium]</font> セルが持つ機能を個別に定義する定義体。Role, Account, Box, ExtCell, ExtRoleなどがある。</p>
+<h3>Cell レベル ACL</h3>
+<p><font size=1>[Personium]</font> Boxレベルのアクセス権限を除いたCellへのACL。Cell制御オブジェクトの操作や配下のBoxに対するアクセス制御を定義する。</p>
+<h3>Cell Profile</h3>
+<p><font size=1>[Personium]</font> Personiumセルの情報を格納する定義体。ホームアプリケーション等のアプリケーションでセル名、イメージ、 そのセルの情報などを表示する項目。</p>
+<h3>Collection （コレクション）</h3>
+<p><font size=1>[WebDAV]</font> 通常のファイルシステムでいうところのフォルダ・ディレクトリに相当。Personiumでは通常のコレクションに加え、「OData Service Collection」「Engine Service Collection」という特殊コレクションを扱うことができる。</p>
+<h3>ComplexType</h3>
+<p><font size=1>[OData]</font> 下位属性を伴った属性を持つPropertyのこと。項目名はComplexTypeProperty。<br />
+（例えば、「住所」をComplexTypeとすると、通り1・通り2・国・郵便番号・都道府県・市区町村などがComplexTypePropertyとなる。）</p>
+<h3>ComplexTypeProperty</h3>
+<p><font size=1>[OData]</font> ComplexTypeの下位属性の名称。例えば、 ComplexTypeが「住所」の場合、通り1・通り2・国・郵便番号・都道府県・市区町村などがComplexTypePropertyとなる。</p>
+<h3>CORS</h3>
+<p><font size=1>[一般]</font> Cross-Origin Resource Sharingの略称。Webページにおいて、JavaScriptが他のドメインに対しXMLHttpRequestを許可すること。<a href="../apiref/current/002_CORS_Support.html">CORS対応</a>を参照。<br />
+（詳細については<a href="http://www.w3.org/TR/cors/">外部サイト</a>を参照）</p>
+<h3>Cross Domain Access Control(クロスドメインアクセス制御)</h3>
+<p><font size=1>[一般]</font> 異なるドメインを持つサーバに対するアクセスの制御を行うこと。Personiumでは、XMLHttpRequest Level2に基づいた<a href="../apiref/current/001_Cross_Domain_Policy_File.html">クロスドメインポリシーファイル</a>によって制御されている。</p>
+<h2><a name="anc_e"> E</a></h2>
+<h3>Engine Service Collection</h3>
+<p><font size=1>[Personium]</font> ユーザがサーバ側のロジックを新たに登録するための特別なコレクション。詳細は<a href="../apiref/current/379_Engine_Service_Collection_APIs.html">Engineサービスコレクション</a>を参照。</p>
+<h3>Entity</h3>
+<p><font size=1>[OData]</font> データの記録構造のことであり、RDBにおけるテーブル1行分に相当する。例えば、名前・住所・性別といった情報に格納された値を表したもの。</p>
+<h3>EntityType</h3>
+<p><font size=1>[OData]</font> データの構造をEntity Data Model(EDM)であらわすための定義体。EntityがRDBにおけるテーブル1行分に相当するのに対し、EntityTypeはテーブルの上位概念を表したもの（顧客、注文内容など）</p>
+<h3>ETag</h3>
+<p><font size=1>[HTTP]</font> Entity Tagのこと。Webキャッシュの検証に用いる固有の識別子でクライアントの状況に応じたリクエストの送信を可能にする。<br />
+コンテンツの更新がない場合において、レスポンスをすべて返す必要がないときにキャッシュの効果的な使用を高め、データの転送量を減らすことで帯域幅を確保する。</p>
+<h3>Event</h3>
+<p><font size=1>[Personium]</font> Personiumの内部および外部から発生するインスタンス。詳細は<a href="../apiref/current/277_Event_Summary.html">イベント概要</a>参照。</p>
+<h3>EventLog</h3>
+<p><font size=1>[Personium]</font> 外部および内部イベントの発生ログ。<a href="../apiref/current/285_Retrieve_Log_File.html">ログ取得API</a>によって取得可能。</p>
+<h3>$expand クエリ</h3>
+<p><font size=1>[OData]</font> PersoniumでサポートしているODataクエリの1つ。データ取得リクエストに付加し、指定した関連情報を同時に取得するクエリ。（<a href="../apiref/current/405_Expand_Query.html">詳細事項</a>）</p>
+<h3>External Cell</h3>
+<p><font size=1>[Personium]</font> 外部セル。セル制御オブジェクトの1つ(ExtCell)。あるセルから見たとき外にある他のセルをURLで管理する。URLで扱うため他のユニットのセルを外部セルとして登録することができる。</p>
+<h3>External Role</h3>
+<p><font size=1>[Personium]</font> 外部ロール。セル制御オブジェクトの1つ(ExtRole)。特定の関係にある外部セル群において特定の役割（Role）を付与された利用者主体を表す。例えば、「所属団体（という関係にあるCell）の管理者（というロール）」や「商品購入顧客（という関係にあるCell）のかかりつけ医（というロール）」などをExternal Roleとして登録し、これとロールを紐づけることで間接的な関係にある他者に対してのデータ開示等操作を許すような使い方が可能。</p>
+<h2><a name="anc_f"> F</a></h2>
+<h3>$filter クエリ</h3>
+<p><font size=1>[OData]</font> PersoniumでサポートしているODataクエリの1つ。検索条件を指定しデータを絞り込むクエリ。（<a href="../apiref/current/403_Filter_Query.html">詳細事項</a>）</p>
+<h3>$format クエリ</h3>
+<p><font size=1>[OData]</font> PersoniumでサポートしているODataクエリの1つ。HTTPレスポンスにおいてメディアタイプを指定するクエリ。（<a href="../apiref/current/404_Format_Query.html">詳細事項</a>）</p>
+<h3>FQDN</h3>
+<p><font size=1>[一般]</font> Fully Qualified Domain Name（完全修飾ドメイン名）の略称。<br />
+インターネット上の特定のコンピュータやホストを一意に定義する完全なドメイン名をあらわす （例：host-name.domain-name.com）</p>
+<h3>全文検索クエリ(Full-Text Search Query)</h3>
+<p><font size=1>[OData]</font> リクエストに「q=&quot;検索語&quot;」を付加することで、EntityTypeに含まれている全データを対象とした全文検索を行うクエリ。（<a href="../apiref/current/408_Full_Text_Search_Query.html">詳細事項</a>）</p>
+<h2><a name="anc_i"> I</a></h2>
+<h3>Implicit Flow</h3>
+<p><font size=1>[OAuth2.0]</font> <a href="http://tools.ietf.org/pdf/rfc6749.pdf">OAuth2.0</a>で規定された認可付与フローの一つ。 クライアントが (リソースオーナー認可の結果) 認可コードの代わりに直接アクセストークンを受け取る。<br />
+詳細は<a href="http://openid-foundation-japan.github.io/draft-ietf-oauth-v2-draft22.ja.html#grant-implicit">外部サイト</a>参照。</p>
+<h3>$inlinecount クエリ</h3>
+<p><font size=1>[OData]</font> PersoniumでサポートしているODataクエリの1つ。コレクションにおける、エンティティの数のカウントを表示するクエリ。（<a href="../apiref/current/407_Inlinecount_Query.html">詳細事項</a>）</p>
+<h2><a name="anc_m"> M</a></h2>
+<h3>Main Box　（メインボックス）</h3>
+<p><font size=1>[Personium]</font> セル作成時にデフォルトで作成される、”__”(アンダーバー2つ)と名づけられたBox。動作は通常のBoxと同様だが、削除は不可。<br />
+アプリケーションデータを保管する目的以外にも、そのCellの固有情報（json形式を用いる）の格納に使われる。</p>
+<h3>Message</h3>
+<p><font size=1>[Personium]</font> Personiumにおいて、セルの間でメッセージを送受信する機能。ユーザ任意のメッセージの送受信およびセル間の関係性($links)の発行が可能。</p>
+<h3>Multiplicity</h3>
+<p><font size=1>[OData]</font> 多重度。AssociationEnd作成時に、関係するEntityTypeの個数を定義する。<br />
+AssociationEndの多重度の表記は、2つのEntityTypeの間の関係では、「1」、「0..1」(0または1)、「*」(多数)のいずれかを取る。</p>
+<h2><a name="anc_n"> N</a></h2>
+<h3>NavigationProperty</h3>
+<p><font size=1>[OData]</font> Entity Data ModelやODataのデータ構造において、Associationの 一方の End から別の End へのナビゲーションを表すProperty。</p>
+<h2><a name="anc_o"> O</a></h2>
+<h3>OData</h3>
+<p><font size=1>[OData]</font> Open Data Protocolの略称。HTTPに準拠した国際標準のデータ操作プロトコルであり、リレーショナルデータを扱うことが可能。 ODataについての詳細は<a href="http://www.odata.org/">こちら</a>。</p>
+<h3>OData Service Collection</h3>
+<p><font size=1>[Personium]</font> ODataプロトコルで任意のリレーショナルデータを扱うための特殊WebDAV拡張コレクションで、Box内の任意の階層に複数作成することができる。このコレクション配下自体がODataのサービスのルートとなっているとともに、スキーマ情報を格納する$metadata自体もスキーマ設定を行うためのOData空間のルートとなっており、ここで定義した任意のスキーマに基づいてリレーショナルデータを扱うことができる。</p>
+<h3>$orderby クエリ</h3>
+<p><font size=1>[OData]</font> PersoniumでサポートしているODataクエリの1つ。ユーザが特定した順序でソートされた値を表示する。デフォルトでは昇順。（<a href="../apiref/current/400_Orderby_Query.html">詳細事項</a>）</p>
+<h2><a name="anc_p"> P</a></h2>
+<h3>Property</h3>
+<p><font size=1>[OData]</font> 各EntityTypeの列頭の値。RDBにおけるテーブルの項目名に相当する。例えば「顧客」というEntityTypeには「ID」「名前」「住所」といったPropertyが考えられる。</p>
+<h3>Privilege</h3>
+<p><font size=1>[Personium]</font> Cell内に定義されたRoleに対し、特定のRoleに紐付けられたBox内部のデータにアクセスする権限。<br />
+PersoniumではACLの設定によって定義される。詳細は<a href="../apiref/current/006_Access_Control.html">アクセス制御モデル</a>参照。</p>
+<h2><a name="anc_r"> R</a></h2>
+<h3>RBAC</h3>
+<p><font size=1>[一般]</font> Role-based access controlの略称。アクセス主体ごとに直接アクセス制御を設定せず、アクセス主体にRole（役割）を割り当て、Roleに基づきアクセス制御を設定するアクセス制御方式。</p>
+<h3>ReceivedMessage</h3>
+<p><font size=1>[Personium]</font> 特定のセルからの、Relation発行リクエストやメッセージを受信する定義体。</p>
+<h3>Refreshトークン</h3>
+<p><font size=1>[OAuth2]</font> アクセストークンを再発行するために用いるトークン。リフレッシュトークンの有効時間は24時間である。</p>
+<h3>Refreshトークン 認証</h3>
+<p><font size=1>[Personium]</font> アクセストークンを再発行するためのプロセス。</p>
+<h3>Relation</h3>
+<p><font size=1>[Personium]</font> 自身（自セル）と他者（外部セル）との関係を示すセル制御オブジェクト。セル制御オブジェクトRelationとRoleをリンクすることにより、特定の関係にある他者セルからのアクセス者に一括してロールを付与することができる。 自身から見た他者への関係という一方的な関係性を独立して定義するモデルである点は注意が必要。具体的には、原則自セルのRelation登録や外部セルへの紐づけは相手の同意なく行うことができるため、 例えば「親子」という相互的な関係を表現する際は、親のセルが外部セルとして登録する子のセルに対して、親セルの中で「私の子」というRelationオブジェクトを登録して紐づけることとあわせて、子のセルが外部セルとして登録する親のセルに対して、子セルの中で「私の親」という逆の意味を持つRelationオブジェクトを登録して紐づけることが望ましい。「友人」といった対称な関係は同一の意味を持つRelationオブジェクトを双方のセルで登録のうえ、相互の外部セルにそれを紐づけることで表現する。「ファン」のような一方的な関係であれば、片方のセルが相手に特段断ることなく相手外部セルと紐づけて管理すればよい。</p>
+<h3>Relation クラス URL</h3>
+<p><font size=1>[Personium]</font> アプリケーションと定義される関係リソースへのURL。RelationクラスURL構造は以下の通り:<br />
+${Schema URL}/__relation/__/${RelationName}</p>
+<h3>Relation インスタンス URL</h3>
+<p><font size=1>[Personium]</font> 要求が1つ以上のExternal Cell(s)に送られる特定のRelationのURL。<br />
+Relation インスタンスURLの構造は以下の通り:<br />
+${Cell URL}/__relation/${BoxName}/${RelationName}</p>
+<h3>RequireSchemaAuthz</h3>
+<p><font size=1>[Personium]</font> ACL要素の属性値であり、Boxのスキーマ権限における要求レベルを定義する。</p>
+<h3>resourcetype</h3>
+<p><font size=1>[WebDAV]</font> Collectionの型を表す。ODataCollection/ServiceCollection/DavCollection/fileなど。</p>
+<h3>Role</h3>
+<p><font size=1>[Personium]</font> セル制御オブジェクトの1つ。そのCellの中で有効な「役割」をあらわす。（例：administrator、teacher、student）   どのアカウント(ユーザ)が、そのCellにアクセスすることができるかを指定できるようになるので、Cellのアカウント所有権を規定するアクセス権限の異なった設定を持つことができる。</p>
+<h3>Role クラス URL</h3>
+<p><font size=1>[Personium]</font> トランスセルトークン内部に蓄積させるためのRoleのURL。RoleクラスURLの構造は以下の通り:<br />
+${schema URL}/__role/__/${RoleName}</p>
+<h3>Role インスタンス URL</h3>
+<p><font size=1>[Personium]</font> 特定のCellに登録されたRoleの、現行状態を提供するURL。Role Resource URLと同様。Schemaは以下の通り:<br />
+${Cell URL}/__role/${BoxName}/${RoleName}</p>
+<h3>ROPC</h3>
+<p><font size=1>[OAuth2.0]</font> Resource Owner Password Credentials (リソースオーナーパスワードクレデンシャル)の略称。<a href="http://tools.ietf.org/pdf/rfc6749.pdf">OAuth2.0</a>において規定された認可プロセスの1つ。詳細は<a href="http://openid-foundation-japan.github.io/draft-ietf-oauth-v2-draft22.ja.html#anchor7">外部サイト</a>参照。ID/PWを用いる、Personiumでアクセストークンを取得するための標準的な認証方法のひとつ。</p>
+<h3>Rule</h3>
+<p><font size=1>[Personium]</font> セル制御オブジェクトの1つ。そのCellの中で起きたイベントに対してActionを実行させることを可能とする。あるエンティティに書込みがあったときにログを出力するとか、メッセージを受信したときに、自動で承認を行うといったことが可能となる。</p>
+<h2><a name="anc_s"> S</a></h2>
+<h3>Schema URI　スキーマURI</h3>
+<p><font size=1>[Personium]</font> Personium内に格納されたスキーマを表すURL。定義はCell URLもしくはURIである。</p>
+<h3>$select クエリ</h3>
+<p><font size=1>[OData]</font> PersoniumでサポートしているODataクエリの1つ。データ取得時に、特定のPropertyのみ指定して取得するクエリ。複数指定も可能。（<a href="../apiref/current/406_Select_Query.html">詳細事項</a>）</p>
+<h3>SentMessage</h3>
+<p><font size=1>[Personium]</font> 目的のセルに対しRelation設定承認を得るためのメッセージや通常のメッセージを送信する定義体。</p>
+<h3>Service Collection (サービスコレクション)</h3>
+<p><font size=1>[Personium]</font> コレクション（Boxの中に格納されたデータ集合）の1つ。ユーザ定義のサーバサイドロジックを実行するサービスのコレクション。</p>
+<h3>Service （サービス）登録</h3>
+<p><font size=1>[WebDAV]</font> Serviceコレクションにユーザ定義のサーバサイドロジックを登録すること。</p>
+<h3>$skip クエリ</h3>
+<p><font size=1>[OData]</font> PersoniumでサポートしているODataクエリの1つ。取得したデータのうち、指定した個数の分だけ、表示から除外して抽出するクエリ。（<a href="../apiref/current/402_Skip_Query.html">詳細事項</a>）</p>
+<h3>Stream Collection (Streamコレクション)</h3>
+<p><font size=1>[Personium]</font> コレクション（Boxの中に格納されたデータ集合）の1つ。データを永続的ではなくStreamとして扱うためのコレクション。</p>
+<h2><a name="anc_t"> T</a></h2>
+<h3>Token (トークン)</h3>
+<p><font size=1>[一般]</font> 主にユーザ認証に用いられるランダムな文字列。Personiumでは、格納したデータやリソースにアクセスする際に用いられる。クライアントがリクエストするcURL内に記載して使用する。<br />
+Personiumでは以下の種類:があり、発行から1時間で変更される。<br />
+(1)セルローカルトークン：認証されたセル内のリソースにアクセスする際に使用<br />
+(2)トランスセルトークン：他のセルに認証されたセル内のリソースにアクセスする際に使用</p>
+<h3>Token (トークン)認証</h3>
+<p><font size=1>[一般]</font> 認証プロセスの一つ。クライアントがリクエストするcURLのアクセストークンによる認証方法。詳細は<a href="./003_Auth.html">認証モデル</a>を参照。</p>
+<h3>$top クエリ</h3>
+<p><font size=1>[OData]</font> PersoniumでサポートしているODataクエリの1つ。取得したデータの最大記録数を指定しその個数分を返す。抽出データは、セット内の最初から数えられる。（<a href="../apiref/current/401_Top_Query.html">詳細事項</a>）</p>
+<h2><a name="anc_u"> U</a></h2>
+<h3>Unit</h3>
+<p><font size=1>[Personium]</font> 複数のセルをホストするサーバ。完全修飾ドメイン名（UnitFQDN）を持ち、絶対ドメイン名として参照される。</p>
+<h3>Unit制御オブジェクト</h3>
+<p><font size=1>[Personium]</font> ユニットユーザ（管理者）として、セルの作成や管理をするためのオブジェクト群。</p>
+<h3>Unit User</h3>
+<p><font size=1>[Personium]</font> ユニットの管理ユーザ。主にCellのCRUD（Create/Read/Update/Delete）の権限を持つ。</p>
+<h2><a name="anc_w"> W</a></h2>
+<h3>WebDAV</h3>
+<p><font size=1>[WebDAV]</font> Web-based Distributed Authoring and Versioningの略称。HTTPの拡張であり、Webサーバ内のドキュメントやファイルを異なるユーザで共同で執筆するためのプロトコル。<br />
+Personiumでは、WebDAVコレクションはファイルやフォルダであり、またCRUDの機能が動作する。<br />
+<a href="https://web.archive.org/web/20120626092812/http://webdav.org/">WebDAV Resources</a>を参照。</p>
+<h5><a href="#anc_a">A</a> | <a href="#anc_b">B</a> | <a href="#anc_c">C</a> | D | <a href="#anc_e">E</a> | <a href="#anc_f">F</a> | G | H | <a href="#anc_i">I</a> | J | K | L | <a href="#anc_m">M</a> | <a href="#anc_n">N</a> | <a href="#anc_o">O</a> | <a href="#anc_p">P</a> | Q | <a href="#anc_r">R</a> | <a href="#anc_s">S</a> | <a href="#anc_t">T</a> | <a href="#anc_u">U</a> | V | <a href="#anc_w">W</a> | X | Y | Z</h5>
+<p><br> <br> <br></p>
+</div>
+  <footer><nav>The Personium project is provided under the Apache 2.0 license. </nav></footer>
+</body>
+</html>
+

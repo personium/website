@@ -1,0 +1,158 @@
+<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml" lang="" xml:lang="">
+<head>
+  <!-- default template -->
+  <meta charset="utf-8" />
+  <meta name="generator" content="pandoc" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=yes" />
+  <link rel="icon" href="/images/favicon.ico" type="image/x-icon"/>
+  <title>Personium_AuthenticationPluginDeveloperManual</title>
+  <script type="text/javascript">
+      var path = location.pathname.split('/');
+      var pathRoot = [ path[0], path[1], '' ].join('/');
+      var pathLang = [ path[0], path[1], path[2] , ''].join('/');
+
+      document.write('<link rel="stylesheet" href="' + pathRoot + 'personium.css" type="text/css" />');
+      document.write('<link rel="stylesheet" href="' + pathLang + 'locale.css" type="text/css" />');
+      var ps = document.createElement('script');
+      ps.src = pathRoot + 'personium_docs.js';
+      var s = document.getElementsByTagName('script')[0];
+      s.parentNode.insertBefore(ps, s);
+    
+      ps2 = document.createElement('script');
+      ps2.src = pathRoot + 'apiref_versions.js';
+      s = document.getElementsByTagName('script')[0];
+      s.parentNode.insertBefore(ps2, s);
+  </script>
+  <link href="https://fonts.googleapis.com/css?family=Raleway" rel="stylesheet">
+  <link href="https://fonts.googleapis.com/css?family=Open+Sans" rel="stylesheet">
+  
+  <!--[if lt IE 9]>
+    <script src="//cdnjs.cloudflare.com/ajax/libs/html5shiv/3.7.3/html5shiv-printshiv.min.js"></script>
+  <![endif]-->
+</head>
+<body>
+  <header>
+    <nav>
+    <div id="logo"><a href="/"><img src="https://personium.io/images/logo-quantify-dark.png"></a></div>
+    <ul>
+      <li class="submenu">
+        <a href="#" >Introduction</a>
+        <ul>
+            <li><a href="javascript:p.toPage('/overview/001_Introduction.html');">What's Personium?</a></li>
+            <li><a href="javascript:p.toPage('/user_guide/001_Personium_Architecture.html');">Architecture</a></li>
+            <li><a href="javascript:p.toPage('/user_guide/008_Glossary.html');">Glossary</a></li>
+        </ul>
+      </li>
+      <li class="submenu">
+        <a href="#" >User Guide</a>
+        <ul>
+            <li><a href="javascript:p.toPage('/app-developer/');">for App Developer</a></li>
+            <li><a href="javascript:p.toPage('/cell-gui-developer/');">for Cell GUI Developer</a></li>
+            <li><a href="javascript:p.toPage('/unit-administrator/');">for Unit Administrator</a></li>
+            <li><a href="javascript:p.toPage('/server-operator/');">for Server Software Operator</a></li>
+            <li><a href="javascript:p.toPage('/document-writer/');">for Documentation Contributor</a></li>
+            <li><a href="javascript:p.toPage('/plugin-developer/');">for Server Plugin Developer</a></li>
+            <li><a href="javascript:p.toPage('/software-developer/');">for Server Developer</a></li>
+        </ul>
+      </li>
+      <li class="submenu">
+        <a href="#" >API Reference</a>
+        <ul id="api-ref-list">
+            <li><a href="javascript:p.toPage('/user_guide/990_Old_Version_API_Ref.html');">older versions</a></li>
+        </ul>
+      </li>
+      <li class="submenu">
+        <a href="#" >Languages</a>
+        <ul>
+            <li><a href="javascript:p.setLang('en');">English</a></li>
+            <li><a href="javascript:p.setLang('ja');">Japanese</a></li>
+        </ul>
+      </li>
+    </ul>
+    </nav>
+  </header>
+
+<div id="container">
+<h1>Personium認証Plugin開発ガイド</h1>
+<p>この文書はPersonium認証Pluginの開発マニュアルです。</p>
+<h2>この文書について</h2>
+<p>Personiumの認証Pluginを開発する上で必要となる情報を記述しています。<br />
+認証Pluginの詳細は<a href="../server-operator/setup_authentication_plugins.html">認証Pluginのセットアップ</a>をご参照ください。<br />
+このドキュメントでは、認証Pluginの作成手順を説明します。</p>
+<h2>開発の方法</h2>
+<p>具体的にはPluginでは以下の3点を定義します。</p>
+<ol>
+<li>どのようなアカウントType値に対応すべきなのか</li>
+<li>どのようなgrant_type値に対応すべきなのか</li>
+<li>トークンエンドポイントのgrant_type以外の入力パラメタ値をどのように評価して、結果としてどのような主体として認識すべきなのか</li>
+</ol>
+<p>即ちPlugin作者は、上記3点の情報を具体的なJavaコードとして実装します。 Personiumでは認証Pluginが上記3の応答として返却した認証済み識別主体情報(AuthenticatedIdentityオブジェクト）を以下の観点でさらに評価して、 トークン発行の可否判断や、発行トークンの内容決定、トークン発行処理を行います。</p>
+<ul>
+<li>getAccountName() で取得できる文字列をName属性にもつAccountが存在するか</li>
+<li>存在する場合、ヒットしたAccountのtype値に上記1の文字列が含まれているか</li>
+</ul>
+<h2>セキュリティ上の配慮</h2>
+<p>当然のことながら、Plugin作者は上記2の「パラメタ値評価」においては一般的にアクセス主体が適切な認証プロセスを経るように実装を行う必要があります。 例えば、入力値を一切チェックせずに本来保護されるべき特定の主体（ゲスト等でない実在の人物など） として認識してしまうようなPluginを作成し、これをユニットに配置してしまうことは重大なセキュリティ問題を引き起こします。 従ってPlugin作者はセキュアな実装を行うこと、Plugin利用者（ユニット管理者）はセキュアであると信じられるPluginのみを用いることが必要です。</p>
+<hr />
+<p>以下、google版の認証Pluginを例に説明します。</p>
+<h2>Pluginのクラス構造</h2>
+<p>作成Pluginの枠線部分が作成の対象です。</p>
+<p>認証Pluginのクラス構造図を以下に示します。 <img src="./images/plugin_02.png" title="Pluginクラス構造図" alt="クラス構造図" /></p>
+<blockquote>
+<p><strong>注意:</strong> 認証処理の戻り値</p>
+<ul>
+<li>認証に成功した場合は、AuthenticatedIdentityが返却されます。</li>
+<li>認証に失敗した場合は、PluginExceptionまたはnullが返却されます。</li>
+</ul>
+</blockquote>
+<h2>Pluginの動作</h2>
+<p>認証Pluginの動作を以下に示します。</p>
+<p><img src="./images/plugin_01.png" title="pluginの動作" alt="Pluginの動作" /></p>
+<p>　1. Plugin初期化処理 　 PersoniumCoreApplicationクラスでPluginManagerが呼出され、すべてのPluginを読み込みます。</p>
+<p>　2. 認証プロセスの呼び出し 　 TokenEndPointResourceクラスで対象のGrantTypeのPluginを選択します。 　 選択したPluginのauthenticateメソッドを実行します。</p>
+<blockquote>
+<p><strong>注意:</strong></p>
+<ul>
+<li>PersoniumPluginは、pluginsフォルダに配置するだけで実行可能です。</li>
+<li>認証Pluginは、Typeに”auth”とGrantTypeに各プロバイダを指定し、authenticateメソッドを記述することで、対象のpluginが選択されauthenticateメソッドが実行されます。</li>
+</ul>
+</blockquote>
+<h3>1.Plugin初期化処理</h3>
+<h4><i class="icon-file"></i> <a href="https://github.com/personium/personium-core/blob/master/src/main/java/io/personium/core/rs/PersoniumCoreApplication.java">PersoniumCoreApplication.java</a></h4>
+<p>pm = new PluginManager();<br />
+PluginManagerクラスを生成します。</p>
+<h3>2.認証プロセスの呼び出し</h3>
+<h4><i class="icon-file"></i> <a href="https://github.com/personium/personium-core/blob/master/src/main/java/io/personium/core/rs/cell/TokenEndPointResource.java">TokenEndPointResource.java</a></h4>
+<p>callAuthPlugins()メソッドで認証プロセスを呼び出しています。</p>
+<hr />
+<h2>サンプル実装</h2>
+<ul>
+<li><a href="https://github.com/personium/personium-plugin-sample">personium-plugin-sample</a></li>
+</ul>
+<p>最低限実装すべきメソッドは以下です。</p>
+<ul>
+<li>getType()
+<ul>
+<li>PluginのTypeを返す。現状は&quot;auth&quot;のみ。</li>
+</ul></li>
+<li>getGrantType()
+<ul>
+<li>対応するgrant_type値を返す。</li>
+</ul></li>
+<li>getAccountType()
+<ul>
+<li>対応するAccountのType値を返す。</li>
+</ul></li>
+<li>authenticate()
+<ul>
+<li>認証処理。</li>
+</ul></li>
+</ul>
+<h2>Pluginの作成手順</h2>
+<p><a href="../server-operator/setup_authentication_plugins.html">認証Pluginのセットアップ</a>をご参照ください。</p>
+</div>
+  <footer><nav>The Personium project is provided under the Apache 2.0 license. </nav></footer>
+</body>
+</html>
+

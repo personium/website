@@ -1,0 +1,685 @@
+<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml" lang="" xml:lang="">
+<head>
+  <!-- default template -->
+  <meta charset="utf-8" />
+  <meta name="generator" content="pandoc" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=yes" />
+  <title>000_Rest_API_Reference</title>
+  <script type="text/javascript">
+      var path = location.pathname.split('/');
+      var pathRoot = [ path[0], path[1], '' ].join('/');
+      var pathLang = [ path[0], path[1], path[2] , ''].join('/');
+
+      //load style sheets
+      document.write('<link rel="stylesheet" href="' + pathRoot + 'personium.css" type="text/css" />');
+      document.write('<link rel="stylesheet" href="' + pathLang + 'locale.css" type="text/css" />');
+      //load personium_docs.js
+      var ps = document.createElement('script');
+      ps.src = pathRoot + 'personium_docs.js';
+      var s = document.getElementsByTagName('script')[0];
+      s.parentNode.insertBefore(ps, s);
+    
+      //load apiref_versions.js
+      ps2 = document.createElement('script');
+      ps2.src = pathRoot + 'apiref_versions.js';
+      s = document.getElementsByTagName('script')[0];
+      s.parentNode.insertBefore(ps2, s);
+
+  </script>
+  <link href="https://fonts.googleapis.com/css?family=Raleway" rel="stylesheet">
+  <link href="https://fonts.googleapis.com/css?family=Open+Sans" rel="stylesheet">
+  
+  <!--[if lt IE 9]>
+    <script src="//cdnjs.cloudflare.com/ajax/libs/html5shiv/3.7.3/html5shiv-printshiv.min.js"></script>
+  <![endif]-->
+</head>
+<body>
+  <header>
+    <nav>
+    <div id="logo"><a href="/">Personium</a></div>
+    <ul>
+      <li class="submenu">
+        <a href="" >Introduction</a>
+        <ul>
+            <li><a href="javascript:p.toPage('/overview/001_Introduction.html');">What's Personium?</a></li>
+            <li><a href="javascript:p.toPage('/user_guide/001_Personium_Architecture.html');">Architecture</a></li>
+            <li><a href="javascript:p.toPage('/user_guide/008_Glossary.html');">Glossary</a></li>
+        </ul>
+      </li>
+      <li class="submenu">
+        <a href="" >User Guide</a>
+        <ul>
+            <li><a href="javascript:p.toPage('/app-developer/');">for App Developer</a></li>
+            <li><a href="javascript:p.toPage('/cell-client-developer/');">for Cell App Developer</a></li>
+            <li><a href="javascript:p.toPage('/unit-administrator/');">for Unit Administrator</a></li>
+            <li><a href="javascript:p.toPage('/server-operator/');">for Server Software Operator</a></li>
+            <li><a href="javascript:p.toPage('/document-writer/');">for Documentation Contributor</a></li>
+            <li><a href="javascript:p.toPage('/plugin-developer/');">for Server Plugin Developer</a></li>
+            <li><a href="javascript:p.toPage('/software-developer/');">for Server Developer</a></li>
+        </ul>
+      </li>
+      <li class="submenu">
+        <a href="" >API Reference</a>
+        <ul id="api-ref-list">
+            <li><a href="javascript:p.toPage('/user_guide/990_Old_Version_API_Ref.html');">older versions</a></li>
+        </ul>
+      </li>
+      <li class="submenu">
+        <a href="" >Languages</a>
+        <ul>
+            <li><a href="javascript:p.setLang('en');">English</a></li>
+            <li><a href="javascript:p.setLang('ja');">Japanese</a></li>
+        </ul>
+      </li>
+    </ul>
+    </nav>
+  </header>
+
+<div id="container">
+<h1>Personium API リファレンス</h1>
+<p>API リファレンスへようこそ。  ここではPersoniumが提供するすべてのAPIに関する技術的な詳細仕様を記述しています。 本リファレンス内のリクエストURLの変数については<a href="005_Variable_of_Request_URL.html">リクエストURLの変数一覧</a>を参照してください。</p>
+<h2>Unit Level API</h2>
+<p>Unit Level API はCell群をホストするユニットに属するAPIで、Cellの生成や作成したCell群の管理を行うものです。   これらAPIは原則としてCellから発行されたアクセストークンではアクセスできず、ユニットユーザとしてのトークンでのみアクセス可能です。</p>
+<h4>Unit Root URL</h4>
+<pre><code>https://{UnitFQDN}/</code></pre>
+<p>Unit Level API の大半はUnit制御オブジェクトという形で実現されています。ODataに従ったREST操作でUnit制御オブジェクトを操作してください。</p>
+<h3>ユニット制御オブジェクト</h3>
+<table>
+<thead>
+<tr class="header">
+<th style="text-align: left;">Cell</th>
+<th style="text-align: left;">操作</th>
+</tr>
+</thead>
+<tbody>
+<tr class="odd">
+<td style="text-align: left;">基本操作</td>
+<td style="text-align: left;"><a href="100_Create_Cell.html">作成</a>     <a href="102_Get_Cell.html">取得</a>     <a href="101_List_Cell.html">一覧取得</a>     <a href="103_Update_Cell.html">更新</a>     <a href="104_Delete_Cell.html">削除</a>    </td>
+</tr>
+</tbody>
+</table>
+<h3>その他API</h3>
+<ul>
+<li><a href="105_Cell_Recursive_Delete.html">Cell再帰的削除</a></li>
+</ul>
+<h2>Cell Level API</h2>
+<p>Cell Level API は、Cellを管理するユーザがアプリ等を通じて操作するAPIで、以下のCellルートURL以下に展開されています。  </p>
+<h4>Cell Root URL</h4>
+<pre><code>https://{UnitFQDN}/{CellName}/</code></pre>
+<p>Cell Level API は、次のような機能で構成されます。</p>
+<ul>
+<li>人やアプリケーションの認証</li>
+<li>アクセス制御</li>
+<li>Cell間の関係の構築</li>
+<li>Boxの生成・管理</li>
+<li>Cell間のメッセージ交換</li>
+<li>イベント処理</li>
+<li>その他機能</li>
+</ul>
+<p>これら機能群の多くはCell制御オブジェクトという形で実現されています。Cell制御オブジェクトはODataに従ったREST操作で操作可能です。</p>
+<h3>人やアプリケーションの認証</h3>
+<h4>認証</h4>
+<ul>
+<li><a href="292_OAuth2_Authorization_Endpoint.html">OAuth2.0 認可エンドポイント</a></li>
+<li><a href="293_OAuth2_Token_Endpoint.html">OAuth2.0 トークンエンドポイント</a></li>
+<li><a href="294_Password_Change.html">パスワード変更</a></li>
+</ul>
+<h4>Account (Cell制御オブジェクト)</h4>
+<table style="width:11%;">
+<colgroup>
+<col style="width: 5%" />
+<col style="width: 5%" />
+</colgroup>
+<thead>
+<tr class="header">
+<th style="text-align: left;">Account</th>
+<th style="text-align: left;">操作</th>
+</tr>
+</thead>
+<tbody>
+<tr class="odd">
+<td style="text-align: left;">基本操作</td>
+<td style="text-align: left;"><a href="212_Create_Account.html">作成</a>     <a href="213_Retrieve_Account.html">取得</a>     <a href="214_Search_Account.html">一覧取得</a>     <a href="215_Update_Account.html">更新</a>     <a href="216_Delete_Account.html">削除</a></td>
+</tr>
+<tr class="even">
+<td style="text-align: left;">    他オブジェクトとのリンク</td>
+<td style="text-align: left;"><a href="217_Register_Account_links.html">リンク</a>     <a href="220_Delete_Account_links.html">リンク解除</a>     <a href="218_Acquire_Account_links_List.html">リンク一覧取得</a> <br>リンク更新はありません。更新したい場合は削除して再作成してください。</td>
+</tr>
+<tr class="odd">
+<td style="text-align: left;">    紐づく他オブジェクト操作</td>
+<td style="text-align: left;"><a href="221_Register_Account_Navigation_Property.html">作成</a>     <a href="222_Acquire_Account_Navigation_Property.html">一覧取得</a></td>
+</tr>
+</tbody>
+</table>
+<h3>アクセス制御</h3>
+<ul>
+<li><a href="289_Cell_ACL.html">ACL設定</a></li>
+<li><a href="290_Cell_Get_Property.html">プロパティ取得</a></li>
+<li>プロパティ変更</li>
+</ul>
+<h4>Role (Cell制御オブジェクト)</h4>
+<table style="width:11%;">
+<colgroup>
+<col style="width: 5%" />
+<col style="width: 5%" />
+</colgroup>
+<thead>
+<tr class="header">
+<th style="text-align: left;">Role</th>
+<th style="text-align: left;">操作</th>
+</tr>
+</thead>
+<tbody>
+<tr class="odd">
+<td style="text-align: left;">基本操作</td>
+<td style="text-align: left;"><a href="201_Create_Role.html">作成</a>     <a href="203_Search_Role.html">取得</a>     <a href="202_Retrieve_Role.html">一覧取得</a>     <a href="204_Update_Role.html">更新</a>     <a href="205_Delete_Role.html">削除</a></td>
+</tr>
+<tr class="even">
+<td style="text-align: left;">    他オブジェクトとのリンク</td>
+<td style="text-align: left;"><a href="206_Create_Role_links.html">リンク</a>     <a href="209_Delete_Role_links.html">リンク解除</a>     <a href="207_List_Role_links.html">リンク一覧取得</a> <br>リンク更新はありません。更新したい場合は削除して再作成してください。</td>
+</tr>
+<tr class="odd">
+<td style="text-align: left;">    紐づく他オブジェクト操作</td>
+<td style="text-align: left;"><a href="210_Register_Role_Using_NavProp.html">作成</a>     <a href="211_List_Using_Role_NavProp.html">一覧取得</a></td>
+</tr>
+</tbody>
+</table>
+<h3>Cell間の関係構築</h3>
+<h4>ExtCell (Cell制御オブジェクト)</h4>
+<p>関係のある他のCellを登録管理するためのオブジェクトです。ExtCellとRoleをリンクさせることにより、そのCellで認証されたユーザに対し指定のロールを割り当てることができます。</p>
+<table style="width:11%;">
+<colgroup>
+<col style="width: 5%" />
+<col style="width: 5%" />
+</colgroup>
+<thead>
+<tr class="header">
+<th style="text-align: left;">ExtCell</th>
+<th style="text-align: left;">操作</th>
+</tr>
+</thead>
+<tbody>
+<tr class="odd">
+<td style="text-align: left;">基本操作</td>
+<td style="text-align: left;"><a href="223_Create_External_Cell.html">作成</a>     <a href="225_Get_External_Cell.html">取得</a>     <a href="224_List_External_Cell.html">一覧取得</a>     <a href="226_Update_External_Cell.html">更新</a>     <a href="227_Delete_External_Cell.html">削除</a></td>
+</tr>
+<tr class="even">
+<td style="text-align: left;">    他オブジェクトとのリンク</td>
+<td style="text-align: left;"><a href="228_Register_External_Cell_links.html">リンク</a>     <a href="231_Delete_External_Cell_links.html">リンク解除</a>     <a href="229_List_External_Cell_links.html">リンク一覧取得</a> <br>リンク更新はありません。更新したい場合は削除して再作成してください。</td>
+</tr>
+<tr class="odd">
+<td style="text-align: left;">    紐づく他オブジェクト操作</td>
+<td style="text-align: left;"><a href="232_Register_External_Cell_Using_NavProp.html">作成</a>     <a href="233_List_External_Cell_NavProp.html">一覧取得</a></td>
+</tr>
+</tbody>
+</table>
+<h4>Relation (Cell制御オブジェクト)</h4>
+<p>自Cellから見た外部Cellへの関係を表します。RelationをExtCellとリンクさせることにより、外部Cellとの関係を定義することができます。 また、RelationとRoleをリンクさせることにより、その関係で結ばれたCellで認証されたユーザに対し指定のロールを割り当てることができます。</p>
+<table style="width:11%;">
+<colgroup>
+<col style="width: 5%" />
+<col style="width: 5%" />
+</colgroup>
+<thead>
+<tr class="header">
+<th style="text-align: left;">Relation</th>
+<th style="text-align: left;">操作</th>
+</tr>
+</thead>
+<tbody>
+<tr class="odd">
+<td style="text-align: left;">基本操作</td>
+<td style="text-align: left;"><a href="234_Create_Relation.html">作成</a>     <a href="236_Retrieve_Relation.html">取得</a>     <a href="235_List_Relation.html">一覧取得</a>     <a href="237_Update_Relation.html">更新</a>     <a href="238_Delete_Relation.html">削除</a></td>
+</tr>
+<tr class="even">
+<td style="text-align: left;">   他オブジェクトとのリンク</td>
+<td style="text-align: left;"><a href="239_Register_Relation_links.html">リンク</a>     <a href="242_Delete_Relation_links.html">リンク解除</a>     <a href="240_List_Relation_links.html">リンク一覧取得</a> <br>リンク更新はありません。更新したい場合は削除して再作成してください。</td>
+</tr>
+<tr class="odd">
+<td style="text-align: left;">   紐づく他オブジェクト操作</td>
+<td style="text-align: left;"><a href="243_Register_Using_Relation_NavProp.html">作成</a>     <a href="244_List_Using_Relation_NavProp.html">一覧取得</a></td>
+</tr>
+</tbody>
+</table>
+<h4>ExtRole (Cell制御オブジェクト)</h4>
+<p>ある関係で結ばれた他のCellであるロールを得ているユーザを表します。これとRoleをリンクさせることにより、そのようなユーザに指定のロールを割り当てることができます。</p>
+<table style="width:11%;">
+<colgroup>
+<col style="width: 5%" />
+<col style="width: 5%" />
+</colgroup>
+<thead>
+<tr class="header">
+<th style="text-align: left;">ExtRole</th>
+<th style="text-align: left;">操作</th>
+</tr>
+</thead>
+<tbody>
+<tr class="odd">
+<td style="text-align: left;">基本操作</td>
+<td style="text-align: left;"><a href="245_Create_External_Role.html">作成</a>     <a href="247_Get_External_Role.html">取得</a>     <a href="246_List_External_Role.html">一覧取得</a>     <a href="248_Update_External_Role.html">更新</a>     <a href="249_Delete_External_Role.html">削除</a></td>
+</tr>
+<tr class="even">
+<td style="text-align: left;">    他オブジェクトとのリンク</td>
+<td style="text-align: left;"><a href="250_Register_External_Role_links.html">リンク</a>     <a href="253_Delete_External_Role_links.html">リンク解除</a>     <a href="251_Retrieve_External_Role_links.html">リンク一覧取得</a> <br>リンク更新はありません。更新したい場合は削除して再作成してください。</td>
+</tr>
+<tr class="odd">
+<td style="text-align: left;">    紐づく他オブジェクト操作作</td>
+<td style="text-align: left;"><a href="254_Register_Using_Role_NavProp.html">作成</a>     <a href="255_List_External_Role_NavProp.html">一覧取得</a></td>
+</tr>
+</tbody>
+</table>
+<h3>Boxの作成・管理</h3>
+<ul>
+<li><a href="302_Box_Installation.html">Boxインストール</a></li>
+<li><a href="303_Progress_of_Bar_File_Installation.html">Boxメタデータ取得</a></li>
+<li><a href="304_Get_Box_URL.html">URL取得</a></li>
+<li><a href="295_Box_Recursive_Delete.html">再帰的削除</a></li>
+</ul>
+<h4>Box (Cell制御オブジェクト)</h4>
+<table style="width:11%;">
+<colgroup>
+<col style="width: 5%" />
+<col style="width: 5%" />
+</colgroup>
+<thead>
+<tr class="header">
+<th style="text-align: left;">Box</th>
+<th style="text-align: left;">操作</th>
+</tr>
+</thead>
+<tbody>
+<tr class="odd">
+<td style="text-align: left;">基本操作</td>
+<td style="text-align: left;"><a href="256_Create_Box.html">作成</a>     <a href="258_Retrieve_Box.html">取得</a>     <a href="257_Search_Box.html">一覧取得</a>     <a href="259_Update_Box.html">更新</a>     <a href="260_Delete_Box.html">削除</a></td>
+</tr>
+<tr class="even">
+<td style="text-align: left;">   他オブジェクトとのリンク</td>
+<td style="text-align: left;"><a href="261_Register_Box_links.html">リンク</a>     <a href="264_Delete_Box_links.html">リンク解除</a>     <a href="262_List_Box_links.html">リンク一覧取得</a> <br>リンク更新はありません。更新したい場合は削除して再作成してください。</td>
+</tr>
+<tr class="odd">
+<td style="text-align: left;">   紐づく他オブジェクト操作</td>
+<td style="text-align: left;"><a href="265_Register_Using_Box_NavProp.html">作成</a>     <a href="266_List_Box_NavProp.html">一覧取得</a></td>
+</tr>
+</tbody>
+</table>
+<h3>Cell間のメッセージ交換</h3>
+<ul>
+<li><a href="271_Send_Message.html">メッセージ送信</a></li>
+<li><a href="267_Received_Message_Approval.html">状態変更</a> (承認・拒否等)</li>
+</ul>
+<table>
+<thead>
+<tr class="header">
+<th style="text-align: left;">Cell制御オブジェクト</th>
+<th style="text-align: left;">操作</th>
+</tr>
+</thead>
+<tbody>
+<tr class="odd">
+<td style="text-align: left;"><strong>送信済メッセージ</strong></td>
+<td style="text-align: left;"><a href="272_Retrieve_Sent_Message.html">取得</a>     <a href="273_List_Sent_Messages.html">一覧取得</a>     <a href="274_Delete_Sent_Message.html">削除</a></td>
+</tr>
+<tr class="even">
+<td style="text-align: left;"><strong>受信メッセージ</strong></td>
+<td style="text-align: left;"><a href="269_Get_Received_Message.html">取得</a>     <a href="268_List_Received_Messages.html">一覧取得</a>     <a href="270_Delete_an_Incoming_Message.html">削除</a></td>
+</tr>
+</tbody>
+</table>
+<h3>イベント処理</h3>
+<ul>
+<li><a href="277_Event_Summary.html">イベントの概要</a></li>
+<li><a href="278_Event_Reception.html">外部イベント受付</a></li>
+<li><a href="279_Event_Bus_Connect.html">イベントバスへの Web Socket 接続</a></li>
+</ul>
+<h4>イベント制御ルール　（Cell制御オブジェクト）</h4>
+<p>イベントが発生したときに起動すべき処理を記述することができます。フィルタすべきイベントの条件とその際に起動すべき処理を記述します。記述可能な処理は、ログ出力、engineスクリプトの起動、他URLへのイベント情報のリレーです。</p>
+<table style="width:11%;">
+<colgroup>
+<col style="width: 5%" />
+<col style="width: 5%" />
+</colgroup>
+<thead>
+<tr class="header">
+<th style="text-align: left;">Rule</th>
+<th style="text-align: left;">操作</th>
+</tr>
+</thead>
+<tbody>
+<tr class="odd">
+<td style="text-align: left;">基本操作</td>
+<td style="text-align: left;"><a href="2A0_Create_Rule.html">作成</a>     <a href="2A1_Retrieve_Rule.html">取得</a>     <a href="2A2_Search_Rule.html">一覧取得</a>     <a href="2A3_Update_Rule.html">更新</a>     <a href="2A4_Delete_Rule.html">削除</a></td>
+</tr>
+<tr class="even">
+<td style="text-align: left;">    他オブジェクトとのリンク</td>
+<td style="text-align: left;"><a href="2A5_Create_Rule_links.html">リンク</a>     <a href="2A7_Delete_Rule_links.html">リンク解除</a>     <a href="2A6_List_Rule_links.html">リンク一覧取得</a> <br>リンク更新はありません。更新したい場合は削除して再作成してください。</td>
+</tr>
+<tr class="odd">
+<td style="text-align: left;">    紐づく他オブジェクト操作</td>
+<td style="text-align: left;"><a href="2A8_Register_Rule_Using_NavProp.html">作成</a>     <a href="2A9_List_Using_Rule_NavProp.html">一覧取得</a></td>
+</tr>
+</tbody>
+</table>
+<h4>イベントログ操作</h4>
+<ul>
+<li><a href="285_Retrieve_Log_File.html">ログファイル取得</a></li>
+<li><a href="284_Retrieve_Log_File_list.html">ログファイル一覧取得</a></li>
+<li><a href="283_Log_File_Information_Acquisition.html">ログファイル情報取得</a></li>
+<li><a href="286_Delete_Log_File.html">ログファイル削除</a></li>
+</ul>
+<h3>その他機能</h3>
+<h4>エクスポート/インポートする機能</h4>
+<p>エクスポート実行でCellのスナップショットファイルが作成されます。<br />
+インポート実行でスナップショットファイルの内容をCellに取り込みます。<br />
+スナップショットファイルはWebDAVのインターフェースで操作可能です。</p>
+<table>
+<thead>
+<tr class="header">
+<th style="text-align: left;"></th>
+<th style="text-align: left;">操作</th>
+</tr>
+</thead>
+<tbody>
+<tr class="odd">
+<td style="text-align: left;"><strong>エクスポート</strong></td>
+<td style="text-align: left;"><a href="501_Export_Cell.html">実行</a>     <a href="502_Progress_of_Export_Cell.html">状態取得</a></td>
+</tr>
+<tr class="even">
+<td style="text-align: left;"><strong>インポート</strong></td>
+<td style="text-align: left;"><a href="507_Import_Cell.html">実行</a>     <a href="508_Progress_of_Import_Cell.html">状態取得</a></td>
+</tr>
+<tr class="odd">
+<td style="text-align: left;"><strong>スナップショット</strong></td>
+<td style="text-align: left;"><a href="503_Register_and_Update_Snapshot_Cell.html">登録更新</a>     <a href="504_Get_Snapshot_Cell.html">取得</a>     <a href="505_Get_Property_Snapshot_Cell.html">属性取得</a>     <a href="506_Delete_Snapshot_Cell.html">削除</a></td>
+</tr>
+</tbody>
+</table>
+<h2>Box Level API</h2>
+<p>Box Level API は、アプリケーション等がデータを操作するためのAPIで、以下のBox ルートURL以下に展開されています。</p>
+<h4>Box Root URL</h4>
+<pre><code>https://{UnitFQDN}/{CellName}/{BoxName}/</code></pre>
+<p>WebDAVをベースとしたファイルシステム的な考え方のAPI群で、通常のファイルシステムと同様にファイルの配置・取得、フォルダ（Collection）の作成・管理、ファイルやフォルダの一覧取得、アクセス制御の設定・参照等が可能です。</p>
+<p>また以下の特殊コレクションをサポートしているため、ファイル状のデータのみではなく、様々な形態のデータを扱うことができます。 これら特殊コレクションはBoxが提供するWebDAV空間上のいかなるパスに作成することもできます。</p>
+<table>
+<thead>
+<tr class="header">
+<th style="text-align: left;">特殊コレクション</th>
+<th style="text-align: left;">用途</th>
+<th style="text-align: left;">備考</th>
+</tr>
+</thead>
+<tbody>
+<tr class="odd">
+<td style="text-align: left;">OData Service Collection</td>
+<td style="text-align: left;">リレーショナルデータ</td>
+<td style="text-align: left;"></td>
+</tr>
+<tr class="even">
+<td style="text-align: left;">Engine Service Collection</td>
+<td style="text-align: left;">カスタマイズロジックの走行</td>
+<td style="text-align: left;"></td>
+</tr>
+<tr class="odd">
+<td style="text-align: left;">CALDAV Collection</td>
+<td style="text-align: left;">カレンダーデータ</td>
+<td style="text-align: left;">未実装</td>
+</tr>
+<tr class="even">
+<td style="text-align: left;">Link Collection</td>
+<td style="text-align: left;">他のCellや他Boxの特定の領域へのエイリアス</td>
+<td style="text-align: left;">未実装</td>
+</tr>
+</tbody>
+</table>
+<h3>WebDAV 基本操作</h3>
+<table>
+<thead>
+<tr class="header">
+<th style="text-align: left;">対象</th>
+<th style="text-align: left;">操作</th>
+</tr>
+</thead>
+<tbody>
+<tr class="odd">
+<td style="text-align: left;">コレクション</td>
+<td style="text-align: left;"><a href="306_Create_Collection.html">作成</a>     <a href="305_Get_Property.html">設定取得</a>     <a href="308_Change_Property.html">設定変更</a>     <a href="309_Update_Move_Collection.html">移動名称変更</a>     <a href="310_Delete_Collection.html">削除</a></td>
+</tr>
+<tr class="even">
+<td style="text-align: left;">ファイル</td>
+<td style="text-align: left;"><a href="312_Register_and_Update_WebDAV.html">登録更新</a>     <a href="311_Get_WebDav.html">取得</a>     <a href="307_Get_Property.html">設定取得</a>     <a href="313_Change_Property.html">設定変更</a>     <a href="314_Delete_WebDAV.html">削除</a></td>
+</tr>
+<tr class="odd">
+<td style="text-align: left;">共通</td>
+<td style="text-align: left;"><a href="315_Configure_Access_Control.html">アクセス制御設定</a></td>
+</tr>
+</tbody>
+</table>
+<p>※ すべてのファイルやコレクション（特殊コレクションを含む）に対してACL設定(アクセス制御設定)が可能です。<br />
+※ ACL設定 は PROPFINDメソッドで取得できます。</p>
+<h3>OData サービスコレクション</h3>
+<p>リレーショナルデータを扱うための特殊コレクションで、<a href="306_Create_Collection.html">コレクション作成</a>操作時に特定のパラメタを与えることにより作成可能です。スキーマ定義操作として、いわゆるテーブルに相当するEntityTypeを定義することで、その中にテーブル状のデータを格納・管理することができます。</p>
+<h4>データ操作</h4>
+<p>後述スキーマ定義でEntityTypeを定義すると対応するEntitySetが利用可能となります。</p>
+<table style="width:11%;">
+<colgroup>
+<col style="width: 5%" />
+<col style="width: 5%" />
+</colgroup>
+<thead>
+<tr class="header">
+<th style="text-align: left;">ユーザ定義EntitySet</th>
+<th style="text-align: left;">操作</th>
+</tr>
+</thead>
+<tbody>
+<tr class="odd">
+<td style="text-align: left;">基本操作</td>
+<td style="text-align: left;"><a href="364_Create_Entity.html">作成</a>     <a href="366_Get_Entity.html">取得</a>     <a href="365_List_Entity.html">一覧取得</a>     <a href="367_Update_Entity.html">更新</a>     <a href="369_Partial_Update_Entity.html">部分更新</a>     <a href="370_Delete_Entity.html">削除</a></td>
+</tr>
+<tr class="even">
+<td style="text-align: left;">    他EntitySetのEntityとのリンク</td>
+<td style="text-align: left;"><a href="373_Register_User_Data_links.html">リンク</a>     <a href="376_Delete_User_Data_links.html">リンク解除</a>     <a href="374_User_Data_List_links.html">リンク一覧取得</a> <br>リンク更新はありません。更新したい場合は削除して再作成してください。</td>
+</tr>
+<tr class="odd">
+<td style="text-align: left;">    紐づく他EntitySet操作</td>
+<td style="text-align: left;"><a href="377_Register_using_NavProp.html">作成</a>     <a href="378_List_using_NavProp.html">一覧取得</a></td>
+</tr>
+</tbody>
+</table>
+<h5><a href="368_Entity_Bulk_Operations.html">一括操作</a></h5>
+<p>複数のオペレーションを一つのRESTリクエストにまとめて発行する機能です。アプリの性能確保のためには非常に重要なものです。</p>
+<h4>スキーマ定義</h4>
+<p>OData Service Collection には、スキーマ定義のためのOData Serviceが内包されています。この内包されたもうひとつのOData Service 上の Entity Set を操作することで、OData Service Collection の Entity Set やその中で扱うべき Property、Complex Propertyを定義したり、Entity Set 間の Association　を定義することができます。</p>
+<h5>スキーマ定義用 OData Service URL</h5>
+<pre><code>{ODataServiceURL}/$metadata/</code></pre>
+<h5>スキーマ定義用 Entity Set</h5>
+<table>
+<thead>
+<tr class="header">
+<th style="text-align: left;">EntityType</th>
+<th style="text-align: left;">操作</th>
+</tr>
+</thead>
+<tbody>
+<tr class="odd">
+<td style="text-align: left;">基本操作</td>
+<td style="text-align: left;"><a href="345_Create_EntityType.html">作成</a>     <a href="347_Get_EntityType.html">取得</a>     <a href="346_List_EntityType.html">一覧取得</a>     <a href="348_Update_EntityType.html">更新</a>     <a href="349_Delete_EntityType.html">削除</a></td>
+</tr>
+</tbody>
+</table>
+<table>
+<thead>
+<tr class="header">
+<th style="text-align: left;">Property</th>
+<th style="text-align: left;">操作</th>
+</tr>
+</thead>
+<tbody>
+<tr class="odd">
+<td style="text-align: left;">基本操作</td>
+<td style="text-align: left;"><a href="355_Register_Property.html">作成</a>     <a href="357_Get_Property.html">取得</a>     <a href="356_List_Property.html">一覧取得</a>     更新     <a href="359_Delete_Property.html">削除</a></td>
+</tr>
+</tbody>
+</table>
+<table style="width:11%;">
+<colgroup>
+<col style="width: 5%" />
+<col style="width: 5%" />
+</colgroup>
+<thead>
+<tr class="header">
+<th style="text-align: left;">AssociationEnd</th>
+<th style="text-align: left;">操作</th>
+</tr>
+</thead>
+<tbody>
+<tr class="odd">
+<td style="text-align: left;">基本操作</td>
+<td style="text-align: left;"><a href="318_Register_AssociationEnd.html">作成</a>     <a href="320_Get_AssociationEnd.html">取得</a>     <a href="319_List_AssociationEnd.html">一覧取得</a>     <a href="321_Update_AssociationEnd.html">更新</a>     <a href="322_Delete_AssociationEnd.html">削除</a></td>
+</tr>
+<tr class="even">
+<td style="text-align: left;">    EntityTypeや他のAssociationEndとのリンク</td>
+<td style="text-align: left;"><a href="323_Register_AssociationEnd_links.html">リンク</a>     <a href="325_Delete_AssociationEnd_links.html">リンク解除</a>     <a href="324_List_AssociationEnd_links.html">リンク一覧取得</a> <br>リンク更新はありません。更新したい場合は削除して再作成してください。</td>
+</tr>
+</tbody>
+</table>
+<table>
+<thead>
+<tr class="header">
+<th style="text-align: left;">ComplexType</th>
+<th style="text-align: left;">操作</th>
+</tr>
+</thead>
+<tbody>
+<tr class="odd">
+<td style="text-align: left;">基本操作</td>
+<td style="text-align: left;"><a href="327_Register_ComplexType.html">作成</a>     <a href="329_Get_ComplexType.html">取得</a>     <a href="328_List_ComplexType.html">一覧取得</a>     更新     <a href="331_Delete_ComplexType.html">削除</a></td>
+</tr>
+</tbody>
+</table>
+<table>
+<thead>
+<tr class="header">
+<th style="text-align: left;">ComplexTypeProperty</th>
+<th style="text-align: left;">操作</th>
+</tr>
+</thead>
+<tbody>
+<tr class="odd">
+<td style="text-align: left;">基本操作</td>
+<td style="text-align: left;"><a href="336_Register_ComplexTypeProperty.html">作成</a>     <a href="338_Get_ComplexTypeProperty.html">取得</a>     <a href="337_List_ComplexTypeProperty.html">一覧取得</a>     <a href="339_Update_ComplexTypeProperty.html">更新</a>     <a href="340_Delete_ComplexTypeProperty.html">削除</a></td>
+</tr>
+</tbody>
+</table>
+<h4>サービスドキュメント取得/スキーマ取得</h4>
+<table>
+<thead>
+<tr class="header">
+<th style="text-align: left;"></th>
+<th style="text-align: left;">取得</th>
+</tr>
+</thead>
+<tbody>
+<tr class="odd">
+<td style="text-align: left;">サービスドキュメント</td>
+<td style="text-align: left;"><a href="317_Document_Acquisition_Service.html">取得</a></td>
+</tr>
+<tr class="even">
+<td style="text-align: left;">スキーマ</td>
+<td style="text-align: left;"><a href="316_User_Defined_Data_Schema.html">取得</a></td>
+</tr>
+</tbody>
+</table>
+<h3>Engine サービスコレクション</h3>
+<p>PersoniumアプリケーションやCell利用者が作成したサーバサイドロジックを登録しこれを走行させることができます。 はじめに、ユーザロジックをファイルとして登録し、サービスコレクションの設定を行ってパスとの関連付けを行うことで、コレクション配下の任意のパスからのリクエストに対してユーザーロジックを走行させることができます。</p>
+<table>
+<thead>
+<tr class="header">
+<th style="text-align: left;"></th>
+<th style="text-align: left;">作成・登録</th>
+<th style="text-align: left;">取得</th>
+<th style="text-align: left;">更新</th>
+<th style="text-align: left;">削除</th>
+<th style="text-align: left;">その他</th>
+</tr>
+</thead>
+<tbody>
+<tr class="odd">
+<td style="text-align: left;">サービスコレクションソース</td>
+<td style="text-align: left;"><a href="381_Create_Service_Collection_Source.html">作成</a></td>
+<td style="text-align: left;"><a href="382_List_Service_Collection_Source.html">取得</a></td>
+<td style="text-align: left;"><a href="380_Configure_Service_Collection.html">設定適用</a></td>
+<td style="text-align: left;"><a href="383_Delete_Service_Collection_Source.html">削除</a></td>
+<td style="text-align: left;"><a href="384_Service_Execution.html">サービス実行</a></td>
+</tr>
+</tbody>
+</table>
+<h2>共通情報</h2>
+<ul>
+<li><a href="004_Error_Messages.html">エラーメッセージ一覧</a></li>
+<li><a href="003_Common_Limitations_on_HTTP_Implementation.html">PersoniumのHTTP実装に関する制限事項</a></li>
+<li><a href="002_CORS_Support.html">CORS対応</a></li>
+<li><a href="001_Cross_Domain_Policy_File.html">クロスドメインポリシーファイル取得</a></li>
+</ul>
+<h3>OData取得共通クエリ</h3>
+<table>
+<thead>
+<tr class="header">
+<th style="text-align: left;">クエリ</th>
+<th style="text-align: left;">一件取得使用可</th>
+<th style="text-align: left;">一覧取得使用可</th>
+</tr>
+</thead>
+<tbody>
+<tr class="odd">
+<td style="text-align: left;"><a href="404_Format_Query.html">$formatクエリ</a></td>
+<td style="text-align: left;">○</td>
+<td style="text-align: left;">○</td>
+</tr>
+<tr class="even">
+<td style="text-align: left;"><a href="405_Expand_Query.html">$expandクエリ</a></td>
+<td style="text-align: left;">○</td>
+<td style="text-align: left;">○</td>
+</tr>
+<tr class="odd">
+<td style="text-align: left;"><a href="406_Select_Query.html">$selectクエリ</a></td>
+<td style="text-align: left;">○</td>
+<td style="text-align: left;">○</td>
+</tr>
+<tr class="even">
+<td style="text-align: left;"><a href="400_Orderby_Query.html">$orderbyクエリ</a></td>
+<td style="text-align: left;">×</td>
+<td style="text-align: left;">○</td>
+</tr>
+<tr class="odd">
+<td style="text-align: left;"><a href="401_Top_Query.html">$topクエリ</a></td>
+<td style="text-align: left;">×</td>
+<td style="text-align: left;">○</td>
+</tr>
+<tr class="even">
+<td style="text-align: left;"><a href="402_Skip_Query.html">$skipクエリ</a></td>
+<td style="text-align: left;">×</td>
+<td style="text-align: left;">○</td>
+</tr>
+<tr class="odd">
+<td style="text-align: left;"><a href="403_Filter_Query.html">$filterクエリ</a></td>
+<td style="text-align: left;">×</td>
+<td style="text-align: left;">○</td>
+</tr>
+<tr class="even">
+<td style="text-align: left;"><a href="407_Inlinecount_Query.html">$inlinecount</a></td>
+<td style="text-align: left;">×</td>
+<td style="text-align: left;">○</td>
+</tr>
+<tr class="odd">
+<td style="text-align: left;"><a href="408_Full_Text_Search_Query.html">全文検索(q)クエリ</a></td>
+<td style="text-align: left;">×</td>
+<td style="text-align: left;">○</td>
+</tr>
+</tbody>
+</table>
+</div>
+  <footer><nav>The Personium project is provided under the Apache 2.0 license. </nav></footer>
+</body>
+</html>

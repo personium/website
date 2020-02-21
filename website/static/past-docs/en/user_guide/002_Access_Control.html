@@ -1,0 +1,730 @@
+<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml" lang="" xml:lang="">
+<head>
+  <!-- default template -->
+  <meta charset="utf-8" />
+  <meta name="generator" content="pandoc" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=yes" />
+  <title>002_Access_Control</title>
+  <script type="text/javascript">
+      var path = location.pathname.split('/');
+      var pathRoot = [ path[0], path[1], '' ].join('/');
+      var pathLang = [ path[0], path[1], path[2] , ''].join('/');
+
+      document.write('<link rel="stylesheet" href="' + pathRoot + 'personium.css" type="text/css" />');
+      document.write('<link rel="stylesheet" href="' + pathLang + 'locale.css" type="text/css" />');
+      var ps = document.createElement('script');
+      ps.src = pathRoot + 'personium_docs.js';
+      var s = document.getElementsByTagName('script')[0];
+      s.parentNode.insertBefore(ps, s);
+    
+      ps2 = document.createElement('script');
+      ps2.src = pathRoot + 'apiref_versions.js';
+      s = document.getElementsByTagName('script')[0];
+      s.parentNode.insertBefore(ps2, s);
+  </script>
+  <link href="https://fonts.googleapis.com/css?family=Raleway" rel="stylesheet">
+  <link href="https://fonts.googleapis.com/css?family=Open+Sans" rel="stylesheet">
+  
+  <!--[if lt IE 9]>
+    <script src="//cdnjs.cloudflare.com/ajax/libs/html5shiv/3.7.3/html5shiv-printshiv.min.js"></script>
+  <![endif]-->
+</head>
+<body>
+  <header>
+    <nav>
+    <div id="logo"><a href="/">Personium</a></div>
+    <ul>
+      <li class="submenu">
+        <a href="#" >Introduction</a>
+        <ul>
+            <li><a href="javascript:p.toPage('/overview/001_Introduction.html');">What's Personium?</a></li>
+            <li><a href="javascript:p.toPage('/user_guide/001_Personium_Architecture.html');">Architecture</a></li>
+            <li><a href="javascript:p.toPage('/user_guide/008_Glossary.html');">Glossary</a></li>
+        </ul>
+      </li>
+      <li class="submenu">
+        <a href="#" >User Guide</a>
+        <ul>
+            <li><a href="javascript:p.toPage('/app-developer/');">for App Developer</a></li>
+            <li><a href="javascript:p.toPage('/cell-client-developer/');">for Cell App Developer</a></li>
+            <li><a href="javascript:p.toPage('/unit-administrator/');">for Unit Administrator</a></li>
+            <li><a href="javascript:p.toPage('/server-operator/');">for Server Software Operator</a></li>
+            <li><a href="javascript:p.toPage('/document-writer/');">for Documentation Contributor</a></li>
+            <li><a href="javascript:p.toPage('/plugin-developer/');">for Server Plugin Developer</a></li>
+            <li><a href="javascript:p.toPage('/software-developer/');">for Server Developer</a></li>
+        </ul>
+      </li>
+      <li class="submenu">
+        <a href="#" >API Reference</a>
+        <ul id="api-ref-list">
+            <li><a href="javascript:p.toPage('/user_guide/990_Old_Version_API_Ref.html');">older versions</a></li>
+        </ul>
+      </li>
+      <li class="submenu">
+        <a href="#" >Languages</a>
+        <ul>
+            <li><a href="javascript:p.setLang('en');">English</a></li>
+            <li><a href="javascript:p.setLang('ja');">Japanese</a></li>
+        </ul>
+      </li>
+    </ul>
+    </nav>
+  </header>
+
+<div id="container">
+<h1>Access control model</h1>
+<h2>ACL</h2>
+<p>The access control to the access subject by the ACL is done by applying <a href="http://www.ietf.org/rfc/rfc3744">WebDAV ACL</a> to role based access control.<br />
+By setting the ACL with the ACL method for Cell, Box, Collection, etc., access right to that resource can be set.<br />
+Basically, it conforms to the specification of WebDAV ACL, but this page will explain Personium original specifications.</p>
+<p>ACL settings are defined in XML.</p>
+<h3>ACL component in Personium</h3>
+<p>The Personium ACL consists of the following elements.</p>
+<table>
+<thead>
+<tr class="header">
+<th style="text-align: left;">Element name</th>
+<th style="text-align: left;">Contents</th>
+</tr>
+</thead>
+<tbody>
+<tr class="odd">
+<td style="text-align: left;">ace</td>
+<td style="text-align: left;">Represents an access entity that sets ACLs and a set of their grants</td>
+</tr>
+<tr class="even">
+<td style="text-align: left;">pricipal</td>
+<td style="text-align: left;">Define the access subject of the ACL to be set up</td>
+</tr>
+<tr class="odd">
+<td style="text-align: left;">grant</td>
+<td style="text-align: left;">Define one or more privileges to be given to principal</td>
+</tr>
+<tr class="even">
+<td style="text-align: left;">privilege</td>
+<td style="text-align: left;">Define permission settings</td>
+</tr>
+</tbody>
+</table>
+<h3>Limitations</h3>
+<p>In Personium V1 series, there are the following restrictions.</p>
+<ul>
+<li>The ACL is updated by overwriting the existing setting<br />
+</li>
+<li>Set up deprivation of authority by deny element<br />
+</li>
+<li>Acquire a list of authorizations that can be granted</li>
+</ul>
+<h3>Object</h3>
+<p>The target of ACL setting of Personium is a resource, and it is set by the ACL method to the URL of each resource.<br />
+In the case of a path of a cell, it becomes a cell level ACL, and in case of a path under a box, it becomes a box level ACL.<br />
+These two have different Privileges (authorities) that can be set, and they will not affect each other.</p>
+<table style="width:17%;">
+<colgroup>
+<col style="width: 5%" />
+<col style="width: 5%" />
+<col style="width: 5%" />
+</colgroup>
+<thead>
+<tr class="header">
+<th style="text-align: left;"></th>
+<th style="text-align: left;">Object</th>
+<th style="text-align: left;">Target resource</th>
+</tr>
+</thead>
+<tbody>
+<tr class="odd">
+<td style="text-align: left;">Cell Level ACL</td>
+<td style="text-align: left;">Setting to the cell, <br>Control CRUD of cell control object</td>
+<td style="text-align: left;">Cell</td>
+</tr>
+<tr class="even">
+<td style="text-align: left;">Box Level ACL</td>
+<td style="text-align: left;">Control CRUD of Box control object</td>
+<td style="text-align: left;">Box, WebDAV collection, ODatacollection, Servicecollection <br>Directory and file under the WebDAV collection</td>
+</tr>
+</tbody>
+</table>
+<h2>ace</h2>
+<p>The target access agent is defined as a Principal element, and the authorization is defined as a grant element. You can set multiple ace elements.</p>
+<h3>Principal</h3>
+<p>Although Principal has &quot;human or computational actor&quot; in the WebDAV ACL, it is defined as a role in Personium.<br />
+The role of Personium is a concept close to &quot;Group&quot; in WebDAV ACL.</p>
+<h4>all</h4>
+<p>As defined in the WebDAV ACL, setting the all element in pricipal gives the authorization setting, It can also be defined for all roles and unauthorized access agents (without Authorization header).<br />
+Since it is authority for all access agents to the resource, caution is required when using it.</p>
+<pre><code>principal:all
+privilege:all</code></pre>
+<p>With the above setting, all operations are released to all accesses accessed.<br />
+<strong>However, if schema authentication level setting is done, that checking will take effect.</strong></p>
+<h5>Setting example</h5>
+<p>Give read access to all access subjects.</p>
+<pre><code>&lt;?xml version=&quot;1.0&quot; encoding=&quot;utf-8&quot; ?&gt;
+&lt;D:acl xmlns:D=&quot;DAV:&quot; xml:base=&quot;http://fqdn/testcell1/__role/box1/&quot;
+    xmlns:p=&quot;urn:x-personium:xmlns&quot;
+    p:requireSchemaAuthz=&quot;none&quot;&gt;
+    &lt;D:ace&gt;
+        &lt;D:principal&gt;
+            &lt;/D:all&gt;
+        &lt;/D:principal&gt;
+        &lt;D:grant&gt;
+            &lt;D:privilege&gt;&lt;D:read/&gt;&lt;/D:privilege&gt;
+        &lt;/D:grant&gt;
+    &lt;/D:ace&gt;
+&lt;/D:acl&gt;</code></pre>
+<h4>Role</h4>
+<p>To define a role for the target access agent, enclose it in an href element and set the role resource URL.<br />
+For specifications on role resources see Role Issue.</p>
+<p>Note that the role resource URL that can be set can not specify a role resource URL different from the cell URL of the ACL setting target.</p>
+<h5>Setting example</h5>
+<p>Describe all role resource URLs to be set in Principal<br />
+(Example of giving read and write privileges to doctor attached to box 1 and giving read only to guest attached to box 2)</p>
+<pre><code>&lt;?xml version=&quot;1.0&quot; encoding=&quot;utf-8&quot; ?&gt;
+&lt;D:acl xmlns:D=&quot;DAV:&quot;
+    xmlns:p=&quot;urn:x-personium:xmlns&quot;
+    p:requireSchemaAuthz=&quot;none&quot;&gt;
+    &lt;D:ace&gt;
+        &lt;D:principal&gt;
+            &lt;D:href&gt;http://fqdn/testcell1/__role/box1/doctor&lt;/D:href&gt;
+        &lt;/D:principal&gt;
+        &lt;D:grant&gt;
+            &lt;D:privilege&gt;&lt;D:read/&gt;&lt;/D:privilege&gt;
+            &lt;D:privilege&gt;&lt;D:write/&gt;&lt;/D:privilege&gt;
+        &lt;/D:grant&gt;
+    &lt;/D:ace&gt;
+    &lt;D:ace&gt;
+        &lt;D:principal&gt;
+            &lt;D:href&gt;http://fqdn/testcell1/__role/box2/guest&lt;/D:href&gt;
+        &lt;/D:principal&gt;
+        &lt;D:grant&gt;
+            &lt;D:privilege&gt;&lt;D:read/&gt;&lt;/D:privilege&gt;
+        &lt;/D:grant&gt;
+    &lt;/D:ace&gt;
+&lt;/D:acl&gt;</code></pre>
+<p>Omission of description by xml: base<br />
+By describing the role resource URL up to the box in the xml: base attribute of the acl element, omit the description of the role resource URL set in Principal can do.<br />
+(Example of giving read and write privileges to doctor attached to box 1 and giving read only to guest attached to box 2)</p>
+<pre><code>&lt;?xml version=&quot;1.0&quot; encoding=&quot;utf-8&quot; ?&gt;
+&lt;D:acl xmlns:D=&quot;DAV:&quot; xml:base=&quot;http://fqdn/testcell1/__role/box1/&quot;
+    xmlns:p=&quot;urn:x-personium:xmlns&quot;
+    p:requireSchemaAuthz=&quot;none&quot;&gt;
+    &lt;D:ace&gt;
+        &lt;D:principal&gt;
+            &lt;D:href&gt;doctor&lt;/D:href&gt;
+        &lt;/D:principal&gt;
+        &lt;D:grant&gt;
+            &lt;D:privilege&gt;&lt;D:read/&gt;&lt;/D:privilege&gt;
+            &lt;D:privilege&gt;&lt;D:write/&gt;&lt;/D:privilege&gt;
+        &lt;/D:grant&gt;
+    &lt;/D:ace&gt;
+    &lt;D:ace&gt;
+        &lt;D:principal&gt;
+            &lt;D:href&gt;../box2/guest&lt;/D:href&gt;
+        &lt;/D:principal&gt;
+        &lt;D:grant&gt;
+            &lt;D:privilege&gt;&lt;D:read/&gt;&lt;/D:privilege&gt;
+        &lt;/D:grant&gt;
+    &lt;/D:ace&gt;
+&lt;/D:acl&gt;</code></pre>
+<p>* Like guest, when setting a role attached to a box different from the xml: base box, it is possible to describe relative paths as described above.</p>
+<h4>Output with PROPFIND</h4>
+<p>When outputting the ACL setting with PROPFIND, the xml: base attribute is output as follows.</p>
+<ul>
+<li>In the case of PROPFIND to a cell, the URL of the main box<br />
+</li>
+<li>In the case of PROPFIND under Box, the URL to that Box</li>
+</ul>
+<h3>grant/Privilege</h3>
+<p>The authority is set with the element defined by Personium, and set by enclosing it in the Privilege element in the grant element.<br />
+In addition, you can specify multiple Privilege elements in the grant element.</p>
+<h4>Cell Level ACL Privilege</h4>
+<p>For the set cell, specify execution authority of the cell control object and execution authority of the method.<br />
+When the authority located at the higher level is set, it has the authority belonging to the lower rank. (Eg message has the authority of message-read)</p>
+<table style="width:22%;">
+<colgroup>
+<col style="width: 5%" />
+<col style="width: 5%" />
+<col style="width: 5%" />
+<col style="width: 5%" />
+</colgroup>
+<thead>
+<tr class="header">
+<th style="text-align: left;">Authority name</th>
+<th style="text-align: left;">Target cell control object</th>
+<th style="text-align: left;">Top authority name</th>
+<th style="text-align: left;">Methods that can be executed</th>
+</tr>
+</thead>
+<tbody>
+<tr class="odd">
+<td style="text-align: left;">root</td>
+<td style="text-align: left;">It has all the authorities below</td>
+<td style="text-align: left;">-</td>
+<td style="text-align: left;">All</td>
+</tr>
+<tr class="even">
+<td style="text-align: left;">auth</td>
+<td style="text-align: left;">Account, Role, ExtRole</td>
+<td style="text-align: left;">root</td>
+<td style="text-align: left;">PUT, POST, DELETE, GET, OPTIONS</td>
+</tr>
+<tr class="odd">
+<td style="text-align: left;">auth-read</td>
+<td style="text-align: left;">Account, Role, ExtRole</td>
+<td style="text-align: left;">auth</td>
+<td style="text-align: left;">GET, OPTIONS</td>
+</tr>
+<tr class="even">
+<td style="text-align: left;">message</td>
+<td style="text-align: left;">RecievedMessage, SentMessage</td>
+<td style="text-align: left;">root</td>
+<td style="text-align: left;">POST, DELETE, GET, OPTIONS</td>
+</tr>
+<tr class="odd">
+<td style="text-align: left;">message-read</td>
+<td style="text-align: left;">RecievedMessage, SentMessage</td>
+<td style="text-align: left;">message</td>
+<td style="text-align: left;">GET, OPTIONS</td>
+</tr>
+<tr class="even">
+<td style="text-align: left;">event</td>
+<td style="text-align: left;">event</td>
+<td style="text-align: left;">root</td>
+<td style="text-align: left;">PUT, POST, DELETE, GET, OPTIONS</td>
+</tr>
+<tr class="odd">
+<td style="text-align: left;">event-read</td>
+<td style="text-align: left;">event</td>
+<td style="text-align: left;">event</td>
+<td style="text-align: left;">GET, OPTIONS</td>
+</tr>
+<tr class="even">
+<td style="text-align: left;">log</td>
+<td style="text-align: left;">log</td>
+<td style="text-align: left;">root</td>
+<td style="text-align: left;">PUT, POST, DELETE, GET, OPTIONS</td>
+</tr>
+<tr class="odd">
+<td style="text-align: left;">log-read</td>
+<td style="text-align: left;">log</td>
+<td style="text-align: left;">log</td>
+<td style="text-align: left;">GET, OPTIONS</td>
+</tr>
+<tr class="even">
+<td style="text-align: left;">social</td>
+<td style="text-align: left;">Relation, ExtCell</td>
+<td style="text-align: left;">root</td>
+<td style="text-align: left;">PUT, POST, DELETE, GET, OPTIONS</td>
+</tr>
+<tr class="odd">
+<td style="text-align: left;">social-read</td>
+<td style="text-align: left;">Relation, ExtCell</td>
+<td style="text-align: left;">social</td>
+<td style="text-align: left;">GET, OPTIONS</td>
+</tr>
+<tr class="even">
+<td style="text-align: left;">box</td>
+<td style="text-align: left;">Box</td>
+<td style="text-align: left;">root</td>
+<td style="text-align: left;">PUT, POST, DELETE, GET, OPTIONS</td>
+</tr>
+<tr class="odd">
+<td style="text-align: left;">box-read</td>
+<td style="text-align: left;">Box</td>
+<td style="text-align: left;">box</td>
+<td style="text-align: left;">GET, OPTIONS</td>
+</tr>
+<tr class="even">
+<td style="text-align: left;">box-install</td>
+<td style="text-align: left;">Box</td>
+<td style="text-align: left;">box</td>
+<td style="text-align: left;">MKCOL(Barfileinstallation)</td>
+</tr>
+<tr class="odd">
+<td style="text-align: left;">box-export</td>
+<td style="text-align: left;">Box</td>
+<td style="text-align: left;">root</td>
+<td style="text-align: left;">GET(Barfileexport) * Not supported</td>
+</tr>
+<tr class="even">
+<td style="text-align: left;">acl</td>
+<td style="text-align: left;">Cell</td>
+<td style="text-align: left;">root</td>
+<td style="text-align: left;">ACL</td>
+</tr>
+<tr class="odd">
+<td style="text-align: left;">acl-read</td>
+<td style="text-align: left;">Cell</td>
+<td style="text-align: left;">acl</td>
+<td style="text-align: left;">Display of ACL setting of PROPFIND</td>
+</tr>
+<tr class="even">
+<td style="text-align: left;">propfind</td>
+<td style="text-align: left;">Cell</td>
+<td style="text-align: left;">root</td>
+<td style="text-align: left;">PROPFIND</td>
+</tr>
+<tr class="odd">
+<td style="text-align: left;">rule</td>
+<td style="text-align: left;">Rule</td>
+<td style="text-align: left;">root</td>
+<td style="text-align: left;">POST,DELETE,GET,OPTIONS</td>
+</tr>
+<tr class="even">
+<td style="text-align: left;">rule-read</td>
+<td style="text-align: left;">Rule</td>
+<td style="text-align: left;">rule</td>
+<td style="text-align: left;">GET,OPTIONS</td>
+</tr>
+</tbody>
+</table>
+<h5>Setting Example</h5>
+<pre><code>&lt;?xml version=&quot;1.0&quot; encoding=&quot;utf-8&quot; ?&gt;
+&lt;D:acl xmlns:D=&quot;DAV:&quot; xmlns:p=&quot;urn:x-personium:xmlns&quot;
+    xml:base=&quot;https://example.com/cell/box&quot;&gt;
+    &lt;D:ace&gt;
+        &lt;D:principal&gt;
+            &lt;D:href&gt;role10&lt;/D:href&gt;
+        &lt;/D:principal&gt;
+        &lt;D:grant&gt;
+            &lt;D:privilege&gt;&lt;p:root/&gt;&lt;/D:privilege&gt;
+        &lt;/D:grant&gt;
+    &lt;/D:ace&gt;
+    &lt;D:ace&gt;
+        &lt;D:principal&gt;
+            &lt;D:href&gt;../box2/role13&lt;/D:href&gt;
+        &lt;/D:principal&gt;
+        &lt;D:grant&gt;
+            &lt;D:privilege&gt;&lt;p:social/&gt;&lt;/D:privilege&gt;
+        &lt;/D:grant&gt;
+    &lt;/D:ace&gt;
+    &lt;D:ace&gt;
+        &lt;D:principal&gt;
+            &lt;D:href&gt;role15&lt;/D:href&gt;
+        &lt;/D:principal&gt;
+        &lt;D:grant&gt;
+            &lt;D:privilege&gt;&lt;p:acl/&gt;&lt;/D:privilege&gt;
+        &lt;/D:grant&gt;
+    &lt;/D:ace&gt;
+&lt;/D:acl&gt;</code></pre>
+<h4>Box level ACL Privilege</h4>
+<p>Specify the execution authority of the method for the resources below the set box.<br />
+Box level Privilege is basically defined along WebDAV ACL.<br />
+When the authority located at the higher level is set, it has the authority belonging to the lower rank.(Example: read also has the authority of read-properties)</p>
+<table style="width:22%;">
+<colgroup>
+<col style="width: 5%" />
+<col style="width: 5%" />
+<col style="width: 5%" />
+<col style="width: 5%" />
+</colgroup>
+<thead>
+<tr class="header">
+<th style="text-align: left;">Authority name</th>
+<th style="text-align: left;">Target cell control object</th>
+<th style="text-align: left;">Top authority name</th>
+<th style="text-align: left;">Methods that can be executed</th>
+</tr>
+</thead>
+<tbody>
+<tr class="odd">
+<td style="text-align: left;">all</td>
+<td style="text-align: left;">It has all the authorities below</td>
+<td style="text-align: left;">p:root</td>
+<td style="text-align: left;">All</td>
+</tr>
+<tr class="even">
+<td style="text-align: left;">read</td>
+<td style="text-align: left;">Has read permission. It does not include read-acl.</td>
+<td style="text-align: left;">all</td>
+<td style="text-align: left;">GET, OPTIONS</td>
+</tr>
+<tr class="odd">
+<td style="text-align: left;">write</td>
+<td style="text-align: left;">Has write authority. It does not include write-acl.</td>
+<td style="text-align: left;">all</td>
+<td style="text-align: left;">PUT, POST, DELETE, MKCOL</td>
+</tr>
+<tr class="even">
+<td style="text-align: left;">read-properties</td>
+<td style="text-align: left;">Has the right to read properties.</td>
+<td style="text-align: left;">read</td>
+<td style="text-align: left;">PROPFIND</td>
+</tr>
+<tr class="odd">
+<td style="text-align: left;">write-properties</td>
+<td style="text-align: left;">Have authority to write properties.</td>
+<td style="text-align: left;">write</td>
+<td style="text-align: left;">PROPPATCH</td>
+</tr>
+<tr class="even">
+<td style="text-align: left;">read-acl</td>
+<td style="text-align: left;">It has read authority of ACL.</td>
+<td style="text-align: left;">all</td>
+<td style="text-align: left;">Display of ACL setting of PROPFIND</td>
+</tr>
+<tr class="odd">
+<td style="text-align: left;">write-acl</td>
+<td style="text-align: left;">Has authority to write ACL.</td>
+<td style="text-align: left;">all</td>
+<td style="text-align: left;">ACL</td>
+</tr>
+<tr class="even">
+<td style="text-align: left;">write-content</td>
+<td style="text-align: left;">Has authority to write content.</td>
+<td style="text-align: left;">write</td>
+<td style="text-align: left;">*Notsupported</td>
+</tr>
+<tr class="odd">
+<td style="text-align: left;">bind</td>
+<td style="text-align: left;">Has bind authority.</td>
+<td style="text-align: left;">write</td>
+<td style="text-align: left;">*Notsupported</td>
+</tr>
+<tr class="even">
+<td style="text-align: left;">unbind</td>
+<td style="text-align: left;">Has unbind authority.</td>
+<td style="text-align: left;">write</td>
+<td style="text-align: left;">*Notsupported</td>
+</tr>
+<tr class="odd">
+<td style="text-align: left;">exec</td>
+<td style="text-align: left;">Has service execution authority. * Personium original implementation</td>
+<td style="text-align: left;">all</td>
+<td style="text-align: left;">-</td>
+</tr>
+</tbody>
+</table>
+<h5>Setting Example</h5>
+<pre><code>&lt;?xml version=&quot;1.0&quot; encoding=&quot;utf-8&quot; ?&gt;
+&lt;D:acl xmlns:D=&quot;DAV:&quot; xml:base=&quot;http://fqdn/testcell1/__role/box1/&quot;
+    xmlns:p=&quot;urn:x-personium:xmlns&quot;
+    p:requireSchemaAuthz=&quot;none&quot;&gt;
+    &lt;D:ace&gt;
+        &lt;D:principal&gt;
+            &lt;D:href&gt;doctor&lt;/D:href&gt;
+        &lt;/D:principal&gt;
+        &lt;D:grant&gt;
+            &lt;D:privilege&gt;&lt;D:read/&gt;&lt;/D:privilege&gt;
+            &lt;D:privilege&gt;&lt;D:write/&gt;&lt;/D:privilege&gt;
+        &lt;/D:grant&gt;
+    &lt;/D:ace&gt;
+    &lt;D:ace&gt;
+        &lt;D:principal&gt;
+            &lt;D:href&gt;../box2/guest&lt;/D:href&gt;
+        &lt;/D:principal&gt;
+        &lt;D:grant&gt;
+            &lt;D:privilege&gt;&lt;D:read/&gt;&lt;/D:privilege&gt;
+        &lt;/D:grant&gt;
+    &lt;/D:ace&gt;
+&lt;/D:acl&gt;</code></pre>
+<h2>ACL inheritance</h2>
+<p>For box level ACL setting, the setting of the parent (upper directory) of the accessed resource is applied back to the cell.<br />
+The ACL setting for the access subject is inherited in the form in which the parent setting is added.<br />
+Therefore, the following points need to be noted when setting ACL.</p>
+<ul>
+<li>When strong permission of all etc. etc is set for parent, even if restriction is applied to child, it becomes invalid</li>
+</ul>
+<h3>Examples of ACL inheritance and applied privileges</h3>
+<p>Exampleresource</p>
+<table>
+<thead>
+<tr class="header">
+<th style="text-align: left;">Resource type</th>
+<th style="text-align: left;">Resource name</th>
+<th style="text-align: left;">Resource URL</th>
+</tr>
+</thead>
+<tbody>
+<tr class="odd">
+<td style="text-align: left;">Cell</td>
+<td style="text-align: left;">cell</td>
+<td style="text-align: left;">https://fqdn/cell</td>
+</tr>
+<tr class="even">
+<td style="text-align: left;">Box</td>
+<td style="text-align: left;">box</td>
+<td style="text-align: left;">https://fqdn/cell/box</td>
+</tr>
+<tr class="odd">
+<td style="text-align: left;">WebDAV Collection</td>
+<td style="text-align: left;">webdav</td>
+<td style="text-align: left;">https://fqdn/cell/box/webdav</td>
+</tr>
+<tr class="even">
+<td style="text-align: left;">Directory</td>
+<td style="text-align: left;">directory</td>
+<td style="text-align: left;">https://fqdn/cell/box/webdav/directory</td>
+</tr>
+<tr class="odd">
+<td style="text-align: left;">File</td>
+<td style="text-align: left;">file</td>
+<td style="text-align: left;">https://fqdn/cell/box/webdav/directory/file</td>
+</tr>
+</tbody>
+</table>
+<p>After applying the following ACL setting to the above resource, the authorities applied when accessing each resource are as follows.</p>
+<table>
+<thead>
+<tr class="header">
+<th style="text-align: left;">Resources to access</th>
+<th style="text-align: left;">Permission set</th>
+<th style="text-align: left;">Applicable authority</th>
+</tr>
+</thead>
+<tbody>
+<tr class="odd">
+<td style="text-align: left;">Cell</td>
+<td style="text-align: left;">auth-read</td>
+<td style="text-align: left;">auth-read</td>
+</tr>
+<tr class="even">
+<td style="text-align: left;">Box</td>
+<td style="text-align: left;">read-acl</td>
+<td style="text-align: left;">auth-read, read-acl</td>
+</tr>
+<tr class="odd">
+<td style="text-align: left;">WebDAV Collection</td>
+<td style="text-align: left;">read</td>
+<td style="text-align: left;">auth-read, read-acl, read</td>
+</tr>
+<tr class="even">
+<td style="text-align: left;">Directory</td>
+<td style="text-align: left;">nosettings</td>
+<td style="text-align: left;">auth-read, read-acl, read</td>
+</tr>
+<tr class="odd">
+<td style="text-align: left;">File</td>
+<td style="text-align: left;">read-propaties</td>
+<td style="text-align: left;">auth-read, read-acl, read-properties, read</td>
+</tr>
+</tbody>
+</table>
+<h2>Schema authority request level</h2>
+<p>For access control to the application according to the schema authority request level, the request level is set by the RequireSchemaAuthz attribute of the ACL element at the time of setting the ACL.<br />
+For schema authentication specifications, see &quot;Schema authentication (application authentication)&quot; in the authentication model.</p>
+<h3>Setting value</h3>
+<p>Schema privilege request level value</p>
+<table style="width:11%;">
+<colgroup>
+<col style="width: 5%" />
+<col style="width: 5%" />
+</colgroup>
+<thead>
+<tr class="header">
+<th style="text-align: left;">Level value</th>
+<th style="text-align: left;">Contents</th>
+</tr>
+</thead>
+<tbody>
+<tr class="odd">
+<td style="text-align: left;">none(Default)</td>
+<td style="text-align: left;">Accessible without schema authentication</td>
+</tr>
+<tr class="even">
+<td style="text-align: left;">public</td>
+<td style="text-align: left;">Accessible if schema authentication result is OK</td>
+</tr>
+<tr class="odd">
+<td style="text-align: left;">confidential</td>
+<td style="text-align: left;">When the schema authentication result is OK and the special role confidentialClient is available</td>
+</tr>
+</tbody>
+</table>
+<h4>Setting Example</h4>
+<p>Sample Schema Privilege Request Level Setting ACL</p>
+<pre><code>&lt;?xml version=&quot;1.0&quot; encoding=&quot;utf-8&quot; ?&gt;
+&lt;D:acl xmlns:D=&quot;DAV:&quot; xml:base=&quot;http://localhost:8080/testcell1/__role/box1/&quot;
+    xmlns:p=&quot;urn:x-personium:xmlns&quot;
+    p:requireSchemaAuthz=&quot;{レベル値}&quot;&gt;
+    &lt;D:ace&gt;
+        &lt;D:principal&gt;
+            &lt;D:all/&gt;
+        &lt;/D:principal&gt;
+        &lt;D:grant&gt;
+            &lt;D:privilege&gt;&lt;D:read/&gt;&lt;/D:privilege&gt;
+            &lt;D:privilege&gt;&lt;D:write/&gt;&lt;/D:privilege&gt;
+        &lt;/D:grant&gt;
+    &lt;/D:ace&gt;
+&lt;/D:acl&gt;</code></pre>
+<h3>Inheritance of schema authority request level setting</h3>
+<p>The schema authority request level setting is applied by setting the parent (upper directory) of the accessed resource back to the box only when the accessed resource is not set.<br />
+If the schema authority request level is not set, it is treated as none, but it is not inherited if explicitly set to none.<br />
+Inheritance is confirmed back to the Box, but when the schema level setting is performed on the intermediate resource, the setting value becomes effective.</p>
+<h4>Schema privilege Request level inheritance and example of authority to be applied</h4>
+<p>The schema authority request level applied when accessing each resource after setting the following schema authority request level to the above resource is as follows.</p>
+<p>Example resource</p>
+<table>
+<thead>
+<tr class="header">
+<th style="text-align: left;">Resource type</th>
+<th style="text-align: left;">Resource name</th>
+<th style="text-align: left;">Resource URL</th>
+</tr>
+</thead>
+<tbody>
+<tr class="odd">
+<td style="text-align: left;">Cell</td>
+<td style="text-align: left;">cell</td>
+<td style="text-align: left;">https://fqdn/cell</td>
+</tr>
+<tr class="even">
+<td style="text-align: left;">Box</td>
+<td style="text-align: left;">box</td>
+<td style="text-align: left;">https://fqdn/cell/box</td>
+</tr>
+<tr class="odd">
+<td style="text-align: left;">WebDAV Collection</td>
+<td style="text-align: left;">webdav</td>
+<td style="text-align: left;">https://fqdn/cell/box/webdav</td>
+</tr>
+<tr class="even">
+<td style="text-align: left;">Directory</td>
+<td style="text-align: left;">directory</td>
+<td style="text-align: left;">https://fqdn/cell/box/webdav/directory</td>
+</tr>
+<tr class="odd">
+<td style="text-align: left;">File</td>
+<td style="text-align: left;">file</td>
+<td style="text-align: left;">https://fqdn/cell/box/webdav/directory/file</td>
+</tr>
+</tbody>
+</table>
+<p>After applying the following ACL setting to the above resource, the authorities applied when accessing each resource are as follows.</p>
+<table>
+<thead>
+<tr class="header">
+<th style="text-align: left;">Resources to access</th>
+<th style="text-align: left;">Set level</th>
+<th style="text-align: left;">Applicable level</th>
+</tr>
+</thead>
+<tbody>
+<tr class="odd">
+<td style="text-align: left;">Box</td>
+<td style="text-align: left;">confidential</td>
+<td style="text-align: left;">confidential</td>
+</tr>
+<tr class="even">
+<td style="text-align: left;">WebDAV Collection</td>
+<td style="text-align: left;">public</td>
+<td style="text-align: left;">public</td>
+</tr>
+<tr class="odd">
+<td style="text-align: left;">Directory</td>
+<td style="text-align: left;">no settings</td>
+<td style="text-align: left;">public</td>
+</tr>
+<tr class="even">
+<td style="text-align: left;">File</td>
+<td style="text-align: left;">none</td>
+<td style="text-align: left;">none</td>
+</tr>
+</tbody>
+</table>
+</div>
+  <footer><nav>The Personium project is provided under the Apache 2.0 license. </nav></footer>
+</body>
+</html>
+

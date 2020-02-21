@@ -1,0 +1,161 @@
+<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml" lang="" xml:lang="">
+<head>
+  <!-- default template -->
+  <meta charset="utf-8" />
+  <meta name="generator" content="pandoc" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=yes" />
+  <title>setup_en</title>
+  <script type="text/javascript">
+      var path = location.pathname.split('/');
+      var pathRoot = [ path[0], path[1], '' ].join('/');
+      var pathLang = [ path[0], path[1], path[2] , ''].join('/');
+
+      document.write('<link rel="stylesheet" href="' + pathRoot + 'personium.css" type="text/css" />');
+      document.write('<link rel="stylesheet" href="' + pathLang + 'locale.css" type="text/css" />');
+      var ps = document.createElement('script');
+      ps.src = pathRoot + 'personium_docs.js';
+      var s = document.getElementsByTagName('script')[0];
+      s.parentNode.insertBefore(ps, s);
+    
+      ps2 = document.createElement('script');
+      ps2.src = pathRoot + 'apiref_versions.js';
+      s = document.getElementsByTagName('script')[0];
+      s.parentNode.insertBefore(ps2, s);
+  </script>
+  <link href="https://fonts.googleapis.com/css?family=Raleway" rel="stylesheet">
+  <link href="https://fonts.googleapis.com/css?family=Open+Sans" rel="stylesheet">
+  
+  <!--[if lt IE 9]>
+    <script src="//cdnjs.cloudflare.com/ajax/libs/html5shiv/3.7.3/html5shiv-printshiv.min.js"></script>
+  <![endif]-->
+</head>
+<body>
+  <header>
+    <nav>
+    <div id="logo"><a href="/">Personium</a></div>
+    <ul>
+      <li class="submenu">
+        <a href="#" >Introduction</a>
+        <ul>
+            <li><a href="javascript:p.toPage('/overview/001_Introduction.html');">What's Personium?</a></li>
+            <li><a href="javascript:p.toPage('/user_guide/001_Personium_Architecture.html');">Architecture</a></li>
+            <li><a href="javascript:p.toPage('/user_guide/008_Glossary.html');">Glossary</a></li>
+        </ul>
+      </li>
+      <li class="submenu">
+        <a href="#" >User Guide</a>
+        <ul>
+            <li><a href="javascript:p.toPage('/app-developer/');">for App Developer</a></li>
+            <li><a href="javascript:p.toPage('/cell-client-developer/');">for Cell App Developer</a></li>
+            <li><a href="javascript:p.toPage('/unit-administrator/');">for Unit Administrator</a></li>
+            <li><a href="javascript:p.toPage('/server-operator/');">for Server Software Operator</a></li>
+            <li><a href="javascript:p.toPage('/document-writer/');">for Documentation Contributor</a></li>
+            <li><a href="javascript:p.toPage('/plugin-developer/');">for Server Plugin Developer</a></li>
+            <li><a href="javascript:p.toPage('/software-developer/');">for Server Developer</a></li>
+        </ul>
+      </li>
+      <li class="submenu">
+        <a href="#" >API Reference</a>
+        <ul id="api-ref-list">
+            <li><a href="javascript:p.toPage('/user_guide/990_Old_Version_API_Ref.html');">older versions</a></li>
+        </ul>
+      </li>
+      <li class="submenu">
+        <a href="#" >Languages</a>
+        <ul>
+            <li><a href="javascript:p.setLang('en');">English</a></li>
+            <li><a href="javascript:p.setLang('ja');">Japanese</a></li>
+        </ul>
+      </li>
+    </ul>
+    </nav>
+  </header>
+
+<div id="container">
+<h2>Getting Started with Personium using Ansible</h2>
+<h2>Overview</h2>
+<p>The purpose of this document is to explain high level specification for constructing Personium unit using ansible. If you're curious about ansible, please also read the <a href="http://www.ansible.com/how-ansible-works">HOW ANSIBLE WORKS</a> page.</p>
+<h3>Personium unit structure</h3>
+<p>Personium unit is configurable based on different purpose of usages like evaluation, development, verification, production etc.. Personium is provisioning the unit setup tool, for the easiness of the developer to construct Personium unit automatically based on their needs.<br />
+Although you may construct the Personium unit without using the setup tool, but it is recommended to use the setup tool for constructing the Personium unit easily.</p>
+<h3>Server architecture for Personium unit</h3>
+<p>Personium unit construction requires to assign the combination of following 7 roles on a single or multiple interconnected servers properly.</p>
+<table style="width:17%;">
+<colgroup>
+<col style="width: 5%" />
+<col style="width: 5%" />
+<col style="width: 5%" />
+</colgroup>
+<thead>
+<tr class="header">
+<th style="text-align: left;">Role</th>
+<th style="text-align: left;">Usage<br></th>
+<th style="text-align: left;">definition<br></th>
+</tr>
+</thead>
+<tbody>
+<tr class="odd">
+<td style="text-align: left;">Web</td>
+<td style="text-align: left;">Required<br></td>
+<td style="text-align: left;">Reverse proxy server, contains Global IP and also should be accessible to the internet.<br></td>
+</tr>
+<tr class="even">
+<td style="text-align: left;">AP</td>
+<td style="text-align: left;">Required<br></td>
+<td style="text-align: left;">Application server, where Personium will be executed.<br></td>
+</tr>
+<tr class="odd">
+<td style="text-align: left;">ES</td>
+<td style="text-align: left;">Required<br></td>
+<td style="text-align: left;">server to operate <code>ElasticSearch</code>.<br></td>
+</tr>
+<tr class="even">
+<td style="text-align: left;">MQ</td>
+<td style="text-align: left;">Required<br></td>
+<td style="text-align: left;">server to operate <code>ActiveMQ</code>.</td>
+</tr>
+<tr class="odd">
+<td style="text-align: left;">NFS</td>
+<td style="text-align: left;">Required<br></td>
+<td style="text-align: left;">server to operate <code>Network File System (NFS)</code>.<br></td>
+</tr>
+<tr class="even">
+<td style="text-align: left;">Bastion</td>
+<td style="text-align: left;">Optional<br></td>
+<td style="text-align: left;">Bastion server. Used to execute ansible and to connect other servers by ssh.<br></td>
+</tr>
+</tbody>
+</table>
+<h3>Personium setup tool</h3>
+<p>This setup tool will install middleware and configure the OS and its network on your machine (linux server or virtual machine on windows/mac) before installing Personium module.<br />
+There are different patterns of setup tools to construct the Personium unit. Please select the setup tool based on you purpose.</p>
+<h4>Pattern-1 : 1 Server</h4>
+<ul>
+<li>Machine environment : <strong>Linux</strong></li>
+<li>The number of Personium unit servers : <strong>1 Server</strong></li>
+<li>Server-1 elements : Bastion, Web, AP, ES, MQ</li>
+<li>Setup time : 1 hour</li>
+<li>Setup tool: <a href="https://github.com/personium/ansible/tree/master/1-server_unit" title="1-server_unit">ansible/1-server_unit</a></li>
+<li>Note<br />
+If you are more curious about Personium and want to develop some simple applications or to test this system, you can select this pattern. You will get Personium unit on a single server.</li>
+</ul>
+<h4>Pattern-2 : 3 Servers</h4>
+<ul>
+<li>Machine environment : <strong>Linux</strong></li>
+<li>The number of Personium unit servers : <strong>3 Servers</strong></li>
+<li>Server-1 elements : Bastion,Web</li>
+<li>Server-2 elements : AP, MQ, NFS</li>
+<li>Server-3 elements : ES</li>
+<li>Setup time : 2 hours</li>
+<li>Setup tool: <a href="https://github.com/personium/ansible/tree/master/3-server_unit" title="3-server_unit">ansible/3-server_unit</a></li>
+<li>Note<br />
+If you are devoted to Personium and want to release some marvelous applications with it, you should try this pattern! You will get Personium unit with 3 servers, which will meet practical performance.</li>
+</ul>
+<p>This document introduced pattern based initial requirements to construct the Personium unit. Please choose the right pattern that suits your purpose.<br />
+Please go thru with other documents to learn about the process to construct the Personium unit.</p>
+</div>
+  <footer><nav>The Personium project is provided under the Apache 2.0 license. </nav></footer>
+</body>
+</html>
+

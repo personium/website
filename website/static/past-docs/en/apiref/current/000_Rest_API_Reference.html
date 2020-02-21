@@ -1,0 +1,771 @@
+<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml" lang="" xml:lang="">
+<head>
+  <!-- default template -->
+  <meta charset="utf-8" />
+  <meta name="generator" content="pandoc" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=yes" />
+  <link rel="icon" href="/images/favicon.ico" type="image/x-icon"/>
+  <title>000_Rest_API_Reference</title>
+  <script type="text/javascript">
+      var path = location.pathname.split('/');
+      var pathRoot = [ path[0], path[1], '' ].join('/');
+      var pathLang = [ path[0], path[1], path[2] , ''].join('/');
+
+      //load style sheets
+      document.write('<link rel="stylesheet" href="' + pathRoot + 'personium.css" type="text/css" />');
+      document.write('<link rel="stylesheet" href="' + pathLang + 'locale.css" type="text/css" />');
+      //load personium_docs.js
+      var ps = document.createElement('script');
+      ps.src = pathRoot + 'personium_docs.js';
+      var s = document.getElementsByTagName('script')[0];
+      s.parentNode.insertBefore(ps, s);
+    
+      //load apiref_versions.js
+      ps2 = document.createElement('script');
+      ps2.src = pathRoot + 'apiref_versions.js';
+      s = document.getElementsByTagName('script')[0];
+      s.parentNode.insertBefore(ps2, s);
+
+  </script>
+  <link href="https://fonts.googleapis.com/css?family=Raleway" rel="stylesheet">
+  <link href="https://fonts.googleapis.com/css?family=Open+Sans" rel="stylesheet">
+  
+  <!--[if lt IE 9]>
+    <script src="//cdnjs.cloudflare.com/ajax/libs/html5shiv/3.7.3/html5shiv-printshiv.min.js"></script>
+  <![endif]-->
+</head>
+<body>
+  <header>
+    <nav>
+    <div id="logo"><a href="/"><img src="/images/logo-quantify-dark.png" /></a></div>
+    <ul>
+      <li class="submenu">
+        <a href="" >Introduction</a>
+        <ul>
+            <li><a href="javascript:p.toPage('/overview/001_Introduction.html');">What's Personium?</a></li>
+            <li><a href="javascript:p.toPage('/user_guide/001_Personium_Architecture.html');">Architecture</a></li>
+            <li><a href="javascript:p.toPage('/user_guide/008_Glossary.html');">Glossary</a></li>
+        </ul>
+      </li>
+      <li class="submenu">
+        <a href="" >User Guide</a>
+        <ul>
+            <li><a href="javascript:p.toPage('/app-developer/');">for App Developer</a></li>
+            <li><a href="javascript:p.toPage('/cell-client-developer/');">for Cell App Developer</a></li>
+            <li><a href="javascript:p.toPage('/unit-administrator/');">for Unit Administrator</a></li>
+            <li><a href="javascript:p.toPage('/server-operator/');">for Server Software Operator</a></li>
+            <li><a href="javascript:p.toPage('/document-writer/');">for Documentation Contributor</a></li>
+            <li><a href="javascript:p.toPage('/plugin-developer/');">for Server Plugin Developer</a></li>
+            <li><a href="javascript:p.toPage('/software-developer/');">for Server Developer</a></li>
+        </ul>
+      </li>
+      <li class="submenu">
+        <a href="" >API Reference</a>
+        <ul id="api-ref-list">
+            <li><a href="javascript:p.toPage('/user_guide/990_Old_Version_API_Ref.html');">older versions</a></li>
+        </ul>
+      </li>
+      <li class="submenu">
+        <a href="" >Languages</a>
+        <ul>
+            <li><a href="javascript:p.setLang('en');">English</a></li>
+            <li><a href="javascript:p.setLang('ja');">Japanese</a></li>
+        </ul>
+      </li>
+    </ul>
+    </nav>
+  </header>
+
+<div id="container">
+<h1>Personium API Reference</h1>
+<p>Welcome to the Personium API Reference. This reference describes technical detailed specifications related to all of the APIs provided by Personium. Please refer to <a href="005_Variable_of_Request_URL.html">Request URL variable list</a> for the variable of the request URL in this reference.</p>
+<h2>Unit Level API</h2>
+<p>The Unit Level API's belong to the unit that hosts a group of cells and provide functions such as creating cells or managing a group of created cells. In principle, Unit Level API's cannot be accessed using the access tokens issued by normal cells and can only be accessed with Unit User Tokens.</p>
+<h4>Unit Root URL</h4>
+<pre><code>https://{UnitFQDN}/</code></pre>
+<h4>Unit Control Objects</h4>
+<p>Most of the Unit Level API's are implemented in the form of Unit Control Objects. Since they conform with the OData standard, their manipulation can be made in a RESTful and standardized manner.</p>
+<table style="width:11%;">
+<colgroup>
+<col style="width: 5%" />
+<col style="width: 5%" />
+</colgroup>
+<thead>
+<tr class="header">
+<th style="text-align: left;">Cell</th>
+<th style="text-align: left;">Operations</th>
+</tr>
+</thead>
+<tbody>
+<tr class="odd">
+<td style="text-align: left;">Basic Operations</td>
+<td style="text-align: left;"><a href="100_Create_Cell.html">Create</a>     <a href="101_List_Cell.html">Retrieve List</a>     <a href="102_Retrieve_Cell.html">Retrieve</a>     <a href="103_Update_Cell.html">Update</a>     <a href="104_Delete_Cell.html">Delete</a></td>
+</tr>
+</tbody>
+</table>
+<h4>Other API's</h4>
+<ul>
+<li><a href="107_Get_Unit_Metadata.html">Get Unit Metadata</a></li>
+<li><a href="105_Cell_Recursive_Delete.html">Cell Recursive Deletion</a></li>
+</ul>
+<h2>Cell Level API</h2>
+<p>Cell Level API's are deployed under the following root URL.</p>
+<h4>Cell Root URL</h4>
+<pre><code>{CellURL}</code></pre>
+<p>Cell Level API's provides the following features:</p>
+<ul>
+<li>User and application Authentication</li>
+<li>Access control</li>
+<li>Networking Cells</li>
+<li>Box creation and management</li>
+<li>Message exchange between Cells</li>
+<li>Event processing</li>
+<li>Other features</li>
+</ul>
+<p>Most of these functions are implemented in the form of Cell Control Objects that can be operated with the OData protocol, which is a standard for performing relational data manipulation based on REST.</p>
+<h3>User and application Authentication</h3>
+<h4>Authentication</h4>
+<ul>
+<li><a href="292_OAuth2_Authorization_Endpoint.html">OAuth2.0 Authorization Endpoint</a></li>
+<li><a href="293_OAuth2_Token_Endpoint.html">OAuth2.0 Token Endpoint</a></li>
+<li><a href="294_Password_Change.html">Change Password</a></li>
+<li><a href="297_OAtuh2_Token_Introspection_Endpoint.html">OAuth2.0 Token Introspection</a></li>
+<li><a href="298_Get_Cell_Certs.html">Get Cell Certs</a></li>
+</ul>
+<h4>Account (Cell Control Object)</h4>
+<table style="width:11%;">
+<colgroup>
+<col style="width: 5%" />
+<col style="width: 5%" />
+</colgroup>
+<thead>
+<tr class="header">
+<th style="text-align: left;">Account</th>
+<th style="text-align: left;">Operations</th>
+</tr>
+</thead>
+<tbody>
+<tr class="odd">
+<td style="text-align: left;">Basic Operations</td>
+<td style="text-align: left;"><a href="212_Create_Account.html">Create</a>     <a href="213_Retrieve_Account.html">Retrieve</a>     <a href="214_List_Account.html">Retrieve List</a>     <a href="215_Update_Account.html">Update</a>     <a href="2AC_Partial_Update_Account.html">Partial Update</a>     <a href="216_Delete_Account.html">Delete</a></td>
+</tr>
+<tr class="even">
+<td style="text-align: left;">    Linking with other objects</td>
+<td style="text-align: left;"><a href="217_Link_Account.html">Link</a>     <a href="220_Unlink_Account.html">Unlink</a>     <a href="218_List_Account_links.html">List Links</a> <br> There is no link update. If you want to update, delete it and recreate it.</td>
+</tr>
+<tr class="odd">
+<td style="text-align: left;">    Bound Object Manipulation</td>
+<td style="text-align: left;"><a href="221_Create_Obj_Via_Account_NP.html">Create</a>     <a href="222_List_Obj_Via_Account_NP.html">Retrieve List</a></td>
+</tr>
+</tbody>
+</table>
+<h3>Access control</h3>
+<p>Personium Cells employ Role-Based Access Control. A role can be defined in the form of Cell Control Object &quot;Role&quot;. Cell-level ACL can be configured with the following API, where multiple pairs of role and granted privileges can be defined.</p>
+<ul>
+<li><a href="289_Cell_ACL.html">Cell-level ACL Configuralion</a></li>
+</ul>
+<p>Configured ACL can be retrieved together with other properties, by sending regular WebDAV PROPFIND request to the root URL of the Cell.</p>
+<ul>
+<li><a href="290_Cell_Get_Property.html">Retrieve Properties</a></li>
+<li><a href="291_Cell_Change_Property.html">Change Properties</a></li>
+</ul>
+<h4>Cell Control Object</h4>
+<table style="width:11%;">
+<colgroup>
+<col style="width: 5%" />
+<col style="width: 5%" />
+</colgroup>
+<thead>
+<tr class="header">
+<th style="text-align: left;">Role</th>
+<th style="text-align: left;">Operations</th>
+</tr>
+</thead>
+<tbody>
+<tr class="odd">
+<td style="text-align: left;">Basic Operations</td>
+<td style="text-align: left;"><a href="201_Create_Role.html">Create</a>     <a href="203_Retrieve_Role.html">Retrieve</a>     <a href="202_List_Role.html">Retrieve List</a>     <a href="204_Update_Role.html">Update</a>     <a href="2AB_Partial_Update_Role.html">Partial Update</a>     <a href="205_Delete_Role.html">Delete</a></td>
+</tr>
+<tr class="even">
+<td style="text-align: left;">    Linking with other objects</td>
+<td style="text-align: left;"><a href="206_Link_Role.html">Link</a>     <a href="209_Unlink_Role.html">Unlink</a>     <a href="207_List_Role_links.html">List Links</a> <br> There is no link update. If you want to update, delete it and recreate it.</td>
+</tr>
+<tr class="odd">
+<td style="text-align: left;">    Bound Object Manipulation</td>
+<td style="text-align: left;"><a href="210_Create_Obj_Via_Role_NP.html">Create</a>     <a href="211_List_Obj_Via_Role_NP.html">Retrieve List</a></td>
+</tr>
+</tbody>
+</table>
+<h3>Networking Cells</h3>
+<h4>External Cell (Cell Control Object)</h4>
+<table style="width:11%;">
+<colgroup>
+<col style="width: 5%" />
+<col style="width: 5%" />
+</colgroup>
+<thead>
+<tr class="header">
+<th style="text-align: left;">ExtCell</th>
+<th style="text-align: left;">Operations</th>
+</tr>
+</thead>
+<tbody>
+<tr class="odd">
+<td style="text-align: left;">Basic Operations</td>
+<td style="text-align: left;"><a href="223_Create_External_Cell.html">Create</a>     <a href="225_Retrieve_External_Cell.html">Retrieve</a>     <a href="224_List_External_Cell.html">Retrieve List</a>     <a href="226_Update_External_Cell.html">Update</a>     <a href="2AD_Partial_Update_External_Cell.html">Partial Update</a>     <a href="227_Delete_External_Cell.html">Delete</a></td>
+</tr>
+<tr class="even">
+<td style="text-align: left;">    Linking with other objects</td>
+<td style="text-align: left;"><a href="228_Link_External_Cell.html">Link</a>     <a href="231_Unlink_External_Cell.html">Unlink</a>     <a href="229_List_External_Cell_links.html">List Links</a> <br> There is no link update. If you want to update, delete it and recreate it.</td>
+</tr>
+<tr class="odd">
+<td style="text-align: left;">    Bound Object Manipulation</td>
+<td style="text-align: left;"><a href="232_Create_Obj_Via_External_Cell_NP.html">Create</a>     <a href="233_List_Obj_Via_External_Cell_NP.html">Retrieve List</a></td>
+</tr>
+</tbody>
+</table>
+<h4>Relation (Cell Control Object)</h4>
+<table style="width:11%;">
+<colgroup>
+<col style="width: 5%" />
+<col style="width: 5%" />
+</colgroup>
+<thead>
+<tr class="header">
+<th style="text-align: left;">Relation</th>
+<th style="text-align: left;">Operations</th>
+</tr>
+</thead>
+<tbody>
+<tr class="odd">
+<td style="text-align: left;">Basic Operations</td>
+<td style="text-align: left;"><a href="234_Create_Relation.html">Create</a>     <a href="236_Retrieve_Relation.html">Retrieve</a>     <a href="235_List_Relation.html">Retrieve List</a>     <a href="237_Update_Relation.html">Update</a>     <a href="2AE_Partial_Update_Relation.html">Partial Update</a>     <a href="238_Delete_Relation.html">Delete</a></td>
+</tr>
+<tr class="even">
+<td style="text-align: left;">    Linking with other objects</td>
+<td style="text-align: left;"><a href="239_Link_Relation.html">Link</a>     <a href="242_Unlink_Relation.html">Unlink</a>     <a href="240_List_Relation_links.html">List Links</a> <br> There is no link update. If you want to update, delete it and recreate it.</td>
+</tr>
+<tr class="odd">
+<td style="text-align: left;">    Bound Object Manipulation</td>
+<td style="text-align: left;"><a href="243_Create_Obj_Via_Relation_NP.html">Create</a>     <a href="244_List_Obj_Via_Relation_NP.html">Retrieve List</a></td>
+</tr>
+</tbody>
+</table>
+<h4>ExtRole (Cell Control Object)</h4>
+<table style="width:11%;">
+<colgroup>
+<col style="width: 5%" />
+<col style="width: 5%" />
+</colgroup>
+<thead>
+<tr class="header">
+<th style="text-align: left;">ExtRole</th>
+<th style="text-align: left;">Operations</th>
+</tr>
+</thead>
+<tbody>
+<tr class="odd">
+<td style="text-align: left;">Basic Operations</td>
+<td style="text-align: left;"><a href="245_Create_External_Role.html">Create</a>     <a href="247_Retrieve_External_Role.html">Retrieve</a>     <a href="246_List_External_Role.html">Retrieve List</a>     <a href="248_Update_External_Role.html">Update</a>     <a href="2AF_Partial_Update_External_Role.html">Partial Update</a>     <a href="249_Delete_External_Role.html">Delete</a></td>
+</tr>
+<tr class="even">
+<td style="text-align: left;">    Linking with other objects</td>
+<td style="text-align: left;"><a href="250_Link_External_Role.html">Link</a>     <a href="253_Unlink_External_Role.html">Unlink</a>     <a href="251_List_External_Role_links.html">List Links</a> <br> There is no link update. If you want to update, delete it and recreate it.</td>
+</tr>
+<tr class="odd">
+<td style="text-align: left;">    Bound Object Manipulation</td>
+<td style="text-align: left;"><a href="254_Create_Obj_Via_External_Role_NP.html">Create</a>     <a href="255_List_Obj_Via_External_Role_NP.html">Retrieve List</a></td>
+</tr>
+</tbody>
+</table>
+<h3>Box creation and management inside the Cell</h3>
+<ul>
+<li><a href="385_Box_Export.html">Export Box</a></li>
+<li><a href="302_Box_Installation.html">Install Box</a></li>
+<li><a href="303_Progress_of_Bar_File_Installation.html">Retrieve Box Meta Data</a></li>
+<li><a href="304_Get_Box_URL.html">Retrieve URL</a></li>
+<li><a href="295_Box_Recursive_Delete.html">Recursive Delete</a></li>
+</ul>
+<h4>Box (Cell Control Object)</h4>
+<table style="width:11%;">
+<colgroup>
+<col style="width: 5%" />
+<col style="width: 5%" />
+</colgroup>
+<thead>
+<tr class="header">
+<th style="text-align: left;">Box</th>
+<th style="text-align: left;">Operations</th>
+</tr>
+</thead>
+<tbody>
+<tr class="odd">
+<td style="text-align: left;">Basic Operations</td>
+<td style="text-align: left;"><a href="256_Create_Box.html">Create</a>     <a href="258_Retrieve_Box.html">Retrieve</a>     <a href="257_List_Box.html">Retrieve List</a>     <a href="259_Update_Box.html">Update</a>     <a href="2B0_Partial_Update_Box.html">Partial Update</a>     <a href="260_Delete_Box.html">Delete</a></td>
+</tr>
+<tr class="even">
+<td style="text-align: left;">    Linking with other objects</td>
+<td style="text-align: left;"><a href="261_Link_Box.html">Link</a>     <a href="264_Unlink_Box.html">Unlink</a>     <a href="262_List_Box_links.html">List Links</a> <br> There is no link update. If you want to update, delete it and recreate it.</td>
+</tr>
+<tr class="odd">
+<td style="text-align: left;">    Bound Object Manipulation</td>
+<td style="text-align: left;"><a href="265_Create_Obj_Via_Box_NP.html">Create</a>     <a href="266_List_Obj_Via_Box_NP.html">Retrieve List</a></td>
+</tr>
+</tbody>
+</table>
+<h3>Message Exchange between Cells</h3>
+<h4>Message Manipulation</h4>
+<ul>
+<li><a href="271_Send_Message.html">Send Message</a></li>
+<li><a href="267_Received_Message_Approval.html">Change Status</a> (Approve / Decline, etc.)</li>
+</ul>
+<table>
+<thead>
+<tr class="header">
+<th style="text-align: left;">Cell Control Object</th>
+<th style="text-align: left;">Operations</th>
+</tr>
+</thead>
+<tbody>
+<tr class="odd">
+<td style="text-align: left;"><strong>Sent Message</strong></td>
+<td style="text-align: left;"><a href="272_Retrieve_Sent_Message.html">Retrieve</a>     <a href="273_List_Sent_Messages.html">Retrieve List</a>     <a href="274_Delete_Sent_Message.html">Delete</a></td>
+</tr>
+<tr class="even">
+<td style="text-align: left;"><strong>Received Message</strong></td>
+<td style="text-align: left;"><a href="269_Retrieve_Received_Message.html">Retrieve</a>     <a href="268_List_Received_Messages.html">Retrieve List</a>     <a href="270_Delete_Received_Message.html">Delete</a></td>
+</tr>
+</tbody>
+</table>
+<h3>Event processing</h3>
+<ul>
+<li><a href="277_Event_Summary.html">Events Overview</a></li>
+<li><a href="278_Event_Reception.html">Accept External Events</a></li>
+<li><a href="279_Event_Bus_Connect.html">Web Socket connection to Event Bus</a></li>
+</ul>
+<h4>Event Processing Rule (Cell Control Object)</h4>
+<table style="width:11%;">
+<colgroup>
+<col style="width: 5%" />
+<col style="width: 5%" />
+</colgroup>
+<thead>
+<tr class="header">
+<th style="text-align: left;">Rule</th>
+<th style="text-align: left;">Operations</th>
+</tr>
+</thead>
+<tbody>
+<tr class="odd">
+<td style="text-align: left;">Basic Operations</td>
+<td style="text-align: left;"><a href="2A0_Create_Rule.html">Create</a>     <a href="2A1_Retrieve_Rule.html">Retrieve</a>     <a href="2A2_List_Rule.html">Retrieve List</a>     <a href="2A3_Update_Rule.html">Update</a>     <a href="2A4_Delete_Rule.html">Delete</a></td>
+</tr>
+<tr class="even">
+<td style="text-align: left;">    Linking with other objects</td>
+<td style="text-align: left;"><a href="2A5_Link_Rule.html">Link</a>     <a href="2A7_Unlink_Rule.html">Unlink</a>     <a href="2A6_List_Rule_links.html">List Links</a>     <br> There is no link update. If you want to update, delete it and recreate it.</td>
+</tr>
+<tr class="odd">
+<td style="text-align: left;">    Bound Object Manipulation</td>
+<td style="text-align: left;"><a href="2A8_Create_Obj_Via_Rule_NP.html">Create</a>     <a href="2A9_List_Obj_Via_Rule_NP.html">Retrieve List</a></td>
+</tr>
+</tbody>
+</table>
+<ul>
+<li><a href="2AA_List_Internal_Rule.html">Retrieve List of Internal Rule information</a></li>
+</ul>
+<h4>Event Log</h4>
+<ul>
+<li><a href="285_Retrieve_Log_File.html">Retrieve Log File</a></li>
+<li><a href="284_Retrieve_Log_File_list.html">List of Log Files</a></li>
+<li><a href="283_Log_File_Information_Acquisition.html">Retrieve Log File Information</a></li>
+<li><a href="286_Delete_Log_File.html">Delete Log File</a></li>
+</ul>
+<h3>Other functions</h3>
+<h4>Cell root access</h4>
+<ul>
+<li><a href="./200_Cell_Root.html">Retrieve Cell Root</a></li>
+<li><a href="./296_Get_Cell_Metadata.html">Retrieve Cell Metadata</a></li>
+</ul>
+<h4>Exporting / Importing the contents inside the Cell</h4>
+<p>Snapshot file of Cell is created by export execution.<br />
+Import imports the contents of the snapshot file into Cell.<br />
+Snapshot file can be operated with WebDAV interface.</p>
+<table>
+<thead>
+<tr class="header">
+<th style="text-align: left;"></th>
+<th style="text-align: left;">Operations</th>
+</tr>
+</thead>
+<tbody>
+<tr class="odd">
+<td style="text-align: left;"><strong>Export</strong></td>
+<td style="text-align: left;"><a href="501_Export_Cell.html">Execute</a>     <a href="502_Progress_of_Export_Cell.html">Retrieve progress</a></td>
+</tr>
+<tr class="even">
+<td style="text-align: left;"><strong>Import</strong></td>
+<td style="text-align: left;"><a href="507_Import_Cell.html">Execute</a>     <a href="508_Progress_of_Import_Cell.html">Retrieve progress</a></td>
+</tr>
+<tr class="odd">
+<td style="text-align: left;"><strong>Snapshot</strong></td>
+<td style="text-align: left;"><a href="503_Register_and_Update_Snapshot_Cell.html">Create/Update</a>     <a href="504_Get_Snapshot_Cell.html">Retrieve</a>     <a href="505_Get_Property_Snapshot_Cell.html">Retrieve Properties</a>     <a href="506_Delete_Snapshot_Cell.html">Delete</a></td>
+</tr>
+</tbody>
+</table>
+<h2>Box Level API</h2>
+<p>The Box Level API is a group of API's that reside on the following Box Root URL and serve for applications and others to manipulate their data.</p>
+<h4>Box Root URL</h4>
+<pre><code>{CellURL}{BoxName}/</code></pre>
+<p>Box Level API's are based on an idea of WebDAV file system. Like ordinary file systems, it is possible to arrange / retrieve files, create / manage folders (collection), get list of files and folders, set / refer to access control, etc.</p>
+<p>Also, because it supports the following special collections, it can handle not only file-like data but also various forms of data.<br />
+These special collections can be created in any path on the WebDAV space provided by Box.</p>
+<table style="width:17%;">
+<colgroup>
+<col style="width: 5%" />
+<col style="width: 5%" />
+<col style="width: 5%" />
+</colgroup>
+<thead>
+<tr class="header">
+<th style="text-align: left;">Special collection</th>
+<th style="text-align: left;">Use</th>
+<th style="text-align: left;">Notes</th>
+</tr>
+</thead>
+<tbody>
+<tr class="odd">
+<td style="text-align: left;">OData Service Collection</td>
+<td style="text-align: left;">Relational data</td>
+<td style="text-align: left;"></td>
+</tr>
+<tr class="even">
+<td style="text-align: left;">Engine Service Collection</td>
+<td style="text-align: left;">Run customized logic</td>
+<td style="text-align: left;"></td>
+</tr>
+<tr class="odd">
+<td style="text-align: left;">CALDAV Collection</td>
+<td style="text-align: left;">Calendar data</td>
+<td style="text-align: left;">Unimplemented</td>
+</tr>
+<tr class="even">
+<td style="text-align: left;">Link Collection</td>
+<td style="text-align: left;">Aliases to specific areas of other cells or other Box</td>
+<td style="text-align: left;">Unimplemented</td>
+</tr>
+</tbody>
+</table>
+<h3>Basic WebDAV Operations</h3>
+<table style="width:11%;">
+<colgroup>
+<col style="width: 5%" />
+<col style="width: 5%" />
+</colgroup>
+<thead>
+<tr class="header">
+<th style="text-align: left;">Target</th>
+<th style="text-align: left;">Operations</th>
+</tr>
+</thead>
+<tbody>
+<tr class="odd">
+<td style="text-align: left;">Collection</td>
+<td style="text-align: left;"><a href="306_Create_Collection.html">Create</a>     <a href="305_Get_Property.html">Retrieve Settings</a>     <a href="308_Change_Property.html">Change Settings</a>     <a href="309_Update_Move_Collection.html">Move/Rename</a>     <a href="310_Delete_Collection.html">Delete</a></td>
+</tr>
+<tr class="even">
+<td style="text-align: left;">File</td>
+<td style="text-align: left;"><a href="312_Register_and_Update_WebDAV.html">Create/Update</a>     <a href="311_Get_WebDav.html">Retrieve</a>     <a href="307_Get_Property.html">Retrieve Settings</a>     <a href="313_Change_Property.html">Change Settings</a>     <a href="314_Delete_WebDAV.html">Delete</a></td>
+</tr>
+<tr class="odd">
+<td style="text-align: left;">Common</td>
+<td style="text-align: left;"><a href="315_Configure_Access_Control.html">Configure Access Control</a></td>
+</tr>
+</tbody>
+</table>
+<p>* ACL setting (access control setting) is possible for all files and collections (including special collections).<br />
+* ACL setting can be acquired with the PROPFIND method.</p>
+<h3>OData Service Collection</h3>
+<h4>Schema Definition</h4>
+<table>
+<thead>
+<tr class="header">
+<th style="text-align: left;"></th>
+<th style="text-align: left;">Create</th>
+<th style="text-align: left;">Retrieve</th>
+<th style="text-align: left;">Update</th>
+<th style="text-align: left;">Delete</th>
+<th style="text-align: left;">Other</th>
+</tr>
+</thead>
+<tbody>
+<tr class="odd">
+<td style="text-align: left;"><strong>EntityType</strong></td>
+<td style="text-align: left;"><a href="345_Create_EntityType.html">Create</a></td>
+<td style="text-align: left;"><a href="347_Retrieve_EntityType.html">Retrieve</a><br><a href="346_List_EntityType.html">Retrieve List</a></td>
+<td style="text-align: left;"><a href="348_Update_EntityType.html">Update</a></td>
+<td style="text-align: left;"><a href="349_Delete_EntityType.html">Delete</a></td>
+<td style="text-align: left;"></td>
+</tr>
+<tr class="even">
+<td style="text-align: left;">_$links</td>
+<td style="text-align: left;">Create</td>
+<td style="text-align: left;">List</td>
+<td style="text-align: left;">Update</td>
+<td style="text-align: left;">Delete</td>
+<td style="text-align: left;"></td>
+</tr>
+<tr class="odd">
+<td style="text-align: left;">_via NavProp</td>
+<td style="text-align: left;"></td>
+<td style="text-align: left;">List</td>
+<td style="text-align: left;"></td>
+<td style="text-align: left;"></td>
+<td style="text-align: left;"></td>
+</tr>
+<tr class="even">
+<td style="text-align: left;"><strong>Property</strong></td>
+<td style="text-align: left;"><a href="355_Create_Property.html">Create</a></td>
+<td style="text-align: left;"><a href="357_Retrieve_Property.html">Retrieve</a><br><a href="356_List_Property.html">Retrieve List</a></td>
+<td style="text-align: left;">Update</td>
+<td style="text-align: left;"><a href="359_Delete_Property.html">Delete</a></td>
+<td style="text-align: left;"></td>
+</tr>
+<tr class="odd">
+<td style="text-align: left;">_$links</td>
+<td style="text-align: left;">Create</td>
+<td style="text-align: left;">List</td>
+<td style="text-align: left;">Update</td>
+<td style="text-align: left;">Delete</td>
+<td style="text-align: left;"></td>
+</tr>
+<tr class="even">
+<td style="text-align: left;"><strong>AssociationEnd</strong></td>
+<td style="text-align: left;"><a href="318_Create_AssociationEnd.html">Create</a></td>
+<td style="text-align: left;"><a href="320_Retrieve_AssociationEnd.html">Retrieve</a><br><a href="319_List_AssociationEnd.html">Retrieve List</a></td>
+<td style="text-align: left;"><a href="321_Update_AssociationEnd.html">Update</a></td>
+<td style="text-align: left;"><a href="322_Delete_AssociationEnd.html">Delete</a></td>
+<td style="text-align: left;"></td>
+</tr>
+<tr class="odd">
+<td style="text-align: left;">_$links</td>
+<td style="text-align: left;"><a href="323_Link_AssociationEnd.html">Create</a></td>
+<td style="text-align: left;"><a href="324_List_AssociationEnd_links.html">List Links</a></td>
+<td style="text-align: left;"></td>
+<td style="text-align: left;"><a href="325_Unlink_AssociationEnd.html">Delete</a></td>
+<td style="text-align: left;"></td>
+</tr>
+<tr class="even">
+<td style="text-align: left;">_via NavProp</td>
+<td style="text-align: left;"></td>
+<td style="text-align: left;">List</td>
+<td style="text-align: left;"></td>
+<td style="text-align: left;"></td>
+<td style="text-align: left;"></td>
+</tr>
+<tr class="odd">
+<td style="text-align: left;"><strong>ComplexType</strong></td>
+<td style="text-align: left;"><a href="327_Create_ComplexType.html">Create</a></td>
+<td style="text-align: left;"><a href="329_Retrieve_ComplexType.html">Retrieve</a><br><a href="328_List_ComplexType.html">Retrieve List</a></td>
+<td style="text-align: left;">Update</td>
+<td style="text-align: left;"><a href="331_Delete_ComplexType.html">Delete</a></td>
+<td style="text-align: left;"></td>
+</tr>
+<tr class="even">
+<td style="text-align: left;">_$links</td>
+<td style="text-align: left;">Create</td>
+<td style="text-align: left;">List</td>
+<td style="text-align: left;">Update</td>
+<td style="text-align: left;">Delete</td>
+<td style="text-align: left;"></td>
+</tr>
+<tr class="odd">
+<td style="text-align: left;"><strong>ComplexTypeProperty</strong></td>
+<td style="text-align: left;"><a href="336_Create_ComplexTypeProperty.html">Create</a></td>
+<td style="text-align: left;"><a href="338_Retrieve_ComplexTypeProperty.html">Retrieve</a><br><a href="337_List_ComplexTypeProperty.html">Retrieve List</a></td>
+<td style="text-align: left;"><a href="339_Update_ComplexTypeProperty.html">Update</a></td>
+<td style="text-align: left;"><a href="340_Delete_ComplexTypeProperty.html">Delete</a></td>
+<td style="text-align: left;"></td>
+</tr>
+<tr class="even">
+<td style="text-align: left;">_$links</td>
+<td style="text-align: left;">Create</td>
+<td style="text-align: left;">List</td>
+<td style="text-align: left;">Update</td>
+<td style="text-align: left;">Delete</td>
+<td style="text-align: left;"></td>
+</tr>
+</tbody>
+</table>
+<h5>Service Document Retrieve/Schema Retrieve</h5>
+<table>
+<thead>
+<tr class="header">
+<th style="text-align: left;"></th>
+<th style="text-align: left;">Retrieve</th>
+</tr>
+</thead>
+<tbody>
+<tr class="odd">
+<td style="text-align: left;">Service Document</td>
+<td style="text-align: left;"><a href="317_Document_Acquisition_Service.html">Retrieve</a></td>
+</tr>
+<tr class="even">
+<td style="text-align: left;">Schema</td>
+<td style="text-align: left;"><a href="316_User_Defined_Data_Schema.html">Retrieve</a></td>
+</tr>
+</tbody>
+</table>
+<h4>Data Manipulation</h4>
+<table style="width:11%;">
+<colgroup>
+<col style="width: 5%" />
+<col style="width: 5%" />
+</colgroup>
+<thead>
+<tr class="header">
+<th style="text-align: left;">User-defined Entity Set</th>
+<th style="text-align: left;">Operations</th>
+</tr>
+</thead>
+<tbody>
+<tr class="odd">
+<td style="text-align: left;">Basic Operations</td>
+<td style="text-align: left;"><a href="364_Create_Entity.html">Create</a>     <a href="366_Retrieve_Entity.html">Retrieve</a>     <a href="365_List_Entity.html">Retrieve List</a>     <a href="367_Update_Entity.html">Update</a>     <a href="369_Partial_Update_Entity.html">Partial Update</a>     <a href="370_Delete_Entity.html">Delete</a></td>
+</tr>
+<tr class="even">
+<td style="text-align: left;">    Linking with other objects</td>
+<td style="text-align: left;"><a href="373_Link_User_Data.html">Link</a>     <a href="376_Unlink_User_Data.html">Unlink</a>     <a href="374_List_User_Data_links.html">List Links</a>     <br> There is no link update. If you want to update, delete it and recreate it.</td>
+</tr>
+<tr class="odd">
+<td style="text-align: left;">    Bound Object Manipulation</td>
+<td style="text-align: left;"><a href="377_Create_Entity_Via_NP.html">Create</a>     <a href="378_List_Entity_Via_NP.html">Retrieve List</a></td>
+</tr>
+</tbody>
+</table>
+<ul>
+<li><a href="368_Entity_Bulk_Operations.html">Batch Operation</a></li>
+</ul>
+<h3>Engine Service Collection</h3>
+<p>You can register Personium application and server side logic created by Cell user and run it.<br />
+First, register the user logic as a file, set the service collection and associate with the path, so that<br />
+You can run the user logic for requests from any path under the collection.</p>
+<table style="width:33%;">
+<colgroup>
+<col style="width: 5%" />
+<col style="width: 5%" />
+<col style="width: 5%" />
+<col style="width: 5%" />
+<col style="width: 5%" />
+<col style="width: 5%" />
+</colgroup>
+<thead>
+<tr class="header">
+<th style="text-align: left;"></th>
+<th style="text-align: left;">Create</th>
+<th style="text-align: left;">Retrieve</th>
+<th style="text-align: left;">Update</th>
+<th style="text-align: left;">Delete</th>
+<th style="text-align: left;">Other</th>
+</tr>
+</thead>
+<tbody>
+<tr class="odd">
+<td style="text-align: left;">Service Collection Source</td>
+<td style="text-align: left;"><a href="381_Create_Service_Collection_Source.html">Create</a></td>
+<td style="text-align: left;"><a href="382_List_Service_Collection_Source.html">Retrieve</a></td>
+<td style="text-align: left;"><a href="380_Configure_Service_Collection.html">Apply Settings</a></td>
+<td style="text-align: left;"><a href="383_Delete_Service_Collection_Source.html">Delete</a></td>
+<td style="text-align: left;"><a href="384_Service_Execution.html">Execute Service</a></td>
+</tr>
+</tbody>
+</table>
+<h3>Stream Collection</h3>
+<p>A collection that allows you to send and receive messages. By setting the queue and topic used for sending and receiving message queues, It is possible to send and receive for the set queue and send for the topic. Reception of topic is possible by WebSocket connection.</p>
+<table style="width:17%;">
+<colgroup>
+<col style="width: 5%" />
+<col style="width: 5%" />
+<col style="width: 5%" />
+</colgroup>
+<thead>
+<tr class="header">
+<th style="text-align: left;"></th>
+<th style="text-align: left;">Operation</th>
+<th style="text-align: left;">Send/Receive</th>
+</tr>
+</thead>
+<tbody>
+<tr class="odd">
+<td style="text-align: left;">Stream Collection</td>
+<td style="text-align: left;"><a href="386_Configure_Stream_Collection.html">Change settings</a>     <a href="390_Options_Stream_Collection.html">OPTIONS</a></td>
+<td style="text-align: left;"><a href="387_Stream_Collection_Send.html">Send</a>     <a href="388_Stream_Collection_Receive.html">Receive</a>     <a href="389_Stream_Collection_Connect.html">WebSocket connection</a></td>
+</tr>
+</tbody>
+</table>
+<h2>Common Information</h2>
+<h3>OData Acquisition Common Queries</h3>
+<table>
+<thead>
+<tr class="header">
+<th style="text-align: left;">Query</th>
+<th style="text-align: left;">Single Acquisition</th>
+<th style="text-align: left;">List Acquisition</th>
+</tr>
+</thead>
+<tbody>
+<tr class="odd">
+<td style="text-align: left;"><a href="404_Format_Query.html">$format Query</a></td>
+<td style="text-align: left;">Yes</td>
+<td style="text-align: left;">Yes</td>
+</tr>
+<tr class="even">
+<td style="text-align: left;"><a href="405_Expand_Query.html">$expand Query</a></td>
+<td style="text-align: left;">Yes</td>
+<td style="text-align: left;">Yes</td>
+</tr>
+<tr class="odd">
+<td style="text-align: left;"><a href="406_Select_Query.html">$select Query</a></td>
+<td style="text-align: left;">Yes</td>
+<td style="text-align: left;">Yes</td>
+</tr>
+<tr class="even">
+<td style="text-align: left;"><a href="400_Orderby_Query.html">$orderby Query</a></td>
+<td style="text-align: left;">No</td>
+<td style="text-align: left;">Yes</td>
+</tr>
+<tr class="odd">
+<td style="text-align: left;"><a href="401_Top_Query.html">$top Query</a></td>
+<td style="text-align: left;">No</td>
+<td style="text-align: left;">Yes</td>
+</tr>
+<tr class="even">
+<td style="text-align: left;"><a href="402_Skip_Query.html">$skip Query</a></td>
+<td style="text-align: left;">No</td>
+<td style="text-align: left;">Yes</td>
+</tr>
+<tr class="odd">
+<td style="text-align: left;"><a href="403_Filter_Query.html">$filter Query</a></td>
+<td style="text-align: left;">No</td>
+<td style="text-align: left;">Yes</td>
+</tr>
+<tr class="even">
+<td style="text-align: left;"><a href="407_Inlinecount_Query.html">$inlinecount</a></td>
+<td style="text-align: left;">No</td>
+<td style="text-align: left;">Yes</td>
+</tr>
+<tr class="odd">
+<td style="text-align: left;"><a href="408_Full_Text_Search_Query.html">Full-text Search (q) Query</a></td>
+<td style="text-align: left;">No</td>
+<td style="text-align: left;">Yes</td>
+</tr>
+</tbody>
+</table>
+<h4><a href="004_Error_Messages.html">Error Messages</a></h4>
+<h4><a href="003_Common_Limitations_on_HTTP_Implementation.html">Restrictions on Personium HTTP Implementation</a></h4>
+<h4><a href="002_CORS_Support.html">CORS Support</a></h4>
+<h4><a href="001_Cross_Domain_Policy_File.html">Retrieve Cross Domain Policy File</a></h4>
+</div>
+  <footer><nav>The Personium project is provided under the Apache 2.0 license. </nav></footer>
+</body>
+</html>

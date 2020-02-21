@@ -1,0 +1,237 @@
+<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml" lang="" xml:lang="">
+<head>
+  <!-- default template -->
+  <meta charset="utf-8" />
+  <meta name="generator" content="pandoc" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=yes" />
+  <link rel="icon" href="/images/favicon.ico" type="image/x-icon"/>
+  <title>app_authn</title>
+  <script type="text/javascript">
+      var path = location.pathname.split('/');
+      var pathRoot = [ path[0], path[1], '' ].join('/');
+      var pathLang = [ path[0], path[1], path[2] , ''].join('/');
+
+      document.write('<link rel="stylesheet" href="' + pathRoot + 'personium.css" type="text/css" />');
+      document.write('<link rel="stylesheet" href="' + pathLang + 'locale.css" type="text/css" />');
+      var ps = document.createElement('script');
+      ps.src = pathRoot + 'personium_docs.js';
+      var s = document.getElementsByTagName('script')[0];
+      s.parentNode.insertBefore(ps, s);
+    
+      ps2 = document.createElement('script');
+      ps2.src = pathRoot + 'apiref_versions.js';
+      s = document.getElementsByTagName('script')[0];
+      s.parentNode.insertBefore(ps2, s);
+  </script>
+  <link href="https://fonts.googleapis.com/css?family=Raleway" rel="stylesheet">
+  <link href="https://fonts.googleapis.com/css?family=Open+Sans" rel="stylesheet">
+  
+  <!--[if lt IE 9]>
+    <script src="//cdnjs.cloudflare.com/ajax/libs/html5shiv/3.7.3/html5shiv-printshiv.min.js"></script>
+  <![endif]-->
+</head>
+<body>
+  <header>
+    <nav>
+    <div id="logo"><a href="/"><img src="https://personium.io/images/logo-quantify-dark.png"></a></div>
+    <ul>
+      <li class="submenu">
+        <a href="#" >Introduction</a>
+        <ul>
+            <li><a href="javascript:p.toPage('/overview/001_Introduction.html');">What's Personium?</a></li>
+            <li><a href="javascript:p.toPage('/user_guide/001_Personium_Architecture.html');">Architecture</a></li>
+            <li><a href="javascript:p.toPage('/user_guide/008_Glossary.html');">Glossary</a></li>
+        </ul>
+      </li>
+      <li class="submenu">
+        <a href="#" >User Guide</a>
+        <ul>
+            <li><a href="javascript:p.toPage('/app-developer/');">for App Developer</a></li>
+            <li><a href="javascript:p.toPage('/cell-gui-developer/');">for Cell GUI Developer</a></li>
+            <li><a href="javascript:p.toPage('/unit-administrator/');">for Unit Administrator</a></li>
+            <li><a href="javascript:p.toPage('/server-operator/');">for Server Software Operator</a></li>
+            <li><a href="javascript:p.toPage('/document-writer/');">for Documentation Contributor</a></li>
+            <li><a href="javascript:p.toPage('/plugin-developer/');">for Server Plugin Developer</a></li>
+            <li><a href="javascript:p.toPage('/software-developer/');">for Server Developer</a></li>
+        </ul>
+      </li>
+      <li class="submenu">
+        <a href="#" >API Reference</a>
+        <ul id="api-ref-list">
+            <li><a href="javascript:p.toPage('/user_guide/990_Old_Version_API_Ref.html');">older versions</a></li>
+        </ul>
+      </li>
+      <li class="submenu">
+        <a href="#" >Languages</a>
+        <ul>
+            <li><a href="javascript:p.setLang('en');">English</a></li>
+            <li><a href="javascript:p.setLang('ja');">Japanese</a></li>
+        </ul>
+      </li>
+    </ul>
+    </nav>
+  </header>
+
+<div id="container">
+<h1>アプリ認証</h1>
+<h2>アプリ認証が必要な背景</h2>
+<p>PersoniumのCellは様々なアプリケーションプログラム（アプリ）とデータをやり取りすることを前提としたデータストアオブジェクトです。アプリやアプリベンダを限ることなく誰でもどんなアプリでも作ることができるオープンなアーキテクチャをとっているため、金融、健康、ゲームといった様々な分野にわたり、PC、スマートフォン、ウェアラブルデバイス、サーバなど様々な機器の様々なプラットフォーム上で動作する様々なアプリを様々なアプリベンダが開発できます。</p>
+<p>一方でオープンなアプローチをとる以上は悪意のアプリ作者による悪意のアプリがこの中に混入することは避けられません。つまり例えばフィッシングアプリなど悪意を持ったアプリを、そうとは知らずにCellの所有者が使ってしまうケースは必ず発生します。その際、正当なアプリのデータが流出したり改ざんされてしまうようなことがあってはなりません。</p>
+<h3>Box とアプリ認証</h3>
+<p>そこでPersonium のCellは、そのような不正なアプリから正当なアプリのデータを守るための機構を用意しています。それがBoxとアプリ認証です。BoxはCell内部につくられる独立性を持ったデータ領域で、単一のアプリまたは単一のアプリベンダによって提供されるアプリ群のために占有的に使われることが意図されています。多くの場合アプリ毎のデータ領域といってしまって差し支えないでしょう。</p>
+<p>これと対をなすのがアプリ認証で、文字通りアプリを認証するための機構です。すなわちCellが受け付けたリクエストがアプリAからのものなのか、アプリBのものなのかを判定し、アプリA用のBoxへのアクセスをアプリAからのリクエストのみに限るようなことを実現するために必要になるものです。</p>
+<p>Cellはどのようなアプリをどのようなユーザが操作しているかを確認してアクセス制御を行います。そのため多くの場合アプリ認証はユーザを認証するためのユーザ認証と組み合わせて使用します。</p>
+<table>
+<thead>
+<tr class="header">
+<th style="text-align: left;">認証の種類</th>
+<th style="text-align: left;">目的</th>
+</tr>
+</thead>
+<tbody>
+<tr class="odd">
+<td style="text-align: left;">ユーザ認証</td>
+<td style="text-align: left;">リクエスト主体のユーザを識別するとともに、なりすましではなくリクエストが正当なユーザによるものであることを確認するための認証プロセス</td>
+</tr>
+<tr class="even">
+<td style="text-align: left;">アプリ認証</td>
+<td style="text-align: left;">リクエスト主体のアプリを識別するとともに、なりすましではなくリクエストが正当なアプリによるものであることを確認するための認証プロセス</td>
+</tr>
+</tbody>
+</table>
+<h2>アプリ認証の仕組み</h2>
+<p>Personiumのアプリ認証はOAuth2.0 におけるクライアント認証の枠組みを応用しています。つまり、CellはアプリからOAuth2.0のトークンエンドポイントに対して（ユーザ認証のための情報とともに）以下を受け取ったとき、（正当なユーザが）正当なアプリを使っていることを証明するアクセストークンをBearer Tokenとして発行します。</p>
+<ul>
+<li>client_id : アプリ識別情報</li>
+<li>client_secret: 正当なアプリにしか発行しえない情報</li>
+</ul>
+<p>Personiumでは具体的には以下の情報を使う仕様としてます。</p>
+<table style="width:17%;">
+<colgroup>
+<col style="width: 5%" />
+<col style="width: 5%" />
+<col style="width: 5%" />
+</colgroup>
+<thead>
+<tr class="header">
+<th style="text-align: left;">OAuth 2.0 パラメタ</th>
+<th style="text-align: left;">Personiumでの指定値</th>
+<th style="text-align: left;">概要</th>
+</tr>
+</thead>
+<tbody>
+<tr class="odd">
+<td style="text-align: left;">client_id</td>
+<td style="text-align: left;">スキーマURL</td>
+<td style="text-align: left;">アプリやアプリ群・アプリ開発元を示すURL</td>
+</tr>
+<tr class="even">
+<td style="text-align: left;">client_secret</td>
+<td style="text-align: left;">アプリ認証トークン</td>
+<td style="text-align: left;">上記URLをIssuer・Subjectとする有効な署名のついたSAML Assertionをbase64urlエンコードした文字列</td>
+</tr>
+</tbody>
+</table>
+<h2>アプリ認証をするための設定</h2>
+<h3>概要</h3>
+<ul>
+<li><p>アプリケーションがBox内のデータにアクセスするためには、通常、まずサービス提供者が管理する中央Cell（アプリCell）にてアプリクライアントとしてのTarget指定で認証を行い、<br> その後通常のID/PWおよびClientID・ClientSecretの指定によるSchema認証を実施することで、そのBoxのみにアクセスするトークンを発行します。</p></li>
+<li><p>または、通常のID/PW認証を実施したときに取得したRefreshTokenを用いて有効期限更新をする際に、<br>上記と同様にClientID・ClientSecret指定によるTransCellトークン発行が可能です。（v1.5.2以降）</p></li>
+</ul>
+<h3>前提</h3>
+<ul>
+<li>Schema認証を実施するには、以下のセルが必須となります。<br>
+<ul>
+<li>・{appcell}: アプリセル（スキーマ認証セル）</li>
+<li>・{cell}: ユーザセル</li>
+</ul></li>
+</ul>
+<h3>認証の流れ</h3>
+<ul>
+<li>Personiumではアプリセルのアカウントに特殊ロール（<code>{issuerUrl} + /__role/__/confidentialClient</code>）を結びつけることで、<br>スキーマ認証（アプリ認証）を行います。（スキーマ認証レベル <code>confidential</code> の場合）</li>
+<li>ユーザセル認証時の<code>client_id</code>と <code>client_secret</code> にスキーマ認証情報を入れてユーザ認証を行うことでユーザ認証、スキーマ認証の評価を一緒に行います。</li>
+</ul>
+<h2>Schema認証手順</h2>
+<h3>アプリセルへアプリ認証情報設定</h3>
+<ul>
+<li>アプリセルにアカウント作成（通常のアカウント作成）</li>
+<li>アプリセルにロール作成（通常のロール作成）
+<ul>
+<li>ロールの作成は任意。最上位のスキーマ認証（Confidential Client）を行う場合のみ実施</li>
+</ul></li>
+<li>アカウントとロールの結びつけ（通常の結びつけ処理）
+<ul>
+<li>ロールの作成と同じ理由により任意</li>
+</ul></li>
+</ul>
+<h3>ユーザセルのコレクションにスキーマ認証レベル設定</h3>
+<ul>
+<li><p>ACLを使ってスキーマ認証レベルの設定を行います。</p></li>
+<li><p>スキーマ認証設定ACLのサンプル</p></li>
+</ul>
+<pre><code>&lt;D:acl xmlns:D=&quot;DAV:&quot; xml:base=&quot;https://demo.personium.io/cell/__role/box/&quot;
+xmlns:p=&quot;urn:x-personium:xmlns&quot;
+p:requireSchemaAuthz=&quot;{スキーマ認証レベル}&quot;&gt;
+    &lt;D:ace&gt;
+        &lt;D:principal&gt;
+            &lt;D:all/&gt;
+        &lt;/D:principal&gt;
+        &lt;D:grant&gt;
+            &lt;D:privilege&gt;&lt;D:read/&gt;&lt;/D:privilege&gt;
+            &lt;D:privilege&gt;&lt;D:write/&gt;&lt;/D:privilege&gt;
+        &lt;/D:grant&gt;
+    &lt;/D:ace&gt;
+&lt;/D:acl&gt;</code></pre>
+<h4>スキーマ認証レベルの取りうる値</h4>
+<table>
+<thead>
+<tr class="header">
+<th style="text-align: left;">レベル値</th>
+<th style="text-align: left;">内容</th>
+</tr>
+</thead>
+<tbody>
+<tr class="odd">
+<td style="text-align: left;">none</td>
+<td style="text-align: left;">スキーマ無しでアクセス可能（デフォルト）</td>
+</tr>
+<tr class="even">
+<td style="text-align: left;">public</td>
+<td style="text-align: left;">スキーマがあればアクセス可能</td>
+</tr>
+<tr class="odd">
+<td style="text-align: left;">confidential</td>
+<td style="text-align: left;">スキーマに特殊ロールconfidentialClientがあればアクセス可能</td>
+</tr>
+</tbody>
+</table>
+<h3>アプリセルでの認証</h3>
+<ul>
+<li>アプリからアプリセルに対して認証してデータセル向けトランスセルトークン取得</li>
+<li>ここでは通常のパスワード認証</li>
+</ul>
+<h3>ユーザセルでの認証</h3>
+<ul>
+<li>Personiumアプリからユーザセルに対して通常のパスワード認証をすると同時にアプリセルから受け取ったトランスセルトークンをclient_secret、<br>アプリセルのURLをclient_idに入れて認証します。</li>
+<li>client_secret 内の<code>issuer</code>と<code>client_id</code>をチェックし、一致していれば発行するアクセストークンにスキーマ情報（URL）を付与します。</li>
+<li>client_secret 内のロール（<code>AttributeStatement\Attribute\AttributeValue</code>の値）をチェックし、<br>ロールが特殊な値（<code>{issuerUrl} + /__role/__/confidentialClient</code>）であればスキーマ情報の後ろに#c（conficentialであることの印）を付与します。</li>
+</ul>
+<pre><code>curl -X POST &#39;{UnitURL}/{cell}}/__auth&#39; -d \
+&#39;grant_type=password&amp;username=user&amp;password=pass&amp;client_id={UnitURL}/{appcell}/&amp;client_secret={アプリセルから受け取ったトランセルトークン}&#39;</code></pre>
+<h3>ボックス及びコレクションのデータアクセス制御</h3>
+<ul>
+<li><p>ボックス及びコレクションにアクセスする際のアクセストークンのスキーマ認証情報と、<br>ボックスに設定されているスキーマ（アクセス先がコレクションの場合属するボックス）のチェックを行います。</p></li>
+<li><p>アクセスするボックス/コレクションのスキーマ認証レベル設定とアクセストークンのスキーマ情報を比較し、<br>レベル設定に合わない場合はアクセスを拒否します。</p>
+<ul>
+<li><p>・none =&gt; スキーマ認証チェックを行わない</p></li>
+<li><p>・public =&gt; スキーマ認証チェックを行い、スキーマ認証されていればアクセス可能にする</p></li>
+<li><p>・confidential =&gt; スキーマ認証チェックを行い、特殊ロール（confidentialClient）があればアクセス可能にする</p></li>
+</ul></li>
+<li><p>アクセスするボックスのスキーマ値とアクセストークンのスキーマ値を比較し、値が異なる場合はアクセスを拒否します。</p></li>
+</ul>
+</div>
+  <footer><nav>The Personium project is provided under the Apache 2.0 license. </nav></footer>
+</body>
+</html>
+

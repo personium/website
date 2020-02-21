@@ -1,0 +1,142 @@
+<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml" lang="" xml:lang="">
+<head>
+  <!-- default template -->
+  <meta charset="utf-8" />
+  <meta name="generator" content="pandoc" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=yes" />
+  <title>277_Event_Summary</title>
+  <script type="text/javascript">
+      var path = location.pathname.split('/');
+      var pathRoot = [ path[0], path[1], '' ].join('/');
+      var pathLang = [ path[0], path[1], path[2] , ''].join('/');
+
+      //load style sheets
+      document.write('<link rel="stylesheet" href="' + pathRoot + 'personium.css" type="text/css" />');
+      document.write('<link rel="stylesheet" href="' + pathLang + 'locale.css" type="text/css" />');
+      //load personium_docs.js
+      var ps = document.createElement('script');
+      ps.src = pathRoot + 'personium_docs.js';
+      var s = document.getElementsByTagName('script')[0];
+      s.parentNode.insertBefore(ps, s);
+    
+      //load apiref_versions.js
+      ps2 = document.createElement('script');
+      ps2.src = pathRoot + 'apiref_versions.js';
+      s = document.getElementsByTagName('script')[0];
+      s.parentNode.insertBefore(ps2, s);
+
+  </script>
+  <link href="https://fonts.googleapis.com/css?family=Raleway" rel="stylesheet">
+  <link href="https://fonts.googleapis.com/css?family=Open+Sans" rel="stylesheet">
+  
+  <!--[if lt IE 9]>
+    <script src="//cdnjs.cloudflare.com/ajax/libs/html5shiv/3.7.3/html5shiv-printshiv.min.js"></script>
+  <![endif]-->
+</head>
+<body>
+  <header>
+    <nav>
+    <div id="logo"><a href="/">Personium</a></div>
+    <ul>
+      <li class="submenu">
+        <a href="" >Introduction</a>
+        <ul>
+            <li><a href="javascript:p.toPage('/overview/001_Introduction.html');">What's Personium?</a></li>
+            <li><a href="javascript:p.toPage('/user_guide/001_Personium_Architecture.html');">Architecture</a></li>
+            <li><a href="javascript:p.toPage('/user_guide/008_Glossary.html');">Glossary</a></li>
+        </ul>
+      </li>
+      <li class="submenu">
+        <a href="" >User Guide</a>
+        <ul>
+            <li><a href="javascript:p.toPage('/app-developer/');">for App Developer</a></li>
+            <li><a href="javascript:p.toPage('/cell-client-developer/');">for Cell App Developer</a></li>
+            <li><a href="javascript:p.toPage('/unit-administrator/');">for Unit Administrator</a></li>
+            <li><a href="javascript:p.toPage('/server-operator/');">for Server Software Operator</a></li>
+            <li><a href="javascript:p.toPage('/document-writer/');">for Documentation Contributor</a></li>
+            <li><a href="javascript:p.toPage('/plugin-developer/');">for Server Plugin Developer</a></li>
+            <li><a href="javascript:p.toPage('/software-developer/');">for Server Developer</a></li>
+        </ul>
+      </li>
+      <li class="submenu">
+        <a href="" >API Reference</a>
+        <ul id="api-ref-list">
+            <li><a href="javascript:p.toPage('/user_guide/990_Old_Version_API_Ref.html');">older versions</a></li>
+        </ul>
+      </li>
+      <li class="submenu">
+        <a href="" >Languages</a>
+        <ul>
+            <li><a href="javascript:p.setLang('en');">English</a></li>
+            <li><a href="javascript:p.setLang('ja');">Japanese</a></li>
+        </ul>
+      </li>
+    </ul>
+    </nav>
+  </header>
+
+<div id="container">
+<h1>イベントのモデル</h1>
+<h2>概要</h2>
+<p><a href="278_Event_Reception.html">イベント受付API</a>にて定義された外部イベント、およびPersonium内部で定義された内部イベントから構成される。</p>
+<p><img src="image/eventmodel.png" title="イベントモデル" alt="イベントモデル" /></p>
+<h4>外部イベント</h4>
+<p><a href="278_Event_Reception.html">イベント受付API</a> にて、受け付けるイベントを表す。<br />
+イベント受付APIによってイベントが発生し、受け付けたイベントは、イベントバスに出力される。 また、将来的には、他のセルに対するイベント受付のリレー処理が可能となる予定。  </p>
+<h4>内部イベント</h4>
+<p>Personium内部で保持する管理データ（OData/WebDAV/Service等）の状態をもとに実行される処理のことを表す。<br />
+代表的な内部イベントとして、Personium APIのリクエストがある。<br />
+Personium APIのレスポンス返却時に実行結果をイベントとしてイベントバスに出力する。</p>
+<h2>イベントの処理</h2>
+<p>イベントバスに出力されたイベントは、ルールの条件と合致するか判定され、合致した場合は、ルールに記述されたアクションを実行される。 アクションには、以下が指定可能。</p>
+<ul>
+<li>ログ出力</li>
+<li>スクリプト実行</li>
+<li>イベント中継</li>
+</ul>
+<h3>イベントログフォーマット</h3>
+<p>出力形式は以下の通り。</p>
+<pre><code>{dateTime},[{level}],{RequestKey},{external},{schema},{subject},{type},{object},{info}</code></pre>
+<h3>イベントログアクセス方法</h3>
+<p>イベントログは、WebDAV上で管理するため、イベントログファイルへのアクセスはWebDAV用のAPIで行う。</p>
+<ul>
+<li><a href="284_Retrieve_Log_File_list.html">ログファイル一覧取得</a></li>
+<li><a href="285_Retrieve_Log_File.html">ログファイル取得</a></li>
+<li><a href="286_Delete_Log_File.html">ログファイル削除</a></li>
+</ul>
+<h3>イベントログ保管期間</h3>
+<p>イベント量に応じてイベントログファイルのサイズが増大するため、一定量にてイベントログファイルをローテートする。<br />
+ローテートされたイベントログファイルの保持世代数は、最大12世代とする。<br />
+なお、ローテート時の最大サイズは、デフォルト50MBとし、ログ設定更新APIにて設定可能とする。</p>
+<h3>出力例</h3>
+<h4>外部イベントの出力例</h4>
+<pre><code>2013-04-18T14:52:39.778Z,[ERROR],&quot;Req_animal-access_1001&quot;,&quot;true&quot;,
+&quot;https://{UnitFQDN}/appCell/&quot;,&quot;https://{UnitFQDN}/servicemanager/#admin&quot;,&quot;actionData&quot;,
+&quot;/svc/token_keeper&quot;,&quot;resultData&quot;
+2013-04-18T14:52:40.688Z,[INFO ],&quot;Req_animal-access_2001&quot;,&quot;true&quot;,
+&quot;https://{UnitFQDN}/appCell/&quot;,&quot;https://{UnitFQDN}/servicemanager/#admin&quot;,&quot;action&quot;,
+&quot;/svc/token_keeper&quot;,&quot;result&quot;
+2013-04-18T15:01:46.994Z,[INFO ],&quot;Req_animal-access_2001&quot;,&quot;true&quot;,
+&quot;https://{UnitFQDN}/appCell/&quot;,&quot;https://{UnitFQDN}/servicemanager/#admin&quot;,&quot;action&quot;,
+&quot;/svc/token_keeper&quot;,&quot;result&quot;
+2013-04-18T15:06:19.294Z,[ERROR],&quot;Req_animal-access_1001&quot;,&quot;true&quot;,
+&quot;https://{UnitFQDN}/appCell/&quot;,&quot;https://{UnitFQDN}/servicemanager/#admin&quot;,&quot;actionData&quot;,
+&quot;/svc/token_keeper&quot;,&quot;resultData&quot;
+2013-04-18T15:06:23.360Z,[INFO ],&quot;Req_animal-access_2001&quot;,&quot;true&quot;,
+&quot;https://{UnitFQDN}/appCell/&quot;,&quot;https://{UnitFQDN}/servicemanager/#admin&quot;,&quot;action&quot;,
+&quot;/svc/token_keeper&quot;,&quot;result&quot;
+2013-04-18T15:09:18.073Z,[ERROR],&quot;Req_animal-access_1001&quot;,&quot;true&quot;,
+&quot;https://{UnitFQDN}/appCell/&quot;,&quot;https://{UnitFQDN}/servicemanager/#admin&quot;,&quot;actionData&quot;,
+&quot;/svc/token_keeper&quot;,&quot;resultData&quot;</code></pre>
+<h4>内部イベントの出力例</h4>
+<pre><code>2013-04-18T14:52:39.779Z,[INFO ],&quot;Req_animal-access_1001&quot;,&quot;false&quot;,
+&quot;https://{UnitFQDN}/appCell/&quot;,&quot;https://{UnitFQDN}/appCell/#staff&quot;,&quot;odata.update&quot;,
+&quot;https://{UnitFQDN}/homeClinic/box/col/put_blog&quot;,&quot;204&quot;
+2013-04-18T14:52:39.780Z,[INFO ],&quot;Req_animal-access_1001&quot;,&quot;false&quot;,
+&quot;https://{UnitFQDN}/appCell/&quot;,&quot;https://{UnitFQDN}/appCell/#staff&quot;,&quot;odata.get&quot;,
+&quot;https://{UnitFQDN}/homeClinic/box/col/blog_20130418&quot;,&quot;200&quot;</code></pre>
+</div>
+  <footer><nav>The Personium project is provided under the Apache 2.0 license. </nav></footer>
+</body>
+</html>

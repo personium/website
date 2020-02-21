@@ -1,0 +1,1595 @@
+<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml" lang="" xml:lang="">
+<head>
+  <!-- default template -->
+  <meta charset="utf-8" />
+  <meta name="generator" content="pandoc" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=yes" />
+  <title>277_Event_Summary</title>
+  <script type="text/javascript">
+      var path = location.pathname.split('/');
+      var pathRoot = [ path[0], path[1], '' ].join('/');
+      var pathLang = [ path[0], path[1], path[2] , ''].join('/');
+
+      //load style sheets
+      document.write('<link rel="stylesheet" href="' + pathRoot + 'personium.css" type="text/css" />');
+      document.write('<link rel="stylesheet" href="' + pathLang + 'locale.css" type="text/css" />');
+      //load personium_docs.js
+      var ps = document.createElement('script');
+      ps.src = pathRoot + 'personium_docs.js';
+      var s = document.getElementsByTagName('script')[0];
+      s.parentNode.insertBefore(ps, s);
+    
+      //load apiref_versions.js
+      ps2 = document.createElement('script');
+      ps2.src = pathRoot + 'apiref_versions.js';
+      s = document.getElementsByTagName('script')[0];
+      s.parentNode.insertBefore(ps2, s);
+
+  </script>
+  <link href="https://fonts.googleapis.com/css?family=Raleway" rel="stylesheet">
+  <link href="https://fonts.googleapis.com/css?family=Open+Sans" rel="stylesheet">
+  
+  <!--[if lt IE 9]>
+    <script src="//cdnjs.cloudflare.com/ajax/libs/html5shiv/3.7.3/html5shiv-printshiv.min.js"></script>
+  <![endif]-->
+</head>
+<body>
+  <header>
+    <nav>
+    <div id="logo"><a href="/">Personium</a></div>
+    <ul>
+      <li class="submenu">
+        <a href="" >Introduction</a>
+        <ul>
+            <li><a href="javascript:p.toPage('/overview/001_Introduction.html');">What's Personium?</a></li>
+            <li><a href="javascript:p.toPage('/user_guide/001_Personium_Architecture.html');">Architecture</a></li>
+            <li><a href="javascript:p.toPage('/user_guide/008_Glossary.html');">Glossary</a></li>
+        </ul>
+      </li>
+      <li class="submenu">
+        <a href="" >User Guide</a>
+        <ul>
+            <li><a href="javascript:p.toPage('/app-developer/');">for App Developer</a></li>
+            <li><a href="javascript:p.toPage('/cell-client-developer/');">for Cell App Developer</a></li>
+            <li><a href="javascript:p.toPage('/unit-administrator/');">for Unit Administrator</a></li>
+            <li><a href="javascript:p.toPage('/server-operator/');">for Server Software Operator</a></li>
+            <li><a href="javascript:p.toPage('/document-writer/');">for Documentation Contributor</a></li>
+            <li><a href="javascript:p.toPage('/plugin-developer/');">for Server Plugin Developer</a></li>
+            <li><a href="javascript:p.toPage('/software-developer/');">for Server Developer</a></li>
+        </ul>
+      </li>
+      <li class="submenu">
+        <a href="" >API Reference</a>
+        <ul id="api-ref-list">
+            <li><a href="javascript:p.toPage('/user_guide/990_Old_Version_API_Ref.html');">older versions</a></li>
+        </ul>
+      </li>
+      <li class="submenu">
+        <a href="" >Languages</a>
+        <ul>
+            <li><a href="javascript:p.setLang('en');">English</a></li>
+            <li><a href="javascript:p.setLang('ja');">Japanese</a></li>
+        </ul>
+      </li>
+    </ul>
+    </nav>
+  </header>
+
+<div id="container">
+<h1>イベントのモデル</h1>
+<h2>概要</h2>
+<p><a href="278_Event_Reception.html">イベント受付API</a>にて定義された外部イベント、およびPersonium内部で定義された内部イベントから構成されます。</p>
+<p><img src="image/eventmodel.png" title="イベントモデル" alt="イベントモデル" /></p>
+<h3>外部イベント</h3>
+<p><a href="278_Event_Reception.html">イベント受付API</a> にて、受け付けるイベントを表します。   イベント受付APIによって受け付けたイベントは、イベントバスに出力されます。</p>
+<h3>内部イベント</h3>
+<p>Personium内部で保持する管理データ（OData/WebDAV/Service等）の状態をもとに実行される処理のことを表します。   代表的な内部イベントとして、Personium APIのリクエストがあり、Personium APIのレスポンス返却時に実行結果をイベントとしてイベントバスに出力します。</p>
+<h2>イベントフォーマット</h2>
+<p>イベントは以下の項目から構成されます。</p>
+<table>
+<thead>
+<tr class="header">
+<th style="text-align: left;">項目名</th>
+<th style="text-align: left;">説明</th>
+</tr>
+</thead>
+<tbody>
+<tr class="odd">
+<td style="text-align: left;">Subject</td>
+<td style="text-align: left;">Authorizationヘッダのトークンにより設定されます</td>
+</tr>
+<tr class="even">
+<td style="text-align: left;">Schema</td>
+<td style="text-align: left;">Authorizationヘッダのトークンにより設定されます</td>
+</tr>
+<tr class="odd">
+<td style="text-align: left;">RequestKey</td>
+<td style="text-align: left;">X-Personium-RequestKeyヘッダにより設定されます</td>
+</tr>
+<tr class="even">
+<td style="text-align: left;">External</td>
+<td style="text-align: left;">外部イベントか内部イベントかを表します</td>
+</tr>
+<tr class="odd">
+<td style="text-align: left;">Type</td>
+<td style="text-align: left;">イベントのタイプを表します</td>
+</tr>
+<tr class="even">
+<td style="text-align: left;">Object</td>
+<td style="text-align: left;">イベントの対象を表します</td>
+</tr>
+<tr class="odd">
+<td style="text-align: left;">Info</td>
+<td style="text-align: left;">イベントの情報を表します</td>
+</tr>
+</tbody>
+</table>
+<h3>内部イベント詳細</h3>
+<p>Typeは、操作に対して定義されています。</p>
+<p>Objectは、基本的には、URLもしくは、キーを含めたURLが設定されます。 URLは、personium-localcellスキームによるURLであり、キーを含めたURLは、作成後のキーを付与したURLになります。 例えば、__idが0123のentityを作成した場合、リクエストURLとキーを含めたURLは以下のようになります。</p>
+<table style="width:11%;">
+<colgroup>
+<col style="width: 5%" />
+<col style="width: 5%" />
+</colgroup>
+<thead>
+<tr class="header">
+<th style="text-align: left;">リクエストURL</th>
+<th style="text-align: left;">キーを含めたURL</th>
+</tr>
+</thead>
+<tbody>
+<tr class="odd">
+<td style="text-align: left;">http://personium/cell/box/col/entity</td>
+<td style="text-align: left;">personium-localcell:/box/col/entity('0123')</td>
+</tr>
+</tbody>
+</table>
+<p>Objectにおけるキーは、正規化されています。正規化の例を以下に示します。</p>
+<table>
+<thead>
+<tr class="header">
+<th style="text-align: left;"></th>
+<th style="text-align: left;">正規化</th>
+</tr>
+</thead>
+<tbody>
+<tr class="odd">
+<td style="text-align: left;">Role(’role’)</td>
+<td style="text-align: left;">Role(Name=’role’, _Box.Name=null)</td>
+</tr>
+<tr class="even">
+<td style="text-align: left;">Role(_Box.Name=null, Name=’role’)</td>
+<td style="text-align: left;">Role(Name=’role’, _Box.Name=null)</td>
+</tr>
+<tr class="odd">
+<td style="text-align: left;">Account(Name=’hoge’)</td>
+<td style="text-align: left;">Account(’hoge’)</td>
+</tr>
+</tbody>
+</table>
+<p>Infoは、基本的には、リクエストのレスポンスコードとリクエストURLが設定されます。リクエストURLは、リクエストされたときのURLであり、引数も含みます。 更新操作では、変更後のキーが設定されます。変更後のアクセス先を得るためにInfoに設定しています。</p>
+<table style="width:17%;">
+<colgroup>
+<col style="width: 5%" />
+<col style="width: 5%" />
+<col style="width: 5%" />
+</colgroup>
+<thead>
+<tr class="header">
+<th style="text-align: left;">Type</th>
+<th style="text-align: left;">Object</th>
+<th style="text-align: left;">Info</th>
+</tr>
+</thead>
+<tbody>
+<tr class="odd">
+<td style="text-align: left;">celctl.Role.update</td>
+<td style="text-align: left;">personium-localcell:/__ctl/Role(Name='role1', _Box.Name=null)</td>
+<td style="text-align: left;">204,(Name='role2', _Box.Name=null)</td>
+</tr>
+</tbody>
+</table>
+<p>変更後のオブジェクトにアクセスするには、変更後のキーを使用して以下のURLにする必要があります。</p>
+<pre><code>http://{FQDN}/{CellName}/__ctl/Role(Name=&#39;role2&#39;, _Box.Name=null)</code></pre>
+<h4>Cell Level API</h4>
+<h5>Cell制御オブジェクト</h5>
+<table>
+<thead>
+<tr class="header">
+<th style="text-align: left;"></th>
+<th style="text-align: left;">操作</th>
+<th style="text-align: left;">Type</th>
+<th style="text-align: left;">Object</th>
+<th style="text-align: left;">Info</th>
+<th style="text-align: left;">備考</th>
+</tr>
+</thead>
+<tbody>
+<tr class="odd">
+<td style="text-align: left;">基本操作</td>
+<td style="text-align: left;">作成</td>
+<td style="text-align: left;">cellctl.xxx.create</td>
+<td style="text-align: left;">キーを含めたURL</td>
+<td style="text-align: left;">201,リクエストURL</td>
+<td style="text-align: left;"></td>
+</tr>
+<tr class="even">
+<td style="text-align: left;"></td>
+<td style="text-align: left;">取得</td>
+<td style="text-align: left;">cellctl.xxx.get</td>
+<td style="text-align: left;">URL</td>
+<td style="text-align: left;">200,リクエストURL</td>
+<td style="text-align: left;"></td>
+</tr>
+<tr class="odd">
+<td style="text-align: left;"></td>
+<td style="text-align: left;">一覧取得</td>
+<td style="text-align: left;">cellctl.xxx.list</td>
+<td style="text-align: left;">URL</td>
+<td style="text-align: left;">200,リクエストURL</td>
+<td style="text-align: left;"></td>
+</tr>
+<tr class="even">
+<td style="text-align: left;"></td>
+<td style="text-align: left;">更新</td>
+<td style="text-align: left;">cellctl.xxx.update</td>
+<td style="text-align: left;">URL</td>
+<td style="text-align: left;">204,変更後のキー</td>
+<td style="text-align: left;"></td>
+</tr>
+<tr class="odd">
+<td style="text-align: left;"></td>
+<td style="text-align: left;">削除</td>
+<td style="text-align: left;">cellctl.xxx.delete</td>
+<td style="text-align: left;">URL</td>
+<td style="text-align: left;">204</td>
+<td style="text-align: left;"></td>
+</tr>
+<tr class="even">
+<td style="text-align: left;">他オブジェクトとのリンク</td>
+<td style="text-align: left;">リンク</td>
+<td style="text-align: left;">cellctl.xxx.links.yyy.create</td>
+<td style="text-align: left;">キーを含めたURL</td>
+<td style="text-align: left;">204</td>
+<td style="text-align: left;"></td>
+</tr>
+<tr class="odd">
+<td style="text-align: left;"></td>
+<td style="text-align: left;">リンク解除</td>
+<td style="text-align: left;">cellctl.xxx.links.yyy.delete</td>
+<td style="text-align: left;">URL</td>
+<td style="text-align: left;">204</td>
+<td style="text-align: left;"></td>
+</tr>
+<tr class="even">
+<td style="text-align: left;"></td>
+<td style="text-align: left;">リンク一覧取得</td>
+<td style="text-align: left;">cellctl.xxx.links.yyy.list</td>
+<td style="text-align: left;">URL</td>
+<td style="text-align: left;">200,リクエストURL</td>
+<td style="text-align: left;"></td>
+</tr>
+<tr class="odd">
+<td style="text-align: left;">紐づく他オブジェクト操作</td>
+<td style="text-align: left;">作成</td>
+<td style="text-align: left;">cellctl.xxx.navprop.yyy.create</td>
+<td style="text-align: left;">キーを含めたURL</td>
+<td style="text-align: left;">201,リクエストURL</td>
+<td style="text-align: left;"></td>
+</tr>
+<tr class="even">
+<td style="text-align: left;"></td>
+<td style="text-align: left;">一覧取得</td>
+<td style="text-align: left;">cellctl.xxx.navprop.yyy.list</td>
+<td style="text-align: left;">URL</td>
+<td style="text-align: left;">200,リクエストURL</td>
+<td style="text-align: left;"></td>
+</tr>
+</tbody>
+</table>
+<p>xxxやyyyには、Cell制御オブジェクト名が入ります。</p>
+<ul>
+<li>Account</li>
+<li>Role</li>
+<li>ExtCell</li>
+<li>Relation</li>
+<li>ExtRole</li>
+<li>Box</li>
+<li>SentMessage</li>
+<li>ReceivedMessage</li>
+<li>Rule</li>
+</ul>
+<h5>Boxインストール</h5>
+<table>
+<thead>
+<tr class="header">
+<th style="text-align: left;">状態</th>
+<th style="text-align: left;">Type</th>
+<th style="text-align: left;">Object</th>
+<th style="text-align: left;">Info</th>
+<th style="text-align: left;">備考</th>
+</tr>
+</thead>
+<tbody>
+<tr class="odd">
+<td style="text-align: left;">Boxインストール受付</td>
+<td style="text-align: left;">boxinstall</td>
+<td style="text-align: left;">URL</td>
+<td style="text-align: left;">202など</td>
+<td style="text-align: left;">Boxインストールの受付が失敗するとInfoの値は変わります</td>
+</tr>
+<tr class="even">
+<td style="text-align: left;">Boxインストール処理中</td>
+<td style="text-align: left;">PL-BI-1000</td>
+<td style="text-align: left;">URL</td>
+<td style="text-align: left;">Bar installation started.</td>
+<td style="text-align: left;"></td>
+</tr>
+<tr class="odd">
+<td style="text-align: left;"></td>
+<td style="text-align: left;">PL-BI-1001</td>
+<td style="text-align: left;">Barファイル内のエントリパス</td>
+<td style="text-align: left;">Installation started.</td>
+<td style="text-align: left;"></td>
+</tr>
+<tr class="even">
+<td style="text-align: left;"></td>
+<td style="text-align: left;">PL-BI-1003</td>
+<td style="text-align: left;">Barファイル内のエントリパス</td>
+<td style="text-align: left;">Installation completed.</td>
+<td style="text-align: left;"></td>
+</tr>
+<tr class="odd">
+<td style="text-align: left;"></td>
+<td style="text-align: left;">PL-BI-1004</td>
+<td style="text-align: left;">Barファイル内のエントリパス</td>
+<td style="text-align: left;">Installation failed({原因}).</td>
+<td style="text-align: left;"></td>
+</tr>
+<tr class="even">
+<td style="text-align: left;"></td>
+<td style="text-align: left;">PL-BI-1005</td>
+<td style="text-align: left;"></td>
+<td style="text-align: left;">Unknown error({原因}).</td>
+<td style="text-align: left;"></td>
+</tr>
+<tr class="odd">
+<td style="text-align: left;">Boxインストール完了</td>
+<td style="text-align: left;">PL-BI-0000</td>
+<td style="text-align: left;">URL</td>
+<td style="text-align: left;">Bar installation completed.</td>
+<td style="text-align: left;"></td>
+</tr>
+<tr class="even">
+<td style="text-align: left;"></td>
+<td style="text-align: left;">PL-BI-0001</td>
+<td style="text-align: left;">URL</td>
+<td style="text-align: left;">Bar installation failed({原因}).</td>
+<td style="text-align: left;"></td>
+</tr>
+</tbody>
+</table>
+<h5>Cell間のメッセージ交換</h5>
+<table>
+<thead>
+<tr class="header">
+<th style="text-align: left;"></th>
+<th style="text-align: left;">操作</th>
+<th style="text-align: left;">Type</th>
+<th style="text-align: left;">Object</th>
+<th style="text-align: left;">Info</th>
+<th style="text-align: left;">備考</th>
+</tr>
+</thead>
+<tbody>
+<tr class="odd">
+<td style="text-align: left;">メッセージ送信</td>
+<td style="text-align: left;">送信</td>
+<td style="text-align: left;">message.send</td>
+<td style="text-align: left;">送信メッセージ取得用URL</td>
+<td style="text-align: left;">201</td>
+<td style="text-align: left;"></td>
+</tr>
+<tr class="even">
+<td style="text-align: left;"></td>
+<td style="text-align: left;">受信</td>
+<td style="text-align: left;">message.receive</td>
+<td style="text-align: left;">受信メッセージ取得用URL</td>
+<td style="text-align: left;">201</td>
+<td style="text-align: left;">メッセージを受信したCellにてイベント化</td>
+</tr>
+<tr class="odd">
+<td style="text-align: left;">状態変更</td>
+<td style="text-align: left;">既読</td>
+<td style="text-align: left;">message.read</td>
+<td style="text-align: left;">受信メッセージ取得用URL</td>
+<td style="text-align: left;">204</td>
+<td style="text-align: left;"></td>
+</tr>
+<tr class="even">
+<td style="text-align: left;"></td>
+<td style="text-align: left;">未読</td>
+<td style="text-align: left;">message.unread</td>
+<td style="text-align: left;">受信メッセージ取得用URL</td>
+<td style="text-align: left;">204</td>
+<td style="text-align: left;"></td>
+</tr>
+<tr class="odd">
+<td style="text-align: left;"></td>
+<td style="text-align: left;">承認</td>
+<td style="text-align: left;">message.approve</td>
+<td style="text-align: left;">受信メッセージ取得用URL</td>
+<td style="text-align: left;">204</td>
+<td style="text-align: left;"></td>
+</tr>
+<tr class="even">
+<td style="text-align: left;"></td>
+<td style="text-align: left;">拒否</td>
+<td style="text-align: left;">message.reject</td>
+<td style="text-align: left;">受信メッセージ取得用URL</td>
+<td style="text-align: left;">204</td>
+<td style="text-align: left;"></td>
+</tr>
+</tbody>
+</table>
+<p>送信メッセージ取得用URLと受信メッセージ取得用URLの例を以下に示します。</p>
+<table>
+<thead>
+<tr class="header">
+<th style="text-align: left;"></th>
+<th style="text-align: left;">URL</th>
+</tr>
+</thead>
+<tbody>
+<tr class="odd">
+<td style="text-align: left;">送信メッセージ取得用URL</td>
+<td style="text-align: left;">personium-localcell:/__ctl/SentMessage(’12345’)</td>
+</tr>
+<tr class="even">
+<td style="text-align: left;">受信メッセージ取得用URL</td>
+<td style="text-align: left;">personium-localcell:/__ctl/ReceivedMessage(’12345’)</td>
+</tr>
+</tbody>
+</table>
+<p>メッセージ承認によりCell制御オブジェクトの作成と削除が実行されることがあります。そのイベントは以下になります。</p>
+<table style="width:33%;">
+<colgroup>
+<col style="width: 5%" />
+<col style="width: 5%" />
+<col style="width: 5%" />
+<col style="width: 5%" />
+<col style="width: 5%" />
+<col style="width: 5%" />
+</colgroup>
+<thead>
+<tr class="header">
+<th style="text-align: left;"></th>
+<th style="text-align: left;">操作</th>
+<th style="text-align: left;">Type</th>
+<th style="text-align: left;">Object</th>
+<th style="text-align: left;">Info</th>
+<th style="text-align: left;">備考</th>
+</tr>
+</thead>
+<tbody>
+<tr class="odd">
+<td style="text-align: left;">基本操作</td>
+<td style="text-align: left;">作成</td>
+<td style="text-align: left;">cellctl.ExtCell.create</td>
+<td style="text-align: left;">キーを含めたURL</td>
+<td style="text-align: left;">approved for message 12345</td>
+<td style="text-align: left;">12345はメッセージidです</td>
+</tr>
+<tr class="even">
+<td style="text-align: left;"></td>
+<td style="text-align: left;">作成</td>
+<td style="text-align: left;">cellctl.Rule.create</td>
+<td style="text-align: left;">キーを含めたURL</td>
+<td style="text-align: left;">approved for message 12345</td>
+<td style="text-align: left;">12345はメッセージidです</td>
+</tr>
+<tr class="odd">
+<td style="text-align: left;"></td>
+<td style="text-align: left;">削除</td>
+<td style="text-align: left;">cellctl.Rule.delete</td>
+<td style="text-align: left;">URL</td>
+<td style="text-align: left;">approved for message 12345</td>
+<td style="text-align: left;">12345はメッセージidです</td>
+</tr>
+<tr class="even">
+<td style="text-align: left;">他オブジェクトとのリンク</td>
+<td style="text-align: left;">リンク</td>
+<td style="text-align: left;">cellctl.Relation.links.ExtCell.create</td>
+<td style="text-align: left;">キーを含めたURL</td>
+<td style="text-align: left;">approved for message 12345</td>
+<td style="text-align: left;">12345はメッセージidです</td>
+</tr>
+<tr class="odd">
+<td style="text-align: left;"></td>
+<td style="text-align: left;">リンク</td>
+<td style="text-align: left;">cellctl.Role.links.ExtCell.create</td>
+<td style="text-align: left;">キーを含めたURL</td>
+<td style="text-align: left;">approved for message 12345</td>
+<td style="text-align: left;">12345はメッセージidです</td>
+</tr>
+<tr class="even">
+<td style="text-align: left;"></td>
+<td style="text-align: left;">リンク解除</td>
+<td style="text-align: left;">cellctl.Relation.links.ExtCell.delete</td>
+<td style="text-align: left;">URL</td>
+<td style="text-align: left;">approved for message 12345</td>
+<td style="text-align: left;">12345はメッセージidです</td>
+</tr>
+<tr class="odd">
+<td style="text-align: left;"></td>
+<td style="text-align: left;">リンク解除</td>
+<td style="text-align: left;">cellctl.Role.links.ExtCell.delete</td>
+<td style="text-align: left;">URL</td>
+<td style="text-align: left;">approved for message 12345</td>
+<td style="text-align: left;">12345はメッセージidです</td>
+</tr>
+</tbody>
+</table>
+<h5>その他機能</h5>
+<table>
+<thead>
+<tr class="header">
+<th style="text-align: left;"></th>
+<th style="text-align: left;">操作</th>
+<th style="text-align: left;">Type</th>
+<th style="text-align: left;">Object</th>
+<th style="text-align: left;">Info</th>
+<th style="text-align: left;">備考</th>
+</tr>
+</thead>
+<tbody>
+<tr class="odd">
+<td style="text-align: left;">エクスポート</td>
+<td style="text-align: left;">実行</td>
+<td style="text-align: left;">cell.export</td>
+<td style="text-align: left;">personium-localcell:/</td>
+<td style="text-align: left;"></td>
+<td style="text-align: left;"></td>
+</tr>
+<tr class="even">
+<td style="text-align: left;">インポート</td>
+<td style="text-align: left;">実行</td>
+<td style="text-align: left;">cell.import</td>
+<td style="text-align: left;">personium-localcell:/</td>
+<td style="text-align: left;"></td>
+<td style="text-align: left;"></td>
+</tr>
+</tbody>
+</table>
+<h4>Box Level API</h4>
+<h5>WebDAV基本操作</h5>
+<table>
+<thead>
+<tr class="header">
+<th style="text-align: left;"></th>
+<th style="text-align: left;">操作</th>
+<th style="text-align: left;">Type</th>
+<th style="text-align: left;">Object</th>
+<th style="text-align: left;">Info</th>
+<th style="text-align: left;">備考</th>
+</tr>
+</thead>
+<tbody>
+<tr class="odd">
+<td style="text-align: left;">基本操作</td>
+<td style="text-align: left;">登録更新</td>
+<td style="text-align: left;">davfile.update</td>
+<td style="text-align: left;">URL</td>
+<td style="text-align: left;">204</td>
+<td style="text-align: left;"></td>
+</tr>
+<tr class="even">
+<td style="text-align: left;"></td>
+<td style="text-align: left;">取得</td>
+<td style="text-align: left;">davfile.get</td>
+<td style="text-align: left;">URL</td>
+<td style="text-align: left;">200</td>
+<td style="text-align: left;"></td>
+</tr>
+<tr class="odd">
+<td style="text-align: left;"></td>
+<td style="text-align: left;">削除</td>
+<td style="text-align: left;">davfile.delete</td>
+<td style="text-align: left;">URL</td>
+<td style="text-align: left;">204</td>
+<td style="text-align: left;"></td>
+</tr>
+</tbody>
+</table>
+<h5>ODataサービスコレクション</h5>
+<h6>データ操作</h6>
+<table>
+<thead>
+<tr class="header">
+<th style="text-align: left;"></th>
+<th style="text-align: left;">操作</th>
+<th style="text-align: left;">Type</th>
+<th style="text-align: left;">Object</th>
+<th style="text-align: left;">Info</th>
+<th style="text-align: left;">備考</th>
+</tr>
+</thead>
+<tbody>
+<tr class="odd">
+<td style="text-align: left;">基本操作</td>
+<td style="text-align: left;">作成</td>
+<td style="text-align: left;">odata.create</td>
+<td style="text-align: left;">キーを含めたURL</td>
+<td style="text-align: left;">201,リクエストURL</td>
+<td style="text-align: left;"></td>
+</tr>
+<tr class="even">
+<td style="text-align: left;"></td>
+<td style="text-align: left;">取得</td>
+<td style="text-align: left;">odata.get</td>
+<td style="text-align: left;">URL</td>
+<td style="text-align: left;">200,リクエストURL</td>
+<td style="text-align: left;"></td>
+</tr>
+<tr class="odd">
+<td style="text-align: left;"></td>
+<td style="text-align: left;">一覧取得</td>
+<td style="text-align: left;">odata.list</td>
+<td style="text-align: left;">URL</td>
+<td style="text-align: left;">200,リクエストURL</td>
+<td style="text-align: left;"></td>
+</tr>
+<tr class="even">
+<td style="text-align: left;"></td>
+<td style="text-align: left;">更新</td>
+<td style="text-align: left;">odata.update</td>
+<td style="text-align: left;">URL</td>
+<td style="text-align: left;">204,変更後のキー</td>
+<td style="text-align: left;"></td>
+</tr>
+<tr class="odd">
+<td style="text-align: left;"></td>
+<td style="text-align: left;">部分更新</td>
+<td style="text-align: left;">odata.patch</td>
+<td style="text-align: left;">URL</td>
+<td style="text-align: left;">204,変更後のキー</td>
+<td style="text-align: left;"></td>
+</tr>
+<tr class="even">
+<td style="text-align: left;"></td>
+<td style="text-align: left;">削除</td>
+<td style="text-align: left;">odata.delete</td>
+<td style="text-align: left;">URL</td>
+<td style="text-align: left;">204</td>
+<td style="text-align: left;"></td>
+</tr>
+<tr class="odd">
+<td style="text-align: left;">他EntitySetのEntityとのリンク</td>
+<td style="text-align: left;">リンク</td>
+<td style="text-align: left;">odata.links.create</td>
+<td style="text-align: left;">キーを含めたURL</td>
+<td style="text-align: left;">204</td>
+<td style="text-align: left;"></td>
+</tr>
+<tr class="even">
+<td style="text-align: left;"></td>
+<td style="text-align: left;">リンク解除</td>
+<td style="text-align: left;">odata.links.delete</td>
+<td style="text-align: left;">URL</td>
+<td style="text-align: left;">204</td>
+<td style="text-align: left;"></td>
+</tr>
+<tr class="odd">
+<td style="text-align: left;"></td>
+<td style="text-align: left;">リンク一覧取得</td>
+<td style="text-align: left;">odata.links.list</td>
+<td style="text-align: left;">URL</td>
+<td style="text-align: left;">200,リクエストURL</td>
+<td style="text-align: left;"></td>
+</tr>
+<tr class="even">
+<td style="text-align: left;">紐づく他EntitySet操作</td>
+<td style="text-align: left;">作成</td>
+<td style="text-align: left;">odata.navprop.create</td>
+<td style="text-align: left;">キーを含めたURL</td>
+<td style="text-align: left;">201,リクエストURL</td>
+<td style="text-align: left;"></td>
+</tr>
+<tr class="odd">
+<td style="text-align: left;"></td>
+<td style="text-align: left;">一覧取得</td>
+<td style="text-align: left;">odata.navprop.list</td>
+<td style="text-align: left;">URL</td>
+<td style="text-align: left;">200,リクエストURL</td>
+<td style="text-align: left;"></td>
+</tr>
+</tbody>
+</table>
+<h6>スキーマ定義</h6>
+<table style="width:33%;">
+<colgroup>
+<col style="width: 5%" />
+<col style="width: 5%" />
+<col style="width: 5%" />
+<col style="width: 5%" />
+<col style="width: 5%" />
+<col style="width: 5%" />
+</colgroup>
+<thead>
+<tr class="header">
+<th style="text-align: left;"></th>
+<th style="text-align: left;">操作</th>
+<th style="text-align: left;">Type</th>
+<th style="text-align: left;">Object</th>
+<th style="text-align: left;">Info</th>
+<th style="text-align: left;">備考</th>
+</tr>
+</thead>
+<tbody>
+<tr class="odd">
+<td style="text-align: left;">基本操作</td>
+<td style="text-align: left;">作成</td>
+<td style="text-align: left;">odata.xxx.create</td>
+<td style="text-align: left;">キーを含めたURL</td>
+<td style="text-align: left;">201,リクエストURL</td>
+<td style="text-align: left;"></td>
+</tr>
+<tr class="even">
+<td style="text-align: left;"></td>
+<td style="text-align: left;">取得</td>
+<td style="text-align: left;">odata.xxx.get</td>
+<td style="text-align: left;">URL</td>
+<td style="text-align: left;">200,リクエストURL</td>
+<td style="text-align: left;"></td>
+</tr>
+<tr class="odd">
+<td style="text-align: left;"></td>
+<td style="text-align: left;">一覧取得</td>
+<td style="text-align: left;">odata.xxx.list</td>
+<td style="text-align: left;">URL</td>
+<td style="text-align: left;">200,リクエストURL</td>
+<td style="text-align: left;"></td>
+</tr>
+<tr class="even">
+<td style="text-align: left;"></td>
+<td style="text-align: left;">更新</td>
+<td style="text-align: left;">odata.xxx.update</td>
+<td style="text-align: left;">URL</td>
+<td style="text-align: left;">204,変更後のキー</td>
+<td style="text-align: left;"></td>
+</tr>
+<tr class="odd">
+<td style="text-align: left;"></td>
+<td style="text-align: left;">部分更新</td>
+<td style="text-align: left;">odata.xxx.patch</td>
+<td style="text-align: left;">URL</td>
+<td style="text-align: left;">204,変更後のキー</td>
+<td style="text-align: left;"></td>
+</tr>
+<tr class="even">
+<td style="text-align: left;"></td>
+<td style="text-align: left;">削除</td>
+<td style="text-align: left;">odata.xxx.delete</td>
+<td style="text-align: left;">URL</td>
+<td style="text-align: left;">204</td>
+<td style="text-align: left;"></td>
+</tr>
+<tr class="odd">
+<td style="text-align: left;">EntityTypeや他のAssociationEndとのリンク</td>
+<td style="text-align: left;">リンク</td>
+<td style="text-align: left;">odata.xxx.links.yyy.create</td>
+<td style="text-align: left;">キーを含めたURL</td>
+<td style="text-align: left;">204</td>
+<td style="text-align: left;"></td>
+</tr>
+<tr class="even">
+<td style="text-align: left;"></td>
+<td style="text-align: left;">リンク解除</td>
+<td style="text-align: left;">odata.xxx.links.yyy.delete</td>
+<td style="text-align: left;">URL</td>
+<td style="text-align: left;">204</td>
+<td style="text-align: left;"></td>
+</tr>
+<tr class="odd">
+<td style="text-align: left;"></td>
+<td style="text-align: left;">リンク一覧取得</td>
+<td style="text-align: left;">odata.xxx.links.yyy.list</td>
+<td style="text-align: left;">URL</td>
+<td style="text-align: left;">200,リクエストURL</td>
+<td style="text-align: left;"></td>
+</tr>
+</tbody>
+</table>
+<p>xxxやyyyには、スキーマ定義用EntitySet名が入ります。</p>
+<h5>Engineサービスコレクション</h5>
+<table>
+<thead>
+<tr class="header">
+<th style="text-align: left;">操作</th>
+<th style="text-align: left;">Type</th>
+<th style="text-align: left;">Object</th>
+<th style="text-align: left;">Info</th>
+<th style="text-align: left;">備考</th>
+</tr>
+</thead>
+<tbody>
+<tr class="odd">
+<td style="text-align: left;">サービス実行</td>
+<td style="text-align: left;">service.exec</td>
+<td style="text-align: left;">URL</td>
+<td style="text-align: left;">200など</td>
+<td style="text-align: left;">スクリプトの実行結果によりInfoの値は変わます</td>
+</tr>
+</tbody>
+</table>
+<h2>イベントの処理</h2>
+<p>イベントバスに出力されたイベントは、<a href="2A0_Create_Rule.html">ルール</a>の条件と合致するか判定され、合致した場合は、ルールに記述されたアクションを実行される。 アクションには、以下が指定可能。</p>
+<ul>
+<li>ログ出力</li>
+<li>スクリプト実行</li>
+<li>中継</li>
+<li>イベント中継</li>
+</ul>
+<h3>ルールとのマッチング</h3>
+<p>下記表の通りに項目毎に判定を行い、すべての項目が合致した場合に、ルールに合致したと判定する。</p>
+<table>
+<thead>
+<tr class="header">
+<th style="text-align: left;">イベント</th>
+<th style="text-align: left;">ルール</th>
+<th style="text-align: left;">判定</th>
+<th style="text-align: left;">備考</th>
+</tr>
+</thead>
+<tbody>
+<tr class="odd">
+<td style="text-align: left;">Subject</td>
+<td style="text-align: left;">EventSubject</td>
+<td style="text-align: left;">完全一致</td>
+<td style="text-align: left;">EventSubjectがnullのときは合致と判定</td>
+</tr>
+<tr class="even">
+<td style="text-align: left;">Schema</td>
+<td style="text-align: left;">_Box.NameのBoxのSchema</td>
+<td style="text-align: left;">完全一致</td>
+<td style="text-align: left;">_Box.Nameがnullのときは合致と判定</td>
+</tr>
+<tr class="odd">
+<td style="text-align: left;">RequestKey</td>
+<td style="text-align: left;"></td>
+<td style="text-align: left;">判定に使用しません</td>
+<td style="text-align: left;"></td>
+</tr>
+<tr class="even">
+<td style="text-align: left;">External</td>
+<td style="text-align: left;">EventExternal</td>
+<td style="text-align: left;">完全一致</td>
+<td style="text-align: left;"></td>
+</tr>
+<tr class="odd">
+<td style="text-align: left;">Type</td>
+<td style="text-align: left;">EventType</td>
+<td style="text-align: left;">前方一致</td>
+<td style="text-align: left;">EventTypeがnullのときは合致と判定</td>
+</tr>
+<tr class="even">
+<td style="text-align: left;">Object</td>
+<td style="text-align: left;">EventObject</td>
+<td style="text-align: left;">前方一致</td>
+<td style="text-align: left;">EventObjectがnullのときは合致と判定</td>
+</tr>
+<tr class="odd">
+<td style="text-align: left;">Info</td>
+<td style="text-align: left;">EventInfo</td>
+<td style="text-align: left;">前方一致</td>
+<td style="text-align: left;">EventInfoがnullのときは合致と判定</td>
+</tr>
+</tbody>
+</table>
+<h3>ログ出力アクション</h3>
+<p>ログ出力アクションは、イベントの内容をイベントログとして出力します。 ログ出力アクションには、以下の種類があります。</p>
+<table>
+<thead>
+<tr class="header">
+<th style="text-align: left;">アクション</th>
+<th style="text-align: left;">説明</th>
+</tr>
+</thead>
+<tbody>
+<tr class="odd">
+<td style="text-align: left;">log<br>log.info</td>
+<td style="text-align: left;">INFOレベルでログを出力します</td>
+</tr>
+<tr class="even">
+<td style="text-align: left;">log.warn</td>
+<td style="text-align: left;">WARNレベルでログを出力します</td>
+</tr>
+<tr class="odd">
+<td style="text-align: left;">log.error</td>
+<td style="text-align: left;">ERRORレベルでログを出力します</td>
+</tr>
+</tbody>
+</table>
+<p>イベントにはログ出力レベルはなく、アクションにてレベルを指定します。</p>
+<h4>ルール例</h4>
+<p>Cell制御オブジェクトのRole操作をログ出力する例</p>
+<table>
+<thead>
+<tr class="header">
+<th style="text-align: left;">項目名</th>
+<th style="text-align: left;">設定</th>
+<th style="text-align: left;">備考</th>
+</tr>
+</thead>
+<tbody>
+<tr class="odd">
+<td style="text-align: left;">_Box.Name</td>
+<td style="text-align: left;">null</td>
+<td style="text-align: left;"></td>
+</tr>
+<tr class="even">
+<td style="text-align: left;">Name</td>
+<td style="text-align: left;">output_cellctlRole</td>
+<td style="text-align: left;">設定しなくてもよいです</td>
+</tr>
+<tr class="odd">
+<td style="text-align: left;">EventType</td>
+<td style="text-align: left;">cellctl.Role.</td>
+<td style="text-align: left;"></td>
+</tr>
+<tr class="even">
+<td style="text-align: left;">EventSubject</td>
+<td style="text-align: left;">null</td>
+<td style="text-align: left;"></td>
+</tr>
+<tr class="odd">
+<td style="text-align: left;">EventObject</td>
+<td style="text-align: left;">personium-localcell:/__ctl/Role</td>
+<td style="text-align: left;">EventTypeで限定されるので実際には冗長です</td>
+</tr>
+<tr class="even">
+<td style="text-align: left;">EventInfo</td>
+<td style="text-align: left;">null</td>
+<td style="text-align: left;"></td>
+</tr>
+<tr class="odd">
+<td style="text-align: left;">EventExternal</td>
+<td style="text-align: left;">false</td>
+<td style="text-align: left;"></td>
+</tr>
+<tr class="even">
+<td style="text-align: left;">Action</td>
+<td style="text-align: left;">log</td>
+<td style="text-align: left;"></td>
+</tr>
+<tr class="odd">
+<td style="text-align: left;">TargetUrl</td>
+<td style="text-align: left;">null</td>
+<td style="text-align: left;"></td>
+</tr>
+</tbody>
+</table>
+<p>Roleを操作するとログがINFOレベルで出力されます。</p>
+<h4>イベントログフォーマット</h4>
+<p>出力形式は以下の通り。</p>
+<pre><code>{dateTime},[{level}],{RequestKey},{External},{Schema},{Subject},{Type},{Object},{Info}</code></pre>
+<h4>イベントログアクセス方法</h4>
+<p>イベントログは、WebDAV上で管理するため、イベントログファイルへのアクセスはWebDAV用のAPIで行う。</p>
+<ul>
+<li><a href="284_Retrieve_Log_File_list.html">ログファイル一覧取得</a></li>
+<li><a href="285_Retrieve_Log_File.html">ログファイル取得</a></li>
+<li><a href="286_Delete_Log_File.html">ログファイル削除</a></li>
+</ul>
+<h4>イベントログ保管期間</h4>
+<p>イベント量に応じてイベントログファイルのサイズが増大するため、一定量にてイベントログファイルをローテートする。<br />
+ローテートされたイベントログファイルの保持世代数は、最大12世代とする。<br />
+なお、ローテート時の最大サイズは、デフォルト50MBとし、ログ設定更新APIにて設定可能とする。</p>
+<h4>出力例</h4>
+<h5>外部イベントの出力例</h5>
+<pre><code>2013-04-18T14:52:39.778Z,[ERROR],&quot;Req_animal-access_1001&quot;,&quot;true&quot;,
+&quot;https://{UnitFQDN}/appCell/&quot;,&quot;https://{UnitFQDN}/servicemanager/#admin&quot;,&quot;actionData&quot;,
+&quot;/svc/token_keeper&quot;,&quot;resultData&quot;
+2013-04-18T14:52:40.688Z,[INFO ],&quot;Req_animal-access_2001&quot;,&quot;true&quot;,
+&quot;https://{UnitFQDN}/appCell/&quot;,&quot;https://{UnitFQDN}/servicemanager/#admin&quot;,&quot;action&quot;,
+&quot;/svc/token_keeper&quot;,&quot;result&quot;
+2013-04-18T15:01:46.994Z,[INFO ],&quot;Req_animal-access_2001&quot;,&quot;true&quot;,
+&quot;https://{UnitFQDN}/appCell/&quot;,&quot;https://{UnitFQDN}/servicemanager/#admin&quot;,&quot;action&quot;,
+&quot;/svc/token_keeper&quot;,&quot;result&quot;
+2013-04-18T15:06:19.294Z,[ERROR],&quot;Req_animal-access_1001&quot;,&quot;true&quot;,
+&quot;https://{UnitFQDN}/appCell/&quot;,&quot;https://{UnitFQDN}/servicemanager/#admin&quot;,&quot;actionData&quot;,
+&quot;/svc/token_keeper&quot;,&quot;resultData&quot;
+2013-04-18T15:06:23.360Z,[INFO ],&quot;Req_animal-access_2001&quot;,&quot;true&quot;,
+&quot;https://{UnitFQDN}/appCell/&quot;,&quot;https://{UnitFQDN}/servicemanager/#admin&quot;,&quot;action&quot;,
+&quot;/svc/token_keeper&quot;,&quot;result&quot;
+2013-04-18T15:09:18.073Z,[ERROR],&quot;Req_animal-access_1001&quot;,&quot;true&quot;,
+&quot;https://{UnitFQDN}/appCell/&quot;,&quot;https://{UnitFQDN}/servicemanager/#admin&quot;,&quot;actionData&quot;,
+&quot;/svc/token_keeper&quot;,&quot;resultData&quot;</code></pre>
+<h5>内部イベントの出力例</h5>
+<pre><code>2013-04-18T14:52:39.779Z,[INFO ],&quot;Req_animal-access_1001&quot;,&quot;false&quot;,
+&quot;https://{UnitFQDN}/appCell/&quot;,&quot;https://{UnitFQDN}/appCell/#staff&quot;,&quot;odata.update&quot;,
+&quot;https://{UnitFQDN}/homeClinic/box/col/put_blog&quot;,&quot;204&quot;
+2013-04-18T14:52:39.780Z,[INFO ],&quot;Req_animal-access_1001&quot;,&quot;false&quot;,
+&quot;https://{UnitFQDN}/appCell/&quot;,&quot;https://{UnitFQDN}/appCell/#staff&quot;,&quot;odata.get&quot;,
+&quot;https://{UnitFQDN}/homeClinic/box/col/blog_20130418&quot;,&quot;200&quot;</code></pre>
+<h3>スクリプト実行アクション</h3>
+<p>スクリプト実行アクションは、イベントの内容を渡して自Cellのサービスを実行します。 アクションは、execです。</p>
+<h4>ルール例</h4>
+<p>メッセージ受信でサービスを実行する例</p>
+<table>
+<thead>
+<tr class="header">
+<th style="text-align: left;">項目名</th>
+<th style="text-align: left;">設定</th>
+<th style="text-align: left;">備考</th>
+</tr>
+</thead>
+<tbody>
+<tr class="odd">
+<td style="text-align: left;">_Box.Name</td>
+<td style="text-align: left;">null</td>
+<td style="text-align: left;"></td>
+</tr>
+<tr class="even">
+<td style="text-align: left;">Name</td>
+<td style="text-align: left;">exec_messagereceive</td>
+<td style="text-align: left;">設定しなくてもよいです</td>
+</tr>
+<tr class="odd">
+<td style="text-align: left;">EventType</td>
+<td style="text-align: left;">message.receive</td>
+<td style="text-align: left;"></td>
+</tr>
+<tr class="even">
+<td style="text-align: left;">EventSubject</td>
+<td style="text-align: left;">null</td>
+<td style="text-align: left;"></td>
+</tr>
+<tr class="odd">
+<td style="text-align: left;">EventObject</td>
+<td style="text-align: left;">null</td>
+<td style="text-align: left;"></td>
+</tr>
+<tr class="even">
+<td style="text-align: left;">EventInfo</td>
+<td style="text-align: left;">null</td>
+<td style="text-align: left;"></td>
+</tr>
+<tr class="odd">
+<td style="text-align: left;">EventExternal</td>
+<td style="text-align: left;">false</td>
+<td style="text-align: left;"></td>
+</tr>
+<tr class="even">
+<td style="text-align: left;">Action</td>
+<td style="text-align: left;">exec</td>
+<td style="text-align: left;"></td>
+</tr>
+<tr class="odd">
+<td style="text-align: left;">TargetUrl</td>
+<td style="text-align: left;">personium-localcell:/box/col/srv</td>
+<td style="text-align: left;"></td>
+</tr>
+</tbody>
+</table>
+<p>メッセージを受信したとき、TargetUrlのサービスが実行されます。サービスにて受信メッセージを確認して必要に応じて承認することができます。</p>
+<h4>サービスへのパラメータ</h4>
+<p>JSON形式のBodyとリクエストヘッダでイベントの内容を渡します。</p>
+<table>
+<thead>
+<tr class="header">
+<th style="text-align: left;">項目名</th>
+<th style="text-align: left;">データソース</th>
+<th style="text-align: left;">備考</th>
+</tr>
+</thead>
+<tbody>
+<tr class="odd">
+<td style="text-align: left;">Subject</td>
+<td style="text-align: left;">JSON</td>
+<td style="text-align: left;"></td>
+</tr>
+<tr class="even">
+<td style="text-align: left;">Schema</td>
+<td style="text-align: left;">JSON</td>
+<td style="text-align: left;"></td>
+</tr>
+<tr class="odd">
+<td style="text-align: left;">External</td>
+<td style="text-align: left;">JSON</td>
+<td style="text-align: left;"></td>
+</tr>
+<tr class="even">
+<td style="text-align: left;">Type</td>
+<td style="text-align: left;">JSON</td>
+<td style="text-align: left;"></td>
+</tr>
+<tr class="odd">
+<td style="text-align: left;">Object</td>
+<td style="text-align: left;">JSON</td>
+<td style="text-align: left;">httpやhttpsスキームに変換されたURL</td>
+</tr>
+<tr class="even">
+<td style="text-align: left;">Info</td>
+<td style="text-align: left;">JSON</td>
+<td style="text-align: left;"></td>
+</tr>
+<tr class="odd">
+<td style="text-align: left;">RequestKey</td>
+<td style="text-align: left;">ヘッダ</td>
+<td style="text-align: left;">x-personium-requestkey</td>
+</tr>
+</tbody>
+</table>
+<p>JSONは、サービス実行において、引数のinputフィールドから取得します。</p>
+<pre><code>function(request) {
+  var bodyAsString = request[&quot;input&quot;].readAll();
+  var params = JSON.parse(bodyAsString);</code></pre>
+<p>ヘッダは、サービス実行において、引数のheadersフィールドから取得します。</p>
+<pre><code>function(request) {
+  var reqHeaders = request[&quot;headers&quot;];
+  var requestKey = reqHeaders[&#39;x-personium-requestkey&#39;];</code></pre>
+<h4>スクリプト実行時のトークン</h4>
+<p>Authorizationヘッダに以下のトークンが設定されます。</p>
+<table>
+<thead>
+<tr class="header">
+<th style="text-align: left;">項目名</th>
+<th style="text-align: left;">設定値</th>
+</tr>
+</thead>
+<tbody>
+<tr class="odd">
+<td style="text-align: left;">Subject</td>
+<td style="text-align: left;">イベントのSubjectと同じ</td>
+</tr>
+<tr class="even">
+<td style="text-align: left;">Schema</td>
+<td style="text-align: left;">イベントのSchemaと同じ</td>
+</tr>
+</tbody>
+</table>
+<p>_p.as('client')によるアクセスが可能です。</p>
+<p>また、パスワード認証や、サービスコレクション設定にて、subjectを設定し、_p.as('serviceSubject')を使用することも可能です。 なお、serviceSubjectによるトークンは、Schemaとして、スクリプトが配置されているBoxのSchemaが設定されます。</p>
+<h3>中継アクション</h3>
+<p>中継アクションは、イベントの内容を渡して他Cellのサービスを実行します。 アクションは、relayです。</p>
+<h4>ルール例</h4>
+<p>OData作成操作で中継する例</p>
+<table>
+<thead>
+<tr class="header">
+<th style="text-align: left;">項目名</th>
+<th style="text-align: left;">設定</th>
+<th style="text-align: left;">備考</th>
+</tr>
+</thead>
+<tbody>
+<tr class="odd">
+<td style="text-align: left;">_Box.Name</td>
+<td style="text-align: left;">null</td>
+<td style="text-align: left;"></td>
+</tr>
+<tr class="even">
+<td style="text-align: left;">Name</td>
+<td style="text-align: left;">relay_odatacreate</td>
+<td style="text-align: left;">設定しなくてもよいです</td>
+</tr>
+<tr class="odd">
+<td style="text-align: left;">EventType</td>
+<td style="text-align: left;">odata.create</td>
+<td style="text-align: left;"></td>
+</tr>
+<tr class="even">
+<td style="text-align: left;">EventSubject</td>
+<td style="text-align: left;">null</td>
+<td style="text-align: left;"></td>
+</tr>
+<tr class="odd">
+<td style="text-align: left;">EventObject</td>
+<td style="text-align: left;">personium-localcell:/box/odatacol/entity</td>
+<td style="text-align: left;"></td>
+</tr>
+<tr class="even">
+<td style="text-align: left;">EventInfo</td>
+<td style="text-align: left;">null</td>
+<td style="text-align: left;"></td>
+</tr>
+<tr class="odd">
+<td style="text-align: left;">EventExternal</td>
+<td style="text-align: left;">false</td>
+<td style="text-align: left;"></td>
+</tr>
+<tr class="even">
+<td style="text-align: left;">Action</td>
+<td style="text-align: left;">relay</td>
+<td style="text-align: left;"></td>
+</tr>
+<tr class="odd">
+<td style="text-align: left;">TargetUrl</td>
+<td style="text-align: left;">personium-localunit:/otherCell/box/col/srv</td>
+<td style="text-align: left;"></td>
+</tr>
+</tbody>
+</table>
+<p>TypeおよびObjectが合致する内部イベントのとき、TargetUrlへ中継します。</p>
+<h4>スクリプトへのパラメータ</h4>
+<p>スクリプト実行アクションと同じです。</p>
+<h4>スクリプト実行時のトークン</h4>
+<p>Authorizationヘッダには、サービスを実行するためにトランスセルトークンが設定されています。</p>
+<table>
+<thead>
+<tr class="header">
+<th style="text-align: left;">項目名</th>
+<th style="text-align: left;">設定値</th>
+</tr>
+</thead>
+<tbody>
+<tr class="odd">
+<td style="text-align: left;">Subject</td>
+<td style="text-align: left;">イベントのSubjectと同じ</td>
+</tr>
+<tr class="even">
+<td style="text-align: left;">Schema</td>
+<td style="text-align: left;">イベントのSchemaと同じ</td>
+</tr>
+</tbody>
+</table>
+<p>このトークンを利用してアクセスするのは避けたほうがよいでしょう。_p.as('client')は利用できないものと考えてください。</p>
+<p>トークンが必要であれば、スクリプトにてパスワード認証を行うか、サービスコレクション設定にて、subjectを設定し、_p.as('serviceSubject')を使用してください。</p>
+<h4>事前設定</h4>
+<p>スクリプトが実行できるように権限を設定しておく必要があります。</p>
+<h3>イベント中継アクション</h3>
+<p>イベント中継アクションは、イベントの内容を他Cellの外部イベント受付に中継します。 アクションは、relay.eventです。</p>
+<h4>ルール例</h4>
+<p>外部イベント受付で中継する例</p>
+<table>
+<thead>
+<tr class="header">
+<th style="text-align: left;">項目名</th>
+<th style="text-align: left;">設定</th>
+<th style="text-align: left;">備考</th>
+</tr>
+</thead>
+<tbody>
+<tr class="odd">
+<td style="text-align: left;">_Box.Name</td>
+<td style="text-align: left;">null</td>
+<td style="text-align: left;"></td>
+</tr>
+<tr class="even">
+<td style="text-align: left;">Name</td>
+<td style="text-align: left;">relayevent_eventreceipt</td>
+<td style="text-align: left;">設定しなくてもよいです</td>
+</tr>
+<tr class="odd">
+<td style="text-align: left;">EventType</td>
+<td style="text-align: left;">null</td>
+<td style="text-align: left;"></td>
+</tr>
+<tr class="even">
+<td style="text-align: left;">EventSubject</td>
+<td style="text-align: left;">https://{FQDN}/cell/#account</td>
+<td style="text-align: left;"></td>
+</tr>
+<tr class="odd">
+<td style="text-align: left;">EventObject</td>
+<td style="text-align: left;">null</td>
+<td style="text-align: left;"></td>
+</tr>
+<tr class="even">
+<td style="text-align: left;">EventInfo</td>
+<td style="text-align: left;">null</td>
+<td style="text-align: left;"></td>
+</tr>
+<tr class="odd">
+<td style="text-align: left;">EventExternal</td>
+<td style="text-align: left;">true</td>
+<td style="text-align: left;"></td>
+</tr>
+<tr class="even">
+<td style="text-align: left;">Action</td>
+<td style="text-align: left;">relay.event</td>
+<td style="text-align: left;"></td>
+</tr>
+<tr class="odd">
+<td style="text-align: left;">TargetUrl</td>
+<td style="text-align: left;">https://{FQDN}/otherCell/</td>
+<td style="text-align: left;"></td>
+</tr>
+</tbody>
+</table>
+<p>Subjectが合致する外部イベントのとき、イベント中継を行います。</p>
+<h4>リクエスト</h4>
+<h5>リクエストヘッダ</h5>
+<table>
+<thead>
+<tr class="header">
+<th style="text-align: left;">ヘッダ名</th>
+<th style="text-align: left;">設定値</th>
+<th style="text-align: left;">備考</th>
+</tr>
+</thead>
+<tbody>
+<tr class="odd">
+<td style="text-align: left;">X-Personium-RequestKey</td>
+<td style="text-align: left;">イベントのRequestKey</td>
+<td style="text-align: left;"></td>
+</tr>
+<tr class="even">
+<td style="text-align: left;">Authorization</td>
+<td style="text-align: left;">トランスセルトークン<br>イベントのSubjcetとSchemaを設定<br>中継元のRoleリストを設定</td>
+<td style="text-align: left;"></td>
+</tr>
+</tbody>
+</table>
+<h5>リクエストボディ</h5>
+<table>
+<thead>
+<tr class="header">
+<th style="text-align: left;">項目名</th>
+<th style="text-align: left;">設定値</th>
+<th style="text-align: left;">備考</th>
+</tr>
+</thead>
+<tbody>
+<tr class="odd">
+<td style="text-align: left;">Type</td>
+<td style="text-align: left;">以下の表のように変換された値</td>
+<td style="text-align: left;"></td>
+</tr>
+<tr class="even">
+<td style="text-align: left;">Object</td>
+<td style="text-align: left;">イベントのObject</td>
+<td style="text-align: left;"></td>
+</tr>
+<tr class="odd">
+<td style="text-align: left;">Info</td>
+<td style="text-align: left;">イベントのInfo</td>
+<td style="text-align: left;"></td>
+</tr>
+</tbody>
+</table>
+<p>Typeの変換</p>
+<table>
+<thead>
+<tr class="header">
+<th style="text-align: left;">External</th>
+<th style="text-align: left;">Type</th>
+</tr>
+</thead>
+<tbody>
+<tr class="odd">
+<td style="text-align: left;">true</td>
+<td style="text-align: left;">relay.ext. を先頭に追加</td>
+</tr>
+<tr class="even">
+<td style="text-align: left;">false</td>
+<td style="text-align: left;">relay. を先頭に追加</td>
+</tr>
+</tbody>
+</table>
+<p>既にTypeがrelay.で始まっていれば、Typeの変換は行われません。</p>
+<h4>イベント中継によるイベント伝播の例</h4>
+<p>CellAで起きたイベントをCellBを経由してCellCにイベント中継する例</p>
+<h5>内部イベントの場合</h5>
+<h6>ルール</h6>
+<table>
+<thead>
+<tr class="header">
+<th style="text-align: left;">項目名</th>
+<th style="text-align: left;">CellA</th>
+<th style="text-align: left;">CellB</th>
+</tr>
+</thead>
+<tbody>
+<tr class="odd">
+<td style="text-align: left;">_Box.Name</td>
+<td style="text-align: left;">null</td>
+<td style="text-align: left;">null</td>
+</tr>
+<tr class="even">
+<td style="text-align: left;">Name</td>
+<td style="text-align: left;">relayevent</td>
+<td style="text-align: left;">relayevent</td>
+</tr>
+<tr class="odd">
+<td style="text-align: left;">EventType</td>
+<td style="text-align: left;">cellctl</td>
+<td style="text-align: left;">null</td>
+</tr>
+<tr class="even">
+<td style="text-align: left;">EventSubject</td>
+<td style="text-align: left;">null</td>
+<td style="text-align: left;">https://hosta/CellA/#account</td>
+</tr>
+<tr class="odd">
+<td style="text-align: left;">EventObject</td>
+<td style="text-align: left;">null</td>
+<td style="text-align: left;">null</td>
+</tr>
+<tr class="even">
+<td style="text-align: left;">EventInfo</td>
+<td style="text-align: left;">null</td>
+<td style="text-align: left;">null</td>
+</tr>
+<tr class="odd">
+<td style="text-align: left;">EventExternal</td>
+<td style="text-align: left;">false</td>
+<td style="text-align: left;">true</td>
+</tr>
+<tr class="even">
+<td style="text-align: left;">Action</td>
+<td style="text-align: left;">relay.event</td>
+<td style="text-align: left;">relay.event</td>
+</tr>
+<tr class="odd">
+<td style="text-align: left;">TargetUrl</td>
+<td style="text-align: left;">https://hostb/CellB/</td>
+<td style="text-align: left;">https://hostc/CellC/</td>
+</tr>
+</tbody>
+</table>
+<h6>伝播されるイベント</h6>
+<table>
+<thead>
+<tr class="header">
+<th style="text-align: left;">項目名</th>
+<th style="text-align: left;">CellA</th>
+<th style="text-align: left;">CellB</th>
+<th style="text-align: left;">CellC</th>
+</tr>
+</thead>
+<tbody>
+<tr class="odd">
+<td style="text-align: left;">Subject</td>
+<td style="text-align: left;">https://hosta/CellA/#account</td>
+<td style="text-align: left;">&lt;-</td>
+<td style="text-align: left;">&lt;-</td>
+</tr>
+<tr class="even">
+<td style="text-align: left;">Schema</td>
+<td style="text-align: left;">https://host/AppCell/</td>
+<td style="text-align: left;">&lt;-</td>
+<td style="text-align: left;">&lt;-</td>
+</tr>
+<tr class="odd">
+<td style="text-align: left;">External</td>
+<td style="text-align: left;">false</td>
+<td style="text-align: left;">true</td>
+<td style="text-align: left;">true</td>
+</tr>
+<tr class="even">
+<td style="text-align: left;">Type</td>
+<td style="text-align: left;">cellctl.Role.create</td>
+<td style="text-align: left;">relay.cellctl.Role.create</td>
+<td style="text-align: left;">&lt;-</td>
+</tr>
+<tr class="odd">
+<td style="text-align: left;">Object</td>
+<td style="text-align: left;">https://hosta/CellA/__ctl/Role('role')</td>
+<td style="text-align: left;">&lt;-</td>
+<td style="text-align: left;">&lt;-</td>
+</tr>
+<tr class="even">
+<td style="text-align: left;">Info</td>
+<td style="text-align: left;">201,https://hosta/CellA/__ctl/Role</td>
+<td style="text-align: left;">&lt;-</td>
+<td style="text-align: left;">&lt;-</td>
+</tr>
+</tbody>
+</table>
+<h5>外部イベントの場合</h5>
+<h6>ルール</h6>
+<table>
+<thead>
+<tr class="header">
+<th style="text-align: left;">項目名</th>
+<th style="text-align: left;">CellA</th>
+<th style="text-align: left;">CellB</th>
+</tr>
+</thead>
+<tbody>
+<tr class="odd">
+<td style="text-align: left;">_Box.Name</td>
+<td style="text-align: left;">null</td>
+<td style="text-align: left;">BoxB</td>
+</tr>
+<tr class="even">
+<td style="text-align: left;">Name</td>
+<td style="text-align: left;">relayevent</td>
+<td style="text-align: left;">relayevent</td>
+</tr>
+<tr class="odd">
+<td style="text-align: left;">EventType</td>
+<td style="text-align: left;">null</td>
+<td style="text-align: left;">null</td>
+</tr>
+<tr class="even">
+<td style="text-align: left;">EventSubject</td>
+<td style="text-align: left;">null</td>
+<td style="text-align: left;">https://hosta/CellA/#account</td>
+</tr>
+<tr class="odd">
+<td style="text-align: left;">EventObject</td>
+<td style="text-align: left;">object</td>
+<td style="text-align: left;">null</td>
+</tr>
+<tr class="even">
+<td style="text-align: left;">EventInfo</td>
+<td style="text-align: left;">null</td>
+<td style="text-align: left;">null</td>
+</tr>
+<tr class="odd">
+<td style="text-align: left;">EventExternal</td>
+<td style="text-align: left;">true</td>
+<td style="text-align: left;">true</td>
+</tr>
+<tr class="even">
+<td style="text-align: left;">Action</td>
+<td style="text-align: left;">relay.event</td>
+<td style="text-align: left;">relay.event</td>
+</tr>
+<tr class="odd">
+<td style="text-align: left;">TargetUrl</td>
+<td style="text-align: left;">https://hostb/CellB/</td>
+<td style="text-align: left;">https://hostc/CellC/</td>
+</tr>
+</tbody>
+</table>
+<p>CellBのBoxBのSchemaは、https://host/AppCell/とします。</p>
+<h6>伝播されるイベント</h6>
+<table>
+<thead>
+<tr class="header">
+<th style="text-align: left;">項目名</th>
+<th style="text-align: left;">CellA</th>
+<th style="text-align: left;">CellB</th>
+<th style="text-align: left;">CellC</th>
+</tr>
+</thead>
+<tbody>
+<tr class="odd">
+<td style="text-align: left;">Subject</td>
+<td style="text-align: left;">https://hosta/CellA/#account</td>
+<td style="text-align: left;">&lt;-</td>
+<td style="text-align: left;">&lt;-</td>
+</tr>
+<tr class="even">
+<td style="text-align: left;">Schema</td>
+<td style="text-align: left;">https://hostb/AppCell/</td>
+<td style="text-align: left;">&lt;-</td>
+<td style="text-align: left;">&lt;-</td>
+</tr>
+<tr class="odd">
+<td style="text-align: left;">External</td>
+<td style="text-align: left;">true</td>
+<td style="text-align: left;">true</td>
+<td style="text-align: left;">true</td>
+</tr>
+<tr class="even">
+<td style="text-align: left;">Type</td>
+<td style="text-align: left;">type</td>
+<td style="text-align: left;">relay.ext.type</td>
+<td style="text-align: left;">&lt;-</td>
+</tr>
+<tr class="odd">
+<td style="text-align: left;">Object</td>
+<td style="text-align: left;">object</td>
+<td style="text-align: left;">&lt;-</td>
+<td style="text-align: left;">&lt;-</td>
+</tr>
+<tr class="even">
+<td style="text-align: left;">Info</td>
+<td style="text-align: left;">info</td>
+<td style="text-align: left;">&lt;-</td>
+<td style="text-align: left;">&lt;-</td>
+</tr>
+</tbody>
+</table>
+<h4>事前設定</h4>
+<p>外部イベント受付へのアクセスに必要な権限を設定しておく必要があります。</p>
+</div>
+  <footer><nav>The Personium project is provided under the Apache 2.0 license. </nav></footer>
+</body>
+</html>

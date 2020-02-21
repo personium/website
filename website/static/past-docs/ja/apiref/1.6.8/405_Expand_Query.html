@@ -1,0 +1,152 @@
+<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml" lang="" xml:lang="">
+<head>
+  <!-- default template -->
+  <meta charset="utf-8" />
+  <meta name="generator" content="pandoc" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=yes" />
+  <title>405_Expand_Query</title>
+  <script type="text/javascript">
+      var path = location.pathname.split('/');
+      var pathRoot = [ path[0], path[1], '' ].join('/');
+      var pathLang = [ path[0], path[1], path[2] , ''].join('/');
+
+      //load style sheets
+      document.write('<link rel="stylesheet" href="' + pathRoot + 'personium.css" type="text/css" />');
+      document.write('<link rel="stylesheet" href="' + pathLang + 'locale.css" type="text/css" />');
+      //load personium_docs.js
+      var ps = document.createElement('script');
+      ps.src = pathRoot + 'personium_docs.js';
+      var s = document.getElementsByTagName('script')[0];
+      s.parentNode.insertBefore(ps, s);
+    
+      //load apiref_versions.js
+      ps2 = document.createElement('script');
+      ps2.src = pathRoot + 'apiref_versions.js';
+      s = document.getElementsByTagName('script')[0];
+      s.parentNode.insertBefore(ps2, s);
+
+  </script>
+  <link href="https://fonts.googleapis.com/css?family=Raleway" rel="stylesheet">
+  <link href="https://fonts.googleapis.com/css?family=Open+Sans" rel="stylesheet">
+  
+  <!--[if lt IE 9]>
+    <script src="//cdnjs.cloudflare.com/ajax/libs/html5shiv/3.7.3/html5shiv-printshiv.min.js"></script>
+  <![endif]-->
+</head>
+<body>
+  <header>
+    <nav>
+    <div id="logo"><a href="/">Personium</a></div>
+    <ul>
+      <li class="submenu">
+        <a href="" >Introduction</a>
+        <ul>
+            <li><a href="javascript:p.toPage('/overview/001_Introduction.html');">What's Personium?</a></li>
+            <li><a href="javascript:p.toPage('/user_guide/001_Personium_Architecture.html');">Architecture</a></li>
+            <li><a href="javascript:p.toPage('/user_guide/008_Glossary.html');">Glossary</a></li>
+        </ul>
+      </li>
+      <li class="submenu">
+        <a href="" >User Guide</a>
+        <ul>
+            <li><a href="javascript:p.toPage('/app-developer/');">for App Developer</a></li>
+            <li><a href="javascript:p.toPage('/cell-client-developer/');">for Cell App Developer</a></li>
+            <li><a href="javascript:p.toPage('/unit-administrator/');">for Unit Administrator</a></li>
+            <li><a href="javascript:p.toPage('/server-operator/');">for Server Software Operator</a></li>
+            <li><a href="javascript:p.toPage('/document-writer/');">for Documentation Contributor</a></li>
+            <li><a href="javascript:p.toPage('/plugin-developer/');">for Server Plugin Developer</a></li>
+            <li><a href="javascript:p.toPage('/software-developer/');">for Server Developer</a></li>
+        </ul>
+      </li>
+      <li class="submenu">
+        <a href="" >API Reference</a>
+        <ul id="api-ref-list">
+            <li><a href="javascript:p.toPage('/user_guide/990_Old_Version_API_Ref.html');">older versions</a></li>
+        </ul>
+      </li>
+      <li class="submenu">
+        <a href="" >Languages</a>
+        <ul>
+            <li><a href="javascript:p.setLang('en');">English</a></li>
+            <li><a href="javascript:p.setLang('ja');">Japanese</a></li>
+        </ul>
+      </li>
+    </ul>
+    </nav>
+  </header>
+
+<div id="container">
+<h1>$expand クエリ</h1>
+<h2>概要</h2>
+<p>$expandクエリにNavigationProperty名を指定することで、関連情報を展開して取得することが可能。<br />
+一覧取得時の関連情報の展開は最大100件まで展開する。<br />
+一件取得時の関連情報の展開は最大10000件まで展開する。<br />
+$expandで取得した関連データのソート順は下記の通り。</p>
+<table>
+<thead>
+<tr class="header">
+<th style="text-align: left;">関連</th>
+<th style="text-align: left;">ソート条件</th>
+<th style="text-align: left;">順序</th>
+</tr>
+</thead>
+<tbody>
+<tr class="odd">
+<td style="text-align: left;">0 .. 1:0 .. 1</td>
+<td style="text-align: left;">展開するナビゲーションプロパティのエンティティ作成日時</td>
+<td style="text-align: left;">降順</td>
+</tr>
+<tr class="even">
+<td style="text-align: left;">0 .. 1: *</td>
+<td style="text-align: left;">展開するナビゲーションプロパティのエンティティ作成日時</td>
+<td style="text-align: left;">降順</td>
+</tr>
+<tr class="odd">
+<td style="text-align: left;">*: 0 .. 1</td>
+<td style="text-align: left;">展開するナビゲーションプロパティのエンティティ作成日時</td>
+<td style="text-align: left;">降順</td>
+</tr>
+<tr class="even">
+<td style="text-align: left;"><em>: </em></td>
+<td style="text-align: left;">展開するナビゲーションプロパティとのリンク情報作成日時</td>
+<td style="text-align: left;">降順</td>
+</tr>
+</tbody>
+</table>
+<p>※Multiplicityが&quot;1&quot;の場合は、&quot;0..1&quot;と同様のソート結果となる</p>
+<h2>リクエストクエリ</h2>
+<pre><code>$expand={NavigationPropertyName}</code></pre>
+<table>
+<thead>
+<tr class="header">
+<th style="text-align: left;">Path</th>
+<th style="text-align: left;">概要</th>
+</tr>
+</thead>
+<tbody>
+<tr class="odd">
+<td style="text-align: left;">{NavigationPropertyName}</td>
+<td style="text-align: left;">展開するナビゲーションプロパティ名<br>複数指定する場合はカンマ区切りで指定する</td>
+</tr>
+</tbody>
+</table>
+<p>※$expandに存在しないNavigationProperty名を指定した場合は「400 Bad Request」を返却する</p>
+<h3>ナビゲーションプロパティ指定可能数</h3>
+<p>一覧取得時のナビゲーションプロパティは2件まで指定可能<br />
+一件取得時のナビゲーションプロパティは10件まで指定可能<br />
+※指定可能なナビゲーションプロパティ数を超えた場合は「400 Bad Request」を返却する</p>
+<h2>cURLサンプル</h2>
+<p>ナビゲーションプロパティに紐付く情報を展開して取得する</p>
+<pre><code>curl &quot;https://{UnitFQDN}/{CellName}/{BoxName}/{ODataCollecitonName}/{EntityTypeName}\
+(&#39;{EntityID}&#39;)?\$expand={NavigationPropertyName}&quot; -X GET -i -H &#39;Authorization: Bearer {AccessToken}&#39;\
+ -H &#39;Accept: application/json&#39;</code></pre>
+<h2>制限事項</h2>
+<ul>
+<li>関連情報の展開は1階層のみ可能</li>
+<li>展開した関連情報がすべての件数を返却しているかを示すために、__countを関連情報一覧の項目として追加する（未サポート）</li>
+</ul>
+</div>
+  <footer><nav>The Personium project is provided under the Apache 2.0 license. </nav></footer>
+</body>
+</html>

@@ -1,0 +1,146 @@
+<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml" lang="" xml:lang="">
+<head>
+  <!-- default template -->
+  <meta charset="utf-8" />
+  <meta name="generator" content="pandoc" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=yes" />
+  <link rel="icon" href="/images/favicon.ico" type="image/x-icon"/>
+  <title>launch_from_homeapp</title>
+  <script type="text/javascript">
+      var path = location.pathname.split('/');
+      var pathRoot = [ path[0], path[1], '' ].join('/');
+      var pathLang = [ path[0], path[1], path[2] , ''].join('/');
+
+      document.write('<link rel="stylesheet" href="' + pathRoot + 'personium.css" type="text/css" />');
+      document.write('<link rel="stylesheet" href="' + pathLang + 'locale.css" type="text/css" />');
+      var ps = document.createElement('script');
+      ps.src = pathRoot + 'personium_docs.js';
+      var s = document.getElementsByTagName('script')[0];
+      s.parentNode.insertBefore(ps, s);
+    
+      ps2 = document.createElement('script');
+      ps2.src = pathRoot + 'apiref_versions.js';
+      s = document.getElementsByTagName('script')[0];
+      s.parentNode.insertBefore(ps2, s);
+  </script>
+  <link href="https://fonts.googleapis.com/css?family=Raleway" rel="stylesheet">
+  <link href="https://fonts.googleapis.com/css?family=Open+Sans" rel="stylesheet">
+  
+  <!--[if lt IE 9]>
+    <script src="//cdnjs.cloudflare.com/ajax/libs/html5shiv/3.7.3/html5shiv-printshiv.min.js"></script>
+  <![endif]-->
+</head>
+<body>
+  <header>
+    <nav>
+    <div id="logo"><a href="/"><img src="https://personium.io/images/logo-quantify-dark.png"></a></div>
+    <ul>
+      <li class="submenu">
+        <a href="#" >Introduction</a>
+        <ul>
+            <li><a href="javascript:p.toPage('/overview/001_Introduction.html');">What's Personium?</a></li>
+            <li><a href="javascript:p.toPage('/user_guide/001_Personium_Architecture.html');">Architecture</a></li>
+            <li><a href="javascript:p.toPage('/user_guide/008_Glossary.html');">Glossary</a></li>
+        </ul>
+      </li>
+      <li class="submenu">
+        <a href="#" >User Guide</a>
+        <ul>
+            <li><a href="javascript:p.toPage('/app-developer/');">for App Developer</a></li>
+            <li><a href="javascript:p.toPage('/cell-gui-developer/');">for Cell GUI Developer</a></li>
+            <li><a href="javascript:p.toPage('/unit-administrator/');">for Unit Administrator</a></li>
+            <li><a href="javascript:p.toPage('/server-operator/');">for Server Software Operator</a></li>
+            <li><a href="javascript:p.toPage('/document-writer/');">for Documentation Contributor</a></li>
+            <li><a href="javascript:p.toPage('/plugin-developer/');">for Server Plugin Developer</a></li>
+            <li><a href="javascript:p.toPage('/software-developer/');">for Server Developer</a></li>
+        </ul>
+      </li>
+      <li class="submenu">
+        <a href="#" >API Reference</a>
+        <ul id="api-ref-list">
+            <li><a href="javascript:p.toPage('/user_guide/990_Old_Version_API_Ref.html');">older versions</a></li>
+        </ul>
+      </li>
+      <li class="submenu">
+        <a href="#" >Languages</a>
+        <ul>
+            <li><a href="javascript:p.setLang('en');">English</a></li>
+            <li><a href="javascript:p.setLang('ja');">Japanese</a></li>
+        </ul>
+      </li>
+    </ul>
+    </nav>
+  </header>
+
+<div id="container">
+<h1>Homeアプリからのアプリ起動</h1>
+<p>Personiumアプリには様々な形態がありますが、ここでは最も標準的なHomeアプリから起動されるアプリについて以下を説明します。</p>
+<ul>
+<li>アプリ起動時に渡されるパラメタ</li>
+<li>アプリ起動後に行うべき処理</li>
+</ul>
+<p>注）Personium coreのバージョン1.6.9以降のみが対応しています。</p>
+<h2>アプリ起動時に渡されるパラメタ</h2>
+<p>ホームアプリのアプリランチャは以下のURLを呼び出すことでアプリ起動を行います。</p>
+<pre><code>{AppUrl}#cell={cellUrl}</code></pre>
+<p>例</p>
+<pre><code>myapp-custom-scheme://#cell=https://demo.personium.io/john.doe/
+https://some.svr.example/my-app/index.html#cell=https://pds.personium.example/john.doe/</code></pre>
+<h2>アプリ起動後に行うべき処理</h2>
+<p>アプリケーション開発の実際のプロセスはアプリケーションの実装手段(Androidアプリ、HTML5アプリ、iOSアプリ, etc.)や実装言語によって異なりますが、 アプリ起動後に行うべき流れは共通です。</p>
+<ol>
+<li>起動URLからCellのURLを受け取る</li>
+<li>OAuth2のcodeフローに準じた手順でアプリ認証を行う</li>
+<li>アクセストークンを受け取る</li>
+<li>BoxのURLを取得する</li>
+<li>Box配下の各種リソースにアクセスする</li>
+</ol>
+<h3>起動URLからCellのURLを受け取る</h3>
+<p>Home Appのランチャから起動されるPersnium Appは、何らかの起動URLにより起動します。 起動URLはhttpsから始まるものかもしれませんし、何等かのカスタムスキームから始まるものかもしれません。 一般的にカスタムスキームURLで起動されたアプリは自分がどのようなURLで起動されたかを取得可能です。 またhttpsから始まるURLであればブラウザが起動するでしょうが、ブラウザアプリであっても自身がどのようなURLで起動されたかを取得可能です。 まず、それぞれの実装において起動URLを取得してください。</p>
+<p>次に取得できた起動URLから#以下をパースして、cellパラメタを取得してください。</p>
+<table>
+<thead>
+<tr class="header">
+<th style="text-align: left;">項目</th>
+<th style="text-align: left;">概要</th>
+</tr>
+</thead>
+<tbody>
+<tr class="odd">
+<td style="text-align: left;">cell</td>
+<td style="text-align: left;">ターゲットとすべきユーザのCell URL</td>
+</tr>
+</tbody>
+</table>
+<p>このパラメタはこの先のプロセスで必要になります。</p>
+<h3>OAuth2のcodeフローに準じた手順でアプリ認証を行う</h3>
+<p><code>こちらの章は記載の途中です。もう少々お待ちください。</code></p>
+<p>あなたのアプリの正当性をユーザCellに対して証明するために、アプリ認証トークンを取得します。これはフィッシングアプリなど、 悪意のあるアプリケーションからの攻撃からあなたのアプリや、ユーザCellを守るためのセキュリティです。</p>
+<p>アプリ認証トークンは、アプリCellのTokenエンドポイントに対してアプリのID/パスワードを送ることで取得できます。具体的には以下のような情報をPOSTします。</p>
+<pre><code>grant_type=password&amp;p_target={ユーザCell URL}&amp;username={アプリID}&amp;password={アプリパスワード}</code></pre>
+<p>アプリID, アプリパスワードはあなたのアプリしか知らないものです。これをあなたのアプリからアプリCellのエンドポイントに投げるためには、 コード中に難読化して埋め込んでもよいですし、どこかのサーバにおいて、サーバから上記リクエストを出してもらってもよいでしょう。 アプリCell上にEngineスクリプトを置いて、これを実現するのもよいアイディアです。難読化して埋め込みを行った場合は、 攻撃者のリバースエンジニアリングによってアプリID, アプリパスワードが漏洩することは難読化による一定の抑止力はあるものの、完全には防ぐことができません。</p>
+<p>いずれにせよ、このリクエストに対する認証成功応答JSONの&quot;access_token&quot;項目が「アプリ認証トークン」となります。JSONをパースして取得してください。</p>
+<p>参考： <a href="http://personium.io/docs/ja/apiref/current/293_OAuth2_Token_Endpoint.html" class="uri">http://personium.io/docs/ja/apiref/current/293_OAuth2_Token_Endpoint.html</a></p>
+<h3>アクセストークンを受け取る</h3>
+<p>ユーザCellに対するあなたのAppとしてのアクセストークンを受け取ります。</p>
+<ol>
+<li>アプリ認証トークン</li>
+</ol>
+<p>今度はユーザCellのTokenエンドポイントに対して、以下の情報をPOSTします。</p>
+<pre><code>grant_type=authorization_code&amp;code={grantCode}&amp;client_id={アプリCellURL}&amp;client_secret={アプリ認証トークン}</code></pre>
+<p>ここで返ってくるレスポンスJSONの中の&quot;access_token&quot;項目が、対象ユーザCellに対するあなたのアプリのためのアクセストークンです。 この処理はアプリセル上のengineスクリプトで実装することをお勧めします。</p>
+<p>参考： <a href="http://personium.io/docs/ja/apiref/current/293_OAuth2_Token_Endpoint.html" class="uri">http://personium.io/docs/ja/apiref/current/293_OAuth2_Token_Endpoint.html</a></p>
+<h3>BoxのURLを取得する</h3>
+<p>以下のAPIを使って、対象ユーザCell上のあなたのアプリのための領域であるBoxのURLを取得します。</p>
+<p>参考: <a href="http://personium.io/docs/ja/apiref/current/304_Get_Box_URL.html" class="uri">http://personium.io/docs/ja/apiref/current/304_Get_Box_URL.html</a></p>
+<p>この際、Authorizationヘッダで取得したアクセストークンを指定するようにしてください。</p>
+<pre><code>Authorization: Bearer {access_token}</code></pre>
+<p>これにより、どこのURLをルートとしてデータアクセスすればよいかがわかります。</p>
+<h3>Box配下の各種リソースにアクセスする</h3>
+<p>アプリ開発者である貴方は、対象ユーザCell上のあなたのアプリのためのBox配下の構造については知っているはずです。 データアクセスのためのBoxレベルAPI (WebDAV, OData)を用いて、Box配下の各種リソースにアクセスしてください。</p>
+</div>
+  <footer><nav>The Personium project is provided under the Apache 2.0 license. </nav></footer>
+</body>
+</html>
+

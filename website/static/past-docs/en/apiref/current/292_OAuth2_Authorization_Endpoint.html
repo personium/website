@@ -1,0 +1,747 @@
+<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml" lang="" xml:lang="">
+<head>
+  <!-- default template -->
+  <meta charset="utf-8" />
+  <meta name="generator" content="pandoc" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=yes" />
+  <link rel="icon" href="/images/favicon.ico" type="image/x-icon"/>
+  <title>292_OAuth2_Authorization_Endpoint</title>
+  <style type="text/css">
+div.sourceLine, a.sourceLine { display: inline-block; min-height: 1.25em; }
+a.sourceLine { pointer-events: none; color: inherit; text-decoration: inherit; }
+.sourceCode { overflow: visible; }
+code.sourceCode { white-space: pre; }
+@media print {
+code.sourceCode { white-space: pre-wrap; }
+div.sourceLine, a.sourceLine { text-indent: -1em; padding-left: 1em; }
+}
+pre.numberSource div.sourceLine, .numberSource a.sourceLine
+  { position: relative; }
+pre.numberSource div.sourceLine::before, .numberSource a.sourceLine::before
+  { content: attr(data-line-number);
+    position: absolute; left: -5em; text-align: right; vertical-align: baseline;
+    border: none; pointer-events: all;
+    -webkit-touch-callout: none; -webkit-user-select: none;
+    -khtml-user-select: none; -moz-user-select: none;
+    -ms-user-select: none; user-select: none;
+    padding: 0 4px; width: 4em; }
+pre.numberSource { margin-left: 3em; border-left: 1px solid #aaaaaa; color: #aaaaaa;  padding-left: 4px; }
+@media screen {
+a.sourceLine::before { text-decoration: underline; color: initial; }
+}
+code span.kw { color: #007020; font-weight: bold; } /* Keyword */
+code span.dt { color: #902000; } /* DataType */
+code span.dv { color: #40a070; } /* DecVal */
+code span.bn { color: #40a070; } /* BaseN */
+code span.fl { color: #40a070; } /* Float */
+code span.ch { color: #4070a0; } /* Char */
+code span.st { color: #4070a0; } /* String */
+code span.co { color: #60a0b0; font-style: italic; } /* Comment */
+code span.ot { color: #007020; } /* Other */
+code span.al { color: #ff0000; font-weight: bold; } /* Alert */
+code span.fu { color: #06287e; } /* Function */
+code span.er { color: #ff0000; font-weight: bold; } /* Error */
+code span.wa { color: #60a0b0; font-weight: bold; font-style: italic; } /* Warning */
+code span.cn { color: #880000; } /* Constant */
+code span.sc { color: #4070a0; } /* SpecialChar */
+code span.vs { color: #4070a0; } /* VerbatimString */
+code span.ss { color: #bb6688; } /* SpecialString */
+code span.im { } /* Import */
+code span.va { color: #19177c; } /* Variable */
+code span.cf { color: #007020; font-weight: bold; } /* ControlFlow */
+code span.op { color: #666666; } /* Operator */
+code span.bu { } /* BuiltIn */
+code span.ex { } /* Extension */
+code span.pp { color: #bc7a00; } /* Preprocessor */
+code span.at { color: #7d9029; } /* Attribute */
+code span.do { color: #ba2121; font-style: italic; } /* Documentation */
+code span.an { color: #60a0b0; font-weight: bold; font-style: italic; } /* Annotation */
+code span.cv { color: #60a0b0; font-weight: bold; font-style: italic; } /* CommentVar */
+code span.in { color: #60a0b0; font-weight: bold; font-style: italic; } /* Information */
+  </style>
+  <script type="text/javascript">
+      var path = location.pathname.split('/');
+      var pathRoot = [ path[0], path[1], '' ].join('/');
+      var pathLang = [ path[0], path[1], path[2] , ''].join('/');
+
+      //load style sheets
+      document.write('<link rel="stylesheet" href="' + pathRoot + 'personium.css" type="text/css" />');
+      document.write('<link rel="stylesheet" href="' + pathLang + 'locale.css" type="text/css" />');
+      //load personium_docs.js
+      var ps = document.createElement('script');
+      ps.src = pathRoot + 'personium_docs.js';
+      var s = document.getElementsByTagName('script')[0];
+      s.parentNode.insertBefore(ps, s);
+    
+      //load apiref_versions.js
+      ps2 = document.createElement('script');
+      ps2.src = pathRoot + 'apiref_versions.js';
+      s = document.getElementsByTagName('script')[0];
+      s.parentNode.insertBefore(ps2, s);
+
+  </script>
+  <link href="https://fonts.googleapis.com/css?family=Raleway" rel="stylesheet">
+  <link href="https://fonts.googleapis.com/css?family=Open+Sans" rel="stylesheet">
+  
+  <!--[if lt IE 9]>
+    <script src="//cdnjs.cloudflare.com/ajax/libs/html5shiv/3.7.3/html5shiv-printshiv.min.js"></script>
+  <![endif]-->
+</head>
+<body>
+  <header>
+    <nav>
+    <div id="logo"><a href="/"><img src="/images/logo-quantify-dark.png" /></a></div>
+    <ul>
+      <li class="submenu">
+        <a href="" >Introduction</a>
+        <ul>
+            <li><a href="javascript:p.toPage('/overview/001_Introduction.html');">What's Personium?</a></li>
+            <li><a href="javascript:p.toPage('/user_guide/001_Personium_Architecture.html');">Architecture</a></li>
+            <li><a href="javascript:p.toPage('/user_guide/008_Glossary.html');">Glossary</a></li>
+        </ul>
+      </li>
+      <li class="submenu">
+        <a href="" >User Guide</a>
+        <ul>
+            <li><a href="javascript:p.toPage('/app-developer/');">for App Developer</a></li>
+            <li><a href="javascript:p.toPage('/cell-client-developer/');">for Cell App Developer</a></li>
+            <li><a href="javascript:p.toPage('/unit-administrator/');">for Unit Administrator</a></li>
+            <li><a href="javascript:p.toPage('/server-operator/');">for Server Software Operator</a></li>
+            <li><a href="javascript:p.toPage('/document-writer/');">for Documentation Contributor</a></li>
+            <li><a href="javascript:p.toPage('/plugin-developer/');">for Server Plugin Developer</a></li>
+            <li><a href="javascript:p.toPage('/software-developer/');">for Server Developer</a></li>
+        </ul>
+      </li>
+      <li class="submenu">
+        <a href="" >API Reference</a>
+        <ul id="api-ref-list">
+            <li><a href="javascript:p.toPage('/user_guide/990_Old_Version_API_Ref.html');">older versions</a></li>
+        </ul>
+      </li>
+      <li class="submenu">
+        <a href="" >Languages</a>
+        <ul>
+            <li><a href="javascript:p.setLang('en');">English</a></li>
+            <li><a href="javascript:p.setLang('ja');">Japanese</a></li>
+        </ul>
+      </li>
+    </ul>
+    </nav>
+  </header>
+
+<div id="container">
+<h1>OAuth2.0 Authorization Endpoint(__authz)</h1>
+<h2>Overview</h2>
+<p>OAuth2 Authorization Endpoint<br />
+This API is the OAuth2 authorization endpoint, for utilizing the Personium on JS application and native application.</p>
+<h3>Restrictions</h3>
+<p>For scope=openid, only the following response_type can be specified.</p>
+<ul>
+<li>response_type=id_token</li>
+<li>response_type=code</li>
+</ul>
+<h2>Request</h2>
+<h3>Request URL</h3>
+<pre><code>{CellName}/__authz</code></pre>
+<h3>Request Method</h3>
+<p>GET : Authentication form request<br />
+POST : Authorization processing request (Request Token Authentication, Request Code Authentication, Request ID Token Authentication)</p>
+<h3>Request Query</h3>
+<table style="width:28%;">
+<colgroup>
+<col style="width: 5%" />
+<col style="width: 5%" />
+<col style="width: 5%" />
+<col style="width: 5%" />
+<col style="width: 5%" />
+</colgroup>
+<thead>
+<tr class="header">
+<th style="text-align: left;">Item Name</th>
+<th style="text-align: left;">Overview</th>
+<th style="text-align: left;">Format</th>
+<th style="text-align: left;">Required</th>
+<th style="text-align: left;">Effective Value</th>
+</tr>
+</thead>
+<tbody>
+<tr class="odd">
+<td style="text-align: left;">response_type</td>
+<td style="text-align: left;">Response Type</td>
+<td style="text-align: left;">String</td>
+<td style="text-align: left;">Yes</td>
+<td style="text-align: left;">token, code, id_token(scope=openid required)</td>
+</tr>
+<tr class="even">
+<td style="text-align: left;">client_id</td>
+<td style="text-align: left;">Application Cell URL</td>
+<td style="text-align: left;">String</td>
+<td style="text-align: left;">Yes</td>
+<td style="text-align: left;">Application Cell URL of authentication form request</td>
+</tr>
+<tr class="odd">
+<td style="text-align: left;">redirect_uri</td>
+<td style="text-align: left;">Client redirect endpoint URL</td>
+<td style="text-align: left;">String</td>
+<td style="text-align: left;">Yes</td>
+<td style="text-align: left;">URL of the redirect script registered under the default BOX of the application cell<br>Query parameters formatted with application/x-www-form-urlencoded can be included<br>It is not possible to include fragments<br>Effective digit length:512byte</td>
+</tr>
+<tr class="even">
+<td style="text-align: left;">state</td>
+<td style="text-align: left;">Random value used to maintain state between request and callback</td>
+<td style="text-align: left;">String</td>
+<td style="text-align: left;">No</td>
+<td style="text-align: left;">Random value<br>Effective digit length:512byte</td>
+</tr>
+<tr class="odd">
+<td style="text-align: left;">scope</td>
+<td style="text-align: left;">Access scope requested</td>
+<td style="text-align: left;">String</td>
+<td style="text-align: left;">No</td>
+<td style="text-align: left;">Personium can specify &quot;openid&quot;</td>
+</tr>
+<tr class="even">
+<td style="text-align: left;">username</td>
+<td style="text-align: left;">User name</td>
+<td style="text-align: left;">String</td>
+<td style="text-align: left;">No</td>
+<td style="text-align: left;">Registered user name<br>* When Authentication form request, specification of this parameter is ignored</td>
+</tr>
+<tr class="odd">
+<td style="text-align: left;">password</td>
+<td style="text-align: left;">Password</td>
+<td style="text-align: left;">String</td>
+<td style="text-align: left;">No</td>
+<td style="text-align: left;">Registered password<br>* When Authentication form request, specification of this parameter is ignored</td>
+</tr>
+<tr class="even">
+<td style="text-align: left;">expires_in</td>
+<td style="text-align: left;">Access token expiration in (sec)</td>
+<td style="text-align: left;">Int<br>1～3600</td>
+<td style="text-align: left;">No</td>
+<td style="text-align: left;">Specify expiration in of issued access token<br>The default is 3600 (1 hour)<br>* When response_type is other than token, specification of this parameter is ignored</td>
+</tr>
+<tr class="odd">
+<td style="text-align: left;">cancel_flg</td>
+<td style="text-align: left;">Canceled flag</td>
+<td style="text-align: left;">Boolean</td>
+<td style="text-align: left;">No</td>
+<td style="text-align: left;">User cancellation flag for authorization process<br>If true is set, it shall be canceled by the user</td>
+</tr>
+<tr class="even">
+<td style="text-align: left;">password_change_required</td>
+<td style="text-align: left;">Password change required flag</td>
+<td style="text-align: left;">Boolean</td>
+<td style="text-align: left;">No</td>
+<td style="text-align: left;">A flag indicating whether the authenticated account required password change<br>* Password_change_required returned in response to authorization request</td>
+</tr>
+<tr class="odd">
+<td style="text-align: left;">access_token</td>
+<td style="text-align: left;">Access token</td>
+<td style="text-align: left;">String</td>
+<td style="text-align: left;">No</td>
+<td style="text-align: left;">Specify Access Token for Authenticated Account<br>* access_token returned in response to authorization request</td>
+</tr>
+</tbody>
+</table>
+<h3>Request Header</h3>
+<p>None</p>
+<h3>Request Body</h3>
+<p>Same as request query</p>
+<h2>Response (Forms Authentication Request)</h2>
+<p>Display the authentication form or password change form.<br />
+However, if the request parameter is invalid, it will be redirected to the redirect endpoint without displaying the form.</p>
+<p>The authentication form and password change form can use the system default, or the specified html.<br />
+When specifying html, <a href="../../server-operator/unit_config_list.html">Unit setting</a> or <a href="./291_Cell_Change_Property.html">Target cell property setting</a> is required. When both are set, the property setting of the target cell takes precedence.</p>
+<p>Unit setting</p>
+<pre><code>io.personium.core.cell.authorizationhtmlurl.default={URL that html can obtain}
+io.personium.core.cell.authorizationpasswordchangehtmlurl.default={URL that html can obtain}</code></pre>
+<p>Target cell property setting</p>
+<pre class="sourceCode xml" id="cb3"><code class="sourceCode xml"><div class="sourceLine" id="cb3-1" data-line-number="1"><span class="kw">&lt;p:authorizationhtmlurl&gt;</span>{URL that html can obtain}<span class="kw">&lt;/p:authorizationhtmlurl&gt;</span></div>
+<div class="sourceLine" id="cb3-2" data-line-number="2"><span class="kw">&lt;p:authorizationpasswordchangehtmlurl&gt;</span>{URL that html can obtain}<span class="kw">&lt;/p:authorizationpasswordchangehtmlurl&gt;</span></div></code></pre>
+<p>The schemes that can be specified as URL are &quot;http&quot;, &quot;https&quot;, &quot;personium-localunit&quot;, &quot;personium-localcell&quot;.</p>
+<h3>Authentication form display, Password change form display</h3>
+<h4>Response Code</h4>
+<p>200</p>
+<h4>Response Header</h4>
+<table>
+<thead>
+<tr class="header">
+<th style="text-align: left;">Header Name</th>
+<th style="text-align: left;">Overview</th>
+<th style="text-align: left;">Notes</th>
+</tr>
+</thead>
+<tbody>
+<tr class="odd">
+<td style="text-align: left;">Content-Type</td>
+<td style="text-align: left;">text/html; charset=UTF-8</td>
+<td style="text-align: left;"></td>
+</tr>
+</tbody>
+</table>
+<h4>Response Body</h4>
+<p>Return authentication form or password change form (HTML).<br />
+If password_change_required set at request is true, password change form will be returned.<br />
+Otherwise, the authentication form is returned.</p>
+<h3>Parameter check error (client_id, redirect_uri)</h3>
+<p>In the case of &quot;client_id, redirect_uri not set&quot; &quot;client_id, Redirect_uri is not in URL format&quot; &quot;cell in client_id and redirect_uri is different&quot;</p>
+<h4>Response Code</h4>
+<p>303<br />
+The browser is redirected to the system's error page.</p>
+<pre><code>{error_page_uri}?code={code}</code></pre>
+<h4>URL parameter</h4>
+<table style="width:17%;">
+<colgroup>
+<col style="width: 5%" />
+<col style="width: 5%" />
+<col style="width: 5%" />
+</colgroup>
+<thead>
+<tr class="header">
+<th style="text-align: left;">Item Name</th>
+<th style="text-align: left;">Overview</th>
+<th style="text-align: left;">Notes</th>
+</tr>
+</thead>
+<tbody>
+<tr class="odd">
+<td style="text-align: left;">error_page_uri</td>
+<td style="text-align: left;">Redirect URL</td>
+<td style="text-align: left;">The system's error page &quot;cell URL + __html/error&quot;</td>
+</tr>
+<tr class="even">
+<td style="text-align: left;">code</td>
+<td style="text-align: left;"><a href="004_Error_Messages.html">Personium message code</a></td>
+<td style="text-align: left;"></td>
+</tr>
+</tbody>
+</table>
+<h3>Parameter check error (Other than those above)</h3>
+<p>In the case of request parameters other than client_id, redirect_uri, username and password, the required items are not set or the setting values ​​are incorrect<br> Or, if cancel_flg is set to true (cancelled by the user)</p>
+<h4>Response Code</h4>
+<p>303<br />
+The browser is reducted to the client redirect endpoint URL (the value of &quot;redirect_uri&quot; of the request).<br />
+The fragment or query indicated by &quot;URL parameter&quot; is stored in redirect_uri.<br />
+(If response_type = code, a query is stored; otherwise, a fragment is stored)</p>
+<pre><code>{redirect_uri}?error={error}&amp;error_description={error_description}&amp;state={state}&amp;code={code}
+{redirect_uri}#error={error}&amp;error_description={error_description}&amp;state={state}&amp;code={code}</code></pre>
+<h4>URL parameter</h4>
+<table style="width:17%;">
+<colgroup>
+<col style="width: 5%" />
+<col style="width: 5%" />
+<col style="width: 5%" />
+</colgroup>
+<thead>
+<tr class="header">
+<th style="text-align: left;">Item Name</th>
+<th style="text-align: left;">Overview</th>
+<th style="text-align: left;">Notes</th>
+</tr>
+</thead>
+<tbody>
+<tr class="odd">
+<td style="text-align: left;">redirect_uri</td>
+<td style="text-align: left;">Redirect URL</td>
+<td style="text-align: left;">The URL of the client's redirect split<br>specified by the &quot;redirect_uri&quot; of the request</td>
+</tr>
+<tr class="even">
+<td style="text-align: left;">error</td>
+<td style="text-align: left;">Code indicating error content</td>
+<td style="text-align: left;">See &quot;error&quot;</td>
+</tr>
+<tr class="odd">
+<td style="text-align: left;">error_description</td>
+<td style="text-align: left;">Additional information on errors</td>
+<td style="text-align: left;">Set exception message etc</td>
+</tr>
+<tr class="even">
+<td style="text-align: left;">error_uri</td>
+<td style="text-align: left;">Web page URI of additional information on error</td>
+<td style="text-align: left;">Return empty string<br>* Set for future enhancemen</td>
+</tr>
+<tr class="odd">
+<td style="text-align: left;">state</td>
+<td style="text-align: left;">Value of state set at the time of request</td>
+<td style="text-align: left;"></td>
+</tr>
+<tr class="even">
+<td style="text-align: left;">code</td>
+<td style="text-align: left;"><a href="004_Error_Messages.html">Personium message code</a></td>
+<td style="text-align: left;"></td>
+</tr>
+</tbody>
+</table>
+<h5>error</h5>
+<table style="width:17%;">
+<colgroup>
+<col style="width: 5%" />
+<col style="width: 5%" />
+<col style="width: 5%" />
+</colgroup>
+<thead>
+<tr class="header">
+<th style="text-align: left;">Code value</th>
+<th style="text-align: left;">Overview</th>
+<th style="text-align: left;">Notes</th>
+</tr>
+</thead>
+<tbody>
+<tr class="odd">
+<td style="text-align: left;">invalid_request</td>
+<td style="text-align: left;">A required parameter is not specified in the request<br>Invalid request parameter format</td>
+<td style="text-align: left;"></td>
+</tr>
+<tr class="even">
+<td style="text-align: left;">unauthorized_client</td>
+<td style="text-align: left;">Cancel button pressed by user</td>
+<td style="text-align: left;"></td>
+</tr>
+<tr class="odd">
+<td style="text-align: left;">unsupported_response_type</td>
+<td style="text-align: left;">Invalid value of response_type</td>
+<td style="text-align: left;"></td>
+</tr>
+<tr class="even">
+<td style="text-align: left;">server_error</td>
+<td style="text-align: left;">Server Error</td>
+<td style="text-align: left;"></td>
+</tr>
+</tbody>
+</table>
+<h2>Response (Authorization processing request)</h2>
+<p>Perform authorization processing. The redirect destination and URL parameters differ depending on the processing result.<br />
+The pattern of the processing result is as follows.</p>
+<ul>
+<li>Authorization processing success (Token authentication)</li>
+<li>Authorization processing success (Code authentication)</li>
+<li>Authorization processing success (ID Token authentication)</li>
+<li>Authentication failure</li>
+<li>Parameter check error (client_id, redirect_uri)</li>
+<li>Parameter check error (Other than those above)</li>
+</ul>
+<h3>Authorization processing success (Token authentication)</h3>
+<p>When authorization process is successful and token is specified for response_type of request</p>
+<h4>Response Code</h4>
+<p>303<br />
+The browser is reducted to the client redirect endpoint URL (the value of &quot;redirect_uri&quot; of the request).<br />
+A fragment indicated by &quot;URL parameter&quot; is stored in redirect_uri.</p>
+<pre><code>{redirect_uri}#access_token={access_token}&amp;token_type=Bearer&amp;expires_in={expires_in}&amp;state={state}&amp;last_authenticated={last_authenticated}
+&amp;failed_count={failed_count}
+* In fact, it will be returned in one line without breaking</code></pre>
+<h4>URL parameter</h4>
+<table style="width:17%;">
+<colgroup>
+<col style="width: 5%" />
+<col style="width: 5%" />
+<col style="width: 5%" />
+</colgroup>
+<thead>
+<tr class="header">
+<th style="text-align: left;">Item Name</th>
+<th style="text-align: left;">Overview</th>
+<th style="text-align: left;">Notes</th>
+</tr>
+</thead>
+<tbody>
+<tr class="odd">
+<td style="text-align: left;">redirect_uri</td>
+<td style="text-align: left;">Client redirect endpoint URL</td>
+<td style="text-align: left;">The value of &quot;redirect_uri&quot; in the request</td>
+</tr>
+<tr class="even">
+<td style="text-align: left;">access_token</td>
+<td style="text-align: left;">Access token acquired</td>
+<td style="text-align: left;">Return cell local token or transcell token</td>
+</tr>
+<tr class="odd">
+<td style="text-align: left;">token_type</td>
+<td style="text-align: left;">Bearer</td>
+<td style="text-align: left;"></td>
+</tr>
+<tr class="even">
+<td style="text-align: left;">expires_in</td>
+<td style="text-align: left;">Access token expiration in (sec)</td>
+<td style="text-align: left;">Expiration date set at the time of request<br>The default is 3600 (1 hour)</td>
+</tr>
+<tr class="odd">
+<td style="text-align: left;">state</td>
+<td style="text-align: left;">Value of state set at the time of request</td>
+<td style="text-align: left;">Random value used to maintain state between request and callback</td>
+</tr>
+<tr class="even">
+<td style="text-align: left;">last_authenticated</td>
+<td style="text-align: left;">Last authentication date and time</td>
+<td style="text-align: left;">Last authentication date and time（UNIX time of long type）<br>initial authentication is null<br>*Return only when password authentication</td>
+</tr>
+<tr class="odd">
+<td style="text-align: left;">failed_count</td>
+<td style="text-align: left;">Number of authentication failures</td>
+<td style="text-align: left;">Number of consecutive failures in password authentication since last authentication<br>*Return only when password authentication</td>
+</tr>
+<tr class="even">
+<td style="text-align: left;">box_not_installed</td>
+<td style="text-align: left;">Box not installed flag</td>
+<td style="text-align: left;">Return true only when Box having appcell URL in schema is not created</td>
+</tr>
+</tbody>
+</table>
+<h3>Authorization processing success (Code authentication)</h3>
+<p>When authorization process is successful and code is specified for response_type of request</p>
+<h4>Response Code</h4>
+<p>303<br />
+The browser is reducted to the client redirect endpoint URL (the value of &quot;redirect_uri&quot; of the request).<br />
+A query indicated by &quot;URL parameter&quot; is stored in redirect_uri.</p>
+<pre><code>{redirect_uri}?code={code}&amp;state={state}&amp;last_authenticated={last_authenticated}&amp;failed_count={failed_count}</code></pre>
+<h4>URL parameter</h4>
+<table style="width:17%;">
+<colgroup>
+<col style="width: 5%" />
+<col style="width: 5%" />
+<col style="width: 5%" />
+</colgroup>
+<thead>
+<tr class="header">
+<th style="text-align: left;">Item Name</th>
+<th style="text-align: left;">Overview</th>
+<th style="text-align: left;">Notes</th>
+</tr>
+</thead>
+<tbody>
+<tr class="odd">
+<td style="text-align: left;">redirect_uri</td>
+<td style="text-align: left;">Client redirect endpoint URL</td>
+<td style="text-align: left;">The value of &quot;redirect_uri&quot; in the request</td>
+</tr>
+<tr class="even">
+<td style="text-align: left;">code</td>
+<td style="text-align: left;">Code acquired</td>
+<td style="text-align: left;">Code that can be authorized with &quot;grant_type: authorization_code&quot;</td>
+</tr>
+<tr class="odd">
+<td style="text-align: left;">state</td>
+<td style="text-align: left;">Value of state set at the time of request</td>
+<td style="text-align: left;">Random value used to maintain state between request and callback</td>
+</tr>
+<tr class="even">
+<td style="text-align: left;">last_authenticated</td>
+<td style="text-align: left;">Last authentication date and time</td>
+<td style="text-align: left;">Last authentication date and time（UNIX time of long type）<br>initial authentication is null<br>*Return only when password authentication</td>
+</tr>
+<tr class="odd">
+<td style="text-align: left;">failed_count</td>
+<td style="text-align: left;">Number of authentication failures</td>
+<td style="text-align: left;">Number of consecutive failures in password authentication since last authentication<br>*Return only when password authentication</td>
+</tr>
+<tr class="even">
+<td style="text-align: left;">box_not_installed</td>
+<td style="text-align: left;">Box not installed flag</td>
+<td style="text-align: left;">Return true only when Box having appcell URL in schema is not created</td>
+</tr>
+</tbody>
+</table>
+<h3>Authorization processing success (ID Token authentication)</h3>
+<p>When authorization process is successful and id_token is specified for response_type of request</p>
+<h4>Response Code</h4>
+<p>303<br />
+The browser is reducted to the client redirect endpoint URL (the value of &quot;redirect_uri&quot; of the request).<br />
+A fragment indicated by &quot;URL parameter&quot; is stored in redirect_uri.</p>
+<pre><code>{redirect_uri}#id_token={id_token}&amp;state={state}&amp;last_authenticated={last_authenticated}&amp;failed_count={failed_count}</code></pre>
+<h4>URL parameter</h4>
+<table style="width:17%;">
+<colgroup>
+<col style="width: 5%" />
+<col style="width: 5%" />
+<col style="width: 5%" />
+</colgroup>
+<thead>
+<tr class="header">
+<th style="text-align: left;">Item Name</th>
+<th style="text-align: left;">Overview</th>
+<th style="text-align: left;">Notes</th>
+</tr>
+</thead>
+<tbody>
+<tr class="odd">
+<td style="text-align: left;">redirect_uri</td>
+<td style="text-align: left;">Client redirect endpoint URL</td>
+<td style="text-align: left;">The value of &quot;redirect_uri&quot; in the request</td>
+</tr>
+<tr class="even">
+<td style="text-align: left;">id_token</td>
+<td style="text-align: left;">ID Token acquired</td>
+<td style="text-align: left;">id_token available with OpenID Connect</td>
+</tr>
+<tr class="odd">
+<td style="text-align: left;">state</td>
+<td style="text-align: left;">Value of state set at the time of request</td>
+<td style="text-align: left;">Random value used to maintain state between request and callback</td>
+</tr>
+<tr class="even">
+<td style="text-align: left;">last_authenticated</td>
+<td style="text-align: left;">Last authentication date and time</td>
+<td style="text-align: left;">Last authentication date and time（UNIX time of long type）<br>initial authentication is null<br>*Return only when password authentication</td>
+</tr>
+<tr class="odd">
+<td style="text-align: left;">failed_count</td>
+<td style="text-align: left;">Number of authentication failures</td>
+<td style="text-align: left;">Number of consecutive failures in password authentication since last authentication<br>*Return only when password authentication</td>
+</tr>
+<tr class="even">
+<td style="text-align: left;">box_not_installed</td>
+<td style="text-align: left;">Box not installed flag</td>
+<td style="text-align: left;">Return true only when Box having appcell URL in schema is not created</td>
+</tr>
+</tbody>
+</table>
+<h3>Authentication failure</h3>
+<p>When authentication fails (Password mismatch, account locked, etc.)</p>
+<h4>Response Code</h4>
+<p>303<br />
+The browser is redacted again to the authorization endpoint (cell URL + __authz). A query indicated by &quot;URL parameter&quot; is stored in authorization endpoint.</p>
+<pre><code>{authorization_endpoint_url}?response_type={response_type}&amp;redirect_uri={redirect_uri}&amp;client_id={client_id}&amp;state={state}&amp;scope={scope}
+&amp;expires_in={expires_in}&amp;error={error}&amp;error_description={error_description}&amp;error_uri={error_uri}&amp;code={code}
+&amp;password_change_required={password_change_required}&amp;access_token={access_token}
+* In fact, it will be returned in one line without breaking</code></pre>
+<h4>URL parameter</h4>
+<table style="width:17%;">
+<colgroup>
+<col style="width: 5%" />
+<col style="width: 5%" />
+<col style="width: 5%" />
+</colgroup>
+<thead>
+<tr class="header">
+<th style="text-align: left;">Item Name</th>
+<th style="text-align: left;">Overview</th>
+<th style="text-align: left;">Notes</th>
+</tr>
+</thead>
+<tbody>
+<tr class="odd">
+<td style="text-align: left;">authorization_endpoint_url</td>
+<td style="text-align: left;">authorization endpoint URL(cell URL + __authz)</td>
+<td style="text-align: left;"></td>
+</tr>
+<tr class="even">
+<td style="text-align: left;">response_type</td>
+<td style="text-align: left;">Value of response_type set at the time of request</td>
+<td style="text-align: left;"></td>
+</tr>
+<tr class="odd">
+<td style="text-align: left;">client_id</td>
+<td style="text-align: left;">Value of client_id set at the time of request</td>
+<td style="text-align: left;"></td>
+</tr>
+<tr class="even">
+<td style="text-align: left;">redirect_uri</td>
+<td style="text-align: left;">Value of redirect_uri set at the time of request</td>
+<td style="text-align: left;"></td>
+</tr>
+<tr class="odd">
+<td style="text-align: left;">state</td>
+<td style="text-align: left;">Value of state set at the time of request</td>
+<td style="text-align: left;"></td>
+</tr>
+<tr class="even">
+<td style="text-align: left;">scope</td>
+<td style="text-align: left;">Value of scope set at the time of request</td>
+<td style="text-align: left;"></td>
+</tr>
+<tr class="odd">
+<td style="text-align: left;">expires_in</td>
+<td style="text-align: left;">Value of expires_in set at the time of request</td>
+<td style="text-align: left;"></td>
+</tr>
+<tr class="even">
+<td style="text-align: left;">error</td>
+<td style="text-align: left;">Code indicating error content</td>
+<td style="text-align: left;">See &quot;error&quot;</td>
+</tr>
+<tr class="odd">
+<td style="text-align: left;">error_description</td>
+<td style="text-align: left;">Additional information on errors</td>
+<td style="text-align: left;">Set exception message etc</td>
+</tr>
+<tr class="even">
+<td style="text-align: left;">error_uri</td>
+<td style="text-align: left;">Web page URI of additional information on error</td>
+<td style="text-align: left;">Return empty string<br>* Set for future enhancemen</td>
+</tr>
+<tr class="odd">
+<td style="text-align: left;">code</td>
+<td style="text-align: left;"><a href="004_Error_Messages.html">Personium message code</a></td>
+<td style="text-align: left;"></td>
+</tr>
+<tr class="even">
+<td style="text-align: left;">password_change_required</td>
+<td style="text-align: left;">Flag indicating whether the authenticated account is required to change password</td>
+<td style="text-align: left;">Return true only if authentication is possible but password change is mandatory</td>
+</tr>
+<tr class="odd">
+<td style="text-align: left;">access_token</td>
+<td style="text-align: left;">Access token for authenticated account</td>
+<td style="text-align: left;">Only when password_change_required is true, the access token that can only change the password is returned</td>
+</tr>
+</tbody>
+</table>
+<h5>error</h5>
+<table style="width:17%;">
+<colgroup>
+<col style="width: 5%" />
+<col style="width: 5%" />
+<col style="width: 5%" />
+</colgroup>
+<thead>
+<tr class="header">
+<th style="text-align: left;">Code value</th>
+<th style="text-align: left;">Overview</th>
+<th style="text-align: left;">Notes</th>
+</tr>
+</thead>
+<tbody>
+<tr class="odd">
+<td style="text-align: left;">invalid_request</td>
+<td style="text-align: left;">Parameters required for authentication (username, password) are not specified</td>
+<td style="text-align: left;"></td>
+</tr>
+<tr class="even">
+<td style="text-align: left;">invalid_grant</td>
+<td style="text-align: left;">Authentication failure<br>Account locked</td>
+<td style="text-align: left;"></td>
+</tr>
+<tr class="odd">
+<td style="text-align: left;">unauthorized_client</td>
+<td style="text-align: left;">The client is not authorized<br>Password change is required</td>
+<td style="text-align: left;"></td>
+</tr>
+<tr class="even">
+<td style="text-align: left;">server_error</td>
+<td style="text-align: left;">Server Error</td>
+<td style="text-align: left;"></td>
+</tr>
+</tbody>
+</table>
+<h3>Parameter check error (client_id, redirect_uri)</h3>
+<p>In the case of &quot;client_id, redirect_uri not set&quot; &quot;client_id, Redirect_uri is not in URL format&quot; &quot;cell in client_id and redirect_uri is different&quot;<br />
+It is the same as &quot;Parameter check error (client_id, redirect_uri)&quot; of &quot;response (authentication form request)&quot;.</p>
+<h3>Parameter check error (Other than those above)</h3>
+<p>In the case of request parameters other than client_id, redirect_uri, username and password, the required items are not set or the setting values ​​are incorrect<br />
+Or, if cancel_flg is set to true (cancelled by the user)<br />
+It is the same as &quot;Parameter check error (Other than those above)&quot; of &quot;response (authentication form request)&quot;.</p>
+<h2>cURL Command</h2>
+<h3>GET</h3>
+<pre class="sourceCode sh" id="cb10"><code class="sourceCode bash"><div class="sourceLine" id="cb10-1" data-line-number="1"><span class="ex">curl</span> <span class="st">&quot;https://cell1.unit1.example/__authz?response_type=token&amp;\</span></div>
+<div class="sourceLine" id="cb10-2" data-line-number="2"><span class="st">redirect_uri=https://app-cell1.unit1.example/__/redirect.md&amp;\</span></div>
+<div class="sourceLine" id="cb10-3" data-line-number="3"><span class="st">client_id=https://app-cell1.unit1.example&quot;</span> -X GET -i</div></code></pre>
+<h3>POST</h3>
+<pre class="sourceCode sh" id="cb11"><code class="sourceCode bash"><div class="sourceLine" id="cb11-1" data-line-number="1"><span class="ex">curl</span> <span class="st">&quot;https://cell1.unit1.example/__authz&quot;</span> -X POST -i \</div>
+<div class="sourceLine" id="cb11-2" data-line-number="2">-d <span class="st">&#39;response_type=token&amp;client_id=https://app-cell1.unit1.example/&amp;\</span></div>
+<div class="sourceLine" id="cb11-3" data-line-number="3"><span class="st">redirect_uri=https://app-cell1.unit1.example/__/redirect.md&amp;\</span></div>
+<div class="sourceLine" id="cb11-4" data-line-number="4"><span class="st">state=0000000111&amp;username=account1&amp;password=pass&#39;</span></div></code></pre>
+</div>
+  <footer><nav>The Personium project is provided under the Apache 2.0 license. </nav></footer>
+</body>
+</html>

@@ -1,0 +1,128 @@
+<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml" lang="" xml:lang="">
+<head>
+  <!-- default template -->
+  <meta charset="utf-8" />
+  <meta name="generator" content="pandoc" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=yes" />
+  <link rel="icon" href="/images/favicon.ico" type="image/x-icon"/>
+  <title>007_WebDAV_model</title>
+  <script type="text/javascript">
+      var path = location.pathname.split('/');
+      var pathRoot = [ path[0], path[1], '' ].join('/');
+      var pathLang = [ path[0], path[1], path[2] , ''].join('/');
+
+      document.write('<link rel="stylesheet" href="' + pathRoot + 'personium.css" type="text/css" />');
+      document.write('<link rel="stylesheet" href="' + pathLang + 'locale.css" type="text/css" />');
+      var ps = document.createElement('script');
+      ps.src = pathRoot + 'personium_docs.js';
+      var s = document.getElementsByTagName('script')[0];
+      s.parentNode.insertBefore(ps, s);
+    
+      ps2 = document.createElement('script');
+      ps2.src = pathRoot + 'apiref_versions.js';
+      s = document.getElementsByTagName('script')[0];
+      s.parentNode.insertBefore(ps2, s);
+  </script>
+  <link href="https://fonts.googleapis.com/css?family=Raleway" rel="stylesheet">
+  <link href="https://fonts.googleapis.com/css?family=Open+Sans" rel="stylesheet">
+  
+  <!--[if lt IE 9]>
+    <script src="//cdnjs.cloudflare.com/ajax/libs/html5shiv/3.7.3/html5shiv-printshiv.min.js"></script>
+  <![endif]-->
+</head>
+<body>
+  <header>
+    <nav>
+    <div id="logo"><a href="/"><img src="https://personium.io/images/logo-quantify-dark.png"></a></div>
+    <ul>
+      <li class="submenu">
+        <a href="#" >Introduction</a>
+        <ul>
+            <li><a href="javascript:p.toPage('/overview/001_Introduction.html');">What's Personium?</a></li>
+            <li><a href="javascript:p.toPage('/user_guide/001_Personium_Architecture.html');">Architecture</a></li>
+            <li><a href="javascript:p.toPage('/user_guide/008_Glossary.html');">Glossary</a></li>
+        </ul>
+      </li>
+      <li class="submenu">
+        <a href="#" >User Guide</a>
+        <ul>
+            <li><a href="javascript:p.toPage('/app-developer/');">for App Developer</a></li>
+            <li><a href="javascript:p.toPage('/cell-gui-developer/');">for Cell GUI Developer</a></li>
+            <li><a href="javascript:p.toPage('/unit-administrator/');">for Unit Administrator</a></li>
+            <li><a href="javascript:p.toPage('/server-operator/');">for Server Software Operator</a></li>
+            <li><a href="javascript:p.toPage('/document-writer/');">for Documentation Contributor</a></li>
+            <li><a href="javascript:p.toPage('/plugin-developer/');">for Server Plugin Developer</a></li>
+            <li><a href="javascript:p.toPage('/software-developer/');">for Server Developer</a></li>
+        </ul>
+      </li>
+      <li class="submenu">
+        <a href="#" >API Reference</a>
+        <ul id="api-ref-list">
+            <li><a href="javascript:p.toPage('/user_guide/990_Old_Version_API_Ref.html');">older versions</a></li>
+        </ul>
+      </li>
+      <li class="submenu">
+        <a href="#" >Languages</a>
+        <ul>
+            <li><a href="javascript:p.setLang('en');">English</a></li>
+            <li><a href="javascript:p.setLang('ja');">Japanese</a></li>
+        </ul>
+      </li>
+    </ul>
+    </nav>
+  </header>
+
+<div id="container">
+<h1>WebDAV モデル</h1>
+<h3>WebDAVとは</h3>
+<ul>
+<li>WebDAVは、Webサーバに対して直接ファイルのコピーや削除を行ったり、ファイル所有者や更新日時などのファイル情報を<br />
+クライアント(Webブラウザ)から取得・設定するといった機能を持つ分散ファイルシステムで、HTTP 1.1を拡張したプロトコルで実現される。</li>
+</ul>
+<h3>概要</h3>
+<ul>
+<li>PersoniumのBoxは、それ自体がRFC4918:WebDAV空間であり、ファイルやコレクションを作成することができます。<br />
+Personiumでは、通常のWebDAVコレクション以外の特殊なコレクション（OData, Service)の作成や、ACLによるコレクションのアクセス制御が可能です。</li>
+</ul>
+<h3>WebDAVのロック</h3>
+<ul>
+<li><p>WebDAVはファイル・コレクションの登録・更新・削除中の状態でBox配下に排他ロックがかかります。</p></li>
+<li><p>上記状態の場合、他のユーザは取得は可能ですが、登録・更新・削除の処理はロックが解除されるまで実行を待機します。</p></li>
+<li><p>また、一定時間を超過してもロックが解消されていない場合、以下のレスポンスが返却されます。</p></li>
+<li><p>以下のレスポンスが返却された場合、しばらく時間を置いてからリクエストを実行するようにして下さい。</p></li>
+<li><p>エラーコード：503</p></li>
+<li><p>エラーメッセージ：Too many concurrent requests.</p></li>
+</ul>
+<h3>MKCOLの拡張</h3>
+<ul>
+<li><p>Personiumでは、RFC5689に準拠した形で、ODataやサービス等の特殊なコレクションの作成をサポートしています。</p></li>
+<li><p>これにより、ファイル以外にも様々なデータモデルを扱うことができます</p></li>
+</ul>
+<h3>特殊コレクション</h3>
+<h4> ODataコレクション</h4>
+<ul>
+<li><p>Personiumでは、リレーショナルデータを扱うためにODataコレクションをサポートしています。</p></li>
+<li><p>MKCOLでBox配下にODataコレクションを作ることで、そのコレクション以下のパスはOData空間となります。<br />
+その空間にスキーマ等の適切な設定をすることで、リレーショナルデータを格納することができます。</p></li>
+<li><p>詳細な内容については、ODataモデルを参照。</p></li>
+</ul>
+<h4> サービスコレクション</h4>
+<ul>
+<li><p>Personiumでは、ユーザが定義したサーバサイドロジックを実行するためのインターフェースとして、<br />
+サービスコレクションをサポートしています。</p></li>
+<li><p>MKCOLでサービスコレクションを作った上で、適切な設定を行う事によって、<br />
+そのコレクション以下のパスでユーザ定義のサービスを自由に提供することができます。</p></li>
+<li><p>詳細な内容については、サービスのモデルを参照。</p></li>
+</ul>
+<h4>Streamコレクション</h4>
+<ul>
+<li><p>Personiumでは、永続的なODataに加えて、データをStreamとして扱うために、Streamコレクションをサポートしています。</p></li>
+<li><p>MKCOLでStreamコレクションを作ったうえで、適切な設定を行うことによって、 そのコレクション以下のパスで、データをStreamに送信したり、Streamからデータを受信することができます。</p></li>
+<li><p>詳細な内容については、Streamのモデルを参照。</p></li>
+</ul>
+</div>
+  <footer><nav>The Personium project is provided under the Apache 2.0 license. </nav></footer>
+</body>
+</html>
+

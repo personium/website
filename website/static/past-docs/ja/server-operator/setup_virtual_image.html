@@ -1,0 +1,253 @@
+<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml" lang="" xml:lang="">
+<head>
+  <!-- default template -->
+  <meta charset="utf-8" />
+  <meta name="generator" content="pandoc" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=yes" />
+  <link rel="icon" href="/images/favicon.ico" type="image/x-icon"/>
+  <title>setup_virtual_image</title>
+  <script type="text/javascript">
+      var path = location.pathname.split('/');
+      var pathRoot = [ path[0], path[1], '' ].join('/');
+      var pathLang = [ path[0], path[1], path[2] , ''].join('/');
+
+      document.write('<link rel="stylesheet" href="' + pathRoot + 'personium.css" type="text/css" />');
+      document.write('<link rel="stylesheet" href="' + pathLang + 'locale.css" type="text/css" />');
+      var ps = document.createElement('script');
+      ps.src = pathRoot + 'personium_docs.js';
+      var s = document.getElementsByTagName('script')[0];
+      s.parentNode.insertBefore(ps, s);
+    
+      ps2 = document.createElement('script');
+      ps2.src = pathRoot + 'apiref_versions.js';
+      s = document.getElementsByTagName('script')[0];
+      s.parentNode.insertBefore(ps2, s);
+  </script>
+  <link href="https://fonts.googleapis.com/css?family=Raleway" rel="stylesheet">
+  <link href="https://fonts.googleapis.com/css?family=Open+Sans" rel="stylesheet">
+  
+  <!--[if lt IE 9]>
+    <script src="//cdnjs.cloudflare.com/ajax/libs/html5shiv/3.7.3/html5shiv-printshiv.min.js"></script>
+  <![endif]-->
+</head>
+<body>
+  <header>
+    <nav>
+    <div id="logo"><a href="/"><img src="https://personium.io/images/logo-quantify-dark.png"></a></div>
+    <ul>
+      <li class="submenu">
+        <a href="#" >Introduction</a>
+        <ul>
+            <li><a href="javascript:p.toPage('/overview/001_Introduction.html');">What's Personium?</a></li>
+            <li><a href="javascript:p.toPage('/user_guide/001_Personium_Architecture.html');">Architecture</a></li>
+            <li><a href="javascript:p.toPage('/user_guide/008_Glossary.html');">Glossary</a></li>
+        </ul>
+      </li>
+      <li class="submenu">
+        <a href="#" >User Guide</a>
+        <ul>
+            <li><a href="javascript:p.toPage('/app-developer/');">for App Developer</a></li>
+            <li><a href="javascript:p.toPage('/cell-gui-developer/');">for Cell GUI Developer</a></li>
+            <li><a href="javascript:p.toPage('/unit-administrator/');">for Unit Administrator</a></li>
+            <li><a href="javascript:p.toPage('/server-operator/');">for Server Software Operator</a></li>
+            <li><a href="javascript:p.toPage('/document-writer/');">for Documentation Contributor</a></li>
+            <li><a href="javascript:p.toPage('/plugin-developer/');">for Server Plugin Developer</a></li>
+            <li><a href="javascript:p.toPage('/software-developer/');">for Server Developer</a></li>
+        </ul>
+      </li>
+      <li class="submenu">
+        <a href="#" >API Reference</a>
+        <ul id="api-ref-list">
+            <li><a href="javascript:p.toPage('/user_guide/990_Old_Version_API_Ref.html');">older versions</a></li>
+        </ul>
+      </li>
+      <li class="submenu">
+        <a href="#" >Languages</a>
+        <ul>
+            <li><a href="javascript:p.setLang('en');">English</a></li>
+            <li><a href="javascript:p.setLang('ja');">Japanese</a></li>
+        </ul>
+      </li>
+    </ul>
+    </nav>
+  </header>
+
+<div id="container">
+<h2>仮想イメージを使ってPersoniumを始めよう。</h2>
+<h2>概要</h2>
+<p>本書ではVirtualBoxの仮想イメージを使用してPersoniuｍの環境を構築する方法について説明します。<br />
+また、本書はVirtualBoxバージョン5.2.22以降およびWindows10で動作確認済です。</p>
+<h4>セットアップ手順</h4>
+<ol>
+<li><p><a href="https://www.virtualbox.org/wiki/Downloads">VirtualBox</a>をインストールしてください。</p></li>
+<li><p>あなたが構築したいPersoniumユニットのバージョンのイメージファイルを 以下のURLからダウンロードしてください。</p>
+<ul>
+<li>1.6.15<br />
+<a href="https://personium.io/mvnrepo/image/personium-unit-image-1.6.15.ova" class="uri">https://personium.io/mvnrepo/image/personium-unit-image-1.6.15.ova</a></li>
+</ul></li>
+<li><p>仮想イメージをVirtualBoxにインポートしてください。</p>
+<ol>
+<li><p>「ファイル」ー「仮想アプライアンスのインポート」をクリックしてください。</p></li>
+<li><p>ダウンロードした仮想イメージを選択して、「次へ」ボタンをクリックしてください。<br />
+<strong>スペックの変更を行いたい場合は各自変更を行ってください。</strong></p></li>
+<li><p>「インポート」ボタンをクリックしてください。</p></li>
+</ol></li>
+<li><p>ローカルマシンのhostsファイルの末尾に以下を追加してください。(例：C:\Windows\System32\drivers\etc\hosts)</p>
+<pre><code>127.0.0.1  personium.example.com</code></pre>
+<ul>
+<li>プロキシ環境を使用している場合は<a href="proxy_exclusion_setting.html">プロキシ除外設定の手順</a>を参照してください。<br />
+</li>
+<li>ネットワークの設定(任意)
+<ul>
+<li>デフォルトはVirtualBox専用の仮想ネットワーク(10.0.2.0)になっています。<br />
+</li>
+<li>仮想ネットワーク経由での利用のみならNAT設定は不要です。</li>
+</ul></li>
+</ul></li>
+<li><p>インポートした仮想イメージを選択して起動してください。</p></li>
+</ol>
+<h4>Personiumの動作確認</h4>
+<p>仮想サーバアカウント情報</p>
+<pre><code>ID  ：root  
+PASS：root</code></pre>
+<p><strong>初回ログイン時に必ず変更してください。</strong></p>
+<ol>
+<li><p>Teraterm等のsshクライアントから仮想サーバーにログインしてください。</p>
+<ol>
+<li><p>以下の情報を入力して「OK」ボタンをクリックしてください。</p>
+<pre><code>ホスト   ：localhost  
+TCPポート：2221</code></pre></li>
+<li><p>ssh確認画面が表示されるため上記アカウント情報に記載されているID/PASSを入力してください。</p></li>
+</ol></li>
+<li><p>unitadminの情報を確認してください。</p>
+<pre><code># cat /personium/unitadmin_account
+unitadmin_account=unitadmin
+unitudmin_password={password}
+Personium_FQDN=personium.example.com</code></pre></li>
+<li><p>あなたのPersonium Unit-Managerが正常に動作していることを確認してください。</p>
+<ol>
+<li>ブラウザから次のURLにアクセスしてください。<br />
+<a href="https://personium.example.com/app-uc-unit-manager/__/html/login.html" class="uri">https://personium.example.com/app-uc-unit-manager/__/html/login.html</a>
+<ul>
+<li><a href="https://github.com/personium/app-uc-unit-manager">Unit-Manager</a>のリンクを参照してください。</li>
+</ul></li>
+<li>ログインページに以下の情報を入力して「サインイン」ボタンをクリックしてください。
+<ul>
+<li>Login URL : <a href="https://personium.example.com/unitadmin/" class="uri">https://personium.example.com/unitadmin/</a><br />
+</li>
+<li>Username : unitadmin<br />
+</li>
+<li>Password : {password}<br />
+<strong>{password}には、上記の手順2.で確認していただいたunitadmin_passwordを入力してください。</strong></li>
+</ul></li>
+<li>ログイン成功後、画面左の「Cell List」に以下のCellが存在することを確認してください。
+<ul>
+<li>app-uc-unit-manager</li>
+<li>unitadmin</li>
+</ul></li>
+</ol></li>
+<li><p>Personiumが正常に動作していることを確認してください。</p>
+<ol>
+<li><p>localhostでcurlコマンドが実行できる環境を準備してください。</p></li>
+<li><p>Unit User Tokenを取得します。 以下のコマンドを実行してください。</p>
+<pre><code>$ curl &quot;https://personium.example.com/unitadmin/__token&quot; -X POST \
+-d &quot;grant_type=password&amp;username=unitadmin&amp;password={password}\
+&amp;p_target=https://personium.example.com/&quot; -k  </code></pre></li>
+<li><p>Cellを作成します。以下のコマンドを実行してください。</p>
+<pre><code>$ curl -X POST &quot;https://personium.example.com/__ctl/Cell&quot; -d &quot;{\&quot;Name\&quot;:\&quot;sample\&quot;}&quot; \
+-H &quot;Authorization:Bearer {Token}&quot; -H &quot;Accept:application/json&quot; -i -sS -k</code></pre></li>
+<li><p>Personiumが正常に動作している場合、以下のようなレスポンスが返ります。</p>
+<pre><code>HTTP/1.1 201
+Date: Mon, 28 Jan 2019 01:03:39 GMT
+Content-Type: application/json
+Content-Length: 245
+Connection: keep-alive
+Location: https://personium.example.com/__ctl/Cell(&#39;sample&#39;)
+DataServiceVersion: 2.0
+ETag: W/&quot;1-1548637419191&quot;
+X-Personium-Version: 1.6.15
+Server: Personium
+
+{&quot;d&quot;:{&quot;results&quot;:{&quot;__metadata&quot;:{&quot;uri&quot;:&quot;https:\/\/personium.example.com\/__ctl\/Cell(&#39;sample&#39;)&quot;,
+&quot;etag&quot;:&quot;W\/\&quot;1-1548637419191\&quot;&quot;,&quot;type&quot;:&quot;UnitCtl.Cell&quot;},&quot;Name&quot;:&quot;sample&quot;,
+&quot;__published&quot;:&quot;\/Date  (1548637419191)\/&quot;,&quot;__updated&quot;:&quot;\/Date(1548637419191)\/&quot;}}}</code></pre></li>
+</ol></li>
+</ol>
+<h5>OS and Middleware on VM</h5>
+<ul>
+<li><p>OS<br />
+CentOS 7.2 x86_64</p></li>
+<li><p>Middleware</p>
+<table>
+<thead>
+<tr class="header">
+<th style="text-align: left;">Category</th>
+<th style="text-align: left;">Name</th>
+<th style="text-align: right;">Version</th>
+<th style="text-align: left;"></th>
+</tr>
+</thead>
+<tbody>
+<tr class="odd">
+<td style="text-align: left;">java</td>
+<td style="text-align: left;">AdoptOpenJDK</td>
+<td style="text-align: right;">8u192</td>
+<td style="text-align: left;">--</td>
+</tr>
+<tr class="even">
+<td style="text-align: left;">tomcat</td>
+<td style="text-align: left;">tomcat</td>
+<td style="text-align: right;">9.0.10</td>
+<td style="text-align: left;">web</td>
+</tr>
+<tr class="odd">
+<td style="text-align: left;"></td>
+<td style="text-align: left;">commons-daemon</td>
+<td style="text-align: right;">1.1.0</td>
+<td style="text-align: left;">--</td>
+</tr>
+<tr class="even">
+<td style="text-align: left;">nginx</td>
+<td style="text-align: left;">nginx</td>
+<td style="text-align: right;">1.14.0</td>
+<td style="text-align: left;">proxy</td>
+</tr>
+<tr class="odd">
+<td style="text-align: left;"></td>
+<td style="text-align: left;">Headers More</td>
+<td style="text-align: right;">0.32</td>
+<td style="text-align: left;">--</td>
+</tr>
+<tr class="even">
+<td style="text-align: left;">logback</td>
+<td style="text-align: left;">logback</td>
+<td style="text-align: right;">1.0.3</td>
+<td style="text-align: left;">--</td>
+</tr>
+<tr class="odd">
+<td style="text-align: left;"></td>
+<td style="text-align: left;">slf4j</td>
+<td style="text-align: right;">1.6.4</td>
+<td style="text-align: left;">--</td>
+</tr>
+<tr class="even">
+<td style="text-align: left;">memcached</td>
+<td style="text-align: left;">memcached</td>
+<td style="text-align: right;">1.4.21</td>
+<td style="text-align: left;">cache</td>
+</tr>
+<tr class="odd">
+<td style="text-align: left;">elasticsearch</td>
+<td style="text-align: left;">elasticsearch</td>
+<td style="text-align: right;">2.4.1</td>
+<td style="text-align: left;">db &amp; search engine</td>
+</tr>
+</tbody>
+</table></li>
+</ul>
+</div>
+  <footer><nav>The Personium project is provided under the Apache 2.0 license. </nav></footer>
+</body>
+</html>
+

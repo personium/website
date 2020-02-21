@@ -1,0 +1,241 @@
+<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml" lang="" xml:lang="">
+<head>
+  <!-- default template -->
+  <meta charset="utf-8" />
+  <meta name="generator" content="pandoc" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=yes" />
+  <link rel="icon" href="/images/favicon.ico" type="image/x-icon"/>
+  <title>Personium-Engine</title>
+  <script type="text/javascript">
+      var path = location.pathname.split('/');
+      var pathRoot = [ path[0], path[1], '' ].join('/');
+      var pathLang = [ path[0], path[1], path[2] , ''].join('/');
+
+      document.write('<link rel="stylesheet" href="' + pathRoot + 'personium.css" type="text/css" />');
+      document.write('<link rel="stylesheet" href="' + pathLang + 'locale.css" type="text/css" />');
+      var ps = document.createElement('script');
+      ps.src = pathRoot + 'personium_docs.js';
+      var s = document.getElementsByTagName('script')[0];
+      s.parentNode.insertBefore(ps, s);
+    
+      ps2 = document.createElement('script');
+      ps2.src = pathRoot + 'apiref_versions.js';
+      s = document.getElementsByTagName('script')[0];
+      s.parentNode.insertBefore(ps2, s);
+  </script>
+  <link href="https://fonts.googleapis.com/css?family=Raleway" rel="stylesheet">
+  <link href="https://fonts.googleapis.com/css?family=Open+Sans" rel="stylesheet">
+  
+  <!--[if lt IE 9]>
+    <script src="//cdnjs.cloudflare.com/ajax/libs/html5shiv/3.7.3/html5shiv-printshiv.min.js"></script>
+  <![endif]-->
+</head>
+<body>
+  <header>
+    <nav>
+    <div id="logo"><a href="/"><img src="https://personium.io/images/logo-quantify-dark.png"></a></div>
+    <ul>
+      <li class="submenu">
+        <a href="#" >Introduction</a>
+        <ul>
+            <li><a href="javascript:p.toPage('/overview/001_Introduction.html');">What's Personium?</a></li>
+            <li><a href="javascript:p.toPage('/user_guide/001_Personium_Architecture.html');">Architecture</a></li>
+            <li><a href="javascript:p.toPage('/user_guide/008_Glossary.html');">Glossary</a></li>
+        </ul>
+      </li>
+      <li class="submenu">
+        <a href="#" >User Guide</a>
+        <ul>
+            <li><a href="javascript:p.toPage('/app-developer/');">for App Developer</a></li>
+            <li><a href="javascript:p.toPage('/cell-gui-developer/');">for Cell GUI Developer</a></li>
+            <li><a href="javascript:p.toPage('/unit-administrator/');">for Unit Administrator</a></li>
+            <li><a href="javascript:p.toPage('/server-operator/');">for Server Software Operator</a></li>
+            <li><a href="javascript:p.toPage('/document-writer/');">for Documentation Contributor</a></li>
+            <li><a href="javascript:p.toPage('/plugin-developer/');">for Server Plugin Developer</a></li>
+            <li><a href="javascript:p.toPage('/software-developer/');">for Server Developer</a></li>
+        </ul>
+      </li>
+      <li class="submenu">
+        <a href="#" >API Reference</a>
+        <ul id="api-ref-list">
+            <li><a href="javascript:p.toPage('/user_guide/990_Old_Version_API_Ref.html');">older versions</a></li>
+        </ul>
+      </li>
+      <li class="submenu">
+        <a href="#" >Languages</a>
+        <ul>
+            <li><a href="javascript:p.setLang('en');">English</a></li>
+            <li><a href="javascript:p.setLang('ja');">Japanese</a></li>
+        </ul>
+      </li>
+    </ul>
+    </nav>
+  </header>
+
+<div id="container">
+<h1>Personium Engine</h1>
+<h2>概要</h2>
+<p>Personium Engine は、簡単なサーバサイドロジック（Engine Script）を登録しこれを走行させるための仕組みです。 EngineへのアクセスはBox内に作成した Engine Service Collection (ESC)を介して行います。</p>
+<ol>
+<li>ESC内に Engine Script ファイル配置</li>
+<li>ESCへのPROPPATCHメソッド発行でルーティング設定（どのパスでどのロジックを走行させるかという設定）を実施</li>
+<li>ESCや親ディレクトリへのACLメソッド発行でexec権限を付与</li>
+</ol>
+<p>上記3ステップの準備をすることで、指定パスの呼出でサーバサイドロジックが走行するようになります。</p>
+<p>多くの場合 Engine Script はアプリ開発者がbarファイルの中に含めて配布を行い、セルのオーナが box インストールを行うことで実行可能となります。またセルのオーナはアプリを操作する中でそれがどれだけUnitに負荷をかけるのかをイメージすることなくアプリを操作しますし、そういった操作を契機にEngine Scriptは実行されることとなります。</p>
+<p>そのため EngineはUnit に過度な負荷をかけたり、Unit を内部から攻撃するようなコードが記述できないようなサンドボックス環境として設計されています。</p>
+<p>一方で、その制約がきつすぎる場合には行えることが限定的になりすぎることもあるため、 ユニットの管理者が設定をすれば機能拡張を行えるような枠組みとして Engine Extension を用意しています。</p>
+<h2>Engine Service Collection (ESC)</h2>
+<p>ESC (Engine Service Collection) はBox内WebDAV空間の任意の場所に作成できる特殊Collectionで以下二つの役割を持っています。</p>
+<ul>
+<li>Engine Scriptの格納・管理</li>
+<li>実行のためのエンドポイント提供</li>
+</ul>
+<p>Engine Scriptの格納・管理は、ESC内に自動で作られるScript Source Collectionが担います。 またESCへのWebDAV PROPPATCH操作で p:service という要素を設定することで、配下のどのようなパスに対するリクエストに対してどの Engine Scriptが処理を受け持つべきかといったいわゆる処理の routing 設定を行うことができます。これによりESC配下の任意のパスに処理実行のためのエンドポイントを作成することができます。</p>
+<h3>ESCの作成・設定・削除</h3>
+<p>ESCの作成はMKCOLメソッドを使って行います。作成したESCパスへのDELETEメソッド発行でESCの削除が可能です。</p>
+<ul>
+<li><a href="../apiref/current/381_Create_Service_Collection_Source.html">ESCの作成</a></li>
+<li><a href="../apiref/current/383_Delete_Service_Collection_Source.html">ESCの削除</a></li>
+</ul>
+<p>また、ESCはMOVEメソッドでのリネームや移動が可能です。ACLメソッドを使ってのアクセス権設定においては、exec権限の付与が重要となります。</p>
+<h3>Engine Scriptの格納・管理</h3>
+<p>ESCを作成すると内部に自動的に__src/ というソース格納用のCollectionディレクトリが作成されます。これをScript Source Collectionと呼んでいます。ここにJavaScriptで記述したEngine Scriptを格納します。このディレクトリには子ディレクトリを作成することはできずMOVEやDELETEができませんが、それらの点をのぞき通常のWebDAV Collectionと同じであり、WebDAV操作によってEngine Scriptの登録・削除・更新を行います。</p>
+<h3>実行エンドポイントの設定</h3>
+<p>ESCにPROPPATCHメソッドを発行しプロパティを設定することによりロジック実行エンドポイントを設定できます。</p>
+<ul>
+<li><a href="../apiref/current/380_Configure_Service_Collection.html">ESCの実行設定</a></li>
+</ul>
+<h2>Engine Script</h2>
+<p>Engine ScriptはESCの中に登録する以下のようなスクリプトです。現在JavaScriptのみをサポートしています。</p>
+<pre><code>function(request) {
+  return {
+        status: 200,
+        headers: {&quot;Content-Type&quot;:&quot;text/plain&quot;},
+        body: [&quot;Hello World !!&quot;]
+  };
+}</code></pre>
+<p>Engine ScriptはJSGI仕様に従った関数として定義します。リクエストの情報は定義する関数の引数として引き渡されます。また関数の戻り値として定義するオブジェクトをもとにレスポンスが生成されます。</p>
+<h3>リクエスト</h3>
+<p>エンドポイントへのアクセスがあると以下仕様でリクエスト情報の入ったオブジェクトが引数として渡されるかたちで関数が実行されます。</p>
+<table>
+<thead>
+<tr class="header">
+<th style="text-align: left;">キー</th>
+<th style="text-align: left;">型</th>
+<th style="text-align: left;">値</th>
+</tr>
+</thead>
+<tbody>
+<tr class="odd">
+<td style="text-align: left;">method</td>
+<td style="text-align: left;">文字列</td>
+<td style="text-align: left;">HTTP のリクエストメソッド</td>
+</tr>
+<tr class="even">
+<td style="text-align: left;">headers</td>
+<td style="text-align: left;">Object</td>
+<td style="text-align: left;">HTTP リクエストヘッダ</td>
+</tr>
+<tr class="odd">
+<td style="text-align: left;">input</td>
+<td style="text-align: left;">Object</td>
+<td style="text-align: left;">HTTP リクエストボディ</td>
+</tr>
+<tr class="even">
+<td style="text-align: left;">queryString</td>
+<td style="text-align: left;">文字列</td>
+<td style="text-align: left;">HTTP リクエストURLのqueryString部</td>
+</tr>
+<tr class="odd">
+<td style="text-align: left;">pathInfo</td>
+<td style="text-align: left;">文字列</td>
+<td style="text-align: left;">HTTP リクエストURLのpathInfo部</td>
+</tr>
+<tr class="even">
+<td style="text-align: left;">scheme</td>
+<td style="text-align: left;">文字列</td>
+<td style="text-align: left;">HTTP リクエストURLのscheme部</td>
+</tr>
+<tr class="odd">
+<td style="text-align: left;">host</td>
+<td style="text-align: left;">文字列</td>
+<td style="text-align: left;">HTTP リクエストURLのhost部</td>
+</tr>
+<tr class="even">
+<td style="text-align: left;">port</td>
+<td style="text-align: left;">文字列</td>
+<td style="text-align: left;">HTTP リクエストURLのport部</td>
+</tr>
+<tr class="odd">
+<td style="text-align: left;">scriptName</td>
+<td style="text-align: left;">文字列</td>
+<td style="text-align: left;">スクリプト名</td>
+</tr>
+</tbody>
+</table>
+<h3>レスポンス</h3>
+<p>以下仕様のオブジェクトを関数の戻り値として返すようにしてください。それにより適切なHTTP応答をします。</p>
+<table>
+<thead>
+<tr class="header">
+<th style="text-align: left;">キー</th>
+<th style="text-align: left;">型</th>
+<th style="text-align: left;">値</th>
+</tr>
+</thead>
+<tbody>
+<tr class="odd">
+<td style="text-align: left;">status</td>
+<td style="text-align: left;">Number</td>
+<td style="text-align: left;">HTTP のステータスコード</td>
+</tr>
+<tr class="even">
+<td style="text-align: left;">headers</td>
+<td style="text-align: left;">Object</td>
+<td style="text-align: left;">HTTP レスポンスヘッダ</td>
+</tr>
+<tr class="odd">
+<td style="text-align: left;">body</td>
+<td style="text-align: left;">forEach関数が定義されたオブジェクト</td>
+<td style="text-align: left;">HTTP レスポンスボディ</td>
+</tr>
+</tbody>
+</table>
+<ul>
+<li><a href="./671_Engine_Script_Samples.html">Engine Scriptのサンプル</a></li>
+</ul>
+<h3>使用可能なグローバルオブジェクト</h3>
+<p>関数内では一般的なJavaScriptロジック記述に加えて、PersoniumのAPI呼出を行うための関数群であるPersonium Engine Library をはじめとするいくつかのグローバルオブジェクトが使用可能です。</p>
+<ul>
+<li>JSON</li>
+<li>String</li>
+<li>RegExp</li>
+<li>Object</li>
+<li>Array</li>
+<li>Math</li>
+<li>等</li>
+</ul>
+<h2>Engine Library</h2>
+<p>Engine LibrayはEngine Scriptの中で使うことのできるライブラリで_pというグローバルオブジェクトからアクセスします。自Cellの自Boxはもちろん、他Cellや他Boxへのアクセスもアクセスが許されていれば可能です。</p>
+<pre><code>function(request) {
+  var thisBox = _p.as(&#39;client&#39;).cell().box();
+  return {
+        status: 200,
+        headers: {&quot;Content-Type&quot;:&quot;text/plain&quot;},
+        body: [&quot;Hello World !!&quot;]
+  };
+}</code></pre>
+<h2>Engine Extension</h2>
+<p>Engine ExtensionはEngine Libraryの機能を拡張するための機構です。具体的にはJava言語で特定の方法で書かれたクラスを含んだjarファイルを ユニットに設定することにより、 Engine Script内で _p.extension. パッケージ以下に新たな機能を提供するオブジェクトが現れ、利用可能となります。</p>
+<p>Engine Extension は、概要で記載のとおりサンドボックス環境として設計されているengineの制約を緩和するための機構です。 そのため Engine Extensionの導入はユニット管理者でないと行うことができません。</p>
+<h3>Engine Extension のセットアップ</h3>
+<p>Engine Extensionを使用したい方は、<a href="../server-operator/setup_engine_extensions.html">Engine Extensionのセットアップ</a>をご覧ください。</p>
+<h3>Engine Extension の開発</h3>
+<p>Engine Extensionを開発したい方は、<a href="../plugin-developer/">プラグイン開発者向けガイド</a>をご覧ください。</p>
+</div>
+  <footer><nav>The Personium project is provided under the Apache 2.0 license. </nav></footer>
+</body>
+</html>
+

@@ -1,0 +1,573 @@
+<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml" lang="" xml:lang="">
+<head>
+  <!-- default template -->
+  <meta charset="utf-8" />
+  <meta name="generator" content="pandoc" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=yes" />
+  <link rel="icon" href="/images/favicon.ico" type="image/x-icon"/>
+  <title>tutorial</title>
+  <style type="text/css">
+div.sourceLine, a.sourceLine { display: inline-block; min-height: 1.25em; }
+a.sourceLine { pointer-events: none; color: inherit; text-decoration: inherit; }
+.sourceCode { overflow: visible; }
+code.sourceCode { white-space: pre; }
+@media print {
+code.sourceCode { white-space: pre-wrap; }
+div.sourceLine, a.sourceLine { text-indent: -1em; padding-left: 1em; }
+}
+pre.numberSource div.sourceLine, .numberSource a.sourceLine
+  { position: relative; }
+pre.numberSource div.sourceLine::before, .numberSource a.sourceLine::before
+  { content: attr(data-line-number);
+    position: absolute; left: -5em; text-align: right; vertical-align: baseline;
+    border: none; pointer-events: all;
+    -webkit-touch-callout: none; -webkit-user-select: none;
+    -khtml-user-select: none; -moz-user-select: none;
+    -ms-user-select: none; user-select: none;
+    padding: 0 4px; width: 4em; }
+pre.numberSource { margin-left: 3em; border-left: 1px solid #aaaaaa; color: #aaaaaa;  padding-left: 4px; }
+@media screen {
+a.sourceLine::before { text-decoration: underline; color: initial; }
+}
+code span.kw { color: #007020; font-weight: bold; } /* Keyword */
+code span.dt { color: #902000; } /* DataType */
+code span.dv { color: #40a070; } /* DecVal */
+code span.bn { color: #40a070; } /* BaseN */
+code span.fl { color: #40a070; } /* Float */
+code span.ch { color: #4070a0; } /* Char */
+code span.st { color: #4070a0; } /* String */
+code span.co { color: #60a0b0; font-style: italic; } /* Comment */
+code span.ot { color: #007020; } /* Other */
+code span.al { color: #ff0000; font-weight: bold; } /* Alert */
+code span.fu { color: #06287e; } /* Function */
+code span.er { color: #ff0000; font-weight: bold; } /* Error */
+code span.wa { color: #60a0b0; font-weight: bold; font-style: italic; } /* Warning */
+code span.cn { color: #880000; } /* Constant */
+code span.sc { color: #4070a0; } /* SpecialChar */
+code span.vs { color: #4070a0; } /* VerbatimString */
+code span.ss { color: #bb6688; } /* SpecialString */
+code span.im { } /* Import */
+code span.va { color: #19177c; } /* Variable */
+code span.cf { color: #007020; font-weight: bold; } /* ControlFlow */
+code span.op { color: #666666; } /* Operator */
+code span.bu { } /* BuiltIn */
+code span.ex { } /* Extension */
+code span.pp { color: #bc7a00; } /* Preprocessor */
+code span.at { color: #7d9029; } /* Attribute */
+code span.do { color: #ba2121; font-style: italic; } /* Documentation */
+code span.an { color: #60a0b0; font-weight: bold; font-style: italic; } /* Annotation */
+code span.cv { color: #60a0b0; font-weight: bold; font-style: italic; } /* CommentVar */
+code span.in { color: #60a0b0; font-weight: bold; font-style: italic; } /* Information */
+  </style>
+  <script type="text/javascript">
+      var path = location.pathname.split('/');
+      var pathRoot = [ path[0], path[1], '' ].join('/');
+      var pathLang = [ path[0], path[1], path[2] , ''].join('/');
+
+      document.write('<link rel="stylesheet" href="' + pathRoot + 'personium.css" type="text/css" />');
+      document.write('<link rel="stylesheet" href="' + pathLang + 'locale.css" type="text/css" />');
+      var ps = document.createElement('script');
+      ps.src = pathRoot + 'personium_docs.js';
+      var s = document.getElementsByTagName('script')[0];
+      s.parentNode.insertBefore(ps, s);
+    
+      ps2 = document.createElement('script');
+      ps2.src = pathRoot + 'apiref_versions.js';
+      s = document.getElementsByTagName('script')[0];
+      s.parentNode.insertBefore(ps2, s);
+  </script>
+  <link href="https://fonts.googleapis.com/css?family=Raleway" rel="stylesheet">
+  <link href="https://fonts.googleapis.com/css?family=Open+Sans" rel="stylesheet">
+  
+  <!--[if lt IE 9]>
+    <script src="//cdnjs.cloudflare.com/ajax/libs/html5shiv/3.7.3/html5shiv-printshiv.min.js"></script>
+  <![endif]-->
+</head>
+<body>
+  <header>
+    <nav>
+    <div id="logo"><a href="/"><img src="https://personium.io/images/logo-quantify-dark.png"></a></div>
+    <ul>
+      <li class="submenu">
+        <a href="#" >Introduction</a>
+        <ul>
+            <li><a href="javascript:p.toPage('/overview/001_Introduction.html');">What's Personium?</a></li>
+            <li><a href="javascript:p.toPage('/user_guide/001_Personium_Architecture.html');">Architecture</a></li>
+            <li><a href="javascript:p.toPage('/user_guide/008_Glossary.html');">Glossary</a></li>
+        </ul>
+      </li>
+      <li class="submenu">
+        <a href="#" >User Guide</a>
+        <ul>
+            <li><a href="javascript:p.toPage('/app-developer/');">for App Developer</a></li>
+            <li><a href="javascript:p.toPage('/cell-gui-developer/');">for Cell GUI Developer</a></li>
+            <li><a href="javascript:p.toPage('/unit-administrator/');">for Unit Administrator</a></li>
+            <li><a href="javascript:p.toPage('/server-operator/');">for Server Software Operator</a></li>
+            <li><a href="javascript:p.toPage('/document-writer/');">for Documentation Contributor</a></li>
+            <li><a href="javascript:p.toPage('/plugin-developer/');">for Server Plugin Developer</a></li>
+            <li><a href="javascript:p.toPage('/software-developer/');">for Server Developer</a></li>
+        </ul>
+      </li>
+      <li class="submenu">
+        <a href="#" >API Reference</a>
+        <ul id="api-ref-list">
+            <li><a href="javascript:p.toPage('/user_guide/990_Old_Version_API_Ref.html');">older versions</a></li>
+        </ul>
+      </li>
+      <li class="submenu">
+        <a href="#" >Languages</a>
+        <ul>
+            <li><a href="javascript:p.setLang('en');">English</a></li>
+            <li><a href="javascript:p.setLang('ja');">Japanese</a></li>
+        </ul>
+      </li>
+    </ul>
+    </nav>
+  </header>
+
+<div id="container">
+<p><strong>※この文書はPersonium Version 1.6.15 以降をご利用される方を対象としています。</strong></p>
+<h1>Personiumユニット管理 チュートリアル</h1>
+<h5><a href="#sect1">1. 本文書の目的</a></h5>
+<h5><a href="#sect2">2. 本文書の読者</a></h5>
+<h5><a href="#sect3">3. Unit, Cell, Boxの概要説明</a></h5>
+<h5><a href="#sect4">4. トークンについて</a></h5>
+<h5><a href="#sect5">5. PDSを利用者に払い出す</a></h5>
+<h5>　　<a href="#sect5.1">5-1. Cellの作成</a></h5>
+<h5>　　<a href="#sect5.2">5-2. Cellの管理者Accountの作成</a></h5>
+<h5>　　　　<a href="#sect5.2.1">5-2-1. Accountの作成</a></h5>
+<h5>　　　　<a href="#sect5.2.2">5-2-2. Roleの作成</a></h5>
+<h5>　　　　<a href="#sect5.2.3">5-2-3. AccountとRoleの紐づけ</a></h5>
+<h5>　　　　<a href="#sect5.2.4">5-2-4. ACLの設定</a></h5>
+<h5>　　<a href="#sect5.3">5-3. メインBoxへの最初のデータ配置</a></h5>
+<h5>　　　　<a href="#sect5.3.1">5-3-1. profile.json を置く</a></h5>
+<h5>　　<a href="#sect5.4">5-4. 一般ユーザー向けの操作画面を設定する</a></h5>
+<h5>　　<a href="#sect5.5">5-5. GUIから使ってみる</a></h5>
+<h5><a href="#sect6">6. 払い出したPDSを削除する</a></h5>
+<h5><a href="#sect7">7. GUI操作のデモ動画を見てみる</a></h5>
+<h5><a href="#sect8">8. PDSの払い出しを自動化する</a></h5>
+<h2><a name="sect1">1. 本文書の目的</a></h2>
+<p>本文書は、Personiumを初めてご利用される方でも、すぐにPersoniumユニットを管理するための基本的な流れをご理解いただけるよう具体的な手順を説明したものです。</p>
+<p>Personiumでは全ての機能をREST APIで提供しておりますので、OSや開発言語を問わずご利用いただけます。 javascriptを用いたサンプルソースが公開されていますので、是非ご活用ください。</p>
+<ul>
+<li><a href="https://github.com/personium/template-app-cell">MinimalApp</a> … 「Hello world」相当の最小限のアプリ。</li>
+<li><a href="https://github.com/personium/app-myboard">MyBoard</a> … ACL管理・データ開示の操作をdemoするPersoniumアプリ。</li>
+</ul>
+<p>なお、本文書でAPIを呼び出すサンプルについては、すべて<a href="https://curl.haxx.se/">cURL</a>を使用しています。</p>
+<h2><a name="sect2">2. 本文書の読者</a></h2>
+<p>本文書は、Personiumを初めて使用される方を対象としています。 本文書を読むためには、以下の知識が必要です。</p>
+<ul>
+<li>インターネットに関する基本的な知識</li>
+<li>Representational State Transfer(REST)に関する基本的な知識</li>
+<li>使用するオペレーティングシステムに関する基本的な知識</li>
+</ul>
+<h2><a name="sect3">3. Unit, Cell, Boxの概要説明</a></h2>
+<p>「Personium」を使用する上で最低限押えてべきキーワードを抜粋しました。 本チュートリアル内でも何度も出てくるキーワードになります。</p>
+<table style="width:11%;">
+<colgroup>
+<col style="width: 5%" />
+<col style="width: 5%" />
+</colgroup>
+<thead>
+<tr class="header">
+<th style="text-align: left;">キーワード<br></th>
+<th style="text-align: left;">概要<br></th>
+</tr>
+</thead>
+<tbody>
+<tr class="odd">
+<td style="text-align: left;">Unit<br></td>
+<td style="text-align: left;">「Personium」のサーバ内で、複数のセルから構成されるデータ領域。<br>完全修飾ドメイン名（UnitFQDN）を持ち、絶対ドメイン名として参照される。<br></td>
+</tr>
+<tr class="even">
+<td style="text-align: left;">Cell<br></td>
+<td style="text-align: left;">データ主体ごとのData Strore。個人で使う場合はPDS(Personal Data Store)となる。<br>「Personium」では、データ主体という概念を人のみでなく組織やモノなどにも拡張したモデル化を行っているため、組織やモノのデータストアとしても使うことが可能。<br>（例、私のCell, あなたのCell, ○○会社のCell, ○○部のCell, 私の車のCell）<br></td>
+</tr>
+<tr class="odd">
+<td style="text-align: left;">Box<br></td>
+<td style="text-align: left;">アプリケーションに用いるデータを格納する領域。<br>自身もWebDAVコレクションの一つである。一意の名前とスキーマURLを持つ。<br>Cellは、Box未作成でも初期状態で1つのBox（メインボックス） を持ち、削除は不可。<br></td>
+</tr>
+</tbody>
+</table>
+<h2><a name="sect4">4. トークンについて</a></h2>
+<p>本文書では、Personiumユニットの操作のためユニットマスタートークン、またはユニットユーザートークンを使用します。ユニットマスタートークンやユニットユーザートークンの詳細については<a href="Unit-User.html">こちら</a>を参照ください。</p>
+<p>Ansible を使って構築した環境のユニットマスタートークンやユニットユーザーのアカウント名／パスワードの確認方法は<a href="../server-operator/Confirm_environment_settings.html">こちら</a>を参照してください。<br />
+独自に環境を構築された場合はサーバソフトウェア管理者に確認してください。</p>
+<h2><a name="sect5">5. PDSを利用者に払い出す</a></h2>
+<p>実際のPersoniumの運用において、これら一連のAPI操作はプログラムで自動化することになるかと思いますが、本チュートリアルでは一つ一つ手動で実施してみましょう。</p>
+<h3><a name="sect5.1">5-1. Cellの作成</a></h3>
+<p>何も入っていない空のCell(PDS)を作ります。</p>
+<p>新たなCellを追加作成する前に、Cell一覧取得APIで事前の状態を確認してみましょう。 構築直後のPersoniumユニットには、ユニット管理用のCellのみ登録されている状態です。</p>
+<pre class="sourceCode sh" id="cb1"><code class="sourceCode bash"><div class="sourceLine" id="cb1-1" data-line-number="1"><span class="ex">curl</span> <span class="st">&quot;https://{Personium_FQDN}/__ctl/Cell&quot;</span> \</div>
+<div class="sourceLine" id="cb1-2" data-line-number="2">-X GET -i -k \</div>
+<div class="sourceLine" id="cb1-3" data-line-number="3">-H <span class="st">&quot;Accept:application/json&quot;</span> -H <span class="st">&quot;Authorization:Bearer {Token}&quot;</span></div></code></pre>
+<p>ユニット管理用のCellの情報1件がレスポンスに返ります。 この状態が Personiumユニット の初期状態です。</p>
+<pre class="sourceCode json" id="cb2"><code class="sourceCode json"><div class="sourceLine" id="cb2-1" data-line-number="1"><span class="fu">{</span></div>
+<div class="sourceLine" id="cb2-2" data-line-number="2">    <span class="dt">&quot;d&quot;</span><span class="fu">:</span> <span class="fu">{</span></div>
+<div class="sourceLine" id="cb2-3" data-line-number="3">        <span class="dt">&quot;results&quot;</span><span class="fu">:</span> <span class="ot">[</span></div>
+<div class="sourceLine" id="cb2-4" data-line-number="4">            <span class="fu">{</span></div>
+<div class="sourceLine" id="cb2-5" data-line-number="5">                <span class="dt">&quot;__metadata&quot;</span><span class="fu">:</span> <span class="fu">{</span></div>
+<div class="sourceLine" id="cb2-6" data-line-number="6">                    <span class="dt">&quot;uri&quot;</span><span class="fu">:</span> <span class="st">&quot;https:</span><span class="ch">\/\/</span><span class="st">jp-west-1-dev-2034289.k5personium.cloud</span><span class="ch">\/</span><span class="st">__ctl</span><span class="ch">\/</span><span class="st">Cell(&#39;unitadmin&#39;)&quot;</span><span class="fu">,</span></div>
+<div class="sourceLine" id="cb2-7" data-line-number="7">                    <span class="dt">&quot;etag&quot;</span><span class="fu">:</span> <span class="st">&quot;W</span><span class="ch">\/\&quot;</span><span class="st">1-1537265056908</span><span class="ch">\&quot;</span><span class="st">&quot;</span><span class="fu">,</span></div>
+<div class="sourceLine" id="cb2-8" data-line-number="8">                    <span class="dt">&quot;type&quot;</span><span class="fu">:</span> <span class="st">&quot;UnitCtl.Cell&quot;</span></div>
+<div class="sourceLine" id="cb2-9" data-line-number="9">                <span class="fu">},</span></div>
+<div class="sourceLine" id="cb2-10" data-line-number="10">                <span class="dt">&quot;Name&quot;</span><span class="fu">:</span> <span class="st">&quot;unitadmin&quot;</span><span class="fu">,</span></div>
+<div class="sourceLine" id="cb2-11" data-line-number="11">                <span class="dt">&quot;__published&quot;</span><span class="fu">:</span> <span class="st">&quot;</span><span class="ch">\/</span><span class="st">Date(1537265056908)</span><span class="ch">\/</span><span class="st">&quot;</span><span class="fu">,</span></div>
+<div class="sourceLine" id="cb2-12" data-line-number="12">                <span class="dt">&quot;__updated&quot;</span><span class="fu">:</span> <span class="st">&quot;</span><span class="ch">\/</span><span class="st">Date(1537265056908)</span><span class="ch">\/</span><span class="st">&quot;</span></div>
+<div class="sourceLine" id="cb2-13" data-line-number="13">            <span class="fu">}</span></div>
+<div class="sourceLine" id="cb2-14" data-line-number="14">        <span class="ot">]</span></div>
+<div class="sourceLine" id="cb2-15" data-line-number="15">    <span class="fu">}</span></div>
+<div class="sourceLine" id="cb2-16" data-line-number="16"><span class="fu">}</span></div></code></pre>
+<p>では、実際にCellを作成してみましょう。 Cell作成APIを呼び出す際に、Cellの名前を任意に指定します。 この例では &quot;usercell&quot; が Cell名になります。</p>
+<blockquote>
+<p><strong>（注意）</strong> <strong>CellのルートURLは公開となります。</strong> <strong>Cell名にメールアドレスなどをそのまま使用すると、レスポンスに依って存在の有無が判明してしまいますので注意が必要です。</strong></p>
+</blockquote>
+<pre class="sourceCode sh" id="cb3"><code class="sourceCode bash"><div class="sourceLine" id="cb3-1" data-line-number="1"><span class="ex">curl</span> <span class="st">&quot;https://{Personium_FQDN}/__ctl/Cell&quot;</span> \</div>
+<div class="sourceLine" id="cb3-2" data-line-number="2">-X POST -i -k \</div>
+<div class="sourceLine" id="cb3-3" data-line-number="3">-d <span class="st">&quot;{</span><span class="dt">\&quot;</span><span class="st">Name</span><span class="dt">\&quot;</span><span class="st">:</span><span class="dt">\&quot;</span><span class="st">usercell</span><span class="dt">\&quot;</span><span class="st">}&quot;</span> \</div>
+<div class="sourceLine" id="cb3-4" data-line-number="4">-H <span class="st">&quot;Authorization:Bearer {Token}&quot;</span></div></code></pre>
+<p>成功すると、今回作成されたCellの情報がレスポンスに返ります。</p>
+<pre class="sourceCode json" id="cb4"><code class="sourceCode json"><div class="sourceLine" id="cb4-1" data-line-number="1"><span class="fu">{</span></div>
+<div class="sourceLine" id="cb4-2" data-line-number="2">    <span class="dt">&quot;d&quot;</span><span class="fu">:</span> <span class="fu">{</span></div>
+<div class="sourceLine" id="cb4-3" data-line-number="3">        <span class="dt">&quot;results&quot;</span><span class="fu">:</span> <span class="fu">{</span></div>
+<div class="sourceLine" id="cb4-4" data-line-number="4">            <span class="dt">&quot;__metadata&quot;</span><span class="fu">:</span> <span class="fu">{</span></div>
+<div class="sourceLine" id="cb4-5" data-line-number="5">                <span class="dt">&quot;uri&quot;</span><span class="fu">:</span> <span class="st">&quot;https://{Personium_FQDN}/__ctl/Cell(&#39;usercell&#39;)&quot;</span><span class="fu">,</span></div>
+<div class="sourceLine" id="cb4-6" data-line-number="6">                <span class="dt">&quot;etag&quot;</span><span class="fu">:</span> <span class="st">&quot;W</span><span class="ch">\/\&quot;</span><span class="st">1-1539241336221</span><span class="ch">\&quot;</span><span class="st">&quot;</span><span class="fu">,</span></div>
+<div class="sourceLine" id="cb4-7" data-line-number="7">                <span class="dt">&quot;type&quot;</span><span class="fu">:</span> <span class="st">&quot;UnitCtl.Cell&quot;</span></div>
+<div class="sourceLine" id="cb4-8" data-line-number="8">            <span class="fu">},</span></div>
+<div class="sourceLine" id="cb4-9" data-line-number="9">            <span class="dt">&quot;Name&quot;</span><span class="fu">:</span> <span class="st">&quot;usercell&quot;</span><span class="fu">,</span></div>
+<div class="sourceLine" id="cb4-10" data-line-number="10">            <span class="dt">&quot;__published&quot;</span><span class="fu">:</span> <span class="st">&quot;</span><span class="ch">\/</span><span class="st">Date(1539241336221)</span><span class="ch">\/</span><span class="st">&quot;</span><span class="fu">,</span></div>
+<div class="sourceLine" id="cb4-11" data-line-number="11">            <span class="dt">&quot;__updated&quot;</span><span class="fu">:</span> <span class="st">&quot;</span><span class="ch">\/</span><span class="st">Date(1539241336221)</span><span class="ch">\/</span><span class="st">&quot;</span></div>
+<div class="sourceLine" id="cb4-12" data-line-number="12">        <span class="fu">}</span></div>
+<div class="sourceLine" id="cb4-13" data-line-number="13">    <span class="fu">}</span></div>
+<div class="sourceLine" id="cb4-14" data-line-number="14"><span class="fu">}</span></div></code></pre>
+<p>再度Cell一覧取得APIを呼び出すと&quot;usercell&quot;が追加されている状態がレスポンスに返ります。</p>
+<pre class="sourceCode json" id="cb5"><code class="sourceCode json"><div class="sourceLine" id="cb5-1" data-line-number="1"><span class="fu">{</span></div>
+<div class="sourceLine" id="cb5-2" data-line-number="2">    <span class="dt">&quot;d&quot;</span><span class="fu">:</span> <span class="fu">{</span></div>
+<div class="sourceLine" id="cb5-3" data-line-number="3">        <span class="dt">&quot;results&quot;</span><span class="fu">:</span> <span class="ot">[</span></div>
+<div class="sourceLine" id="cb5-4" data-line-number="4">            <span class="fu">{</span></div>
+<div class="sourceLine" id="cb5-5" data-line-number="5">                <span class="dt">&quot;__metadata&quot;</span><span class="fu">:</span> <span class="fu">{</span></div>
+<div class="sourceLine" id="cb5-6" data-line-number="6">                    <span class="dt">&quot;uri&quot;</span><span class="fu">:</span> <span class="st">&quot;https:</span><span class="ch">\/\/</span><span class="st">jp-west-1-dev-2034289.k5personium.cloud</span><span class="ch">\/</span><span class="st">__ctl</span><span class="ch">\/</span><span class="st">Cell(&#39;unitadmin&#39;)&quot;</span><span class="fu">,</span></div>
+<div class="sourceLine" id="cb5-7" data-line-number="7">                    <span class="dt">&quot;etag&quot;</span><span class="fu">:</span> <span class="st">&quot;W</span><span class="ch">\/\&quot;</span><span class="st">1-1537265056908</span><span class="ch">\&quot;</span><span class="st">&quot;</span><span class="fu">,</span></div>
+<div class="sourceLine" id="cb5-8" data-line-number="8">                    <span class="dt">&quot;type&quot;</span><span class="fu">:</span> <span class="st">&quot;UnitCtl.Cell&quot;</span></div>
+<div class="sourceLine" id="cb5-9" data-line-number="9">                <span class="fu">},</span></div>
+<div class="sourceLine" id="cb5-10" data-line-number="10">                <span class="dt">&quot;Name&quot;</span><span class="fu">:</span> <span class="st">&quot;unitadmin&quot;</span><span class="fu">,</span></div>
+<div class="sourceLine" id="cb5-11" data-line-number="11">                <span class="dt">&quot;__published&quot;</span><span class="fu">:</span> <span class="st">&quot;</span><span class="ch">\/</span><span class="st">Date(1537265056908)</span><span class="ch">\/</span><span class="st">&quot;</span><span class="fu">,</span></div>
+<div class="sourceLine" id="cb5-12" data-line-number="12">                <span class="dt">&quot;__updated&quot;</span><span class="fu">:</span> <span class="st">&quot;</span><span class="ch">\/</span><span class="st">Date(1537265056908)</span><span class="ch">\/</span><span class="st">&quot;</span></div>
+<div class="sourceLine" id="cb5-13" data-line-number="13">            <span class="fu">}</span><span class="ot">,</span></div>
+<div class="sourceLine" id="cb5-14" data-line-number="14">            <span class="fu">{</span></div>
+<div class="sourceLine" id="cb5-15" data-line-number="15">                <span class="dt">&quot;__metadata&quot;</span><span class="fu">:</span> <span class="fu">{</span></div>
+<div class="sourceLine" id="cb5-16" data-line-number="16">                    <span class="dt">&quot;uri&quot;</span><span class="fu">:</span> <span class="st">&quot;https:</span><span class="ch">\/\/</span><span class="st">jp-west-1-dev-2034289.k5personium.cloud</span><span class="ch">\/</span><span class="st">__ctl</span><span class="ch">\/</span><span class="st">Cell(&#39;usercell&#39;)&quot;</span><span class="fu">,</span></div>
+<div class="sourceLine" id="cb5-17" data-line-number="17">                    <span class="dt">&quot;etag&quot;</span><span class="fu">:</span> <span class="st">&quot;W</span><span class="ch">\/\&quot;</span><span class="st">1-1539241336221</span><span class="ch">\&quot;</span><span class="st">&quot;</span><span class="fu">,</span></div>
+<div class="sourceLine" id="cb5-18" data-line-number="18">                    <span class="dt">&quot;type&quot;</span><span class="fu">:</span> <span class="st">&quot;UnitCtl.Cell&quot;</span></div>
+<div class="sourceLine" id="cb5-19" data-line-number="19">                <span class="fu">},</span></div>
+<div class="sourceLine" id="cb5-20" data-line-number="20">                <span class="dt">&quot;Name&quot;</span><span class="fu">:</span> <span class="st">&quot;usercell&quot;</span><span class="fu">,</span></div>
+<div class="sourceLine" id="cb5-21" data-line-number="21">                <span class="dt">&quot;__published&quot;</span><span class="fu">:</span> <span class="st">&quot;</span><span class="ch">\/</span><span class="st">Date(1539241336221)</span><span class="ch">\/</span><span class="st">&quot;</span><span class="fu">,</span></div>
+<div class="sourceLine" id="cb5-22" data-line-number="22">                <span class="dt">&quot;__updated&quot;</span><span class="fu">:</span> <span class="st">&quot;</span><span class="ch">\/</span><span class="st">Date(1539241336221)</span><span class="ch">\/</span><span class="st">&quot;</span></div>
+<div class="sourceLine" id="cb5-23" data-line-number="23">            <span class="fu">}</span></div>
+<div class="sourceLine" id="cb5-24" data-line-number="24">        <span class="ot">]</span></div>
+<div class="sourceLine" id="cb5-25" data-line-number="25">    <span class="fu">}</span></div>
+<div class="sourceLine" id="cb5-26" data-line-number="26"><span class="fu">}</span></div></code></pre>
+<h3><a name="sect5.2">5-2. Cellの管理者Accountの作成</a></h3>
+<p>Accountは特定のCellに属するユーザを意味し、アカウント名やパスワードといった情報に依って保持されます。 1つのCellに対して複数のAccount登録が可能です。</p>
+<h4><a name="sect5.2.1">5-2-1. Accountの作成</a></h4>
+<p>前項で作成したCellにAccountを作成します。</p>
+<p>Accountを追加作成する前に、Account一覧取得APIで事前の状態を確認してみましょう。 作成したばかりのCellにはAccountが登録されていない状態です。</p>
+<pre class="sourceCode sh" id="cb6"><code class="sourceCode bash"><div class="sourceLine" id="cb6-1" data-line-number="1"><span class="ex">curl</span> <span class="st">&quot;https://{Personium_FQDN}/usercell/__ctl/Account&quot;</span> \</div>
+<div class="sourceLine" id="cb6-2" data-line-number="2">-X GET -i -k \</div>
+<div class="sourceLine" id="cb6-3" data-line-number="3">-H <span class="st">&quot;Accept:application/json&quot;</span> -H <span class="st">&quot;Authorization:Bearer {Token}&quot;</span></div></code></pre>
+<p>Accountの情報が無い様子がレスポンスに返ります。</p>
+<pre class="sourceCode json" id="cb7"><code class="sourceCode json"><div class="sourceLine" id="cb7-1" data-line-number="1"><span class="fu">{</span></div>
+<div class="sourceLine" id="cb7-2" data-line-number="2">    <span class="dt">&quot;d&quot;</span><span class="fu">:</span> <span class="fu">{</span></div>
+<div class="sourceLine" id="cb7-3" data-line-number="3">        <span class="dt">&quot;results&quot;</span><span class="fu">:</span> <span class="ot">[]</span></div>
+<div class="sourceLine" id="cb7-4" data-line-number="4">    <span class="fu">}</span></div>
+<div class="sourceLine" id="cb7-5" data-line-number="5"><span class="fu">}</span></div></code></pre>
+<p>Accountを作成してみましょう。 Account作成APIを呼び出す際に、Accountの名前を任意に指定します。 この例では&quot;me&quot;がAccount名、&quot;password&quot;がパスワードになります。</p>
+<pre class="sourceCode sh" id="cb8"><code class="sourceCode bash"><div class="sourceLine" id="cb8-1" data-line-number="1"><span class="ex">curl</span> <span class="st">&quot;https://{Personium_FQDN}/usercell/__ctl/Account&quot;</span> \</div>
+<div class="sourceLine" id="cb8-2" data-line-number="2">-X POST -i -k \</div>
+<div class="sourceLine" id="cb8-3" data-line-number="3">-d <span class="st">&quot;{</span><span class="dt">\&quot;</span><span class="st">Name</span><span class="dt">\&quot;</span><span class="st">:</span><span class="dt">\&quot;</span><span class="st">me</span><span class="dt">\&quot;</span><span class="st">}&quot;</span> \</div>
+<div class="sourceLine" id="cb8-4" data-line-number="4">-H <span class="st">&quot;X-Personium-Credential:password&quot;</span> -H <span class="st">&quot;Content-Type: application/json&quot;</span> -H <span class="st">&quot;Authorization:Bearer {Token}&quot;</span></div></code></pre>
+<p>成功すると、今回作成されたAccountの情報がレスポンスとして返ります。</p>
+<pre class="sourceCode json" id="cb9"><code class="sourceCode json"><div class="sourceLine" id="cb9-1" data-line-number="1"><span class="fu">{</span></div>
+<div class="sourceLine" id="cb9-2" data-line-number="2">    <span class="dt">&quot;d&quot;</span><span class="fu">:</span> <span class="fu">{</span></div>
+<div class="sourceLine" id="cb9-3" data-line-number="3">        <span class="dt">&quot;results&quot;</span><span class="fu">:</span> <span class="fu">{</span></div>
+<div class="sourceLine" id="cb9-4" data-line-number="4">            <span class="dt">&quot;__updated&quot;</span><span class="fu">:</span> <span class="st">&quot;/Date(1484724933394)/&quot;</span><span class="fu">,</span></div>
+<div class="sourceLine" id="cb9-5" data-line-number="5">            <span class="dt">&quot;__published&quot;</span><span class="fu">:</span> <span class="st">&quot;/Date(1484724933394)/&quot;</span><span class="fu">,</span></div>
+<div class="sourceLine" id="cb9-6" data-line-number="6">            <span class="dt">&quot;Cell&quot;</span><span class="fu">:</span> <span class="kw">null</span><span class="fu">,</span></div>
+<div class="sourceLine" id="cb9-7" data-line-number="7">            <span class="dt">&quot;Type&quot;</span><span class="fu">:</span> <span class="st">&quot;basic&quot;</span><span class="fu">,</span></div>
+<div class="sourceLine" id="cb9-8" data-line-number="8">            <span class="dt">&quot;LastAuthenticated&quot;</span><span class="fu">:</span> <span class="kw">null</span><span class="fu">,</span></div>
+<div class="sourceLine" id="cb9-9" data-line-number="9">            <span class="dt">&quot;Name&quot;</span><span class="fu">:</span> <span class="st">&quot;me&quot;</span><span class="fu">,</span></div>
+<div class="sourceLine" id="cb9-10" data-line-number="10">            <span class="dt">&quot;__metadata&quot;</span><span class="fu">:</span> <span class="fu">{</span></div>
+<div class="sourceLine" id="cb9-11" data-line-number="11">                <span class="dt">&quot;type&quot;</span><span class="fu">:</span> <span class="st">&quot;CellCtl.Account&quot;</span><span class="fu">,</span></div>
+<div class="sourceLine" id="cb9-12" data-line-number="12">                <span class="dt">&quot;etag&quot;</span><span class="fu">:</span> <span class="st">&quot;W/</span><span class="ch">\&quot;</span><span class="st">1-1484724933394</span><span class="ch">\&quot;</span><span class="st">&quot;</span><span class="fu">,</span></div>
+<div class="sourceLine" id="cb9-13" data-line-number="13">                <span class="dt">&quot;uri&quot;</span><span class="fu">:</span> <span class="st">&quot;https://{Personium_FQDN}/usercell/__ctl/Account(&#39;me&#39;)&quot;</span></div>
+<div class="sourceLine" id="cb9-14" data-line-number="14">            <span class="fu">}</span></div>
+<div class="sourceLine" id="cb9-15" data-line-number="15">        <span class="fu">}</span></div>
+<div class="sourceLine" id="cb9-16" data-line-number="16">    <span class="fu">}</span></div>
+<div class="sourceLine" id="cb9-17" data-line-number="17"><span class="fu">}</span></div></code></pre>
+<p>再度Account一覧取得APIを呼び出すと&quot;me&quot;が在る状態がレスポンスに返ります。</p>
+<pre class="sourceCode json" id="cb10"><code class="sourceCode json"><div class="sourceLine" id="cb10-1" data-line-number="1"><span class="fu">{</span></div>
+<div class="sourceLine" id="cb10-2" data-line-number="2">    <span class="dt">&quot;d&quot;</span><span class="fu">:</span> <span class="fu">{</span></div>
+<div class="sourceLine" id="cb10-3" data-line-number="3">        <span class="dt">&quot;results&quot;</span><span class="fu">:</span> <span class="ot">[</span></div>
+<div class="sourceLine" id="cb10-4" data-line-number="4">            <span class="fu">{</span></div>
+<div class="sourceLine" id="cb10-5" data-line-number="5">                <span class="dt">&quot;_ReceivedMessageRead&quot;</span><span class="fu">:</span> <span class="fu">{</span></div>
+<div class="sourceLine" id="cb10-6" data-line-number="6">                    <span class="dt">&quot;__deferred&quot;</span><span class="fu">:</span> <span class="fu">{</span></div>
+<div class="sourceLine" id="cb10-7" data-line-number="7">                        <span class="dt">&quot;uri&quot;</span><span class="fu">:</span> <span class="st">&quot;https://{Personium_FQDN}/usercell/__ctl/Account(&#39;me&#39;)/_ReceivedMessageRead&quot;</span></div>
+<div class="sourceLine" id="cb10-8" data-line-number="8">                    <span class="fu">}</span></div>
+<div class="sourceLine" id="cb10-9" data-line-number="9">                <span class="fu">},</span></div>
+<div class="sourceLine" id="cb10-10" data-line-number="10">                <span class="dt">&quot;__metadata&quot;</span><span class="fu">:</span> <span class="fu">{</span></div>
+<div class="sourceLine" id="cb10-11" data-line-number="11">                    <span class="dt">&quot;type&quot;</span><span class="fu">:</span> <span class="st">&quot;CellCtl.Account&quot;</span><span class="fu">,</span></div>
+<div class="sourceLine" id="cb10-12" data-line-number="12">                    <span class="dt">&quot;etag&quot;</span><span class="fu">:</span> <span class="st">&quot;W/</span><span class="ch">\&quot;</span><span class="st">1-1484724933394</span><span class="ch">\&quot;</span><span class="st">&quot;</span><span class="fu">,</span></div>
+<div class="sourceLine" id="cb10-13" data-line-number="13">                    <span class="dt">&quot;uri&quot;</span><span class="fu">:</span> <span class="st">&quot;https://{Personium_FQDN}/usercell/__ctl/Account(&#39;me&#39;)&quot;</span></div>
+<div class="sourceLine" id="cb10-14" data-line-number="14">                <span class="fu">},</span></div>
+<div class="sourceLine" id="cb10-15" data-line-number="15">                <span class="dt">&quot;Name&quot;</span><span class="fu">:</span> <span class="st">&quot;me&quot;</span><span class="fu">,</span></div>
+<div class="sourceLine" id="cb10-16" data-line-number="16">                <span class="dt">&quot;LastAuthenticated&quot;</span><span class="fu">:</span> <span class="kw">null</span><span class="fu">,</span></div>
+<div class="sourceLine" id="cb10-17" data-line-number="17">                <span class="dt">&quot;Type&quot;</span><span class="fu">:</span> <span class="st">&quot;basic&quot;</span><span class="fu">,</span></div>
+<div class="sourceLine" id="cb10-18" data-line-number="18">                <span class="dt">&quot;Cell&quot;</span><span class="fu">:</span> <span class="kw">null</span><span class="fu">,</span></div>
+<div class="sourceLine" id="cb10-19" data-line-number="19">                <span class="dt">&quot;__published&quot;</span><span class="fu">:</span> <span class="st">&quot;/Date(1484724933394)/&quot;</span><span class="fu">,</span></div>
+<div class="sourceLine" id="cb10-20" data-line-number="20">                <span class="dt">&quot;__updated&quot;</span><span class="fu">:</span> <span class="st">&quot;/Date(1484724933394)/&quot;</span><span class="fu">,</span></div>
+<div class="sourceLine" id="cb10-21" data-line-number="21">                <span class="dt">&quot;_Role&quot;</span><span class="fu">:</span> <span class="fu">{</span></div>
+<div class="sourceLine" id="cb10-22" data-line-number="22">                    <span class="dt">&quot;__deferred&quot;</span><span class="fu">:</span> <span class="fu">{</span></div>
+<div class="sourceLine" id="cb10-23" data-line-number="23">                        <span class="dt">&quot;uri&quot;</span><span class="fu">:</span> <span class="st">&quot;https://{Personium_FQDN}/usercell/__ctl/Account(&#39;me&#39;)/_Role&quot;</span></div>
+<div class="sourceLine" id="cb10-24" data-line-number="24">                    <span class="fu">}</span></div>
+<div class="sourceLine" id="cb10-25" data-line-number="25">                <span class="fu">}</span></div>
+<div class="sourceLine" id="cb10-26" data-line-number="26">            <span class="fu">}</span></div>
+<div class="sourceLine" id="cb10-27" data-line-number="27">        <span class="ot">]</span></div>
+<div class="sourceLine" id="cb10-28" data-line-number="28">    <span class="fu">}</span></div>
+<div class="sourceLine" id="cb10-29" data-line-number="29"><span class="fu">}</span></div></code></pre>
+<h4><a name="sect5.2.2">5-2-2. Roleの作成</a></h4>
+<p>前項でAccountを作成したCellにRoleを作成します。 Roleとは、administorator、teacher、studentといった役割を表しており、Cellにアクセスする権限を設定し保持するものです。</p>
+<p>Roleを追加作成する前に、Role一覧取得APIで事前の状態を確認してみましょう。 作成したばかりのCellにはRoleが登録されていない状態です。</p>
+<pre class="sourceCode sh" id="cb11"><code class="sourceCode bash"><div class="sourceLine" id="cb11-1" data-line-number="1"><span class="ex">curl</span> <span class="st">&quot;https://{Personium_FQDN}/usercell/__ctl/Role&quot;</span> \</div>
+<div class="sourceLine" id="cb11-2" data-line-number="2">-X GET -i -k \</div>
+<div class="sourceLine" id="cb11-3" data-line-number="3">-H <span class="st">&quot;Accept:application/json&quot;</span> -H <span class="st">&quot;Authorization:Bearer {Token}&quot;</span></div></code></pre>
+<p>Roleの情報が無い様子がレスポンスに返ります。</p>
+<pre class="sourceCode json" id="cb12"><code class="sourceCode json"><div class="sourceLine" id="cb12-1" data-line-number="1"><span class="fu">{</span></div>
+<div class="sourceLine" id="cb12-2" data-line-number="2">    <span class="dt">&quot;d&quot;</span><span class="fu">:</span> <span class="fu">{</span></div>
+<div class="sourceLine" id="cb12-3" data-line-number="3">        <span class="dt">&quot;results&quot;</span><span class="fu">:</span> <span class="ot">[]</span></div>
+<div class="sourceLine" id="cb12-4" data-line-number="4">    <span class="fu">}</span></div>
+<div class="sourceLine" id="cb12-5" data-line-number="5"><span class="fu">}</span></div></code></pre>
+<p>Roleを作成してみましょう。 Role作成APIを呼び出す際に、Roleの名前を任意に指定します。 この例では&quot;adminrole&quot;がRole名になります。</p>
+<pre class="sourceCode sh" id="cb13"><code class="sourceCode bash"><div class="sourceLine" id="cb13-1" data-line-number="1"><span class="ex">curl</span> <span class="st">&quot;https://{Personium_FQDN}/usercell/__ctl/Role&quot;</span> \</div>
+<div class="sourceLine" id="cb13-2" data-line-number="2">-X POST -i -k \</div>
+<div class="sourceLine" id="cb13-3" data-line-number="3">-d <span class="st">&quot;{</span><span class="dt">\&quot;</span><span class="st">Name</span><span class="dt">\&quot;</span><span class="st">:</span><span class="dt">\&quot;</span><span class="st">adminrole</span><span class="dt">\&quot;</span><span class="st">}&quot;</span> \</div>
+<div class="sourceLine" id="cb13-4" data-line-number="4">-H <span class="st">&quot;Accept:application/json&quot;</span> -H <span class="st">&quot;Authorization:Bearer {Token}&quot;</span></div></code></pre>
+<p>成功すると、今回作成されたRoleの情報がレスポンスとして返ります。</p>
+<pre class="sourceCode json" id="cb14"><code class="sourceCode json"><div class="sourceLine" id="cb14-1" data-line-number="1"><span class="fu">{</span></div>
+<div class="sourceLine" id="cb14-2" data-line-number="2">    <span class="dt">&quot;d&quot;</span><span class="fu">:</span> <span class="fu">{</span></div>
+<div class="sourceLine" id="cb14-3" data-line-number="3">        <span class="dt">&quot;results&quot;</span><span class="fu">:</span> <span class="fu">{</span></div>
+<div class="sourceLine" id="cb14-4" data-line-number="4">            <span class="dt">&quot;_Box.Name&quot;</span><span class="fu">:</span> <span class="kw">null</span><span class="fu">,</span></div>
+<div class="sourceLine" id="cb14-5" data-line-number="5">            <span class="dt">&quot;__updated&quot;</span><span class="fu">:</span> <span class="st">&quot;/Date(1484728984079)/&quot;</span><span class="fu">,</span></div>
+<div class="sourceLine" id="cb14-6" data-line-number="6">            <span class="dt">&quot;__published&quot;</span><span class="fu">:</span> <span class="st">&quot;/Date(1484728984079)/&quot;</span><span class="fu">,</span></div>
+<div class="sourceLine" id="cb14-7" data-line-number="7">            <span class="dt">&quot;Name&quot;</span><span class="fu">:</span> <span class="st">&quot;adminrole&quot;</span><span class="fu">,</span></div>
+<div class="sourceLine" id="cb14-8" data-line-number="8">            <span class="dt">&quot;__metadata&quot;</span><span class="fu">:</span> <span class="fu">{</span></div>
+<div class="sourceLine" id="cb14-9" data-line-number="9">                <span class="dt">&quot;type&quot;</span><span class="fu">:</span> <span class="st">&quot;CellCtl.Role&quot;</span><span class="fu">,</span></div>
+<div class="sourceLine" id="cb14-10" data-line-number="10">                <span class="dt">&quot;etag&quot;</span><span class="fu">:</span> <span class="st">&quot;W/</span><span class="ch">\&quot;</span><span class="st">1-1484728984079</span><span class="ch">\&quot;</span><span class="st">&quot;</span><span class="fu">,</span></div>
+<div class="sourceLine" id="cb14-11" data-line-number="11">                <span class="dt">&quot;uri&quot;</span><span class="fu">:</span> <span class="st">&quot;https://{Personium_FQDN}/usercell/__ctl/Role(Name=&#39;adminrole&#39;,_Box.Name=null)&quot;</span></div>
+<div class="sourceLine" id="cb14-12" data-line-number="12">            <span class="fu">}</span></div>
+<div class="sourceLine" id="cb14-13" data-line-number="13">        <span class="fu">}</span></div>
+<div class="sourceLine" id="cb14-14" data-line-number="14">    <span class="fu">}</span></div>
+<div class="sourceLine" id="cb14-15" data-line-number="15"><span class="fu">}</span></div></code></pre>
+<p>再度Account一覧取得APIを呼び出すと&quot;adminrole&quot;が在る状態がレスポンスに返ります。</p>
+<pre class="sourceCode json" id="cb15"><code class="sourceCode json"><div class="sourceLine" id="cb15-1" data-line-number="1"><span class="fu">{</span></div>
+<div class="sourceLine" id="cb15-2" data-line-number="2">    <span class="dt">&quot;d&quot;</span><span class="fu">:</span> <span class="fu">{</span></div>
+<div class="sourceLine" id="cb15-3" data-line-number="3">        <span class="dt">&quot;results&quot;</span><span class="fu">:</span> <span class="ot">[</span></div>
+<div class="sourceLine" id="cb15-4" data-line-number="4">            <span class="fu">{</span></div>
+<div class="sourceLine" id="cb15-5" data-line-number="5">                <span class="dt">&quot;_Relation&quot;</span><span class="fu">:</span> <span class="fu">{</span></div>
+<div class="sourceLine" id="cb15-6" data-line-number="6">                    <span class="dt">&quot;__deferred&quot;</span><span class="fu">:</span> <span class="fu">{</span></div>
+<div class="sourceLine" id="cb15-7" data-line-number="7">                        <span class="dt">&quot;uri&quot;</span><span class="fu">:</span> <span class="st">&quot;https://{Personium_FQDN}/usercell/__ctl/Role(Name=&#39;adminrole&#39;,_Box.Name=null)/_Relation&quot;</span></div>
+<div class="sourceLine" id="cb15-8" data-line-number="8">                    <span class="fu">}</span></div>
+<div class="sourceLine" id="cb15-9" data-line-number="9">                <span class="fu">},</span></div>
+<div class="sourceLine" id="cb15-10" data-line-number="10">                <span class="dt">&quot;_ExtRole&quot;</span><span class="fu">:</span> <span class="fu">{</span></div>
+<div class="sourceLine" id="cb15-11" data-line-number="11">                    <span class="dt">&quot;__deferred&quot;</span><span class="fu">:</span> <span class="fu">{</span></div>
+<div class="sourceLine" id="cb15-12" data-line-number="12">                        <span class="dt">&quot;uri&quot;</span><span class="fu">:</span> <span class="st">&quot;https://{Personium_FQDN}/usercell/__ctl/Role(Name=&#39;adminrole&#39;,_Box.Name=null)/_ExtRole&quot;</span></div>
+<div class="sourceLine" id="cb15-13" data-line-number="13">                    <span class="fu">}</span></div>
+<div class="sourceLine" id="cb15-14" data-line-number="14">                <span class="fu">},</span></div>
+<div class="sourceLine" id="cb15-15" data-line-number="15">                <span class="dt">&quot;__metadata&quot;</span><span class="fu">:</span> <span class="fu">{</span></div>
+<div class="sourceLine" id="cb15-16" data-line-number="16">                    <span class="dt">&quot;type&quot;</span><span class="fu">:</span> <span class="st">&quot;CellCtl.Role&quot;</span><span class="fu">,</span></div>
+<div class="sourceLine" id="cb15-17" data-line-number="17">                    <span class="dt">&quot;etag&quot;</span><span class="fu">:</span> <span class="st">&quot;W/</span><span class="ch">\&quot;</span><span class="st">1-1484728984079</span><span class="ch">\&quot;</span><span class="st">&quot;</span><span class="fu">,</span></div>
+<div class="sourceLine" id="cb15-18" data-line-number="18">                    <span class="dt">&quot;uri&quot;</span><span class="fu">:</span> <span class="st">&quot;https://{Personium_FQDN}/usercell/__ctl/Role(Name=&#39;adminrole&#39;,_Box.Name=null)&quot;</span></div>
+<div class="sourceLine" id="cb15-19" data-line-number="19">                <span class="fu">},</span></div>
+<div class="sourceLine" id="cb15-20" data-line-number="20">                <span class="dt">&quot;Name&quot;</span><span class="fu">:</span> <span class="st">&quot;adminrole&quot;</span><span class="fu">,</span></div>
+<div class="sourceLine" id="cb15-21" data-line-number="21">                <span class="dt">&quot;_Box.Name&quot;</span><span class="fu">:</span> <span class="kw">null</span><span class="fu">,</span></div>
+<div class="sourceLine" id="cb15-22" data-line-number="22">                <span class="dt">&quot;__published&quot;</span><span class="fu">:</span> <span class="st">&quot;/Date(1484728984079)/&quot;</span><span class="fu">,</span></div>
+<div class="sourceLine" id="cb15-23" data-line-number="23">                <span class="dt">&quot;__updated&quot;</span><span class="fu">:</span> <span class="st">&quot;/Date(1484728984079)/&quot;</span><span class="fu">,</span></div>
+<div class="sourceLine" id="cb15-24" data-line-number="24">                <span class="dt">&quot;_Box&quot;</span><span class="fu">:</span> <span class="fu">{</span></div>
+<div class="sourceLine" id="cb15-25" data-line-number="25">                    <span class="dt">&quot;__deferred&quot;</span><span class="fu">:</span> <span class="fu">{</span></div>
+<div class="sourceLine" id="cb15-26" data-line-number="26">                        <span class="dt">&quot;uri&quot;</span><span class="fu">:</span> <span class="st">&quot;https://{Personium_FQDN}/usercell/__ctl/Role(Name=&#39;adminrole&#39;,_Box.Name=null)/_Box&quot;</span></div>
+<div class="sourceLine" id="cb15-27" data-line-number="27">                    <span class="fu">}</span></div>
+<div class="sourceLine" id="cb15-28" data-line-number="28">                <span class="fu">},</span></div>
+<div class="sourceLine" id="cb15-29" data-line-number="29">                <span class="dt">&quot;_Account&quot;</span><span class="fu">:</span> <span class="fu">{</span></div>
+<div class="sourceLine" id="cb15-30" data-line-number="30">                    <span class="dt">&quot;__deferred&quot;</span><span class="fu">:</span> <span class="fu">{</span></div>
+<div class="sourceLine" id="cb15-31" data-line-number="31">                        <span class="dt">&quot;uri&quot;</span><span class="fu">:</span> <span class="st">&quot;https://{Personium_FQDN}/usercell/__ctl/Role(Name=&#39;adminrole&#39;,_Box.Name=null)/_Account&quot;</span></div>
+<div class="sourceLine" id="cb15-32" data-line-number="32">                    <span class="fu">}</span></div>
+<div class="sourceLine" id="cb15-33" data-line-number="33">                <span class="fu">},</span></div>
+<div class="sourceLine" id="cb15-34" data-line-number="34">                <span class="dt">&quot;_ExtCell&quot;</span><span class="fu">:</span> <span class="fu">{</span></div>
+<div class="sourceLine" id="cb15-35" data-line-number="35">                    <span class="dt">&quot;__deferred&quot;</span><span class="fu">:</span> <span class="fu">{</span></div>
+<div class="sourceLine" id="cb15-36" data-line-number="36">                        <span class="dt">&quot;uri&quot;</span><span class="fu">:</span> <span class="st">&quot;https://{Personium_FQDN}/usercell/__ctl/Role(Name=&#39;adminrole&#39;,_Box.Name=null)/_ExtCell&quot;</span></div>
+<div class="sourceLine" id="cb15-37" data-line-number="37">                    <span class="fu">}</span></div>
+<div class="sourceLine" id="cb15-38" data-line-number="38">                <span class="fu">}</span></div>
+<div class="sourceLine" id="cb15-39" data-line-number="39">            <span class="fu">}</span></div>
+<div class="sourceLine" id="cb15-40" data-line-number="40">        <span class="ot">]</span></div>
+<div class="sourceLine" id="cb15-41" data-line-number="41">    <span class="fu">}</span></div>
+<div class="sourceLine" id="cb15-42" data-line-number="42"><span class="fu">}</span></div></code></pre>
+<h4><a name="sect5.2.3">5-2-3. AccountとRoleの紐づけ</a></h4>
+<p>作成したAccountとRoleを関係付けます。 これまでに作成したAccountとRoleは同じCellに属する形で存在しますが、それぞれは直接的な関係性を持たず独立している状態です。</p>
+<p>操作を行う前にRole $links一覧取得APIで事前の状態を確認してみましょう。 Roleは作成直後の状態であり、対Accountに限らず紐付けの設定は無い状態です。</p>
+<pre class="sourceCode sh" id="cb16"><code class="sourceCode bash"><div class="sourceLine" id="cb16-1" data-line-number="1"><span class="ex">curl</span> <span class="st">&quot;https://{Personium_FQDN}/usercell/__ctl/Role(&#39;adminrole&#39;)/</span><span class="dt">\$</span><span class="st">links/_Account&quot;</span> \</div>
+<div class="sourceLine" id="cb16-2" data-line-number="2">-X GET -i -k \</div>
+<div class="sourceLine" id="cb16-3" data-line-number="3">-H <span class="st">&quot;Accept:application/json&quot;</span> -H <span class="st">&quot;Authorization:Bearer {Token}&quot;</span></div></code></pre>
+<p>Roleに設定された関係性の情報が無い様子がレスポンスに返ります。</p>
+<pre class="sourceCode json" id="cb17"><code class="sourceCode json"><div class="sourceLine" id="cb17-1" data-line-number="1"><span class="fu">{</span></div>
+<div class="sourceLine" id="cb17-2" data-line-number="2">    <span class="dt">&quot;d&quot;</span><span class="fu">:</span> <span class="fu">{</span></div>
+<div class="sourceLine" id="cb17-3" data-line-number="3">        <span class="dt">&quot;results&quot;</span><span class="fu">:</span> <span class="ot">[]</span></div>
+<div class="sourceLine" id="cb17-4" data-line-number="4">    <span class="fu">}</span></div>
+<div class="sourceLine" id="cb17-5" data-line-number="5"><span class="fu">}</span></div></code></pre>
+<p>Role_$links登録APIを呼び出してAccountを相手とする紐付けを行ってみましょう。 (この逆方向の操作としてAccount_$links登録APIをRole相手に呼び出しても同じ結果となります)</p>
+<pre class="sourceCode sh" id="cb18"><code class="sourceCode bash"><div class="sourceLine" id="cb18-1" data-line-number="1"><span class="ex">curl</span> <span class="st">&quot;https://{Personium_FQDN}/usercell/__ctl/Role(&#39;adminrole&#39;)/</span><span class="dt">\$</span><span class="st">links/_Account&quot;</span> \</div>
+<div class="sourceLine" id="cb18-2" data-line-number="2">-X POST -i -k \</div>
+<div class="sourceLine" id="cb18-3" data-line-number="3">-d <span class="st">&quot;{</span><span class="dt">\&quot;</span><span class="st">uri</span><span class="dt">\&quot;</span><span class="st">:</span><span class="dt">\&quot;</span><span class="st">https://{Personium_FQDN}/usercell/__ctl/Account(&#39;me&#39;)</span><span class="dt">\&quot;</span><span class="st">}&quot;</span> \</div>
+<div class="sourceLine" id="cb18-4" data-line-number="4">-H <span class="st">&quot;Accept:application/json&quot;</span> -H <span class="st">&quot;Authorization:Bearer {Token}&quot;</span></div></code></pre>
+<p>このAPIはjson形式のレスポンス(ボディ)を返しません。 ステータスが204で返れば成功です。</p>
+<pre><code>HTTP/1.1 204 No Content</code></pre>
+<p>再度Role $links一覧取得APIを呼び出すと(Roleに対して)紐付いたAccountの情報がレスポンスに返ります。</p>
+<pre class="sourceCode json" id="cb20"><code class="sourceCode json"><div class="sourceLine" id="cb20-1" data-line-number="1"><span class="fu">{</span></div>
+<div class="sourceLine" id="cb20-2" data-line-number="2">    <span class="dt">&quot;d&quot;</span><span class="fu">:</span> <span class="fu">{</span></div>
+<div class="sourceLine" id="cb20-3" data-line-number="3">        <span class="dt">&quot;results&quot;</span><span class="fu">:</span> <span class="ot">[</span></div>
+<div class="sourceLine" id="cb20-4" data-line-number="4">            <span class="fu">{</span></div>
+<div class="sourceLine" id="cb20-5" data-line-number="5">                <span class="dt">&quot;uri&quot;</span><span class="fu">:</span> <span class="st">&quot;https://{Personium_FQDN}/usercell/__ctl/Account(&#39;me&#39;)&quot;</span></div>
+<div class="sourceLine" id="cb20-6" data-line-number="6">            <span class="fu">}</span></div>
+<div class="sourceLine" id="cb20-7" data-line-number="7">        <span class="ot">]</span></div>
+<div class="sourceLine" id="cb20-8" data-line-number="8">    <span class="fu">}</span></div>
+<div class="sourceLine" id="cb20-9" data-line-number="9"><span class="fu">}</span></div></code></pre>
+<h4><a name="sect5.2.4">5-2-4. ACLの設定</a></h4>
+<p>作成したCellに対してアクセス権を設定します。 すべてのrole(役割)に対して設定('root'指定)することも、細かくRole別にアクセス権を設定する事も可能です。 前項のRoleとAccountの紐付けに従い、Account(User)のアクセス権限が決定します。</p>
+<p>セルレベルアクセス制御設定APIを使用します。</p>
+<pre class="sourceCode sh" id="cb21"><code class="sourceCode bash"><div class="sourceLine" id="cb21-1" data-line-number="1"><span class="ex">curl</span> <span class="st">&quot;https://{Personium_FQDN}/usercell&quot;</span> \</div>
+<div class="sourceLine" id="cb21-2" data-line-number="2">-X ACL -i -k \</div>
+<div class="sourceLine" id="cb21-3" data-line-number="3">-d <span class="st">&quot;&lt;?xml version=</span><span class="dt">\&quot;</span><span class="st">1.0</span><span class="dt">\&quot;</span><span class="st"> encoding=</span><span class="dt">\&quot;</span><span class="st">utf-8</span><span class="dt">\&quot;</span><span class="st"> ?&gt;\</span></div>
+<div class="sourceLine" id="cb21-4" data-line-number="4"><span class="st">&lt;D:acl xmlns:D=</span><span class="dt">\&quot;</span><span class="st">DAV:</span><span class="dt">\&quot;</span><span class="st"> xmlns:p=</span><span class="dt">\&quot;</span><span class="st">urn:x-personium:xmlns</span><span class="dt">\&quot;</span><span class="st"> xml:base=</span><span class="dt">\&quot;</span><span class="st">https://{Personium_FQDN}/usercell/__role/__/</span><span class="dt">\&quot;</span><span class="st">&gt;\</span></div>
+<div class="sourceLine" id="cb21-5" data-line-number="5"><span class="st">&lt;D:ace&gt;&lt;D:principal&gt;&lt;D:href&gt;adminrole&lt;/D:href&gt;&lt;/D:principal&gt;&lt;D:grant&gt;&lt;D:privilege&gt;\</span></div>
+<div class="sourceLine" id="cb21-6" data-line-number="6"><span class="st">&lt;p:root/&gt;&lt;/D:privilege&gt;&lt;/D:grant&gt;&lt;/D:ace&gt;&lt;/D:acl&gt;&quot;</span> \</div>
+<div class="sourceLine" id="cb21-7" data-line-number="7">-H <span class="st">&quot;Accept:application/json&quot;</span> -H <span class="st">&quot;Authorization: Bearer {Token}&quot;</span></div></code></pre>
+<p>(リクエストボディ部分の展開表示)</p>
+<pre class="sourceCode xml" id="cb22"><code class="sourceCode xml"><div class="sourceLine" id="cb22-1" data-line-number="1"><span class="kw">&lt;?xml</span> version=&quot;1.0&quot; encoding=&quot;utf-8&quot; <span class="kw">?&gt;</span></div>
+<div class="sourceLine" id="cb22-2" data-line-number="2"><span class="kw">&lt;D:acl</span><span class="ot"> xmlns:D=</span><span class="st">&quot;DAV:&quot;</span><span class="ot"> xmlns:p=</span><span class="st">&quot;urn:x-personium:xmlns&quot;</span><span class="ot"> xml:base=</span><span class="st">&quot;https://{Personium_FQDN}/usercell/__role/__/&quot;</span><span class="kw">&gt;</span></div>
+<div class="sourceLine" id="cb22-3" data-line-number="3">    <span class="kw">&lt;D:ace&gt;</span></div>
+<div class="sourceLine" id="cb22-4" data-line-number="4">        <span class="kw">&lt;D:principal&gt;</span></div>
+<div class="sourceLine" id="cb22-5" data-line-number="5">            <span class="kw">&lt;D:href&gt;</span>adminrole<span class="kw">&lt;/D:href&gt;</span></div>
+<div class="sourceLine" id="cb22-6" data-line-number="6">        <span class="kw">&lt;/D:principal&gt;</span></div>
+<div class="sourceLine" id="cb22-7" data-line-number="7">        <span class="kw">&lt;D:grant&gt;</span></div>
+<div class="sourceLine" id="cb22-8" data-line-number="8">            <span class="kw">&lt;D:privilege&gt;</span></div>
+<div class="sourceLine" id="cb22-9" data-line-number="9">                <span class="kw">&lt;p:root/&gt;</span></div>
+<div class="sourceLine" id="cb22-10" data-line-number="10">            <span class="kw">&lt;/D:privilege&gt;</span></div>
+<div class="sourceLine" id="cb22-11" data-line-number="11">        <span class="kw">&lt;/D:grant&gt;</span></div>
+<div class="sourceLine" id="cb22-12" data-line-number="12">    <span class="kw">&lt;/D:ace&gt;</span></div>
+<div class="sourceLine" id="cb22-13" data-line-number="13"><span class="kw">&lt;/D:acl&gt;</span></div></code></pre>
+<p>このAPIはjson形式のレスポンス(ボディ)を返しません。 ステータスが200で返れば成功です。</p>
+<pre><code>HTTP/1.1 200 OK</code></pre>
+<h3><a name="sect5.3">5-3. メインBoxへの最初のデータ配置</a></h3>
+<p>メインBoxとは、Cellの作成時にデフォルトで作成される、”__”(アンダーバー2つ)と名づけられた特別なBoxです。 この特別なBoxは、削除出来ない事を除き通常のBoxと同様です。 アプリケーションデータを保管したり、そのCellの固有情報（json形式を用いる）を格納したりする目的に使われます。</p>
+<h4><a name="sect5.3.1">5-3-1. profile.json を置く</a></h4>
+<p>profile.jsonファイルは、PDSの公開プロフィール情報を配置するために必要なjson形式のファイルです。 PersoniumのPDS事業者間の相互接続運用のために、profile.jsonファイルをメインBoxの直下に配置することを推奨しています。 profile.jsonのサンプルは<a href="https://demo.personium.io/app-uc-cell-creator-wizard/__/defaultProfile.json">こちら</a>をご覧ください。</p>
+<blockquote>
+<p>※このファイルを置かないでPDSを運用することもできます。 APIの振舞いとしてこのファイルを特別に扱うということはありませんが、後述のサンプルGUIを操作する場合も、このファイルの存在と匿名アクセス(Authorizationヘッダなしアクセス)可能性を前提としています。</p>
+</blockquote>
+<p>実際にprofile.jsonを配置してみましょう。 配置するにはファイル登録更新APIを使用します。 この例では&quot;John Doe&quot;が表示名、&quot;Senior Director, Personium Project&quot;が説明になります。 また、Imageの値にはプロフィール画像のURLを指定します。以下の例では画像データのデータURIスキームを指定しています。</p>
+<pre class="sourceCode sh" id="cb24"><code class="sourceCode bash"><div class="sourceLine" id="cb24-1" data-line-number="1"><span class="ex">curl</span> <span class="st">&quot;https://{Personium_FQDN}/usercell/__/profile.json&quot;</span> \</div>
+<div class="sourceLine" id="cb24-2" data-line-number="2">-X PUT -i -k \</div>
+<div class="sourceLine" id="cb24-3" data-line-number="3">-d <span class="st">&quot;{</span><span class="dt">\&quot;</span><span class="st">DisplayName</span><span class="dt">\&quot;</span><span class="st">:</span><span class="dt">\&quot;</span><span class="st">John Doe</span><span class="dt">\&quot;</span><span class="st">,</span><span class="dt">\&quot;</span><span class="st">Description</span><span class="dt">\&quot;</span><span class="st">: </span><span class="dt">\&quot;</span><span class="st">Senior Director, Personium Project</span><span class="dt">\&quot;</span><span class="st">,\</span></div>
+<div class="sourceLine" id="cb24-4" data-line-number="4"><span class="dt">\&quot;</span><span class="st">Image</span><span class="dt">\&quot;</span><span class="st">: </span><span class="dt">\&quot;</span><span class="st">{画像データをBase64エンコードしたもの}</span><span class="dt">\&quot;</span><span class="st">}&quot;</span> \</div>
+<div class="sourceLine" id="cb24-5" data-line-number="5">-H <span class="st">&quot;Authorization:Bearer {Token}&quot;</span></div></code></pre>
+<p>このAPIはjson形式のレスポンス(ボディ)を返しません。 ステータスが201で返れば成功です。</p>
+<pre><code>HTTP/1.1 201 Created</code></pre>
+<p>profile.jsonを配置後、profile.jsonに対してアクセス権を設定します。 アクセス制御設定APIを使用します。</p>
+<pre class="sourceCode sh" id="cb26"><code class="sourceCode bash"><div class="sourceLine" id="cb26-1" data-line-number="1"><span class="ex">curl</span> <span class="st">&quot;https://{Personium_FQDN}/usercell/__/profile.json&quot;</span> \</div>
+<div class="sourceLine" id="cb26-2" data-line-number="2">-X ACL -i -k \</div>
+<div class="sourceLine" id="cb26-3" data-line-number="3">-d <span class="st">&quot;&lt;?xml version=</span><span class="dt">\&quot;</span><span class="st">1.0</span><span class="dt">\&quot;</span><span class="st"> encoding=</span><span class="dt">\&quot;</span><span class="st">utf-8</span><span class="dt">\&quot;</span><span class="st"> ?&gt;\</span></div>
+<div class="sourceLine" id="cb26-4" data-line-number="4"><span class="st">&lt;D:acl xmlns:D=</span><span class="dt">\&quot;</span><span class="st">DAV:</span><span class="dt">\&quot;</span><span class="st"> xmlns:p=</span><span class="dt">\&quot;</span><span class="st">urn:x-personium:xmlns</span><span class="dt">\&quot;</span><span class="st">  p:requireSchemaAuthz=</span><span class="dt">\&quot;</span><span class="st">none</span><span class="dt">\&quot;</span><span class="st"> \</span></div>
+<div class="sourceLine" id="cb26-5" data-line-number="5"><span class="st">xml:base=</span><span class="dt">\&quot;</span><span class="st">https://{Personium_FQDN}/usercell/__role/__/</span><span class="dt">\&quot;</span><span class="st">&gt;\</span></div>
+<div class="sourceLine" id="cb26-6" data-line-number="6"><span class="st">&lt;D:ace&gt;&lt;D:principal&gt;&lt;D:all&gt;&lt;/D:all&gt;&lt;/D:principal&gt;&lt;D:grant&gt;&lt;D:privilege&gt;&lt;D:read/&gt;&lt;/D:privilege&gt;&lt;/D:grant&gt;&lt;/D:ace&gt;&lt;/D:acl&gt;&quot;</span> \</div>
+<div class="sourceLine" id="cb26-7" data-line-number="7">-H <span class="st">&quot;Accept:application/json&quot;</span> -H <span class="st">&quot;Authorization: Bearer {Token}&quot;</span></div></code></pre>
+<p>(リクエストボディ部分の展開表示)</p>
+<pre class="sourceCode xml" id="cb27"><code class="sourceCode xml"><div class="sourceLine" id="cb27-1" data-line-number="1"><span class="kw">&lt;?xml</span> version=&quot;1.0&quot; encoding=&quot;utf-8&quot; <span class="kw">?&gt;</span></div>
+<div class="sourceLine" id="cb27-2" data-line-number="2"><span class="kw">&lt;D:acl</span><span class="ot"> xmlns:D=</span><span class="st">&quot;DAV:&quot;</span><span class="ot"> xmlns:p=</span><span class="st">&quot;urn:x-personium:xmlns&quot;</span><span class="ot"> p:requireSchemaAuthz=</span><span class="st">&quot;none&quot;</span><span class="ot"> xml:base=</span><span class="st">&quot;https://{Personium_FQDN}/usercell/__role/__/&quot;</span><span class="kw">&gt;</span></div>
+<div class="sourceLine" id="cb27-3" data-line-number="3">        <span class="kw">&lt;D:ace&gt;</span></div>
+<div class="sourceLine" id="cb27-4" data-line-number="4">            <span class="kw">&lt;D:principal&gt;</span></div>
+<div class="sourceLine" id="cb27-5" data-line-number="5">                <span class="kw">&lt;D:all&gt;&lt;/D:all&gt;</span></div>
+<div class="sourceLine" id="cb27-6" data-line-number="6">            <span class="kw">&lt;/D:principal&gt;</span></div>
+<div class="sourceLine" id="cb27-7" data-line-number="7">            <span class="kw">&lt;D:grant&gt;</span></div>
+<div class="sourceLine" id="cb27-8" data-line-number="8">                <span class="kw">&lt;D:privilege&gt;</span></div>
+<div class="sourceLine" id="cb27-9" data-line-number="9">                    <span class="kw">&lt;D:read/&gt;</span></div>
+<div class="sourceLine" id="cb27-10" data-line-number="10">                <span class="kw">&lt;/D:privilege&gt;</span></div>
+<div class="sourceLine" id="cb27-11" data-line-number="11">            <span class="kw">&lt;/D:grant&gt;</span></div>
+<div class="sourceLine" id="cb27-12" data-line-number="12">        <span class="kw">&lt;/D:ace&gt;</span></div>
+<div class="sourceLine" id="cb27-13" data-line-number="13"><span class="kw">&lt;/D:acl&gt;</span></div></code></pre>
+<p>このAPIはjson形式のレスポンス(ボディ)を返しません。 ステータスが200で返れば成功です。</p>
+<pre><code>HTTP/1.1 200 OK</code></pre>
+<h3><a name="sect5.4">5-4. 一般ユーザー向けの操作画面を設定する</a></h3>
+<p>ブラウザでCell URLにアクセスした際、操作画面(Home画面)を表示することが可能です。 オープンソースプロジェクトで公開されているサンプルGUI(Home画面)を設定してみましょう。</p>
+<p>操作画面(HomeApp画面)を設定するにはCellのプロパティを更新します。</p>
+<pre class="sourceCode sh" id="cb29"><code class="sourceCode bash"><div class="sourceLine" id="cb29-1" data-line-number="1"><span class="ex">curl</span> <span class="st">&quot;https://{Personium_FQDN}/usercell/&quot;</span> \</div>
+<div class="sourceLine" id="cb29-2" data-line-number="2">-X PROPPATCH -i -k \</div>
+<div class="sourceLine" id="cb29-3" data-line-number="3">-d <span class="st">&quot;&lt;?xml version=</span><span class="dt">\&quot;</span><span class="st">1.0</span><span class="dt">\&quot;</span><span class="st"> encoding=</span><span class="dt">\&quot;</span><span class="st">utf-8</span><span class="dt">\&quot;</span><span class="st"> ?&gt;\</span></div>
+<div class="sourceLine" id="cb29-4" data-line-number="4"><span class="st">&lt;D:propertyupdate xmlns:D=</span><span class="dt">\&quot;</span><span class="st">DAV:</span><span class="dt">\&quot;</span><span class="st"> xmlns:p=</span><span class="dt">\&quot;</span><span class="st">urn:x-personium:xmlns</span><span class="dt">\&quot;</span><span class="st">&gt;&lt;D:set&gt;&lt;D:prop&gt;\</span></div>
+<div class="sourceLine" id="cb29-5" data-line-number="5"><span class="st">&lt;p:relayhtmlurl&gt;https://demo.personium.io/app-cc-home/__/index.html&lt;/p:relayhtmlurl&gt;&lt;/D:prop&gt;&lt;/D:set&gt;&lt;/D:propertyupdate&gt;&quot;</span> \</div>
+<div class="sourceLine" id="cb29-6" data-line-number="6">-H <span class="st">&quot;Accept: application/json&quot;</span> -H <span class="st">&quot;Authorization: Bearer {Token}&quot;</span></div></code></pre>
+<p>(リクエストボディ部分の展開表示)</p>
+<pre class="sourceCode xml" id="cb30"><code class="sourceCode xml"><div class="sourceLine" id="cb30-1" data-line-number="1"><span class="kw">&lt;?xml</span> version=&quot;1.0&quot; encoding=&quot;utf-8&quot; <span class="kw">?&gt;</span></div>
+<div class="sourceLine" id="cb30-2" data-line-number="2"><span class="kw">&lt;D:propertyupdate</span><span class="ot"> xmlns:D=</span><span class="st">&quot;DAV:&quot;</span><span class="ot"> xmlns:p=</span><span class="st">&quot;urn:x-personium:xmlns&quot;</span><span class="kw">&gt;</span></div>
+<div class="sourceLine" id="cb30-3" data-line-number="3">    <span class="kw">&lt;D:set&gt;</span></div>
+<div class="sourceLine" id="cb30-4" data-line-number="4">        <span class="kw">&lt;D:prop&gt;</span></div>
+<div class="sourceLine" id="cb30-5" data-line-number="5">            <span class="kw">&lt;p:relayhtmlurl&gt;</span>https://demo.personium.io/app-cc-home/__/index.html<span class="kw">&lt;/p:relayhtmlurl&gt;</span></div>
+<div class="sourceLine" id="cb30-6" data-line-number="6">        <span class="kw">&lt;/D:prop&gt;</span></div>
+<div class="sourceLine" id="cb30-7" data-line-number="7">    <span class="kw">&lt;/D:set&gt;</span></div>
+<div class="sourceLine" id="cb30-8" data-line-number="8"><span class="kw">&lt;/D:propertyupdate&gt;</span></div></code></pre>
+<p>成功すると、更新されたプロパティの情報がレスポンスとして返ります。</p>
+<pre class="sourceCode xml" id="cb31"><code class="sourceCode xml"><div class="sourceLine" id="cb31-1" data-line-number="1"><span class="kw">&lt;multistatus</span><span class="ot"> xmlns=</span><span class="st">&quot;DAV:&quot;</span><span class="kw">&gt;</span></div>
+<div class="sourceLine" id="cb31-2" data-line-number="2">    <span class="kw">&lt;response&gt;</span></div>
+<div class="sourceLine" id="cb31-3" data-line-number="3">        <span class="kw">&lt;href&gt;</span>https://{Personium_FQDN}/usercell/<span class="kw">&lt;/href&gt;</span></div>
+<div class="sourceLine" id="cb31-4" data-line-number="4">        <span class="kw">&lt;propstat&gt;</span></div>
+<div class="sourceLine" id="cb31-5" data-line-number="5">            <span class="kw">&lt;prop&gt;</span></div>
+<div class="sourceLine" id="cb31-6" data-line-number="6">                <span class="kw">&lt;p:relayhtmlurl</span><span class="ot"> xmlns:p=</span><span class="st">&quot;urn:x-personium:xmlns&quot;</span><span class="ot"> xmlns:D=</span><span class="st">&quot;DAV:&quot;</span><span class="kw">&gt;</span></div>
+<div class="sourceLine" id="cb31-7" data-line-number="7">                https://demo.personium.io/app-cc-home/__/index.html<span class="kw">&lt;/p:relayhtmlurl&gt;</span></div>
+<div class="sourceLine" id="cb31-8" data-line-number="8">            <span class="kw">&lt;/prop&gt;</span></div>
+<div class="sourceLine" id="cb31-9" data-line-number="9">            <span class="kw">&lt;status&gt;</span>HTTP/1.1 200 OK<span class="kw">&lt;/status&gt;</span></div>
+<div class="sourceLine" id="cb31-10" data-line-number="10">        <span class="kw">&lt;/propstat&gt;</span></div>
+<div class="sourceLine" id="cb31-11" data-line-number="11">    <span class="kw">&lt;/response&gt;</span></div>
+<div class="sourceLine" id="cb31-12" data-line-number="12"><span class="kw">&lt;/multistatus&gt;</span></div></code></pre>
+<p>また、Cell個別で設定する以外に、ユニット全体でデフォルト値を設定することもできます。<br />
+ユニット設定ファイルの以下の値を更新することで可能です。</p>
+<pre><code>io.personium.core.cell.relayhtmlurl.default</code></pre>
+<h3><a name="sect5.5">5-5. GUIから使ってみる</a></h3>
+<p>ここまででCellを払い出す準備ができました。<br></p>
+<ul>
+<li>管理者アカウント名 : me</li>
+<li>管理者アカウントパスワード : password</li>
+</ul>
+<p>上記情報を使ってGUIで動作を確認してみましょう。</p>
+<pre><code>https://{Personium_FQDN}/usercell</code></pre>
+<p>登録した profile.json の情報がログイン画面に表示され、管理アカウントでのログインが確認出来ます。<br />
+オープンソースプロジェクトで公開されているサンプルGUIを使用せず、独自でインストールしたい方は<a href="https://github.com/personium/app-cc-home">こちら</a>をご覧ください。</p>
+<h2><a name="sect6">6. 払い出したPDSを削除する</a></h2>
+<p>払い出したCellを削除します。</p>
+<p>Cell再帰的削除APIを使用して、ここまでチュートリアルで作成したCellを削除します。 このAPIは該当するCellに包含されたデータも含め、すべてを削除します。</p>
+<pre class="sourceCode sh" id="cb34"><code class="sourceCode bash"><div class="sourceLine" id="cb34-1" data-line-number="1"><span class="ex">curl</span> <span class="st">&quot;https://{Personium_FQDN}/usercell/&quot;</span> \</div>
+<div class="sourceLine" id="cb34-2" data-line-number="2">-X DELETE -i -k \</div>
+<div class="sourceLine" id="cb34-3" data-line-number="3">-H <span class="st">&quot;X-Personium-Recursive: true&quot;</span> -H <span class="st">&quot;If-Match: *&quot;</span> \</div>
+<div class="sourceLine" id="cb34-4" data-line-number="4">-H <span class="st">&quot;Accept:application/json&quot;</span> -H <span class="st">&quot;Authorization: Bearer {Token}&quot;</span></div></code></pre>
+<p>このAPIはjson形式のレスポンス(ボディ)を返しません。 ステータスが204で返れば成功です。</p>
+<pre><code>HTTP/1.1 204 No Content</code></pre>
+<h2><a name="sect7">7. GUI操作のデモ動画を見てみる</a></h2>
+<p>「<a href="#sect5">5. PDSを利用者に払い出す</a>」や「<a href="#sect6">6. 払い出したPDSを削除する</a>」と同様の操作を、「Cell Creator Wizard」や「Unit Manager」と呼ばれるツールを用いてGUIで実施することができます。 <br></p>
+<p>Cell Creator Wizardについての詳細は<a href="https://github.com/personium/app-uc-cell-creator-wizard">こちら</a>をご覧ください。 <br> <div style="text-align: center;"> <iframe width="560" height="315" src="https://www.youtube.com/embed/M4cYLFYRyEk" frameborder="0" allow="autoplay; encrypted-media" allowfullscreen></iframe> </div></p>
+<p>Unit Managerについての詳細は<a href="https://github.com/personium/app-uc-unit-manager/blob/master/README_ja.%6D%64">こちら</a>をご覧ください。 <br> <div style="text-align: center;"> <iframe width="560" height="315" src="https://www.youtube.com/embed/d1_pET0M-YA" frameborder="0" allow="autoplay; encrypted-media" allowfullscreen></iframe> </div></p>
+<p>「Unit Manager」使用時に必要となるログイン情報は、「<a href="#sec4">4. トークンについて</a>」で取得したユニット管理アカウント情報をご使用ください。</p>
+<h2><a name="sect8">8. PDSの払い出しを自動化する</a></h2>
+<p>PDSを払い出すための流れを理解していただくため、手動手順を掲載しましたが、 <a href="#sect5.1">5.1</a>～<a href="#sect5.3">5.3</a>の一連のAPI操作を自動化するプログラムのサンプルをご紹介します。 詳細は<a href="https://github.com/personium/org-admin">こちら</a>をご覧ください。</p>
+</div>
+  <footer><nav>The Personium project is provided under the Apache 2.0 license. </nav></footer>
+</body>
+</html>
+

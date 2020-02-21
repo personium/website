@@ -1,0 +1,134 @@
+<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml" lang="" xml:lang="">
+<head>
+  <!-- default template -->
+  <meta charset="utf-8" />
+  <meta name="generator" content="pandoc" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=yes" />
+  <title>003_Common_Limitations_on_HTTP_Implementation</title>
+  <script type="text/javascript">
+      var path = location.pathname.split('/');
+      var pathRoot = [ path[0], path[1], '' ].join('/');
+      var pathLang = [ path[0], path[1], path[2] , ''].join('/');
+
+      document.write('<link rel="stylesheet" href="' + pathRoot + 'personium.css" type="text/css" />');
+      document.write('<link rel="stylesheet" href="' + pathLang + 'locale.css" type="text/css" />');
+      var ps = document.createElement('script');
+      ps.src = pathRoot + 'personium_docs.js';
+      var s = document.getElementsByTagName('script')[0];
+      s.parentNode.insertBefore(ps, s);
+
+  </script>
+  <link href="https://fonts.googleapis.com/css?family=Raleway" rel="stylesheet">
+  <link href="https://fonts.googleapis.com/css?family=Open+Sans" rel="stylesheet">
+  
+  <!--[if lt IE 9]>
+    <script src="//cdnjs.cloudflare.com/ajax/libs/html5shiv/3.7.3/html5shiv-printshiv.min.js"></script>
+  <![endif]-->
+</head>
+<body>
+  <header>
+    <nav>
+    <div id="logo"><a href="/">Personium</a></div>
+    <ul>
+      <li class="submenu">
+        <a href="" >Introduction</a>
+        <ul>
+            <li><a href="javascript:p.toPage('/overview/001_Introduction.html');">What's Personium?</a></li>
+            <li><a href="javascript:p.toPage('/user_guide/001_Personium_Architecture.html');">Architecture</a></li>
+            <li><a href="javascript:p.toPage('/user_guide/008_Glossary.html');">Glossary</a></li>
+        </ul>
+      </li>
+      <li class="submenu">
+        <a href="" >User Guide</a>
+        <ul>
+            <li><a href="javascript:p.toPage('/app-developer/');">for App Developer</a></li>
+            <li><a href="javascript:p.toPage('/cell-client-developer/');">for Cell App Developer</a></li>
+            <li><a href="javascript:p.toPage('/unit-administrator/');">for Unit Administrator</a></li>
+            <li><a href="javascript:p.toPage('/server-operator/');">for Server Software Operator</a></li>
+            <li><a href="javascript:p.toPage('/document-writer/');">for Documentation Contributor</a></li>
+            <li><a href="javascript:p.toPage('/plugin-developer/');">for Server Plugin Developer</a></li>
+            <li><a href="javascript:p.toPage('/software-developer/');">for Server Developer</a></li>
+        </ul>
+      </li>
+      <li class="submenu">
+        <a href="" >API Reference</a>
+        <ul>
+            <li><a href="#" onclick="p.toApiRef(this);return false;">current</a></li>
+            <li><a href="#" onclick="p.toApiRef(this);return false;">1.6.2</a></li>
+            <li><a href="#" onclick="p.toApiRef('1.6.0');return false;">1.6.0-1.6.1</a></li>
+            <li><a href="#" onclick="p.toApiRef(this);return false;">1.5.8</a></li>
+            <li><a href="#" onclick="p.toApiRef(this);return false;">1.5.7</a></li>
+            <li><a href="#" onclick="p.toApiRef(this);return false;">1.5.6</a></li>
+            <li><a href="#" onclick="p.toApiRef(this);return false;">1.5.5</a></li>
+            <li><a href="javascript:p.toApiRef('1.5.2');">1.5.2-1.5.4</a></li>
+            <li><a href="javascript:p.toPage('/user_guide/990_Old_Version_API_Ref.html');">older versions</a></li>
+        </ul>
+      </li>
+      <li class="submenu">
+        <a href="" >Languages</a>
+        <ul>
+            <li><a href="javascript:p.setLang('en');">English</a></li>
+            <li><a href="javascript:p.setLang('ja');">Japanese</a></li>
+        </ul>
+      </li>
+    </ul>
+    </nav>
+  </header>
+
+<div id="container">
+<h1>Common Limitations on HTTP Implementation of Personium</h1>
+<h2>Request</h2>
+<h3>URL</h3>
+<p>Maximum Length: 50KByte<br />
+*URL Size = header size + (URL path size * 2) + (query size * 3)<br />
+*limit) IE7, 8 Many reference the browser is about 1Mbyte 2048byte, IE9 is other 5120byte,</p>
+<h3>Request Header</h3>
+<p>The maximum size of each header: 4096 byte (whether or not including the length of the key is unknown)</p>
+<h4>Accept Encoding</h4>
+<p>Supports GZip</p>
+<h3>Request Body</h3>
+<h4>Transfer-Encoding</h4>
+<p>I have to respond to a request for chunked. (Unconfirmed)</p>
+<h4>Content-Encoding</h4>
+<p>It does not support is expected to respond to a request for gzip.</p>
+<h3>Time-out</h3>
+<p>Time of 60 seconds from the start of the request, the server until you have received all of the request (unconfirmed)</p>
+<h2>Response</h2>
+<h3>Response Header</h3>
+<table style="width:11%;">
+<colgroup>
+<col style="width: 5%" />
+<col style="width: 5%" />
+</colgroup>
+<thead>
+<tr class="header">
+<th style="text-align: left;">Header Name</th>
+<th style="text-align: left;">Description</th>
+</tr>
+</thead>
+<tbody>
+<tr class="odd">
+<td style="text-align: left;">Transfer-Encoding</td>
+<td style="text-align: left;">It always respond with chunked</td>
+</tr>
+<tr class="even">
+<td style="text-align: left;">Content-Encoding</td>
+<td style="text-align: left;">If set to a valid value Accept-Encoding request header contains the value</td>
+</tr>
+<tr class="odd">
+<td style="text-align: left;">Date</td>
+<td style="text-align: left;">It returns the UTC time that the request has been accepted</td>
+</tr>
+</tbody>
+</table>
+<h3>Response Body</h3>
+<h4>Size Limit</h4>
+<h4>Transfer-Encoding</h4>
+<p>Support to chunked request</p>
+<h4>Content-Encoding</h4>
+<p>If you set the value of a valid request Accept-Encoding header is compressed and encoded in the form of its body.</p>
+</div>
+  <footer><nav>The Personium project is provided under the Apache 2.0 license. </nav></footer>
+</body>
+</html>

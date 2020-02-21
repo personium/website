@@ -1,0 +1,351 @@
+<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml" lang="" xml:lang="">
+<head>
+  <!-- default template -->
+  <meta charset="utf-8" />
+  <meta name="generator" content="pandoc" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=yes" />
+  <link rel="icon" href="/images/favicon.ico" type="image/x-icon"/>
+  <title>README</title>
+  <script type="text/javascript">
+      var path = location.pathname.split('/');
+      var pathRoot = [ path[0], path[1], '' ].join('/');
+      var pathLang = [ path[0], path[1], path[2] , ''].join('/');
+
+      document.write('<link rel="stylesheet" href="' + pathRoot + 'personium.css" type="text/css" />');
+      document.write('<link rel="stylesheet" href="' + pathLang + 'locale.css" type="text/css" />');
+      var ps = document.createElement('script');
+      ps.src = pathRoot + 'personium_docs.js';
+      var s = document.getElementsByTagName('script')[0];
+      s.parentNode.insertBefore(ps, s);
+    
+      ps2 = document.createElement('script');
+      ps2.src = pathRoot + 'apiref_versions.js';
+      s = document.getElementsByTagName('script')[0];
+      s.parentNode.insertBefore(ps2, s);
+  </script>
+  <link href="https://fonts.googleapis.com/css?family=Raleway" rel="stylesheet">
+  <link href="https://fonts.googleapis.com/css?family=Open+Sans" rel="stylesheet">
+  
+  <!--[if lt IE 9]>
+    <script src="//cdnjs.cloudflare.com/ajax/libs/html5shiv/3.7.3/html5shiv-printshiv.min.js"></script>
+  <![endif]-->
+</head>
+<body>
+  <header>
+    <nav>
+    <div id="logo"><a href="/"><img src="https://personium.io/images/logo-quantify-dark.png"></a></div>
+    <ul>
+      <li class="submenu">
+        <a href="#" >Introduction</a>
+        <ul>
+            <li><a href="javascript:p.toPage('/overview/001_Introduction.html');">What's Personium?</a></li>
+            <li><a href="javascript:p.toPage('/user_guide/001_Personium_Architecture.html');">Architecture</a></li>
+            <li><a href="javascript:p.toPage('/user_guide/008_Glossary.html');">Glossary</a></li>
+        </ul>
+      </li>
+      <li class="submenu">
+        <a href="#" >User Guide</a>
+        <ul>
+            <li><a href="javascript:p.toPage('/app-developer/');">for App Developer</a></li>
+            <li><a href="javascript:p.toPage('/cell-gui-developer/');">for Cell GUI Developer</a></li>
+            <li><a href="javascript:p.toPage('/unit-administrator/');">for Unit Administrator</a></li>
+            <li><a href="javascript:p.toPage('/server-operator/');">for Server Software Operator</a></li>
+            <li><a href="javascript:p.toPage('/document-writer/');">for Documentation Contributor</a></li>
+            <li><a href="javascript:p.toPage('/plugin-developer/');">for Server Plugin Developer</a></li>
+            <li><a href="javascript:p.toPage('/software-developer/');">for Server Developer</a></li>
+        </ul>
+      </li>
+      <li class="submenu">
+        <a href="#" >API Reference</a>
+        <ul id="api-ref-list">
+            <li><a href="javascript:p.toPage('/user_guide/990_Old_Version_API_Ref.html');">older versions</a></li>
+        </ul>
+      </li>
+      <li class="submenu">
+        <a href="#" >Languages</a>
+        <ul>
+            <li><a href="javascript:p.setLang('en');">English</a></li>
+            <li><a href="javascript:p.setLang('ja');">Japanese</a></li>
+        </ul>
+      </li>
+    </ul>
+    </nav>
+  </header>
+
+<div id="container">
+<h1>サーバソフトウェア運用者向けガイド</h1>
+<p>Personiumのサーバソフトウェアを使ってPersoniumユニットを構築する方や、Personiumサーバプログラムをビルド・デプロイ・設定する方、 Personiumを使用したPDSサービス環境を提供・運用したい方向けのドキュメントです。</p>
+<p>構築・設定済のPersoniumユニットに対して、Cellの作成・払出しや、払出したCellの管理等を実施する方は、<a href="../unit-administrator/">ユニット管理者向けガイド</a>をご覧ください。</p>
+<h2>Personiumのユニット構成</h2>
+<p>Personiumのユニットは評価、開発、確認、運用等々の様々な異なる目的に応じて構成することが可能です。Personiumは必要に応じて簡単に、環境を自動構築できるセットアップツールを提供しています。<br />
+Personiumのユニットはセットアップツールを使用せずに構築することも可能ですが、Personiumのユニットを簡単に構築するためにセットアップツールの使用をお勧めいたします。</p>
+<h2>Personiumセットアップツール</h2>
+<p>本セットアップツールはPersoniumをインストールする前に、あなたのサーバー（linuxのサーバーまたはWindowsやMac上の仮想マシン）へのミドルウェアの導入やOSやネットワークの設定を行います。<br />
+セットアップツールにはPersoniumとのユニットの構成に応じて複数の形式がありますので、あなたの目的に応じたセットアップツールをご使用ください。</p>
+<h2>Personiumにおける各サーバーの役割</h2>
+<p>Personiumのユニットは以下の役割を持ったサーバーから構成されます。これらの役割は相互に接続された単独または複数のサーバーに割り当てることが可能です。</p>
+<table>
+<thead>
+<tr class="header">
+<th style="text-align: left;">役割</th>
+<th style="text-align: left;">必須</th>
+<th style="text-align: left;">詳細</th>
+</tr>
+</thead>
+<tbody>
+<tr class="odd">
+<td style="text-align: left;">Web</td>
+<td style="text-align: left;">必須</td>
+<td style="text-align: left;">リバースプロキシーサーバー。インターネットからのアクセスが可能なグローバルなIPアドレスを保有する必要があります。</td>
+</tr>
+<tr class="even">
+<td style="text-align: left;">AP</td>
+<td style="text-align: left;">必須</td>
+<td style="text-align: left;">Personiumが動作するアプリケーションサーバーです。</td>
+</tr>
+<tr class="odd">
+<td style="text-align: left;">ES</td>
+<td style="text-align: left;">必須</td>
+<td style="text-align: left;">ElasticSearchが動作するサーバーです。</td>
+</tr>
+<tr class="even">
+<td style="text-align: left;">MQ</td>
+<td style="text-align: left;">必須</td>
+<td style="text-align: left;">ActiveMQが動作するサーバーです。</td>
+</tr>
+<tr class="odd">
+<td style="text-align: left;">NFS</td>
+<td style="text-align: left;">必須</td>
+<td style="text-align: left;">ネットワークファイルシステム(NFS)が動作するサーバーです。</td>
+</tr>
+<tr class="even">
+<td style="text-align: left;">Bastion</td>
+<td style="text-align: left;">オプション</td>
+<td style="text-align: left;">踏み台サーバ。各サーバへのsshでのアクセスを中継させるためにのサーバです。</td>
+</tr>
+</tbody>
+</table>
+<h2>ユニット構成設計</h2>
+<p>Personiumはスケーラブルなアーキテクチャを採用しています。評価用や個人利用であれば1台のマシンにすべてを詰め込んだPersoniumユニットを構築することも可能です。一方で数百人、数千人が使うユニットを構築するには、セキュリティや性能といった非機能が必要となるため、Web層-AP層-DB層といった層構成をとるのが推奨されますので、最低2-3台の構成をとるべきでしょう。さらに数万人～数十万人以上が日々使う大規模なユニット構成するためには各層をスケールアウトさせ、10台-20台といった構成をとることとなります。</p>
+<p>まずは、どのような構成のユニットを作るべきかを決め、必要なインフラ設計をしましょう。</p>
+<h2>ユニットの構築</h2>
+<p>ユニット構築には仮想イメージ、Vagrant、Ansibleを利用することができます。またOpen Stack ベースのクラウド環境に構築する場合は Heat Template を使えば、ほぼ自動でユニット構築が可能です。もちろん、これら自動構築ツールを使わないで任意のクラウドや物理/仮想マシンを使ってユニット構築を行うこともできます。しかし、そのための手順等ドキュメントを私たちが準備しメンテナンスする体力がないため、以下Open StackのHeatを使ったサーバインフラ構築手順やAnsibleを使ったユニット自動構築手順を参考に構築を行ってください。</p>
+<p>さまざまな環境でユニットが構築できたというお話をコミュニティの#infraチャンネルで聞かせて頂けると嬉しく思います。</p>
+<table>
+<colgroup>
+<col style="width: 2%" />
+<col style="width: 5%" />
+<col style="width: 7%" />
+<col style="width: 15%" />
+<col style="width: 11%" />
+<col style="width: 14%" />
+<col style="width: 14%" />
+<col style="width: 14%" />
+<col style="width: 14%" />
+</colgroup>
+<thead>
+<tr class="header">
+<th style="text-align: left;"></th>
+<th style="text-align: left;">サーバ</th>
+<th style="text-align: left;">サーバ構築</th>
+<th style="text-align: left;">Personiumセットアップ</th>
+<th style="text-align: left;">導入済拡張エンジン</th>
+<th style="text-align: left;">Personiumバージョン</th>
+<th style="text-align: left;">CellにアクセスするURL形式</th>
+<th style="text-align: left;">導入済アプリケーション</th>
+<th style="text-align: left;">デフォルトFQDN</th>
+</tr>
+</thead>
+<tbody>
+<tr class="odd">
+<td style="text-align: left;">Personiumを使ってみる</td>
+<td style="text-align: left;">Linuxサーバ1台</td>
+<td style="text-align: left;">不要</td>
+<td style="text-align: left;">不要</td>
+<td style="text-align: left;">httpclient<br>ew-services<br>mailsender<br>slack</td>
+<td style="text-align: left;">1.6.15</td>
+<td style="text-align: left;">path based cell url</td>
+<td style="text-align: left;">unit-manager</td>
+<td style="text-align: left;">personium.example.com</td>
+</tr>
+<tr class="even">
+<td style="text-align: left;"></td>
+<td style="text-align: left;"></td>
+<td style="text-align: left;"></td>
+<td style="text-align: left;"></td>
+<td style="text-align: left;"></td>
+<td style="text-align: left;">1.7系（未定）</td>
+<td style="text-align: left;">path based cell url</td>
+<td style="text-align: left;">unit-manager</td>
+<td style="text-align: left;">personium.example.com</td>
+</tr>
+<tr class="odd">
+<td style="text-align: left;"></td>
+<td style="text-align: left;"></td>
+<td style="text-align: left;"></td>
+<td style="text-align: left;"></td>
+<td style="text-align: left;"></td>
+<td style="text-align: left;">1.7系（未定）</td>
+<td style="text-align: left;">per cell fqdn url</td>
+<td style="text-align: left;">なし※1</td>
+<td style="text-align: left;">personium.example.com</td>
+</tr>
+<tr class="even">
+<td style="text-align: left;">小規模環境</td>
+<td style="text-align: left;">Linuxサーバ1台</td>
+<td style="text-align: left;">Vagrant</td>
+<td style="text-align: left;">不要</td>
+<td style="text-align: left;">httpclient<br>ew-services<br>mailsender<br>slack</td>
+<td style="text-align: left;">最新</td>
+<td style="text-align: left;">path based cell url</td>
+<td style="text-align: left;">unit-manager</td>
+<td style="text-align: left;">personium.example.com</td>
+</tr>
+<tr class="odd">
+<td style="text-align: left;"></td>
+<td style="text-align: left;"></td>
+<td style="text-align: left;"></td>
+<td style="text-align: left;"></td>
+<td style="text-align: left;"></td>
+<td style="text-align: left;">最新</td>
+<td style="text-align: left;">per cell fqdn url</td>
+<td style="text-align: left;">なし※1</td>
+<td style="text-align: left;">personium.example.com</td>
+</tr>
+<tr class="even">
+<td style="text-align: left;"></td>
+<td style="text-align: left;"></td>
+<td style="text-align: left;">ユーザ側でLinuxサーバを準備</td>
+<td style="text-align: left;">Ansible</td>
+<td style="text-align: left;">なし</td>
+<td style="text-align: left;">任意<br>デフォルトは最新</td>
+<td style="text-align: left;">path based cell url<br>per cell fqdn url</td>
+<td style="text-align: left;">なし※1</td>
+<td style="text-align: left;">なし</td>
+</tr>
+<tr class="odd">
+<td style="text-align: left;">中・大規模環境</td>
+<td style="text-align: left;">Linuxサーバ3台</td>
+<td style="text-align: left;">HeatTemplate</td>
+<td style="text-align: left;">Ansible</td>
+<td style="text-align: left;">なし</td>
+<td style="text-align: left;">任意<br>デフォルトは最新</td>
+<td style="text-align: left;">path based cell url<br>per cell fqdn url</td>
+<td style="text-align: left;">なし※1</td>
+<td style="text-align: left;">なし</td>
+</tr>
+<tr class="even">
+<td style="text-align: left;"></td>
+<td style="text-align: left;"></td>
+<td style="text-align: left;">ユーザ側でLinuxサーバを準備</td>
+<td style="text-align: left;">自力</td>
+<td style="text-align: left;">なし</td>
+<td style="text-align: left;">任意<br>デフォルトは最新</td>
+<td style="text-align: left;">path based cell url<br>per cell fqdn url</td>
+<td style="text-align: left;">なし※1</td>
+<td style="text-align: left;">なし</td>
+</tr>
+</tbody>
+</table>
+<p>※1 unit-managerをインストールしたい場合は、<a href="https://github.com/personium/app-uc-unit-manager/blob/master/README_ja.%6D%64">こちら</a>の手順をご確認ください。</p>
+<h3>Personiumを使ってみる</h3>
+<ul>
+<li><p>仮想イメージを利用したユニットの自動構築</p>
+<p>仮想イメージを利用してユニットを構築するためのガイドを公開しています。</p>
+<ul>
+<li><a href="./setup_virtual_image.html">仮想イメージを利用したユニット構築ガイド</a></li>
+</ul></li>
+</ul>
+<h3>小規模環境(サーバ1台で動作するPersonium環境)を構築する</h3>
+<p><strong>もしもあなたが、Personiumにより一層興味を持ち、アプリケーションの開発やテストを実施してみたいと思ったならば、1台のサーバからユニットが構成される、本構成をお勧めします。</strong></p>
+<ul>
+<li><p>Vagrant</p>
+<p>Vagrantを利用してユニットを構築するためのガイドを公開しています。</p>
+<ul>
+<li><a href="https://github.com/personium/setup-vagrant">Vagrantを利用したユニット構築ガイド</a></li>
+</ul></li>
+<li><p>Ansible(1-Server)</p>
+<p>Ansible(1-Server)を利用してLinuxサーバ1台構成のユニットを構築するためのガイドを公開しています。</p>
+<ul>
+<li><a href="https://github.com/personium/ansible/tree/master/1-server_unit">Ansible(1-server)を利用したユニット構築ガイド</a></li>
+</ul></li>
+</ul>
+<h3>中・大規模環境(サーバ3台で動作するPersonium環境)を構築する</h3>
+<p><strong>もしもあなたがPersoniumプロジェクトにご参加いただき、アプリケーションをリリースしようとするならば、3台のサーバからユニットが構成される、本構成をお勧めします。</strong></p>
+<ul>
+<li><p>Open Stack Heat</p>
+<p>HeatTemplateを利用して、OpenStackでPersonium 3Serverユニット用のネットワークおよびサーバ構成を自動構築するためのガイドを公開してしています。</p>
+<ul>
+<li><a href="https://github.com/personium/openstack-heat">Open Stack Heatを利用したサーバインフラの自動構築</a></li>
+</ul></li>
+<li><p>Ansible(3-Server)</p>
+<p>Ansible(3-Server)を利用してLinuxサーバ3台構成のユニットを構築するためのガイドを公開しています。</p>
+<ul>
+<li><a href="https://github.com/personium/ansible/tree/master/3-server_unit" title="3-server_unit">Ansible(3-server)を利用したユニット構築ガイド</a></li>
+</ul></li>
+</ul>
+<h3>構築したユニットの環境情報</h3>
+<p>構築したユニットの主要なミドルウェアの環境情報を確認します。</p>
+<ul>
+<li><a href="./Confirm_environment_settings.html">構築したユニットの環境確認</a></li>
+</ul>
+<p>構築完了後、ユニットの管理方法を確認したい場合は<a href="../unit-administrator/">こちら</a>をご覧ください。</p>
+<h3>Pluginの導入</h3>
+<p><strong>Ansible(1-Server)</strong>、<strong>Ansible(3-Server)</strong>の手順を利用して環境を構築した場合はこちらも併せてご覧ください。</p>
+<ul>
+<li><a href="./setup_authentication_plugins.html">認証Pluginのセットアップ</a></li>
+<li><a href="./setup_engine_extensions.html">Engine Extensionのセットアップ</a></li>
+</ul>
+<h2>ユニットの設定</h2>
+<p>ユニットの構成ができたら、ユニットを正しく設定する必要があります。 自動構築ユニットには基本的な設定はひととおりされていますが、完全ではありません。以下を参照し適切な設定を行ってください。</p>
+<ul>
+<li><a href="./unit_operation_design.html">Unitの運用設計と設定</a></li>
+<li><a href="./unit_config_list.html">Unitの設定一覧</a></li>
+<li><a href="./unit_coordination.html">Unit間連携の設定方法</a></li>
+</ul>
+<h2>ユニットの起動・停止</h2>
+<p>設定が終わったらユニットの起動です。以下の順序で各サーバの起動を行ってください。</p>
+<table>
+<thead>
+<tr class="header">
+<th style="text-align: left;">起動順序</th>
+<th style="text-align: left;">起動方法</th>
+</tr>
+</thead>
+<tbody>
+<tr class="odd">
+<td style="text-align: left;">1</td>
+<td style="text-align: left;">Memcached, ElasticSearch, ActiveMQ</td>
+</tr>
+<tr class="even">
+<td style="text-align: left;">2</td>
+<td style="text-align: left;">Tomcat</td>
+</tr>
+<tr class="odd">
+<td style="text-align: left;">3</td>
+<td style="text-align: left;">Nginx</td>
+</tr>
+</tbody>
+</table>
+<p>停止については上記の逆順で実施ください。</p>
+<h2>ユニットの運用</h2>
+<ul>
+<li><p>サーバのセキュリティ対応について<br />
+多くの場合Personiumのユニットには個人のプライバシーに関わる情報が入りますし、そもそもインターネット上にサーバを立てる上でセキュリティ対策は必須です。初期構築されたままでユニットを放置せず、適切にセキュリティパッチを適用してください。</p></li>
+<li><p>ユニットのセキュリティ対応について<br />
+構築した環境は場合によってはセキュリティホールとなりえる情報が設定が含まれています。そのため、デフォルトから変更したほうが良い設定について説明します。</p>
+<ul>
+<li><a href="unit_security.html">デフォルトからの変更を推奨する設定</a></li>
+</ul></li>
+</ul>
+<h3>関連するリポジトリ</h3>
+<ul>
+<li><a href="https://github.com/personium/ansible">ansible</a></li>
+<li><a href="https://github.com/personium/openstack-heat">openstack-heat</a></li>
+</ul>
+</div>
+  <footer><nav>The Personium project is provided under the Apache 2.0 license. </nav></footer>
+</body>
+</html>
+

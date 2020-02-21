@@ -1,0 +1,209 @@
+<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml" lang="" xml:lang="">
+<head>
+  <!-- default template -->
+  <meta charset="utf-8" />
+  <meta name="generator" content="pandoc" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=yes" />
+  <link rel="icon" href="/images/favicon.ico" type="image/x-icon"/>
+  <title>README</title>
+  <script type="text/javascript">
+      var path = location.pathname.split('/');
+      var pathRoot = [ path[0], path[1], '' ].join('/');
+      var pathLang = [ path[0], path[1], path[2] , ''].join('/');
+
+      document.write('<link rel="stylesheet" href="' + pathRoot + 'personium.css" type="text/css" />');
+      document.write('<link rel="stylesheet" href="' + pathLang + 'locale.css" type="text/css" />');
+      var ps = document.createElement('script');
+      ps.src = pathRoot + 'personium_docs.js';
+      var s = document.getElementsByTagName('script')[0];
+      s.parentNode.insertBefore(ps, s);
+    
+      ps2 = document.createElement('script');
+      ps2.src = pathRoot + 'apiref_versions.js';
+      s = document.getElementsByTagName('script')[0];
+      s.parentNode.insertBefore(ps2, s);
+  </script>
+  <link href="https://fonts.googleapis.com/css?family=Raleway" rel="stylesheet">
+  <link href="https://fonts.googleapis.com/css?family=Open+Sans" rel="stylesheet">
+  
+  <!--[if lt IE 9]>
+    <script src="//cdnjs.cloudflare.com/ajax/libs/html5shiv/3.7.3/html5shiv-printshiv.min.js"></script>
+  <![endif]-->
+</head>
+<body>
+  <header>
+    <nav>
+    <div id="logo"><a href="/"><img src="https://personium.io/images/logo-quantify-dark.png"></a></div>
+    <ul>
+      <li class="submenu">
+        <a href="#" >Introduction</a>
+        <ul>
+            <li><a href="javascript:p.toPage('/overview/001_Introduction.html');">What's Personium?</a></li>
+            <li><a href="javascript:p.toPage('/user_guide/001_Personium_Architecture.html');">Architecture</a></li>
+            <li><a href="javascript:p.toPage('/user_guide/008_Glossary.html');">Glossary</a></li>
+        </ul>
+      </li>
+      <li class="submenu">
+        <a href="#" >User Guide</a>
+        <ul>
+            <li><a href="javascript:p.toPage('/app-developer/');">for App Developer</a></li>
+            <li><a href="javascript:p.toPage('/cell-gui-developer/');">for Cell GUI Developer</a></li>
+            <li><a href="javascript:p.toPage('/unit-administrator/');">for Unit Administrator</a></li>
+            <li><a href="javascript:p.toPage('/server-operator/');">for Server Software Operator</a></li>
+            <li><a href="javascript:p.toPage('/document-writer/');">for Documentation Contributor</a></li>
+            <li><a href="javascript:p.toPage('/plugin-developer/');">for Server Plugin Developer</a></li>
+            <li><a href="javascript:p.toPage('/software-developer/');">for Server Developer</a></li>
+        </ul>
+      </li>
+      <li class="submenu">
+        <a href="#" >API Reference</a>
+        <ul id="api-ref-list">
+            <li><a href="javascript:p.toPage('/user_guide/990_Old_Version_API_Ref.html');">older versions</a></li>
+        </ul>
+      </li>
+      <li class="submenu">
+        <a href="#" >Languages</a>
+        <ul>
+            <li><a href="javascript:p.setLang('en');">English</a></li>
+            <li><a href="javascript:p.setLang('ja');">Japanese</a></li>
+        </ul>
+      </li>
+    </ul>
+    </nav>
+  </header>
+
+<div id="container">
+<h1>サーバ開発者向けガイド</h1>
+<p>Personiumのサーバソフトウェアそのものの開発に貢献したい人向けのドキュメントです</p>
+<h2>サーバソフトウェアの構成</h2>
+<p>Personiumの主要構成要素は以下2つのJava Web アプリケーションプログラムで、いずれもサーブレットコンテナ上で動作します。</p>
+<table>
+<thead>
+<tr class="header">
+<th style="text-align: left;">モジュール名</th>
+<th style="text-align: left;">概要</th>
+<th style="text-align: left;">JavaDoc</th>
+</tr>
+</thead>
+<tbody>
+<tr class="odd">
+<td style="text-align: left;"><a href="https://github.com/personium/personium-core">personium-core</a></td>
+<td style="text-align: left;">Personiumのメインサーバプログラム</td>
+<td style="text-align: left;">準備中</td>
+</tr>
+<tr class="even">
+<td style="text-align: left;"><a href="https://github.com/personium/personium-engine">personium-engine</a></td>
+<td style="text-align: left;">coreの配下でEngine機能を担当するサブサーバプログラム</td>
+<td style="text-align: left;">準備中</td>
+</tr>
+</tbody>
+</table>
+<p>これらサーバプログラムをTomcatなどのJavaサーブレットコンテナで動作させ、NginxやApacheなどのリバースプロキシサーバ経由で適切に用いて構築することでPersoniumのユニットとなります。</p>
+<p>またバックエンドとして以下のミドルウェアに依存しています。</p>
+<table style="width:22%;">
+<colgroup>
+<col style="width: 5%" />
+<col style="width: 5%" />
+<col style="width: 5%" />
+<col style="width: 5%" />
+</colgroup>
+<thead>
+<tr class="header">
+<th style="text-align: left;">モジュール名</th>
+<th style="text-align: left;">概要</th>
+<th style="text-align: left;">必須</th>
+<th style="text-align: left;">用途</th>
+</tr>
+</thead>
+<tbody>
+<tr class="odd">
+<td style="text-align: left;">ElasticSearch</td>
+<td style="text-align: left;">Scalable NoSQL Search Engine</td>
+<td style="text-align: left;">Yes</td>
+<td style="text-align: left;">Datastore to support our OData interface.</td>
+</tr>
+<tr class="even">
+<td style="text-align: left;">ActiveMQ</td>
+<td style="text-align: left;">Java Message Service (JMS) 実装</td>
+<td style="text-align: left;">Yes</td>
+<td style="text-align: left;">Event Handling</td>
+</tr>
+<tr class="odd">
+<td style="text-align: left;">Memcached</td>
+<td style="text-align: left;">汎用の分散型メモリキャッシュシステム</td>
+<td style="text-align: left;">no</td>
+<td style="text-align: left;">Lock/Cache</td>
+</tr>
+</tbody>
+</table>
+<h2>開発用環境の構築</h2>
+<p>開発用の環境を構築したい人は<a href="./build_development_environment.html">開発用環境の構築手順</a>をご覧ください。</p>
+<h2>依存ライブラリとその管理</h2>
+<p>Personium のサーバモジュール (core/engine)は、それら共通的に使う機能などは以下のライブラリとして実装している部分があります。サーバの機能追加・変更に当たっては場合によってこれらライブラリを改造する必要となる場合もあります。</p>
+<table style="width:22%;">
+<colgroup>
+<col style="width: 5%" />
+<col style="width: 5%" />
+<col style="width: 5%" />
+<col style="width: 5%" />
+</colgroup>
+<thead>
+<tr class="header">
+<th style="text-align: left;">ライブラリ</th>
+<th style="text-align: left;">概要</th>
+<th style="text-align: left;">依存モジュール</th>
+<th style="text-align: left;">JavaDoc</th>
+</tr>
+</thead>
+<tbody>
+<tr class="odd">
+<td style="text-align: left;"><a href="https://github.com/personium/personium-lib-common">personium-lib-common</a></td>
+<td style="text-align: left;">core/engineで共通的に使うユーティリティ</td>
+<td style="text-align: left;">core, engine</td>
+<td style="text-align: left;">準備中</td>
+</tr>
+<tr class="even">
+<td style="text-align: left;"><a href="https://github.com/personium/personium-lib-es-adapter">personium-lib-es-adapter</a></td>
+<td style="text-align: left;">ElasticSearchへの接続を担うモジュール。ElasticSearchバージョンアップに伴う軽微非互換を吸収することを主たる目的としています。</td>
+<td style="text-align: left;">core</td>
+<td style="text-align: left;">準備中</td>
+</tr>
+<tr class="odd">
+<td style="text-align: left;"><a href="https://github.com/personium/personium-client-java">personium-client-java</a></td>
+<td style="text-align: left;">Personium のJava client ライブラリ. Engineで使用</td>
+<td style="text-align: left;">engine</td>
+<td style="text-align: left;">準備中</td>
+</tr>
+<tr class="even">
+<td style="text-align: left;"><a href="https://github.com/personium/personium-plugin-base">personium-plugin-base</a></td>
+<td style="text-align: left;">Personium プラグイン記述のためのベース</td>
+<td style="text-align: left;">core</td>
+<td style="text-align: left;">準備中</td>
+</tr>
+<tr class="odd">
+<td style="text-align: left;"><a href="https://github.com/personium/personium-ex-base">personium-ex-base</a></td>
+<td style="text-align: left;">Personium エンジン拡張記述のためのベース</td>
+<td style="text-align: left;">engine</td>
+<td style="text-align: left;">準備中</td>
+</tr>
+</tbody>
+</table>
+<p>Personiumはこれらのライブラリのほかに多くのオープンソースライブラリを活用しています。 ライブラリの依存関係についてはMavenにて管理しており、上記のプロジェクトライブラリについては現在は以下にあるプロジェクトのmavenリポジトリで管理をしています。</p>
+<pre><code>http://personium.io/mvnrepo/</code></pre>
+<p>詳しくは各プロジェクトのルートにあるpom.xmlを参照してください。</p>
+<h3>ライセンスに関する考慮</h3>
+<p>Personiumプロジェクトでは私たちの成果物をApache 2.0ライセンスに基づいてユーザの皆さんに気軽に安心して使っていただけるよう、同ライセンスと互換性の高いライブラリのみで構成するポリシーとしています。具体的には再配布禁止条項を含むライセンスのライブラリは使用しないポリシーとしています。</p>
+<h2>関連するリポジトリ</h2>
+<ul>
+<li><a href="https://github.com/personium/personium-core">personium-core</a></li>
+<li><a href="https://github.com/personium/personium-engine">personium-engine</a></li>
+<li><a href="https://github.com/personium/personium-lib-common">personium-lib-common</a></li>
+<li><a href="https://github.com/personium/personium-lib-es-adapter">personium-lib-es-adapter</a></li>
+<li><a href="https://github.com/personium/personium-client-java">personium-client-java</a></li>
+</ul>
+</div>
+  <footer><nav>The Personium project is provided under the Apache 2.0 license. </nav></footer>
+</body>
+</html>
+

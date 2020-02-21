@@ -1,0 +1,113 @@
+<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml" lang="" xml:lang="">
+<head>
+  <!-- default template -->
+  <meta charset="utf-8" />
+  <meta name="generator" content="pandoc" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=yes" />
+  <link rel="icon" href="/images/favicon.ico" type="image/x-icon"/>
+  <title>README</title>
+  <script type="text/javascript">
+      var path = location.pathname.split('/');
+      var pathRoot = [ path[0], path[1], '' ].join('/');
+      var pathLang = [ path[0], path[1], path[2] , ''].join('/');
+
+      document.write('<link rel="stylesheet" href="' + pathRoot + 'personium.css" type="text/css" />');
+      document.write('<link rel="stylesheet" href="' + pathLang + 'locale.css" type="text/css" />');
+      var ps = document.createElement('script');
+      ps.src = pathRoot + 'personium_docs.js';
+      var s = document.getElementsByTagName('script')[0];
+      s.parentNode.insertBefore(ps, s);
+    
+      ps2 = document.createElement('script');
+      ps2.src = pathRoot + 'apiref_versions.js';
+      s = document.getElementsByTagName('script')[0];
+      s.parentNode.insertBefore(ps2, s);
+  </script>
+  <link href="https://fonts.googleapis.com/css?family=Raleway" rel="stylesheet">
+  <link href="https://fonts.googleapis.com/css?family=Open+Sans" rel="stylesheet">
+  
+  <!--[if lt IE 9]>
+    <script src="//cdnjs.cloudflare.com/ajax/libs/html5shiv/3.7.3/html5shiv-printshiv.min.js"></script>
+  <![endif]-->
+</head>
+<body>
+  <header>
+    <nav>
+    <div id="logo"><a href="/"><img src="https://personium.io/images/logo-quantify-dark.png"></a></div>
+    <ul>
+      <li class="submenu">
+        <a href="#" >Introduction</a>
+        <ul>
+            <li><a href="javascript:p.toPage('/overview/001_Introduction.html');">What's Personium?</a></li>
+            <li><a href="javascript:p.toPage('/user_guide/001_Personium_Architecture.html');">Architecture</a></li>
+            <li><a href="javascript:p.toPage('/user_guide/008_Glossary.html');">Glossary</a></li>
+        </ul>
+      </li>
+      <li class="submenu">
+        <a href="#" >User Guide</a>
+        <ul>
+            <li><a href="javascript:p.toPage('/app-developer/');">for App Developer</a></li>
+            <li><a href="javascript:p.toPage('/cell-gui-developer/');">for Cell GUI Developer</a></li>
+            <li><a href="javascript:p.toPage('/unit-administrator/');">for Unit Administrator</a></li>
+            <li><a href="javascript:p.toPage('/server-operator/');">for Server Software Operator</a></li>
+            <li><a href="javascript:p.toPage('/document-writer/');">for Documentation Contributor</a></li>
+            <li><a href="javascript:p.toPage('/plugin-developer/');">for Server Plugin Developer</a></li>
+            <li><a href="javascript:p.toPage('/software-developer/');">for Server Developer</a></li>
+        </ul>
+      </li>
+      <li class="submenu">
+        <a href="#" >API Reference</a>
+        <ul id="api-ref-list">
+            <li><a href="javascript:p.toPage('/user_guide/990_Old_Version_API_Ref.html');">older versions</a></li>
+        </ul>
+      </li>
+      <li class="submenu">
+        <a href="#" >Languages</a>
+        <ul>
+            <li><a href="javascript:p.setLang('en');">English</a></li>
+            <li><a href="javascript:p.setLang('ja');">Japanese</a></li>
+        </ul>
+      </li>
+    </ul>
+    </nav>
+  </header>
+
+<div id="container">
+<h1>ユニット管理者向けガイド</h1>
+<p>構築・設定済のPersoniumユニットに対してユニットユーザトークンを使ってアクセスして、 ユニット管理者の業務、すなわちCellの作成・払出しや払出したCellの管理等を実施する方のためのガイドドキュメントです。</p>
+<p>Personiumユニットを構築する方や、Personiumサーバプログラムをビルド・デプロイ・設定する方は、<a href="../server-operator/">サーバソフトウェア運用者向けガイド</a>をご覧ください。</p>
+<h2>ユニットユーザとユニットレベルAPI</h2>
+<p>ユニットユーザとはPersoniumユニットで認識されるユニットユーザトークンの発行を受けたユーザで、 CellのCRUD等ユニットレベルのAPIを操作可能な主体となります。</p>
+<ul>
+<li><a href="./Unit-User.html">ユニットユーザ</a></li>
+</ul>
+<p>Cellの生成や管理を司るユニットレベルAPIへのアクセスにはユニットユーザトークンが必要です。また Cellは生成されたときにどのユニットユーザトークンで生成されたかを覚えており、自身を作成した ユニットユーザに対しては、常にCellレベル・BoxレベルのすべてのAPIに特権アクセスを許可します。</p>
+<h2>チュートリアル</h2>
+<p>Personiumユニットを管理するための基本的な操作に関するチュートリアルを公開しています。 Personiumユニットを初めて管理される方はご確認ください。</p>
+<ul>
+<li><a href="./tutorial.html">Personiumユニット管理 チュートリアル</a></li>
+</ul>
+<h2>GUIを利用したユニットの管理</h2>
+<p>以下のユニットマネージャGUIを使うことで、ほぼすべてのAPIアクセスをユニットユーザとして実施することができます。</p>
+<p><a href="https://github.com/personium/app-uc-unit-manager">app-uc-unit-manager</a></p>
+<p>このツールは複数の起動方法をサポートしており、ユーザCellのHomeアプリから起動したときは、 アクセスすべき対象CellのURLやアクセスのためのトークン情報が起動パラメタとして付加された形で起動します。 その場合このアプリはCellマネージャとして振舞います。一方で、特にそのようなパラメタ指定なく起動したときは、 ユニットマネージャGUIとして起動します。</p>
+<h2>Cell払出サンプルクライアント</h2>
+<p>前述ユニットマネージャGUIを使えば、手動で様々なAPI操作を試すことができますが、ユニット管理者にとって Cell発行希望者に対していちいち手動でレコードを追加してゆくのは非現実的でしょう。</p>
+<p>多くの場合、所定仕様でのCellを作成するプログラムを作成したり、 Cell利用申込画面を作成したりといったこととなります。その際は 以下のサンプルアプリをご活用ください。</p>
+<p><a href="https://github.com/personium/app-uc-cell-creator">app-uc-cell-creator</a></p>
+<p>小規模な運用であれば、このサンプルプログラムそのものを使ってCellの払出をするのでもよいでしょう</p>
+<h2>その他</h2>
+<ul>
+<li><a href="./Data_Management.html">データの管理</a></li>
+</ul>
+<h2>関連するリポジトリ</h2>
+<ul>
+<li><a href="https://github.com/personium/app-uc-unit-manager">app-uc-unit-manager</a></li>
+<li><a href="https://github.com/personium/app-uc-cell-creator">app-uc-cell-creator</a></li>
+</ul>
+</div>
+  <footer><nav>The Personium project is provided under the Apache 2.0 license. </nav></footer>
+</body>
+</html>
+

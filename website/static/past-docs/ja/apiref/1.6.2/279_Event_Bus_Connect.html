@@ -1,0 +1,179 @@
+<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml" lang="" xml:lang="">
+<head>
+  <!-- default template -->
+  <meta charset="utf-8" />
+  <meta name="generator" content="pandoc" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=yes" />
+  <title>279_Event_Bus_Connect</title>
+  <script type="text/javascript">
+      var path = location.pathname.split('/');
+      var pathRoot = [ path[0], path[1], '' ].join('/');
+      var pathLang = [ path[0], path[1], path[2] , ''].join('/');
+
+      document.write('<link rel="stylesheet" href="' + pathRoot + 'personium.css" type="text/css" />');
+      document.write('<link rel="stylesheet" href="' + pathLang + 'locale.css" type="text/css" />');
+      var ps = document.createElement('script');
+      ps.src = pathRoot + 'personium_docs.js';
+      var s = document.getElementsByTagName('script')[0];
+      s.parentNode.insertBefore(ps, s);
+
+  </script>
+  <link href="https://fonts.googleapis.com/css?family=Raleway" rel="stylesheet">
+  <link href="https://fonts.googleapis.com/css?family=Open+Sans" rel="stylesheet">
+  
+  <!--[if lt IE 9]>
+    <script src="//cdnjs.cloudflare.com/ajax/libs/html5shiv/3.7.3/html5shiv-printshiv.min.js"></script>
+  <![endif]-->
+</head>
+<body>
+  <header>
+    <nav>
+    <div id="logo"><a href="/">Personium</a></div>
+    <ul>
+      <li class="submenu">
+        <a href="" >Introduction</a>
+        <ul>
+            <li><a href="javascript:p.toPage('/overview/001_Introduction.html');">What's Personium?</a></li>
+            <li><a href="javascript:p.toPage('/user_guide/001_Personium_Architecture.html');">Architecture</a></li>
+            <li><a href="javascript:p.toPage('/user_guide/008_Glossary.html');">Glossary</a></li>
+        </ul>
+      </li>
+      <li class="submenu">
+        <a href="" >User Guide</a>
+        <ul>
+            <li><a href="javascript:p.toPage('/app-developer/');">for App Developer</a></li>
+            <li><a href="javascript:p.toPage('/cell-client-developer/');">for Cell App Developer</a></li>
+            <li><a href="javascript:p.toPage('/unit-administrator/');">for Unit Administrator</a></li>
+            <li><a href="javascript:p.toPage('/server-operator/');">for Server Software Operator</a></li>
+            <li><a href="javascript:p.toPage('/document-writer/');">for Documentation Contributor</a></li>
+            <li><a href="javascript:p.toPage('/plugin-developer/');">for Server Plugin Developer</a></li>
+            <li><a href="javascript:p.toPage('/software-developer/');">for Server Developer</a></li>
+        </ul>
+      </li>
+      <li class="submenu">
+        <a href="" >API Reference</a>
+        <ul>
+            <li><a href="#" onclick="p.toApiRef(this);return false;">current</a></li>
+            <li><a href="#" onclick="p.toApiRef(this);return false;">1.6.2</a></li>
+            <li><a href="#" onclick="p.toApiRef('1.6.0');return false;">1.6.0-1.6.1</a></li>
+            <li><a href="#" onclick="p.toApiRef(this);return false;">1.5.8</a></li>
+            <li><a href="#" onclick="p.toApiRef(this);return false;">1.5.7</a></li>
+            <li><a href="#" onclick="p.toApiRef(this);return false;">1.5.6</a></li>
+            <li><a href="#" onclick="p.toApiRef(this);return false;">1.5.5</a></li>
+            <li><a href="javascript:p.toApiRef('1.5.2');">1.5.2-1.5.4</a></li>
+            <li><a href="javascript:p.toPage('/user_guide/990_Old_Version_API_Ref.html');">older versions</a></li>
+        </ul>
+      </li>
+      <li class="submenu">
+        <a href="" >Languages</a>
+        <ul>
+            <li><a href="javascript:p.setLang('en');">English</a></li>
+            <li><a href="javascript:p.setLang('ja');">Japanese</a></li>
+        </ul>
+      </li>
+    </ul>
+    </nav>
+  </header>
+
+<div id="container">
+<h1>イベントバスへの Web Socket 接続</h1>
+<h2>概要</h2>
+<p>Cellで発生するイベントが通るイベントバスにWebSocketで接続して、発生イベント情報を受け取ります。 本APIは最初にアクセストークンの送信を要求します。該当トークンがイベントバス接続可能な権限をもつときのみ接続を許可します。 次に購読条件を指定します。これにより条件に合致するイベントのみがリアルタイムにクライアントに送信されます。</p>
+<h3>必要な権限</h3>
+<p>event-read</p>
+<h2>接続とセッション開始</h2>
+<h3>接続エンドポイントURL</h3>
+<pre><code>wss:{UnitFQDN}/{CellName}/__event</code></pre>
+<p>まず上記URLにWebSocketでの接続を行ってください。アクセストークンを受け付ける状態となります。この状態ではアクセストークン送付以外のいかなるメッセージ送信も意味を持ちません。</p>
+<h3>アクセストークン送付によるセッション開始</h3>
+<h4>リクエストメッセージ</h4>
+<p>権限のあるアクセストークンを以下形式で送付することでイベントバス接続セッションを開始します。</p>
+<pre><code>{&quot;access_token&quot;:&quot;AA~91WT0GNoVGFHJFQ.......e&quot;}</code></pre>
+<h4>レスポンスメッセージ</h4>
+<p>有効なトークンであれば以下の応答が返り、セッション開始となります。セッション開始によりイベント購読可能状態となりますが、まだイベント購読はしていないため何もイベントは流れてきません。</p>
+<pre><code>{&quot;response&quot;:&quot;success&quot;,&quot;expires_in&quot;:3600,&quot;timestamp&quot;:1518612600}</code></pre>
+<p>トークンが無効であったり、トークンに必要な権限がない場合はCellはWebSocket接続を切断します。</p>
+<h2>セッション開始後の通信</h2>
+<p>セッション確立後は以下4種のコマンドをリクエストメッセージとしてクライアントから送信可能です。</p>
+<ol>
+<li>イベントの購読</li>
+<li>イベントの購読解除</li>
+<li>セッションの状態取得</li>
+<li>アクセストークンの再送信</li>
+</ol>
+<p>イベントを購読することで、購読条件に合致するイベントの発生時にリアルタイムでイベント情報が流れてくるようになります。またイベントの購読は条件を変えながら任意の数の複数行うことができます。セッション状態取得コマンドで現在の購読状況やセッションの残り時間などの情報が取得可能です。また、アクセストークン送信のコマンドで新たなアクセストークンを送信することでセッションの有効期限を延ばすことができます。</p>
+<p>これらコマンドのリクエストメッセージを送信すると速やかにレスポンスメッセージが返ります。リクエストメッセージの記述に問題があるときはエラー応答メッセージが返ります。</p>
+<h2>イベントの購読</h2>
+<h3>リクエストメッセージ</h3>
+<pre><code>{&quot;subscribe&quot;: {&quot;Type&quot;: &quot;${EventType}&quot;, &quot;Object&quot;: &quot;${EventObject}&quot;}}</code></pre>
+<ul>
+<li>Type, Objectともに前方一致でのマッチを判定します。</li>
+<li>Type, Objectともに任意の値にマッチさせたい場合は * を指定します。</li>
+</ul>
+<h3>レスポンスメッセージ</h3>
+<pre><code>{&quot;response&quot;:&quot;success&quot;,&quot;timestamp&quot;:1518612600}</code></pre>
+<h2>イベントの受け取り</h2>
+<p>何らかの購読設定がなされている状態で購読購読条件にに合致するイベントがCellで発生すると、以下形式のメッセージがクライアントに送られます。</p>
+<pre><code>{
+  &quot;Type&quot;:&quot;chat&quot;, 
+  &quot;RequestKey&quot;:null,
+  &quot;Schema&quot;:&quot;&quot;,
+  &quot;External&quot;:true,
+  &quot;Object&quot;:&quot;general&quot;,
+  &quot;Info&quot;:&quot;Hello World&quot;, 
+  &quot;cellId&quot;:&quot;5ZKpfNSMSwO6GqAgt0O2Jg&quot;, 
+  &quot;Subject&quot;:&quot;https:\/\/demo.personium.io\/john.doe\/#me&quot;
+}</code></pre>
+<h2>セッション状態取得</h2>
+<h3>リクエストメッセージ</h3>
+<p>購読状況の取得</p>
+<pre><code>{&quot;state&quot;: &quot;subscriptions&quot;}</code></pre>
+<p>全状況の取得</p>
+<pre><code>{&quot;state&quot;: &quot;all&quot;}</code></pre>
+<h3>レスポンスメッセージ</h3>
+<p>購読状況の取得時</p>
+<pre><code>{response: &quot;success&quot;, subscriptions: [] }</code></pre>
+<p>全状況の取得時</p>
+<pre><code>{response: &quot;success&quot;, cell: ${cell_name}, expires_in: 2986, subscriptions: [] }</code></pre>
+<h2>イベントの購読解除</h2>
+<h3>リクエストメッセージ</h3>
+<pre><code>{&quot;unsubscribe&quot;: {&quot;Type&quot;: &quot;${EventType}&quot;, &quot;Object&quot;: &quot;${EventObject}&quot;}}</code></pre>
+<h3>レスポンスメッセージ</h3>
+<pre><code>{&quot;response&quot;:&quot;success&quot;,&quot;timestamp&quot;:1518612600}</code></pre>
+<h2>エラーレスポンスメッセージ</h2>
+<p>コマンドメッセージのフォーマットが正しくないとき</p>
+<pre><code>{response: &quot;error&quot;, reason: &quot;format error&quot;}</code></pre>
+<p>存在しない購読条件を購読解除しようとしたとき</p>
+<pre><code>{response: &quot;error&quot;, reason: &quot;subscriptions not found&quot;}</code></pre>
+<h2>WebSocket詳細仕様</h2>
+<table>
+<thead>
+<tr class="header">
+<th style="text-align: left;">項目</th>
+<th style="text-align: left;">仕様</th>
+</tr>
+</thead>
+<tbody>
+<tr class="odd">
+<td style="text-align: left;">プロトコル</td>
+<td style="text-align: left;">Sec-WebSocket-Version 13(RFC 6455)</td>
+</tr>
+<tr class="even">
+<td style="text-align: left;">メッセージフォーマット</td>
+<td style="text-align: left;">JSON</td>
+</tr>
+<tr class="odd">
+<td style="text-align: left;">ping/pong</td>
+<td style="text-align: left;">アクセストークンメッセージ受領後毎分1回pingをCellから送信</td>
+</tr>
+</tbody>
+</table>
+<ul>
+<li>クライアント側で10回PONGの返信がないとセッションを切断する</li>
+<li>ブラウザの場合は自動でPONGが返信されるため対応不要</li>
+</ul>
+</div>
+  <footer><nav>The Personium project is provided under the Apache 2.0 license. </nav></footer>
+</body>
+</html>

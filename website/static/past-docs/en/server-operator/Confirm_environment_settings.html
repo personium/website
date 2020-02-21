@@ -1,0 +1,313 @@
+<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml" lang="" xml:lang="">
+<head>
+  <!-- default template -->
+  <meta charset="utf-8" />
+  <meta name="generator" content="pandoc" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=yes" />
+  <link rel="icon" href="/images/favicon.ico" type="image/x-icon"/>
+  <title>Confirm_environment_settings</title>
+  <script type="text/javascript">
+      var path = location.pathname.split('/');
+      var pathRoot = [ path[0], path[1], '' ].join('/');
+      var pathLang = [ path[0], path[1], path[2] , ''].join('/');
+
+      document.write('<link rel="stylesheet" href="' + pathRoot + 'personium.css" type="text/css" />');
+      document.write('<link rel="stylesheet" href="' + pathLang + 'locale.css" type="text/css" />');
+      var ps = document.createElement('script');
+      ps.src = pathRoot + 'personium_docs.js';
+      var s = document.getElementsByTagName('script')[0];
+      s.parentNode.insertBefore(ps, s);
+    
+      ps2 = document.createElement('script');
+      ps2.src = pathRoot + 'apiref_versions.js';
+      s = document.getElementsByTagName('script')[0];
+      s.parentNode.insertBefore(ps2, s);
+  </script>
+  <link href="https://fonts.googleapis.com/css?family=Raleway" rel="stylesheet">
+  <link href="https://fonts.googleapis.com/css?family=Open+Sans" rel="stylesheet">
+  
+  <!--[if lt IE 9]>
+    <script src="//cdnjs.cloudflare.com/ajax/libs/html5shiv/3.7.3/html5shiv-printshiv.min.js"></script>
+  <![endif]-->
+</head>
+<body>
+  <header>
+    <nav>
+    <div id="logo"><a href="/"><img src="https://personium.io/images/logo-quantify-dark.png"></a></div>
+    <ul>
+      <li class="submenu">
+        <a href="#" >Introduction</a>
+        <ul>
+            <li><a href="javascript:p.toPage('/overview/001_Introduction.html');">What's Personium?</a></li>
+            <li><a href="javascript:p.toPage('/user_guide/001_Personium_Architecture.html');">Architecture</a></li>
+            <li><a href="javascript:p.toPage('/user_guide/008_Glossary.html');">Glossary</a></li>
+        </ul>
+      </li>
+      <li class="submenu">
+        <a href="#" >User Guide</a>
+        <ul>
+            <li><a href="javascript:p.toPage('/app-developer/');">for App Developer</a></li>
+            <li><a href="javascript:p.toPage('/cell-gui-developer/');">for Cell GUI Developer</a></li>
+            <li><a href="javascript:p.toPage('/unit-administrator/');">for Unit Administrator</a></li>
+            <li><a href="javascript:p.toPage('/server-operator/');">for Server Software Operator</a></li>
+            <li><a href="javascript:p.toPage('/document-writer/');">for Documentation Contributor</a></li>
+            <li><a href="javascript:p.toPage('/plugin-developer/');">for Server Plugin Developer</a></li>
+            <li><a href="javascript:p.toPage('/software-developer/');">for Server Developer</a></li>
+        </ul>
+      </li>
+      <li class="submenu">
+        <a href="#" >API Reference</a>
+        <ul id="api-ref-list">
+            <li><a href="javascript:p.toPage('/user_guide/990_Old_Version_API_Ref.html');">older versions</a></li>
+        </ul>
+      </li>
+      <li class="submenu">
+        <a href="#" >Languages</a>
+        <ul>
+            <li><a href="javascript:p.setLang('en');">English</a></li>
+            <li><a href="javascript:p.setLang('ja');">Japanese</a></li>
+        </ul>
+      </li>
+    </ul>
+    </nav>
+  </header>
+
+<div id="container">
+<h1>Environment information on units constructed by Ansible</h1>
+<hr />
+<h2>Introduction</h2>
+<p>Describe the basic settings and considerations for the environment constructed with Ansible. By performing this procedure, you can understand the installation location and basic settings of the main middleware that makes up Personium.</p>
+<h2>Web service</h2>
+<ul>
+<li>Check the basic settings of the server on which the Web service runs.</li>
+</ul>
+<h3>Nginx</h3>
+<ul>
+<li>Personium uses Nginx to realize the Web. Nginx is installed as follows.</li>
+</ul>
+<table>
+<thead>
+<tr class="header">
+<th>item</th>
+<th>path</th>
+</tr>
+</thead>
+<tbody>
+<tr class="odd">
+<td>Install Directory</td>
+<td>/opt/nginx-1.14.0/</td>
+</tr>
+<tr class="even">
+<td>Config Files</td>
+<td>/opt/nginx-1.14.0/conf/</td>
+</tr>
+<tr class="odd">
+<td>Log Directory</td>
+<td>/personium/nginx/log/accesslog_443/</td>
+</tr>
+</tbody>
+</table>
+<h3>Server Certificate</h3>
+<ul>
+<li>Personium is a service provided by HTTPS. Confirm the setting of the server certificate used to realize HTTPS.</li>
+</ul>
+<ol>
+<li><p>First, check the path of the server certificate used by Nginx.    To check the path of the currently used server certificate Execute the following command and confirm the item &quot;ssl_certificate&quot; &quot;ssl_certificate_key&quot;.</p>
+<pre class="console"><code># cat /opt/nginx/conf/nginx.conf</code></pre>
+<p>Immediately after construction, it is as follows.</p>
+<pre><code>ssl_sertificate         /opt/nginx/conf/server.crt
+ssl_certificate_key     /opt/nginx/conf/server.key</code></pre></li>
+<li><p>Check the contents of the server certificate you are using.    Execute the following command to check the common name of the server certificate.</p>
+<pre class="console"><code># openssl x509 -noout -subject -in /opt/nginx/conf/server.crt</code></pre>
+<p>When creating as in the example of creating a server certificate described in <a href="https://github.com/personium/ansible/tree/master/1-server_unit">1-server_unit/README</a> or <a href="https://github.com/personium/ansible/tree/master/3-server_unit">3-server_unit/README</a>, It is displayed as follows. CN must represent common name and must match FQDN when accessing with HTTPS protocol.</p>
+<pre><code>subject= /C=XXX/L=Default City/O=Default Company Ltd/CN=personium.example.com</code></pre></li>
+</ol>
+<h2>AP service</h2>
+<p>Check the basic settings of the server on which the AP service runs.</p>
+<h3>Tomcat environment</h3>
+<ul>
+<li>Personium uses Tomcat to realize the AP.   Tomcat is installed as follows.</li>
+</ul>
+<table>
+<thead>
+<tr class="header">
+<th>Item</th>
+<th>Path</th>
+</tr>
+</thead>
+<tbody>
+<tr class="odd">
+<td>Install Directory</td>
+<td>/opt/apache-tomcat-9.0.10/</td>
+</tr>
+<tr class="even">
+<td>Config Files</td>
+<td>/opt/apache-tomcat-9.0.10/conf/</td>
+</tr>
+<tr class="odd">
+<td>Log Directory</td>
+<td>/personium/tomcat/logs/</td>
+</tr>
+<tr class="even">
+<td>Application Directory</td>
+<td>/opt/apache-tomcat-9.0.10/webapps/</td>
+</tr>
+</tbody>
+</table>
+<h3>Unit Certificate</h3>
+<ul>
+<li>Personium is an important file using unit certificates with various functions such as access token verification.</li>
+</ul>
+<ol>
+<li>First, check the path of the unit certificate currently in use. The unit certificate is specified in the file personium-unit-config.properties.
+<ul>
+<li>Execute the following command to check the file.</li>
+</ul>
+<pre class="console"><code># cat /personium/personium-core/conf/18888/personium-unit-config.properties | grep ^io.personium.core.x509</code></pre>
+<p>The environment automatically constructed with Ansible has the following settings.</p>
+<pre><code>io.personium.core.x509.root=/opt/x509/unit-self-sign.crt
+io.personium.core.x509.crt=/opt/x509/unit-self-sign.crt
+io.personium.core.x509.key=/opt/x509/unit.key</code></pre></li>
+<li>Check the common name of the unit certificate. At this time, the common name of the unit certificate must match the FQDN of its own Personium Unit.
+<ul>
+<li>You can check the unit certificate information by executing the following command.</li>
+</ul>
+<pre class="console"><code># openssl x509 -noout -subject -in /opt/x509/unit-self-sign.crt</code></pre>
+<ul>
+<li>When created as shown in the example of creation of unit certificate described in <a href="How_to_generate_Self-Signed_Unit_Certificate.html">How to generate Self-signed Unit Certificate</a>, it is displayed as follows. The CN should represent the common name and it must match the FQDN for HTTPS access.</li>
+</ul>
+<pre><code>subject= /C=XXX/L=Default City/O=Default Company Ltd/CN=personium.example.com</code></pre></li>
+</ol>
+<h3>Personium environment</h3>
+<ul>
+<li>Personium is installed as follows.</li>
+</ul>
+<table>
+<colgroup>
+<col style="width: 30%" />
+<col style="width: 69%" />
+</colgroup>
+<thead>
+<tr class="header">
+<th>Item</th>
+<th>Path</th>
+</tr>
+</thead>
+<tbody>
+<tr class="odd">
+<td>personium-core</td>
+<td>/opt/tomcat/webapps/</td>
+</tr>
+<tr class="even">
+<td>personium-engine</td>
+<td>/opt/tomcat/webapps/</td>
+</tr>
+<tr class="odd">
+<td>personium-core Log Directory</td>
+<td>/personium/personium-core/log/personium-core.log</td>
+</tr>
+<tr class="even">
+<td>personium-engine Log Directory</td>
+<td>/personium/personium-engine/log/personium-engine.log</td>
+</tr>
+<tr class="odd">
+<td>Unit Config File</td>
+<td>/personium/personium-core/conf/18888/personium-unit-config.properties</td>
+</tr>
+</tbody>
+</table>
+<ul>
+<li><p>By changing personium-unit-config.properties, you can change <a href="https://personium.io/docs/en/server-operator/unit_config_list.html">Unit configurations</a> from the default.<br />
+Immediately after construction with Ansible, it is set as follows.<br />
+* {} Means that the contents defined in hosts changed before Ansible execution are described.<br />
+* {{}} Indicates that a randomly determined character string is described when Ansible is executed.</p>
+<pre><code>io.personium.core.masterToken={master_token}
+io.personium.core.unitScheme=https
+io.personium.core.unitUser.issuers=personium-localunit:/UnitUserCell/ personium-localunit:/unitadmin/
+io.personium.core.lock.accountlock.time=1
+io.personium.core.plugin.path=/personium/personium-core/plugins
+io.personium.core.x509.root=/opt/x509/unit-self-sign.crt
+io.personium.core.x509.crt=/opt/x509/unit-self-sign.crt
+io.personium.core.x509.key=/opt/x509/unit.key
+io.personium.core.security.secret16={{token.key}}
+io.personium.core.security.auth.password.salt={{sakt.key}}
+io.personium.core.account.lastauthenticated.enabled=false
+io.personium.core.lock.memcached.host=127.0.0.1
+io.personium.core.lock.memcached.port=11211
+io.personium.core.lock.memcached.opTimeout=12000
+io.personium.core.cache.type=memcached
+io.personium.core.cache.memcached.host=127.0.0.1
+io.personium.core.cache.memcached.port=11212
+io.personium.core.cache.cell.enabled=true
+io.personium.core.cache.box.enabled=true
+io.personium.core.cache.schema.enabled=true
+io.personium.core.cache.memcached.opTimeout=12000
+io.personium.core.cache.memcached.expiresin=86400
+io.personium.core.es.hosts=127.0.0.1:9300
+io.personium.core.es.cluster.name=personium
+io.personium.core.es.ads.type=none
+io.personium.core.engine.enabled=true
+io.personium.core.engine.host=localhost
+io.personium.core.engine.port=18888
+io.personium.core.engine.path=personium-engine
+io.personium.core.binaryData.physical.delete.mode=true
+io.personium.core.binaryData.fsync.enabled=true
+io.personium.core.blobStore.root=/personium_nfs/personium-core/dav
+io.personium.core.event.log.current.dir=/personium_nfs/personium-core/eventlog
+io.personium.core.bar.file.maxSize=100
+io.personium.core.bar.entry.maxSize=10
+io.personium.core.bar.installfile.dir=/personium_nfs/personium-core/barInstall
+io.personium.core.bar.progress.expireInSec=259200
+io.personium.core.defaultBaseUrl=https://personium.example.com
+io.personium.engine.masterToken={master_token}
+io.personium.engine.elasticsearch.hosts=127.0.0.1:9300
+io.personium.engine.elasticsearch.cluster=personium
+io.personium.engine.binaryData.fsync.enabled=true
+io.personium.engine.blobStore.root=/personium_nfs/personium-core/dav
+io.personium.engine.x509.root=/opt/x509/unit-self-sign.crt
+io.personium.engine.x509.key=/opt/x509/unit.key
+io.personium.engine.x509.crt=/opt/x509/unit-self-sign.crt
+io.personium.engine.security.secret16={{token.key}}
+io.personium.core.dav.childresource.maxnum=1000000</code></pre></li>
+</ul>
+<h2>DB service</h2>
+<ul>
+<li>Check the settings of the server on which the Elasticsearch service runs.</li>
+</ul>
+<h3>Elasticsearch environment</h3>
+<ul>
+<li><p>Personium uses Elasticsearch to realize DB. Elasticsearch is installed as follows.<br />
+For version,Please check the version of elasticsearch <a href="https://github.com/personium/ansible#middleware-on-vm">here</a>.</p>
+<table>
+<thead>
+<tr class="header">
+<th>Item</th>
+<th>Path</th>
+</tr>
+</thead>
+<tbody>
+<tr class="odd">
+<td>Install Directory</td>
+<td>/opt/elasticsearch-{ Elasticsearch version }/</td>
+</tr>
+<tr class="even">
+<td>Config Files</td>
+<td>/opt/elasticsearch-{ Elasticsearch version }/config/</td>
+</tr>
+<tr class="odd">
+<td>Log Direcroty</td>
+<td>/personium/elasticsearch/log/</td>
+</tr>
+<tr class="even">
+<td>Data Direcroty</td>
+<td>/personium/elasticsearch-{ Elasticsearch version }/data/</td>
+</tr>
+</tbody>
+</table></li>
+</ul>
+</div>
+  <footer><nav>The Personium project is provided under the Apache 2.0 license. </nav></footer>
+</body>
+</html>
+

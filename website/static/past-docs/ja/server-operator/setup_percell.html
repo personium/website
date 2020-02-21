@@ -1,0 +1,133 @@
+<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml" lang="" xml:lang="">
+<head>
+  <!-- default template -->
+  <meta charset="utf-8" />
+  <meta name="generator" content="pandoc" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=yes" />
+  <link rel="icon" href="/images/favicon.ico" type="image/x-icon"/>
+  <title>setup_percell</title>
+  <script type="text/javascript">
+      var path = location.pathname.split('/');
+      var pathRoot = [ path[0], path[1], '' ].join('/');
+      var pathLang = [ path[0], path[1], path[2] , ''].join('/');
+
+      document.write('<link rel="stylesheet" href="' + pathRoot + 'personium.css" type="text/css" />');
+      document.write('<link rel="stylesheet" href="' + pathLang + 'locale.css" type="text/css" />');
+      var ps = document.createElement('script');
+      ps.src = pathRoot + 'personium_docs.js';
+      var s = document.getElementsByTagName('script')[0];
+      s.parentNode.insertBefore(ps, s);
+    
+      ps2 = document.createElement('script');
+      ps2.src = pathRoot + 'apiref_versions.js';
+      s = document.getElementsByTagName('script')[0];
+      s.parentNode.insertBefore(ps2, s);
+  </script>
+  <link href="https://fonts.googleapis.com/css?family=Raleway" rel="stylesheet">
+  <link href="https://fonts.googleapis.com/css?family=Open+Sans" rel="stylesheet">
+  
+  <!--[if lt IE 9]>
+    <script src="//cdnjs.cloudflare.com/ajax/libs/html5shiv/3.7.3/html5shiv-printshiv.min.js"></script>
+  <![endif]-->
+</head>
+<body>
+  <header>
+    <nav>
+    <div id="logo"><a href="/"><img src="https://personium.io/images/logo-quantify-dark.png"></a></div>
+    <ul>
+      <li class="submenu">
+        <a href="#" >Introduction</a>
+        <ul>
+            <li><a href="javascript:p.toPage('/overview/001_Introduction.html');">What's Personium?</a></li>
+            <li><a href="javascript:p.toPage('/user_guide/001_Personium_Architecture.html');">Architecture</a></li>
+            <li><a href="javascript:p.toPage('/user_guide/008_Glossary.html');">Glossary</a></li>
+        </ul>
+      </li>
+      <li class="submenu">
+        <a href="#" >User Guide</a>
+        <ul>
+            <li><a href="javascript:p.toPage('/app-developer/');">for App Developer</a></li>
+            <li><a href="javascript:p.toPage('/cell-gui-developer/');">for Cell GUI Developer</a></li>
+            <li><a href="javascript:p.toPage('/unit-administrator/');">for Unit Administrator</a></li>
+            <li><a href="javascript:p.toPage('/server-operator/');">for Server Software Operator</a></li>
+            <li><a href="javascript:p.toPage('/document-writer/');">for Documentation Contributor</a></li>
+            <li><a href="javascript:p.toPage('/plugin-developer/');">for Server Plugin Developer</a></li>
+            <li><a href="javascript:p.toPage('/software-developer/');">for Server Developer</a></li>
+        </ul>
+      </li>
+      <li class="submenu">
+        <a href="#" >API Reference</a>
+        <ul id="api-ref-list">
+            <li><a href="javascript:p.toPage('/user_guide/990_Old_Version_API_Ref.html');">older versions</a></li>
+        </ul>
+      </li>
+      <li class="submenu">
+        <a href="#" >Languages</a>
+        <ul>
+            <li><a href="javascript:p.setLang('en');">English</a></li>
+            <li><a href="javascript:p.setLang('ja');">Japanese</a></li>
+        </ul>
+      </li>
+    </ul>
+    </nav>
+  </header>
+
+<div id="container">
+<h2>Personium Unitの percell 環境時の設定</h2>
+<p>PersoniumではセルにアクセスするURL形式として以下の２つの形式をサポートしています。</p>
+<table>
+<thead>
+<tr class="header">
+<th style="text-align: left;"></th>
+<th style="text-align: left;">アクセス形式</th>
+<th style="text-align: left;">備考</th>
+</tr>
+</thead>
+<tbody>
+<tr class="odd">
+<td style="text-align: left;">path based</td>
+<td style="text-align: left;">https://fqdn/cellname</td>
+<td style="text-align: left;">1.7.5以前のデフォルト<br></td>
+</tr>
+<tr class="even">
+<td style="text-align: left;">percell fqdn</td>
+<td style="text-align: left;">https://cellname.fqdn</td>
+<td style="text-align: left;">1.7.6以降のデフォルト<br></td>
+</tr>
+</tbody>
+</table>
+<p>このアクセス形式はPersoniumユニット起動時のオプション（pathBasedCellUrl.enabled）の値で切り換えることが可能です。<br />
+personium-core1.7.5リリースからデフォルトになったpercell形式でのアクセスには、幾つかの必須要件があるので記載します。</p>
+<h2>必須要件</h2>
+<h3>cell毎に異るFQDNによるアクセスを一つのPersoniumサーバに向ける</h3>
+<p>利用者がアクセスするURLに任意のcell名を含んでいるため、cell1.fqdnとcell2.fqdnは別のURLとして扱われます。<br />
+処理をおこなうPersoniumのサーバに全てのcellのURLをアクセスさせるためのDNSサーバへの設定が必要になります。<br />
+*.fqdn へのアクセスをPersoniumサーバにリダイレクトする設定が必要になります。設定方法はDNSサーバによって異りますが</p>
+<ul>
+<li>CNAMEレコードで https://*.fqdn ⇒ https://fqdn にリダイレクトする</li>
+<li>Aレコードでhttps://*.fqdnのアクセス先にhttps://fqdnと同じIPアドレスを指定する</li>
+</ul>
+<p>等があります。</p>
+<h3>WebサーバのSSL証明書を*.fqdnがサポートされているものに変更する</h3>
+<p>同様に、httpsアクセスをおこなうためのWebサーバのSSL証明書も*.fqdnに対応したものにする必要があります。<br />
+設定方法としては以下のようになります。</p>
+<ol>
+<li>PersoniumのWebサーバにteraterm等でログインしrootユーザになる</li>
+<li>/opt/nginx/conf/nginx.confのSSL設定の内容を確認し、証明書をいれかえる</li>
+<li>systemctl restart nginx nginxを再起動します。</li>
+</ol>
+<p>なお、証明書の種別によって設定方法が異なりますので、入手元に御確認下さい。</p>
+<h2>既存環境からの移行時の設定</h2>
+<h3>pathbase環境をpercell環境に変更する</h3>
+<h4>Personium Unitの設定ファイルの変更</h4>
+<p>未稿</p>
+<h4>unitmanager</h4>
+<p>未稿</p>
+<h4>RT</h4>
+<p>未稿</p>
+</div>
+  <footer><nav>The Personium project is provided under the Apache 2.0 license. </nav></footer>
+</body>
+</html>
+

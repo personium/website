@@ -1,0 +1,207 @@
+<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml" lang="" xml:lang="">
+<head>
+  <!-- default template -->
+  <meta charset="utf-8" />
+  <meta name="generator" content="pandoc" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=yes" />
+  <title>279_Event_Bus_Connect</title>
+  <script type="text/javascript">
+      var path = location.pathname.split('/');
+      var pathRoot = [ path[0], path[1], '' ].join('/');
+      var pathLang = [ path[0], path[1], path[2] , ''].join('/');
+
+      //load style sheets
+      document.write('<link rel="stylesheet" href="' + pathRoot + 'personium.css" type="text/css" />');
+      document.write('<link rel="stylesheet" href="' + pathLang + 'locale.css" type="text/css" />');
+      //load personium_docs.js
+      var ps = document.createElement('script');
+      ps.src = pathRoot + 'personium_docs.js';
+      var s = document.getElementsByTagName('script')[0];
+      s.parentNode.insertBefore(ps, s);
+    
+      //load apiref_versions.js
+      ps2 = document.createElement('script');
+      ps2.src = pathRoot + 'apiref_versions.js';
+      s = document.getElementsByTagName('script')[0];
+      s.parentNode.insertBefore(ps2, s);
+
+  </script>
+  <link href="https://fonts.googleapis.com/css?family=Raleway" rel="stylesheet">
+  <link href="https://fonts.googleapis.com/css?family=Open+Sans" rel="stylesheet">
+  
+  <!--[if lt IE 9]>
+    <script src="//cdnjs.cloudflare.com/ajax/libs/html5shiv/3.7.3/html5shiv-printshiv.min.js"></script>
+  <![endif]-->
+</head>
+<body>
+  <header>
+    <nav>
+    <div id="logo"><a href="/">Personium</a></div>
+    <ul>
+      <li class="submenu">
+        <a href="" >Introduction</a>
+        <ul>
+            <li><a href="javascript:p.toPage('/overview/001_Introduction.html');">What's Personium?</a></li>
+            <li><a href="javascript:p.toPage('/user_guide/001_Personium_Architecture.html');">Architecture</a></li>
+            <li><a href="javascript:p.toPage('/user_guide/008_Glossary.html');">Glossary</a></li>
+        </ul>
+      </li>
+      <li class="submenu">
+        <a href="" >User Guide</a>
+        <ul>
+            <li><a href="javascript:p.toPage('/app-developer/');">for App Developer</a></li>
+            <li><a href="javascript:p.toPage('/cell-client-developer/');">for Cell App Developer</a></li>
+            <li><a href="javascript:p.toPage('/unit-administrator/');">for Unit Administrator</a></li>
+            <li><a href="javascript:p.toPage('/server-operator/');">for Server Software Operator</a></li>
+            <li><a href="javascript:p.toPage('/document-writer/');">for Documentation Contributor</a></li>
+            <li><a href="javascript:p.toPage('/plugin-developer/');">for Server Plugin Developer</a></li>
+            <li><a href="javascript:p.toPage('/software-developer/');">for Server Developer</a></li>
+        </ul>
+      </li>
+      <li class="submenu">
+        <a href="" >API Reference</a>
+        <ul id="api-ref-list">
+            <li><a href="javascript:p.toPage('/user_guide/990_Old_Version_API_Ref.html');">older versions</a></li>
+        </ul>
+      </li>
+      <li class="submenu">
+        <a href="" >Languages</a>
+        <ul>
+            <li><a href="javascript:p.setLang('en');">English</a></li>
+            <li><a href="javascript:p.setLang('ja');">Japanese</a></li>
+        </ul>
+      </li>
+    </ul>
+    </nav>
+  </header>
+
+<div id="container">
+<h1>Web Socket Connection to the Event Bus</h1>
+<h2>Overview</h2>
+<p>By connecting to the event bus where all the events occurring in the Cell flow, these events information can be captured in real time. Also external events can be posted to the bus. This API first requests its client to send a valid access token. A session can be started only when the access token is valid and has required privileges. Then after the session is established, subscription conditions can be specified at any moment. After a subsription condition is specified, events that match any of the conditions will be sent down to the client. More subscription conditions can be added anytime to subscribe more events. Also any of the subscriptions can be canceled anytime by sending unsubscribing messeages.</p>
+<h3>Required Privilege</h3>
+<p><strong>event-read</strong> for subscribing events <strong>event</strong>     for firing external events</p>
+<h2>Connection and starting the session</h2>
+<h3>Connection Endpoint URL</h3>
+<pre><code>wss:{UnitFQDN}/{CellName}/__event</code></pre>
+<p>By connectining to the above URL with Web Socket, it first goes to the status where an access token can be accepted. At this stage, any request other than sending access token is meaningless.</p>
+<h3>Starting the session by sending an access token</h3>
+<h4>Request Message</h4>
+<p>By sending an access token in the following format, an event-bus connection session will be initiated.</p>
+<pre><code>{&quot;AccessToken&quot;:&quot;AA~91WT0GNoVGFHJFQ.......e&quot;}</code></pre>
+<h4>Response Message</h4>
+<p>If the token is valid and has neccesary privilege, a response in the following format will be sent down to the client and the session starts. By starting the session, it becomes the state where events can be subscribed, however no evet will be sent down at this stage since no subscription is made yet.</p>
+<pre><code>{&quot;Response&quot;:&quot;AccessToken&quot;,&quot;Result&quot;:&quot;Success&quot;,&quot;ExpiresIn&quot;:3600,&quot;Timestamp&quot;:1518612600}</code></pre>
+<p>If the token is invalid or does not have the required privilege, the WebSocket connection will be closed by the Cell.</p>
+<h2>Communication after the session is establised</h2>
+<p>After the session is establised, the following commands can be sent from the client as request messages.</p>
+<ol>
+<li>Event Subscription</li>
+<li>External Event Firing</li>
+<li>Cancelation of Event Subscription</li>
+<li>Session State Retrieval</li>
+<li>Access Token Re-sending</li>
+</ol>
+<p>By sending a subscription condition, subscription will be made. Arbitrary number of multiple subscriptions can be made with different condition configurations. Upon an event occurence, the event information will be sent down to the client if it matches at least one of the subscription conditions. By session state retrieval, information such as current subscriptions status or session remaining time can be retrieved. Access token resending enables prolongation of the session expiry time.</p>
+<p>When a request message for one of these commands is sent, then a response message will promptly be returned. If the request message has any trouble, then an error response message will be returned.</p>
+<h2>Event Subscription</h2>
+<h3>Request Message</h3>
+<pre><code>{&quot;Subscribe&quot;: {&quot;Type&quot;: &quot;${EventType}&quot;, &quot;Object&quot;: &quot;${EventObject}&quot;}}</code></pre>
+<ul>
+<li>For both Type and Object, matching is made by front match.</li>
+<li>For both Type and Object, specify * to let them match arbitrary values.</li>
+</ul>
+<h3>Response Message</h3>
+<pre><code>{&quot;Response&quot;:&quot;Subscribe&quot;, &quot;Result&quot;:&quot;Success&quot;,&quot;Timestamp&quot;:1518612600}</code></pre>
+<h2>Receiving Events</h2>
+<p>If an event fires in the cell and the event matches one of the subscription conditions, a message in the following format will be sent down to the client.</p>
+<pre><code>{
+  &quot;Type&quot;:&quot;chat&quot;, 
+  &quot;RequestKey&quot;:null,
+  &quot;Schema&quot;:null,
+  &quot;External&quot;:true,
+  &quot;Object&quot;:&quot;general&quot;,
+  &quot;Info&quot;:&quot;Hello World&quot;, 
+  &quot;Subject&quot;:&quot;https:\/\/demo.personium.io\/john.doe\/#me&quot;
+}</code></pre>
+<h2>Firing External Events</h2>
+<p>By sending a message in the following format, an external event can be fired.</p>
+<pre><code>{
+    &quot;Type&quot;:&quot;chat&quot;, 
+    &quot;RequestKey&quot;:&quot;client-req-12345&quot;,
+    &quot;Object&quot;:&quot;general&quot;,
+    &quot;Info&quot;:&quot;Hello World&quot; 
+}</code></pre>
+<h2>Session State Retrieval</h2>
+<h3>Request Message</h3>
+<p>Retrieving substcriptions state</p>
+<pre><code>{&quot;State&quot;: &quot;Subscriptions&quot;}</code></pre>
+<p>Retrieving all the sesseion state information</p>
+<pre><code>{&quot;State&quot;: &quot;All&quot;}</code></pre>
+<h3>Response Message</h3>
+<p>On retrieving substcriptions state</p>
+<pre><code>{&quot;Response&quot;: &quot;State&quot;, &quot;Result&quot;:&quot;Success&quot;,&quot;Subscriptions&quot;: [],&quot;Timestamp&quot;:1518612600}</code></pre>
+<p>On retrieving all the sesseion state information</p>
+<pre><code>{&quot;Response&quot;: &quot;State&quot;, &quot;Result&quot;:&quot;Success&quot;, &quot;Cell&quot;: &quot;${cell_name}&quot;, &quot;ExpiresIn&quot;: 2986, &quot;Subscriptions&quot;: [] }</code></pre>
+<h2>Unsubsribing events</h2>
+<h4>Request Message</h4>
+<pre><code>{&quot;Unsubscribe&quot;: {&quot;Type&quot;: &quot;${EventType}&quot;, &quot;Object&quot;: &quot;${EventObject}&quot;}}</code></pre>
+<h4>Response Message</h4>
+<pre><code>{&quot;Response&quot;:&quot;Unsubscribe&quot;, &quot;Result&quot;:&quot;Success&quot;,&quot;Timestamp&quot;:1518612600}</code></pre>
+<h2>Error Response Messages</h2>
+<p>Erroneous request message will be responded by a error message in the following format .</p>
+<pre><code>{&quot;Response&quot;: &quot;${CorrespondingRequest}&quot;, &quot;Result&quot;:&quot;Error&quot;, &quot;Reason&quot;: &quot;${ErrorMessage}&quot;}</code></pre>
+<table style="width:11%;">
+<colgroup>
+<col style="width: 5%" />
+<col style="width: 5%" />
+</colgroup>
+<thead>
+<tr class="header">
+<th style="text-align: left;">Error Message</th>
+<th style="text-align: left;">Description</th>
+</tr>
+</thead>
+<tbody>
+<tr class="odd">
+<td style="text-align: left;">Format error</td>
+<td style="text-align: left;">When command message format is invalid</td>
+</tr>
+<tr class="even">
+<td style="text-align: left;">Subscriptions not found</td>
+<td style="text-align: left;">When trying to unsbscribe non-existent subscription conditionき</td>
+</tr>
+</tbody>
+</table>
+<h2>Web Socket Spec Details</h2>
+<table>
+<thead>
+<tr class="header">
+<th style="text-align: left;">Item</th>
+<th style="text-align: left;">Spec</th>
+</tr>
+</thead>
+<tbody>
+<tr class="odd">
+<td style="text-align: left;">Protocol</td>
+<td style="text-align: left;">Sec-WebSocket-Version 13(RFC 6455)</td>
+</tr>
+<tr class="even">
+<td style="text-align: left;">Message format</td>
+<td style="text-align: left;">JSON</td>
+</tr>
+<tr class="odd">
+<td style="text-align: left;">ping/pong</td>
+<td style="text-align: left;">&quot;ping&quot; will be sent from the Cell every one minutes.</td>
+</tr>
+</tbody>
+</table>
+<ul>
+<li>Connection will be closed if client fails to respond &quot;pong&quot; against the &quot;ping&quot; from the Cell 10 times.</li>
+<li>Major Web Browsers automatically responds &quot;pong&quot; in their WebSocket client implementations.</li>
+</ul>
+</div>
+  <footer><nav>The Personium project is provided under the Apache 2.0 license. </nav></footer>
+</body>
+</html>

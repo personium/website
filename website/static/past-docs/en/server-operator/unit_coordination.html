@@ -1,0 +1,189 @@
+<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml" lang="" xml:lang="">
+<head>
+  <!-- default template -->
+  <meta charset="utf-8" />
+  <meta name="generator" content="pandoc" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=yes" />
+  <link rel="icon" href="/images/favicon.ico" type="image/x-icon"/>
+  <title>unit_coordination</title>
+  <script type="text/javascript">
+      var path = location.pathname.split('/');
+      var pathRoot = [ path[0], path[1], '' ].join('/');
+      var pathLang = [ path[0], path[1], path[2] , ''].join('/');
+
+      document.write('<link rel="stylesheet" href="' + pathRoot + 'personium.css" type="text/css" />');
+      document.write('<link rel="stylesheet" href="' + pathLang + 'locale.css" type="text/css" />');
+      var ps = document.createElement('script');
+      ps.src = pathRoot + 'personium_docs.js';
+      var s = document.getElementsByTagName('script')[0];
+      s.parentNode.insertBefore(ps, s);
+    
+      ps2 = document.createElement('script');
+      ps2.src = pathRoot + 'apiref_versions.js';
+      s = document.getElementsByTagName('script')[0];
+      s.parentNode.insertBefore(ps2, s);
+  </script>
+  <link href="https://fonts.googleapis.com/css?family=Raleway" rel="stylesheet">
+  <link href="https://fonts.googleapis.com/css?family=Open+Sans" rel="stylesheet">
+  
+  <!--[if lt IE 9]>
+    <script src="//cdnjs.cloudflare.com/ajax/libs/html5shiv/3.7.3/html5shiv-printshiv.min.js"></script>
+  <![endif]-->
+</head>
+<body>
+  <header>
+    <nav>
+    <div id="logo"><a href="/"><img src="https://personium.io/images/logo-quantify-dark.png"></a></div>
+    <ul>
+      <li class="submenu">
+        <a href="#" >Introduction</a>
+        <ul>
+            <li><a href="javascript:p.toPage('/overview/001_Introduction.html');">What's Personium?</a></li>
+            <li><a href="javascript:p.toPage('/user_guide/001_Personium_Architecture.html');">Architecture</a></li>
+            <li><a href="javascript:p.toPage('/user_guide/008_Glossary.html');">Glossary</a></li>
+        </ul>
+      </li>
+      <li class="submenu">
+        <a href="#" >User Guide</a>
+        <ul>
+            <li><a href="javascript:p.toPage('/app-developer/');">for App Developer</a></li>
+            <li><a href="javascript:p.toPage('/cell-gui-developer/');">for Cell GUI Developer</a></li>
+            <li><a href="javascript:p.toPage('/unit-administrator/');">for Unit Administrator</a></li>
+            <li><a href="javascript:p.toPage('/server-operator/');">for Server Software Operator</a></li>
+            <li><a href="javascript:p.toPage('/document-writer/');">for Documentation Contributor</a></li>
+            <li><a href="javascript:p.toPage('/plugin-developer/');">for Server Plugin Developer</a></li>
+            <li><a href="javascript:p.toPage('/software-developer/');">for Server Developer</a></li>
+        </ul>
+      </li>
+      <li class="submenu">
+        <a href="#" >API Reference</a>
+        <ul id="api-ref-list">
+            <li><a href="javascript:p.toPage('/user_guide/990_Old_Version_API_Ref.html');">older versions</a></li>
+        </ul>
+      </li>
+      <li class="submenu">
+        <a href="#" >Languages</a>
+        <ul>
+            <li><a href="javascript:p.setLang('en');">English</a></li>
+            <li><a href="javascript:p.setLang('ja');">Japanese</a></li>
+        </ul>
+      </li>
+    </ul>
+    </nav>
+  </header>
+
+<div id="container">
+<h1>How to set coordination between units</h1>
+<h2>Overview</h2>
+<p>Personium has a great advantage that units that are set up to be separated into different server infrastructures can cooperate with each other. Specifically, by setting cooperation between units, it becomes possible to link Cells across units. Although it is not possible to do so, it is recommended that this cooperation setting is used because it shares the ecosystem of applications and users across the unit making full use of this feature of Personium.</p>
+<p>Conversely speaking, it is impossible to link Cells that span the unit unless this setting is made, so be careful.</p>
+<p>Setting of cooperation between units is performed by setting the following for the unit.</p>
+<ol>
+<li>Unit secret key</li>
+<li>Unit certificate</li>
+<li>Certificate of unit certificate issuer</li>
+</ol>
+<p>Unit secret keys are created and managed by the unit operator himself, but there are three options as to who to issue the unit certificate.</p>
+<ol>
+<li>Have the open source Personium community publish</li>
+<li>Issued by another unit certificate issuer</li>
+<li>Create yourself self-signed unit certificate and use it</li>
+</ol>
+<p>The unit certificate proves that the unit is not operated by an unauthorized entity, and this is realized by the PKI framework of x509. Specifically, some entity authenticating the unit will be the unit certificate issuer.</p>
+<h2>Flow of cooperation setting</h2>
+<p>The procedure for receiving unit certificate issuance is the same as that for receiving SSL certificate issued by SSL / TLS in x509. Specifically, we will set coordination between units with the following flow.</p>
+<ol>
+<li>Unit (server) operator creates secret key and CSR using tools such as openssl</li>
+<li>Unit operator sends CSR to certificate issuer and requests certificate issuance</li>
+<li>The certificate issuer examines the request and issues a certificate if there is no problem</li>
+<li>The unit operator sets the certificate issued by the unit operator and the secret key created by the unit itself as 1</li>
+</ol>
+<p>For 2 and 3, the process changes depending on who becomes the unit certificate issuer.</p>
+<h2>Creating a private key</h2>
+<p>Here is the procedure for creating a secret key using openssl.</p>
+<pre class="console"><code>     # openssl genrsa - out unit.key 2048 - outform DER</code></pre>
+<p>Example:)</p>
+<pre class="console"><code>     # openssl genrsa - out unit.key 2048 - outform DER
+     Generating RSA private key, 2048 bit long modulus
+     ..................................................... .......... +++
+     ..................................................... . +++
+     e is 65537 (0x10001)
+     -------------------------------------------------------------------- ---------------------------------</code></pre>
+<p>The unit.key obtained here is the secret key. Confirm that the unit.key is created</p>
+<pre class="console"><code>    # ls -l</code></pre>
+<p>Example:)</p>
+<pre class="console"><code>    # ls
+    total 4
+    -rw-r--r--. 1 root root 1675 Sep  1 20:27 unit.key</code></pre>
+<h2>Creating a CSR</h2>
+<p>Create a CSR using unit.key. The unit.csr obtained below is CSR. When creating CSR, please set the FQDN to be used for the CN item.</p>
+<pre class="console"><code>  # openssl req -new -key unit.key -out unit.csr
+    &gt; enter the required information interactively.
+      * Common Name value should be the unit domain name (required)</code></pre>
+<p>Example:)</p>
+<pre class="console"><code>    # openssl req -new -key unit.key -out unit.csr
+    You are about to be asked to enter information that will be incorporated
+    into your certificate request.
+    What you are about to enter is what is called a Distinguished Name or a DN.
+    There are quite a few fields but you can leave some blank
+    For some fields there will be a default value,
+    If you enter &#39;.&#39;, the field will be left blank.
+    -----
+    Country Name (2 letter code) [XX]:
+    State or Province Name (full name) []:
+    Locality Name (eg, city) [Default City]:
+    Organization Name (eg, company) [Default Company Ltd]:
+    Organizational Unit Name (eg, section) []:
+    Common Name (eg, your name or your server&#39;s hostname) []:example.com            &lt;* Enter the unit domain name (required)
+    Email Address []:
+    Please enter the following &#39;extra&#39; attributes
+    to be sent with your certificate request
+    A challenge password []:
+    An optional company name []:
+</code></pre>
+<p>Submit a certificate based on # # CSR</p>
+<h3>When asking for a Personium project</h3>
+<p>To participate in the Personium unit ecosystem, please ask the Personium project to issue a unit certificate.</p>
+<p>⇒ Please request from the <a href="https://personium-io.slack.com/">Slack Community</a> #infra / #infra_ja channel. Register to join the Slack community <a href="https://join.slack.com/t/personium-io/shared_invite/enQtNDA4OTg1MzI3NjM3LTIwNjVkZjZkZDVlNTQ2NjFmZTFjMTljMzAwNzk0ZjQ0MGJhMDIzOGIxN2UyZmMxYTkwMzIzOTU5ZmZkMmEyNzE">here</a>.</p>
+<h3>Self-issuing case</h3>
+<p>To make settings that do not work with other units, you can do this by setting a self-signed unit certificate. <a href="https://github.com/personium/ansible/tree/master/3-server_unit" class="uri">https://github.com/personium/ansible/tree/master/3-server_unit</a></p>
+<h2>Setting up private key and certificate</h2>
+<p>Set the issued certificate and the secret key created by itself on the server to the server. Please set the following items in the unit setting file.</p>
+<table>
+<thead>
+<tr class="header">
+<th style="text-align: left;">Key name</th>
+<th style="text-align: left;">setting content</th>
+</tr>
+</thead>
+<tbody>
+<tr class="odd">
+<td style="text-align: left;">x509.key</td>
+<td style="text-align: left;">Unit secret key file path</td>
+</tr>
+<tr class="even">
+<td style="text-align: left;">x509.crt</td>
+<td style="text-align: left;">unit certificate file path</td>
+</tr>
+<tr class="odd">
+<td style="text-align: left;">x509.root</td>
+<td style="text-align: left;">unit certificate issuer's certificate file path</td>
+</tr>
+</tbody>
+</table>
+<p>For x509.root, multiple files can be specified. If you do not specify anything, the certificate of Personium official CA will be automatically trusted. (It does not define the key) If any setting is made this action will be invalidated so join the ecosystem of the Personium project If you do not want to do so, please make some settings.</p>
+<p>reference: <a href="https://personium.github.io/en/server-operator/unit_config_list.html" class="uri">https://personium.github.io/en/server-operator/unit_config_list.html</a></p>
+<h2>Become a unit certificate issuer</h2>
+<p>The open source Personium community is also the unit certificate issuer. If you can support our activities, please join our ecosystem by all means. Participation in the ecosystem is possible by setting unit certificate issued by the open source Personium community in the unit.</p>
+<p>On the other hand, if you want to build your own ecosystem, anyone can set up an X509 certificate authority and become a unit certificate issuer You can form your own ecosystem. In order to become a unit certificate issuer, the following two points are required.</p>
+<ol>
+<li>Establish an X509 certificate authority</li>
+<li>Have the unit participating in the ecosystem set up the certificate of the X509 certificate authority set up as 1 as the certificate of the issuer of the unit certificate</li>
+</ol>
+<p>If you are interested in this method and want to know specific methods, please contact the community.</p>
+</div>
+  <footer><nav>The Personium project is provided under the Apache 2.0 license. </nav></footer>
+</body>
+</html>
+

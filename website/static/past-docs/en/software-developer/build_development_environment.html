@@ -1,0 +1,405 @@
+<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml" lang="" xml:lang="">
+<head>
+  <!-- default template -->
+  <meta charset="utf-8" />
+  <meta name="generator" content="pandoc" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=yes" />
+  <link rel="icon" href="/images/favicon.ico" type="image/x-icon"/>
+  <title>build_development_environment</title>
+  <script type="text/javascript">
+      var path = location.pathname.split('/');
+      var pathRoot = [ path[0], path[1], '' ].join('/');
+      var pathLang = [ path[0], path[1], path[2] , ''].join('/');
+
+      document.write('<link rel="stylesheet" href="' + pathRoot + 'personium.css" type="text/css" />');
+      document.write('<link rel="stylesheet" href="' + pathLang + 'locale.css" type="text/css" />');
+      var ps = document.createElement('script');
+      ps.src = pathRoot + 'personium_docs.js';
+      var s = document.getElementsByTagName('script')[0];
+      s.parentNode.insertBefore(ps, s);
+    
+      ps2 = document.createElement('script');
+      ps2.src = pathRoot + 'apiref_versions.js';
+      s = document.getElementsByTagName('script')[0];
+      s.parentNode.insertBefore(ps2, s);
+  </script>
+  <link href="https://fonts.googleapis.com/css?family=Raleway" rel="stylesheet">
+  <link href="https://fonts.googleapis.com/css?family=Open+Sans" rel="stylesheet">
+  
+  <!--[if lt IE 9]>
+    <script src="//cdnjs.cloudflare.com/ajax/libs/html5shiv/3.7.3/html5shiv-printshiv.min.js"></script>
+  <![endif]-->
+</head>
+<body>
+  <header>
+    <nav>
+    <div id="logo"><a href="/"><img src="https://personium.io/images/logo-quantify-dark.png"></a></div>
+    <ul>
+      <li class="submenu">
+        <a href="#" >Introduction</a>
+        <ul>
+            <li><a href="javascript:p.toPage('/overview/001_Introduction.html');">What's Personium?</a></li>
+            <li><a href="javascript:p.toPage('/user_guide/001_Personium_Architecture.html');">Architecture</a></li>
+            <li><a href="javascript:p.toPage('/user_guide/008_Glossary.html');">Glossary</a></li>
+        </ul>
+      </li>
+      <li class="submenu">
+        <a href="#" >User Guide</a>
+        <ul>
+            <li><a href="javascript:p.toPage('/app-developer/');">for App Developer</a></li>
+            <li><a href="javascript:p.toPage('/cell-gui-developer/');">for Cell GUI Developer</a></li>
+            <li><a href="javascript:p.toPage('/unit-administrator/');">for Unit Administrator</a></li>
+            <li><a href="javascript:p.toPage('/server-operator/');">for Server Software Operator</a></li>
+            <li><a href="javascript:p.toPage('/document-writer/');">for Documentation Contributor</a></li>
+            <li><a href="javascript:p.toPage('/plugin-developer/');">for Server Plugin Developer</a></li>
+            <li><a href="javascript:p.toPage('/software-developer/');">for Server Developer</a></li>
+        </ul>
+      </li>
+      <li class="submenu">
+        <a href="#" >API Reference</a>
+        <ul id="api-ref-list">
+            <li><a href="javascript:p.toPage('/user_guide/990_Old_Version_API_Ref.html');">older versions</a></li>
+        </ul>
+      </li>
+      <li class="submenu">
+        <a href="#" >Languages</a>
+        <ul>
+            <li><a href="javascript:p.setLang('en');">English</a></li>
+            <li><a href="javascript:p.setLang('ja');">Japanese</a></li>
+        </ul>
+      </li>
+    </ul>
+    </nav>
+  </header>
+
+<div id="container">
+<h1>Build development environment</h1>
+<h2>Target OS</h2>
+<p>Windows</p>
+<h2>List of tools necessary for development</h2>
+<p>Download the necessary tools for development.</p>
+<table>
+<thead>
+<tr class="header">
+<th style="text-align: left;">Tool name</th>
+<th style="text-align: left;">Version</th>
+<th style="text-align: left;">Download URL</th>
+</tr>
+</thead>
+<tbody>
+<tr class="odd">
+<td style="text-align: left;">Eclipse (Pleiades)</td>
+<td style="text-align: left;">2018-09 Full Edition or later</td>
+<td style="text-align: left;"><a href="http://mergedoc.osdn.jp/" class="uri">http://mergedoc.osdn.jp/</a></td>
+</tr>
+<tr class="even">
+<td style="text-align: left;">AdoptOpenJDK</td>
+<td style="text-align: left;">8 series / HotSpot</td>
+<td style="text-align: left;"><a href="https://adoptopenjdk.net/" class="uri">https://adoptopenjdk.net/</a></td>
+</tr>
+<tr class="odd">
+<td style="text-align: left;">Git</td>
+<td style="text-align: left;">Latest</td>
+<td style="text-align: left;"><a href="https://git-scm.com/" class="uri">https://git-scm.com/</a></td>
+</tr>
+<tr class="even">
+<td style="text-align: left;">Maven</td>
+<td style="text-align: left;">3 series</td>
+<td style="text-align: left;"><a href="https://maven.apache.org/download.cgi" class="uri">https://maven.apache.org/download.cgi</a></td>
+</tr>
+</tbody>
+</table>
+<h2>List of tools necessary for operation check</h2>
+<p>Please download the necessary tools for operation check.</p>
+<table style="width:17%;">
+<colgroup>
+<col style="width: 5%" />
+<col style="width: 5%" />
+<col style="width: 5%" />
+</colgroup>
+<thead>
+<tr class="header">
+<th style="text-align: left;">Tool name</th>
+<th style="text-align: left;">Version</th>
+<th style="text-align: left;">Download URL</th>
+</tr>
+</thead>
+<tbody>
+<tr class="odd">
+<td style="text-align: left;">Tomcat</td>
+<td style="text-align: left;">9.0 series</td>
+<td style="text-align: left;">Pleiades Do not introduce individual items to use the items included</td>
+</tr>
+<tr class="even">
+<td style="text-align: left;">Elasticsearch</td>
+<td style="text-align: left;">6.6.1</td>
+<td style="text-align: left;"><a href="https://www.elastic.co/jp/downloads/past-releases/elasticsearch-6-6-1" class="uri">https://www.elastic.co/jp/downloads/past-releases/elasticsearch-6-6-1</a></td>
+</tr>
+<tr class="odd">
+<td style="text-align: left;">ActiveMQ</td>
+<td style="text-align: left;">5.15 series</td>
+<td style="text-align: left;"><a href="http://activemq.apache.org/download-archives.html" class="uri">http://activemq.apache.org/download-archives.html</a></td>
+</tr>
+<tr class="even">
+<td style="text-align: left;">Nginx</td>
+<td style="text-align: left;">1.14 series</td>
+<td style="text-align: left;"><a href="http://nginx.org/download/nginx-1.14.0.zip" class="uri">http://nginx.org/download/nginx-1.14.0.zip</a></td>
+</tr>
+</tbody>
+</table>
+<h2>Initial setting of various tools</h2>
+<h3>Eclipse</h3>
+<ol>
+<li><p>Add AdoptOpenJDK to the installed JRE from [Window]-&gt; [Settings].<br />
+Set AddOpenOpenJDK as default.</p></li>
+<li><p>Add a Tomcat 9 server to the server runtime environment from [Window]-&gt; [Settings].<br />
+Set AdoptOpenJDK to JRE.</p></li>
+</ol>
+<h3>JDK</h3>
+<p>Set environment variable (JAVA_HOME).</p>
+<pre><code>variable:JAVA_HOME
+value:java installation directory path(e.g.: C:\Program Files\Java\openjdk-1.8.0.191)</code></pre>
+<p>Add the following to the system environment variable (Path).</p>
+<pre><code>%JAVA_HOME%\bin</code></pre>
+<h3>Git</h3>
+<p>Add the following description to C:¥Users¥[user]¥.gitconfig</p>
+<pre><code>[core]
+    autocrlf = false
+    ignorecase = false</code></pre>
+<blockquote>
+<p>When building a development environment under a proxy environment, we also add the following.<br />
+* The value of {} will input your own information.</p>
+</blockquote>
+<pre><code>[http]
+    proxy = {protocol}://{username}:{pass}@{host}:{port}
+[https]
+    proxy = {protocol}://{username}:{pass}@{host}:{port}</code></pre>
+<h3>Maven</h3>
+<p>Set environment variable (M2_HOME).</p>
+<pre><code>variable:M2_HOME
+value:maven installation directory path(e.g.: C:\Program Files\apache-maven-3.5.4)</code></pre>
+<p>Add the following to the system environment variable (Path).</p>
+<pre><code>%M2_HOME%\bin</code></pre>
+<blockquote>
+<p>When building a development environment under a proxy environment, add the following description to apache-maven-3.5.4 \ conf \ settings.xml.<br />
+* The value of {} will input your own information.</p>
+</blockquote>
+<pre><code>&lt;proxies&gt;
+  &lt;proxy&gt;
+      &lt;id&gt;proxy00&lt;/id&gt;
+      &lt;active&gt;true&lt;/active&gt;
+      &lt;protocol&gt;http&lt;/protocol&gt;
+      &lt;username&gt;{username}&lt;/username&gt;
+      &lt;password&gt;{pass}&lt;/password&gt;
+      &lt;host&gt;{host}&lt;/host&gt;
+      &lt;port&gt;{port}&lt;/port&gt;
+      &lt;nonProxyHosts&gt;local.net|some.host.com&lt;/nonProxyHosts&gt;
+  &lt;/proxy&gt;
+  &lt;proxy&gt;
+      &lt;id&gt;proxy01&lt;/id&gt;
+      &lt;active&gt;true&lt;/active&gt;
+      &lt;protocol&gt;https&lt;/protocol&gt;
+      &lt;username&gt;{username}&lt;/username&gt;
+      &lt;password&gt;{pass}&lt;/password&gt;
+      &lt;host&gt;{host}&lt;/host&gt;
+      &lt;port&gt;{port}&lt;/port&gt;
+      &lt;nonProxyHosts&gt;local.net|some.host.com&lt;/nonProxyHosts&gt;
+  &lt;/proxy&gt;
+&lt;/proxies&gt;</code></pre>
+<h3>Elasticsearch</h3>
+<h4>Modification of elasticsearch-6.6.1\config\elasticsearch.yml</h4>
+<p>Add the following description to elasticsearch.yml.</p>
+<pre><code>cluster.name: {Optional name}
+
+network.host: 0.0.0.0
+action.auto_create_index: &quot;.watches,.triggered_watches,.watcher-history-*&quot;
+http.cors.enabled: true
+http.cors.allow-origin: &quot;*&quot;
+indices.fielddata.cache.size: 80%(Optional: What percent of heap memory is used as data cache)</code></pre>
+<h3>ActiveMQ</h3>
+<p>none</p>
+<h3>Tomcat</h3>
+<p>none</p>
+<h3>Nginx</h3>
+<p>For initialization of Nginx, modify the nginx.conf file under nginx-1.14.0\conf.</p>
+<ol>
+<li><p>Add a description below in http.</p>
+<pre><code>    ignore_invalid_headers on;
+    proxy_set_header Host $http_host;
+    proxy_http_version 1.1;
+    large_client_header_buffers 4 55k;
+
+    map $http_upgrade $connection_upgrade {
+      default upgrade;
+      &#39;&#39; close;
+    }</code></pre></li>
+<li><p>Change contents of http.server.location / to the following description.</p>
+<pre><code>            #root   html;
+            #index  index.html index.htm;
+
+            if ($request_uri ~ [\x00-\x20\x22\x3c\x3e\x5b-\x5e\x60\x7b-\x7d\x7f]) {
+                return 400;
+            }
+
+            if ($request_uri ~* ([^?]+)\?(.*)) {
+              set $personium_path $1;
+              rewrite .* /personium-core$personium_path break;
+            }
+            if ($is_args = &quot;&quot;) {
+              rewrite .* /personium-core$request_uri break;
+            }
+
+            proxy_pass http://localhost:8080;
+            proxy_set_header X-Forwarded-For $remote_addr;
+            proxy_set_header X-Forwarded-Proto http;
+            proxy_set_header X-Forwarded-Path $request_uri;
+            proxy_set_header Host $http_host;
+            proxy_set_header Upgrade $http_upgrade;
+            proxy_set_header Connection $connection_upgrade;
+            proxy_hide_header X-Powered-By;
+            proxy_hide_header X-Rack-Cache;
+            proxy_hide_header X-Content-Digest;
+            proxy_hide_header X-Runtime;</code></pre></li>
+</ol>
+<h2>Project import in Eclipse</h2>
+<p>Import personium-core and personium-engine as a project.</p>
+<ol>
+<li><p>Clone from the GitHub repository.<br />
+<a href="https://github.com/personium/personium-core.git" class="uri">https://github.com/personium/personium-core.git</a><br />
+<a href="https://github.com/personium/personium-engine.git" class="uri">https://github.com/personium/personium-engine.git</a></p></li>
+<li><p>Import each as an Eclipse maven project.</p></li>
+<li><p>Create personium-unit-config.properties in each /src/main/resources.</p>
+<blockquote>
+<p>The value of io.personium.core.es.cluster.name is the Elasticsearch config file (elasticsearch.yml)<br />
+Specify the value set in cluster.name of the cluster.</p>
+</blockquote></li>
+</ol>
+<p><strong>/personium_core/src/main/resources/personium-unit-config.properties</strong></p>
+<pre><code>#################################################
+# personium-core configurations
+#################################################
+# general configurations
+io.personium.core.masterToken=personiumio
+io.personium.core.unitScheme=http
+#io.personium.core.unitPort=9998
+#io.personium.core.unitPort=8080
+io.personium.core.unitPort=
+#io.personium.core.unitPath=/personium-core
+io.personium.core.unitPath=
+io.personium.core.pathBasedCellUrl.enabled=true
+
+io.personium.core.unitUser.issuers=personium-localunit:/unitadmin/ personium-localunit:/unitadmincell/ personium-localunit:/unitusercell/
+
+# cell configurations
+io.personium.core.cell.relayhtmlurl.default=https://app-cc-home.demo.personium.io/__/index.html
+
+io.personium.core.es.cluster.name={Value set with elasticsearch.yml}
+io.personium.core.es.retryTimes=10
+
+io.personium.core.plugin.path=/personium/plugins
+io.personium.core.blobStore.root=/personium_nfs/personium-core/dav
+io.personium.core.bar.tmp.dir=/personium_nfs/personium-core/bar
+io.personium.core.event.log.current.dir=/personium_nfs/personium-core/eventlog
+io.personium.core.cellSnapshot.root=/personium_nfs/personium-core/snapshot
+
+# lock type configurations
+io.personium.core.lock.type=inProcess
+
+# cache configurations (memcached protocol)
+io.personium.core.cache.type=inProcess
+io.personium.core.cache.cell.enabled=false
+io.personium.core.cache.box.enabled=false
+io.personium.core.cache.schema.enabled=false
+
+# security configurations
+io.personium.core.security.secret16=gv7hpmmf5siwj5by
+io.personium.core.security.auth.password.salt=voAbizvF
+io.personium.core.security.dav.encrypt.enabled=false
+
+# Davlimit configurations
+io.personium.core.dav.childresource.maxnum=30
+io.personium.core.dav.depth.maxnum=5
+
+# OData $links configurations
+io.personium.core.odata.links.NtoN.maxnum=40</code></pre>
+<p><strong>/personium_engine/src/main/resources/personium-unit-config.properties</strong></p>
+<pre><code>#################################################
+# personium-engine configurations
+#################################################
+# general configurations
+io.personium.core.masterToken=personiumio
+
+io.personium.core.blobStore.root=/personium_nfs/personium-core/dav
+
+# security configurations
+io.personium.core.security.secret16=secret167pm5m4y6</code></pre>
+<p>* For the explanation of each setting, please refer to <a href="../server-operator/unit_config_list.html">Unit configurations</a>.</p>
+<blockquote>
+<p>* If there are maven and pom.xml related build errors on Eclipse,<br />
+Please carry out the procedure described below.</p>
+</blockquote>
+<ol>
+<li><p>Move to the directory where pom.xml exists at the command prompt etc.</p></li>
+<li><p>Execute the following command.</p>
+<pre><code>mvn clean package -DskipTests</code></pre>
+<p>If the command does not end with SUCCESS, remove the cause and re-execute.</p></li>
+<li><p>In Eclipse, right-click the target project -&gt; [Maven] -&gt; [Update Project] -&gt; [OK].</p></li>
+</ol>
+<h2>Startup confirmation method</h2>
+<p>Execute the command as a user with administrator authority.</p>
+<h3>1. Elasticsearch launch confirmation</h3>
+<p>Go to Elasticsearch installation directory at the command prompt etc.</p>
+<pre><code>&gt; cd Elasticsearch installation directory</code></pre>
+<p>Execute the following command.</p>
+<pre><code>&gt; bin\elasticsearch-service install (First time only)
+&gt; bin\elasticsearch-service start</code></pre>
+<p>Access <a href="http://localhost:9200" class="uri">http://localhost:9200</a> in the browser.</p>
+<p>The output will be successful if it is output as follows.</p>
+<pre><code>{
+  &quot;name&quot; : &quot;MODAM&quot;,
+  &quot;cluster_name&quot; : &quot;{Value set with elasticsearch.yml}&quot;,
+  &quot;cluster_uuid&quot; : &quot;VM2fJ2hXQRSI4PsYhJBtLA&quot;,
+  &quot;version&quot; : {
+    &quot;number&quot; : &quot;6.6.1&quot;,
+    &quot;build_flavor&quot; : &quot;default&quot;,
+    &quot;build_type&quot; : &quot;zip&quot;,
+    &quot;build_hash&quot; : &quot;1fd8f69&quot;,
+    &quot;build_date&quot; : &quot;2019-02-13T17:10:04.160291Z&quot;,
+    &quot;build_snapshot&quot; : false,
+    &quot;lucene_version&quot; : &quot;7.6.0&quot;,
+    &quot;minimum_wire_compatibility_version&quot; : &quot;5.6.0&quot;,
+    &quot;minimum_index_compatibility_version&quot; : &quot;5.0.0&quot;
+  },
+  &quot;tagline&quot; : &quot;You Know, for Search&quot;
+}</code></pre>
+<h3>2. ActiveMQ startup confirmation</h3>
+<p>Go to the Activemq installation directory with command prompt etc.</p>
+<pre><code>&gt; cd Activemq installation directory</code></pre>
+<p>Execute the following command.</p>
+<pre><code>&gt; bin\activemq start</code></pre>
+<p>Access <a href="http://localhost:8161" class="uri">http://localhost:8161</a> in the browser.<br />
+The startup will be successful when the management screen is displayed.</p>
+<h3>3. Startup confirmation for development server</h3>
+<p>In Eclipse, right-click the [personium-core] project -&gt; select [Run] -&gt; [Run on Server].</p>
+<p>The server selects and runs the Tomcat9 server added by default.</p>
+<blockquote>
+<p>* Starting Tomcat 9 may cause a startup error to exceed the timeout time.<br />
+Please change the timeout time at Tomcat startup in Eclipse.</p>
+</blockquote>
+<p>Access <a href="http://localhost:8080/personium-core/" class="uri">http://localhost:8080/personium-core/</a> in the browser.<br />
+The output will be successful if it is output as follows.</p>
+<pre><code>{&quot;unit&quot;:{&quot;path_based_cellurl_enabled&quot;:true,&quot;url&quot;:&quot;http:\/\/localhost\/&quot;}}</code></pre>
+<h3>4. Confirm Nginx startup</h3>
+<p>Navigate to the Nginx installation directory with a command prompt.</p>
+<pre><code>&gt; cd Nginx installation directory</code></pre>
+<p>Execute the following command.</p>
+<pre><code>&gt; start nginx</code></pre>
+<p>Access <a href="http://localhost" class="uri">http://localhost</a> in the browser.<br />
+The output will be successful if it is output as follows.</p>
+<pre><code>{&quot;unit&quot;:{&quot;path_based_cellurl_enabled&quot;:true,&quot;url&quot;:&quot;http:\/\/localhost\/&quot;}}</code></pre>
+</div>
+  <footer><nav>The Personium project is provided under the Apache 2.0 license. </nav></footer>
+</body>
+</html>
+

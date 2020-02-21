@@ -1,0 +1,347 @@
+<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml" lang="" xml:lang="">
+<head>
+  <!-- default template -->
+  <meta charset="utf-8" />
+  <meta name="generator" content="pandoc" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=yes" />
+  <link rel="icon" href="/images/favicon.ico" type="image/x-icon"/>
+  <title>Confirm_environment_settings</title>
+  <script type="text/javascript">
+      var path = location.pathname.split('/');
+      var pathRoot = [ path[0], path[1], '' ].join('/');
+      var pathLang = [ path[0], path[1], path[2] , ''].join('/');
+
+      document.write('<link rel="stylesheet" href="' + pathRoot + 'personium.css" type="text/css" />');
+      document.write('<link rel="stylesheet" href="' + pathLang + 'locale.css" type="text/css" />');
+      var ps = document.createElement('script');
+      ps.src = pathRoot + 'personium_docs.js';
+      var s = document.getElementsByTagName('script')[0];
+      s.parentNode.insertBefore(ps, s);
+    
+      ps2 = document.createElement('script');
+      ps2.src = pathRoot + 'apiref_versions.js';
+      s = document.getElementsByTagName('script')[0];
+      s.parentNode.insertBefore(ps2, s);
+  </script>
+  <link href="https://fonts.googleapis.com/css?family=Raleway" rel="stylesheet">
+  <link href="https://fonts.googleapis.com/css?family=Open+Sans" rel="stylesheet">
+  
+  <!--[if lt IE 9]>
+    <script src="//cdnjs.cloudflare.com/ajax/libs/html5shiv/3.7.3/html5shiv-printshiv.min.js"></script>
+  <![endif]-->
+</head>
+<body>
+  <header>
+    <nav>
+    <div id="logo"><a href="/"><img src="https://personium.io/images/logo-quantify-dark.png"></a></div>
+    <ul>
+      <li class="submenu">
+        <a href="#" >Introduction</a>
+        <ul>
+            <li><a href="javascript:p.toPage('/overview/001_Introduction.html');">What's Personium?</a></li>
+            <li><a href="javascript:p.toPage('/user_guide/001_Personium_Architecture.html');">Architecture</a></li>
+            <li><a href="javascript:p.toPage('/user_guide/008_Glossary.html');">Glossary</a></li>
+        </ul>
+      </li>
+      <li class="submenu">
+        <a href="#" >User Guide</a>
+        <ul>
+            <li><a href="javascript:p.toPage('/app-developer/');">for App Developer</a></li>
+            <li><a href="javascript:p.toPage('/cell-gui-developer/');">for Cell GUI Developer</a></li>
+            <li><a href="javascript:p.toPage('/unit-administrator/');">for Unit Administrator</a></li>
+            <li><a href="javascript:p.toPage('/server-operator/');">for Server Software Operator</a></li>
+            <li><a href="javascript:p.toPage('/document-writer/');">for Documentation Contributor</a></li>
+            <li><a href="javascript:p.toPage('/plugin-developer/');">for Server Plugin Developer</a></li>
+            <li><a href="javascript:p.toPage('/software-developer/');">for Server Developer</a></li>
+        </ul>
+      </li>
+      <li class="submenu">
+        <a href="#" >API Reference</a>
+        <ul id="api-ref-list">
+            <li><a href="javascript:p.toPage('/user_guide/990_Old_Version_API_Ref.html');">older versions</a></li>
+        </ul>
+      </li>
+      <li class="submenu">
+        <a href="#" >Languages</a>
+        <ul>
+            <li><a href="javascript:p.setLang('en');">English</a></li>
+            <li><a href="javascript:p.setLang('ja');">Japanese</a></li>
+        </ul>
+      </li>
+    </ul>
+    </nav>
+  </header>
+
+<div id="container">
+<h1>Ansible で構築したユニットの環境情報</h1>
+<hr />
+<h2>はじめに</h2>
+<p>Ansible で構築した環境の基本設定と留意事項を説明します。 この手順を行うことで、Personium を構成する主要なミドルウェアのインストール先や基本設定を理解することができます。</p>
+<h2>Web サービス</h2>
+<ul>
+<li>Web サービスが動作するサーバの基本設定を確認します。</li>
+</ul>
+<h3>Nginx 環境</h3>
+<ul>
+<li>Personium ではWeb を実現するためNginx を使用しています。<br />
+Nginx は以下のようにインストールしています。</li>
+</ul>
+<table>
+<thead>
+<tr class="header">
+<th>項目</th>
+<th>パス</th>
+</tr>
+</thead>
+<tbody>
+<tr class="odd">
+<td>インストールディレクトリ</td>
+<td>/opt/nginx-1.14.0/</td>
+</tr>
+<tr class="even">
+<td>設定ファイル</td>
+<td>/opt/nginx-1.14.0/conf/</td>
+</tr>
+<tr class="odd">
+<td>ログ出力先</td>
+<td>/personium/nginx/log/accesslog_443/</td>
+</tr>
+</tbody>
+</table>
+<h3>サーバ証明書</h3>
+<ul>
+<li>Personium はHTTPS で提供されるサービスです。HTTPS を実現するために使用しているサーバ証明書の設定を確認します。</li>
+</ul>
+<ol>
+<li><p>まずNginx で利用しているサーバ証明書のパスを確認します。 現在仕様しているサーバ証明書のパスを確認するには以下のコマンドを実行し、「ssl_certificate」「ssl_certificate_key」の項目を確認します。</p>
+<pre class="console"><code># cat /opt/nginx/conf/nginx.conf</code></pre>
+<p>構築直後では以下のようになっています。</p>
+<pre><code>ssl_sertificate         /opt/nginx/conf/server.crt
+ssl_certificate_key     /opt/nginx/conf/server.key</code></pre></li>
+<li><p>使用しているサーバ証明書の内容を確認します。 以下のコマンドを実行し、サーバ証明書のコモンネームを確認します。</p>
+<pre class="console"><code># openssl x509 -noout -subject -in /opt/nginx/conf/server.crt</code></pre>
+<p><a href="https://github.com/personium/ansible/tree/master/1-server_unit">1-server_unit/README</a>、または<a href="https://github.com/personium/ansible/tree/master/3-server_unit">3-server_unit/README</a>に記載されているサーバ証明書の作成例の通り作成した場合、以下のように表示されます。CNがコモンネームを表し、HTTPSプロトコルでアクセスをする際のFQDNと一致している必要があります。</p>
+<pre><code>subject= /C=XXX/L=Default City/O=Default Company Ltd/CN=personium.example.com</code></pre></li>
+</ol>
+<h2>AP サービス</h2>
+<p>AP サービスが動作するサーバの基本設定を確認します。</p>
+<h3>Tomcat 環境</h3>
+<ul>
+<li>Personium ではAP を実現するためTomcat を使用しています。<br />
+Tomcat は以下のようにインストールしています。</li>
+</ul>
+<table>
+<thead>
+<tr class="header">
+<th>項目</th>
+<th>パス</th>
+</tr>
+</thead>
+<tbody>
+<tr class="odd">
+<td>インストールディレクトリ</td>
+<td>/opt/apache-tomcat-9.0.10/</td>
+</tr>
+<tr class="even">
+<td>設定ファイル</td>
+<td>/opt/apache-tomcat-9.0.10/conf/</td>
+</tr>
+<tr class="odd">
+<td>ログ出力先</td>
+<td>/personium/tomcat/logs/</td>
+</tr>
+<tr class="even">
+<td>アプリケーション格納ディレクトリ</td>
+<td>/opt/apache-tomcat-9.0.10/webapps/</td>
+</tr>
+</tbody>
+</table>
+<h3>ユニット証明書</h3>
+<ul>
+<li>Personium はアクセストークン検証等の様々な機能でユニット証明書を使用している重要なファイルです。</li>
+</ul>
+<ol>
+<li><p>まず、現在使用しているユニット証明書のパスを確認します。ユニット証明書はpersonium-unit-config.properties というファイルで指定されています。</p>
+<ul>
+<li>以下のコマンドを実行しファイルを確認します。</li>
+</ul>
+<pre class="console"><code># cat /personium/personium-core/conf/18888/personium-unit-config.properties | grep ^io.personium.core.x509</code></pre>
+<p>Ansible で自動構築した環境は以下の設定になっています。</p>
+<pre><code>io.personium.core.x509.root=/opt/x509/unit-self-sign.crt
+io.personium.core.x509.crt=/opt/x509/unit-self-sign.crt
+io.personium.core.x509.key=/opt/x509/unit.key</code></pre></li>
+<li><p>ユニット証明書のコモンネームを確認します。このとき、ユニット証明書のコモンネームが自身のPersonium Unit のFQDNと一致している必要があります。</p>
+<ul>
+<li>以下のコマンドを実行することでユニット証明書の情報を確認することができます。</li>
+</ul>
+<pre class="console"><code># openssl x509 -noout -subject -in /opt/x509/unit-self-sign.crt</code></pre>
+<ul>
+<li><a href="https://github.com/personium/ansible/blob/master/How_to_generate_Self-signed_Unit_Certificate.html">How to generate Self-signed Unit Certificate</a> に記載されているユニット証明書の作成例の通り作成した場合、以下のように表示されます。CNがコモンネームを表し、HTTPSアクセスをする際のFQDNと一致している必要があります。</li>
+</ul>
+<pre><code>subject= /C=XXX/L=Default City/O=Default Company Ltd/CN=personium.example.com</code></pre></li>
+</ol>
+<h3>Personium 環境</h3>
+<ul>
+<li>Personium は以下のようにインストールされています。</li>
+</ul>
+<table>
+<colgroup>
+<col style="width: 30%" />
+<col style="width: 69%" />
+</colgroup>
+<thead>
+<tr class="header">
+<th>項目</th>
+<th>パス</th>
+</tr>
+</thead>
+<tbody>
+<tr class="odd">
+<td>personium-core</td>
+<td>/opt/tomcat/webapps/</td>
+</tr>
+<tr class="even">
+<td>personium-engine</td>
+<td>/opt/tomcat/webapps/</td>
+</tr>
+<tr class="odd">
+<td>personium-core ログ出力先</td>
+<td>/personium/personium-core/log/personium-core.log</td>
+</tr>
+<tr class="even">
+<td>personium-engine ログ出力先</td>
+<td>/personium/personium-engine/log/personium-engine.log</td>
+</tr>
+<tr class="odd">
+<td>ユニット設定ファイル</td>
+<td>/personium/personium-core/conf/18888/personium-unit-config.properties</td>
+</tr>
+</tbody>
+</table>
+<ul>
+<li><p>personium-unit-config.properties を変更することで<a href="unit_config_list.html">Unit設定</a>をデフォルトから変更することができます。</p>
+<p>Ansible での構築直後は以下のように設定されています。<br />
+* {} はAnsible 実行前に変更したhosts で定義した内容が記載されることを表しています。<br />
+* {{}} はAnsible 実行時にランダムで決められる文字列が記載されることを表しています。</p>
+<pre><code>io.personium.core.masterToken={master_token}
+io.personium.core.unitScheme=https
+io.personium.core.unitUser.issuers=personium-localunit:/UnitUserCell/ personium-localunit:/unitadmin/
+io.personium.core.lock.accountlock.time=1
+io.personium.core.plugin.path=/personium/personium-core/plugins
+io.personium.core.x509.root=/opt/x509/unit-self-sign.crt
+io.personium.core.x509.crt=/opt/x509/unit-self-sign.crt
+io.personium.core.x509.key=/opt/x509/unit.key
+io.personium.core.security.secret16={{token.key}}
+io.personium.core.security.auth.password.salt={{sakt.key}}
+io.personium.core.account.lastauthenticated.enabled=false
+io.personium.core.lock.memcached.host=127.0.0.1
+io.personium.core.lock.memcached.port=11211
+io.personium.core.lock.memcached.opTimeout=12000
+io.personium.core.cache.type=memcached
+io.personium.core.cache.memcached.host=127.0.0.1
+io.personium.core.cache.memcached.port=11212
+io.personium.core.cache.cell.enabled=true
+io.personium.core.cache.box.enabled=true
+io.personium.core.cache.schema.enabled=true
+io.personium.core.cache.memcached.opTimeout=12000
+io.personium.core.cache.memcached.expiresin=86400
+io.personium.core.es.hosts=127.0.0.1:9300
+io.personium.core.es.cluster.name=personium
+io.personium.core.es.ads.type=none
+io.personium.core.engine.enabled=true
+io.personium.core.engine.host=localhost
+io.personium.core.engine.port=18888
+io.personium.core.engine.path=personium-engine
+io.personium.core.binaryData.physical.delete.mode=true
+io.personium.core.binaryData.fsync.enabled=true
+io.personium.core.blobStore.root=/personium_nfs/personium-core/dav
+io.personium.core.event.log.current.dir=/personium_nfs/personium-core/eventlog
+io.personium.core.bar.file.maxSize=100
+io.personium.core.bar.entry.maxSize=10
+io.personium.core.bar.installfile.dir=/personium_nfs/personium-core/barInstall
+io.personium.core.bar.progress.expireInSec=259200
+io.personium.core.defaultBaseUrl=https://personium.example.com
+io.personium.engine.masterToken={master_token}
+io.personium.engine.elasticsearch.hosts=127.0.0.1:9300
+io.personium.engine.elasticsearch.cluster=personium
+io.personium.engine.binaryData.fsync.enabled=true
+io.personium.engine.blobStore.root=/personium_nfs/personium-core/dav
+io.personium.engine.x509.root=/opt/x509/unit-self-sign.crt
+io.personium.engine.x509.key=/opt/x509/unit.key
+io.personium.engine.x509.crt=/opt/x509/unit-self-sign.crt
+io.personium.engine.security.secret16={{token.key}}
+io.personium.core.dav.childresource.maxnum=1000000</code></pre></li>
+</ul>
+<h4>ユニットマスタートークンについて</h4>
+<ul>
+<li><p>「personium-unit-config.properties」の「io.personium.core.masterToken」に記載されている値がユニットマスタートークンです。ユニットマスタートークンの初期設定はAnsible を実行したサーバで以下のコマンドを実行する事でも確認することが可能です。</p>
+<pre class="console"><code># echo `grep &quot;master_token&quot; ~/ansible/static_inventory/hosts | sed -e &quot;s/master_token=//&quot; | uniq`</code></pre></li>
+</ul>
+<blockquote>
+<p>ユニットマスタートークンは上記のPersonium 環境に記載している「personium-unit-config.properties」の「io.personium.core.masterToken」を参照することでも確認可能です。</p>
+</blockquote>
+<p><strong>ユニットマスタートークン無効化の方法については <a href="unit_security.html">Unit のセキュリティ（デフォルトから変更したほうが良い設定）</a>を参照ください。</strong></p>
+<h4>Personium ユニット管理アカウント</h4>
+<ul>
+<li><p>Ansible を実行することで自動的にPersonium ユニット管理アカウントが作成されます。この情報はPersonium ユニット管理者がセルの作成等の管理作業を行う際に必要となります。</p>
+<p>ユニット管理アカウントのID/PASSの確認</p>
+<ul>
+<li>情報の取得のため、Ansibleを実行したサーバーにログインし、以下コマンドを実行します。</li>
+</ul>
+<pre class="console"><code>$ sudo su -
+# cat /root/ansible/unitadmin_account  
+unitadmin_account={unitadmin_account}  
+unitudmin_password={unitudmin_password}  
+Personium_FQDN={Personium_FQDN}  </code></pre>
+<ul>
+<li>{Personium_FQDN} PersoniumユニットのFQDN</li>
+<li>{unitadmin_account} ユニット管理アカウント</li>
+<li>{unitudmin_password} ユニット管理パスワード</li>
+</ul></li>
+</ul>
+<blockquote>
+<p><strong>（注意）</strong><br />
+<strong>ここで取得した情報は初期値であるため、ユーザが変更した場合は各自で管理するようにしてください。</strong></p>
+</blockquote>
+<h2>DBサービス</h2>
+<ul>
+<li>DB サービスが動作するサーバの基本設定を確認します。</li>
+</ul>
+<h3>Elasticsearch 環境</h3>
+<ul>
+<li><p>Personium はDB を実現するためElasticsearch を使用しています。<br />
+Elasticsearch は以下のようにインストールされています。<br />
+バージョンについては<a href="https://github.com/personium/ansible#middleware-on-vm">こちら</a>のelasticsearchのバージョンをご確認ください。</p>
+<table>
+<thead>
+<tr class="header">
+<th>項目</th>
+<th>パス</th>
+</tr>
+</thead>
+<tbody>
+<tr class="odd">
+<td>インストールディレクトリ</td>
+<td>/opt/elasticsearch-{ Elasticsearch version }/</td>
+</tr>
+<tr class="even">
+<td>設定ファイル</td>
+<td>/opt/elasticsearch-{ Elasticsearch version }/config/</td>
+</tr>
+<tr class="odd">
+<td>ログ出力先</td>
+<td>/personium/elasticsearch/log/</td>
+</tr>
+<tr class="even">
+<td>データ格納ディレクトリ</td>
+<td>/personium/elasticsearch-{ Elasticsearch version }/data/</td>
+</tr>
+</tbody>
+</table></li>
+</ul>
+</div>
+  <footer><nav>The Personium project is provided under the Apache 2.0 license. </nav></footer>
+</body>
+</html>
+

@@ -1,0 +1,357 @@
+<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml" lang="" xml:lang="">
+<head>
+  <!-- default template -->
+  <meta charset="utf-8" />
+  <meta name="generator" content="pandoc" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=yes" />
+  <link rel="icon" href="/images/favicon.ico" type="image/x-icon"/>
+  <title>Personium_Apps</title>
+  <script type="text/javascript">
+      var path = location.pathname.split('/');
+      var pathRoot = [ path[0], path[1], '' ].join('/');
+      var pathLang = [ path[0], path[1], path[2] , ''].join('/');
+
+      document.write('<link rel="stylesheet" href="' + pathRoot + 'personium.css" type="text/css" />');
+      document.write('<link rel="stylesheet" href="' + pathLang + 'locale.css" type="text/css" />');
+      var ps = document.createElement('script');
+      ps.src = pathRoot + 'personium_docs.js';
+      var s = document.getElementsByTagName('script')[0];
+      s.parentNode.insertBefore(ps, s);
+    
+      ps2 = document.createElement('script');
+      ps2.src = pathRoot + 'apiref_versions.js';
+      s = document.getElementsByTagName('script')[0];
+      s.parentNode.insertBefore(ps2, s);
+  </script>
+  <link href="https://fonts.googleapis.com/css?family=Raleway" rel="stylesheet">
+  <link href="https://fonts.googleapis.com/css?family=Open+Sans" rel="stylesheet">
+  
+  <!--[if lt IE 9]>
+    <script src="//cdnjs.cloudflare.com/ajax/libs/html5shiv/3.7.3/html5shiv-printshiv.min.js"></script>
+  <![endif]-->
+</head>
+<body>
+  <header>
+    <nav>
+    <div id="logo"><a href="/"><img src="https://personium.io/images/logo-quantify-dark.png"></a></div>
+    <ul>
+      <li class="submenu">
+        <a href="#" >Introduction</a>
+        <ul>
+            <li><a href="javascript:p.toPage('/overview/001_Introduction.html');">What's Personium?</a></li>
+            <li><a href="javascript:p.toPage('/user_guide/001_Personium_Architecture.html');">Architecture</a></li>
+            <li><a href="javascript:p.toPage('/user_guide/008_Glossary.html');">Glossary</a></li>
+        </ul>
+      </li>
+      <li class="submenu">
+        <a href="#" >User Guide</a>
+        <ul>
+            <li><a href="javascript:p.toPage('/app-developer/');">for App Developer</a></li>
+            <li><a href="javascript:p.toPage('/cell-gui-developer/');">for Cell GUI Developer</a></li>
+            <li><a href="javascript:p.toPage('/unit-administrator/');">for Unit Administrator</a></li>
+            <li><a href="javascript:p.toPage('/server-operator/');">for Server Software Operator</a></li>
+            <li><a href="javascript:p.toPage('/document-writer/');">for Documentation Contributor</a></li>
+            <li><a href="javascript:p.toPage('/plugin-developer/');">for Server Plugin Developer</a></li>
+            <li><a href="javascript:p.toPage('/software-developer/');">for Server Developer</a></li>
+        </ul>
+      </li>
+      <li class="submenu">
+        <a href="#" >API Reference</a>
+        <ul id="api-ref-list">
+            <li><a href="javascript:p.toPage('/user_guide/990_Old_Version_API_Ref.html');">older versions</a></li>
+        </ul>
+      </li>
+      <li class="submenu">
+        <a href="#" >Languages</a>
+        <ul>
+            <li><a href="javascript:p.setLang('en');">English</a></li>
+            <li><a href="javascript:p.setLang('ja');">Japanese</a></li>
+        </ul>
+      </li>
+    </ul>
+    </nav>
+  </header>
+
+<div id="container">
+<h1>Personium App</h1>
+<h2>Overview</h2>
+<p>Personium interface is basically REST API based and does not provide any GUI tools. However, it is better to provide GUI tools to end-users.</p>
+<p>Personium Project has implemented several sample GUI tools to demonstrate the functions of Personium. App developers are free to modify the published sample GUI tools.</p>
+<p>However, Personium App developer should note that other Personium App developers are involved in this open ecosystem. Therefore, it is inevitable that all of us should follow certain basic developer guidelines (Likewise for any other OSS communities).</p>
+<p><img src="https://raw.githubusercontent.com/personium/Hands-on-Demo/master/doc/app_overview.png" alt="Diagram" /></p>
+<h2>Video Demonstrations</h2>
+<ol>
+<li><p>Data Synchronization<br />
+<a href="https://youtu.be/gv0p2jfn2kw"><img src="https://i.ytimg.com/vi/gv0p2jfn2kw/2.jpg?time=1514274465341" alt="Data Synchronization" /></a></p></li>
+<li><p>Data ACL Management<br />
+<a href="https://youtu.be/indyfGp4KJQ"><img src="https://i.ytimg.com/vi/indyfGp4KJQ/2.jpg?time=1514274599855" alt="Data ACL Management" /></a></p></li>
+</ol>
+<h2>Types of Personium App</h2>
+<p>In Personium, App is categorized according to the level of permission of APIs the App can use. There are basically 3 types of Apps. For details on how APIs are categorized, please refer to the <a href="../user_guide/001_Personium_Concepts.html">Personium Concepts</a>.</p>
+<ol>
+<li><a href="#1-general-apps">General Apps</a></li>
+<li><a href="#2-cell-management-clients">Cell Management Clients</a></li>
+<li><a href="#3-unit-management-clients">Unit Management Clients</a></li>
+</ol>
+<p>In the following sections, definitions and deployment procedures for the above GUI types will be explained.<br />
+For detailed deployment procedures, please check out each repository's &quot;How to deploy&quot; section.</p>
+<h3>1. General Apps</h3>
+<p>General App is a Box level GUI that can perform operation on data contained in a dedicated Box which is only accessible to the corresponding App.</p>
+<p>App developer designs what kind of data (files, DB, etc.) must be installed onto the user's Cell to provide services on the Personium Platform.<br />
+Most App developers implements Apps in this category.</p>
+<h4>Merits</h4>
+<p>Both App users and developers can benefit from this arrangement.</p>
+<ul>
+<li><strong>App user (data subject)</strong>
+<ul>
+<li>All data is contained in the App user's PDS (Personium Cell) while a variety of services can be used.<br />
+</li>
+<li>The user can reduce the risk of information leakage by customizing the access control configurations of the data provided to the service provider.</li>
+</ul></li>
+<li><strong>App developer (service provider)</strong>
+<ul>
+<li>Since data management and access control are already performed by the App user, the App developer only need to provide minimal data management on the service side.<br />
+</li>
+<li><p>The App developer can ask for permission to access data which is created by other Apps.</p>
+<blockquote>
+<p>An easy way to conduct marketing research or survey.</p>
+</blockquote></li>
+</ul></li>
+</ul>
+<h4>Examples</h4>
+<p>All source codes are available on GitHub.</p>
+<ul>
+<li><a href="https://github.com/personium/template-app-cell">Minimal App</a> - Personium's Hello World App<br />
+</li>
+<li><a href="https://github.com/fujitsu-pio/myboard-app">MyBoard</a> - Provide data access control using Role only
+<ul>
+<li>Demo available on YouTube<br />
+<a href="https://youtu.be/X_djQih94tU"><img src="https://i.ytimg.com/vi/X_djQih94tU/1.jpg" alt="MyBoard on YouTube" /></a><br />
+</li>
+</ul></li>
+<li><a href="https://github.com/fujitsu-pio/calorie-smile-app">Calorie Smile Sync</a> - Synchronize data from another Web service and provide data access control using Relation and Role<br />
+</li>
+<li><a href="https://github.com/fujitsu-pio/wakaba-user-app">Personal Data Brokering (Wakaba Municipal Information Bank)</a><br />
+etc</li>
+</ul>
+<h4>How to deploy an App and provide service</h4>
+<p>In this section, we will explain the basic rules and recommendations on setting up an repository. By following these rules and recommendations, it makes deploying the Personium App on Personium Cell easier.</p>
+<blockquote>
+<p>A <a href="https://github.com/personium/template-app-cell">simple example</a> is available.</p>
+</blockquote>
+<h5>Folder structure</h5>
+<p>The following diagram shows the folder structure of a very simple Personium App.</p>
+<blockquote>
+<p><a href="https://github.com/fujitsu-pio/calorie-smile-app">Calorie Smile Sync</a> has a more complicated bar folder.</p>
+</blockquote>
+<pre><code>│  launch.json
+│  profile.json
+│  relations.json
+│  roles.json
+│  
+├─bar
+│  └─00_meta
+│          00_manifest.json
+│          90_rootprops.xml
+│          
+├─doc
+│      
+├─icon
+│      
+├─locales
+│  ├─en
+│  │      profile.json
+│  │      
+│  └─ja
+│          profile.json
+│          
+└─src
+    └─html
+        │  app.html
+        │  
+        ├─css
+        │      common.css
+        │      
+        ├─Engine
+        │      getAppAuthToken.js
+        │      
+        ├─img
+        │      github.png
+        │      
+        ├─js
+        │      app.js
+        │      common.js
+        │      common_personium.js
+        │      
+        └─locales
+            ├─en
+            │      common.json
+            │      glossary.json
+            │      
+            └─ja
+                    common.json
+                    glossary.json</code></pre>
+<h5>Explanation and deployment procedures</h5>
+<table style="width:25%;">
+<colgroup>
+<col style="width: 5%" />
+<col style="width: 12%" />
+<col style="width: 6%" />
+</colgroup>
+<thead>
+<tr class="header">
+<th style="text-align: left;">#</th>
+<th style="text-align: left;">Resource (Folder/File)</th>
+<th style="text-align: left;">Description</th>
+</tr>
+</thead>
+<tbody>
+<tr class="odd">
+<td style="text-align: left;">1</td>
+<td style="text-align: left;">bar</td>
+<td style="text-align: left;">Contains <a href="../apiref/current/007_Box_install.html">definitions and contents</a> needed to create a <a href="../apiref/current/301_Bar_File.html">BAR file</a> which will be installed as Box onto the user's Cell. Compress (zip) this folder and name the compressed file with a &quot;.bar&quot; extension.</td>
+</tr>
+<tr class="even">
+<td style="text-align: left;">2</td>
+<td style="text-align: left;">icon</td>
+<td style="text-align: left;">Icon to be displayed in HomeApp.</td>
+</tr>
+<tr class="odd">
+<td style="text-align: left;">3</td>
+<td style="text-align: left;">launch.json</td>
+<td style="text-align: left;">Contains information used by the HomeApp to lauch the app. <a href="https://github.com/personium/template-app-cell/blob/master/launch.json">Sample file</a> has entry that allow launching native App (Android/iOS) which will be supported in the near future.</td>
+</tr>
+<tr class="even">
+<td style="text-align: left;">4</td>
+<td style="text-align: left;"></td>
+<td style="text-align: left;">Defaults to be used when the App developer decides not to provide multilingual support.</td>
+</tr>
+<tr class="odd">
+<td style="text-align: left;"></td>
+<td style="text-align: left;">profile.json</td>
+<td style="text-align: left;">Contains information (Name/Description/Images, etc.) about the App. (<a href="https://github.com/personium/template-app-cell/blob/master/profile.json">Sample file</a>)</td>
+</tr>
+<tr class="even">
+<td style="text-align: left;"></td>
+<td style="text-align: left;">relations.json</td>
+<td style="text-align: left;">Contains display name, description and image of the relation(s) defined by the App. <br>If relation is not defined, write a <a href="https://github.com/personium/template-app-cell/blob/master/relations.json">JSON file with an empty hash</a>.</td>
+</tr>
+<tr class="odd">
+<td style="text-align: left;"></td>
+<td style="text-align: left;">roles.json</td>
+<td style="text-align: left;">Contains display name, description and image of the role(s) defined by the App.<br>If role is not defined, write a <a href="https://github.com/personium/template-app-cell/blob/master/roles.json">JSON file with an empty hash</a>.<br>If role is defined, write necessary information. (<a href="https://github.com/personium/app-myboard/blob/master/roles.json">Sample file</a>)</td>
+</tr>
+<tr class="even">
+<td style="text-align: left;">5</td>
+<td style="text-align: left;"></td>
+<td style="text-align: left;">Multilingual files of the App</td>
+</tr>
+<tr class="odd">
+<td style="text-align: left;"></td>
+<td style="text-align: left;">locales/en/*.json</td>
+<td style="text-align: left;">English version</td>
+</tr>
+<tr class="even">
+<td style="text-align: left;"></td>
+<td style="text-align: left;">locales/ja/*.json</td>
+<td style="text-align: left;">Japanese version. (<a href="https://github.com/personium/template-app-cell/blob/master/locales/ja/profile.json">Sample file</a>)</td>
+</tr>
+<tr class="odd">
+<td style="text-align: left;">6</td>
+<td style="text-align: left;">src/android</td>
+<td style="text-align: left;">Source codes for Android App.</td>
+</tr>
+<tr class="even">
+<td style="text-align: left;">7</td>
+<td style="text-align: left;">src/html</td>
+<td style="text-align: left;">Source codes for mobile browser App. Usually can be deployed on a Web server.</td>
+</tr>
+<tr class="odd">
+<td style="text-align: left;">8</td>
+<td style="text-align: left;">src/ios</td>
+<td style="text-align: left;">Source codes for iOS App.</td>
+</tr>
+</tbody>
+</table>
+<h3>2. Cell Management Clients</h3>
+<p>Cell Management Client is the GUI tool for managing Cell.</p>
+<p>Cell level APIs allow administrative operations to be performed on the Cell.<br />
+For details, see <a href="../user_guide/001_Personium_Concepts.html">here</a>.</p>
+<h4>Functions</h4>
+<p>The Cell management client provides the following functions.</p>
+<ol>
+<li>Data management through Cell management authority (root)<br />
+</li>
+<li>Registration/Modification of Cell control objects such as account and Role, or user profile<br />
+</li>
+<li>Register relationship with other Cell, request registration by message (like typical friends registration)<br />
+</li>
+<li>After relation registration, access data in another Cell that is permitted to access</li>
+<li>Installation of a Box (data structure) attached to an App<br />
+</li>
+<li>Launch an App<br />
+</li>
+<li>Send and receive messages not associated with Box</li>
+</ol>
+<p>The following functions are under planning.</p>
+<ol>
+<li>App usage data privilege management, BOX uninstallation</li>
+<li>Cell data explorer<br />
+</li>
+<li>Implementation of native App<br />
+</li>
+<li>Automated Cell URL input by QR code, NFC etc.<br />
+</li>
+<li>Configuration of user defined event, browsing of trigger log</li>
+</ol>
+<h4>Sample Apps</h4>
+<ol>
+<li><a href="https://github.com/dixonsiu/app-cc-home/">HomeApp Repository</a>
+<ul>
+<li><a href="https://github.com/dixonsiu/app-cc-home/">Overview</a><br />
+</li>
+<li><a href="https://demo.personium.io/democell/io_personium_demo_HomeApplication/src/login.html?lng=en">Demo with tutorial</a><br />
+</li>
+<li><a href="https://demo.personium.io/HomeApplication/__/box-resources/login.html?lng=en&amp;mode=global">Demo</a></li>
+</ul></li>
+</ol>
+<h3>3. Unit Management Clients</h3>
+<p>Unit management clients are Unit level management tools that helps you manage Personium cell(s).</p>
+<ol>
+<li><a href="https://github.com/personium/app-uc-unit-manager">Unit/Cell Manager</a><br />
+<a href="https://youtu.be/d1_pET0M-YA"><img src="https://i.ytimg.com/vi/d1_pET0M-YA/1.jpg?time=1514263611186" alt="Unit/Cell Manager YouTube" /></a><br />
+</li>
+<li><a href="https://github.com/personium/app-uc-cell-creator-wizard">Cell Creator Wizard</a><br />
+<a href="https://youtu.be/M4cYLFYRyEk"><img src="https://i.ytimg.com/vi/M4cYLFYRyEk/1.jpg" alt="Cell Creator Wizard YouTube" /></a><br />
+</li>
+<li><a href="https://github.com/personium/pcui">PCUI</a></li>
+</ol>
+<p>The above management tools require a special token (issued by the corresponding UnitAdmin Cell) which possesses Unit management permission. Therefore, the following information is required during user authentication.</p>
+<ol>
+<li>Personium Unit URL<br />
+</li>
+<li>UnitAdmin Cell name (Specified in the Personium Unit's UnitConfig file)<br />
+</li>
+<li>UnitAdmin account name<br />
+</li>
+<li>UnitAdmin account password</li>
+</ol>
+<h4>How to deploy</h4>
+<p>Similar to HomeApp, Unit/Cell Manager can also be deployed on a normal Web server instead of a Personium Cell.</p>
+<blockquote>
+<p>We are also considering to build our next version of management tool in <a href="https://electronjs.org/">Electron</a>.</p>
+</blockquote>
+<h2>App authentication</h2>
+<p>In the Personium Apps ecosystem, in order to defend against unauthorized phishing Apps against PDS, App authentication must be enabled for the Box defined by the same App.</p>
+<p>App authentication means that the App that accesses the data must be authenticated by the App Cell in addition to the User's Cell authentication, and see here for details.</p>
+<p>When the App developer cannot start the App from the HomeApp properly, in order to access the Box, it is necessary to separately acquire a token after App authentication.</p>
+<blockquote>
+<p>Note:　App authentication is planning to support multiple schemas (implement URL hash).</p>
+</blockquote>
+<p>Source codes based example is available <a href="https://github.com/personium/app-myboard/blob/master/src/html/js/common.js#L360">here</a>.</p>
+</div>
+  <footer><nav>The Personium project is provided under the Apache 2.0 license. </nav></footer>
+</body>
+</html>
+
