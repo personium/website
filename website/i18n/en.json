@@ -1147,6 +1147,1146 @@
       "user_guide/990_Old_Version_API_Ref": {
         "title": "Old Version API References",
         "sidebar_label": "Old Version API References"
+      },
+      "version-1.7.18/apiref/version-1.7.18-000_Rest_API_Reference": {
+        "title": "Personium API Reference",
+        "sidebar_label": "Personium API Reference"
+      },
+      "version-1.7.18/apiref/version-1.7.18-001_Cross_Domain_Policy_File": {
+        "title": "Retrieve Cross-Domain Policy File",
+        "sidebar_label": "Retrieve Cross-Domain Policy File"
+      },
+      "version-1.7.18/apiref/version-1.7.18-002_CORS_Support": {
+        "title": "CORS (Cross Origin Resource Sharing) Support",
+        "sidebar_label": "CORS (Cross Origin Resource Sharing) Support"
+      },
+      "version-1.7.18/apiref/version-1.7.18-003_Common_Limitations_on_HTTP_Implementation": {
+        "title": "Common Limitations on HTTP Implementation of Personium",
+        "sidebar_label": "Common Limitations on HTTP Implementation of Personium"
+      },
+      "version-1.7.18/apiref/version-1.7.18-004_Error_Messages": {
+        "title": "Error Messages",
+        "sidebar_label": "Error Messages"
+      },
+      "version-1.7.18/apiref/version-1.7.18-005_Variable_of_Request_URL": {
+        "title": "Variable list of request URL",
+        "sidebar_label": "Variable list of request URL"
+      },
+      "version-1.7.18/apiref/version-1.7.18-006_Access_Control": {
+        "title": "Access control model",
+        "sidebar_label": "Access control model"
+      },
+      "version-1.7.18/apiref/version-1.7.18-007_Box_install": {
+        "title": "Box installation",
+        "sidebar_label": "Box installation"
+      },
+      "version-1.7.18/apiref/version-1.7.18-100_Create_Cell": {
+        "title": "Create Cell",
+        "sidebar_label": "Create Cell"
+      },
+      "version-1.7.18/apiref/version-1.7.18-101_List_Cell": {
+        "title": "Retrieve List of Cell",
+        "sidebar_label": "Retrieve List of Cell"
+      },
+      "version-1.7.18/apiref/version-1.7.18-102_Retrieve_Cell": {
+        "title": "Retrieve Cell",
+        "sidebar_label": "Retrieve Cell"
+      },
+      "version-1.7.18/apiref/version-1.7.18-103_Update_Cell": {
+        "title": "Update Cell",
+        "sidebar_label": "Update Cell"
+      },
+      "version-1.7.18/apiref/version-1.7.18-104_Delete_Cell": {
+        "title": "Delete Cell",
+        "sidebar_label": "Delete Cell"
+      },
+      "version-1.7.18/apiref/version-1.7.18-105_Cell_Recursive_Delete": {
+        "title": "Cell Recursive Delete",
+        "sidebar_label": "Cell Recursive Delete"
+      },
+      "version-1.7.18/apiref/version-1.7.18-106_UUT_Elevation_Setting": {
+        "title": "ULUUT elevation setting PROPPATCH",
+        "sidebar_label": "ULUUT elevation setting PROPPATCH"
+      },
+      "version-1.7.18/apiref/version-1.7.18-107_Get_Unit_Metadata": {
+        "title": "Get Unit Metadata",
+        "sidebar_label": "Get Unit Metadata"
+      },
+      "version-1.7.18/apiref/version-1.7.18-200_Cell_Root": {
+        "title": "Retrieve Cell Root",
+        "sidebar_label": "Retrieve Cell Root"
+      },
+      "version-1.7.18/apiref/version-1.7.18-201_Create_Role": {
+        "title": "Create Role",
+        "sidebar_label": "Create Role"
+      },
+      "version-1.7.18/apiref/version-1.7.18-202_List_Role": {
+        "title": "Retrieve List of Role",
+        "sidebar_label": "Retrieve List of Role"
+      },
+      "version-1.7.18/apiref/version-1.7.18-203_Retrieve_Role": {
+        "title": "Retrieve Role",
+        "sidebar_label": "Retrieve Role"
+      },
+      "version-1.7.18/apiref/version-1.7.18-204_Update_Role": {
+        "title": "Update Role",
+        "sidebar_label": "Update Role"
+      },
+      "version-1.7.18/apiref/version-1.7.18-205_Delete_Role": {
+        "title": "Delete Role",
+        "sidebar_label": "Delete Role"
+      },
+      "version-1.7.18/apiref/version-1.7.18-206_Link_Role": {
+        "title": "Link other objects with Role",
+        "sidebar_label": "Link other objects with Role"
+      },
+      "version-1.7.18/apiref/version-1.7.18-207_List_Role_links": {
+        "title": "Retrieve links list from Role to other objects",
+        "sidebar_label": "Retrieve links list from Role to other objects"
+      },
+      "version-1.7.18/apiref/version-1.7.18-208_Update_Role_links": {
+        "title": "Role\\_$links update",
+        "sidebar_label": "Role\\_$links update"
+      },
+      "version-1.7.18/apiref/version-1.7.18-209_Unlink_Role": {
+        "title": "Unlink Role with other objects",
+        "sidebar_label": "Unlink Role with other objects"
+      },
+      "version-1.7.18/apiref/version-1.7.18-210_Create_Obj_Via_Role_NP": {
+        "title": "Create other objects via Role's Navigation Property",
+        "sidebar_label": "Create other objects via Role's Navigation Property"
+      },
+      "version-1.7.18/apiref/version-1.7.18-211_List_Obj_Via_Role_NP": {
+        "title": "Retrieve other objects list via Role's Navigation Property",
+        "sidebar_label": "Retrieve other objects list via Role's Navigation Property"
+      },
+      "version-1.7.18/apiref/version-1.7.18-212_Create_Account": {
+        "title": "Create Account",
+        "sidebar_label": "Create Account"
+      },
+      "version-1.7.18/apiref/version-1.7.18-213_Retrieve_Account": {
+        "title": "Retrieve Account",
+        "sidebar_label": "Retrieve Account"
+      },
+      "version-1.7.18/apiref/version-1.7.18-214_List_Account": {
+        "title": "Retrieve List of Account",
+        "sidebar_label": "Retrieve List of Account"
+      },
+      "version-1.7.18/apiref/version-1.7.18-215_Update_Account": {
+        "title": "Update Account",
+        "sidebar_label": "Update Account"
+      },
+      "version-1.7.18/apiref/version-1.7.18-216_Delete_Account": {
+        "title": "Delete Account",
+        "sidebar_label": "Delete Account"
+      },
+      "version-1.7.18/apiref/version-1.7.18-217_Link_Account": {
+        "title": "Link other objects with Account",
+        "sidebar_label": "Link other objects with Account"
+      },
+      "version-1.7.18/apiref/version-1.7.18-218_List_Account_links": {
+        "title": "Retrieve links list from Account to other objects",
+        "sidebar_label": "Retrieve links list from Account to other objects"
+      },
+      "version-1.7.18/apiref/version-1.7.18-219_Update_Account_links": {
+        "title": "Account $links Update",
+        "sidebar_label": "Account $links Update"
+      },
+      "version-1.7.18/apiref/version-1.7.18-220_Unlink_Account": {
+        "title": "Unlink Account with other objects",
+        "sidebar_label": "Unlink Account with other objects"
+      },
+      "version-1.7.18/apiref/version-1.7.18-221_Create_Obj_Via_Account_NP": {
+        "title": "Create other objects via Account's Navigation Property",
+        "sidebar_label": "Create other objects via Account's Navigation Property"
+      },
+      "version-1.7.18/apiref/version-1.7.18-222_List_Obj_Via_Account_NP": {
+        "title": "Retrieve other objects list via Account's Navigation Property",
+        "sidebar_label": "Retrieve other objects list via Account's Navigation Property"
+      },
+      "version-1.7.18/apiref/version-1.7.18-223_Create_External_Cell": {
+        "title": "Create ExtCell",
+        "sidebar_label": "Create ExtCell"
+      },
+      "version-1.7.18/apiref/version-1.7.18-224_List_External_Cell": {
+        "title": "Retrieve List of ExtCell",
+        "sidebar_label": "Retrieve List of ExtCell"
+      },
+      "version-1.7.18/apiref/version-1.7.18-225_Retrieve_External_Cell": {
+        "title": "Retrieve ExtCell",
+        "sidebar_label": "Retrieve ExtCell"
+      },
+      "version-1.7.18/apiref/version-1.7.18-226_Update_External_Cell": {
+        "title": "Update Extcell",
+        "sidebar_label": "Update Extcell"
+      },
+      "version-1.7.18/apiref/version-1.7.18-227_Delete_External_Cell": {
+        "title": "Delete ExtCell",
+        "sidebar_label": "Delete ExtCell"
+      },
+      "version-1.7.18/apiref/version-1.7.18-228_Link_External_Cell": {
+        "title": "Link other objects with Extcel",
+        "sidebar_label": "Link other objects with Extcel"
+      },
+      "version-1.7.18/apiref/version-1.7.18-229_List_External_Cell_links": {
+        "title": "Retrieve links list from ExtCell to other objects",
+        "sidebar_label": "Retrieve links list from ExtCell to other objects"
+      },
+      "version-1.7.18/apiref/version-1.7.18-230_Update_External_Cell_links": {
+        "title": "Extcell $links update",
+        "sidebar_label": "Extcell $links update"
+      },
+      "version-1.7.18/apiref/version-1.7.18-231_Unlink_External_Cell": {
+        "title": "Unlink Extcell with other objects",
+        "sidebar_label": "Unlink Extcell with other objects"
+      },
+      "version-1.7.18/apiref/version-1.7.18-232_Create_Obj_Via_External_Cell_NP": {
+        "title": "Create other objects via ExtCell's Navigation Property",
+        "sidebar_label": "Create other objects via ExtCell's Navigation Property"
+      },
+      "version-1.7.18/apiref/version-1.7.18-233_List_Obj_Via_External_Cell_NP": {
+        "title": "Retrieve other objects list via ExtCell's Navigation Property",
+        "sidebar_label": "Retrieve other objects list via ExtCell's Navigation Property"
+      },
+      "version-1.7.18/apiref/version-1.7.18-234_Create_Relation": {
+        "title": "Create Relation",
+        "sidebar_label": "Create Relation"
+      },
+      "version-1.7.18/apiref/version-1.7.18-235_List_Relation": {
+        "title": "Retrieve List of Relation",
+        "sidebar_label": "Retrieve List of Relation"
+      },
+      "version-1.7.18/apiref/version-1.7.18-236_Retrieve_Relation": {
+        "title": "Retrieve Relation",
+        "sidebar_label": "Retrieve Relation"
+      },
+      "version-1.7.18/apiref/version-1.7.18-237_Update_Relation": {
+        "title": "Update Relation",
+        "sidebar_label": "Update Relation"
+      },
+      "version-1.7.18/apiref/version-1.7.18-238_Delete_Relation": {
+        "title": "Delete Relation",
+        "sidebar_label": "Delete Relation"
+      },
+      "version-1.7.18/apiref/version-1.7.18-239_Link_Relation": {
+        "title": "Link other objects with Relation",
+        "sidebar_label": "Link other objects with Relation"
+      },
+      "version-1.7.18/apiref/version-1.7.18-240_List_Relation_links": {
+        "title": "Retrieve links list from Relation to other objects",
+        "sidebar_label": "Retrieve links list from Relation to other objects"
+      },
+      "version-1.7.18/apiref/version-1.7.18-241_Update_Relation_links": {
+        "title": "Relation\\_$links update",
+        "sidebar_label": "Relation\\_$links update"
+      },
+      "version-1.7.18/apiref/version-1.7.18-242_Unlink_Relation": {
+        "title": "Unlink Relation with other objects",
+        "sidebar_label": "Unlink Relation with other objects"
+      },
+      "version-1.7.18/apiref/version-1.7.18-243_Create_Obj_Via_Relation_NP": {
+        "title": "Create other objects via Relation's Navigation Property",
+        "sidebar_label": "Create other objects via Relation's Navigation Property"
+      },
+      "version-1.7.18/apiref/version-1.7.18-244_List_Obj_Via_Relation_NP": {
+        "title": "Retrieve other objects list via Relation's Navigation Property",
+        "sidebar_label": "Retrieve other objects list via Relation's Navigation Property"
+      },
+      "version-1.7.18/apiref/version-1.7.18-245_Create_External_Role": {
+        "title": "Create ExtRole",
+        "sidebar_label": "Create ExtRole"
+      },
+      "version-1.7.18/apiref/version-1.7.18-246_List_External_Role": {
+        "title": "Retrieve List of ExtRole",
+        "sidebar_label": "Retrieve List of ExtRole"
+      },
+      "version-1.7.18/apiref/version-1.7.18-247_Retrieve_External_Role": {
+        "title": "Retrieve ExtRole",
+        "sidebar_label": "Retrieve ExtRole"
+      },
+      "version-1.7.18/apiref/version-1.7.18-248_Update_External_Role": {
+        "title": "Update ExtRole",
+        "sidebar_label": "Update ExtRole"
+      },
+      "version-1.7.18/apiref/version-1.7.18-249_Delete_External_Role": {
+        "title": "Delete ExtRole",
+        "sidebar_label": "Delete ExtRole"
+      },
+      "version-1.7.18/apiref/version-1.7.18-250_Link_External_Role": {
+        "title": "Link other objects with ExtRole",
+        "sidebar_label": "Link other objects with ExtRole"
+      },
+      "version-1.7.18/apiref/version-1.7.18-251_List_External_Role_links": {
+        "title": "Retrieve links list from ExtRole to other objects",
+        "sidebar_label": "Retrieve links list from ExtRole to other objects"
+      },
+      "version-1.7.18/apiref/version-1.7.18-252_Update_External_Role_links": {
+        "title": "ExtRole\\_$links update",
+        "sidebar_label": "ExtRole\\_$links update"
+      },
+      "version-1.7.18/apiref/version-1.7.18-253_Unlink_External_Role": {
+        "title": "Unlink ExtRole with other objects",
+        "sidebar_label": "Unlink ExtRole with other objects"
+      },
+      "version-1.7.18/apiref/version-1.7.18-254_Create_Obj_Via_External_Role_NP": {
+        "title": "Create other objects via ExtRole's Navigation Property",
+        "sidebar_label": "Create other objects via ExtRole's Navigation Property"
+      },
+      "version-1.7.18/apiref/version-1.7.18-255_List_Obj_Via_External_Role_NP": {
+        "title": "Retrieve other objects list via ExtRole's Navigation Property",
+        "sidebar_label": "Retrieve other objects list via ExtRole's Navigation Property"
+      },
+      "version-1.7.18/apiref/version-1.7.18-256_Create_Box": {
+        "title": "Create Box",
+        "sidebar_label": "Create Box"
+      },
+      "version-1.7.18/apiref/version-1.7.18-257_List_Box": {
+        "title": "Retrieve List of Box",
+        "sidebar_label": "Retrieve List of Box"
+      },
+      "version-1.7.18/apiref/version-1.7.18-258_Retrieve_Box": {
+        "title": "Retrieve Box",
+        "sidebar_label": "Retrieve Box"
+      },
+      "version-1.7.18/apiref/version-1.7.18-259_Update_Box": {
+        "title": "Update Box",
+        "sidebar_label": "Update Box"
+      },
+      "version-1.7.18/apiref/version-1.7.18-260_Delete_Box": {
+        "title": "Delete Box",
+        "sidebar_label": "Delete Box"
+      },
+      "version-1.7.18/apiref/version-1.7.18-261_Link_Box": {
+        "title": "Link other objects with Box",
+        "sidebar_label": "Link other objects with Box"
+      },
+      "version-1.7.18/apiref/version-1.7.18-262_List_Box_links": {
+        "title": "Retrieve links list from Box to other objects",
+        "sidebar_label": "Retrieve links list from Box to other objects"
+      },
+      "version-1.7.18/apiref/version-1.7.18-263_Update_Box_links": {
+        "title": "Box\\_$links update",
+        "sidebar_label": "Box\\_$links update"
+      },
+      "version-1.7.18/apiref/version-1.7.18-264_Unlink_Box": {
+        "title": "Unlink Box with other objects",
+        "sidebar_label": "Unlink Box with other objects"
+      },
+      "version-1.7.18/apiref/version-1.7.18-265_Create_Obj_Via_Box_NP": {
+        "title": "Create other objects via Box's Navigation Property",
+        "sidebar_label": "Create other objects via Box's Navigation Property"
+      },
+      "version-1.7.18/apiref/version-1.7.18-266_List_Obj_Via_Box_NP": {
+        "title": "Retrieve other objects list via Box's Navigation Property",
+        "sidebar_label": "Retrieve other objects list via Box's Navigation Property"
+      },
+      "version-1.7.18/apiref/version-1.7.18-267_Received_Message_Approval": {
+        "title": "Change Message status  (unread, read, approve)",
+        "sidebar_label": "Change Message status  (unread, read, approve)"
+      },
+      "version-1.7.18/apiref/version-1.7.18-268_List_Received_Messages": {
+        "title": "Retrieve List of ReceivedMessage",
+        "sidebar_label": "Retrieve List of ReceivedMessage"
+      },
+      "version-1.7.18/apiref/version-1.7.18-269_Retrieve_Received_Message": {
+        "title": "Retrieve ReceivedMessage",
+        "sidebar_label": "Retrieve ReceivedMessage"
+      },
+      "version-1.7.18/apiref/version-1.7.18-270_Delete_Received_Message": {
+        "title": "Delete ReceivedMessage",
+        "sidebar_label": "Delete ReceivedMessage"
+      },
+      "version-1.7.18/apiref/version-1.7.18-271_Send_Message": {
+        "title": "Send Message",
+        "sidebar_label": "Send Message"
+      },
+      "version-1.7.18/apiref/version-1.7.18-272_Retrieve_Sent_Message": {
+        "title": "Retrieve SentMessage",
+        "sidebar_label": "Retrieve SentMessage"
+      },
+      "version-1.7.18/apiref/version-1.7.18-273_List_Sent_Messages": {
+        "title": "Retrieve List of SentMessage",
+        "sidebar_label": "Retrieve List of SentMessage"
+      },
+      "version-1.7.18/apiref/version-1.7.18-274_Delete_Sent_Message": {
+        "title": "Delete SentMessage",
+        "sidebar_label": "Delete SentMessage"
+      },
+      "version-1.7.18/apiref/version-1.7.18-275_AtomPub_Service_Document": {
+        "title": "AtomPub Service Document",
+        "sidebar_label": "AtomPub Service Document"
+      },
+      "version-1.7.18/apiref/version-1.7.18-276_EDMX": {
+        "title": "EDMX Acquire($metadata)",
+        "sidebar_label": "EDMX Acquire($metadata)"
+      },
+      "version-1.7.18/apiref/version-1.7.18-277_Event_Summary": {
+        "title": "Events Overview",
+        "sidebar_label": "Events Overview"
+      },
+      "version-1.7.18/apiref/version-1.7.18-278_Event_Reception": {
+        "title": "Accept External Event",
+        "sidebar_label": "Accept External Event"
+      },
+      "version-1.7.18/apiref/version-1.7.18-279_Event_Bus_Connect": {
+        "title": "Web Socket Connection to the Event Bus",
+        "sidebar_label": "Web Socket Connection to the Event Bus"
+      },
+      "version-1.7.18/apiref/version-1.7.18-280_Create_Event_Listener": {
+        "title": "Event Listner Registration(Not Implemented Yet)",
+        "sidebar_label": "Event Listner Registration(Not Implemented Yet)"
+      },
+      "version-1.7.18/apiref/version-1.7.18-281_Get_Event_Listener": {
+        "title": "Event Listner Aquire List(Not Implemented Yet)",
+        "sidebar_label": "Event Listner Aquire List(Not Implemented Yet)"
+      },
+      "version-1.7.18/apiref/version-1.7.18-282_Delete_Event_Listener": {
+        "title": "Delete event listener(Not Implemented Yet)",
+        "sidebar_label": "Delete event listener(Not Implemented Yet)"
+      },
+      "version-1.7.18/apiref/version-1.7.18-283_Log_File_Information_Acquisition": {
+        "title": "Retrieve Log File Information",
+        "sidebar_label": "Retrieve Log File Information"
+      },
+      "version-1.7.18/apiref/version-1.7.18-284_Retrieve_Log_File_list": {
+        "title": "Retrieve List of Log File",
+        "sidebar_label": "Retrieve List of Log File"
+      },
+      "version-1.7.18/apiref/version-1.7.18-285_Retrieve_Log_File": {
+        "title": "Retrieve Log File",
+        "sidebar_label": "Retrieve Log File"
+      },
+      "version-1.7.18/apiref/version-1.7.18-286_Delete_Log_File": {
+        "title": "Delete Log File",
+        "sidebar_label": "Delete Log File"
+      },
+      "version-1.7.18/apiref/version-1.7.18-287_Propfind_Log": {
+        "title": "Retrieve log setting(Not Implemented Yet)",
+        "sidebar_label": "Retrieve log setting(Not Implemented Yet)"
+      },
+      "version-1.7.18/apiref/version-1.7.18-288_Proppatch_Log": {
+        "title": "Update log settings(Not Implemented Yet)",
+        "sidebar_label": "Update log settings(Not Implemented Yet)"
+      },
+      "version-1.7.18/apiref/version-1.7.18-289_Cell_ACL": {
+        "title": "Cell Level Access Control Configuration",
+        "sidebar_label": "Cell Level Access Control Configuration"
+      },
+      "version-1.7.18/apiref/version-1.7.18-290_Cell_Get_Property": {
+        "title": "Retrieve Properties",
+        "sidebar_label": "Retrieve Properties"
+      },
+      "version-1.7.18/apiref/version-1.7.18-291_Cell_Change_Property": {
+        "title": "Change Properties",
+        "sidebar_label": "Change Properties"
+      },
+      "version-1.7.18/apiref/version-1.7.18-292_OAuth2_Authorization_Endpoint": {
+        "title": "OAuth 2.0 Authorization Endpoint",
+        "sidebar_label": "OAuth 2.0 Authorization Endpoint"
+      },
+      "version-1.7.18/apiref/version-1.7.18-292p_OAuth2_Authorization_Endpoint": {
+        "title": "POST acceptance at OAuth2.0 Authorization Endpoint",
+        "sidebar_label": "POST acceptance at OAuth2.0 Authorization Endpoint"
+      },
+      "version-1.7.18/apiref/version-1.7.18-293_OAuth2_Token_Endpoint": {
+        "title": "OAuth 2.0 Token Endpoint",
+        "sidebar_label": "OAuth 2.0 Token Endpoint"
+      },
+      "version-1.7.18/apiref/version-1.7.18-294_Password_Change": {
+        "title": "Change Password(\\_\\_mypassword)",
+        "sidebar_label": "Change Password(\\_\\_mypassword)"
+      },
+      "version-1.7.18/apiref/version-1.7.18-295_Box_Recursive_Delete": {
+        "title": "Delete Recursive Box",
+        "sidebar_label": "Delete Recursive Box"
+      },
+      "version-1.7.18/apiref/version-1.7.18-296_Get_Cell_Metadata": {
+        "title": "Retrieve Cell Metadata",
+        "sidebar_label": "Retrieve Cell Metadata"
+      },
+      "version-1.7.18/apiref/version-1.7.18-297_OAtuh2_Token_Introspection_Endpoint": {
+        "title": "OAuth 2.0 Token Introspection Endpoint",
+        "sidebar_label": "OAuth 2.0 Token Introspection Endpoint"
+      },
+      "version-1.7.18/apiref/version-1.7.18-298_Get_Cell_Certs": {
+        "title": "Retrieve Cell Publickkey info",
+        "sidebar_label": "Retrieve Cell Publickkey info"
+      },
+      "version-1.7.18/apiref/version-1.7.18-2A0_Create_Rule": {
+        "title": "Create Rule",
+        "sidebar_label": "Create Rule"
+      },
+      "version-1.7.18/apiref/version-1.7.18-2A1_Retrieve_Rule": {
+        "title": "Retrieve Rule",
+        "sidebar_label": "Retrieve Rule"
+      },
+      "version-1.7.18/apiref/version-1.7.18-2A2_List_Rule": {
+        "title": "Retrieve List of Rule",
+        "sidebar_label": "Retrieve List of Rule"
+      },
+      "version-1.7.18/apiref/version-1.7.18-2A3_Update_Rule": {
+        "title": "Update Rule",
+        "sidebar_label": "Update Rule"
+      },
+      "version-1.7.18/apiref/version-1.7.18-2A4_Delete_Rule": {
+        "title": "Delete Rule",
+        "sidebar_label": "Delete Rule"
+      },
+      "version-1.7.18/apiref/version-1.7.18-2A5_Link_Rule": {
+        "title": "Link other objects with Rule",
+        "sidebar_label": "Link other objects with Rule"
+      },
+      "version-1.7.18/apiref/version-1.7.18-2A6_List_Rule_links": {
+        "title": "Retrieve links list from Rule to other objects",
+        "sidebar_label": "Retrieve links list from Rule to other objects"
+      },
+      "version-1.7.18/apiref/version-1.7.18-2A7_Unlink_Rule": {
+        "title": "Unlink Rule with other objects",
+        "sidebar_label": "Unlink Rule with other objects"
+      },
+      "version-1.7.18/apiref/version-1.7.18-2A8_Create_Obj_Via_Rule_NP": {
+        "title": "Create other objects via Rule's Navigation Property",
+        "sidebar_label": "Create other objects via Rule's Navigation Property"
+      },
+      "version-1.7.18/apiref/version-1.7.18-2A9_List_Obj_Via_Rule_NP": {
+        "title": "Retrieval of other objects list via Rule's Navigation Property",
+        "sidebar_label": "Retrieval of other objects list via Rule's Navigation Property"
+      },
+      "version-1.7.18/apiref/version-1.7.18-2AA_List_Internal_Rule": {
+        "title": "Retrieve List of Internal Rule information",
+        "sidebar_label": "Retrieve List of Internal Rule information"
+      },
+      "version-1.7.18/apiref/version-1.7.18-2AB_Partial_Update_Role": {
+        "title": "Role partial update",
+        "sidebar_label": "Role partial update"
+      },
+      "version-1.7.18/apiref/version-1.7.18-2AC_Partial_Update_Account": {
+        "title": "Account partial update",
+        "sidebar_label": "Account partial update"
+      },
+      "version-1.7.18/apiref/version-1.7.18-2AD_Partial_Update_External_Cell": {
+        "title": "Extcell partial update",
+        "sidebar_label": "Extcell partial update"
+      },
+      "version-1.7.18/apiref/version-1.7.18-2AE_Partial_Update_Relation": {
+        "title": "Relation partial update",
+        "sidebar_label": "Relation partial update"
+      },
+      "version-1.7.18/apiref/version-1.7.18-2AF_Partial_Update_External_Role": {
+        "title": "ExtRole partial update",
+        "sidebar_label": "ExtRole partial update"
+      },
+      "version-1.7.18/apiref/version-1.7.18-2B0_Partial_Update_Box": {
+        "title": "Box partial update",
+        "sidebar_label": "Box partial update"
+      },
+      "version-1.7.18/apiref/version-1.7.18-301_Bar_File": {
+        "title": "bar File",
+        "sidebar_label": "bar File"
+      },
+      "version-1.7.18/apiref/version-1.7.18-302_Box_Installation": {
+        "title": "Install Box",
+        "sidebar_label": "Install Box"
+      },
+      "version-1.7.18/apiref/version-1.7.18-303_Progress_of_Bar_File_Installation": {
+        "title": "Retrieve Box Meta Data",
+        "sidebar_label": "Retrieve Box Meta Data"
+      },
+      "version-1.7.18/apiref/version-1.7.18-304_Get_Box_URL": {
+        "title": "Retrieve BoxURL",
+        "sidebar_label": "Retrieve BoxURL"
+      },
+      "version-1.7.18/apiref/version-1.7.18-305_Get_Property": {
+        "title": "Retrieve of collection settings",
+        "sidebar_label": "Retrieve of collection settings"
+      },
+      "version-1.7.18/apiref/version-1.7.18-306_Create_Collection": {
+        "title": "Create Collection",
+        "sidebar_label": "Create Collection"
+      },
+      "version-1.7.18/apiref/version-1.7.18-307_Get_Property": {
+        "title": "Retrieve file setting",
+        "sidebar_label": "Retrieve file setting"
+      },
+      "version-1.7.18/apiref/version-1.7.18-308_Change_Property": {
+        "title": "Change collection settings",
+        "sidebar_label": "Change collection settings"
+      },
+      "version-1.7.18/apiref/version-1.7.18-309_Update_Move_Collection": {
+        "title": "Move and Rename collection",
+        "sidebar_label": "Move and Rename collection"
+      },
+      "version-1.7.18/apiref/version-1.7.18-310_Delete_Collection": {
+        "title": "Delete collection",
+        "sidebar_label": "Delete collection"
+      },
+      "version-1.7.18/apiref/version-1.7.18-311_Get_WebDav": {
+        "title": "Retrieve file",
+        "sidebar_label": "Retrieve file"
+      },
+      "version-1.7.18/apiref/version-1.7.18-312_Register_and_Update_WebDAV": {
+        "title": "Create/Update file",
+        "sidebar_label": "Create/Update file"
+      },
+      "version-1.7.18/apiref/version-1.7.18-313_Change_Property": {
+        "title": "Change file setting",
+        "sidebar_label": "Change file setting"
+      },
+      "version-1.7.18/apiref/version-1.7.18-314_Delete_WebDAV": {
+        "title": "Delete file",
+        "sidebar_label": "Delete file"
+      },
+      "version-1.7.18/apiref/version-1.7.18-315_Configure_Access_Control": {
+        "title": "Box Level Access Control Configuration",
+        "sidebar_label": "Box Level Access Control Configuration"
+      },
+      "version-1.7.18/apiref/version-1.7.18-316_User_Defined_Data_Schema": {
+        "title": "Retrieve schema ($ metadata)",
+        "sidebar_label": "Retrieve schema ($ metadata)"
+      },
+      "version-1.7.18/apiref/version-1.7.18-317_Document_Acquisition_Service": {
+        "title": "Retrieve service document",
+        "sidebar_label": "Retrieve service document"
+      },
+      "version-1.7.18/apiref/version-1.7.18-318_Create_AssociationEnd": {
+        "title": "Create AssociationEnd",
+        "sidebar_label": "Create AssociationEnd"
+      },
+      "version-1.7.18/apiref/version-1.7.18-319_List_AssociationEnd": {
+        "title": "Retrieve List of AssociationEnd",
+        "sidebar_label": "Retrieve List of AssociationEnd"
+      },
+      "version-1.7.18/apiref/version-1.7.18-320_Retrieve_AssociationEnd": {
+        "title": "Retrieve AssociationEnd",
+        "sidebar_label": "Retrieve AssociationEnd"
+      },
+      "version-1.7.18/apiref/version-1.7.18-321_Update_AssociationEnd": {
+        "title": "Update AssociationEnd",
+        "sidebar_label": "Update AssociationEnd"
+      },
+      "version-1.7.18/apiref/version-1.7.18-322_Delete_AssociationEnd": {
+        "title": "Delete AssociationEnd",
+        "sidebar_label": "Delete AssociationEnd"
+      },
+      "version-1.7.18/apiref/version-1.7.18-323_Link_AssociationEnd": {
+        "title": "Link other objects with AssociationEnd",
+        "sidebar_label": "Link other objects with AssociationEnd"
+      },
+      "version-1.7.18/apiref/version-1.7.18-324_List_AssociationEnd_links": {
+        "title": "Retrieve links list from AssociationEnd to other objects",
+        "sidebar_label": "Retrieve links list from AssociationEnd to other objects"
+      },
+      "version-1.7.18/apiref/version-1.7.18-325_Unlink_AssociationEnd": {
+        "title": "Unlink AssociationEnd with other objects",
+        "sidebar_label": "Unlink AssociationEnd with other objects"
+      },
+      "version-1.7.18/apiref/version-1.7.18-326_List_AssociationEnd_Navigation_Property": {
+        "title": "Retrieval of other objects list via AssociationEnd's Navigation Property",
+        "sidebar_label": "Retrieval of other objects list via AssociationEnd's Navigation Property"
+      },
+      "version-1.7.18/apiref/version-1.7.18-327_Create_ComplexType": {
+        "title": "Create ComplexType",
+        "sidebar_label": "Create ComplexType"
+      },
+      "version-1.7.18/apiref/version-1.7.18-328_List_ComplexType": {
+        "title": "Retrieve List of ComplexType",
+        "sidebar_label": "Retrieve List of ComplexType"
+      },
+      "version-1.7.18/apiref/version-1.7.18-329_Retrieve_ComplexType": {
+        "title": "Retrieve ComplexType",
+        "sidebar_label": "Retrieve ComplexType"
+      },
+      "version-1.7.18/apiref/version-1.7.18-330_Update_ComplexType": {
+        "title": "ComplexType Update",
+        "sidebar_label": "ComplexType Update"
+      },
+      "version-1.7.18/apiref/version-1.7.18-331_Delete_ComplexType": {
+        "title": "Delete ComplexType",
+        "sidebar_label": "Delete ComplexType"
+      },
+      "version-1.7.18/apiref/version-1.7.18-332_Register_ComplexType_links": {
+        "title": "Link other objects with ComplexType",
+        "sidebar_label": "Link other objects with ComplexType"
+      },
+      "version-1.7.18/apiref/version-1.7.18-333_List_ComplexType_links": {
+        "title": "Retrieve links list from ComplexType to other objects",
+        "sidebar_label": "Retrieve links list from ComplexType to other objects"
+      },
+      "version-1.7.18/apiref/version-1.7.18-334_Update_ComplexType_links": {
+        "title": "ComplexType $links updated",
+        "sidebar_label": "ComplexType $links updated"
+      },
+      "version-1.7.18/apiref/version-1.7.18-335_Delete_ComplexType_links": {
+        "title": "Unlink ComplexType with other objects",
+        "sidebar_label": "Unlink ComplexType with other objects"
+      },
+      "version-1.7.18/apiref/version-1.7.18-336_Create_ComplexTypeProperty": {
+        "title": "Create ComplexTypeProperty",
+        "sidebar_label": "Create ComplexTypeProperty"
+      },
+      "version-1.7.18/apiref/version-1.7.18-337_List_ComplexTypeProperty": {
+        "title": "Retrieve List of ComplexTypeProperty",
+        "sidebar_label": "Retrieve List of ComplexTypeProperty"
+      },
+      "version-1.7.18/apiref/version-1.7.18-338_Retrieve_ComplexTypeProperty": {
+        "title": "Retrieve ComplexTypeProperty",
+        "sidebar_label": "Retrieve ComplexTypeProperty"
+      },
+      "version-1.7.18/apiref/version-1.7.18-339_Update_ComplexTypeProperty": {
+        "title": "Update ComplexTypeProperty",
+        "sidebar_label": "Update ComplexTypeProperty"
+      },
+      "version-1.7.18/apiref/version-1.7.18-340_Delete_ComplexTypeProperty": {
+        "title": "Delete ComplexTypeProperty",
+        "sidebar_label": "Delete ComplexTypeProperty"
+      },
+      "version-1.7.18/apiref/version-1.7.18-341_Register_ComplextTypeProperty_links": {
+        "title": "Link other objects with ComplexTypeProperty",
+        "sidebar_label": "Link other objects with ComplexTypeProperty"
+      },
+      "version-1.7.18/apiref/version-1.7.18-342_List_ComplextTypeProperty_links": {
+        "title": "Retrieve links list from ComplexTypeProperty to other objects",
+        "sidebar_label": "Retrieve links list from ComplexTypeProperty to other objects"
+      },
+      "version-1.7.18/apiref/version-1.7.18-343_Update_ComplextTypeProperty_links": {
+        "title": "ComplexTypeProperty $links updated",
+        "sidebar_label": "ComplexTypeProperty $links updated"
+      },
+      "version-1.7.18/apiref/version-1.7.18-344_Delete_ComplextTypeProperty_links": {
+        "title": "Unlink ComplexTypeProperty with other objects",
+        "sidebar_label": "Unlink ComplexTypeProperty with other objects"
+      },
+      "version-1.7.18/apiref/version-1.7.18-345_Create_EntityType": {
+        "title": "Create EntityType",
+        "sidebar_label": "Create EntityType"
+      },
+      "version-1.7.18/apiref/version-1.7.18-346_List_EntityType": {
+        "title": "Retrieve List of EntityType",
+        "sidebar_label": "Retrieve List of EntityType"
+      },
+      "version-1.7.18/apiref/version-1.7.18-347_Retrieve_EntityType": {
+        "title": "Retrieve EntityType",
+        "sidebar_label": "Retrieve EntityType"
+      },
+      "version-1.7.18/apiref/version-1.7.18-348_Update_EntityType": {
+        "title": "Update EntityType",
+        "sidebar_label": "Update EntityType"
+      },
+      "version-1.7.18/apiref/version-1.7.18-349_Delete_EntityType": {
+        "title": "Delete EntityType",
+        "sidebar_label": "Delete EntityType"
+      },
+      "version-1.7.18/apiref/version-1.7.18-350_Register_EntityType_links": {
+        "title": "Link other objects with EntityType",
+        "sidebar_label": "Link other objects with EntityType"
+      },
+      "version-1.7.18/apiref/version-1.7.18-351_List_EntityType_links": {
+        "title": "Retrieve links list from EntityType to other objects",
+        "sidebar_label": "Retrieve links list from EntityType to other objects"
+      },
+      "version-1.7.18/apiref/version-1.7.18-352_Update_EntityType_links": {
+        "title": "EntityType $links updated",
+        "sidebar_label": "EntityType $links updated"
+      },
+      "version-1.7.18/apiref/version-1.7.18-353_Delete_EntityType_links": {
+        "title": "Unlink EntityType with other objects",
+        "sidebar_label": "Unlink EntityType with other objects"
+      },
+      "version-1.7.18/apiref/version-1.7.18-354_List_EntityType_Links_Navigation_Property": {
+        "title": "Property Update",
+        "sidebar_label": "Property Update"
+      },
+      "version-1.7.18/apiref/version-1.7.18-355_Create_Property": {
+        "title": "Create Property",
+        "sidebar_label": "Create Property"
+      },
+      "version-1.7.18/apiref/version-1.7.18-356_List_Property": {
+        "title": "Retrieve List of Property",
+        "sidebar_label": "Retrieve List of Property"
+      },
+      "version-1.7.18/apiref/version-1.7.18-357_Retrieve_Property": {
+        "title": "Retrieve Property",
+        "sidebar_label": "Retrieve Property"
+      },
+      "version-1.7.18/apiref/version-1.7.18-358_Update_Property": {
+        "title": "Property update",
+        "sidebar_label": "Property update"
+      },
+      "version-1.7.18/apiref/version-1.7.18-359_Delete_Property": {
+        "title": "Delete Property",
+        "sidebar_label": "Delete Property"
+      },
+      "version-1.7.18/apiref/version-1.7.18-360_Register_Property_links": {
+        "title": "Link other objects with Property",
+        "sidebar_label": "Link other objects with Property"
+      },
+      "version-1.7.18/apiref/version-1.7.18-361_List_Property_links": {
+        "title": "Retrieve links list from Property to other objects",
+        "sidebar_label": "Retrieve links list from Property to other objects"
+      },
+      "version-1.7.18/apiref/version-1.7.18-362_Update_List_Property_links": {
+        "title": "Property $links updated",
+        "sidebar_label": "Property $links updated"
+      },
+      "version-1.7.18/apiref/version-1.7.18-363_Delete_Property_links": {
+        "title": "Unlink Property with other objects",
+        "sidebar_label": "Unlink Property with other objects"
+      },
+      "version-1.7.18/apiref/version-1.7.18-364_Create_Entity": {
+        "title": "Create Entity",
+        "sidebar_label": "Create Entity"
+      },
+      "version-1.7.18/apiref/version-1.7.18-365_List_Entity": {
+        "title": "Retrieve List of Entities",
+        "sidebar_label": "Retrieve List of Entities"
+      },
+      "version-1.7.18/apiref/version-1.7.18-366_Retrieve_Entity": {
+        "title": "Retrieve Entity",
+        "sidebar_label": "Retrieve Entity"
+      },
+      "version-1.7.18/apiref/version-1.7.18-367_Update_Entity": {
+        "title": "Update Entity",
+        "sidebar_label": "Update Entity"
+      },
+      "version-1.7.18/apiref/version-1.7.18-368_Entity_Bulk_Operations": {
+        "title": "Entity collective operation($batch)",
+        "sidebar_label": "Entity collective operation($batch)"
+      },
+      "version-1.7.18/apiref/version-1.7.18-369_Partial_Update_Entity": {
+        "title": "Entity partial update",
+        "sidebar_label": "Entity partial update"
+      },
+      "version-1.7.18/apiref/version-1.7.18-370_Delete_Entity": {
+        "title": "Delete Entity",
+        "sidebar_label": "Delete Entity"
+      },
+      "version-1.7.18/apiref/version-1.7.18-371_Get_Schema": {
+        "title": "Schema acquisition ($metadata)",
+        "sidebar_label": "Schema acquisition ($metadata)"
+      },
+      "version-1.7.18/apiref/version-1.7.18-372_User_Odata_Service_Document": {
+        "title": "userodata\\_servicedocument",
+        "sidebar_label": "userodata\\_servicedocument"
+      },
+      "version-1.7.18/apiref/version-1.7.18-373_Link_User_Data": {
+        "title": "Link other objects with Entity",
+        "sidebar_label": "Link other objects with Entity"
+      },
+      "version-1.7.18/apiref/version-1.7.18-374_List_User_Data_links": {
+        "title": "Retrieve links list from Entity to other objects",
+        "sidebar_label": "Retrieve links list from Entity to other objects"
+      },
+      "version-1.7.18/apiref/version-1.7.18-375_Update_User_Data_links": {
+        "title": "Entity $links Update",
+        "sidebar_label": "Entity $links Update"
+      },
+      "version-1.7.18/apiref/version-1.7.18-376_Unlink_User_Data": {
+        "title": "Unlink Entity with other objects",
+        "sidebar_label": "Unlink Entity with other objects"
+      },
+      "version-1.7.18/apiref/version-1.7.18-377_Create_Entity_Via_NP": {
+        "title": "Create other objects via Entity's Navigation Property",
+        "sidebar_label": "Create other objects via Entity's Navigation Property"
+      },
+      "version-1.7.18/apiref/version-1.7.18-378_List_Entity_Via_NP": {
+        "title": "Retrieve other objects list via Entity's Navigation Property",
+        "sidebar_label": "Retrieve other objects list via Entity's Navigation Property"
+      },
+      "version-1.7.18/apiref/version-1.7.18-379_Engine_Service_Collection_APIs": {
+        "title": "What is Engine Service Collection",
+        "sidebar_label": "What is Engine Service Collection"
+      },
+      "version-1.7.18/apiref/version-1.7.18-380_Configure_Service_Collection": {
+        "title": "Apply Settings Service Collection Source",
+        "sidebar_label": "Apply Settings Service Collection Source"
+      },
+      "version-1.7.18/apiref/version-1.7.18-381_Create_Service_Collection_Source": {
+        "title": "Create service collection source",
+        "sidebar_label": "Create service collection source"
+      },
+      "version-1.7.18/apiref/version-1.7.18-382_List_Service_Collection_Source": {
+        "title": "Retrieve service collection source",
+        "sidebar_label": "Retrieve service collection source"
+      },
+      "version-1.7.18/apiref/version-1.7.18-383_Delete_Service_Collection_Source": {
+        "title": "Delete Service Collection Source",
+        "sidebar_label": "Delete Service Collection Source"
+      },
+      "version-1.7.18/apiref/version-1.7.18-384_Service_Execution": {
+        "title": "Execute Service",
+        "sidebar_label": "Execute Service"
+      },
+      "version-1.7.18/apiref/version-1.7.18-385_Box_Export": {
+        "title": "Export Box",
+        "sidebar_label": "Export Box"
+      },
+      "version-1.7.18/apiref/version-1.7.18-386_Configure_Stream_Collection": {
+        "title": "Change settings Stream collection source",
+        "sidebar_label": "Change settings Stream collection source"
+      },
+      "version-1.7.18/apiref/version-1.7.18-387_Stream_Collection_Send": {
+        "title": "Send stream collection",
+        "sidebar_label": "Send stream collection"
+      },
+      "version-1.7.18/apiref/version-1.7.18-388_Stream_Collection_Receive": {
+        "title": "Receive stream collection",
+        "sidebar_label": "Receive stream collection"
+      },
+      "version-1.7.18/apiref/version-1.7.18-389_Stream_Collection_Connect": {
+        "title": "Web Socket connection to Stream Collection",
+        "sidebar_label": "Web Socket connection to Stream Collection"
+      },
+      "version-1.7.18/apiref/version-1.7.18-390_Options_Stream_Collection": {
+        "title": "Get operational method of Stream collection",
+        "sidebar_label": "Get operational method of Stream collection"
+      },
+      "version-1.7.18/apiref/version-1.7.18-400_Orderby_Query": {
+        "title": "$orderby Query",
+        "sidebar_label": "$orderby Query"
+      },
+      "version-1.7.18/apiref/version-1.7.18-401_Top_Query": {
+        "title": "$top Query",
+        "sidebar_label": "$top Query"
+      },
+      "version-1.7.18/apiref/version-1.7.18-402_Skip_Query": {
+        "title": "$skip Query",
+        "sidebar_label": "$skip Query"
+      },
+      "version-1.7.18/apiref/version-1.7.18-403_Filter_Query": {
+        "title": "$filter Query",
+        "sidebar_label": "$filter Query"
+      },
+      "version-1.7.18/apiref/version-1.7.18-404_Format_Query": {
+        "title": "$format Query",
+        "sidebar_label": "$format Query"
+      },
+      "version-1.7.18/apiref/version-1.7.18-405_Expand_Query": {
+        "title": "$expand Query",
+        "sidebar_label": "$expand Query"
+      },
+      "version-1.7.18/apiref/version-1.7.18-406_Select_Query": {
+        "title": "$select  Query",
+        "sidebar_label": "$select  Query"
+      },
+      "version-1.7.18/apiref/version-1.7.18-407_Inlinecount_Query": {
+        "title": "$inlinecount  Query",
+        "sidebar_label": "$inlinecount  Query"
+      },
+      "version-1.7.18/apiref/version-1.7.18-408_Full_Text_Search_Query": {
+        "title": "Full-text Search (q) Query",
+        "sidebar_label": "Full-text Search (q) Query"
+      },
+      "version-1.7.18/apiref/version-1.7.18-501_Export_Cell": {
+        "title": "Export Cell",
+        "sidebar_label": "Export Cell"
+      },
+      "version-1.7.18/apiref/version-1.7.18-502_Progress_of_Export_Cell": {
+        "title": "Retrieve cell export status",
+        "sidebar_label": "Retrieve cell export status"
+      },
+      "version-1.7.18/apiref/version-1.7.18-503_Register_and_Update_Snapshot_Cell": {
+        "title": "Create/Update Cell snapshot file",
+        "sidebar_label": "Create/Update Cell snapshot file"
+      },
+      "version-1.7.18/apiref/version-1.7.18-504_Get_Snapshot_Cell": {
+        "title": "Retrieve Cell snapshot file",
+        "sidebar_label": "Retrieve Cell snapshot file"
+      },
+      "version-1.7.18/apiref/version-1.7.18-505_Get_Property_Snapshot_Cell": {
+        "title": "Retrieve Cell snapshot file setting",
+        "sidebar_label": "Retrieve Cell snapshot file setting"
+      },
+      "version-1.7.18/apiref/version-1.7.18-506_Delete_Snapshot_Cell": {
+        "title": "Cell snapshot file delete",
+        "sidebar_label": "Cell snapshot file delete"
+      },
+      "version-1.7.18/apiref/version-1.7.18-507_Import_Cell": {
+        "title": "Import Cell",
+        "sidebar_label": "Import Cell"
+      },
+      "version-1.7.18/apiref/version-1.7.18-508_Progress_of_Import_Cell": {
+        "title": "Retrieve cell import status",
+        "sidebar_label": "Retrieve cell import status"
+      },
+      "version-1.7.18/apiref/error/version-1.7.18-PR401-AU-0008": {
+        "title": "Error Code PR401-AU-0008",
+        "sidebar_label": "Error Code PR401-AU-0008"
+      },
+      "version-1.7.18/apiref/error/version-1.7.18-PR503-SV-0001": {
+        "title": "Error Code PR503-SV-0001",
+        "sidebar_label": "Error Code PR503-SV-0001"
+      },
+      "version-1.7.18/app-developer/version-1.7.18-671_Engine_Script_Samples": {
+        "title": "Engine Script Samples",
+        "sidebar_label": "Engine Script Samples"
+      },
+      "version-1.7.18/app-developer/version-1.7.18-app_authn": {
+        "title": "App authentication",
+        "sidebar_label": "App authentication"
+      },
+      "version-1.7.18/app-developer/version-1.7.18-launch_from_homeapp": {
+        "title": "Launch application from Home application",
+        "sidebar_label": "Launch application from Home application"
+      },
+      "version-1.7.18/app-developer/version-1.7.18-Personium_Apps": {
+        "title": "Personium App",
+        "sidebar_label": "Personium App"
+      },
+      "version-1.7.18/app-developer/version-1.7.18-Personium-Engine": {
+        "title": "Personium Engine",
+        "sidebar_label": "Personium Engine"
+      },
+      "version-1.7.18/app-developer/version-1.7.18-README": {
+        "title": "Application Developer's Guide",
+        "sidebar_label": "Application Developer's Guide"
+      },
+      "version-1.7.18/app-developer/version-1.7.18-Roles": {
+        "title": "Role in Personium",
+        "sidebar_label": "Role in Personium"
+      },
+      "version-1.7.18/app-developer/version-1.7.18-using_odata": {
+        "title": "How to use OData Service Collection (OSC)",
+        "sidebar_label": "How to use OData Service Collection (OSC)"
+      },
+      "version-1.7.18/cell-gui-developer/version-1.7.18-README": {
+        "title": "Cell GUI developer's Guide",
+        "sidebar_label": "Cell GUI developer's Guide"
+      },
+      "version-1.7.18/document-writer/version-1.7.18-README": {
+        "title": "Personium How to participate in document maintenance / improvement",
+        "sidebar_label": "Personium How to participate in document maintenance / improvement"
+      },
+      "version-1.7.18/installation_guide/version-1.7.18-001_Readme_before_installation": {
+        "title": "Readme before installation",
+        "sidebar_label": "Readme before installation"
+      },
+      "version-1.7.18/installation_guide/version-1.7.18-002_Build_from_Source": {
+        "title": "Build from source",
+        "sidebar_label": "Build from source"
+      },
+      "version-1.7.18/installation_guide/version-1.7.18-003_Install_To_LocalMachine": {
+        "title": "Install to local machine",
+        "sidebar_label": "Install to local machine"
+      },
+      "version-1.7.18/overview/version-1.7.18-001_Introduction": {
+        "title": "What is Personium?",
+        "sidebar_label": "What is Personium?"
+      },
+      "version-1.7.18/plugin-developer/version-1.7.18-EngineExtension_Imple_and_Deploy": {
+        "title": "Engine Extension implementation and deployment specification",
+        "sidebar_label": "Engine Extension implementation and deployment specification"
+      },
+      "version-1.7.18/plugin-developer/version-1.7.18-Extension_Send_Mail": {
+        "title": "Extension: Email sending function",
+        "sidebar_label": "Extension: Email sending function"
+      },
+      "version-1.7.18/plugin-developer/version-1.7.18-Personium_AuthenticationPluginDeveloperManual": {
+        "title": "Personium Authentication Plugin Developer Manual",
+        "sidebar_label": "Personium Authentication Plugin Developer Manual"
+      },
+      "version-1.7.18/plugin-developer/version-1.7.18-README": {
+        "title": "Server Plugin Developer's Guide",
+        "sidebar_label": "Server Plugin Developer's Guide"
+      },
+      "version-1.7.18/version-1.7.18-README": {
+        "title": "Documentation for Personium",
+        "sidebar_label": "Documentation for Personium"
+      },
+      "version-1.7.18/server-operator/version-1.7.18-Confirm_environment_settings": {
+        "title": "Environment information on units constructed by Ansible",
+        "sidebar_label": "Environment information on units constructed by Ansible"
+      },
+      "version-1.7.18/server-operator/version-1.7.18-proxy_exclusion_setting": {
+        "title": "Proxy exclusion setting",
+        "sidebar_label": "Proxy exclusion setting"
+      },
+      "version-1.7.18/server-operator/version-1.7.18-README": {
+        "title": "Server Software Operator's Guide",
+        "sidebar_label": "Server Software Operator's Guide"
+      },
+      "version-1.7.18/server-operator/version-1.7.18-setup_authentication_plugins": {
+        "title": "Setup Authentication Plugins",
+        "sidebar_label": "Setup Authentication Plugins"
+      },
+      "version-1.7.18/server-operator/version-1.7.18-setup_engine_extensions": {
+        "title": "Setup Engine Extensions",
+        "sidebar_label": "Setup Engine Extensions"
+      },
+      "version-1.7.18/server-operator/version-1.7.18-setup_virtual_image": {
+        "title": "Getting Started with Personium using Virtual image",
+        "sidebar_label": "Getting Started with Personium using Virtual image"
+      },
+      "version-1.7.18/server-operator/version-1.7.18-setup": {
+        "title": "Getting Started with Personium using Ansible",
+        "sidebar_label": "Getting Started with Personium using Ansible"
+      },
+      "version-1.7.18/server-operator/version-1.7.18-unit_config_list": {
+        "title": "Unit configurations",
+        "sidebar_label": "Unit configurations"
+      },
+      "version-1.7.18/server-operator/version-1.7.18-unit_coordination": {
+        "title": "How to set coordination between units",
+        "sidebar_label": "How to set coordination between units"
+      },
+      "version-1.7.18/server-operator/version-1.7.18-unit_operation_design": {
+        "title": "Operation design and setting of Unit",
+        "sidebar_label": "Operation design and setting of Unit"
+      },
+      "version-1.7.18/server-operator/version-1.7.18-unit_security": {
+        "title": "Security of Unit (setting that recommends change from default)",
+        "sidebar_label": "Security of Unit (setting that recommends change from default)"
+      },
+      "version-1.7.18/software-developer/version-1.7.18-build_development_environment": {
+        "title": "Build development environment",
+        "sidebar_label": "Build development environment"
+      },
+      "version-1.7.18/software-developer/version-1.7.18-personium_tests": {
+        "title": "Personium Tests",
+        "sidebar_label": "Personium Tests"
+      },
+      "version-1.7.18/software-developer/version-1.7.18-README": {
+        "title": "Server Developer's Guide",
+        "sidebar_label": "Server Developer's Guide"
+      },
+      "version-1.7.18/unit-administrator/version-1.7.18-Data_Management": {
+        "title": "Data management",
+        "sidebar_label": "Data management"
+      },
+      "version-1.7.18/unit-administrator/version-1.7.18-README": {
+        "title": "Unit Administrator's Guide",
+        "sidebar_label": "Unit Administrator's Guide"
+      },
+      "version-1.7.18/unit-administrator/version-1.7.18-tutorial": {
+        "title": "Personium Unit management tutorial",
+        "sidebar_label": "Personium Unit management tutorial"
+      },
+      "version-1.7.18/unit-administrator/version-1.7.18-Unit-User": {
+        "title": "Unit User",
+        "sidebar_label": "Unit User"
+      },
+      "version-1.7.18/user_guide/version-1.7.18-001_Personium_Architecture": {
+        "title": "Personium Architecture",
+        "sidebar_label": "Personium Architecture"
+      },
+      "version-1.7.18/user_guide/version-1.7.18-003_Auth": {
+        "title": "Authentication model",
+        "sidebar_label": "Authentication model"
+      },
+      "version-1.7.18/user_guide/version-1.7.18-004_Client_auth": {
+        "title": "Client registration & authentication",
+        "sidebar_label": "Client registration & authentication"
+      },
+      "version-1.7.18/user_guide/version-1.7.18-007_WebDAV_model": {
+        "title": "WebDAV Model",
+        "sidebar_label": "WebDAV Model"
+      },
+      "version-1.7.18/user_guide/version-1.7.18-008_Glossary": {
+        "title": "Glossary",
+        "sidebar_label": "Glossary"
+      },
+      "version-1.7.18/user_guide/version-1.7.18-990_Old_Version_API_Ref": {
+        "title": "Old Version API References",
+        "sidebar_label": "Old Version API References"
       }
     },
     "links": {
