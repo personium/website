@@ -6,1147 +6,2292 @@
     "tagline": "An interconnectable open source PDS (Personal Data Store) server envisioning world wide web of protected data APIs.",
     "docs": {
       "apiref/000_Rest_API_Reference": {
-        "title": "Personium API Reference",
-        "sidebar_label": "Personium API Reference"
+        "title": "Personium",
+        "sidebar_label": "Personium"
       },
       "apiref/001_Cross_Domain_Policy_File": {
-        "title": "Retrieve Cross-Domain Policy File",
-        "sidebar_label": "Retrieve Cross-Domain Policy File"
+        "title": "クロスドメインポリシーファイル",
+        "sidebar_label": "クロスドメインポリシーファイル"
       },
       "apiref/002_CORS_Support": {
-        "title": "CORS (Cross Origin Resource Sharing) Support",
-        "sidebar_label": "CORS (Cross Origin Resource Sharing) Support"
+        "title": "CORS(Cross",
+        "sidebar_label": "CORS(Cross"
       },
       "apiref/003_Common_Limitations_on_HTTP_Implementation": {
-        "title": "Common Limitations on HTTP Implementation of Personium",
-        "sidebar_label": "Common Limitations on HTTP Implementation of Personium"
+        "title": "PersoniumのHTTP実装に関する制限事項",
+        "sidebar_label": "PersoniumのHTTP実装に関する制限事項"
       },
       "apiref/004_Error_Messages": {
-        "title": "Error Messages",
-        "sidebar_label": "Error Messages"
+        "title": "エラーメッセージ一覧",
+        "sidebar_label": "エラーメッセージ一覧"
       },
       "apiref/005_Variable_of_Request_URL": {
-        "title": "Variable list of request URL",
-        "sidebar_label": "Variable list of request URL"
+        "title": "リクエストURLの変数一覧",
+        "sidebar_label": "リクエストURLの変数一覧"
       },
       "apiref/006_Access_Control": {
-        "title": "Access control model",
-        "sidebar_label": "Access control model"
+        "title": "アクセス制御モデル",
+        "sidebar_label": "アクセス制御モデル"
       },
       "apiref/007_Box_install": {
-        "title": "Box installation",
-        "sidebar_label": "Box installation"
+        "title": "Boxインストール",
+        "sidebar_label": "Boxインストール"
       },
       "apiref/100_Create_Cell": {
-        "title": "Create Cell",
-        "sidebar_label": "Create Cell"
+        "title": "Cell作成",
+        "sidebar_label": "Cell作成"
       },
       "apiref/101_List_Cell": {
-        "title": "Retrieve List of Cell",
-        "sidebar_label": "Retrieve List of Cell"
+        "title": "Cell一覧取得",
+        "sidebar_label": "Cell一覧取得"
       },
       "apiref/102_Retrieve_Cell": {
-        "title": "Retrieve Cell",
-        "sidebar_label": "Retrieve Cell"
+        "title": "Cell取得",
+        "sidebar_label": "Cell取得"
       },
       "apiref/103_Update_Cell": {
-        "title": "Update Cell",
-        "sidebar_label": "Update Cell"
+        "title": "Cell更新",
+        "sidebar_label": "Cell更新"
       },
       "apiref/104_Delete_Cell": {
-        "title": "Delete Cell",
-        "sidebar_label": "Delete Cell"
+        "title": "Cell削除",
+        "sidebar_label": "Cell削除"
       },
       "apiref/105_Cell_Recursive_Delete": {
-        "title": "Cell Recursive Delete",
-        "sidebar_label": "Cell Recursive Delete"
+        "title": "Cell再帰削除",
+        "sidebar_label": "Cell再帰削除"
       },
       "apiref/106_UUT_Elevation_Setting": {
-        "title": "ULUUT elevation setting PROPPATCH",
-        "sidebar_label": "ULUUT elevation setting PROPPATCH"
+        "title": "ULUUT昇格設定",
+        "sidebar_label": "ULUUT昇格設定"
       },
       "apiref/107_Get_Unit_Metadata": {
-        "title": "Get Unit Metadata",
-        "sidebar_label": "Get Unit Metadata"
+        "title": "Unitメタデータ取得",
+        "sidebar_label": "Unitメタデータ取得"
       },
       "apiref/200_Cell_Root": {
-        "title": "Retrieve Cell Root",
-        "sidebar_label": "Retrieve Cell Root"
+        "title": "Cellルート取得",
+        "sidebar_label": "Cellルート取得"
       },
       "apiref/201_Create_Role": {
-        "title": "Create Role",
-        "sidebar_label": "Create Role"
+        "title": "Role登録",
+        "sidebar_label": "Role登録"
       },
       "apiref/202_List_Role": {
-        "title": "Retrieve List of Role",
-        "sidebar_label": "Retrieve List of Role"
+        "title": "Role一覧取得",
+        "sidebar_label": "Role一覧取得"
       },
       "apiref/203_Retrieve_Role": {
-        "title": "Retrieve Role",
-        "sidebar_label": "Retrieve Role"
+        "title": "Role取得",
+        "sidebar_label": "Role取得"
       },
       "apiref/204_Update_Role": {
-        "title": "Update Role",
-        "sidebar_label": "Update Role"
+        "title": "Role更新",
+        "sidebar_label": "Role更新"
       },
       "apiref/205_Delete_Role": {
-        "title": "Delete Role",
-        "sidebar_label": "Delete Role"
+        "title": "Role削除",
+        "sidebar_label": "Role削除"
       },
       "apiref/206_Link_Role": {
-        "title": "Link other objects with Role",
-        "sidebar_label": "Link other objects with Role"
+        "title": "Roleと他オブジェクトとのリンク",
+        "sidebar_label": "Roleと他オブジェクトとのリンク"
       },
       "apiref/207_List_Role_links": {
-        "title": "Retrieve links list from Role to other objects",
-        "sidebar_label": "Retrieve links list from Role to other objects"
+        "title": "Roleと他オブジェクトとのリンク一覧取得",
+        "sidebar_label": "Roleと他オブジェクトとのリンク一覧取得"
       },
       "apiref/208_Update_Role_links": {
-        "title": "Role\\_$links update",
-        "sidebar_label": "Role\\_$links update"
+        "title": "Role_$links更新",
+        "sidebar_label": "Role_$links更新"
       },
       "apiref/209_Unlink_Role": {
-        "title": "Unlink Role with other objects",
-        "sidebar_label": "Unlink Role with other objects"
+        "title": "Roleと他オブジェクトとのリンク解除",
+        "sidebar_label": "Roleと他オブジェクトとのリンク解除"
       },
       "apiref/210_Create_Obj_Via_Role_NP": {
-        "title": "Create other objects via Role's Navigation Property",
-        "sidebar_label": "Create other objects via Role's Navigation Property"
+        "title": "RoleのNavigation",
+        "sidebar_label": "RoleのNavigation"
       },
       "apiref/211_List_Obj_Via_Role_NP": {
-        "title": "Retrieve other objects list via Role's Navigation Property",
-        "sidebar_label": "Retrieve other objects list via Role's Navigation Property"
+        "title": "RoleのNavigation",
+        "sidebar_label": "RoleのNavigation"
       },
       "apiref/212_Create_Account": {
-        "title": "Create Account",
-        "sidebar_label": "Create Account"
+        "title": "Account登録",
+        "sidebar_label": "Account登録"
       },
       "apiref/213_Retrieve_Account": {
-        "title": "Retrieve Account",
-        "sidebar_label": "Retrieve Account"
+        "title": "Account取得",
+        "sidebar_label": "Account取得"
       },
       "apiref/214_List_Account": {
-        "title": "Retrieve List of Account",
-        "sidebar_label": "Retrieve List of Account"
+        "title": "Account一覧取得",
+        "sidebar_label": "Account一覧取得"
       },
       "apiref/215_Update_Account": {
-        "title": "Update Account",
-        "sidebar_label": "Update Account"
+        "title": "Account更新",
+        "sidebar_label": "Account更新"
       },
       "apiref/216_Delete_Account": {
-        "title": "Delete Account",
-        "sidebar_label": "Delete Account"
+        "title": "Account削除",
+        "sidebar_label": "Account削除"
       },
       "apiref/217_Link_Account": {
-        "title": "Link other objects with Account",
-        "sidebar_label": "Link other objects with Account"
+        "title": "Accountと他オブジェクトとのリンク",
+        "sidebar_label": "Accountと他オブジェクトとのリンク"
       },
       "apiref/218_List_Account_links": {
-        "title": "Retrieve links list from Account to other objects",
-        "sidebar_label": "Retrieve links list from Account to other objects"
+        "title": "Accountと他オブジェクトとのリンク一覧取得",
+        "sidebar_label": "Accountと他オブジェクトとのリンク一覧取得"
       },
       "apiref/219_Update_Account_links": {
-        "title": "Account $links Update",
-        "sidebar_label": "Account $links Update"
+        "title": "Account_$links更新",
+        "sidebar_label": "Account_$links更新"
       },
       "apiref/220_Unlink_Account": {
-        "title": "Unlink Account with other objects",
-        "sidebar_label": "Unlink Account with other objects"
+        "title": "Accountと他オブジェクトとのリンク解除",
+        "sidebar_label": "Accountと他オブジェクトとのリンク解除"
       },
       "apiref/221_Create_Obj_Via_Account_NP": {
-        "title": "Create other objects via Account's Navigation Property",
-        "sidebar_label": "Create other objects via Account's Navigation Property"
+        "title": "AccountのNavigation",
+        "sidebar_label": "AccountのNavigation"
       },
       "apiref/222_List_Obj_Via_Account_NP": {
-        "title": "Retrieve other objects list via Account's Navigation Property",
-        "sidebar_label": "Retrieve other objects list via Account's Navigation Property"
+        "title": "AccountのNavigation",
+        "sidebar_label": "AccountのNavigation"
       },
       "apiref/223_Create_External_Cell": {
-        "title": "Create ExtCell",
-        "sidebar_label": "Create ExtCell"
+        "title": "ExtCell登録",
+        "sidebar_label": "ExtCell登録"
       },
       "apiref/224_List_External_Cell": {
-        "title": "Retrieve List of ExtCell",
-        "sidebar_label": "Retrieve List of ExtCell"
+        "title": "ExtCell一覧取得",
+        "sidebar_label": "ExtCell一覧取得"
       },
       "apiref/225_Retrieve_External_Cell": {
-        "title": "Retrieve ExtCell",
-        "sidebar_label": "Retrieve ExtCell"
+        "title": "ExtCell取得",
+        "sidebar_label": "ExtCell取得"
       },
       "apiref/226_Update_External_Cell": {
-        "title": "Update Extcell",
-        "sidebar_label": "Update Extcell"
+        "title": "ExtCell更新",
+        "sidebar_label": "ExtCell更新"
       },
       "apiref/227_Delete_External_Cell": {
-        "title": "Delete ExtCell",
-        "sidebar_label": "Delete ExtCell"
+        "title": "ExtCell削除",
+        "sidebar_label": "ExtCell削除"
       },
       "apiref/228_Link_External_Cell": {
-        "title": "Link other objects with Extcel",
-        "sidebar_label": "Link other objects with Extcel"
+        "title": "Extcellと他オブジェクトとのリンク",
+        "sidebar_label": "Extcellと他オブジェクトとのリンク"
       },
       "apiref/229_List_External_Cell_links": {
-        "title": "Retrieve links list from ExtCell to other objects",
-        "sidebar_label": "Retrieve links list from ExtCell to other objects"
+        "title": "ExtCellと他オブジェクトとのリンク一覧取得",
+        "sidebar_label": "ExtCellと他オブジェクトとのリンク一覧取得"
       },
       "apiref/230_Update_External_Cell_links": {
-        "title": "Extcell $links update",
-        "sidebar_label": "Extcell $links update"
+        "title": "Extcell_$links更新",
+        "sidebar_label": "Extcell_$links更新"
       },
       "apiref/231_Unlink_External_Cell": {
-        "title": "Unlink Extcell with other objects",
-        "sidebar_label": "Unlink Extcell with other objects"
+        "title": "Extcellと他オブジェクトとのリンク解除",
+        "sidebar_label": "Extcellと他オブジェクトとのリンク解除"
       },
       "apiref/232_Create_Obj_Via_External_Cell_NP": {
-        "title": "Create other objects via ExtCell's Navigation Property",
-        "sidebar_label": "Create other objects via ExtCell's Navigation Property"
+        "title": "ExtCellのNavigation",
+        "sidebar_label": "ExtCellのNavigation"
       },
       "apiref/233_List_Obj_Via_External_Cell_NP": {
-        "title": "Retrieve other objects list via ExtCell's Navigation Property",
-        "sidebar_label": "Retrieve other objects list via ExtCell's Navigation Property"
+        "title": "ExtCellのNavigation",
+        "sidebar_label": "ExtCellのNavigation"
       },
       "apiref/234_Create_Relation": {
-        "title": "Create Relation",
-        "sidebar_label": "Create Relation"
+        "title": "Relation登録",
+        "sidebar_label": "Relation登録"
       },
       "apiref/235_List_Relation": {
-        "title": "Retrieve List of Relation",
-        "sidebar_label": "Retrieve List of Relation"
+        "title": "Relation一覧取得",
+        "sidebar_label": "Relation一覧取得"
       },
       "apiref/236_Retrieve_Relation": {
-        "title": "Retrieve Relation",
-        "sidebar_label": "Retrieve Relation"
+        "title": "Relation取得",
+        "sidebar_label": "Relation取得"
       },
       "apiref/237_Update_Relation": {
-        "title": "Update Relation",
-        "sidebar_label": "Update Relation"
+        "title": "Relation更新",
+        "sidebar_label": "Relation更新"
       },
       "apiref/238_Delete_Relation": {
-        "title": "Delete Relation",
-        "sidebar_label": "Delete Relation"
+        "title": "Relation削除",
+        "sidebar_label": "Relation削除"
       },
       "apiref/239_Link_Relation": {
-        "title": "Link other objects with Relation",
-        "sidebar_label": "Link other objects with Relation"
+        "title": "Relationと他オブジェクトとのリンク",
+        "sidebar_label": "Relationと他オブジェクトとのリンク"
       },
       "apiref/240_List_Relation_links": {
-        "title": "Retrieve links list from Relation to other objects",
-        "sidebar_label": "Retrieve links list from Relation to other objects"
+        "title": "Relationと他オブジェクトとのリンク一覧取得",
+        "sidebar_label": "Relationと他オブジェクトとのリンク一覧取得"
       },
       "apiref/241_Update_Relation_links": {
-        "title": "Relation\\_$links update",
-        "sidebar_label": "Relation\\_$links update"
+        "title": "Relation_$links更新",
+        "sidebar_label": "Relation_$links更新"
       },
       "apiref/242_Unlink_Relation": {
-        "title": "Unlink Relation with other objects",
-        "sidebar_label": "Unlink Relation with other objects"
+        "title": "Relationと他オブジェクトとのリンク解除",
+        "sidebar_label": "Relationと他オブジェクトとのリンク解除"
       },
       "apiref/243_Create_Obj_Via_Relation_NP": {
-        "title": "Create other objects via Relation's Navigation Property",
-        "sidebar_label": "Create other objects via Relation's Navigation Property"
+        "title": "RelationのNavigation",
+        "sidebar_label": "RelationのNavigation"
       },
       "apiref/244_List_Obj_Via_Relation_NP": {
-        "title": "Retrieve other objects list via Relation's Navigation Property",
-        "sidebar_label": "Retrieve other objects list via Relation's Navigation Property"
+        "title": "RelationのNavigation",
+        "sidebar_label": "RelationのNavigation"
       },
       "apiref/245_Create_External_Role": {
-        "title": "Create ExtRole",
-        "sidebar_label": "Create ExtRole"
+        "title": "ExtRole登録",
+        "sidebar_label": "ExtRole登録"
       },
       "apiref/246_List_External_Role": {
-        "title": "Retrieve List of ExtRole",
-        "sidebar_label": "Retrieve List of ExtRole"
+        "title": "ExtRole一覧取得",
+        "sidebar_label": "ExtRole一覧取得"
       },
       "apiref/247_Retrieve_External_Role": {
-        "title": "Retrieve ExtRole",
-        "sidebar_label": "Retrieve ExtRole"
+        "title": "ExtRole取得",
+        "sidebar_label": "ExtRole取得"
       },
       "apiref/248_Update_External_Role": {
-        "title": "Update ExtRole",
-        "sidebar_label": "Update ExtRole"
+        "title": "ExtRole更新",
+        "sidebar_label": "ExtRole更新"
       },
       "apiref/249_Delete_External_Role": {
-        "title": "Delete ExtRole",
-        "sidebar_label": "Delete ExtRole"
+        "title": "ExtRole削除",
+        "sidebar_label": "ExtRole削除"
       },
       "apiref/250_Link_External_Role": {
-        "title": "Link other objects with ExtRole",
-        "sidebar_label": "Link other objects with ExtRole"
+        "title": "ExtRoleと他オブジェクトとのリンク",
+        "sidebar_label": "ExtRoleと他オブジェクトとのリンク"
       },
       "apiref/251_List_External_Role_links": {
-        "title": "Retrieve links list from ExtRole to other objects",
-        "sidebar_label": "Retrieve links list from ExtRole to other objects"
+        "title": "ExtRoleと他オブジェクトとのリンク一覧取得",
+        "sidebar_label": "ExtRoleと他オブジェクトとのリンク一覧取得"
       },
       "apiref/252_Update_External_Role_links": {
-        "title": "ExtRole\\_$links update",
-        "sidebar_label": "ExtRole\\_$links update"
+        "title": "ExtRole_$links更新",
+        "sidebar_label": "ExtRole_$links更新"
       },
       "apiref/253_Unlink_External_Role": {
-        "title": "Unlink ExtRole with other objects",
-        "sidebar_label": "Unlink ExtRole with other objects"
+        "title": "ExtRoleと他オブジェクトとのリンク解除",
+        "sidebar_label": "ExtRoleと他オブジェクトとのリンク解除"
       },
       "apiref/254_Create_Obj_Via_External_Role_NP": {
-        "title": "Create other objects via ExtRole's Navigation Property",
-        "sidebar_label": "Create other objects via ExtRole's Navigation Property"
+        "title": "ExtRoleのNavigation",
+        "sidebar_label": "ExtRoleのNavigation"
       },
       "apiref/255_List_Obj_Via_External_Role_NP": {
-        "title": "Retrieve other objects list via ExtRole's Navigation Property",
-        "sidebar_label": "Retrieve other objects list via ExtRole's Navigation Property"
+        "title": "ExtRoleのNavigation",
+        "sidebar_label": "ExtRoleのNavigation"
       },
       "apiref/256_Create_Box": {
-        "title": "Create Box",
-        "sidebar_label": "Create Box"
+        "title": "Box作成",
+        "sidebar_label": "Box作成"
       },
       "apiref/257_List_Box": {
-        "title": "Retrieve List of Box",
-        "sidebar_label": "Retrieve List of Box"
+        "title": "Box一覧取得",
+        "sidebar_label": "Box一覧取得"
       },
       "apiref/258_Retrieve_Box": {
-        "title": "Retrieve Box",
-        "sidebar_label": "Retrieve Box"
+        "title": "Box取得",
+        "sidebar_label": "Box取得"
       },
       "apiref/259_Update_Box": {
-        "title": "Update Box",
-        "sidebar_label": "Update Box"
+        "title": "Box更新",
+        "sidebar_label": "Box更新"
       },
       "apiref/260_Delete_Box": {
-        "title": "Delete Box",
-        "sidebar_label": "Delete Box"
+        "title": "Box削除",
+        "sidebar_label": "Box削除"
       },
       "apiref/261_Link_Box": {
-        "title": "Link other objects with Box",
-        "sidebar_label": "Link other objects with Box"
+        "title": "Boxと他オブジェクトとのリンク",
+        "sidebar_label": "Boxと他オブジェクトとのリンク"
       },
       "apiref/262_List_Box_links": {
-        "title": "Retrieve links list from Box to other objects",
-        "sidebar_label": "Retrieve links list from Box to other objects"
+        "title": "Boxと他オブジェクトとのリンク一覧取得",
+        "sidebar_label": "Boxと他オブジェクトとのリンク一覧取得"
       },
       "apiref/263_Update_Box_links": {
-        "title": "Box\\_$links update",
-        "sidebar_label": "Box\\_$links update"
+        "title": "Box_$links更新",
+        "sidebar_label": "Box_$links更新"
       },
       "apiref/264_Unlink_Box": {
-        "title": "Unlink Box with other objects",
-        "sidebar_label": "Unlink Box with other objects"
+        "title": "Boxと他オブジェクトとのリンク解除",
+        "sidebar_label": "Boxと他オブジェクトとのリンク解除"
       },
       "apiref/265_Create_Obj_Via_Box_NP": {
-        "title": "Create other objects via Box's Navigation Property",
-        "sidebar_label": "Create other objects via Box's Navigation Property"
+        "title": "BoxのNavigation",
+        "sidebar_label": "BoxのNavigation"
       },
       "apiref/266_List_Obj_Via_Box_NP": {
-        "title": "Retrieve other objects list via Box's Navigation Property",
-        "sidebar_label": "Retrieve other objects list via Box's Navigation Property"
+        "title": "BoxのNavigation",
+        "sidebar_label": "BoxのNavigation"
       },
       "apiref/267_Received_Message_Approval": {
-        "title": "Change Message status  (unread, read, approve)",
-        "sidebar_label": "Change Message status  (unread, read, approve)"
+        "title": "メッセージ状態変更(未読,既読,承認)",
+        "sidebar_label": "メッセージ状態変更(未読,既読,承認)"
       },
       "apiref/268_List_Received_Messages": {
-        "title": "Retrieve List of ReceivedMessage",
-        "sidebar_label": "Retrieve List of ReceivedMessage"
+        "title": "ReceivedMessage一覧取得",
+        "sidebar_label": "ReceivedMessage一覧取得"
       },
       "apiref/269_Retrieve_Received_Message": {
-        "title": "Retrieve ReceivedMessage",
-        "sidebar_label": "Retrieve ReceivedMessage"
+        "title": "ReceivedMessage取得",
+        "sidebar_label": "ReceivedMessage取得"
       },
       "apiref/270_Delete_Received_Message": {
-        "title": "Delete ReceivedMessage",
-        "sidebar_label": "Delete ReceivedMessage"
+        "title": "ReceivedMessage削除",
+        "sidebar_label": "ReceivedMessage削除"
       },
       "apiref/271_Send_Message": {
-        "title": "Send Message",
-        "sidebar_label": "Send Message"
+        "title": "メッセージ送信",
+        "sidebar_label": "メッセージ送信"
       },
       "apiref/272_Retrieve_Sent_Message": {
-        "title": "Retrieve SentMessage",
-        "sidebar_label": "Retrieve SentMessage"
+        "title": "SentMessage取得",
+        "sidebar_label": "SentMessage取得"
       },
       "apiref/273_List_Sent_Messages": {
-        "title": "Retrieve List of SentMessage",
-        "sidebar_label": "Retrieve List of SentMessage"
+        "title": "SentMessage一覧取得",
+        "sidebar_label": "SentMessage一覧取得"
       },
       "apiref/274_Delete_Sent_Message": {
-        "title": "Delete SentMessage",
-        "sidebar_label": "Delete SentMessage"
+        "title": "SentMessage削除",
+        "sidebar_label": "SentMessage削除"
       },
       "apiref/275_AtomPub_Service_Document": {
-        "title": "AtomPub Service Document",
-        "sidebar_label": "AtomPub Service Document"
+        "title": "AtomPub",
+        "sidebar_label": "AtomPub"
       },
       "apiref/276_EDMX": {
-        "title": "EDMX Acquire($metadata)",
-        "sidebar_label": "EDMX Acquire($metadata)"
+        "title": "EDMX取得($metadata)",
+        "sidebar_label": "EDMX取得($metadata)"
       },
       "apiref/277_Event_Summary": {
-        "title": "Events Overview",
-        "sidebar_label": "Events Overview"
+        "title": "イベントの概要",
+        "sidebar_label": "イベントの概要"
       },
       "apiref/278_Event_Reception": {
-        "title": "Accept External Event",
-        "sidebar_label": "Accept External Event"
+        "title": "外部イベント受付",
+        "sidebar_label": "外部イベント受付"
       },
       "apiref/279_Event_Bus_Connect": {
-        "title": "Web Socket Connection to the Event Bus",
-        "sidebar_label": "Web Socket Connection to the Event Bus"
+        "title": "イベントバスへの",
+        "sidebar_label": "イベントバスへの"
       },
       "apiref/280_Create_Event_Listener": {
-        "title": "Event Listner Registration(Not Implemented Yet)",
-        "sidebar_label": "Event Listner Registration(Not Implemented Yet)"
+        "title": "イベントリスナ登録(Not",
+        "sidebar_label": "イベントリスナ登録(Not"
       },
       "apiref/281_Get_Event_Listener": {
-        "title": "Event Listner Aquire List(Not Implemented Yet)",
-        "sidebar_label": "Event Listner Aquire List(Not Implemented Yet)"
+        "title": "イベントリスナ一覧取得(Not",
+        "sidebar_label": "イベントリスナ一覧取得(Not"
       },
       "apiref/282_Delete_Event_Listener": {
-        "title": "Delete event listener(Not Implemented Yet)",
-        "sidebar_label": "Delete event listener(Not Implemented Yet)"
+        "title": "イベントリスナ削除(Not",
+        "sidebar_label": "イベントリスナ削除(Not"
       },
       "apiref/283_Log_File_Information_Acquisition": {
-        "title": "Retrieve Log File Information",
-        "sidebar_label": "Retrieve Log File Information"
+        "title": "ログファイル情報取得",
+        "sidebar_label": "ログファイル情報取得"
       },
       "apiref/284_Retrieve_Log_File_list": {
-        "title": "Retrieve List of Log File",
-        "sidebar_label": "Retrieve List of Log File"
+        "title": "ログファイル一覧取得",
+        "sidebar_label": "ログファイル一覧取得"
       },
       "apiref/285_Retrieve_Log_File": {
-        "title": "Retrieve Log File",
-        "sidebar_label": "Retrieve Log File"
+        "title": "ログファイル取得",
+        "sidebar_label": "ログファイル取得"
       },
       "apiref/286_Delete_Log_File": {
-        "title": "Delete Log File",
-        "sidebar_label": "Delete Log File"
+        "title": "ログファイル削除",
+        "sidebar_label": "ログファイル削除"
       },
       "apiref/287_Propfind_Log": {
-        "title": "Retrieve log setting(Not Implemented Yet)",
-        "sidebar_label": "Retrieve log setting(Not Implemented Yet)"
+        "title": "ログ設定取得(Not",
+        "sidebar_label": "ログ設定取得(Not"
       },
       "apiref/288_Proppatch_Log": {
-        "title": "Update log settings(Not Implemented Yet)",
-        "sidebar_label": "Update log settings(Not Implemented Yet)"
+        "title": "ログ設定更新(Not",
+        "sidebar_label": "ログ設定更新(Not"
       },
       "apiref/289_Cell_ACL": {
-        "title": "Cell Level Access Control Configuration",
-        "sidebar_label": "Cell Level Access Control Configuration"
+        "title": "Cell",
+        "sidebar_label": "Cell"
       },
       "apiref/290_Cell_Get_Property": {
-        "title": "Retrieve Properties",
-        "sidebar_label": "Retrieve Properties"
+        "title": "プロパティ取得",
+        "sidebar_label": "プロパティ取得"
       },
       "apiref/291_Cell_Change_Property": {
-        "title": "Change Properties",
-        "sidebar_label": "Change Properties"
+        "title": "プロパティ変更",
+        "sidebar_label": "プロパティ変更"
       },
       "apiref/292_OAuth2_Authorization_Endpoint": {
-        "title": "OAuth 2.0 Authorization Endpoint",
-        "sidebar_label": "OAuth 2.0 Authorization Endpoint"
+        "title": "OAuth",
+        "sidebar_label": "OAuth"
       },
       "apiref/292p_OAuth2_Authorization_Endpoint": {
-        "title": "POST acceptance at OAuth2.0 Authorization Endpoint",
-        "sidebar_label": "POST acceptance at OAuth2.0 Authorization Endpoint"
+        "title": "OAuth2.0",
+        "sidebar_label": "OAuth2.0"
       },
       "apiref/293_OAuth2_Token_Endpoint": {
-        "title": "OAuth 2.0 Token Endpoint",
-        "sidebar_label": "OAuth 2.0 Token Endpoint"
+        "title": "OAuth",
+        "sidebar_label": "OAuth"
       },
       "apiref/294_Password_Change": {
-        "title": "Change Password(\\_\\_mypassword)",
-        "sidebar_label": "Change Password(\\_\\_mypassword)"
+        "title": "パスワード変更(\\__mypassword)",
+        "sidebar_label": "パスワード変更(\\__mypassword)"
       },
       "apiref/295_Box_Recursive_Delete": {
-        "title": "Delete Recursive Box",
-        "sidebar_label": "Delete Recursive Box"
+        "title": "Box再帰削除",
+        "sidebar_label": "Box再帰削除"
       },
       "apiref/296_Get_Cell_Metadata": {
-        "title": "Retrieve Cell Metadata",
-        "sidebar_label": "Retrieve Cell Metadata"
+        "title": "Cellメタデータ取得",
+        "sidebar_label": "Cellメタデータ取得"
       },
       "apiref/297_OAtuh2_Token_Introspection_Endpoint": {
-        "title": "OAuth 2.0 Token Introspection Endpoint",
-        "sidebar_label": "OAuth 2.0 Token Introspection Endpoint"
+        "title": "OAuth",
+        "sidebar_label": "OAuth"
       },
       "apiref/298_Get_Cell_Certs": {
-        "title": "Retrieve Cell Publickkey info",
-        "sidebar_label": "Retrieve Cell Publickkey info"
+        "title": "Cell公開鍵取得",
+        "sidebar_label": "Cell公開鍵取得"
       },
       "apiref/2A0_Create_Rule": {
-        "title": "Create Rule",
-        "sidebar_label": "Create Rule"
+        "title": "Rule作成",
+        "sidebar_label": "Rule作成"
       },
       "apiref/2A1_Retrieve_Rule": {
-        "title": "Retrieve Rule",
-        "sidebar_label": "Retrieve Rule"
+        "title": "Rule取得",
+        "sidebar_label": "Rule取得"
       },
       "apiref/2A2_List_Rule": {
-        "title": "Retrieve List of Rule",
-        "sidebar_label": "Retrieve List of Rule"
+        "title": "Rule一覧取得",
+        "sidebar_label": "Rule一覧取得"
       },
       "apiref/2A3_Update_Rule": {
-        "title": "Update Rule",
-        "sidebar_label": "Update Rule"
+        "title": "Rule更新",
+        "sidebar_label": "Rule更新"
       },
       "apiref/2A4_Delete_Rule": {
-        "title": "Delete Rule",
-        "sidebar_label": "Delete Rule"
+        "title": "Rule削除",
+        "sidebar_label": "Rule削除"
       },
       "apiref/2A5_Link_Rule": {
-        "title": "Link other objects with Rule",
-        "sidebar_label": "Link other objects with Rule"
+        "title": "Ruleと他オブジェクト（Box）とのリンク",
+        "sidebar_label": "Ruleと他オブジェクト（Box）とのリンク"
       },
       "apiref/2A6_List_Rule_links": {
-        "title": "Retrieve links list from Rule to other objects",
-        "sidebar_label": "Retrieve links list from Rule to other objects"
+        "title": "Ruleと他オブジェクトとのリンク一覧取得",
+        "sidebar_label": "Ruleと他オブジェクトとのリンク一覧取得"
       },
       "apiref/2A7_Unlink_Rule": {
-        "title": "Unlink Rule with other objects",
-        "sidebar_label": "Unlink Rule with other objects"
+        "title": "Ruleから紐づいたBoxとのリンクを解除",
+        "sidebar_label": "Ruleから紐づいたBoxとのリンクを解除"
       },
       "apiref/2A8_Create_Obj_Via_Rule_NP": {
-        "title": "Create other objects via Rule's Navigation Property",
-        "sidebar_label": "Create other objects via Rule's Navigation Property"
+        "title": "RuleのNavigation",
+        "sidebar_label": "RuleのNavigation"
       },
       "apiref/2A9_List_Obj_Via_Rule_NP": {
-        "title": "Retrieval of other objects list via Rule's Navigation Property",
-        "sidebar_label": "Retrieval of other objects list via Rule's Navigation Property"
+        "title": "RuleのNavigation",
+        "sidebar_label": "RuleのNavigation"
       },
       "apiref/2AA_List_Internal_Rule": {
-        "title": "Retrieve List of Internal Rule information",
-        "sidebar_label": "Retrieve List of Internal Rule information"
+        "title": "Rule内部情報一覧取得",
+        "sidebar_label": "Rule内部情報一覧取得"
       },
       "apiref/2AB_Partial_Update_Role": {
-        "title": "Role partial update",
-        "sidebar_label": "Role partial update"
+        "title": "Role部分更新",
+        "sidebar_label": "Role部分更新"
       },
       "apiref/2AC_Partial_Update_Account": {
-        "title": "Account partial update",
-        "sidebar_label": "Account partial update"
+        "title": "Account部分更新",
+        "sidebar_label": "Account部分更新"
       },
       "apiref/2AD_Partial_Update_External_Cell": {
-        "title": "Extcell partial update",
-        "sidebar_label": "Extcell partial update"
+        "title": "ExtCell部分更新",
+        "sidebar_label": "ExtCell部分更新"
       },
       "apiref/2AE_Partial_Update_Relation": {
-        "title": "Relation partial update",
-        "sidebar_label": "Relation partial update"
+        "title": "Relation部分更新",
+        "sidebar_label": "Relation部分更新"
       },
       "apiref/2AF_Partial_Update_External_Role": {
-        "title": "ExtRole partial update",
-        "sidebar_label": "ExtRole partial update"
+        "title": "ExtRole部分更新",
+        "sidebar_label": "ExtRole部分更新"
       },
       "apiref/2B0_Partial_Update_Box": {
-        "title": "Box partial update",
-        "sidebar_label": "Box partial update"
+        "title": "Box部分更新",
+        "sidebar_label": "Box部分更新"
       },
       "apiref/301_Bar_File": {
-        "title": "bar File",
-        "sidebar_label": "bar File"
+        "title": "barファイル",
+        "sidebar_label": "barファイル"
       },
       "apiref/302_Box_Installation": {
-        "title": "Install Box",
-        "sidebar_label": "Install Box"
+        "title": "Boxインストール",
+        "sidebar_label": "Boxインストール"
       },
       "apiref/303_Progress_of_Bar_File_Installation": {
-        "title": "Retrieve Box Meta Data",
-        "sidebar_label": "Retrieve Box Meta Data"
+        "title": "Boxメタデータ取得",
+        "sidebar_label": "Boxメタデータ取得"
       },
       "apiref/304_Get_Box_URL": {
-        "title": "Retrieve BoxURL",
-        "sidebar_label": "Retrieve BoxURL"
+        "title": "BoxURL取得",
+        "sidebar_label": "BoxURL取得"
       },
       "apiref/305_Get_Property": {
-        "title": "Retrieve of collection settings",
-        "sidebar_label": "Retrieve of collection settings"
+        "title": "コレクション設定取得",
+        "sidebar_label": "コレクション設定取得"
       },
       "apiref/306_Create_Collection": {
-        "title": "Create Collection",
-        "sidebar_label": "Create Collection"
+        "title": "コレクション作成",
+        "sidebar_label": "コレクション作成"
       },
       "apiref/307_Get_Property": {
-        "title": "Retrieve file setting",
-        "sidebar_label": "Retrieve file setting"
+        "title": "ファイル設定取得",
+        "sidebar_label": "ファイル設定取得"
       },
       "apiref/308_Change_Property": {
-        "title": "Change collection settings",
-        "sidebar_label": "Change collection settings"
+        "title": "コレクション設定変更",
+        "sidebar_label": "コレクション設定変更"
       },
       "apiref/309_Update_Move_Collection": {
-        "title": "Move and Rename collection",
-        "sidebar_label": "Move and Rename collection"
+        "title": "コレクション移動名称変更",
+        "sidebar_label": "コレクション移動名称変更"
       },
       "apiref/310_Delete_Collection": {
-        "title": "Delete collection",
-        "sidebar_label": "Delete collection"
+        "title": "コレクション削除",
+        "sidebar_label": "コレクション削除"
       },
       "apiref/311_Get_WebDav": {
-        "title": "Retrieve file",
-        "sidebar_label": "Retrieve file"
+        "title": "ファイル取得",
+        "sidebar_label": "ファイル取得"
       },
       "apiref/312_Register_and_Update_WebDAV": {
-        "title": "Create/Update file",
-        "sidebar_label": "Create/Update file"
+        "title": "ファイル登録更新",
+        "sidebar_label": "ファイル登録更新"
       },
       "apiref/313_Change_Property": {
-        "title": "Change file setting",
-        "sidebar_label": "Change file setting"
+        "title": "ファイル設定変更",
+        "sidebar_label": "ファイル設定変更"
       },
       "apiref/314_Delete_WebDAV": {
-        "title": "Delete file",
-        "sidebar_label": "Delete file"
+        "title": "ファイル削除",
+        "sidebar_label": "ファイル削除"
       },
       "apiref/315_Configure_Access_Control": {
-        "title": "Box Level Access Control Configuration",
-        "sidebar_label": "Box Level Access Control Configuration"
+        "title": "Box",
+        "sidebar_label": "Box"
       },
       "apiref/316_User_Defined_Data_Schema": {
-        "title": "Retrieve schema ($ metadata)",
-        "sidebar_label": "Retrieve schema ($ metadata)"
+        "title": "スキーマ取得（$metadata）",
+        "sidebar_label": "スキーマ取得（$metadata）"
       },
       "apiref/317_Document_Acquisition_Service": {
-        "title": "Retrieve service document",
-        "sidebar_label": "Retrieve service document"
+        "title": "サービスドキュメント取得",
+        "sidebar_label": "サービスドキュメント取得"
       },
       "apiref/318_Create_AssociationEnd": {
-        "title": "Create AssociationEnd",
-        "sidebar_label": "Create AssociationEnd"
+        "title": "AssociationEnd登録",
+        "sidebar_label": "AssociationEnd登録"
       },
       "apiref/319_List_AssociationEnd": {
-        "title": "Retrieve List of AssociationEnd",
-        "sidebar_label": "Retrieve List of AssociationEnd"
+        "title": "AssociationEnd一覧取得",
+        "sidebar_label": "AssociationEnd一覧取得"
       },
       "apiref/320_Retrieve_AssociationEnd": {
-        "title": "Retrieve AssociationEnd",
-        "sidebar_label": "Retrieve AssociationEnd"
+        "title": "AssociationEnd取得",
+        "sidebar_label": "AssociationEnd取得"
       },
       "apiref/321_Update_AssociationEnd": {
-        "title": "Update AssociationEnd",
-        "sidebar_label": "Update AssociationEnd"
+        "title": "AssociationEnd更新",
+        "sidebar_label": "AssociationEnd更新"
       },
       "apiref/322_Delete_AssociationEnd": {
-        "title": "Delete AssociationEnd",
-        "sidebar_label": "Delete AssociationEnd"
+        "title": "AssociationEnd削除",
+        "sidebar_label": "AssociationEnd削除"
       },
       "apiref/323_Link_AssociationEnd": {
-        "title": "Link other objects with AssociationEnd",
-        "sidebar_label": "Link other objects with AssociationEnd"
+        "title": "AssociationEndと他オブジェクトとのリンク",
+        "sidebar_label": "AssociationEndと他オブジェクトとのリンク"
       },
       "apiref/324_List_AssociationEnd_links": {
-        "title": "Retrieve links list from AssociationEnd to other objects",
-        "sidebar_label": "Retrieve links list from AssociationEnd to other objects"
+        "title": "AssociationEndと他オブジェクトとのリンク一覧取得",
+        "sidebar_label": "AssociationEndと他オブジェクトとのリンク一覧取得"
       },
       "apiref/325_Unlink_AssociationEnd": {
-        "title": "Unlink AssociationEnd with other objects",
-        "sidebar_label": "Unlink AssociationEnd with other objects"
+        "title": "AssociationEndと他オブジェクトとのリンク解除",
+        "sidebar_label": "AssociationEndと他オブジェクトとのリンク解除"
       },
       "apiref/326_List_AssociationEnd_Navigation_Property": {
-        "title": "Retrieval of other objects list via AssociationEnd's Navigation Property",
-        "sidebar_label": "Retrieval of other objects list via AssociationEnd's Navigation Property"
+        "title": "AssociationEndのNavigation",
+        "sidebar_label": "AssociationEndのNavigation"
       },
       "apiref/327_Create_ComplexType": {
-        "title": "Create ComplexType",
-        "sidebar_label": "Create ComplexType"
+        "title": "ComplexType登録",
+        "sidebar_label": "ComplexType登録"
       },
       "apiref/328_List_ComplexType": {
-        "title": "Retrieve List of ComplexType",
-        "sidebar_label": "Retrieve List of ComplexType"
+        "title": "ComplexType一覧取得",
+        "sidebar_label": "ComplexType一覧取得"
       },
       "apiref/329_Retrieve_ComplexType": {
-        "title": "Retrieve ComplexType",
-        "sidebar_label": "Retrieve ComplexType"
+        "title": "ComplexType取得",
+        "sidebar_label": "ComplexType取得"
       },
       "apiref/330_Update_ComplexType": {
-        "title": "ComplexType Update",
-        "sidebar_label": "ComplexType Update"
+        "title": "ComplexType更新",
+        "sidebar_label": "ComplexType更新"
       },
       "apiref/331_Delete_ComplexType": {
-        "title": "Delete ComplexType",
-        "sidebar_label": "Delete ComplexType"
+        "title": "ComplexType削除",
+        "sidebar_label": "ComplexType削除"
       },
       "apiref/332_Register_ComplexType_links": {
-        "title": "Link other objects with ComplexType",
-        "sidebar_label": "Link other objects with ComplexType"
+        "title": "ComplexTypeと他オブジェクトとのリンク",
+        "sidebar_label": "ComplexTypeと他オブジェクトとのリンク"
       },
       "apiref/333_List_ComplexType_links": {
-        "title": "Retrieve links list from ComplexType to other objects",
-        "sidebar_label": "Retrieve links list from ComplexType to other objects"
+        "title": "ComplexTypeと他オブジェクトとのリンク一覧取得",
+        "sidebar_label": "ComplexTypeと他オブジェクトとのリンク一覧取得"
       },
       "apiref/334_Update_ComplexType_links": {
-        "title": "ComplexType $links updated",
-        "sidebar_label": "ComplexType $links updated"
+        "title": "ComplexType_$links更新",
+        "sidebar_label": "ComplexType_$links更新"
       },
       "apiref/335_Delete_ComplexType_links": {
-        "title": "Unlink ComplexType with other objects",
-        "sidebar_label": "Unlink ComplexType with other objects"
+        "title": "ComplexTypeと他オブジェクトとのリンク解除",
+        "sidebar_label": "ComplexTypeと他オブジェクトとのリンク解除"
       },
       "apiref/336_Create_ComplexTypeProperty": {
-        "title": "Create ComplexTypeProperty",
-        "sidebar_label": "Create ComplexTypeProperty"
+        "title": "ComplexTypeProperty登録",
+        "sidebar_label": "ComplexTypeProperty登録"
       },
       "apiref/337_List_ComplexTypeProperty": {
-        "title": "Retrieve List of ComplexTypeProperty",
-        "sidebar_label": "Retrieve List of ComplexTypeProperty"
+        "title": "ComplexTypeProperty一覧取得",
+        "sidebar_label": "ComplexTypeProperty一覧取得"
       },
       "apiref/338_Retrieve_ComplexTypeProperty": {
-        "title": "Retrieve ComplexTypeProperty",
-        "sidebar_label": "Retrieve ComplexTypeProperty"
+        "title": "ComplexTypeProperty取得",
+        "sidebar_label": "ComplexTypeProperty取得"
       },
       "apiref/339_Update_ComplexTypeProperty": {
-        "title": "Update ComplexTypeProperty",
-        "sidebar_label": "Update ComplexTypeProperty"
+        "title": "ComplexTypeProperty更新",
+        "sidebar_label": "ComplexTypeProperty更新"
       },
       "apiref/340_Delete_ComplexTypeProperty": {
-        "title": "Delete ComplexTypeProperty",
-        "sidebar_label": "Delete ComplexTypeProperty"
+        "title": "ComplexTypeProperty削除",
+        "sidebar_label": "ComplexTypeProperty削除"
       },
       "apiref/341_Register_ComplextTypeProperty_links": {
-        "title": "Link other objects with ComplexTypeProperty",
-        "sidebar_label": "Link other objects with ComplexTypeProperty"
+        "title": "ComplexTypePropertyと他オブジェクトとのリンク",
+        "sidebar_label": "ComplexTypePropertyと他オブジェクトとのリンク"
       },
       "apiref/342_List_ComplextTypeProperty_links": {
-        "title": "Retrieve links list from ComplexTypeProperty to other objects",
-        "sidebar_label": "Retrieve links list from ComplexTypeProperty to other objects"
+        "title": "ComplexTypePropertyと他オブジェクトとのリンク一覧取得",
+        "sidebar_label": "ComplexTypePropertyと他オブジェクトとのリンク一覧取得"
       },
       "apiref/343_Update_ComplextTypeProperty_links": {
-        "title": "ComplexTypeProperty $links updated",
-        "sidebar_label": "ComplexTypeProperty $links updated"
+        "title": "ComplexTypeProperty_$links更新",
+        "sidebar_label": "ComplexTypeProperty_$links更新"
       },
       "apiref/344_Delete_ComplextTypeProperty_links": {
-        "title": "Unlink ComplexTypeProperty with other objects",
-        "sidebar_label": "Unlink ComplexTypeProperty with other objects"
+        "title": "ComplexTypePropertyと他オブジェクトとのリンク解除",
+        "sidebar_label": "ComplexTypePropertyと他オブジェクトとのリンク解除"
       },
       "apiref/345_Create_EntityType": {
-        "title": "Create EntityType",
-        "sidebar_label": "Create EntityType"
+        "title": "EntityType登録",
+        "sidebar_label": "EntityType登録"
       },
       "apiref/346_List_EntityType": {
-        "title": "Retrieve List of EntityType",
-        "sidebar_label": "Retrieve List of EntityType"
+        "title": "EntityType一覧取得",
+        "sidebar_label": "EntityType一覧取得"
       },
       "apiref/347_Retrieve_EntityType": {
-        "title": "Retrieve EntityType",
-        "sidebar_label": "Retrieve EntityType"
+        "title": "EntityType取得",
+        "sidebar_label": "EntityType取得"
       },
       "apiref/348_Update_EntityType": {
-        "title": "Update EntityType",
-        "sidebar_label": "Update EntityType"
+        "title": "EntityType更新",
+        "sidebar_label": "EntityType更新"
       },
       "apiref/349_Delete_EntityType": {
-        "title": "Delete EntityType",
-        "sidebar_label": "Delete EntityType"
+        "title": "EntityType削除",
+        "sidebar_label": "EntityType削除"
       },
       "apiref/350_Register_EntityType_links": {
-        "title": "Link other objects with EntityType",
-        "sidebar_label": "Link other objects with EntityType"
+        "title": "EntityTypeと他オブジェクトとのリンク",
+        "sidebar_label": "EntityTypeと他オブジェクトとのリンク"
       },
       "apiref/351_List_EntityType_links": {
-        "title": "Retrieve links list from EntityType to other objects",
-        "sidebar_label": "Retrieve links list from EntityType to other objects"
+        "title": "EntityTypeと他オブジェクトとのリンク一覧取得",
+        "sidebar_label": "EntityTypeと他オブジェクトとのリンク一覧取得"
       },
       "apiref/352_Update_EntityType_links": {
-        "title": "EntityType $links updated",
-        "sidebar_label": "EntityType $links updated"
+        "title": "EntityType_$links更新",
+        "sidebar_label": "EntityType_$links更新"
       },
       "apiref/353_Delete_EntityType_links": {
-        "title": "Unlink EntityType with other objects",
-        "sidebar_label": "Unlink EntityType with other objects"
+        "title": "EntityTypeと他オブジェクトとのリンク解除",
+        "sidebar_label": "EntityTypeと他オブジェクトとのリンク解除"
       },
       "apiref/354_List_EntityType_Links_Navigation_Property": {
-        "title": "Property Update",
-        "sidebar_label": "Property Update"
+        "title": "Property更新",
+        "sidebar_label": "Property更新"
       },
       "apiref/355_Create_Property": {
-        "title": "Create Property",
-        "sidebar_label": "Create Property"
+        "title": "Property登録",
+        "sidebar_label": "Property登録"
       },
       "apiref/356_List_Property": {
-        "title": "Retrieve List of Property",
-        "sidebar_label": "Retrieve List of Property"
+        "title": "Property一覧取得",
+        "sidebar_label": "Property一覧取得"
       },
       "apiref/357_Retrieve_Property": {
-        "title": "Retrieve Property",
-        "sidebar_label": "Retrieve Property"
+        "title": "Property取得",
+        "sidebar_label": "Property取得"
       },
       "apiref/358_Update_Property": {
-        "title": "Property update",
-        "sidebar_label": "Property update"
+        "title": "Property更新",
+        "sidebar_label": "Property更新"
       },
       "apiref/359_Delete_Property": {
-        "title": "Delete Property",
-        "sidebar_label": "Delete Property"
+        "title": "Property削除",
+        "sidebar_label": "Property削除"
       },
       "apiref/360_Register_Property_links": {
-        "title": "Link other objects with Property",
-        "sidebar_label": "Link other objects with Property"
+        "title": "Propertyと他オブジェクトとのリンク",
+        "sidebar_label": "Propertyと他オブジェクトとのリンク"
       },
       "apiref/361_List_Property_links": {
-        "title": "Retrieve links list from Property to other objects",
-        "sidebar_label": "Retrieve links list from Property to other objects"
+        "title": "Propertyと他オブジェクトとのリンク一覧取得",
+        "sidebar_label": "Propertyと他オブジェクトとのリンク一覧取得"
       },
       "apiref/362_Update_List_Property_links": {
-        "title": "Property $links updated",
-        "sidebar_label": "Property $links updated"
+        "title": "Property_$links更新",
+        "sidebar_label": "Property_$links更新"
       },
       "apiref/363_Delete_Property_links": {
-        "title": "Unlink Property with other objects",
-        "sidebar_label": "Unlink Property with other objects"
+        "title": "Propertyと他オブジェクトとのリンク解除",
+        "sidebar_label": "Propertyと他オブジェクトとのリンク解除"
       },
       "apiref/364_Create_Entity": {
-        "title": "Create Entity",
-        "sidebar_label": "Create Entity"
+        "title": "Entity作成",
+        "sidebar_label": "Entity作成"
       },
       "apiref/365_List_Entity": {
-        "title": "Retrieve List of Entities",
-        "sidebar_label": "Retrieve List of Entities"
+        "title": "Entity一覧取得",
+        "sidebar_label": "Entity一覧取得"
       },
       "apiref/366_Retrieve_Entity": {
-        "title": "Retrieve Entity",
-        "sidebar_label": "Retrieve Entity"
+        "title": "Entity取得",
+        "sidebar_label": "Entity取得"
       },
       "apiref/367_Update_Entity": {
-        "title": "Update Entity",
-        "sidebar_label": "Update Entity"
+        "title": "Entity更新",
+        "sidebar_label": "Entity更新"
       },
       "apiref/368_Entity_Bulk_Operations": {
-        "title": "Entity collective operation($batch)",
-        "sidebar_label": "Entity collective operation($batch)"
+        "title": "Entity一括操作($batch)",
+        "sidebar_label": "Entity一括操作($batch)"
       },
       "apiref/369_Partial_Update_Entity": {
-        "title": "Entity partial update",
-        "sidebar_label": "Entity partial update"
+        "title": "Entity部分更新",
+        "sidebar_label": "Entity部分更新"
       },
       "apiref/370_Delete_Entity": {
-        "title": "Delete Entity",
-        "sidebar_label": "Delete Entity"
+        "title": "Entity削除",
+        "sidebar_label": "Entity削除"
       },
       "apiref/371_Get_Schema": {
-        "title": "Schema acquisition ($metadata)",
-        "sidebar_label": "Schema acquisition ($metadata)"
+        "title": "スキーマ取得",
+        "sidebar_label": "スキーマ取得"
       },
       "apiref/372_User_Odata_Service_Document": {
-        "title": "userodata\\_servicedocument",
-        "sidebar_label": "userodata\\_servicedocument"
+        "title": "userodata_servicedocument",
+        "sidebar_label": "userodata_servicedocument"
       },
       "apiref/373_Link_User_Data": {
-        "title": "Link other objects with Entity",
-        "sidebar_label": "Link other objects with Entity"
+        "title": "Entityと他オブジェクトとのリンク",
+        "sidebar_label": "Entityと他オブジェクトとのリンク"
       },
       "apiref/374_List_User_Data_links": {
-        "title": "Retrieve links list from Entity to other objects",
-        "sidebar_label": "Retrieve links list from Entity to other objects"
+        "title": "Entityと他オブジェクトとのリンク一覧取得",
+        "sidebar_label": "Entityと他オブジェクトとのリンク一覧取得"
       },
       "apiref/375_Update_User_Data_links": {
-        "title": "Entity $links Update",
-        "sidebar_label": "Entity $links Update"
+        "title": "Entity_$links更新",
+        "sidebar_label": "Entity_$links更新"
       },
       "apiref/376_Unlink_User_Data": {
-        "title": "Unlink Entity with other objects",
-        "sidebar_label": "Unlink Entity with other objects"
+        "title": "Entityと他オブジェクトとのリンク解除",
+        "sidebar_label": "Entityと他オブジェクトとのリンク解除"
       },
       "apiref/377_Create_Entity_Via_NP": {
-        "title": "Create other objects via Entity's Navigation Property",
-        "sidebar_label": "Create other objects via Entity's Navigation Property"
+        "title": "EntityのNavigation",
+        "sidebar_label": "EntityのNavigation"
       },
       "apiref/378_List_Entity_Via_NP": {
-        "title": "Retrieve other objects list via Entity's Navigation Property",
-        "sidebar_label": "Retrieve other objects list via Entity's Navigation Property"
+        "title": "EntityのNavigation",
+        "sidebar_label": "EntityのNavigation"
       },
       "apiref/379_Engine_Service_Collection_APIs": {
-        "title": "What is Engine Service Collection",
-        "sidebar_label": "What is Engine Service Collection"
+        "title": "Engineサービスコレクションとは",
+        "sidebar_label": "Engineサービスコレクションとは"
       },
       "apiref/380_Configure_Service_Collection": {
-        "title": "Apply Settings Service Collection Source",
-        "sidebar_label": "Apply Settings Service Collection Source"
+        "title": "サービスコレクションソース設定適用",
+        "sidebar_label": "サービスコレクションソース設定適用"
       },
       "apiref/381_Create_Service_Collection_Source": {
-        "title": "Create service collection source",
-        "sidebar_label": "Create service collection source"
+        "title": "サービスコレクションソース作成",
+        "sidebar_label": "サービスコレクションソース作成"
       },
       "apiref/382_List_Service_Collection_Source": {
-        "title": "Retrieve service collection source",
-        "sidebar_label": "Retrieve service collection source"
+        "title": "サービスコレクションソース取得",
+        "sidebar_label": "サービスコレクションソース取得"
       },
       "apiref/383_Delete_Service_Collection_Source": {
-        "title": "Delete Service Collection Source",
-        "sidebar_label": "Delete Service Collection Source"
+        "title": "サービスコレクションソース削除",
+        "sidebar_label": "サービスコレクションソース削除"
       },
       "apiref/384_Service_Execution": {
-        "title": "Execute Service",
-        "sidebar_label": "Execute Service"
+        "title": "サービス実行",
+        "sidebar_label": "サービス実行"
       },
       "apiref/385_Box_Export": {
-        "title": "Export Box",
-        "sidebar_label": "Export Box"
+        "title": "Boxエクスポート",
+        "sidebar_label": "Boxエクスポート"
       },
       "apiref/386_Configure_Stream_Collection": {
-        "title": "Change settings Stream collection source",
-        "sidebar_label": "Change settings Stream collection source"
+        "title": "Streamコレクションソース設定変更",
+        "sidebar_label": "Streamコレクションソース設定変更"
       },
       "apiref/387_Stream_Collection_Send": {
-        "title": "Send stream collection",
-        "sidebar_label": "Send stream collection"
+        "title": "Stream",
+        "sidebar_label": "Stream"
       },
       "apiref/388_Stream_Collection_Receive": {
-        "title": "Receive stream collection",
-        "sidebar_label": "Receive stream collection"
+        "title": "Stream",
+        "sidebar_label": "Stream"
       },
       "apiref/389_Stream_Collection_Connect": {
-        "title": "Web Socket connection to Stream Collection",
-        "sidebar_label": "Web Socket connection to Stream Collection"
+        "title": "Stream",
+        "sidebar_label": "Stream"
       },
       "apiref/390_Options_Stream_Collection": {
-        "title": "Get operational method of Stream collection",
-        "sidebar_label": "Get operational method of Stream collection"
+        "title": "Streamコレクションの操作可能メソッド取得",
+        "sidebar_label": "Streamコレクションの操作可能メソッド取得"
       },
       "apiref/400_Orderby_Query": {
-        "title": "$orderby Query",
-        "sidebar_label": "$orderby Query"
+        "title": "$orderby",
+        "sidebar_label": "$orderby"
       },
       "apiref/401_Top_Query": {
-        "title": "$top Query",
-        "sidebar_label": "$top Query"
+        "title": "$top",
+        "sidebar_label": "$top"
       },
       "apiref/402_Skip_Query": {
-        "title": "$skip Query",
-        "sidebar_label": "$skip Query"
+        "title": "$skip",
+        "sidebar_label": "$skip"
       },
       "apiref/403_Filter_Query": {
-        "title": "$filter Query",
-        "sidebar_label": "$filter Query"
+        "title": "$filterクエリ",
+        "sidebar_label": "$filterクエリ"
       },
       "apiref/404_Format_Query": {
-        "title": "$format Query",
-        "sidebar_label": "$format Query"
+        "title": "$formatクエリ",
+        "sidebar_label": "$formatクエリ"
       },
       "apiref/405_Expand_Query": {
-        "title": "$expand Query",
-        "sidebar_label": "$expand Query"
+        "title": "$expand",
+        "sidebar_label": "$expand"
       },
       "apiref/406_Select_Query": {
-        "title": "$select  Query",
-        "sidebar_label": "$select  Query"
+        "title": "$select",
+        "sidebar_label": "$select"
       },
       "apiref/407_Inlinecount_Query": {
-        "title": "$inlinecount  Query",
-        "sidebar_label": "$inlinecount  Query"
+        "title": "$inlinecount",
+        "sidebar_label": "$inlinecount"
       },
       "apiref/408_Full_Text_Search_Query": {
-        "title": "Full-text Search (q) Query",
-        "sidebar_label": "Full-text Search (q) Query"
+        "title": "全文検索(q)",
+        "sidebar_label": "全文検索(q)"
       },
       "apiref/501_Export_Cell": {
-        "title": "Export Cell",
-        "sidebar_label": "Export Cell"
+        "title": "Cellエクスポート",
+        "sidebar_label": "Cellエクスポート"
       },
       "apiref/502_Progress_of_Export_Cell": {
-        "title": "Retrieve cell export status",
-        "sidebar_label": "Retrieve cell export status"
+        "title": "Cellエクスポート状態取得",
+        "sidebar_label": "Cellエクスポート状態取得"
       },
       "apiref/503_Register_and_Update_Snapshot_Cell": {
-        "title": "Create/Update Cell snapshot file",
-        "sidebar_label": "Create/Update Cell snapshot file"
+        "title": "Cellスナップショットファイル登録更新",
+        "sidebar_label": "Cellスナップショットファイル登録更新"
       },
       "apiref/504_Get_Snapshot_Cell": {
-        "title": "Retrieve Cell snapshot file",
-        "sidebar_label": "Retrieve Cell snapshot file"
+        "title": "Cellスナップショットファイル取得",
+        "sidebar_label": "Cellスナップショットファイル取得"
       },
       "apiref/505_Get_Property_Snapshot_Cell": {
-        "title": "Retrieve Cell snapshot file setting",
-        "sidebar_label": "Retrieve Cell snapshot file setting"
+        "title": "Cellスナップショットファイル設定取得",
+        "sidebar_label": "Cellスナップショットファイル設定取得"
       },
       "apiref/506_Delete_Snapshot_Cell": {
-        "title": "Cell snapshot file delete",
-        "sidebar_label": "Cell snapshot file delete"
+        "title": "Cellスナップショットファイル削除",
+        "sidebar_label": "Cellスナップショットファイル削除"
       },
       "apiref/507_Import_Cell": {
-        "title": "Import Cell",
-        "sidebar_label": "Import Cell"
+        "title": "Cellインポート",
+        "sidebar_label": "Cellインポート"
       },
       "apiref/508_Progress_of_Import_Cell": {
-        "title": "Retrieve cell import status",
-        "sidebar_label": "Retrieve cell import status"
-      },
-      "apiref/error/PR401-AU-0008": {
-        "title": "Error Code PR401-AU-0008",
-        "sidebar_label": "Error Code PR401-AU-0008"
-      },
-      "apiref/error/PR503-SV-0001": {
-        "title": "Error Code PR503-SV-0001",
-        "sidebar_label": "Error Code PR503-SV-0001"
+        "title": "Cellインポート状態取得",
+        "sidebar_label": "Cellインポート状態取得"
       },
       "app-developer/671_Engine_Script_Samples": {
-        "title": "Engine Script Samples",
-        "sidebar_label": "Engine Script Samples"
-      },
-      "app-developer/app_authn": {
-        "title": "App authentication",
-        "sidebar_label": "App authentication"
-      },
-      "app-developer/launch_from_homeapp": {
-        "title": "Launch application from Home application",
-        "sidebar_label": "Launch application from Home application"
-      },
-      "app-developer/Personium_Apps": {
-        "title": "Personium App",
-        "sidebar_label": "Personium App"
+        "title": "Engine",
+        "sidebar_label": "Engine"
       },
       "app-developer/Personium-Engine": {
-        "title": "Personium Engine",
-        "sidebar_label": "Personium Engine"
+        "title": "Personium",
+        "sidebar_label": "Personium"
+      },
+      "app-developer/Personium_Apps": {
+        "title": "Personiumアプリ",
+        "sidebar_label": "Personiumアプリ"
       },
       "app-developer/README": {
-        "title": "Application Developer's Guide",
-        "sidebar_label": "Application Developer's Guide"
+        "title": "アプリ開発者向けガイド",
+        "sidebar_label": "アプリ開発者向けガイド"
       },
       "app-developer/Roles": {
-        "title": "Role in Personium",
-        "sidebar_label": "Role in Personium"
+        "title": "Personiumにおけるロール",
+        "sidebar_label": "Personiumにおけるロール"
+      },
+      "app-developer/app_authn": {
+        "title": "アプリ認証",
+        "sidebar_label": "アプリ認証"
+      },
+      "app-developer/launch_from_homeapp": {
+        "title": "Homeアプリからのアプリ起動",
+        "sidebar_label": "Homeアプリからのアプリ起動"
       },
       "app-developer/using_odata": {
-        "title": "How to use OData Service Collection (OSC)",
-        "sidebar_label": "How to use OData Service Collection (OSC)"
+        "title": "OData",
+        "sidebar_label": "OData"
       },
       "cell-gui-developer/README": {
-        "title": "Cell GUI developer's Guide",
-        "sidebar_label": "Cell GUI developer's Guide"
+        "title": "Cell",
+        "sidebar_label": "Cell"
       },
       "document-writer/README": {
-        "title": "Personium How to participate in document maintenance / improvement",
-        "sidebar_label": "Personium How to participate in document maintenance / improvement"
+        "title": "Personium",
+        "sidebar_label": "Personium"
       },
       "installation_guide/001_Readme_before_installation": {
-        "title": "Readme before installation",
-        "sidebar_label": "Readme before installation"
+        "title": "インストール前の注意事項",
+        "sidebar_label": "インストール前の注意事項"
       },
       "installation_guide/002_Build_from_Source": {
-        "title": "Build from source",
-        "sidebar_label": "Build from source"
+        "title": "ソースからのビルド",
+        "sidebar_label": "ソースからのビルド"
       },
       "installation_guide/003_Install_To_LocalMachine": {
-        "title": "Install to local machine",
-        "sidebar_label": "Install to local machine"
+        "title": "ローカルマシンへのインストール",
+        "sidebar_label": "ローカルマシンへのインストール"
       },
       "overview/001_Introduction": {
-        "title": "What is Personium?",
-        "sidebar_label": "What is Personium?"
+        "title": "Personiumとは何ですか？",
+        "sidebar_label": "Personiumとは何ですか？"
       },
       "plugin-developer/EngineExtension_Imple_and_Deploy": {
-        "title": "Engine Extension implementation and deployment specification",
-        "sidebar_label": "Engine Extension implementation and deployment specification"
+        "title": "Engine",
+        "sidebar_label": "Engine"
       },
       "plugin-developer/Extension_Send_Mail": {
-        "title": "Extension: Email sending function",
-        "sidebar_label": "Extension: Email sending function"
+        "title": "Extension:",
+        "sidebar_label": "Extension:"
       },
       "plugin-developer/Personium_AuthenticationPluginDeveloperManual": {
-        "title": "Personium Authentication Plugin Developer Manual",
-        "sidebar_label": "Personium Authentication Plugin Developer Manual"
+        "title": "Personium認証Plugin開発ガイド",
+        "sidebar_label": "Personium認証Plugin開発ガイド"
       },
       "plugin-developer/README": {
-        "title": "Server Plugin Developer's Guide",
-        "sidebar_label": "Server Plugin Developer's Guide"
-      },
-      "README": {
-        "title": "Documentation for Personium",
-        "sidebar_label": "Documentation for Personium"
+        "title": "サーバプラグイン開発者向けガイド",
+        "sidebar_label": "サーバプラグイン開発者向けガイド"
       },
       "server-operator/Confirm_environment_settings": {
-        "title": "Environment information on units constructed by Ansible",
-        "sidebar_label": "Environment information on units constructed by Ansible"
-      },
-      "server-operator/proxy_exclusion_setting": {
-        "title": "Proxy exclusion setting",
-        "sidebar_label": "Proxy exclusion setting"
+        "title": "Ansible",
+        "sidebar_label": "Ansible"
       },
       "server-operator/README": {
-        "title": "Server Software Operator's Guide",
-        "sidebar_label": "Server Software Operator's Guide"
+        "title": "サーバソフトウェア運用者向けガイド",
+        "sidebar_label": "サーバソフトウェア運用者向けガイド"
       },
-      "server-operator/setup_authentication_plugins": {
-        "title": "Setup Authentication Plugins",
-        "sidebar_label": "Setup Authentication Plugins"
+      "server-operator/faq": {
+        "title": "サーバソフトウェア運用者からのFAQ",
+        "sidebar_label": "サーバソフトウェア運用者からのFAQ"
       },
-      "server-operator/setup_engine_extensions": {
-        "title": "Setup Engine Extensions",
-        "sidebar_label": "Setup Engine Extensions"
-      },
-      "server-operator/setup_virtual_image": {
-        "title": "Getting Started with Personium using Virtual image",
-        "sidebar_label": "Getting Started with Personium using Virtual image"
+      "server-operator/proxy_exclusion_setting": {
+        "title": "プロキシ除外設定",
+        "sidebar_label": "プロキシ除外設定"
       },
       "server-operator/setup": {
-        "title": "Getting Started with Personium using Ansible",
-        "sidebar_label": "Getting Started with Personium using Ansible"
+        "title": "Ansibleを使ってPersoniumを始めよう",
+        "sidebar_label": "Ansibleを使ってPersoniumを始めよう"
+      },
+      "server-operator/setup_authentication_plugins": {
+        "title": "認証Pluginのセットアップ",
+        "sidebar_label": "認証Pluginのセットアップ"
+      },
+      "server-operator/setup_engine_extensions": {
+        "title": "Engine",
+        "sidebar_label": "Engine"
+      },
+      "server-operator/setup_percell": {
+        "title": "Personium",
+        "sidebar_label": "Personium"
+      },
+      "server-operator/setup_virtual_image": {
+        "title": "仮想イメージを使ってPersoniumを始めよう",
+        "sidebar_label": "仮想イメージを使ってPersoniumを始めよう"
       },
       "server-operator/unit_config_list": {
-        "title": "Unit configurations",
-        "sidebar_label": "Unit configurations"
+        "title": "Unitの設定一覧",
+        "sidebar_label": "Unitの設定一覧"
       },
       "server-operator/unit_coordination": {
-        "title": "How to set coordination between units",
-        "sidebar_label": "How to set coordination between units"
+        "title": "Unit間連携の設定方法",
+        "sidebar_label": "Unit間連携の設定方法"
       },
       "server-operator/unit_operation_design": {
-        "title": "Operation design and setting of Unit",
-        "sidebar_label": "Operation design and setting of Unit"
+        "title": "Unitの運用設計と設定",
+        "sidebar_label": "Unitの運用設計と設定"
       },
       "server-operator/unit_security": {
-        "title": "Security of Unit (setting that recommends change from default)",
-        "sidebar_label": "Security of Unit (setting that recommends change from default)"
-      },
-      "software-developer/build_development_environment": {
-        "title": "Build development environment",
-        "sidebar_label": "Build development environment"
-      },
-      "software-developer/personium_tests": {
-        "title": "Personium Tests",
-        "sidebar_label": "Personium Tests"
+        "title": "Unit",
+        "sidebar_label": "Unit"
       },
       "software-developer/README": {
-        "title": "Server Developer's Guide",
-        "sidebar_label": "Server Developer's Guide"
+        "title": "サーバ開発者向けガイド",
+        "sidebar_label": "サーバ開発者向けガイド"
+      },
+      "software-developer/build_development_environment": {
+        "title": "開発用環境の構築手順",
+        "sidebar_label": "開発用環境の構築手順"
+      },
+      "software-developer/personium_tests": {
+        "title": "Personiumのテスト",
+        "sidebar_label": "Personiumのテスト"
       },
       "unit-administrator/Data_Management": {
-        "title": "Data management",
-        "sidebar_label": "Data management"
+        "title": "データの管理",
+        "sidebar_label": "データの管理"
       },
       "unit-administrator/README": {
-        "title": "Unit Administrator's Guide",
-        "sidebar_label": "Unit Administrator's Guide"
-      },
-      "unit-administrator/tutorial": {
-        "title": "Personium Unit management tutorial",
-        "sidebar_label": "Personium Unit management tutorial"
+        "title": "ユニット管理者向けガイド",
+        "sidebar_label": "ユニット管理者向けガイド"
       },
       "unit-administrator/Unit-User": {
-        "title": "Unit User",
-        "sidebar_label": "Unit User"
+        "title": "ユニットユーザ",
+        "sidebar_label": "ユニットユーザ"
+      },
+      "unit-administrator/tutorial": {
+        "title": "Personiumユニット管理",
+        "sidebar_label": "Personiumユニット管理"
       },
       "user_guide/001_Personium_Architecture": {
-        "title": "Personium Architecture",
-        "sidebar_label": "Personium Architecture"
+        "title": "Personiumのアーキテクチャ",
+        "sidebar_label": "Personiumのアーキテクチャ"
       },
       "user_guide/003_Auth": {
-        "title": "Authentication model",
-        "sidebar_label": "Authentication model"
+        "title": "認証モデル",
+        "sidebar_label": "認証モデル"
       },
       "user_guide/004_Client_auth": {
-        "title": "Client registration & authentication",
-        "sidebar_label": "Client registration & authentication"
+        "title": "クライアント登録&認証",
+        "sidebar_label": "クライアント登録&認証"
       },
       "user_guide/005_Model_construction": {
-        "title": "user_guide/005_Model_construction"
+        "title": "Cellのモデル",
+        "sidebar_label": "Cellのモデル"
       },
       "user_guide/007_WebDAV_model": {
-        "title": "WebDAV Model",
-        "sidebar_label": "WebDAV Model"
+        "title": "WebDAV",
+        "sidebar_label": "WebDAV"
       },
       "user_guide/008_Glossary": {
-        "title": "Glossary",
-        "sidebar_label": "Glossary"
+        "title": "用語集",
+        "sidebar_label": "用語集"
       },
       "user_guide/990_Old_Version_API_Ref": {
-        "title": "Old Version API References",
-        "sidebar_label": "Old Version API References"
+        "title": "古いバージョンのAPIリファレンス",
+        "sidebar_label": "古いバージョンのAPIリファレンス"
+      },
+      "version-1.7.18-apiref/000_Rest_API_Reference": {
+        "title": "Personium",
+        "sidebar_label": "Personium"
+      },
+      "version-1.7.18-apiref/001_Cross_Domain_Policy_File": {
+        "title": "クロスドメインポリシーファイル",
+        "sidebar_label": "クロスドメインポリシーファイル"
+      },
+      "version-1.7.18-apiref/002_CORS_Support": {
+        "title": "CORS(Cross",
+        "sidebar_label": "CORS(Cross"
+      },
+      "version-1.7.18-apiref/003_Common_Limitations_on_HTTP_Implementation": {
+        "title": "PersoniumのHTTP実装に関する制限事項",
+        "sidebar_label": "PersoniumのHTTP実装に関する制限事項"
+      },
+      "version-1.7.18-apiref/004_Error_Messages": {
+        "title": "エラーメッセージ一覧",
+        "sidebar_label": "エラーメッセージ一覧"
+      },
+      "version-1.7.18-apiref/005_Variable_of_Request_URL": {
+        "title": "リクエストURLの変数一覧",
+        "sidebar_label": "リクエストURLの変数一覧"
+      },
+      "version-1.7.18-apiref/006_Access_Control": {
+        "title": "アクセス制御モデル",
+        "sidebar_label": "アクセス制御モデル"
+      },
+      "version-1.7.18-apiref/007_Box_install": {
+        "title": "Boxインストール",
+        "sidebar_label": "Boxインストール"
+      },
+      "version-1.7.18-apiref/100_Create_Cell": {
+        "title": "Cell作成",
+        "sidebar_label": "Cell作成"
+      },
+      "version-1.7.18-apiref/101_List_Cell": {
+        "title": "Cell一覧取得",
+        "sidebar_label": "Cell一覧取得"
+      },
+      "version-1.7.18-apiref/102_Retrieve_Cell": {
+        "title": "Cell取得",
+        "sidebar_label": "Cell取得"
+      },
+      "version-1.7.18-apiref/103_Update_Cell": {
+        "title": "Cell更新",
+        "sidebar_label": "Cell更新"
+      },
+      "version-1.7.18-apiref/104_Delete_Cell": {
+        "title": "Cell削除",
+        "sidebar_label": "Cell削除"
+      },
+      "version-1.7.18-apiref/105_Cell_Recursive_Delete": {
+        "title": "Cell再帰削除",
+        "sidebar_label": "Cell再帰削除"
+      },
+      "version-1.7.18-apiref/106_UUT_Elevation_Setting": {
+        "title": "ULUUT昇格設定",
+        "sidebar_label": "ULUUT昇格設定"
+      },
+      "version-1.7.18-apiref/107_Get_Unit_Metadata": {
+        "title": "Unitメタデータ取得",
+        "sidebar_label": "Unitメタデータ取得"
+      },
+      "version-1.7.18-apiref/200_Cell_Root": {
+        "title": "Cellルート取得",
+        "sidebar_label": "Cellルート取得"
+      },
+      "version-1.7.18-apiref/201_Create_Role": {
+        "title": "Role登録",
+        "sidebar_label": "Role登録"
+      },
+      "version-1.7.18-apiref/202_List_Role": {
+        "title": "Role一覧取得",
+        "sidebar_label": "Role一覧取得"
+      },
+      "version-1.7.18-apiref/203_Retrieve_Role": {
+        "title": "Role取得",
+        "sidebar_label": "Role取得"
+      },
+      "version-1.7.18-apiref/204_Update_Role": {
+        "title": "Role更新",
+        "sidebar_label": "Role更新"
+      },
+      "version-1.7.18-apiref/205_Delete_Role": {
+        "title": "Role削除",
+        "sidebar_label": "Role削除"
+      },
+      "version-1.7.18-apiref/206_Link_Role": {
+        "title": "Roleと他オブジェクトとのリンク",
+        "sidebar_label": "Roleと他オブジェクトとのリンク"
+      },
+      "version-1.7.18-apiref/207_List_Role_links": {
+        "title": "Roleと他オブジェクトとのリンク一覧取得",
+        "sidebar_label": "Roleと他オブジェクトとのリンク一覧取得"
+      },
+      "version-1.7.18-apiref/208_Update_Role_links": {
+        "title": "Role_$links更新",
+        "sidebar_label": "Role_$links更新"
+      },
+      "version-1.7.18-apiref/209_Unlink_Role": {
+        "title": "Roleと他オブジェクトとのリンク解除",
+        "sidebar_label": "Roleと他オブジェクトとのリンク解除"
+      },
+      "version-1.7.18-apiref/210_Create_Obj_Via_Role_NP": {
+        "title": "RoleのNavigation",
+        "sidebar_label": "RoleのNavigation"
+      },
+      "version-1.7.18-apiref/211_List_Obj_Via_Role_NP": {
+        "title": "RoleのNavigation",
+        "sidebar_label": "RoleのNavigation"
+      },
+      "version-1.7.18-apiref/212_Create_Account": {
+        "title": "Account登録",
+        "sidebar_label": "Account登録"
+      },
+      "version-1.7.18-apiref/213_Retrieve_Account": {
+        "title": "Account取得",
+        "sidebar_label": "Account取得"
+      },
+      "version-1.7.18-apiref/214_List_Account": {
+        "title": "Account一覧取得",
+        "sidebar_label": "Account一覧取得"
+      },
+      "version-1.7.18-apiref/215_Update_Account": {
+        "title": "Account更新",
+        "sidebar_label": "Account更新"
+      },
+      "version-1.7.18-apiref/216_Delete_Account": {
+        "title": "Account削除",
+        "sidebar_label": "Account削除"
+      },
+      "version-1.7.18-apiref/217_Link_Account": {
+        "title": "Accountと他オブジェクトとのリンク",
+        "sidebar_label": "Accountと他オブジェクトとのリンク"
+      },
+      "version-1.7.18-apiref/218_List_Account_links": {
+        "title": "Accountと他オブジェクトとのリンク一覧取得",
+        "sidebar_label": "Accountと他オブジェクトとのリンク一覧取得"
+      },
+      "version-1.7.18-apiref/219_Update_Account_links": {
+        "title": "Account_$links更新",
+        "sidebar_label": "Account_$links更新"
+      },
+      "version-1.7.18-apiref/220_Unlink_Account": {
+        "title": "Accountと他オブジェクトとのリンク解除",
+        "sidebar_label": "Accountと他オブジェクトとのリンク解除"
+      },
+      "version-1.7.18-apiref/221_Create_Obj_Via_Account_NP": {
+        "title": "AccountのNavigation",
+        "sidebar_label": "AccountのNavigation"
+      },
+      "version-1.7.18-apiref/222_List_Obj_Via_Account_NP": {
+        "title": "AccountのNavigation",
+        "sidebar_label": "AccountのNavigation"
+      },
+      "version-1.7.18-apiref/223_Create_External_Cell": {
+        "title": "ExtCell登録",
+        "sidebar_label": "ExtCell登録"
+      },
+      "version-1.7.18-apiref/224_List_External_Cell": {
+        "title": "ExtCell一覧取得",
+        "sidebar_label": "ExtCell一覧取得"
+      },
+      "version-1.7.18-apiref/225_Retrieve_External_Cell": {
+        "title": "ExtCell取得",
+        "sidebar_label": "ExtCell取得"
+      },
+      "version-1.7.18-apiref/226_Update_External_Cell": {
+        "title": "ExtCell更新",
+        "sidebar_label": "ExtCell更新"
+      },
+      "version-1.7.18-apiref/227_Delete_External_Cell": {
+        "title": "ExtCell削除",
+        "sidebar_label": "ExtCell削除"
+      },
+      "version-1.7.18-apiref/228_Link_External_Cell": {
+        "title": "Extcellと他オブジェクトとのリンク",
+        "sidebar_label": "Extcellと他オブジェクトとのリンク"
+      },
+      "version-1.7.18-apiref/229_List_External_Cell_links": {
+        "title": "ExtCellと他オブジェクトとのリンク一覧取得",
+        "sidebar_label": "ExtCellと他オブジェクトとのリンク一覧取得"
+      },
+      "version-1.7.18-apiref/230_Update_External_Cell_links": {
+        "title": "Extcell_$links更新",
+        "sidebar_label": "Extcell_$links更新"
+      },
+      "version-1.7.18-apiref/231_Unlink_External_Cell": {
+        "title": "Extcellと他オブジェクトとのリンク解除",
+        "sidebar_label": "Extcellと他オブジェクトとのリンク解除"
+      },
+      "version-1.7.18-apiref/232_Create_Obj_Via_External_Cell_NP": {
+        "title": "ExtCellのNavigation",
+        "sidebar_label": "ExtCellのNavigation"
+      },
+      "version-1.7.18-apiref/233_List_Obj_Via_External_Cell_NP": {
+        "title": "ExtCellのNavigation",
+        "sidebar_label": "ExtCellのNavigation"
+      },
+      "version-1.7.18-apiref/234_Create_Relation": {
+        "title": "Relation登録",
+        "sidebar_label": "Relation登録"
+      },
+      "version-1.7.18-apiref/235_List_Relation": {
+        "title": "Relation一覧取得",
+        "sidebar_label": "Relation一覧取得"
+      },
+      "version-1.7.18-apiref/236_Retrieve_Relation": {
+        "title": "Relation取得",
+        "sidebar_label": "Relation取得"
+      },
+      "version-1.7.18-apiref/237_Update_Relation": {
+        "title": "Relation更新",
+        "sidebar_label": "Relation更新"
+      },
+      "version-1.7.18-apiref/238_Delete_Relation": {
+        "title": "Relation削除",
+        "sidebar_label": "Relation削除"
+      },
+      "version-1.7.18-apiref/239_Link_Relation": {
+        "title": "Relationと他オブジェクトとのリンク",
+        "sidebar_label": "Relationと他オブジェクトとのリンク"
+      },
+      "version-1.7.18-apiref/240_List_Relation_links": {
+        "title": "Relationと他オブジェクトとのリンク一覧取得",
+        "sidebar_label": "Relationと他オブジェクトとのリンク一覧取得"
+      },
+      "version-1.7.18-apiref/241_Update_Relation_links": {
+        "title": "Relation_$links更新",
+        "sidebar_label": "Relation_$links更新"
+      },
+      "version-1.7.18-apiref/242_Unlink_Relation": {
+        "title": "Relationと他オブジェクトとのリンク解除",
+        "sidebar_label": "Relationと他オブジェクトとのリンク解除"
+      },
+      "version-1.7.18-apiref/243_Create_Obj_Via_Relation_NP": {
+        "title": "RelationのNavigation",
+        "sidebar_label": "RelationのNavigation"
+      },
+      "version-1.7.18-apiref/244_List_Obj_Via_Relation_NP": {
+        "title": "RelationのNavigation",
+        "sidebar_label": "RelationのNavigation"
+      },
+      "version-1.7.18-apiref/245_Create_External_Role": {
+        "title": "ExtRole登録",
+        "sidebar_label": "ExtRole登録"
+      },
+      "version-1.7.18-apiref/246_List_External_Role": {
+        "title": "ExtRole一覧取得",
+        "sidebar_label": "ExtRole一覧取得"
+      },
+      "version-1.7.18-apiref/247_Retrieve_External_Role": {
+        "title": "ExtRole取得",
+        "sidebar_label": "ExtRole取得"
+      },
+      "version-1.7.18-apiref/248_Update_External_Role": {
+        "title": "ExtRole更新",
+        "sidebar_label": "ExtRole更新"
+      },
+      "version-1.7.18-apiref/249_Delete_External_Role": {
+        "title": "ExtRole削除",
+        "sidebar_label": "ExtRole削除"
+      },
+      "version-1.7.18-apiref/250_Link_External_Role": {
+        "title": "ExtRoleと他オブジェクトとのリンク",
+        "sidebar_label": "ExtRoleと他オブジェクトとのリンク"
+      },
+      "version-1.7.18-apiref/251_List_External_Role_links": {
+        "title": "ExtRoleと他オブジェクトとのリンク一覧取得",
+        "sidebar_label": "ExtRoleと他オブジェクトとのリンク一覧取得"
+      },
+      "version-1.7.18-apiref/252_Update_External_Role_links": {
+        "title": "ExtRole_$links更新",
+        "sidebar_label": "ExtRole_$links更新"
+      },
+      "version-1.7.18-apiref/253_Unlink_External_Role": {
+        "title": "ExtRoleと他オブジェクトとのリンク解除",
+        "sidebar_label": "ExtRoleと他オブジェクトとのリンク解除"
+      },
+      "version-1.7.18-apiref/254_Create_Obj_Via_External_Role_NP": {
+        "title": "ExtRoleのNavigation",
+        "sidebar_label": "ExtRoleのNavigation"
+      },
+      "version-1.7.18-apiref/255_List_Obj_Via_External_Role_NP": {
+        "title": "ExtRoleのNavigation",
+        "sidebar_label": "ExtRoleのNavigation"
+      },
+      "version-1.7.18-apiref/256_Create_Box": {
+        "title": "Box作成",
+        "sidebar_label": "Box作成"
+      },
+      "version-1.7.18-apiref/257_List_Box": {
+        "title": "Box一覧取得",
+        "sidebar_label": "Box一覧取得"
+      },
+      "version-1.7.18-apiref/258_Retrieve_Box": {
+        "title": "Box取得",
+        "sidebar_label": "Box取得"
+      },
+      "version-1.7.18-apiref/259_Update_Box": {
+        "title": "Box更新",
+        "sidebar_label": "Box更新"
+      },
+      "version-1.7.18-apiref/260_Delete_Box": {
+        "title": "Box削除",
+        "sidebar_label": "Box削除"
+      },
+      "version-1.7.18-apiref/261_Link_Box": {
+        "title": "Boxと他オブジェクトとのリンク",
+        "sidebar_label": "Boxと他オブジェクトとのリンク"
+      },
+      "version-1.7.18-apiref/262_List_Box_links": {
+        "title": "Boxと他オブジェクトとのリンク一覧取得",
+        "sidebar_label": "Boxと他オブジェクトとのリンク一覧取得"
+      },
+      "version-1.7.18-apiref/263_Update_Box_links": {
+        "title": "Box_$links更新",
+        "sidebar_label": "Box_$links更新"
+      },
+      "version-1.7.18-apiref/264_Unlink_Box": {
+        "title": "Boxと他オブジェクトとのリンク解除",
+        "sidebar_label": "Boxと他オブジェクトとのリンク解除"
+      },
+      "version-1.7.18-apiref/265_Create_Obj_Via_Box_NP": {
+        "title": "BoxのNavigation",
+        "sidebar_label": "BoxのNavigation"
+      },
+      "version-1.7.18-apiref/266_List_Obj_Via_Box_NP": {
+        "title": "BoxのNavigation",
+        "sidebar_label": "BoxのNavigation"
+      },
+      "version-1.7.18-apiref/267_Received_Message_Approval": {
+        "title": "メッセージ状態変更(未読,既読,承認)",
+        "sidebar_label": "メッセージ状態変更(未読,既読,承認)"
+      },
+      "version-1.7.18-apiref/268_List_Received_Messages": {
+        "title": "ReceivedMessage一覧取得",
+        "sidebar_label": "ReceivedMessage一覧取得"
+      },
+      "version-1.7.18-apiref/269_Retrieve_Received_Message": {
+        "title": "ReceivedMessage取得",
+        "sidebar_label": "ReceivedMessage取得"
+      },
+      "version-1.7.18-apiref/270_Delete_Received_Message": {
+        "title": "ReceivedMessage削除",
+        "sidebar_label": "ReceivedMessage削除"
+      },
+      "version-1.7.18-apiref/271_Send_Message": {
+        "title": "メッセージ送信",
+        "sidebar_label": "メッセージ送信"
+      },
+      "version-1.7.18-apiref/272_Retrieve_Sent_Message": {
+        "title": "SentMessage取得",
+        "sidebar_label": "SentMessage取得"
+      },
+      "version-1.7.18-apiref/273_List_Sent_Messages": {
+        "title": "SentMessage一覧取得",
+        "sidebar_label": "SentMessage一覧取得"
+      },
+      "version-1.7.18-apiref/274_Delete_Sent_Message": {
+        "title": "SentMessage削除",
+        "sidebar_label": "SentMessage削除"
+      },
+      "version-1.7.18-apiref/275_AtomPub_Service_Document": {
+        "title": "AtomPub",
+        "sidebar_label": "AtomPub"
+      },
+      "version-1.7.18-apiref/276_EDMX": {
+        "title": "EDMX取得($metadata)",
+        "sidebar_label": "EDMX取得($metadata)"
+      },
+      "version-1.7.18-apiref/277_Event_Summary": {
+        "title": "イベントの概要",
+        "sidebar_label": "イベントの概要"
+      },
+      "version-1.7.18-apiref/278_Event_Reception": {
+        "title": "外部イベント受付",
+        "sidebar_label": "外部イベント受付"
+      },
+      "version-1.7.18-apiref/279_Event_Bus_Connect": {
+        "title": "イベントバスへの",
+        "sidebar_label": "イベントバスへの"
+      },
+      "version-1.7.18-apiref/280_Create_Event_Listener": {
+        "title": "イベントリスナ登録(Not",
+        "sidebar_label": "イベントリスナ登録(Not"
+      },
+      "version-1.7.18-apiref/281_Get_Event_Listener": {
+        "title": "イベントリスナ一覧取得(Not",
+        "sidebar_label": "イベントリスナ一覧取得(Not"
+      },
+      "version-1.7.18-apiref/282_Delete_Event_Listener": {
+        "title": "イベントリスナ削除(Not",
+        "sidebar_label": "イベントリスナ削除(Not"
+      },
+      "version-1.7.18-apiref/283_Log_File_Information_Acquisition": {
+        "title": "ログファイル情報取得",
+        "sidebar_label": "ログファイル情報取得"
+      },
+      "version-1.7.18-apiref/284_Retrieve_Log_File_list": {
+        "title": "ログファイル一覧取得",
+        "sidebar_label": "ログファイル一覧取得"
+      },
+      "version-1.7.18-apiref/285_Retrieve_Log_File": {
+        "title": "ログファイル取得",
+        "sidebar_label": "ログファイル取得"
+      },
+      "version-1.7.18-apiref/286_Delete_Log_File": {
+        "title": "ログファイル削除",
+        "sidebar_label": "ログファイル削除"
+      },
+      "version-1.7.18-apiref/287_Propfind_Log": {
+        "title": "ログ設定取得(Not",
+        "sidebar_label": "ログ設定取得(Not"
+      },
+      "version-1.7.18-apiref/288_Proppatch_Log": {
+        "title": "ログ設定更新(Not",
+        "sidebar_label": "ログ設定更新(Not"
+      },
+      "version-1.7.18-apiref/289_Cell_ACL": {
+        "title": "Cell",
+        "sidebar_label": "Cell"
+      },
+      "version-1.7.18-apiref/290_Cell_Get_Property": {
+        "title": "プロパティ取得",
+        "sidebar_label": "プロパティ取得"
+      },
+      "version-1.7.18-apiref/291_Cell_Change_Property": {
+        "title": "プロパティ変更",
+        "sidebar_label": "プロパティ変更"
+      },
+      "version-1.7.18-apiref/292_OAuth2_Authorization_Endpoint": {
+        "title": "OAuth",
+        "sidebar_label": "OAuth"
+      },
+      "version-1.7.18-apiref/292p_OAuth2_Authorization_Endpoint": {
+        "title": "OAuth2.0",
+        "sidebar_label": "OAuth2.0"
+      },
+      "version-1.7.18-apiref/293_OAuth2_Token_Endpoint": {
+        "title": "OAuth",
+        "sidebar_label": "OAuth"
+      },
+      "version-1.7.18-apiref/294_Password_Change": {
+        "title": "パスワード変更(\\__mypassword)",
+        "sidebar_label": "パスワード変更(\\__mypassword)"
+      },
+      "version-1.7.18-apiref/295_Box_Recursive_Delete": {
+        "title": "Box再帰削除",
+        "sidebar_label": "Box再帰削除"
+      },
+      "version-1.7.18-apiref/296_Get_Cell_Metadata": {
+        "title": "Cellメタデータ取得",
+        "sidebar_label": "Cellメタデータ取得"
+      },
+      "version-1.7.18-apiref/297_OAtuh2_Token_Introspection_Endpoint": {
+        "title": "OAuth",
+        "sidebar_label": "OAuth"
+      },
+      "version-1.7.18-apiref/298_Get_Cell_Certs": {
+        "title": "Cell公開鍵取得",
+        "sidebar_label": "Cell公開鍵取得"
+      },
+      "version-1.7.18-apiref/2A0_Create_Rule": {
+        "title": "Rule作成",
+        "sidebar_label": "Rule作成"
+      },
+      "version-1.7.18-apiref/2A1_Retrieve_Rule": {
+        "title": "Rule取得",
+        "sidebar_label": "Rule取得"
+      },
+      "version-1.7.18-apiref/2A2_List_Rule": {
+        "title": "Rule一覧取得",
+        "sidebar_label": "Rule一覧取得"
+      },
+      "version-1.7.18-apiref/2A3_Update_Rule": {
+        "title": "Rule更新",
+        "sidebar_label": "Rule更新"
+      },
+      "version-1.7.18-apiref/2A4_Delete_Rule": {
+        "title": "Rule削除",
+        "sidebar_label": "Rule削除"
+      },
+      "version-1.7.18-apiref/2A5_Link_Rule": {
+        "title": "Ruleと他オブジェクト（Box）とのリンク",
+        "sidebar_label": "Ruleと他オブジェクト（Box）とのリンク"
+      },
+      "version-1.7.18-apiref/2A6_List_Rule_links": {
+        "title": "Ruleと他オブジェクトとのリンク一覧取得",
+        "sidebar_label": "Ruleと他オブジェクトとのリンク一覧取得"
+      },
+      "version-1.7.18-apiref/2A7_Unlink_Rule": {
+        "title": "Ruleから紐づいたBoxとのリンクを解除",
+        "sidebar_label": "Ruleから紐づいたBoxとのリンクを解除"
+      },
+      "version-1.7.18-apiref/2A8_Create_Obj_Via_Rule_NP": {
+        "title": "RuleのNavigation",
+        "sidebar_label": "RuleのNavigation"
+      },
+      "version-1.7.18-apiref/2A9_List_Obj_Via_Rule_NP": {
+        "title": "RuleのNavigation",
+        "sidebar_label": "RuleのNavigation"
+      },
+      "version-1.7.18-apiref/2AA_List_Internal_Rule": {
+        "title": "Rule内部情報一覧取得",
+        "sidebar_label": "Rule内部情報一覧取得"
+      },
+      "version-1.7.18-apiref/2AB_Partial_Update_Role": {
+        "title": "Role部分更新",
+        "sidebar_label": "Role部分更新"
+      },
+      "version-1.7.18-apiref/2AC_Partial_Update_Account": {
+        "title": "Account部分更新",
+        "sidebar_label": "Account部分更新"
+      },
+      "version-1.7.18-apiref/2AD_Partial_Update_External_Cell": {
+        "title": "ExtCell部分更新",
+        "sidebar_label": "ExtCell部分更新"
+      },
+      "version-1.7.18-apiref/2AE_Partial_Update_Relation": {
+        "title": "Relation部分更新",
+        "sidebar_label": "Relation部分更新"
+      },
+      "version-1.7.18-apiref/2AF_Partial_Update_External_Role": {
+        "title": "ExtRole部分更新",
+        "sidebar_label": "ExtRole部分更新"
+      },
+      "version-1.7.18-apiref/2B0_Partial_Update_Box": {
+        "title": "Box部分更新",
+        "sidebar_label": "Box部分更新"
+      },
+      "version-1.7.18-apiref/301_Bar_File": {
+        "title": "barファイル",
+        "sidebar_label": "barファイル"
+      },
+      "version-1.7.18-apiref/302_Box_Installation": {
+        "title": "Boxインストール",
+        "sidebar_label": "Boxインストール"
+      },
+      "version-1.7.18-apiref/303_Progress_of_Bar_File_Installation": {
+        "title": "Boxメタデータ取得",
+        "sidebar_label": "Boxメタデータ取得"
+      },
+      "version-1.7.18-apiref/304_Get_Box_URL": {
+        "title": "BoxURL取得",
+        "sidebar_label": "BoxURL取得"
+      },
+      "version-1.7.18-apiref/305_Get_Property": {
+        "title": "コレクション設定取得",
+        "sidebar_label": "コレクション設定取得"
+      },
+      "version-1.7.18-apiref/306_Create_Collection": {
+        "title": "コレクション作成",
+        "sidebar_label": "コレクション作成"
+      },
+      "version-1.7.18-apiref/307_Get_Property": {
+        "title": "ファイル設定取得",
+        "sidebar_label": "ファイル設定取得"
+      },
+      "version-1.7.18-apiref/308_Change_Property": {
+        "title": "コレクション設定変更",
+        "sidebar_label": "コレクション設定変更"
+      },
+      "version-1.7.18-apiref/309_Update_Move_Collection": {
+        "title": "コレクション移動名称変更",
+        "sidebar_label": "コレクション移動名称変更"
+      },
+      "version-1.7.18-apiref/310_Delete_Collection": {
+        "title": "コレクション削除",
+        "sidebar_label": "コレクション削除"
+      },
+      "version-1.7.18-apiref/311_Get_WebDav": {
+        "title": "ファイル取得",
+        "sidebar_label": "ファイル取得"
+      },
+      "version-1.7.18-apiref/312_Register_and_Update_WebDAV": {
+        "title": "ファイル登録更新",
+        "sidebar_label": "ファイル登録更新"
+      },
+      "version-1.7.18-apiref/313_Change_Property": {
+        "title": "ファイル設定変更",
+        "sidebar_label": "ファイル設定変更"
+      },
+      "version-1.7.18-apiref/314_Delete_WebDAV": {
+        "title": "ファイル削除",
+        "sidebar_label": "ファイル削除"
+      },
+      "version-1.7.18-apiref/315_Configure_Access_Control": {
+        "title": "Box",
+        "sidebar_label": "Box"
+      },
+      "version-1.7.18-apiref/316_User_Defined_Data_Schema": {
+        "title": "スキーマ取得（$metadata）",
+        "sidebar_label": "スキーマ取得（$metadata）"
+      },
+      "version-1.7.18-apiref/317_Document_Acquisition_Service": {
+        "title": "サービスドキュメント取得",
+        "sidebar_label": "サービスドキュメント取得"
+      },
+      "version-1.7.18-apiref/318_Create_AssociationEnd": {
+        "title": "AssociationEnd登録",
+        "sidebar_label": "AssociationEnd登録"
+      },
+      "version-1.7.18-apiref/319_List_AssociationEnd": {
+        "title": "AssociationEnd一覧取得",
+        "sidebar_label": "AssociationEnd一覧取得"
+      },
+      "version-1.7.18-apiref/320_Retrieve_AssociationEnd": {
+        "title": "AssociationEnd取得",
+        "sidebar_label": "AssociationEnd取得"
+      },
+      "version-1.7.18-apiref/321_Update_AssociationEnd": {
+        "title": "AssociationEnd更新",
+        "sidebar_label": "AssociationEnd更新"
+      },
+      "version-1.7.18-apiref/322_Delete_AssociationEnd": {
+        "title": "AssociationEnd削除",
+        "sidebar_label": "AssociationEnd削除"
+      },
+      "version-1.7.18-apiref/323_Link_AssociationEnd": {
+        "title": "AssociationEndと他オブジェクトとのリンク",
+        "sidebar_label": "AssociationEndと他オブジェクトとのリンク"
+      },
+      "version-1.7.18-apiref/324_List_AssociationEnd_links": {
+        "title": "AssociationEndと他オブジェクトとのリンク一覧取得",
+        "sidebar_label": "AssociationEndと他オブジェクトとのリンク一覧取得"
+      },
+      "version-1.7.18-apiref/325_Unlink_AssociationEnd": {
+        "title": "AssociationEndと他オブジェクトとのリンク解除",
+        "sidebar_label": "AssociationEndと他オブジェクトとのリンク解除"
+      },
+      "version-1.7.18-apiref/326_List_AssociationEnd_Navigation_Property": {
+        "title": "AssociationEndのNavigation",
+        "sidebar_label": "AssociationEndのNavigation"
+      },
+      "version-1.7.18-apiref/327_Create_ComplexType": {
+        "title": "ComplexType登録",
+        "sidebar_label": "ComplexType登録"
+      },
+      "version-1.7.18-apiref/328_List_ComplexType": {
+        "title": "ComplexType一覧取得",
+        "sidebar_label": "ComplexType一覧取得"
+      },
+      "version-1.7.18-apiref/329_Retrieve_ComplexType": {
+        "title": "ComplexType取得",
+        "sidebar_label": "ComplexType取得"
+      },
+      "version-1.7.18-apiref/330_Update_ComplexType": {
+        "title": "ComplexType更新",
+        "sidebar_label": "ComplexType更新"
+      },
+      "version-1.7.18-apiref/331_Delete_ComplexType": {
+        "title": "ComplexType削除",
+        "sidebar_label": "ComplexType削除"
+      },
+      "version-1.7.18-apiref/332_Register_ComplexType_links": {
+        "title": "ComplexTypeと他オブジェクトとのリンク",
+        "sidebar_label": "ComplexTypeと他オブジェクトとのリンク"
+      },
+      "version-1.7.18-apiref/333_List_ComplexType_links": {
+        "title": "ComplexTypeと他オブジェクトとのリンク一覧取得",
+        "sidebar_label": "ComplexTypeと他オブジェクトとのリンク一覧取得"
+      },
+      "version-1.7.18-apiref/334_Update_ComplexType_links": {
+        "title": "ComplexType_$links更新",
+        "sidebar_label": "ComplexType_$links更新"
+      },
+      "version-1.7.18-apiref/335_Delete_ComplexType_links": {
+        "title": "ComplexTypeと他オブジェクトとのリンク解除",
+        "sidebar_label": "ComplexTypeと他オブジェクトとのリンク解除"
+      },
+      "version-1.7.18-apiref/336_Create_ComplexTypeProperty": {
+        "title": "ComplexTypeProperty登録",
+        "sidebar_label": "ComplexTypeProperty登録"
+      },
+      "version-1.7.18-apiref/337_List_ComplexTypeProperty": {
+        "title": "ComplexTypeProperty一覧取得",
+        "sidebar_label": "ComplexTypeProperty一覧取得"
+      },
+      "version-1.7.18-apiref/338_Retrieve_ComplexTypeProperty": {
+        "title": "ComplexTypeProperty取得",
+        "sidebar_label": "ComplexTypeProperty取得"
+      },
+      "version-1.7.18-apiref/339_Update_ComplexTypeProperty": {
+        "title": "ComplexTypeProperty更新",
+        "sidebar_label": "ComplexTypeProperty更新"
+      },
+      "version-1.7.18-apiref/340_Delete_ComplexTypeProperty": {
+        "title": "ComplexTypeProperty削除",
+        "sidebar_label": "ComplexTypeProperty削除"
+      },
+      "version-1.7.18-apiref/341_Register_ComplextTypeProperty_links": {
+        "title": "ComplexTypePropertyと他オブジェクトとのリンク",
+        "sidebar_label": "ComplexTypePropertyと他オブジェクトとのリンク"
+      },
+      "version-1.7.18-apiref/342_List_ComplextTypeProperty_links": {
+        "title": "ComplexTypePropertyと他オブジェクトとのリンク一覧取得",
+        "sidebar_label": "ComplexTypePropertyと他オブジェクトとのリンク一覧取得"
+      },
+      "version-1.7.18-apiref/343_Update_ComplextTypeProperty_links": {
+        "title": "ComplexTypeProperty_$links更新",
+        "sidebar_label": "ComplexTypeProperty_$links更新"
+      },
+      "version-1.7.18-apiref/344_Delete_ComplextTypeProperty_links": {
+        "title": "ComplexTypePropertyと他オブジェクトとのリンク解除",
+        "sidebar_label": "ComplexTypePropertyと他オブジェクトとのリンク解除"
+      },
+      "version-1.7.18-apiref/345_Create_EntityType": {
+        "title": "EntityType登録",
+        "sidebar_label": "EntityType登録"
+      },
+      "version-1.7.18-apiref/346_List_EntityType": {
+        "title": "EntityType一覧取得",
+        "sidebar_label": "EntityType一覧取得"
+      },
+      "version-1.7.18-apiref/347_Retrieve_EntityType": {
+        "title": "EntityType取得",
+        "sidebar_label": "EntityType取得"
+      },
+      "version-1.7.18-apiref/348_Update_EntityType": {
+        "title": "EntityType更新",
+        "sidebar_label": "EntityType更新"
+      },
+      "version-1.7.18-apiref/349_Delete_EntityType": {
+        "title": "EntityType削除",
+        "sidebar_label": "EntityType削除"
+      },
+      "version-1.7.18-apiref/350_Register_EntityType_links": {
+        "title": "EntityTypeと他オブジェクトとのリンク",
+        "sidebar_label": "EntityTypeと他オブジェクトとのリンク"
+      },
+      "version-1.7.18-apiref/351_List_EntityType_links": {
+        "title": "EntityTypeと他オブジェクトとのリンク一覧取得",
+        "sidebar_label": "EntityTypeと他オブジェクトとのリンク一覧取得"
+      },
+      "version-1.7.18-apiref/352_Update_EntityType_links": {
+        "title": "EntityType_$links更新",
+        "sidebar_label": "EntityType_$links更新"
+      },
+      "version-1.7.18-apiref/353_Delete_EntityType_links": {
+        "title": "EntityTypeと他オブジェクトとのリンク解除",
+        "sidebar_label": "EntityTypeと他オブジェクトとのリンク解除"
+      },
+      "version-1.7.18-apiref/354_List_EntityType_Links_Navigation_Property": {
+        "title": "Property更新",
+        "sidebar_label": "Property更新"
+      },
+      "version-1.7.18-apiref/355_Create_Property": {
+        "title": "Property登録",
+        "sidebar_label": "Property登録"
+      },
+      "version-1.7.18-apiref/356_List_Property": {
+        "title": "Property一覧取得",
+        "sidebar_label": "Property一覧取得"
+      },
+      "version-1.7.18-apiref/357_Retrieve_Property": {
+        "title": "Property取得",
+        "sidebar_label": "Property取得"
+      },
+      "version-1.7.18-apiref/358_Update_Property": {
+        "title": "Property更新",
+        "sidebar_label": "Property更新"
+      },
+      "version-1.7.18-apiref/359_Delete_Property": {
+        "title": "Property削除",
+        "sidebar_label": "Property削除"
+      },
+      "version-1.7.18-apiref/360_Register_Property_links": {
+        "title": "Propertyと他オブジェクトとのリンク",
+        "sidebar_label": "Propertyと他オブジェクトとのリンク"
+      },
+      "version-1.7.18-apiref/361_List_Property_links": {
+        "title": "Propertyと他オブジェクトとのリンク一覧取得",
+        "sidebar_label": "Propertyと他オブジェクトとのリンク一覧取得"
+      },
+      "version-1.7.18-apiref/362_Update_List_Property_links": {
+        "title": "Property_$links更新",
+        "sidebar_label": "Property_$links更新"
+      },
+      "version-1.7.18-apiref/363_Delete_Property_links": {
+        "title": "Propertyと他オブジェクトとのリンク解除",
+        "sidebar_label": "Propertyと他オブジェクトとのリンク解除"
+      },
+      "version-1.7.18-apiref/364_Create_Entity": {
+        "title": "Entity作成",
+        "sidebar_label": "Entity作成"
+      },
+      "version-1.7.18-apiref/365_List_Entity": {
+        "title": "Entity一覧取得",
+        "sidebar_label": "Entity一覧取得"
+      },
+      "version-1.7.18-apiref/366_Retrieve_Entity": {
+        "title": "Entity取得",
+        "sidebar_label": "Entity取得"
+      },
+      "version-1.7.18-apiref/367_Update_Entity": {
+        "title": "Entity更新",
+        "sidebar_label": "Entity更新"
+      },
+      "version-1.7.18-apiref/368_Entity_Bulk_Operations": {
+        "title": "Entity一括操作($batch)",
+        "sidebar_label": "Entity一括操作($batch)"
+      },
+      "version-1.7.18-apiref/369_Partial_Update_Entity": {
+        "title": "Entity部分更新",
+        "sidebar_label": "Entity部分更新"
+      },
+      "version-1.7.18-apiref/370_Delete_Entity": {
+        "title": "Entity削除",
+        "sidebar_label": "Entity削除"
+      },
+      "version-1.7.18-apiref/371_Get_Schema": {
+        "title": "スキーマ取得",
+        "sidebar_label": "スキーマ取得"
+      },
+      "version-1.7.18-apiref/372_User_Odata_Service_Document": {
+        "title": "userodata_servicedocument",
+        "sidebar_label": "userodata_servicedocument"
+      },
+      "version-1.7.18-apiref/373_Link_User_Data": {
+        "title": "Entityと他オブジェクトとのリンク",
+        "sidebar_label": "Entityと他オブジェクトとのリンク"
+      },
+      "version-1.7.18-apiref/374_List_User_Data_links": {
+        "title": "Entityと他オブジェクトとのリンク一覧取得",
+        "sidebar_label": "Entityと他オブジェクトとのリンク一覧取得"
+      },
+      "version-1.7.18-apiref/375_Update_User_Data_links": {
+        "title": "Entity_$links更新",
+        "sidebar_label": "Entity_$links更新"
+      },
+      "version-1.7.18-apiref/376_Unlink_User_Data": {
+        "title": "Entityと他オブジェクトとのリンク解除",
+        "sidebar_label": "Entityと他オブジェクトとのリンク解除"
+      },
+      "version-1.7.18-apiref/377_Create_Entity_Via_NP": {
+        "title": "EntityのNavigation",
+        "sidebar_label": "EntityのNavigation"
+      },
+      "version-1.7.18-apiref/378_List_Entity_Via_NP": {
+        "title": "EntityのNavigation",
+        "sidebar_label": "EntityのNavigation"
+      },
+      "version-1.7.18-apiref/379_Engine_Service_Collection_APIs": {
+        "title": "Engineサービスコレクションとは",
+        "sidebar_label": "Engineサービスコレクションとは"
+      },
+      "version-1.7.18-apiref/380_Configure_Service_Collection": {
+        "title": "サービスコレクションソース設定適用",
+        "sidebar_label": "サービスコレクションソース設定適用"
+      },
+      "version-1.7.18-apiref/381_Create_Service_Collection_Source": {
+        "title": "サービスコレクションソース作成",
+        "sidebar_label": "サービスコレクションソース作成"
+      },
+      "version-1.7.18-apiref/382_List_Service_Collection_Source": {
+        "title": "サービスコレクションソース取得",
+        "sidebar_label": "サービスコレクションソース取得"
+      },
+      "version-1.7.18-apiref/383_Delete_Service_Collection_Source": {
+        "title": "サービスコレクションソース削除",
+        "sidebar_label": "サービスコレクションソース削除"
+      },
+      "version-1.7.18-apiref/384_Service_Execution": {
+        "title": "サービス実行",
+        "sidebar_label": "サービス実行"
+      },
+      "version-1.7.18-apiref/385_Box_Export": {
+        "title": "Boxエクスポート",
+        "sidebar_label": "Boxエクスポート"
+      },
+      "version-1.7.18-apiref/386_Configure_Stream_Collection": {
+        "title": "Streamコレクションソース設定変更",
+        "sidebar_label": "Streamコレクションソース設定変更"
+      },
+      "version-1.7.18-apiref/387_Stream_Collection_Send": {
+        "title": "Stream",
+        "sidebar_label": "Stream"
+      },
+      "version-1.7.18-apiref/388_Stream_Collection_Receive": {
+        "title": "Stream",
+        "sidebar_label": "Stream"
+      },
+      "version-1.7.18-apiref/389_Stream_Collection_Connect": {
+        "title": "Stream",
+        "sidebar_label": "Stream"
+      },
+      "version-1.7.18-apiref/390_Options_Stream_Collection": {
+        "title": "Streamコレクションの操作可能メソッド取得",
+        "sidebar_label": "Streamコレクションの操作可能メソッド取得"
+      },
+      "version-1.7.18-apiref/400_Orderby_Query": {
+        "title": "$orderby",
+        "sidebar_label": "$orderby"
+      },
+      "version-1.7.18-apiref/401_Top_Query": {
+        "title": "$top",
+        "sidebar_label": "$top"
+      },
+      "version-1.7.18-apiref/402_Skip_Query": {
+        "title": "$skip",
+        "sidebar_label": "$skip"
+      },
+      "version-1.7.18-apiref/403_Filter_Query": {
+        "title": "$filterクエリ",
+        "sidebar_label": "$filterクエリ"
+      },
+      "version-1.7.18-apiref/404_Format_Query": {
+        "title": "$formatクエリ",
+        "sidebar_label": "$formatクエリ"
+      },
+      "version-1.7.18-apiref/405_Expand_Query": {
+        "title": "$expand",
+        "sidebar_label": "$expand"
+      },
+      "version-1.7.18-apiref/406_Select_Query": {
+        "title": "$select",
+        "sidebar_label": "$select"
+      },
+      "version-1.7.18-apiref/407_Inlinecount_Query": {
+        "title": "$inlinecount",
+        "sidebar_label": "$inlinecount"
+      },
+      "version-1.7.18-apiref/408_Full_Text_Search_Query": {
+        "title": "全文検索(q)",
+        "sidebar_label": "全文検索(q)"
+      },
+      "version-1.7.18-apiref/501_Export_Cell": {
+        "title": "Cellエクスポート",
+        "sidebar_label": "Cellエクスポート"
+      },
+      "version-1.7.18-apiref/502_Progress_of_Export_Cell": {
+        "title": "Cellエクスポート状態取得",
+        "sidebar_label": "Cellエクスポート状態取得"
+      },
+      "version-1.7.18-apiref/503_Register_and_Update_Snapshot_Cell": {
+        "title": "Cellスナップショットファイル登録更新",
+        "sidebar_label": "Cellスナップショットファイル登録更新"
+      },
+      "version-1.7.18-apiref/504_Get_Snapshot_Cell": {
+        "title": "Cellスナップショットファイル取得",
+        "sidebar_label": "Cellスナップショットファイル取得"
+      },
+      "version-1.7.18-apiref/505_Get_Property_Snapshot_Cell": {
+        "title": "Cellスナップショットファイル設定取得",
+        "sidebar_label": "Cellスナップショットファイル設定取得"
+      },
+      "version-1.7.18-apiref/506_Delete_Snapshot_Cell": {
+        "title": "Cellスナップショットファイル削除",
+        "sidebar_label": "Cellスナップショットファイル削除"
+      },
+      "version-1.7.18-apiref/507_Import_Cell": {
+        "title": "Cellインポート",
+        "sidebar_label": "Cellインポート"
+      },
+      "version-1.7.18-apiref/508_Progress_of_Import_Cell": {
+        "title": "Cellインポート状態取得",
+        "sidebar_label": "Cellインポート状態取得"
+      },
+      "version-1.7.18-app-developer/671_Engine_Script_Samples": {
+        "title": "Engine",
+        "sidebar_label": "Engine"
+      },
+      "version-1.7.18-app-developer/Personium-Engine": {
+        "title": "Personium",
+        "sidebar_label": "Personium"
+      },
+      "version-1.7.18-app-developer/Personium_Apps": {
+        "title": "Personiumアプリ",
+        "sidebar_label": "Personiumアプリ"
+      },
+      "version-1.7.18-app-developer/README": {
+        "title": "アプリ開発者向けガイド",
+        "sidebar_label": "アプリ開発者向けガイド"
+      },
+      "version-1.7.18-app-developer/Roles": {
+        "title": "Personiumにおけるロール",
+        "sidebar_label": "Personiumにおけるロール"
+      },
+      "version-1.7.18-app-developer/app_authn": {
+        "title": "アプリ認証",
+        "sidebar_label": "アプリ認証"
+      },
+      "version-1.7.18-app-developer/launch_from_homeapp": {
+        "title": "Homeアプリからのアプリ起動",
+        "sidebar_label": "Homeアプリからのアプリ起動"
+      },
+      "version-1.7.18-app-developer/using_odata": {
+        "title": "OData",
+        "sidebar_label": "OData"
+      },
+      "version-1.7.18-cell-gui-developer/README": {
+        "title": "Cell",
+        "sidebar_label": "Cell"
+      },
+      "version-1.7.18-document-writer/README": {
+        "title": "Personium",
+        "sidebar_label": "Personium"
+      },
+      "version-1.7.18-installation_guide/001_Readme_before_installation": {
+        "title": "インストール前の注意事項",
+        "sidebar_label": "インストール前の注意事項"
+      },
+      "version-1.7.18-installation_guide/002_Build_from_Source": {
+        "title": "ソースからのビルド",
+        "sidebar_label": "ソースからのビルド"
+      },
+      "version-1.7.18-installation_guide/003_Install_To_LocalMachine": {
+        "title": "ローカルマシンへのインストール",
+        "sidebar_label": "ローカルマシンへのインストール"
+      },
+      "version-1.7.18-overview/001_Introduction": {
+        "title": "Personiumとは何ですか？",
+        "sidebar_label": "Personiumとは何ですか？"
+      },
+      "version-1.7.18-plugin-developer/EngineExtension_Imple_and_Deploy": {
+        "title": "Engine",
+        "sidebar_label": "Engine"
+      },
+      "version-1.7.18-plugin-developer/Extension_Send_Mail": {
+        "title": "Extension:",
+        "sidebar_label": "Extension:"
+      },
+      "version-1.7.18-plugin-developer/Personium_AuthenticationPluginDeveloperManual": {
+        "title": "Personium認証Plugin開発ガイド",
+        "sidebar_label": "Personium認証Plugin開発ガイド"
+      },
+      "version-1.7.18-plugin-developer/README": {
+        "title": "サーバプラグイン開発者向けガイド",
+        "sidebar_label": "サーバプラグイン開発者向けガイド"
+      },
+      "version-1.7.18-server-operator/Confirm_environment_settings": {
+        "title": "Ansible",
+        "sidebar_label": "Ansible"
+      },
+      "version-1.7.18-server-operator/README": {
+        "title": "サーバソフトウェア運用者向けガイド",
+        "sidebar_label": "サーバソフトウェア運用者向けガイド"
+      },
+      "version-1.7.18-server-operator/faq": {
+        "title": "サーバソフトウェア運用者からのFAQ",
+        "sidebar_label": "サーバソフトウェア運用者からのFAQ"
+      },
+      "version-1.7.18-server-operator/proxy_exclusion_setting": {
+        "title": "プロキシ除外設定",
+        "sidebar_label": "プロキシ除外設定"
+      },
+      "version-1.7.18-server-operator/setup": {
+        "title": "Ansibleを使ってPersoniumを始めよう",
+        "sidebar_label": "Ansibleを使ってPersoniumを始めよう"
+      },
+      "version-1.7.18-server-operator/setup_authentication_plugins": {
+        "title": "認証Pluginのセットアップ",
+        "sidebar_label": "認証Pluginのセットアップ"
+      },
+      "version-1.7.18-server-operator/setup_engine_extensions": {
+        "title": "Engine",
+        "sidebar_label": "Engine"
+      },
+      "version-1.7.18-server-operator/setup_percell": {
+        "title": "Personium",
+        "sidebar_label": "Personium"
+      },
+      "version-1.7.18-server-operator/setup_virtual_image": {
+        "title": "仮想イメージを使ってPersoniumを始めよう",
+        "sidebar_label": "仮想イメージを使ってPersoniumを始めよう"
+      },
+      "version-1.7.18-server-operator/unit_config_list": {
+        "title": "Unitの設定一覧",
+        "sidebar_label": "Unitの設定一覧"
+      },
+      "version-1.7.18-server-operator/unit_coordination": {
+        "title": "Unit間連携の設定方法",
+        "sidebar_label": "Unit間連携の設定方法"
+      },
+      "version-1.7.18-server-operator/unit_operation_design": {
+        "title": "Unitの運用設計と設定",
+        "sidebar_label": "Unitの運用設計と設定"
+      },
+      "version-1.7.18-server-operator/unit_security": {
+        "title": "Unit",
+        "sidebar_label": "Unit"
+      },
+      "version-1.7.18-software-developer/README": {
+        "title": "サーバ開発者向けガイド",
+        "sidebar_label": "サーバ開発者向けガイド"
+      },
+      "version-1.7.18-software-developer/build_development_environment": {
+        "title": "開発用環境の構築手順",
+        "sidebar_label": "開発用環境の構築手順"
+      },
+      "version-1.7.18-software-developer/personium_tests": {
+        "title": "Personiumのテスト",
+        "sidebar_label": "Personiumのテスト"
+      },
+      "version-1.7.18-unit-administrator/Data_Management": {
+        "title": "データの管理",
+        "sidebar_label": "データの管理"
+      },
+      "version-1.7.18-unit-administrator/README": {
+        "title": "ユニット管理者向けガイド",
+        "sidebar_label": "ユニット管理者向けガイド"
+      },
+      "version-1.7.18-unit-administrator/Unit-User": {
+        "title": "ユニットユーザ",
+        "sidebar_label": "ユニットユーザ"
+      },
+      "version-1.7.18-unit-administrator/tutorial": {
+        "title": "Personiumユニット管理",
+        "sidebar_label": "Personiumユニット管理"
+      },
+      "version-1.7.18-user_guide/001_Personium_Architecture": {
+        "title": "Personiumのアーキテクチャ",
+        "sidebar_label": "Personiumのアーキテクチャ"
+      },
+      "version-1.7.18-user_guide/003_Auth": {
+        "title": "認証モデル",
+        "sidebar_label": "認証モデル"
+      },
+      "version-1.7.18-user_guide/004_Client_auth": {
+        "title": "クライアント登録&認証",
+        "sidebar_label": "クライアント登録&認証"
+      },
+      "version-1.7.18-user_guide/005_Model_construction": {
+        "title": "Cellのモデル",
+        "sidebar_label": "Cellのモデル"
+      },
+      "version-1.7.18-user_guide/007_WebDAV_model": {
+        "title": "WebDAV",
+        "sidebar_label": "WebDAV"
+      },
+      "version-1.7.18-user_guide/008_Glossary": {
+        "title": "用語集",
+        "sidebar_label": "用語集"
+      },
+      "version-1.7.18-user_guide/990_Old_Version_API_Ref": {
+        "title": "古いバージョンのAPIリファレンス",
+        "sidebar_label": "古いバージョンのAPIリファレンス"
+      },
+      "version-1.7.18-version-1.7.18/README": {
+        "title": "Personium",
+        "sidebar_label": "Personium"
+      },
+      "version-1.7.18/README": {
+        "title": "Personium",
+        "sidebar_label": "Personium"
       }
     },
     "links": {
