@@ -43,8 +43,8 @@ const siteConfig = {
 
   // For no header links in the top nav bar -> headerLinks: [],
   headerLinks: [
-    {href: '/docs/en/README', label: 'Documentation'},
-    {href: '/docs/en/apiref/000_Rest_API_Reference', label: 'API Reference'},
+    {href: '/new-docs/en/README', label: 'Documentation'},
+    {href: '/new-docs/en/apiref/000_Rest_API_Reference', label: 'API Reference'},
     {blog: true, label: 'News'},
     // {page: 'help', label: 'Help'},
   ],
