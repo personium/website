@@ -6,7 +6,7 @@ sidebar_label: Personiumとは何ですか？
 
 Personium(ペルソニアム)はオープンソースのPDS (Personal Data Store) サーバソフトウェアです。
 
-![Personiumとは](image/Personium.png "Personiumとは")
+![Personiumとは](assets/Personium.png "Personiumとは")
 
 ## Personiumの特長
 
@@ -25,7 +25,7 @@ Personium(ペルソニアム)はオープンソースのPDS (Personal Data Store
 * 他者(例： 妻、かかりつけ医、勤務先 etc.)へのデータ開示・共有は相手PDSのURLを指定して行います。
 * 他者PDSアクセスには電子署名技術を利用しており、相手は別サーバであっても構いません。
 
-![データ開示・共有設定](image/DisclosureData.png "データ開示・共有設定")
+![データ開示・共有設定](assets/DisclosureData.png "データ開示・共有設定")
 
 ### Web of PDSを構成可能
 * データ開示・被開示という関係で結ばれたPDS群は、特定の事業者が胴元（⇒ 一人勝ち）になるのではない中心を持たないDecentralizedなネットワークを構成します。 （分散ソーシャルグラフ）
@@ -35,12 +35,12 @@ Personium(ペルソニアム)はオープンソースのPDS (Personal Data Store
 ### 受動的データ主体（⇒PDSオーナ）を扱うことができる
 
 * 受動的データ主体：幼児・高齢者などは、親族等に全データの全権限を許可することでPDSの運用移譲が可能となります。
-![受動的データ主体](image/PassiveDataSubject.png "受動的データ主体")
+![受動的データ主体](assets/PassiveDataSubject.png "受動的データ主体")
 
 ### データ主体を人に限らず、モノ・組織などに拡張可能
 
 * 受動的データ主体を扱う要領でデータ主体をモノや組織などにも拡張可能です。（例、家族/犬のポチのデータストア）
 * IoM, IoT, IoE を統合的に扱うモデルを標榜します。（Cyber-Physical）
 
-![データ主体の拡張](image/ExpansionDataSubject.png "データ主体の拡張")
+![データ主体の拡張](assets/ExpansionDataSubject.png "データ主体の拡張")
 

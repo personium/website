@@ -12,7 +12,7 @@ All the data structures for making applications such as webDAV and OData's Schem
 Since it is inefficient to execute all the existing APIs in order to create resources of the same structure in a plurality of cells,  
 To create a new Box which is a data storage unit for each application, use the "box installation" function.
 
-* ![Box installation](image/BoxInstall.png "Box installation")
+* ![Box installation](assets/BoxInstall.png "Box installation")
 
 ### Bar file
 * The bar file means "box archive file" and refers to an archive file that organizes the contents of Box.

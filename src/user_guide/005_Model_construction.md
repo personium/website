@@ -24,9 +24,9 @@
     * Service model
 
 ### Cell control object
-![Cell control object E-R diagram](image/cell_ctrl_obj.png "Cell control object E-R diagram")
+![Cell control object E-R diagram](assets/cell_ctrl_obj.png "Cell control object E-R diagram")
 
-![$Links creation combination list of cell control objects](image/LinkingCellControlObjects.gif "$Links creation combination list of cell control objects")
+![$Links creation combination list of cell control objects](assets/LinkingCellControlObjects.gif "$Links creation combination list of cell control objects")
 
 ### Account
 coming soon

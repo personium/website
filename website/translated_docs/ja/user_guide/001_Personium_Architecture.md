@@ -7,7 +7,7 @@ sidebar_label: Personiumのアーキテクチャ
 ## 基本となる3階層のオブジェクト
 Personiumはデータ主体中心のICT実現のため以下3階層の基本オブジェクトを定義しています。
 
-![3階層オブジェクト](image/3LayerStructure.png "3階層オブジェクト")
+![3階層オブジェクト](assets/3LayerStructure.png "3階層オブジェクト")
 
 |名称|概要|URL例|
 |:--|:--|:--|

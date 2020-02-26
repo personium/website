@@ -101,7 +101,7 @@ In that case, you can use UMT instead of UUT for operation.
 Unit users have identifiers, which are called unit user names.  
 The unit does not have a unit user name management mechanism, and it assumes the existence of an external management mechanism.
 
-![unituser](./images/unituser.png)
+![unituser](assets/unituser.png)
 
 
 ## Type of a Unit User

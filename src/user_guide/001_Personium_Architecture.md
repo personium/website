@@ -6,7 +6,7 @@ sidebar_label: Personium Architecture
 
 ## Basic three-layered objects
 Personium defines the following three layered basic objects in order to achieve a new ICT model centered around data subjects.
-![3LayerObject](image/3LayerStructure.png "3LayerObject")  
+![3LayerObject](assets/3LayerStructure.png "3LayerObject")  
 
 |Name|Overview|URL example|
 |:--|:--|:--|

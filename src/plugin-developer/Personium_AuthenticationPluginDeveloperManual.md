@@ -43,7 +43,7 @@ The following is an example using the google version Authentication Plugin.
 The border part of the creation plug-in is created.
 
 The class structure diagram of Authentication Plugin is shown below.
-![class structure](./images/plugin_02.png "PluginClass Structure")
+![class structure](assets/plugin_02.png "PluginClass Structure")
 
 > **Note:**  Return value of authentication processing
 > - If authentication succeeds, AuthenticatedIdentity is returned.
@@ -53,7 +53,7 @@ The class structure diagram of Authentication Plugin is shown below.
 
 The operation of Authentication Plugin is shown below.
 
-![Plugin behavior](./images/plugin_01.png "PluginBehavior")
+![Plugin behavior](assets/plugin_01.png "PluginBehavior")
 
 　1. Plugin initialization processing
 　   PluginManager is called in the PersoniumCoreApplication class and reads all plugins.

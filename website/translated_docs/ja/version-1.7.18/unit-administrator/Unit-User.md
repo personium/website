@@ -112,7 +112,7 @@ curl "{UnitURL}/__ctl/Cell" -X GET \
 	・セル検索時、自身が作成したセル以外は検索されない。
 	・セル削除時、自身が作成したセル以外の削除は失敗する。
 
-![unituser](./images/unituser.png)
+![unituser](assets/unituser.png)
 
 ### ユニットレベル制御エンティティ（セル）のオーナー属性
 

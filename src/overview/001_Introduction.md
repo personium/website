@@ -6,7 +6,7 @@ sidebar_label: What is Personium?
 
 Personium is a open source PDS (Personal Data Store) server software.  
 
-![What is Personium?](image/Personium.png "What is Personium?")  
+![What is Personium?](assets/Personium.png "What is Personium?")  
 
 ### Anyone can set up a PDS server  
 
@@ -26,11 +26,11 @@ Disclosing or granting managing permission to your data to the other party (e.g.
 
 PDS access uses digital signature technology, therefore, the other party's PDS can be resided on another server.  
 
-![data disclosure/sharing setting](image/DisclosureData.png "data disclosure/sharing setting")
+![data disclosure/sharing setting](assets/DisclosureData.png "data disclosure/sharing setting")
 
 Passive data subject： For infants, the elderly, etc., PDS can be handed over to the relatives by granting administrative permission of all data to the relatives.  
 
-![passive data subject](image/PassiveDataSubject.png "passive data subject")
+![passive data subject](assets/PassiveDataSubject.png "passive data subject")
 
 ### Configure web of PDS  
 Groups of PDSs composed of the data disclosing and disclosed parties become a decentralized network which does not favor a specific business operator (the only winner). (Distributed social graph)
@@ -44,4 +44,4 @@ Data subjects can be extended to objects, organizations, etc. in the same way as
 
 We recommend an integrated model that handles IoM, IoT, and IoE.(Cyber-Physical)
 
-![Enhancement of data subject](image/ExpansionDataSubject.png "Enhancement of data subject")
+![Enhancement of data subject](assets/ExpansionDataSubject.png "Enhancement of data subject")

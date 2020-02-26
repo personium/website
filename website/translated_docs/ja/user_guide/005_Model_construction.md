@@ -18,9 +18,9 @@ sidebar_label: Cellのモデル
 * 詳細は[こちら](../apiref/current/007_Box_install.md)をご覧下さい。
 
 ### Cell制御オブジェクト
-![Cell制御オブジェクトE-R図](image/cell_ctrl_obj.png "Cell制御オブジェクトE-R図")
+![Cell制御オブジェクトE-R図](assets/cell_ctrl_obj.png "Cell制御オブジェクトE-R図")
 
-![セル制御オブジェクトの$link作成組み合わせ一覧](image/LinkingCellControlObjects.gif "セル制御オブジェクトの$link作成組み合わせ一覧")
+![セル制御オブジェクトの$link作成組み合わせ一覧](assets/LinkingCellControlObjects.gif "セル制御オブジェクトの$link作成組み合わせ一覧")
 
 ### Account
 準備中

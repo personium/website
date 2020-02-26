@@ -6,7 +6,7 @@ sidebar_label: Events Overview
 ## Event Model
 It consists of an external event defined by [event reception API](278_Event_Reception.md) and an internal event defined within Personium.
 
-![Event model](image/eventmodel.png "event model")
+![Event model](assets/eventmodel.png "event model")
 
 
 #### External event
