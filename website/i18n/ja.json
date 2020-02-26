@@ -970,12 +970,12 @@
         "sidebar_label": "Cellインポート状態取得"
       },
       "app-developer/671_Engine_Script_Samples": {
-        "title": "Engine",
-        "sidebar_label": "Engine"
+        "title": "Engine Script のサンプル",
+        "sidebar_label": "Engine Script のサンプル"
       },
       "app-developer/Personium-Engine": {
-        "title": "Personium",
-        "sidebar_label": "Personium"
+        "title": "Personium Engine",
+        "sidebar_label": "Personium Engine"
       },
       "app-developer/Personium_Apps": {
         "title": "Personiumアプリ",
@@ -998,16 +998,16 @@
         "sidebar_label": "Homeアプリからのアプリ起動"
       },
       "app-developer/using_odata": {
-        "title": "OData",
-        "sidebar_label": "OData"
+        "title": "OData Service Collection (OSC)の使い方",
+        "sidebar_label": "OData Service Collection (OSC)の使い方"
       },
       "cell-gui-developer/README": {
-        "title": "Cell",
-        "sidebar_label": "Cell"
+        "title": "Cell GUI開発",
+        "sidebar_label": "Cell GUI開発"
       },
       "document-writer/README": {
-        "title": "Personium",
-        "sidebar_label": "Personium"
+        "title": "Personium ドキュメント整備・改善への参加方法",
+        "sidebar_label": "Personium ドキュメント整備・改善への参加方法"
       },
       "installation_guide/001_Readme_before_installation": {
         "title": "インストール前の注意事項",
@@ -1026,24 +1026,24 @@
         "sidebar_label": "Personiumとは何ですか？"
       },
       "plugin-developer/EngineExtension_Imple_and_Deploy": {
-        "title": "Engine",
-        "sidebar_label": "Engine"
+        "title": "Engine Extensionの実装及び配備仕様",
+        "sidebar_label": "Engine Extensionの実装及び配備仕様"
       },
       "plugin-developer/Extension_Send_Mail": {
-        "title": "Extension:",
-        "sidebar_label": "Extension:"
+        "title": "Extension: メール送信機能",
+        "sidebar_label": "Extension: メール送信機能"
       },
       "plugin-developer/Personium_AuthenticationPluginDeveloperManual": {
-        "title": "Personium認証Plugin開発ガイド",
-        "sidebar_label": "Personium認証Plugin開発ガイド"
+        "title": "Personium認証Plugin開発",
+        "sidebar_label": "Personium認証Plugin開発"
       },
       "plugin-developer/README": {
-        "title": "サーバプラグイン開発者向けガイド",
-        "sidebar_label": "サーバプラグイン開発者向けガイド"
+        "title": "サーバプラグイン開発者",
+        "sidebar_label": "サーバプラグイン開発"
       },
       "server-operator/Confirm_environment_settings": {
-        "title": "Ansible",
-        "sidebar_label": "Ansible"
+        "title": "Ansible で構築したユニットの環境情報",
+        "sidebar_label": "Ansible で構築したユニットの環境情報"
       },
       "server-operator/README": {
         "title": "サーバソフトウェア運用者向けガイド",
@@ -1066,12 +1066,12 @@
         "sidebar_label": "認証Pluginのセットアップ"
       },
       "server-operator/setup_engine_extensions": {
-        "title": "Engine",
-        "sidebar_label": "Engine"
+        "title": "Engine Extensionのセットアップ",
+        "sidebar_label": "Engine Extensionのセットアップ"
       },
       "server-operator/setup_percell": {
-        "title": "Personium",
-        "sidebar_label": "Personium"
+        "title": "Personium Unitの percell 環境時の設定",
+        "sidebar_label": "Personium Unitの percell 環境時の設定"
       },
       "server-operator/setup_virtual_image": {
         "title": "仮想イメージを使ってPersoniumを始めよう",
@@ -1090,8 +1090,8 @@
         "sidebar_label": "Unitの運用設計と設定"
       },
       "server-operator/unit_security": {
-        "title": "Unit",
-        "sidebar_label": "Unit"
+        "title": "Unitのセキュリティ（デフォルトからの変更を推奨する設定）",
+        "sidebar_label": "Unitのセキュリティ（デフォルトからの変更を推奨する設定）"
       },
       "software-developer/README": {
         "title": "サーバ開発者向けガイド",
@@ -1134,12 +1134,12 @@
         "sidebar_label": "クライアント登録&認証"
       },
       "user_guide/005_Model_construction": {
-        "title": "Cellのモデル",
-        "sidebar_label": "Cellのモデル"
+        "title": "Cellモデル",
+        "sidebar_label": "Cellモデル"
       },
       "user_guide/007_WebDAV_model": {
-        "title": "WebDAV",
-        "sidebar_label": "WebDAV"
+        "title": "WebDAVモデル",
+        "sidebar_label": "WebDAVモデル"
       },
       "user_guide/008_Glossary": {
         "title": "用語集",
