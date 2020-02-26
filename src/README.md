@@ -6,7 +6,7 @@ sidebar_label: Documentation for Personium
 
 All Personium-related documentation are available on this page.  
 If you have any questions, please contact [Slack Community](https://personium-io.slack.com/).  
-Register to join the Slack community [here](https://join.slack.com/t/personium-io/shared_invite/enQtNDA4OTg1MzI3NjM3LTIwNjVkZjZkZDVlNTQ2NjFmZTFjMTljMzAwNzk0ZjQ0MGJhMDIzOGIxN2UyZmMxYTkwMzIzOTU5ZmZkMmEyNzE).  
+Register to join the Slack community [here](https://bit.ly/Join_Personium_Slack).  
 
 ## Introduction  
 #### [What is Personium?](./overview/001_Introduction.md)

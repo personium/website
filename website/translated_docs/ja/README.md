@@ -7,7 +7,7 @@ sidebar_label: Personium ドキュメント
 本ページでは様々な立場でPersoniumに関心を持っていただけた方に向けた様々なドキュメントを公開しています。
 
 ご不明な点がございましたら、[Slackコミュニティ](https://personium-io.slack.com/)までお問い合わせください。
-Slackコミュニティへの参加登録は[こちら](https://join.slack.com/t/personium-io/shared_invite/enQtNDA4OTg1MzI3NjM3LTIwNjVkZjZkZDVlNTQ2NjFmZTFjMTljMzAwNzk0ZjQ0MGJhMDIzOGIxN2UyZmMxYTkwMzIzOTU5ZmZkMmEyNzE)からどうぞ。
+Slackコミュニティへの参加登録は[こちら](https://bit.ly/Join_Personium_Slack)からどうぞ。
 
 ## はじめに
 #### [Personiumとは](./overview/001_Introduction.md)
