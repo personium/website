@@ -5,6 +5,10 @@
     "previous": "Previous",
     "tagline": "An interconnectable open source PDS (Personal Data Store) server envisioning world wide web of protected data APIs.",
     "docs": {
+      "README": {
+        "title": "Personium ドキュメント",
+        "sidebar_label": "Personium ドキュメント"
+      },
       "apiref/000_Rest_API_Reference": {
         "title": "Personium",
         "sidebar_label": "Personium"
@@ -2300,22 +2304,17 @@
       "News": "News"
     },
     "categories": {
-      "API Reference": "API Reference",
-      "Unit Level API": "Unit Level API",
-      "Cell Level API": "Cell Level API",
-      "Box Level API": "Box Level API",
+      "API Reference": "APIリファレンス",
+      "Unit Level API": "ユニットレベルAPI",
+      "Cell Level API": "セルレベルAPI",
+      "Box Level API": "ボックスレベルAPI",
       "Common": "共通",
-      "README": "はじめに",
-      "app-developer": "アプリ開発者",
-      "cell-gui-developer": "CellGUI開発者",
-      "document-writer": "ドキュメント開発者",
-      "installation_guide": "インストール",
-      "overview": "概要",
-      "plugin-developer": "プラグイン開発者",
-      "server-operator": "サーバー運用者",
-      "software-developer": "ソフトウェア開発者",
-      "unit-administrator": "ユニット管理者",
-      "user_guide": "ユーザーガイド"
+      "Introduction": "はじめに",
+      "For Unit Administrator": "ユニット管理者ガイド",
+      "For Server Operator": "サーバ運用者ガイド",
+      "For App Developer": "アプリ開発者ガイド",
+      "For Document Writer": "ドキュメント開発者ガイド",
+      "For Server Developer": "サーバ開発者ガイド"
     }
   },
   "pages-strings": {
