@@ -25,12 +25,6 @@
       "user_guide/008_Glossary",
       "user_guide/990_Old_Version_API_Ref"
     ],
-    "For Unit Administrator": [
-      "unit-administrator/README",
-      "unit-administrator/Unit-User",
-      "unit-administrator/tutorial",
-      "unit-administrator/Data_Management"
-    ],
     "For Server Operator": [
       "server-operator/README",
       "server-operator/setup",
@@ -44,6 +38,12 @@
       "server-operator/unit_coordination",
       "server-operator/unit_security"
     ],
+    "For Unit Administrator": [
+      "unit-administrator/README",
+      "unit-administrator/Unit-User",
+      "unit-administrator/tutorial",
+      "unit-administrator/Data_Management"
+    ],
     "For App Developer": [
       "app-developer/README",
       "app-developer/using_odata",
@@ -56,6 +56,9 @@
       "app-developer/671_Engine_Script_Samples",
       "cell-gui-developer/README"
     ],
+    "For Document Writer": [
+      "document-writer/README"
+    ],
     "For Server Developer": [
       "software-developer/README",
       "software-developer/build_development_environment",
@@ -64,9 +67,6 @@
       "plugin-developer/Personium_AuthenticationPluginDeveloperManual",
       "plugin-developer/EngineExtension_Imple_and_Deploy",
       "plugin-developer/Extension_Send_Mail"
-    ],
-    "For Document Writer": [
-      "document-writer/README"
     ]
   },
   "bak": {
