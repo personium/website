@@ -1,7 +1,7 @@
 ---
 id: unit_security
-title: Unit のセキュリティ（デフォルトからの変更を推奨する設定）
-sidebar_label: Unit のセキュリティ（デフォルトからの変更を推奨する設定）
+title: Unitのセキュリティ（デフォルトからの変更を推奨する設定）
+sidebar_label: Unitのセキュリティ（デフォルトからの変更を推奨する設定）
 ---
 
 ## 概要
