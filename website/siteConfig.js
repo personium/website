@@ -22,7 +22,7 @@ const users = [
 
 const siteConfig = {
   customDocsPath : 'src',
-  docsUrl: 'docs',
+  docsUrl: 'new-docs',
   title: '', // Title for your website.
   tagline: [
     'An interconnectable open source PDS (Personal Data Store) server ',

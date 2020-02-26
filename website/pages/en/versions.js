@@ -106,7 +106,7 @@ function Versions(props) {
           </table>
           <p>
             You can find past versions of this project on{' '}
-            <a href={`${siteConfig.baseUrl}past-docs/${
+            <a href={`${siteConfig.baseUrl}docs/${
               props.language ? props.language + '/' : ''
             }index.html`}>here</a>.
           </p>
