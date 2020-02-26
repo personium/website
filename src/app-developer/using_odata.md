@@ -9,7 +9,7 @@ Personium's OData Service Collection (OSC) is a space that can handle relational
 To use OSC, you first need to create an OSC in any place in the Box.
 
 ## Confirm the schema information
-[Schema information acquisition API](../apiref/current/316_User_Defined_Data_Schema.md) allows you to check schema information such as table definition. The XML to be returned is a form called EDMX, which represents information on what kind of table, what kind of column, what kind of relationship is put in briefly.  
+[Schema information acquisition API](../apiref/316_User_Defined_Data_Schema.md) allows you to check schema information such as table definition. The XML to be returned is a form called EDMX, which represents information on what kind of table, what kind of column, what kind of relationship is put in briefly.  
 
 Naturally, there is nothing at the beginning of the table and no data can be registered as it is. First let's create a table.
 
@@ -18,7 +18,7 @@ In Personium, the schema manipulation itself is also done with the OData interfa
 
 ## Create table
 By creating an EntityType in Personium, it is possible to create something equivalent to a table.  
-   http://personium.io/docs/en/apiref/current/345_Create_EntityType.html
+   http://personium.io/docs/en/apiref/345_Create_EntityType.html
 
 > In the OData specification, EntityType is originally type information, and based on it, it is the idea of making something equivalent to a table called EntitySet. Personium emphasizes practicality and automatically creates an EntitySet (table equivalent concept) of the same name by creating EntityType. Therefore, the table will be created by EntityType creation.
 

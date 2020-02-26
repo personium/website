@@ -30,8 +30,8 @@ The storage and management of Engine Script is handled by Script Source Collecti
 ### Create / set / delete ESC
 ESC creation is done using the MKCOL method. ESC can be deleted by issuing the DELETE method to the created ESC path.
 
-* [Create ESC](../apiref/current/381_Create_Service_Collection_Source.html)
-* [Delete ESC](../apiref/current/383_Delete_Service_Collection_Source.html)
+* [Create ESC](../apiref/381_Create_Service_Collection_Source.html)
+* [Delete ESC](../apiref/383_Delete_Service_Collection_Source.html)
 
 In addition, ESC can rename and move with the MOVE method. Granting exec privilege is important in setting access rights using ACL method.
 
@@ -41,7 +41,7 @@ When creating an ESC, a collection directory for __src / source storage is autom
 ### Logic execution endpoint setting
 You can set the logic execution endpoint by issuing the PROPPATCH method to ESC and setting its properties.
 
-* [Execution setting of ESC](../apiref/current/380_Configure_Service_Collection.html)
+* [Execution setting of ESC](../apiref/380_Configure_Service_Collection.html)
 
 ## Engine Script
 Engine Script is a script to register in ESC. Currently only JavaScript is supported.

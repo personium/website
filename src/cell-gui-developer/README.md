@@ -26,9 +26,9 @@ If no configuration is present at Cell level, Unit level configuration will be u
 
 ||Unit Configuration|Cell Configuraion|Note|
 |:--|:--|:--|:--|
-|[Cell Root URL](../apiref/current/200_Cell_Root.md)|cell.relayhtmlurl.default|p:relayhtmlurl||
-|[Authorization Endpoint](../apiref/current/292_OAuth2_Authorization_Endpoint.md)|cell.authorizationhtmlurl.default|p:authorizationhtmlurl||
-|[Password Change](../apiref/current/292_OAuth2_Authorization_Endpoint.md)|cell.authorizationpasswordchangehtmlurl.default|p:authorizationpasswordchangehtmlurl||
+|[Cell Root URL](../apiref/200_Cell_Root.md)|cell.relayhtmlurl.default|p:relayhtmlurl||
+|[Authorization Endpoint](../apiref/292_OAuth2_Authorization_Endpoint.md)|cell.authorizationhtmlurl.default|p:authorizationhtmlurl||
+|[Password Change](../apiref/292_OAuth2_Authorization_Endpoint.md)|cell.authorizationpasswordchangehtmlurl.default|p:authorizationpasswordchangehtmlurl||
 
 ### Sample GUI
 You can get the source program of "home-app (demonstration application)" from following link.  

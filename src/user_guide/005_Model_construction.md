@@ -6,14 +6,14 @@
 
 #### [Authentication model](./003_Auth.md)  
 
-#### [Access control model](../apiref/current/006_Access_Control.md)  
+#### [Access control model](../apiref/006_Access_Control.md)  
 
 
 
 ### Box installation  
 
 * It is possible to install the Box in the specified path using the bar file.
-* For more details, please click [here](../apiref/current/007_Box_install.md).
+* For more details, please click [here](../apiref/007_Box_install.md).
 
 ### Collection  
 

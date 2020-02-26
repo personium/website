@@ -87,7 +87,7 @@ It is necessary to carry out the combination of the following measures in produc
     }
     ```
 
-1. We will change the password using the acquired token. Password change can be changed by specifying an arbitrary password in 'X-Personium-Credential' in the request header of [Account Update API](../apiref/current/215_Update_Account.md).
+1. We will change the password using the acquired token. Password change can be changed by specifying an arbitrary password in 'X-Personium-Credential' in the request header of [Account Update API](../apiref/215_Update_Account.md).
     In this example, "abcd 1234" is the changed password.
 
     > **(Note)**  

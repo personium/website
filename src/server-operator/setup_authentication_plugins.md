@@ -16,9 +16,9 @@ The Authentication Plugin describes it in a corresponding form.
 ## Behavior of Authentication Plugins
 By installing the authentication plugin the following will be expanded.  
 
-- When [Create Account](../apiref/current/212_Create_Account.md), the Type defined in the authentication plugin can be specified
-- By calling the [OAuth2.0 Token Endpoint](../apiref/current/293_OAuth2_Token_Endpoint.md) with "grant_type defined in the authentication plugin", it becomes possible to call the authentication function of the authentication plugin
-- If you call [OAuth2.0 Token Endpoint](../apiref/current/293_OAuth2_Token_Endpoint.md) with "grant_type defined in authentication plugin", you can specify free key-value for body
+- When [Create Account](../apiref/212_Create_Account.md), the Type defined in the authentication plugin can be specified
+- By calling the [OAuth2.0 Token Endpoint](../apiref/293_OAuth2_Token_Endpoint.md) with "grant_type defined in the authentication plugin", it becomes possible to call the authentication function of the authentication plugin
+- If you call [OAuth2.0 Token Endpoint](../apiref/293_OAuth2_Token_Endpoint.md) with "grant_type defined in authentication plugin", you can specify free key-value for body
 
 ## Repositories
 * [personium-plugin-sample](https://github.com/personium/personium-plugin-sample)
