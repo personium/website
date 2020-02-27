@@ -3,7 +3,7 @@ id: 003_Auth
 title: Authentication model
 sidebar_label: Authentication model
 ---
-Personim use the OAuth2 Authorization Framework, the industry standard, to allow many types of application to access resources on Personium in secure way.
+Personium use the OAuth2 Authorization Framework, the industry standard, to allow many types of application to access resources on Personium in secure way.
 
 In addition, Personium provides authorization flow based on the trust between cells.
 
