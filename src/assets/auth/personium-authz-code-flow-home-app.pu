@@ -1,0 +1,92 @@
+@startuml personium-authz-code-flow
+title Personium Authz Code Flow Sequence Diagram
+
+actor Alice as user
+participant "Browser" as browser
+
+box Home App Cell
+  participant "Static files\n(Html, css, and JS)" as homeStatics
+  participant "Token Endpoint" as homeAppTokenEP
+end box
+
+box App Cell #d4e1f5
+  participant "Static files\n(Html, css, and JS)" as statics
+  participant "Start OAuth2\nEngine Script" as startOAuth2
+  participant "Redirect URI\nEngine Script" as redirectUri
+  participant "Token Endpoint" as appTokenEP
+end box
+
+box Alice's Cell #e9ffe9
+  participant "Authz Endpoint" as authzEP
+  participant "Token Endpoint" as tokenEP
+  participant "Box data" as boxData
+end box
+
+user -> browser : Access home app pages
+activate browser
+  browser -> homeStatics :
+  activate homeStatics
+  browser <-- homeStatics
+  deactivate homeStatics
+user <-- browser :
+
+user -> browser : Input username and password
+  browser -> homeAppTokenEP : Authenticate\n(username\npassword\np_cookie=true)
+  activate homeAppTokenEP
+  browser <-- homeAppTokenEP
+  deactivate homeAppTokenEP
+user <-- browser
+
+user -> browser : Launch app
+  browser -> browser : Access app pages
+  deactivate browser
+
+  browser -> statics :
+  activate browser
+  activate statics
+  browser <-- statics
+  deactivate statics
+user <-- browser :
+
+  browser -> startOAuth2 : Start association with Alice's Cell
+  activate startOAuth2
+    startOAuth2 -> startOAuth2 : Add state parameter
+  browser <-- startOAuth2 : 303\n
+  deactivate startOAuth2
+  browser -> browser : Redirect
+  deactivate browser
+
+  browser -> authzEP : GET\nresponse_type=code\n&client_id=AppCellURL\n&redirect_uri\n&state\n with p_cookie
+  activate authzEP
+  activate browser
+  browser <-- authzEP : 303\ncode=****\nstate=****
+  deactivate authzEP
+  browser -> browser : Redirect
+  deactivate browser
+  browser -> redirectUri : GET\ncode=****\n&state=****
+  activate browser
+  activate redirectUri
+    redirectUri -> redirectUri : Check state
+    redirectUri -> appTokenEP : Get App Transcell Token\np_target=Alice's Cell URL
+    activate appTokenEP
+    redirectUri <-- appTokenEP : Return App Transcell Token
+    deactivate appTokenEP
+    redirectUri -> tokenEP : POST\ngrant_type=authorization_code\ncode=****\nclient_id=AppCellURL\nclient_secret=AppTranscellToken
+    activate tokenEP
+    redirectUri <-- tokenEP : Access Token
+    deactivate tokenEP
+  browser <-- redirectUri: Access Token
+  deactivate redirectUri
+user <-- browser
+deactivate browser
+
+user -> browser : Access data
+activate browser
+  browser -> boxData : With Access Token
+  activate boxData
+  browser <-- boxData :
+  deactivate boxData
+user <-- browser :
+deactivate browser
+
+@enduml
