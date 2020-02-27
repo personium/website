@@ -4,7 +4,7 @@
 
 #### Event model  
 
-#### [Authentication model](./003_Auth.md)  
+#### [Authentication/Authorization model](./003_Auth.md)  
 
 #### [Access control model](../apiref/006_Access_Control.md)  
 
