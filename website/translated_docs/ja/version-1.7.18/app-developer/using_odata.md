@@ -11,7 +11,7 @@ PersoniumのOData Service Collection (OSC)はBox内に作成できるリレー�
 OSCを使うにはまずBox内の任意の場所にOSCを作成する必要があります。
 
 ## スキーマ情報の確認
-テーブル定義といったいわゆるスキーマ情報は[スキーマ情報取得API](../apiref/current/316_User_Defined_Data_Schema.md)で確認できます。
+テーブル定義といったいわゆるスキーマ情報は[スキーマ情報取得API](../apiref/316_User_Defined_Data_Schema.md)で確認できます。
 返却されるXMLはEDMXと呼ばれる形式であり、簡単にいえばどんなテーブル、どんなカラムがあり、どのようなリレーションが張られているかという情報を表しています。
 
 当然最初は何もテーブルがない状態でありそのままでは何もデータが登録できません。まずはテーブルを作成してみましょう。
@@ -21,7 +21,7 @@ Personiumではスキーマ操作自体もODataのインターフェイスで行
 
 ## テーブル作成
 PersoniumではEntityTypeを作成することでテーブル相当のものが作成できます。　
-   http://personium.io/docs/ja/apiref/current/345_Create_EntityType.html
+   http://personium.io/docs/ja/apiref/345_Create_EntityType.html
 
 > OData仕様においてはEntityTypeとは本来は型情報であり、それに基づいてEntitySetというテーブル相当のものを作るという考え方となっています。Personiumでは実用性を重視し、EntityTypeを作成することにより同名のEntitySet（テーブル相当概念）を自動作成します。そのためEntityType作成によりテーブルが作成されることとなります。
 

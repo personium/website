@@ -37,8 +37,8 @@ Engine Scriptの格納・管理は、ESC内に自動で作られるScript Source
 
 ESCの作成はMKCOLメソッドを使って行います。作成したESCパスへのDELETEメソッド発行でESCの削除が可能です。
 
-* [ESCの作成](../apiref/current/381_Create_Service_Collection_Source.html)
-* [ESCの削除](../apiref/current/383_Delete_Service_Collection_Source.html)
+* [ESCの作成](../apiref/381_Create_Service_Collection_Source.html)
+* [ESCの削除](../apiref/383_Delete_Service_Collection_Source.html)
 
 また、ESCはMOVEメソッドでのリネームや移動が可能です。ACLメソッドを使ってのアクセス権設定においては、exec権限の付与が重要となります。
 
@@ -51,7 +51,7 @@ ESCを作成すると内部に自動的に__src/ というソース格納用のC
 
 ESCにPROPPATCHメソッドを発行しプロパティを設定することによりロジック実行エンドポイントを設定できます。
 
-* [ESCの実行設定](../apiref/current/380_Configure_Service_Collection.html)
+* [ESCの実行設定](../apiref/380_Configure_Service_Collection.html)
 
 
 ## Engine Script

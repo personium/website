@@ -16,9 +16,9 @@ OAuth2.0仕様では、このエンドポイントの必須パラメタである
 ## 認証Pluginの振舞
 認証Pluginを導入することで以下が拡張されます。  
 
-- [Account登録](../apiref/current/212_Create_Account.md)時、認証Pluginに定義されたTypeが指定可能になります
-- 認証Pluginに定義されたgrant_typeで[OAuth 2.0 トークンエンドポイント](../apiref/current/293_OAuth2_Token_Endpoint.md)を呼び出すことで、認証Pluginの認証機能を呼び出すことが可能になります
-- 認証Pluginに定義されたgrant_typeで[OAuth 2.0 トークンエンドポイント](../apiref/current/293_OAuth2_Token_Endpoint.md)を呼び出した場合、Bodyに自由なkey-valueを指定することが可能になります
+- [Account登録](../apiref/212_Create_Account.md)時、認証Pluginに定義されたTypeが指定可能になります
+- 認証Pluginに定義されたgrant_typeで[OAuth 2.0 トークンエンドポイント](../apiref/293_OAuth2_Token_Endpoint.md)を呼び出すことで、認証Pluginの認証機能を呼び出すことが可能になります
+- 認証Pluginに定義されたgrant_typeで[OAuth 2.0 トークンエンドポイント](../apiref/293_OAuth2_Token_Endpoint.md)を呼び出した場合、Bodyに自由なkey-valueを指定することが可能になります
 
 ## Repositories
 * [personium-plugin-sample](https://github.com/personium/personium-plugin-sample)

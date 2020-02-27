@@ -67,7 +67,7 @@ Home Appのランチャから起動されるPersnium Appは、何らかの起動
 
 いずれにせよ、このリクエストに対する認証成功応答JSONの"access_token"項目が「アプリ認証トークン」となります。JSONをパースして取得してください。
 
-参考： http://personium.io/docs/ja/apiref/current/293_OAuth2_Token_Endpoint.html
+参考： http://personium.io/docs/ja/apiref/293_OAuth2_Token_Endpoint.html
 
 
 ### アクセストークンを受け取る
@@ -83,14 +83,14 @@ Home Appのランチャから起動されるPersnium Appは、何らかの起動
 ここで返ってくるレスポンスJSONの中の"access_token"項目が、対象ユーザCellに対するあなたのアプリのためのアクセストークンです。
 この処理はアプリセル上のengineスクリプトで実装することをお勧めします。
 
-参考： http://personium.io/docs/ja/apiref/current/293_OAuth2_Token_Endpoint.html
+参考： http://personium.io/docs/ja/apiref/293_OAuth2_Token_Endpoint.html
 
 
 ### BoxのURLを取得する
 
 以下のAPIを使って、対象ユーザCell上のあなたのアプリのための領域であるBoxのURLを取得します。
 
-参考: http://personium.io/docs/ja/apiref/current/304_Get_Box_URL.html
+参考: http://personium.io/docs/ja/apiref/304_Get_Box_URL.html
 
 この際、Authorizationヘッダで取得したアクセストークンを指定するようにしてください。
 

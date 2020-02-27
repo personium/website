@@ -22,9 +22,9 @@ Cell単位の設定が優先され、Cell単位設定がない場合ユニット
 
 ||Unit 設定|Cell設定|備考|
 |:--|:--|:--|:--|
-|[Cell URLへのGET](../apiref/current/200_Cell_Root.md)|cell.relayhtmlurl.default|p:relayhtmlurl||
-|[認可エンドポイント](../apiref/current/292_OAuth2_Authorization_Endpoint.md)|cell.authorizationhtmlurl.default|p:authorizationhtmlurl||
-|[パスワード変更](../apiref/current/292_OAuth2_Authorization_Endpoint.md)|cell.authorizationpasswordchangehtmlurl.default|p:authorizationpasswordchangehtmlurl||
+|[Cell URLへのGET](../apiref/200_Cell_Root.md)|cell.relayhtmlurl.default|p:relayhtmlurl||
+|[認可エンドポイント](../apiref/292_OAuth2_Authorization_Endpoint.md)|cell.authorizationhtmlurl.default|p:authorizationhtmlurl||
+|[パスワード変更](../apiref/292_OAuth2_Authorization_Endpoint.md)|cell.authorizationpasswordchangehtmlurl.default|p:authorizationpasswordchangehtmlurl||
 
 
 ## サンプルGUI

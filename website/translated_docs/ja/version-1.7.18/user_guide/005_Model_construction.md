@@ -10,12 +10,12 @@ sidebar_label: Cellのモデル
 
 #### [認証モデル](./003_Auth.html)
 
-#### [アクセス制御モデル](../apiref/current/006_Access_Control.md)
+#### [アクセス制御モデル](../apiref/006_Access_Control.md)
 
 
 ### Boxインストール
 * barファイルを使って指定されたパスにBoxをインストールすることが可能です。
-* 詳細は[こちら](../apiref/current/007_Box_install.md)をご覧下さい。
+* 詳細は[こちら](../apiref/007_Box_install.md)をご覧下さい。
 
 ### Cell制御オブジェクト
 ![Cell制御オブジェクトE-R図](assets/cell_ctrl_obj.png "Cell制御オブジェクトE-R図")
