@@ -1,6 +1,8 @@
 # Personium Documentation
 
-Now developing.
+Website: https://personium.io
+
+Builded website repository: https://github.com/personium/personium.github.io
 
 ## Directories and files
 
