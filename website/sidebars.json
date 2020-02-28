@@ -2,7 +2,25 @@
   "api": {
     "API Reference": ["apiref/000_Rest_API_Reference"],
     "Unit Level API": [
-      "apiref/100_Create_Cell"
+      {
+        "type": "subcategory",
+        "label": "Unit Control Objects",
+        "ids": [
+          "apiref/100_Create_Cell",
+          "apiref/102_Retrieve_Cell",
+          "apiref/101_List_Cell",
+          "apiref/103_Update_Cell",
+          "apiref/104_Delete_Cell"
+        ]
+      },
+      {
+        "type": "subcategory",
+        "label": "Other API's",
+        "ids": [
+          "apiref/107_Get_Unit_Metadata",
+          "apiref/105_Cell_Recursive_Delete"
+        ]
+      }
     ],
     "Cell Level API": [
       "apiref/292_OAuth2_Authorization_Endpoint"
