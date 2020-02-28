@@ -19,11 +19,12 @@ Builded website repository: https://github.com/personium/personium.github.io
 
 ## How to update
 
-Before update, install [node.js](https://nodejs.org/) and [yarn](https://yarnpkg.com/).
+Personium docs are using [Docusaurus](https://docusaurus.io/en/). Before update, see it's docs.
 
-1. Clone this repository to your local environment
-2. Modify source files
-3. Check Website locally
+1. Install [node.js](https://nodejs.org/) and [yarn](https://yarnpkg.com/)
+2. Clone this repository to your local environment
+3. Modify source files
+4. Check Website locally
 
 ```shell
 $ cd website
@@ -34,8 +35,8 @@ Until making stable version, updated docs can be seen in `next` version like
 
 https://personium.io/new-docs/en/next/README/
 
-4. Git commit & git push to your forked repository
-5. Make a pull request
+5. Git commit & git push to your forked repository
+6. Make a pull request
 
 ### Website
 
