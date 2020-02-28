@@ -15,3 +15,63 @@ Builded website repository: https://github.com/personium/personium.github.io
 |website/static/|static files for website|
 |website/translated_docs/ja/|ja docs source|
 |website/siteConfig.js|Docusaurus config file|
+|website/sidebars.json|Sidebars config file|
+
+## How to update
+
+Before update, install [node.js](https://nodejs.org/) and [yarn](https://yarnpkg.com/).
+
+1. Clone this repository to your local environment
+2. Modify source files
+3. Check Website locally
+
+```shell
+$ cd website
+$ yarn start
+```
+
+Until making stable version, updated docs can be seen in `next` version like
+
+https://personium.io/new-docs/en/next/README/
+
+4. Git commit & git push to your forked repository
+5. Make a pull request
+
+### Website
+
+Update `website/static/`
+
+### News (Blog)
+
+Update `website/blog/`
+
+### Docs
+
+Update following.
+
+Main contents:
+
+|language|path|
+|--------|----|
+|en|`src/`|
+|ja|`website/translated_docs/ja/`|
+
+sidebars:
+
+`website/sidebars.json`
+
+sidebars label and title:
+
+|language|path|
+|--------|----|
+|en|`src/*.md` header's title & sidebar_label|
+|ja|`website/i18n/ja.json`|
+
+### API Reference
+
+Update following.
+
+|language|path|
+|--------|----|
+|en|`src/apiref/`|
+|ja|`website/translated_docs/ja/apiref/`|
