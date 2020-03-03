@@ -33,7 +33,7 @@ $ yarn start
 
 Until making stable version, updated docs can be seen in `next` version like
 
-https://personium.io/new-docs/en/next/README/
+https://localhost:3000/new-docs/en/next/README/
 
 5. Git commit & git push to your forked repository
 6. Make a pull request
