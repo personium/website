@@ -30,7 +30,7 @@ Only need to perfrom this once.
 
 ```shell
 $ cd website
-$ npm install
+$ yarn
 ```
 
 Modify files and launch local web server to verify the changes.  
