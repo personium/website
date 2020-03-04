@@ -20,11 +20,23 @@ Builded website repository: https://github.com/personium/personium.github.io
 ## How to update
 
 Personium docs are using [Docusaurus](https://docusaurus.io/en/). Before update, see it's docs.
+Install and configure your local environment.  
+Only need to perfrom this once.  
 
-1. Install [node.js](https://nodejs.org/) and [yarn](https://yarnpkg.com/)
-2. Clone this repository to your local environment
-3. Modify source files
-4. Check Website locally
+1. Install [node.js](https://nodejs.org/) and [yarn](https://yarnpkg.com/)  
+2. Clone this repository to your local environment  
+3. If you are behind company proxy, follow instructions from [this site](https://www.jhipster.tech/configuring-a-corporate-proxy/) to configure your lcoal environment properly.  
+4. Configure the environment using pre-defined configurations.  
+
+```shell
+$ cd website
+$ yarn
+```
+
+Modify files and launch local web server to verify the changes.  
+
+1. Modify source files
+2. Check Website locally
 
 ```shell
 $ cd website
@@ -35,18 +47,18 @@ Until making stable version, updated docs can be seen in `next` version like
 
 https://localhost:3000/new-docs/en/next/README/
 
-5. Git commit & git push to your forked repository
-6. Make a pull request
+3. Git commit & git push to your forked repository
+4. Make a pull request
 
-### Website
+### Website (https://personium.io)  
 
 Update `website/static/`
 
-### News (Blog)
+### News (https://personium.io/blog/)  
 
 Update `website/blog/`
 
-### Docs
+### Documentation
 
 Update following.
 
@@ -57,11 +69,11 @@ Main contents:
 |en|`src/`|
 |ja|`website/translated_docs/ja/`|
 
-sidebars:
+Sidebars:
 
 `website/sidebars.json`
 
-sidebars label and title:
+Sidebars label and title:
 
 |language|path|
 |--------|----|
