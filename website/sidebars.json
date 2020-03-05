@@ -43,24 +43,34 @@
       "user_guide/008_Glossary",
       "user_guide/990_Old_Version_API_Ref"
     ],
-    "For Server Operator": [
-      "server-operator/README",
-      "server-operator/setup",
-      "server-operator/Confirm_environment_settings",
-      "server-operator/setup_virtual_image",
-      "server-operator/proxy_exclusion_setting",
-      "server-operator/setup_authentication_plugins",
-      "server-operator/setup_engine_extensions",
-      "server-operator/unit_operation_design",
-      "server-operator/unit_config_list",
-      "server-operator/unit_coordination",
-      "server-operator/unit_security"
-    ],
-    "For Unit Administrator": [
-      "unit-administrator/README",
-      "unit-administrator/Unit-User",
-      "unit-administrator/tutorial",
-      "unit-administrator/Data_Management"
+    "For Personium Operators": [
+      {
+        "type": "subcategory",
+        "label": "For Server Operator",
+        "ids": [
+          "server-operator/README",
+          "server-operator/setup",
+          "server-operator/Confirm_environment_settings",
+          "server-operator/setup_virtual_image",
+          "server-operator/proxy_exclusion_setting",
+          "server-operator/setup_authentication_plugins",
+          "server-operator/setup_engine_extensions",
+          "server-operator/unit_operation_design",
+          "server-operator/unit_config_list",
+          "server-operator/unit_coordination",
+          "server-operator/unit_security"
+        ]
+      },
+      {
+        "type": "subcategory",
+        "label": "For Unit Administrator",
+        "ids": [
+          "unit-administrator/README",
+          "unit-administrator/Unit-User",
+          "unit-administrator/tutorial",
+          "unit-administrator/Data_Management"
+        ]
+      }
     ],
     "For App Developer": [
       "app-developer/README",
@@ -74,17 +84,27 @@
       "app-developer/671_Engine_Script_Samples",
       "cell-gui-developer/README"
     ],
-    "For Document Writer": [
-      "document-writer/README"
-    ],
-    "For Server Developer": [
-      "software-developer/README",
-      "software-developer/build_development_environment",
-      "software-developer/personium_tests",
-      "plugin-developer/README",
-      "plugin-developer/Personium_AuthenticationPluginDeveloperManual",
-      "plugin-developer/EngineExtension_Imple_and_Deploy",
-      "plugin-developer/Extension_Send_Mail"
+    "Contributor Guides": [
+      {
+        "type": "subcategory",
+        "label": "For Document Contribution",
+        "ids": [
+          "document-writer/README"
+        ]
+      },
+      {
+        "type": "subcategory",
+        "label": "For Code Contribution",
+        "ids": [
+          "software-developer/README",
+          "software-developer/build_development_environment",
+          "software-developer/personium_tests",
+          "plugin-developer/README",
+          "plugin-developer/Personium_AuthenticationPluginDeveloperManual",
+          "plugin-developer/EngineExtension_Imple_and_Deploy",
+          "plugin-developer/Extension_Send_Mail"
+        ]
+      }
     ]
   },
   "bak": {
