@@ -35,13 +35,13 @@ Documents for people who want to develop PDS applications using Personium's API
 
 ## Contributor Guides
 
-### For Code Contribution  
-
 ### For Document Contribution
 
 #### [Documentation Contributor's Guide](./document-writer/README)
 
 Personium Project is looking for documentation contributors.
+
+### For Code Contribution
 
 #### [Server Developer's Guide](./software-developer/README)
 
