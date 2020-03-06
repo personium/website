@@ -79,7 +79,26 @@
       }
     ],
     "Common": [
-      "apiref/005_Variable_of_Request_URL"
+      {
+        "type": "subcategory",
+        "label": "OData Acquisition Common Queries",
+        "ids": [
+          "apiref/404_Format_Query",
+          "apiref/405_Expand_Query",
+          "apiref/406_Select_Query",
+          "apiref/400_Orderby_Query",
+          "apiref/401_Top_Query",
+          "apiref/402_Skip_Query",
+          "apiref/403_Filter_Query",
+          "apiref/407_Inlinecount_Query",
+          "apiref/408_Full_Text_Search_Query"
+        ]
+      },
+      "apiref/005_Variable_of_Request_URL",
+      "apiref/004_Error_Messages",
+      "apiref/003_Common_Limitations_on_HTTP_Implementation",
+      "apiref/002_CORS_Support",
+      "apiref/001_Cross_Domain_Policy_File"
     ]
   },
   "docs": {
