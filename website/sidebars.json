@@ -23,7 +23,211 @@
       }
     ],
     "Cell Level API": [
-      "apiref/292_OAuth2_Authorization_Endpoint"
+      {
+        "type": "subcategory",
+        "label": "Authentication",
+        "ids": [
+          "apiref/292_OAuth2_Authorization_Endpoint",
+          "apiref/293_OAuth2_Token_Endpoint",
+          "apiref/294_Password_Change",
+          "apiref/297_OAtuh2_Token_Introspection_Endpoint",
+          "apiref/298_Get_Cell_Certs"
+        ]
+      },
+      {
+        "type": "subcategory",
+        "label": "Account (Cell Control Object)",
+        "ids": [
+          "apiref/212_Create_Account",
+          "apiref/213_Retrieve_Account",
+          "apiref/214_List_Account",
+          "apiref/215_Update_Account",
+          "apiref/2AC_Partial_Update_Account",
+          "apiref/216_Delete_Account",
+          "apiref/217_Link_Account",
+          "apiref/220_Unlink_Account",
+          "apiref/218_List_Account_links",
+          "apiref/221_Create_Obj_Via_Account_NP",
+          "apiref/222_List_Obj_Via_Account_NP"
+        ]
+      },
+      {
+        "type": "subcategory",
+        "label": "Access control",
+        "ids": [
+          "apiref/289_Cell_ACL",
+          "apiref/290_Cell_Get_Property",
+          "apiref/291_Cell_Change_Property"
+        ]
+      },
+      {
+        "type": "subcategory",
+        "label": "Cell Control Object",
+        "ids": [
+          "apiref/201_Create_Role",
+          "apiref/203_Retrieve_Role",
+          "apiref/202_List_Role",
+          "apiref/204_Update_Role",
+          "apiref/2AB_Partial_Update_Role",
+          "apiref/205_Delete_Role",
+          "apiref/206_Link_Role",
+          "apiref/209_Unlink_Role",
+          "apiref/207_List_Role_links",
+          "apiref/210_Create_Obj_Via_Role_NP",
+          "apiref/211_List_Obj_Via_Role_NP"
+        ]
+      },
+      {
+        "type": "subcategory",
+        "label": "External Cell (Cell Control Object)",
+        "ids": [
+          "apiref/223_Create_External_Cell",
+          "apiref/225_Retrieve_External_Cell",
+          "apiref/224_List_External_Cell",
+          "apiref/226_Update_External_Cell",
+          "apiref/2AD_Partial_Update_External_Cell",
+          "apiref/227_Delete_External_Cell",
+          "apiref/228_Link_External_Cell",
+          "apiref/231_Unlink_External_Cell",
+          "apiref/229_List_External_Cell_links",
+          "apiref/232_Create_Obj_Via_External_Cell_NP",
+          "apiref/233_List_Obj_Via_External_Cell_NP"
+        ]
+      },
+      {
+        "type": "subcategory",
+        "label": "Relation (Cell Control Object)",
+        "ids": [
+          "apiref/234_Create_Relation",
+          "apiref/236_Retrieve_Relation",
+          "apiref/235_List_Relation",
+          "apiref/237_Update_Relation",
+          "apiref/2AE_Partial_Update_Relation",
+          "apiref/238_Delete_Relation",
+          "apiref/239_Link_Relation",
+          "apiref/242_Unlink_Relation",
+          "apiref/240_List_Relation_links",
+          "apiref/243_Create_Obj_Via_Relation_NP",
+          "apiref/244_List_Obj_Via_Relation_NP"
+        ]
+      },
+      {
+        "type": "subcategory",
+        "label": "ExtRole (Cell Control Object)",
+        "ids": [
+          "apiref/245_Create_External_Role",
+          "apiref/247_Retrieve_External_Role",
+          "apiref/246_List_External_Role",
+          "apiref/248_Update_External_Role",
+          "apiref/2AF_Partial_Update_External_Role",
+          "apiref/249_Delete_External_Role",
+          "apiref/250_Link_External_Role",
+          "apiref/253_Unlink_External_Role",
+          "apiref/251_List_External_Role_links",
+          "apiref/254_Create_Obj_Via_External_Role_NP",
+          "apiref/255_List_Obj_Via_External_Role_NP"
+        ]
+      },
+      {
+        "type": "subcategory",
+        "label": "Box creation and management inside the Cell",
+        "ids": [
+          "apiref/385_Box_Export",
+          "apiref/302_Box_Installation",
+          "apiref/303_Progress_of_Bar_File_Installation",
+          "apiref/304_Get_Box_URL",
+          "apiref/295_Box_Recursive_Delete"
+        ]
+      },
+      {
+        "type": "subcategory",
+        "label": "Box (Cell Control Object)",
+        "ids": [
+          "apiref/256_Create_Box",
+          "apiref/258_Retrieve_Box",
+          "apiref/257_List_Box",
+          "apiref/259_Update_Box",
+          "apiref/2B0_Partial_Update_Box",
+          "apiref/260_Delete_Box",
+          "apiref/261_Link_Box",
+          "apiref/264_Unlink_Box",
+          "apiref/262_List_Box_links",
+          "apiref/265_Create_Obj_Via_Box_NP",
+          "apiref/266_List_Obj_Via_Box_NP"
+        ]
+      },
+      {
+        "type": "subcategory",
+        "label": "Message Manipulation",
+        "ids": [
+          "apiref/271_Send_Message",
+          "apiref/267_Received_Message_Approval",
+          "apiref/272_Retrieve_Sent_Message",
+          "apiref/273_List_Sent_Messages",
+          "apiref/274_Delete_Sent_Message",
+          "apiref/269_Retrieve_Received_Message",
+          "apiref/268_List_Received_Messages",
+          "apiref/270_Delete_Received_Message"
+        ]
+      },
+      {
+        "type": "subcategory",
+        "label": "Event processing",
+        "ids": [
+          "apiref/277_Event_Summary",
+          "apiref/278_Event_Reception",
+          "apiref/279_Event_Bus_Connect"
+        ]
+      },
+      {
+        "type": "subcategory",
+        "label": "Event Processing Rule (Cell Control Object)",
+        "ids": [
+          "apiref/2A0_Create_Rule",
+          "apiref/2A1_Retrieve_Rule",
+          "apiref/2A2_List_Rule",
+          "apiref/2A3_Update_Rule",
+          "apiref/2A4_Delete_Rule",
+          "apiref/2A5_Link_Rule",
+          "apiref/2A7_Unlink_Rule",
+          "apiref/2A6_List_Rule_links",
+          "apiref/2A8_Create_Obj_Via_Rule_NP",
+          "apiref/2A9_List_Obj_Via_Rule_NP",
+          "apiref/2AA_List_Internal_Rule"
+        ]
+      },
+      {
+        "type": "subcategory",
+        "label": "Event Log",
+        "ids": [
+          "apiref/285_Retrieve_Log_File",
+          "apiref/284_Retrieve_Log_File_list",
+          "apiref/283_Log_File_Information_Acquisition",
+          "apiref/286_Delete_Log_File"
+        ]
+      },
+      {
+        "type": "subcategory",
+        "label": "Cell root access",
+        "ids": [
+          "apiref/200_Cell_Root",
+          "apiref/296_Get_Cell_Metadata"
+        ]
+      },
+      {
+        "type": "subcategory",
+        "label": "Exporting / Importing the contents inside the Cell",
+        "ids": [
+          "apiref/501_Export_Cell",
+          "apiref/502_Progress_of_Export_Cell",
+          "apiref/507_Import_Cell",
+          "apiref/508_Progress_of_Import_Cell",
+          "apiref/503_Register_and_Update_Snapshot_Cell",
+          "apiref/504_Get_Snapshot_Cell",
+          "apiref/505_Get_Property_Snapshot_Cell",
+          "apiref/506_Delete_Snapshot_Cell"
+        ]
+      }
     ],
     "Box Level API": [
       {
