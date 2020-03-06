@@ -42,7 +42,7 @@ Returns HTML to display the authentication form or password change form.  Depend
 Returns HTML for displaying the authentication form or the password change form that are configured on the cell or the unit.  If nothing is configured default HTML will be returned.  
 
 #### How to configure HTML
-HTML can be configured with [Unit setting](../../server-operator/unit_config_list.md) or [Target cell property setting](./291_Cell_Change_Property.md). When both configurations exist, the cell configuration will have the priority.  
+HTML can be configured with [Unit setting](../server-operator/unit_config_list.md) or [Target cell property setting](./291_Cell_Change_Property.md). When both configurations exist, the cell configuration will have the priority.  
 
 Unit setting  
 ```

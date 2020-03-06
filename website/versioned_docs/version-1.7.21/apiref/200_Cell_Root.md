@@ -11,7 +11,7 @@ Get the HTML file set as the cell route.
 
 ### Precondition
 
-[Unit setting](../../server-operator/unit_config_list.md) or [target cell property setting](./291_Cell_Change_Property.md) is required. When both are set, the property setting of the target cell takes precedence.  
+[Unit setting](../server-operator/unit_config_list.md) or [target cell property setting](./291_Cell_Change_Property.md) is required. When both are set, the property setting of the target cell takes precedence.  
 
 Unit setting  
 ```
