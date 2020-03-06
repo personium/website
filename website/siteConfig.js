@@ -22,7 +22,7 @@ const users = [
 
 const siteConfig = {
   customDocsPath : 'src',
-  docsUrl: 'new-docs',
+  docsUrl: 'docs',
   title: '', // Title for your website.
   tagline: [
     'An interconnectable open source PDS (Personal Data Store) server ',
@@ -43,8 +43,8 @@ const siteConfig = {
 
   // For no header links in the top nav bar -> headerLinks: [],
   headerLinks: [
-    {href: '/new-docs/en/README', label: 'Documentation'},
-    {href: '/new-docs/en/apiref/000_Rest_API_Reference', label: 'API Reference'},
+    {href: '/docs/en/README', label: 'Documentation'},
+    {href: '/docs/en/apiref/000_Rest_API_Reference', label: 'API Reference'},
     {blog: true, label: 'News'},
     // {page: 'help', label: 'Help'},
   ],
