@@ -28,7 +28,7 @@
     "Box Level API": [
       {
         "type": "subcategory",
-        "label": "Collection WebDAV Operations",
+        "label": "WebDAV: Collection Operations",
         "ids": [
           "apiref/306_Create_Collection",
           "apiref/305_Get_Property",
@@ -39,7 +39,7 @@
       },
       {
         "type": "subcategory",
-        "label": "File WebDAV Operations",
+        "label": "WebDAV: File Operations",
         "ids": [
           "apiref/312_Register_and_Update_WebDAV",
           "apiref/311_Get_WebDav",
@@ -50,9 +50,91 @@
       },
       {
         "type": "subcategory",
-        "label": "Common WebDAV Operations",
+        "label": "WebDAV: Common Operations",
         "ids": [
           "apiref/315_Configure_Access_Control"
+        ]
+      },
+      {
+        "type": "subcategory",
+        "label": "OData: Schema Definition - EntityType",
+        "ids": [
+          "apiref/345_Create_EntityType",
+          "apiref/347_Retrieve_EntityType",
+          "apiref/346_List_EntityType",
+          "apiref/348_Update_EntityType",
+          "apiref/349_Delete_EntityType"
+        ]
+      },
+      {
+        "type": "subcategory",
+        "label": "OData: Schema Definition - Property",
+        "ids": [
+          "apiref/355_Create_Property",
+          "apiref/357_Retrieve_Property",
+          "apiref/356_List_Property",
+          "apiref/359_Delete_Property"
+        ]
+      },
+      {
+        "type": "subcategory",
+        "label": "OData: Schema Definition - AssociationEnd",
+        "ids": [
+          "apiref/318_Create_AssociationEnd",
+          "apiref/320_Retrieve_AssociationEnd",
+          "apiref/319_List_AssociationEnd",
+          "apiref/321_Update_AssociationEnd",
+          "apiref/322_Delete_AssociationEnd",
+          "apiref/323_Link_AssociationEnd",
+          "apiref/324_List_AssociationEnd_links",
+          "apiref/325_Unlink_AssociationEnd"
+        ]
+      },
+      {
+        "type": "subcategory",
+        "label": "OData: Schema Definition - ComplexType",
+        "ids": [
+          "apiref/327_Create_ComplexType",
+          "apiref/329_Retrieve_ComplexType",
+          "apiref/328_List_ComplexType",
+          "apiref/331_Delete_ComplexType"
+        ]
+      },
+      {
+        "type": "subcategory",
+        "label": "OData: Schema Definition - ComplexTypeProperty",
+        "ids": [
+          "apiref/336_Create_ComplexTypeProperty",
+          "apiref/338_Retrieve_ComplexTypeProperty",
+          "apiref/337_List_ComplexTypeProperty",
+          "apiref/339_Update_ComplexTypeProperty",
+          "apiref/340_Delete_ComplexTypeProperty"
+        ]
+      },
+      {
+        "type": "subcategory",
+        "label": "OData: Service Dcoument Retrieve/Schema Retrieve",
+        "ids": [
+          "apiref/317_Document_Acquisition_Service",
+          "apiref/316_User_Defined_Data_Schema"
+        ]
+      },
+      {
+        "type": "subcategory",
+        "label": "OData: Data Manipulation",
+        "ids": [
+          "apiref/364_Create_Entity",
+          "apiref/366_Retrieve_Entity",
+          "apiref/365_List_Entity",
+          "apiref/367_Update_Entity",
+          "apiref/369_Partial_Update_Entity",
+          "apiref/370_Delete_Entity",
+          "apiref/373_Link_User_Data",
+          "apiref/376_Unlink_User_Data",
+          "apiref/374_List_User_Data_links",
+          "apiref/377_Create_Entity_Via_NP",
+          "apiref/378_List_Entity_Via_NP",
+          "apiref/368_Entity_Bulk_Operations"
         ]
       },
       {
