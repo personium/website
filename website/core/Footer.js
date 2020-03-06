@@ -40,16 +40,16 @@ class Footer extends React.Component {
             {/* <a href={this.docUrl('doc1.html', this.props.language)}>
               Getting Started (or other categories)
             </a> */}
-            <a href="https://personium.io/docs/en/overview/001_Introduction.html">
+            <a href="/docs/en/overview/001_Introduction">
               Introduction
             </a>
-            <a href="https://personium.io/docs/en/server-operator/">
+            <a href="/docs/en/server-operator/README">
               Server Software Operator's Guide
             </a>
-            <a href="https://personium.io/docs/en/app-developer/">
+            <a href="/docs/en/app-developer/README">
               Application Developer's Guide
             </a>
-            <a href="https://personium.io/docs/en/apiref/current/000_Rest_API_Reference.html">
+            <a href="/docs/en/apiref/000_Rest_API_Reference">
               API Reference
             </a>
           </div>
