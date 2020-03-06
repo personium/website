@@ -26,7 +26,57 @@
       "apiref/292_OAuth2_Authorization_Endpoint"
     ],
     "Box Level API": [
-      "apiref/306_Create_Collection"
+      {
+        "type": "subcategory",
+        "label": "Collection WebDAV Operations",
+        "ids": [
+          "apiref/306_Create_Collection",
+          "apiref/305_Get_Property",
+          "apiref/308_Change_Property",
+          "apiref/309_Update_Move_Collection",
+          "apiref/310_Delete_Collection"
+        ]
+      },
+      {
+        "type": "subcategory",
+        "label": "File WebDAV Operations",
+        "ids": [
+          "apiref/312_Register_and_Update_WebDAV",
+          "apiref/311_Get_WebDav",
+          "apiref/307_Get_Property",
+          "apiref/313_Change_Property",
+          "apiref/314_Delete_WebDAV"
+        ]
+      },
+      {
+        "type": "subcategory",
+        "label": "Common WebDAV Operations",
+        "ids": [
+          "apiref/315_Configure_Access_Control"
+        ]
+      },
+      {
+        "type": "subcategory",
+        "label": "Engine Service Collection",
+        "ids": [
+          "apiref/381_Create_Service_Collection_Source",
+          "apiref/382_List_Service_Collection_Source",
+          "apiref/380_Configure_Service_Collection",
+          "apiref/383_Delete_Service_Collection_Source",
+          "apiref/384_Service_Execution"
+        ]
+      },
+      {
+        "type": "subcategory",
+        "label": "Stream Collection",
+        "ids": [
+          "apiref/386_Configure_Stream_Collection",
+          "apiref/390_Options_Stream_Collection",
+          "apiref/387_Stream_Collection_Send",
+          "apiref/388_Stream_Collection_Receive",
+          "apiref/389_Stream_Collection_Connect"
+        ]
+      }
     ],
     "Common": [
       "apiref/005_Variable_of_Request_URL"
