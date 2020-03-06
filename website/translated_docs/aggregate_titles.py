@@ -1,6 +1,7 @@
 import json
 import os
 from os import path
+from collections import OrderedDict
 
 sidebars_dict = {}
 
@@ -9,7 +10,7 @@ def add_info(locale, target_dir, filename, versions):
   with open(file_path, encoding='utf-8') as f:
     for line in f:
       if line.startswith('title: '):
-        title = line.split(' ')[1].rstrip()
+        title = ' '.join(line.split(' ')[1:]).rstrip()
         break
   sidebars_dict['%s/%s' % (target_dir, filename[:-3])] = {'title': title, 'sidebar_label': title}
   for version in versions:
@@ -29,7 +30,9 @@ def main():
             # print((locale, dirname, filename))
             add_info(locale, dirname, filename, versions)
   keys = sorted(sidebars_dict.keys())
-  sorted_dict = {key: sidebars_dict[key] for key in keys}
+  sorted_dict = OrderedDict()
+  for key in keys:
+    sorted_dict[key] = sidebars_dict[key]
   sidebars_json = json.dumps(sorted_dict, indent=2, ensure_ascii=False)
   print(sidebars_json)
 
