@@ -1,0 +1,474 @@
+{
+  "version-1.7.21-api": {
+    "API Reference": [
+      "version-1.7.21-apiref/000_Rest_API_Reference"
+    ],
+    "Unit Level API": [
+      {
+        "type": "subcategory",
+        "label": "Unit Control Objects",
+        "ids": [
+          "version-1.7.21-apiref/100_Create_Cell",
+          "version-1.7.21-apiref/102_Retrieve_Cell",
+          "version-1.7.21-apiref/101_List_Cell",
+          "version-1.7.21-apiref/103_Update_Cell",
+          "version-1.7.21-apiref/104_Delete_Cell"
+        ]
+      },
+      {
+        "type": "subcategory",
+        "label": "Other API's",
+        "ids": [
+          "version-1.7.21-apiref/107_Get_Unit_Metadata",
+          "version-1.7.21-apiref/105_Cell_Recursive_Delete"
+        ]
+      }
+    ],
+    "Cell Level API": [
+      {
+        "type": "subcategory",
+        "label": "Authentication",
+        "ids": [
+          "version-1.7.21-apiref/292_OAuth2_Authorization_Endpoint",
+          "version-1.7.21-apiref/293_OAuth2_Token_Endpoint",
+          "version-1.7.21-apiref/294_Password_Change",
+          "version-1.7.21-apiref/297_OAtuh2_Token_Introspection_Endpoint",
+          "version-1.7.21-apiref/298_Get_Cell_Certs"
+        ]
+      },
+      {
+        "type": "subcategory",
+        "label": "Account (Cell Control Object)",
+        "ids": [
+          "version-1.7.21-apiref/212_Create_Account",
+          "version-1.7.21-apiref/213_Retrieve_Account",
+          "version-1.7.21-apiref/214_List_Account",
+          "version-1.7.21-apiref/215_Update_Account",
+          "version-1.7.21-apiref/2AC_Partial_Update_Account",
+          "version-1.7.21-apiref/216_Delete_Account",
+          "version-1.7.21-apiref/217_Link_Account",
+          "version-1.7.21-apiref/220_Unlink_Account",
+          "version-1.7.21-apiref/218_List_Account_links",
+          "version-1.7.21-apiref/221_Create_Obj_Via_Account_NP",
+          "version-1.7.21-apiref/222_List_Obj_Via_Account_NP"
+        ]
+      },
+      {
+        "type": "subcategory",
+        "label": "Access control",
+        "ids": [
+          "version-1.7.21-apiref/289_Cell_ACL",
+          "version-1.7.21-apiref/290_Cell_Get_Property",
+          "version-1.7.21-apiref/291_Cell_Change_Property"
+        ]
+      },
+      {
+        "type": "subcategory",
+        "label": "Cell Control Object",
+        "ids": [
+          "version-1.7.21-apiref/201_Create_Role",
+          "version-1.7.21-apiref/203_Retrieve_Role",
+          "version-1.7.21-apiref/202_List_Role",
+          "version-1.7.21-apiref/204_Update_Role",
+          "version-1.7.21-apiref/2AB_Partial_Update_Role",
+          "version-1.7.21-apiref/205_Delete_Role",
+          "version-1.7.21-apiref/206_Link_Role",
+          "version-1.7.21-apiref/209_Unlink_Role",
+          "version-1.7.21-apiref/207_List_Role_links",
+          "version-1.7.21-apiref/210_Create_Obj_Via_Role_NP",
+          "version-1.7.21-apiref/211_List_Obj_Via_Role_NP"
+        ]
+      },
+      {
+        "type": "subcategory",
+        "label": "External Cell (Cell Control Object)",
+        "ids": [
+          "version-1.7.21-apiref/223_Create_External_Cell",
+          "version-1.7.21-apiref/225_Retrieve_External_Cell",
+          "version-1.7.21-apiref/224_List_External_Cell",
+          "version-1.7.21-apiref/226_Update_External_Cell",
+          "version-1.7.21-apiref/2AD_Partial_Update_External_Cell",
+          "version-1.7.21-apiref/227_Delete_External_Cell",
+          "version-1.7.21-apiref/228_Link_External_Cell",
+          "version-1.7.21-apiref/231_Unlink_External_Cell",
+          "version-1.7.21-apiref/229_List_External_Cell_links",
+          "version-1.7.21-apiref/232_Create_Obj_Via_External_Cell_NP",
+          "version-1.7.21-apiref/233_List_Obj_Via_External_Cell_NP"
+        ]
+      },
+      {
+        "type": "subcategory",
+        "label": "Relation (Cell Control Object)",
+        "ids": [
+          "version-1.7.21-apiref/234_Create_Relation",
+          "version-1.7.21-apiref/236_Retrieve_Relation",
+          "version-1.7.21-apiref/235_List_Relation",
+          "version-1.7.21-apiref/237_Update_Relation",
+          "version-1.7.21-apiref/2AE_Partial_Update_Relation",
+          "version-1.7.21-apiref/238_Delete_Relation",
+          "version-1.7.21-apiref/239_Link_Relation",
+          "version-1.7.21-apiref/242_Unlink_Relation",
+          "version-1.7.21-apiref/240_List_Relation_links",
+          "version-1.7.21-apiref/243_Create_Obj_Via_Relation_NP",
+          "version-1.7.21-apiref/244_List_Obj_Via_Relation_NP"
+        ]
+      },
+      {
+        "type": "subcategory",
+        "label": "ExtRole (Cell Control Object)",
+        "ids": [
+          "version-1.7.21-apiref/245_Create_External_Role",
+          "version-1.7.21-apiref/247_Retrieve_External_Role",
+          "version-1.7.21-apiref/246_List_External_Role",
+          "version-1.7.21-apiref/248_Update_External_Role",
+          "version-1.7.21-apiref/2AF_Partial_Update_External_Role",
+          "version-1.7.21-apiref/249_Delete_External_Role",
+          "version-1.7.21-apiref/250_Link_External_Role",
+          "version-1.7.21-apiref/253_Unlink_External_Role",
+          "version-1.7.21-apiref/251_List_External_Role_links",
+          "version-1.7.21-apiref/254_Create_Obj_Via_External_Role_NP",
+          "version-1.7.21-apiref/255_List_Obj_Via_External_Role_NP"
+        ]
+      },
+      {
+        "type": "subcategory",
+        "label": "Box creation and management inside the Cell",
+        "ids": [
+          "version-1.7.21-apiref/385_Box_Export",
+          "version-1.7.21-apiref/302_Box_Installation",
+          "version-1.7.21-apiref/303_Progress_of_Bar_File_Installation",
+          "version-1.7.21-apiref/304_Get_Box_URL",
+          "version-1.7.21-apiref/295_Box_Recursive_Delete"
+        ]
+      },
+      {
+        "type": "subcategory",
+        "label": "Box (Cell Control Object)",
+        "ids": [
+          "version-1.7.21-apiref/256_Create_Box",
+          "version-1.7.21-apiref/258_Retrieve_Box",
+          "version-1.7.21-apiref/257_List_Box",
+          "version-1.7.21-apiref/259_Update_Box",
+          "version-1.7.21-apiref/2B0_Partial_Update_Box",
+          "version-1.7.21-apiref/260_Delete_Box",
+          "version-1.7.21-apiref/261_Link_Box",
+          "version-1.7.21-apiref/264_Unlink_Box",
+          "version-1.7.21-apiref/262_List_Box_links",
+          "version-1.7.21-apiref/265_Create_Obj_Via_Box_NP",
+          "version-1.7.21-apiref/266_List_Obj_Via_Box_NP"
+        ]
+      },
+      {
+        "type": "subcategory",
+        "label": "Message Manipulation",
+        "ids": [
+          "version-1.7.21-apiref/271_Send_Message",
+          "version-1.7.21-apiref/267_Received_Message_Approval",
+          "version-1.7.21-apiref/272_Retrieve_Sent_Message",
+          "version-1.7.21-apiref/273_List_Sent_Messages",
+          "version-1.7.21-apiref/274_Delete_Sent_Message",
+          "version-1.7.21-apiref/269_Retrieve_Received_Message",
+          "version-1.7.21-apiref/268_List_Received_Messages",
+          "version-1.7.21-apiref/270_Delete_Received_Message"
+        ]
+      },
+      {
+        "type": "subcategory",
+        "label": "Event processing",
+        "ids": [
+          "version-1.7.21-apiref/277_Event_Summary",
+          "version-1.7.21-apiref/278_Event_Reception",
+          "version-1.7.21-apiref/279_Event_Bus_Connect"
+        ]
+      },
+      {
+        "type": "subcategory",
+        "label": "Event Processing Rule (Cell Control Object)",
+        "ids": [
+          "version-1.7.21-apiref/2A0_Create_Rule",
+          "version-1.7.21-apiref/2A1_Retrieve_Rule",
+          "version-1.7.21-apiref/2A2_List_Rule",
+          "version-1.7.21-apiref/2A3_Update_Rule",
+          "version-1.7.21-apiref/2A4_Delete_Rule",
+          "version-1.7.21-apiref/2A5_Link_Rule",
+          "version-1.7.21-apiref/2A7_Unlink_Rule",
+          "version-1.7.21-apiref/2A6_List_Rule_links",
+          "version-1.7.21-apiref/2A8_Create_Obj_Via_Rule_NP",
+          "version-1.7.21-apiref/2A9_List_Obj_Via_Rule_NP",
+          "version-1.7.21-apiref/2AA_List_Internal_Rule"
+        ]
+      },
+      {
+        "type": "subcategory",
+        "label": "Event Log",
+        "ids": [
+          "version-1.7.21-apiref/285_Retrieve_Log_File",
+          "version-1.7.21-apiref/284_Retrieve_Log_File_list",
+          "version-1.7.21-apiref/283_Log_File_Information_Acquisition",
+          "version-1.7.21-apiref/286_Delete_Log_File"
+        ]
+      },
+      {
+        "type": "subcategory",
+        "label": "Cell root access",
+        "ids": [
+          "version-1.7.21-apiref/200_Cell_Root",
+          "version-1.7.21-apiref/296_Get_Cell_Metadata"
+        ]
+      },
+      {
+        "type": "subcategory",
+        "label": "Exporting / Importing the contents inside the Cell",
+        "ids": [
+          "version-1.7.21-apiref/501_Export_Cell",
+          "version-1.7.21-apiref/502_Progress_of_Export_Cell",
+          "version-1.7.21-apiref/507_Import_Cell",
+          "version-1.7.21-apiref/508_Progress_of_Import_Cell",
+          "version-1.7.21-apiref/503_Register_and_Update_Snapshot_Cell",
+          "version-1.7.21-apiref/504_Get_Snapshot_Cell",
+          "version-1.7.21-apiref/505_Get_Property_Snapshot_Cell",
+          "version-1.7.21-apiref/506_Delete_Snapshot_Cell"
+        ]
+      }
+    ],
+    "Box Level API": [
+      {
+        "type": "subcategory",
+        "label": "WebDAV: Collection Operations",
+        "ids": [
+          "version-1.7.21-apiref/306_Create_Collection",
+          "version-1.7.21-apiref/305_Get_Property",
+          "version-1.7.21-apiref/308_Change_Property",
+          "version-1.7.21-apiref/309_Update_Move_Collection",
+          "version-1.7.21-apiref/310_Delete_Collection"
+        ]
+      },
+      {
+        "type": "subcategory",
+        "label": "WebDAV: File Operations",
+        "ids": [
+          "version-1.7.21-apiref/312_Register_and_Update_WebDAV",
+          "version-1.7.21-apiref/311_Get_WebDav",
+          "version-1.7.21-apiref/307_Get_Property",
+          "version-1.7.21-apiref/313_Change_Property",
+          "version-1.7.21-apiref/314_Delete_WebDAV"
+        ]
+      },
+      {
+        "type": "subcategory",
+        "label": "WebDAV: Common Operations",
+        "ids": [
+          "version-1.7.21-apiref/315_Configure_Access_Control"
+        ]
+      },
+      {
+        "type": "subcategory",
+        "label": "OData: Schema Definition - EntityType",
+        "ids": [
+          "version-1.7.21-apiref/345_Create_EntityType",
+          "version-1.7.21-apiref/347_Retrieve_EntityType",
+          "version-1.7.21-apiref/346_List_EntityType",
+          "version-1.7.21-apiref/348_Update_EntityType",
+          "version-1.7.21-apiref/349_Delete_EntityType"
+        ]
+      },
+      {
+        "type": "subcategory",
+        "label": "OData: Schema Definition - Property",
+        "ids": [
+          "version-1.7.21-apiref/355_Create_Property",
+          "version-1.7.21-apiref/357_Retrieve_Property",
+          "version-1.7.21-apiref/356_List_Property",
+          "version-1.7.21-apiref/359_Delete_Property"
+        ]
+      },
+      {
+        "type": "subcategory",
+        "label": "OData: Schema Definition - AssociationEnd",
+        "ids": [
+          "version-1.7.21-apiref/318_Create_AssociationEnd",
+          "version-1.7.21-apiref/320_Retrieve_AssociationEnd",
+          "version-1.7.21-apiref/319_List_AssociationEnd",
+          "version-1.7.21-apiref/321_Update_AssociationEnd",
+          "version-1.7.21-apiref/322_Delete_AssociationEnd",
+          "version-1.7.21-apiref/323_Link_AssociationEnd",
+          "version-1.7.21-apiref/324_List_AssociationEnd_links",
+          "version-1.7.21-apiref/325_Unlink_AssociationEnd"
+        ]
+      },
+      {
+        "type": "subcategory",
+        "label": "OData: Schema Definition - ComplexType",
+        "ids": [
+          "version-1.7.21-apiref/327_Create_ComplexType",
+          "version-1.7.21-apiref/329_Retrieve_ComplexType",
+          "version-1.7.21-apiref/328_List_ComplexType",
+          "version-1.7.21-apiref/331_Delete_ComplexType"
+        ]
+      },
+      {
+        "type": "subcategory",
+        "label": "OData: Schema Definition - ComplexTypeProperty",
+        "ids": [
+          "version-1.7.21-apiref/336_Create_ComplexTypeProperty",
+          "version-1.7.21-apiref/338_Retrieve_ComplexTypeProperty",
+          "version-1.7.21-apiref/337_List_ComplexTypeProperty",
+          "version-1.7.21-apiref/339_Update_ComplexTypeProperty",
+          "version-1.7.21-apiref/340_Delete_ComplexTypeProperty"
+        ]
+      },
+      {
+        "type": "subcategory",
+        "label": "OData: Service Dcoument Retrieve/Schema Retrieve",
+        "ids": [
+          "version-1.7.21-apiref/317_Document_Acquisition_Service",
+          "version-1.7.21-apiref/316_User_Defined_Data_Schema"
+        ]
+      },
+      {
+        "type": "subcategory",
+        "label": "OData: Data Manipulation",
+        "ids": [
+          "version-1.7.21-apiref/364_Create_Entity",
+          "version-1.7.21-apiref/366_Retrieve_Entity",
+          "version-1.7.21-apiref/365_List_Entity",
+          "version-1.7.21-apiref/367_Update_Entity",
+          "version-1.7.21-apiref/369_Partial_Update_Entity",
+          "version-1.7.21-apiref/370_Delete_Entity",
+          "version-1.7.21-apiref/373_Link_User_Data",
+          "version-1.7.21-apiref/376_Unlink_User_Data",
+          "version-1.7.21-apiref/374_List_User_Data_links",
+          "version-1.7.21-apiref/377_Create_Entity_Via_NP",
+          "version-1.7.21-apiref/378_List_Entity_Via_NP",
+          "version-1.7.21-apiref/368_Entity_Bulk_Operations"
+        ]
+      },
+      {
+        "type": "subcategory",
+        "label": "Engine Service Collection",
+        "ids": [
+          "version-1.7.21-apiref/381_Create_Service_Collection_Source",
+          "version-1.7.21-apiref/382_List_Service_Collection_Source",
+          "version-1.7.21-apiref/380_Configure_Service_Collection",
+          "version-1.7.21-apiref/383_Delete_Service_Collection_Source",
+          "version-1.7.21-apiref/384_Service_Execution"
+        ]
+      },
+      {
+        "type": "subcategory",
+        "label": "Stream Collection",
+        "ids": [
+          "version-1.7.21-apiref/386_Configure_Stream_Collection",
+          "version-1.7.21-apiref/390_Options_Stream_Collection",
+          "version-1.7.21-apiref/387_Stream_Collection_Send",
+          "version-1.7.21-apiref/388_Stream_Collection_Receive",
+          "version-1.7.21-apiref/389_Stream_Collection_Connect"
+        ]
+      }
+    ],
+    "Common": [
+      {
+        "type": "subcategory",
+        "label": "OData Acquisition Common Queries",
+        "ids": [
+          "version-1.7.21-apiref/404_Format_Query",
+          "version-1.7.21-apiref/405_Expand_Query",
+          "version-1.7.21-apiref/406_Select_Query",
+          "version-1.7.21-apiref/400_Orderby_Query",
+          "version-1.7.21-apiref/401_Top_Query",
+          "version-1.7.21-apiref/402_Skip_Query",
+          "version-1.7.21-apiref/403_Filter_Query",
+          "version-1.7.21-apiref/407_Inlinecount_Query",
+          "version-1.7.21-apiref/408_Full_Text_Search_Query"
+        ]
+      },
+      "version-1.7.21-apiref/005_Variable_of_Request_URL",
+      "version-1.7.21-apiref/004_Error_Messages",
+      "version-1.7.21-apiref/003_Common_Limitations_on_HTTP_Implementation",
+      "version-1.7.21-apiref/002_CORS_Support",
+      "version-1.7.21-apiref/001_Cross_Domain_Policy_File"
+    ]
+  },
+  "version-1.7.21-docs": {
+    "Introduction": [
+      "version-1.7.21-README",
+      "version-1.7.21-overview/001_Introduction",
+      "version-1.7.21-user_guide/001_Personium_Architecture",
+      "version-1.7.21-user_guide/005_Model_construction",
+      "version-1.7.21-user_guide/003_Auth",
+      "version-1.7.21-user_guide/007_WebDAV_model",
+      "version-1.7.21-user_guide/008_Glossary",
+      "version-1.7.21-user_guide/990_Old_Version_API_Ref"
+    ],
+    "For Personium Operators": [
+      {
+        "type": "subcategory",
+        "label": "For Server Operator",
+        "ids": [
+          "version-1.7.21-server-operator/README",
+          "version-1.7.21-server-operator/setup",
+          "version-1.7.21-server-operator/Confirm_environment_settings",
+          "version-1.7.21-server-operator/setup_virtual_image",
+          "version-1.7.21-server-operator/proxy_exclusion_setting",
+          "version-1.7.21-server-operator/setup_authentication_plugins",
+          "version-1.7.21-server-operator/setup_engine_extensions",
+          "version-1.7.21-server-operator/unit_operation_design",
+          "version-1.7.21-server-operator/unit_config_list",
+          "version-1.7.21-server-operator/unit_coordination",
+          "version-1.7.21-server-operator/unit_security"
+        ]
+      },
+      {
+        "type": "subcategory",
+        "label": "For Unit Administrator",
+        "ids": [
+          "version-1.7.21-unit-administrator/README",
+          "version-1.7.21-unit-administrator/Unit-User",
+          "version-1.7.21-unit-administrator/tutorial",
+          "version-1.7.21-unit-administrator/Data_Management"
+        ]
+      }
+    ],
+    "For App Developer": [
+      "version-1.7.21-app-developer/README",
+      "version-1.7.21-app-developer/using_odata",
+      "version-1.7.21-app-developer/Personium_Apps",
+      "version-1.7.21-user_guide/004_Client_auth",
+      "version-1.7.21-app-developer/app_authn",
+      "version-1.7.21-app-developer/Roles",
+      "version-1.7.21-app-developer/launch_from_homeapp",
+      "version-1.7.21-app-developer/Personium-Engine",
+      "version-1.7.21-app-developer/671_Engine_Script_Samples",
+      "version-1.7.21-cell-gui-developer/README"
+    ],
+    "Contributor Guides": [
+      {
+        "type": "subcategory",
+        "label": "For Document Contribution",
+        "ids": [
+          "version-1.7.21-document-writer/README"
+        ]
+      },
+      {
+        "type": "subcategory",
+        "label": "For Code Contribution",
+        "ids": [
+          "version-1.7.21-software-developer/README",
+          "version-1.7.21-software-developer/build_development_environment",
+          "version-1.7.21-software-developer/personium_tests",
+          "version-1.7.21-plugin-developer/README",
+          "version-1.7.21-plugin-developer/Personium_AuthenticationPluginDeveloperManual",
+          "version-1.7.21-plugin-developer/EngineExtension_Imple_and_Deploy",
+          "version-1.7.21-plugin-developer/Extension_Send_Mail"
+        ]
+      }
+    ]
+  },
+  "version-1.7.21-bak": {
+    "installation_guide": [
+      "version-1.7.21-installation_guide/001_Readme_before_installation",
+      "version-1.7.21-installation_guide/002_Build_from_Source",
+      "version-1.7.21-installation_guide/003_Install_To_LocalMachine"
+    ]
+  }
+}
