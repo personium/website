@@ -1,5 +1,5 @@
 ---
-id: version-1.7.21-285_Retrieve_Log_File
+id: 285_Retrieve_Log_File
 title: ログファイル取得
 sidebar_label: ログファイル取得
 ---

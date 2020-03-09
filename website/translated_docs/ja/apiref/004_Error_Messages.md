@@ -1,5 +1,5 @@
 ---
-id: version-1.7.21-004_Error_Messages
+id: 004_Error_Messages
 title: エラーメッセージ一覧
 sidebar_label: エラーメッセージ一覧
 ---

@@ -1,5 +1,5 @@
 ---
-id: version-1.7.21-347_Retrieve_EntityType
+id: 347_Retrieve_EntityType
 title: EntityType取得
 sidebar_label: EntityType取得
 ---

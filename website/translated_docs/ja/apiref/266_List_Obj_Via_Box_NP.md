@@ -1,5 +1,5 @@
 ---
-id: version-1.7.21-266_List_Obj_Via_Box_NP
+id: 266_List_Obj_Via_Box_NP
 title: BoxのNavigation Property経由での他オブジェクト一覧取得
 sidebar_label: BoxのNavigation Property経由での他オブジェクト一覧取得
 ---

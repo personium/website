@@ -1,5 +1,5 @@
 ---
-id: version-1.7.21-proxy_exclusion_setting
+id: proxy_exclusion_setting
 title: プロキシ除外設定
 sidebar_label: プロキシ除外設定
 ---

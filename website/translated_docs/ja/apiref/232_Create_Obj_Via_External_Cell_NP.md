@@ -1,5 +1,5 @@
 ---
-id: version-1.7.21-232_Create_Obj_Via_External_Cell_NP
+id: 232_Create_Obj_Via_External_Cell_NP
 title: ExtCellのNavigation Property経由での他オブジェクト登録
 sidebar_label: ExtCellのNavigation Property経由での他オブジェクト登録
 ---

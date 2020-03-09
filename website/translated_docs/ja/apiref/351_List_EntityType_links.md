@@ -1,5 +1,5 @@
 ---
-id: version-1.7.21-351_List_EntityType_links
+id: 351_List_EntityType_links
 title: EntityTypeと他オブジェクトとのリンク一覧取得
 sidebar_label: EntityTypeと他オブジェクトとのリンク一覧取得
 ---

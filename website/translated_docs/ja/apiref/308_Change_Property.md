@@ -1,5 +1,5 @@
 ---
-id: version-1.7.21-308_Change_Property
+id: 308_Change_Property
 title: コレクション設定変更
 sidebar_label: コレクション設定変更
 ---

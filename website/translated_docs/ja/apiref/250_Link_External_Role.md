@@ -1,5 +1,5 @@
 ---
-id: version-1.7.21-250_Link_External_Role
+id: 250_Link_External_Role
 title: ExtRoleと他オブジェクトとのリンク
 sidebar_label: ExtRoleと他オブジェクトとのリンク
 ---

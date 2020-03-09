@@ -1,5 +1,5 @@
 ---
-id: version-1.7.21-358_Update_Property
+id: 358_Update_Property
 title: Property更新
 sidebar_label: Property更新
 ---

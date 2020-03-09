@@ -1,5 +1,5 @@
 ---
-id: version-1.7.21-329_Retrieve_ComplexType
+id: 329_Retrieve_ComplexType
 title: ComplexType取得
 sidebar_label: ComplexType取得
 ---

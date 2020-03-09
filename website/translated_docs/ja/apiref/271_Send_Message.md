@@ -1,5 +1,5 @@
 ---
-id: version-1.7.21-271_Send_Message
+id: 271_Send_Message
 title: メッセージ送信
 sidebar_label: メッセージ送信
 ---

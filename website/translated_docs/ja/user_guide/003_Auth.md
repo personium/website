@@ -1,5 +1,5 @@
 ---
-id: version-1.7.21-003_Auth
+id: 003_Auth
 title: 認証/認可モデル
 sidebar_label: 認証/認可モデル
 ---

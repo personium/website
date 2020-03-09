@@ -1,5 +1,5 @@
 ---
-id: version-1.7.21-365_List_Entity
+id: 365_List_Entity
 title: Entity一覧取得
 sidebar_label: Entity一覧取得
 ---

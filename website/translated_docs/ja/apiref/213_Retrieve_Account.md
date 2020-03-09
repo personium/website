@@ -1,5 +1,5 @@
 ---
-id: version-1.7.21-213_Retrieve_Account
+id: 213_Retrieve_Account
 title: Account取得
 sidebar_label: Account取得
 ---

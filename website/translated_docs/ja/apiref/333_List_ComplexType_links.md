@@ -1,5 +1,5 @@
 ---
-id: version-1.7.21-333_List_ComplexType_links
+id: 333_List_ComplexType_links
 title: ComplexTypeと他オブジェクトとのリンク一覧取得
 sidebar_label: ComplexTypeと他オブジェクトとのリンク一覧取得
 ---

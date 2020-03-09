@@ -1,5 +1,5 @@
 ---
-id: version-1.7.21-209_Unlink_Role
+id: 209_Unlink_Role
 title: Roleと他オブジェクトとのリンク解除
 sidebar_label: Roleと他オブジェクトとのリンク解除
 ---

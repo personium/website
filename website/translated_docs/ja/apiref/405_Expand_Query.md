@@ -1,5 +1,5 @@
 ---
-id: version-1.7.21-405_Expand_Query
+id: 405_Expand_Query
 title: $expand クエリ
 sidebar_label: $expand クエリ
 ---

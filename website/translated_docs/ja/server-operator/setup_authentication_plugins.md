@@ -1,5 +1,5 @@
 ---
-id: version-1.7.21-setup_authentication_plugins
+id: setup_authentication_plugins
 title: 認証Pluginのセットアップ
 sidebar_label: 認証Pluginのセットアップ
 ---

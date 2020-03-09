@@ -1,5 +1,5 @@
 ---
-id: version-1.7.21-273_List_Sent_Messages
+id: 273_List_Sent_Messages
 title: SentMessage一覧取得
 sidebar_label: SentMessage一覧取得
 ---

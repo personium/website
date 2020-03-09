@@ -1,5 +1,5 @@
 ---
-id: version-1.7.21-354_List_EntityType_Links_Navigation_Property
+id: 354_List_EntityType_Links_Navigation_Property
 title: Property更新
 sidebar_label: Property更新
 ---

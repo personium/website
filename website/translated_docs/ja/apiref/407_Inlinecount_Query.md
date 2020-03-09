@@ -1,5 +1,5 @@
 ---
-id: version-1.7.21-407_Inlinecount_Query
+id: 407_Inlinecount_Query
 title: $inlinecount クエリ
 sidebar_label: $inlinecount クエリ
 ---

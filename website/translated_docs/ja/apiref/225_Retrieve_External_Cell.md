@@ -1,5 +1,5 @@
 ---
-id: version-1.7.21-225_Retrieve_External_Cell
+id: 225_Retrieve_External_Cell
 title: ExtCell取得
 sidebar_label: ExtCell取得
 ---

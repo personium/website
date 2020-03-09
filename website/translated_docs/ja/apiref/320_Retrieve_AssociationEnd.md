@@ -1,5 +1,5 @@
 ---
-id: version-1.7.21-320_Retrieve_AssociationEnd
+id: 320_Retrieve_AssociationEnd
 title: AssociationEnd取得
 sidebar_label: AssociationEnd取得
 ---

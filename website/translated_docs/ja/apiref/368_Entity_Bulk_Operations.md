@@ -1,5 +1,5 @@
 ---
-id: version-1.7.21-368_Entity_Bulk_Operations
+id: 368_Entity_Bulk_Operations
 title: Entity一括操作($batch)
 sidebar_label: Entity一括操作($batch)
 ---

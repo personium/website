@@ -1,5 +1,5 @@
 ---
-id: version-1.7.21-325_Unlink_AssociationEnd
+id: 325_Unlink_AssociationEnd
 title: AssociationEndと他オブジェクトとのリンク解除
 sidebar_label: AssociationEndと他オブジェクトとのリンク解除
 ---

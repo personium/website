@@ -1,5 +1,5 @@
 ---
-id: version-1.7.21-272_Retrieve_Sent_Message
+id: 272_Retrieve_Sent_Message
 title: SentMessage取得
 sidebar_label: SentMessage取得
 ---

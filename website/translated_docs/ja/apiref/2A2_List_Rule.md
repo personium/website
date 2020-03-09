@@ -1,5 +1,5 @@
 ---
-id: version-1.7.21-2A2_List_Rule
+id: 2A2_List_Rule
 title: Rule一覧取得
 sidebar_label: Rule一覧取得
 ---

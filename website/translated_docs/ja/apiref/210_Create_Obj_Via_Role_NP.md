@@ -1,5 +1,5 @@
 ---
-id: version-1.7.21-210_Create_Obj_Via_Role_NP
+id: 210_Create_Obj_Via_Role_NP
 title: RoleのNavigation Property経由での他オブジェクト登録
 sidebar_label: RoleのNavigation Property経由での他オブジェクト登録
 ---

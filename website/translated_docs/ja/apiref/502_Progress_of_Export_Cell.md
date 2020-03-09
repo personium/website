@@ -1,5 +1,5 @@
 ---
-id: version-1.7.21-502_Progress_of_Export_Cell
+id: 502_Progress_of_Export_Cell
 title: Cellエクスポート状態取得
 sidebar_label: Cellエクスポート状態取得
 ---

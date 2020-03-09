@@ -1,5 +1,5 @@
 ---
-id: version-1.7.21-389_Stream_Collection_Connect
+id: 389_Stream_Collection_Connect
 title: Stream Collection への Web Socket 接続
 sidebar_label: Stream Collection への Web Socket 接続
 ---

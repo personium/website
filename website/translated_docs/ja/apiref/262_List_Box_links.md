@@ -1,5 +1,5 @@
 ---
-id: version-1.7.21-262_List_Box_links
+id: 262_List_Box_links
 title: Boxと他オブジェクトとのリンク一覧取得
 sidebar_label: Boxと他オブジェクトとのリンク一覧取得
 ---

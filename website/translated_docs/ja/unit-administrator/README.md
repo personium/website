@@ -1,5 +1,5 @@
 ---
-id: version-1.7.21-README
+id: README
 title: ユニット管理者向けガイド
 sidebar_label: ユニット管理者向けガイド
 ---

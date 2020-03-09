@@ -1,5 +1,5 @@
 ---
-id: version-1.7.21-107_Get_Unit_Metadata
+id: 107_Get_Unit_Metadata
 title: Unitメタデータ取得
 sidebar_label: Unitメタデータ取得
 ---

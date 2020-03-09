@@ -1,5 +1,5 @@
 ---
-id: version-1.7.21-README
+id: README
 title: Personium ドキュメント
 sidebar_label: Personium ドキュメント
 ---

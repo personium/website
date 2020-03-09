@@ -1,5 +1,5 @@
 ---
-id: version-1.7.21-007_Box_install
+id: 007_Box_install
 title: Boxインストール
 sidebar_label: Boxインストール
 ---

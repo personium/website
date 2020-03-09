@@ -1,5 +1,5 @@
 ---
-id: version-1.7.21-364_Create_Entity
+id: 364_Create_Entity
 title: Entity作成
 sidebar_label: Entity作成
 ---

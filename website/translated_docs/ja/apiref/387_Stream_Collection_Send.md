@@ -1,5 +1,5 @@
 ---
-id: version-1.7.21-387_Stream_Collection_Send
+id: 387_Stream_Collection_Send
 title: Stream Collection送信
 sidebar_label: Stream Collection送信
 ---

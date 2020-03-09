@@ -1,5 +1,5 @@
 ---
-id: version-1.7.21-270_Delete_Received_Message
+id: 270_Delete_Received_Message
 title: ReceivedMessage削除
 sidebar_label: ReceivedMessage削除
 ---

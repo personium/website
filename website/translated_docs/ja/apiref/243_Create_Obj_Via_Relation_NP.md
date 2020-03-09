@@ -1,5 +1,5 @@
 ---
-id: version-1.7.21-243_Create_Obj_Via_Relation_NP
+id: 243_Create_Obj_Via_Relation_NP
 title: RelationのNavigation Property経由での他オブジェクト登録
 sidebar_label: RelationのNavigation Property経由での他オブジェクト登録
 ---

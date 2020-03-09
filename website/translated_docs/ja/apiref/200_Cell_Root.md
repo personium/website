@@ -1,5 +1,5 @@
 ---
-id: version-1.7.21-200_Cell_Root
+id: 200_Cell_Root
 title: Cellルート取得
 sidebar_label: Cellルート取得
 ---

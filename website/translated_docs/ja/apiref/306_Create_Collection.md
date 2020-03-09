@@ -1,5 +1,5 @@
 ---
-id: version-1.7.21-306_Create_Collection
+id: 306_Create_Collection
 title: コレクション作成
 sidebar_label: コレクション作成
 ---

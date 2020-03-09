@@ -1,5 +1,5 @@
 ---
-id: version-1.7.21-349_Delete_EntityType
+id: 349_Delete_EntityType
 title: EntityType削除
 sidebar_label: EntityType削除
 ---

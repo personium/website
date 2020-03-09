@@ -1,5 +1,5 @@
 ---
-id: version-1.7.21-385_Box_Export
+id: 385_Box_Export
 title: Boxエクスポート
 sidebar_label: Boxエクスポート
 ---

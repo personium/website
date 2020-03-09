@@ -1,5 +1,5 @@
 ---
-id: version-1.7.21-Extension_Send_Mail
+id: Extension_Send_Mail
 title: Extension: メール送信機能
 sidebar_label: Extension: メール送信機能
 ---

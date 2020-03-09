@@ -1,5 +1,5 @@
 ---
-id: version-1.7.21-239_Link_Relation
+id: 239_Link_Relation
 title: Relationと他オブジェクトとのリンク
 sidebar_label: Relationと他オブジェクトとのリンク
 ---

@@ -1,5 +1,5 @@
 ---
-id: version-1.7.21-002_Build_from_Source
+id: 002_Build_from_Source
 title: ソースからのビルド
 sidebar_label: ソースからのビルド
 ---

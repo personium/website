@@ -1,5 +1,5 @@
 ---
-id: version-1.7.21-267_Received_Message_Approval
+id: 267_Received_Message_Approval
 title: メッセージ状態変更(未読,既読,承認)
 sidebar_label: メッセージ状態変更(未読,既読,承認)
 ---

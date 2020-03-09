@@ -1,5 +1,5 @@
 ---
-id: version-1.7.21-004_Client_auth
+id: 004_Client_auth
 title: クライアント登録&認証
 sidebar_label: クライアント登録&認証
 ---

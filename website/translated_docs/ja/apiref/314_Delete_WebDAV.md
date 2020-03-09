@@ -1,5 +1,5 @@
 ---
-id: version-1.7.21-314_Delete_WebDAV
+id: 314_Delete_WebDAV
 title: ファイル削除
 sidebar_label: ファイル削除
 ---

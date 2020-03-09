@@ -1,5 +1,5 @@
 ---
-id: version-1.7.21-286_Delete_Log_File
+id: 286_Delete_Log_File
 title: ログファイル削除
 sidebar_label: ログファイル削除
 ---

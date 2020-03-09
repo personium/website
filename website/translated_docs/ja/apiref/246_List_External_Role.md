@@ -1,5 +1,5 @@
 ---
-id: version-1.7.21-246_List_External_Role
+id: 246_List_External_Role
 title: ExtRole一覧取得
 sidebar_label: ExtRole一覧取得
 ---

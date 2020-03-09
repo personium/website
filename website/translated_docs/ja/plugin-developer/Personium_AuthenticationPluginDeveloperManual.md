@@ -1,5 +1,5 @@
 ---
-id: version-1.7.21-Personium_AuthenticationPluginDeveloperManual
+id: Personium_AuthenticationPluginDeveloperManual
 title: Personium認証Plugin開発ガイド
 sidebar_label: Personium認証Plugin開発ガイド
 ---

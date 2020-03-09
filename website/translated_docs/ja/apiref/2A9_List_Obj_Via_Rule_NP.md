@@ -1,5 +1,5 @@
 ---
-id: version-1.7.21-2A9_List_Obj_Via_Rule_NP
+id: 2A9_List_Obj_Via_Rule_NP
 title: RuleのNavigation Property経由での他オブジェクト一覧取得
 sidebar_label: RuleのNavigation Property経由での他オブジェクト一覧取得
 ---

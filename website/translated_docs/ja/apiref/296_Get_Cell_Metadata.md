@@ -1,5 +1,5 @@
 ---
-id: version-1.7.21-296_Get_Cell_Metadata
+id: 296_Get_Cell_Metadata
 title: Cellメタデータ取得
 sidebar_label: Cellメタデータ取得
 ---

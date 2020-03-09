@@ -1,5 +1,5 @@
 ---
-id: version-1.7.21-304_Get_Box_URL
+id: 304_Get_Box_URL
 title: BoxURL取得
 sidebar_label: BoxURL取得
 ---

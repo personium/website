@@ -1,5 +1,5 @@
 ---
-id: version-1.7.21-380_Configure_Service_Collection
+id: 380_Configure_Service_Collection
 title: サービスコレクションソース設定適用
 sidebar_label: サービスコレクションソース設定適用
 ---

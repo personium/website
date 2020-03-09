@@ -1,5 +1,5 @@
 ---
-id: version-1.7.21-faq
+id: faq
 title: サーバソフトウェア運用者からのFAQ
 sidebar_label: サーバソフトウェア運用者からのFAQ
 ---

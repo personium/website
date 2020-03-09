@@ -1,5 +1,5 @@
 ---
-id: version-1.7.21-255_List_Obj_Via_External_Role_NP
+id: 255_List_Obj_Via_External_Role_NP
 title: ExtRoleのNavigation Property経由での他オブジェクト一覧取得
 sidebar_label: ExtRoleのNavigation Property経由での他オブジェクト一覧取得
 ---

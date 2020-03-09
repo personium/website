@@ -1,5 +1,5 @@
 ---
-id: version-1.7.21-338_Retrieve_ComplexTypeProperty
+id: 338_Retrieve_ComplexTypeProperty
 title: ComplexTypeProperty取得
 sidebar_label: ComplexTypeProperty取得
 ---

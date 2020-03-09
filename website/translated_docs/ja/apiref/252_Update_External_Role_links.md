@@ -1,5 +1,5 @@
 ---
-id: version-1.7.21-252_Update_External_Role_links
+id: 252_Update_External_Role_links
 title: ExtRole_$links更新
 sidebar_label: ExtRole_$links更新
 ---

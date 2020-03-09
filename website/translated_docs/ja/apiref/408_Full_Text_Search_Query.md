@@ -1,5 +1,5 @@
 ---
-id: version-1.7.21-408_Full_Text_Search_Query
+id: 408_Full_Text_Search_Query
 title: 全文検索(q) クエリ
 sidebar_label: 全文検索(q) クエリ
 ---

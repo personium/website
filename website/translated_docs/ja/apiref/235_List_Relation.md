@@ -1,5 +1,5 @@
 ---
-id: version-1.7.21-235_List_Relation
+id: 235_List_Relation
 title: Relation一覧取得
 sidebar_label: Relation一覧取得
 ---

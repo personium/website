@@ -1,5 +1,5 @@
 ---
-id: version-1.7.21-257_List_Box
+id: 257_List_Box
 title: Box一覧取得
 sidebar_label: Box一覧取得
 ---

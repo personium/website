@@ -1,5 +1,5 @@
 ---
-id: version-1.7.21-386_Configure_Stream_Collection
+id: 386_Configure_Stream_Collection
 title: Streamコレクションソース設定変更
 sidebar_label: Streamコレクションソース設定変更
 ---

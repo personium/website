@@ -1,5 +1,5 @@
 ---
-id: version-1.7.21-355_Create_Property
+id: 355_Create_Property
 title: Property登録
 sidebar_label: Property登録
 ---

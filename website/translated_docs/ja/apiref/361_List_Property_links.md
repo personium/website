@@ -1,5 +1,5 @@
 ---
-id: version-1.7.21-361_List_Property_links
+id: 361_List_Property_links
 title: Propertyと他オブジェクトとのリンク一覧取得
 sidebar_label: Propertyと他オブジェクトとのリンク一覧取得
 ---

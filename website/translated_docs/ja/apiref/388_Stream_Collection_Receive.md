@@ -1,5 +1,5 @@
 ---
-id: version-1.7.21-388_Stream_Collection_Receive
+id: 388_Stream_Collection_Receive
 title: Stream Collection受信
 sidebar_label: Stream Collection受信
 ---

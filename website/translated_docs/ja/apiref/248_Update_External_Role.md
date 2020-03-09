@@ -1,5 +1,5 @@
 ---
-id: version-1.7.21-248_Update_External_Role
+id: 248_Update_External_Role
 title: ExtRole更新
 sidebar_label: ExtRole更新
 ---

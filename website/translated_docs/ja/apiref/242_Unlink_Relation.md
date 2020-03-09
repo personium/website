@@ -1,5 +1,5 @@
 ---
-id: version-1.7.21-242_Unlink_Relation
+id: 242_Unlink_Relation
 title: Relationと他オブジェクトとのリンク解除
 sidebar_label: Relationと他オブジェクトとのリンク解除
 ---

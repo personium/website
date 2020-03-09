@@ -1,5 +1,5 @@
 ---
-id: version-1.7.21-504_Get_Snapshot_Cell
+id: 504_Get_Snapshot_Cell
 title: Cellスナップショットファイル取得
 sidebar_label: Cellスナップショットファイル取得
 ---

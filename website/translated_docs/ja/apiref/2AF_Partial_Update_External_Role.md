@@ -1,5 +1,5 @@
 ---
-id: version-1.7.21-2AF_Partial_Update_External_Role
+id: 2AF_Partial_Update_External_Role
 title: ExtRole部分更新
 sidebar_label: ExtRole部分更新
 ---

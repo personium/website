@@ -1,5 +1,5 @@
 ---
-id: version-1.7.21-236_Retrieve_Relation
+id: 236_Retrieve_Relation
 title: Relation取得
 sidebar_label: Relation取得
 ---

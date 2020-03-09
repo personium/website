@@ -1,5 +1,5 @@
 ---
-id: version-1.7.21-219_Update_Account_links
+id: 219_Update_Account_links
 title: Account_$links更新
 sidebar_label: Account_$links更新
 ---

@@ -1,5 +1,5 @@
 ---
-id: version-1.7.21-298_Get_Cell_Certs
+id: 298_Get_Cell_Certs
 title: Cell公開鍵取得
 sidebar_label: Cell公開鍵取得
 ---

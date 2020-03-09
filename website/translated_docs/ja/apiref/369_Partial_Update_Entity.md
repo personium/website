@@ -1,5 +1,5 @@
 ---
-id: version-1.7.21-369_Partial_Update_Entity
+id: 369_Partial_Update_Entity
 title: Entity部分更新
 sidebar_label: Entity部分更新
 ---

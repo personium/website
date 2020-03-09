@@ -1,5 +1,5 @@
 ---
-id: version-1.7.21-336_Create_ComplexTypeProperty
+id: 336_Create_ComplexTypeProperty
 title: ComplexTypeProperty登録
 sidebar_label: ComplexTypeProperty登録
 ---

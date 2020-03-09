@@ -1,5 +1,5 @@
 ---
-id: version-1.7.21-005_Variable_of_Request_URL
+id: 005_Variable_of_Request_URL
 title: リクエストURLの変数一覧
 sidebar_label: リクエストURLの変数一覧
 ---

@@ -1,5 +1,5 @@
 ---
-id: version-1.7.21-Personium_Apps
+id: Personium_Apps
 title: Personiumアプリ
 sidebar_label: Personiumアプリ
 ---

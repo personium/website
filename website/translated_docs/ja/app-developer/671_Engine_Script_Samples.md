@@ -1,5 +1,5 @@
 ---
-id: version-1.7.21-671_Engine_Script_Samples
+id: 671_Engine_Script_Samples
 title: Engine Script のサンプル
 sidebar_label: Engine Script のサンプル
 ---

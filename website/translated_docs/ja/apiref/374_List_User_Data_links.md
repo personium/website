@@ -1,5 +1,5 @@
 ---
-id: version-1.7.21-374_List_User_Data_links
+id: 374_List_User_Data_links
 title: Entityと他オブジェクトとのリンク一覧取得
 sidebar_label: Entityと他オブジェクトとのリンク一覧取得
 ---

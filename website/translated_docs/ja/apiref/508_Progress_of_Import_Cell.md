@@ -1,5 +1,5 @@
 ---
-id: version-1.7.21-508_Progress_of_Import_Cell
+id: 508_Progress_of_Import_Cell
 title: Cellインポート状態取得
 sidebar_label: Cellインポート状態取得
 ---

@@ -1,5 +1,5 @@
 ---
-id: version-1.7.21-206_Link_Role
+id: 206_Link_Role
 title: Roleと他オブジェクトとのリンク
 sidebar_label: Roleと他オブジェクトとのリンク
 ---

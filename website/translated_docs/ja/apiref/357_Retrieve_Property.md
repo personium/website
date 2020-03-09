@@ -1,5 +1,5 @@
 ---
-id: version-1.7.21-357_Retrieve_Property
+id: 357_Retrieve_Property
 title: Property取得
 sidebar_label: Property取得
 ---

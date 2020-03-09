@@ -1,5 +1,5 @@
 ---
-id: version-1.7.21-2A5_Link_Rule
+id: 2A5_Link_Rule
 title: Ruleと他オブジェクト（Box）とのリンク
 sidebar_label: Ruleと他オブジェクト（Box）とのリンク
 ---

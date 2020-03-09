@@ -1,5 +1,5 @@
 ---
-id: version-1.7.21-README
+id: README
 title: アプリ開発者向けガイド
 sidebar_label: アプリ開発者向けガイド
 ---

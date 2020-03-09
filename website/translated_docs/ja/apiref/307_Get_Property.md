@@ -1,5 +1,5 @@
 ---
-id: version-1.7.21-307_Get_Property
+id: 307_Get_Property
 title: ファイル設定取得
 sidebar_label: ファイル設定取得
 ---

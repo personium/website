@@ -1,5 +1,5 @@
 ---
-id: version-1.7.21-2AE_Partial_Update_Relation
+id: 2AE_Partial_Update_Relation
 title: Relation部分更新
 sidebar_label: Relation部分更新
 ---

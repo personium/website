@@ -1,5 +1,5 @@
 ---
-id: version-1.7.21-503_Register_and_Update_Snapshot_Cell
+id: 503_Register_and_Update_Snapshot_Cell
 title: Cellスナップショットファイル登録更新
 sidebar_label: Cellスナップショットファイル登録更新
 ---

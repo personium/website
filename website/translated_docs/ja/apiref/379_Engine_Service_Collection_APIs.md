@@ -1,5 +1,5 @@
 ---
-id: version-1.7.21-379_Engine_Service_Collection_APIs
+id: 379_Engine_Service_Collection_APIs
 title: Engineサービスコレクションとは  
 sidebar_label: Engineサービスコレクションとは  
 ---

@@ -1,5 +1,5 @@
 ---
-id: version-1.7.21-284_Retrieve_Log_File_list
+id: 284_Retrieve_Log_File_list
 title: ログファイル一覧取得
 sidebar_label: ログファイル一覧取得
 ---

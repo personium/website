@@ -1,5 +1,5 @@
 ---
-id: version-1.7.21-275_AtomPub_Service_Document
+id: 275_AtomPub_Service_Document
 title: AtomPub Service Document
 sidebar_label: AtomPub Service Document
 ---

@@ -1,5 +1,5 @@
 ---
-id: version-1.7.21-350_Register_EntityType_links
+id: 350_Register_EntityType_links
 title: EntityTypeと他オブジェクトとのリンク
 sidebar_label: EntityTypeと他オブジェクトとのリンク
 ---

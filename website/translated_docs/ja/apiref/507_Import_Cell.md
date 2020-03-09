@@ -1,5 +1,5 @@
 ---
-id: version-1.7.21-507_Import_Cell
+id: 507_Import_Cell
 title: Cellインポート
 sidebar_label: Cellインポート
 ---

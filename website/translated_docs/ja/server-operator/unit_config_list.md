@@ -1,5 +1,5 @@
 ---
-id: version-1.7.21-unit_config_list
+id: unit_config_list
 title: Unitの設定一覧
 sidebar_label: Unitの設定一覧
 ---

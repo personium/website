@@ -1,5 +1,5 @@
 ---
-id: version-1.7.21-295_Box_Recursive_Delete
+id: 295_Box_Recursive_Delete
 title: Box再帰削除
 sidebar_label: Box再帰削除
 ---

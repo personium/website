@@ -1,5 +1,5 @@
 ---
-id: version-1.7.21-294_Password_Change
+id: 294_Password_Change
 title: パスワード変更(\__mypassword)
 sidebar_label: パスワード変更(\__mypassword)
 ---

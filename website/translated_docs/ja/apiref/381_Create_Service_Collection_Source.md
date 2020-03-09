@@ -1,5 +1,5 @@
 ---
-id: version-1.7.21-381_Create_Service_Collection_Source
+id: 381_Create_Service_Collection_Source
 title: サービスコレクションソース作成
 sidebar_label: サービスコレクションソース作成
 ---

@@ -1,5 +1,5 @@
 ---
-id: version-1.7.21-367_Update_Entity
+id: 367_Update_Entity
 title: Entity更新
 sidebar_label: Entity更新
 ---

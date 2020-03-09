@@ -1,5 +1,5 @@
 ---
-id: version-1.7.21-README
+id: README
 title: サーバ開発者向けガイド
 sidebar_label: サーバ開発者向けガイド
 ---

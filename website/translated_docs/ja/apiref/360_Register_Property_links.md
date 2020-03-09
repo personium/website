@@ -1,5 +1,5 @@
 ---
-id: version-1.7.21-360_Register_Property_links
+id: 360_Register_Property_links
 title: Propertyと他オブジェクトとのリンク
 sidebar_label: Propertyと他オブジェクトとのリンク
 ---

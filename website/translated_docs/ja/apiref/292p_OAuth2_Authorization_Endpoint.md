@@ -1,5 +1,5 @@
 ---
-id: version-1.7.21-292p_OAuth2_Authorization_Endpoint
+id: 292p_OAuth2_Authorization_Endpoint
 title: OAuth2.0 認可エンドポイントにおける POST の受け入れ
 sidebar_label: OAuth2.0 認可エンドポイントにおける POST の受け入れ
 ---

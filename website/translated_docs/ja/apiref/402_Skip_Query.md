@@ -1,5 +1,5 @@
 ---
-id: version-1.7.21-402_Skip_Query
+id: 402_Skip_Query
 title: $skip クエリ
 sidebar_label: $skip クエリ
 ---

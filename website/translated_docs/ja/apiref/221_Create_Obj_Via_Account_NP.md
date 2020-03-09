@@ -1,5 +1,5 @@
 ---
-id: version-1.7.21-221_Create_Obj_Via_Account_NP
+id: 221_Create_Obj_Via_Account_NP
 title: AccountのNavigation Property経由での他オブジェクト登録
 sidebar_label: AccountのNavigation Property経由での他オブジェクト登録
 ---

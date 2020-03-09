@@ -1,5 +1,5 @@
 ---
-id: version-1.7.21-README
+id: README
 title: Personium ドキュメント整備・改善への参加方法  
 sidebar_label: Personium ドキュメント整備・改善への参加方法  
 ---

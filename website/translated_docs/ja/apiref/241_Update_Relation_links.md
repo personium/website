@@ -1,5 +1,5 @@
 ---
-id: version-1.7.21-241_Update_Relation_links
+id: 241_Update_Relation_links
 title: Relation_$links更新
 sidebar_label: Relation_$links更新
 ---

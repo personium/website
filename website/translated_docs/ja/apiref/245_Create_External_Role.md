@@ -1,5 +1,5 @@
 ---
-id: version-1.7.21-245_Create_External_Role
+id: 245_Create_External_Role
 title: ExtRole登録
 sidebar_label: ExtRole登録
 ---

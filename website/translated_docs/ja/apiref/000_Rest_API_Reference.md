@@ -1,5 +1,5 @@
 ---
-id: version-1.7.21-000_Rest_API_Reference
+id: 000_Rest_API_Reference
 title: Personium API リファレンス  
 sidebar_label: Personium API リファレンス  
 ---

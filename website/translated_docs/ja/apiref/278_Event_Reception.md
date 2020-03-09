@@ -1,5 +1,5 @@
 ---
-id: version-1.7.21-278_Event_Reception
+id: 278_Event_Reception
 title: 外部イベント受付
 sidebar_label: 外部イベント受付
 ---

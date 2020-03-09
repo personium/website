@@ -1,5 +1,5 @@
 ---
-id: version-1.7.21-253_Unlink_External_Role
+id: 253_Unlink_External_Role
 title: ExtRoleと他オブジェクトとのリンク解除
 sidebar_label: ExtRoleと他オブジェクトとのリンク解除
 ---

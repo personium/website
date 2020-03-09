@@ -1,5 +1,5 @@
 ---
-id: version-1.7.21-322_Delete_AssociationEnd
+id: 322_Delete_AssociationEnd
 title: AssociationEnd削除
 sidebar_label: AssociationEnd削除
 ---

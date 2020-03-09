@@ -1,5 +1,5 @@
 ---
-id: version-1.7.21-setup_engine_extensions
+id: setup_engine_extensions
 title: Engine Extensionのセットアップ
 sidebar_label: Engine Extensionのセットアップ
 ---

@@ -1,5 +1,5 @@
 ---
-id: version-1.7.21-373_Link_User_Data
+id: 373_Link_User_Data
 title: Entityと他オブジェクトとのリンク
 sidebar_label: Entityと他オブジェクトとのリンク
 ---

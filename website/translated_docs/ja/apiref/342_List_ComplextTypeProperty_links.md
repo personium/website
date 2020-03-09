@@ -1,5 +1,5 @@
 ---
-id: version-1.7.21-342_List_ComplextTypeProperty_links
+id: 342_List_ComplextTypeProperty_links
 title: ComplexTypePropertyと他オブジェクトとのリンク一覧取得
 sidebar_label: ComplexTypePropertyと他オブジェクトとのリンク一覧取得
 ---

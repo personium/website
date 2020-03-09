@@ -1,5 +1,5 @@
 ---
-id: version-1.7.21-unit_coordination
+id: unit_coordination
 title: Unit間連携の設定方法
 sidebar_label: Unit間連携の設定方法
 ---

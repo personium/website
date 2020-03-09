@@ -1,5 +1,5 @@
 ---
-id: version-1.7.21-230_Update_External_Cell_links
+id: 230_Update_External_Cell_links
 title: Extcell_$links更新
 sidebar_label: Extcell_$links更新
 ---

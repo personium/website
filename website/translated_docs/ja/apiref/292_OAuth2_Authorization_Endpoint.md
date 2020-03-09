@@ -1,5 +1,5 @@
 ---
-id: version-1.7.21-292_OAuth2_Authorization_Endpoint
+id: 292_OAuth2_Authorization_Endpoint
 title: OAuth 2.0 認可エンドポイント
 sidebar_label: OAuth 2.0 認可エンドポイント
 ---

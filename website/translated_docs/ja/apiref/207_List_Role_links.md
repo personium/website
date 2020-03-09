@@ -1,5 +1,5 @@
 ---
-id: version-1.7.21-207_List_Role_links
+id: 207_List_Role_links
 title: Roleと他オブジェクトとのリンク一覧取得
 sidebar_label: Roleと他オブジェクトとのリンク一覧取得
 ---

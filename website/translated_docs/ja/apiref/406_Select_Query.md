@@ -1,5 +1,5 @@
 ---
-id: version-1.7.21-406_Select_Query
+id: 406_Select_Query
 title: $select クエリ
 sidebar_label: $select クエリ
 ---

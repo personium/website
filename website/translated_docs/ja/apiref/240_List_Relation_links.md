@@ -1,5 +1,5 @@
 ---
-id: version-1.7.21-240_List_Relation_links
+id: 240_List_Relation_links
 title: Relationと他オブジェクトとのリンク一覧取得
 sidebar_label: Relationと他オブジェクトとのリンク一覧取得
 ---

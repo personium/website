@@ -1,5 +1,5 @@
 ---
-id: version-1.7.21-346_List_EntityType
+id: 346_List_EntityType
 title: EntityType一覧取得
 sidebar_label: EntityType一覧取得
 ---

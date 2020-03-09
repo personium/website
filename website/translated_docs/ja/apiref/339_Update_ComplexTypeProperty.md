@@ -1,5 +1,5 @@
 ---
-id: version-1.7.21-339_Update_ComplexTypeProperty
+id: 339_Update_ComplexTypeProperty
 title: ComplexTypeProperty更新
 sidebar_label: ComplexTypeProperty更新
 ---

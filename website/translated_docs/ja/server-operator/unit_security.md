@@ -1,5 +1,5 @@
 ---
-id: version-1.7.21-unit_security
+id: unit_security
 title: Unitのセキュリティ（デフォルトからの変更を推奨する設定）
 sidebar_label: Unitのセキュリティ（デフォルトからの変更を推奨する設定）
 ---

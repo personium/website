@@ -1,5 +1,5 @@
 ---
-id: version-1.7.21-247_Retrieve_External_Role
+id: 247_Retrieve_External_Role
 title: ExtRole取得
 sidebar_label: ExtRole取得
 ---

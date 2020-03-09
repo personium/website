@@ -1,5 +1,5 @@
 ---
-id: version-1.7.21-383_Delete_Service_Collection_Source
+id: 383_Delete_Service_Collection_Source
 title: サービスコレクションソース削除
 sidebar_label: サービスコレクションソース削除
 ---

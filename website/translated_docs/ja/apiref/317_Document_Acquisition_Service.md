@@ -1,5 +1,5 @@
 ---
-id: version-1.7.21-317_Document_Acquisition_Service
+id: 317_Document_Acquisition_Service
 title: サービスドキュメント取得
 sidebar_label: サービスドキュメント取得
 ---

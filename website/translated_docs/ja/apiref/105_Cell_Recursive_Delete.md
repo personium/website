@@ -1,5 +1,5 @@
 ---
-id: version-1.7.21-105_Cell_Recursive_Delete
+id: 105_Cell_Recursive_Delete
 title: Cell再帰削除
 sidebar_label: Cell再帰削除
 ---

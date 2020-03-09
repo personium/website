@@ -1,5 +1,5 @@
 ---
-id: version-1.7.21-setup
+id: setup
 title: Ansibleを使ってPersoniumを始めよう
 sidebar_label: Ansibleを使ってPersoniumを始めよう
 ---

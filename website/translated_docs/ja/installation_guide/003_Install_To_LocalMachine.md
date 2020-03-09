@@ -1,5 +1,5 @@
 ---
-id: version-1.7.21-003_Install_To_LocalMachine
+id: 003_Install_To_LocalMachine
 title: ローカルマシンへのインストール
 sidebar_label: ローカルマシンへのインストール
 ---

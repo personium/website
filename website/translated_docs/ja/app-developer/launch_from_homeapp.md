@@ -1,5 +1,5 @@
 ---
-id: version-1.7.21-launch_from_homeapp
+id: launch_from_homeapp
 title: Homeアプリからのアプリ起動
 sidebar_label: Homeアプリからのアプリ起動
 ---

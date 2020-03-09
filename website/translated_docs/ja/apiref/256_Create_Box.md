@@ -1,5 +1,5 @@
 ---
-id: version-1.7.21-256_Create_Box
+id: 256_Create_Box
 title: Box作成
 sidebar_label: Box作成
 ---

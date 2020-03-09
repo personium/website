@@ -1,5 +1,5 @@
 ---
-id: version-1.7.21-README
+id: README
 title: サーバプラグイン開発者向けガイド
 sidebar_label: サーバプラグイン開発者向けガイド
 ---

@@ -1,5 +1,5 @@
 ---
-id: version-1.7.21-501_Export_Cell
+id: 501_Export_Cell
 title: Cellエクスポート
 sidebar_label: Cellエクスポート
 ---

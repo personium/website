@@ -1,5 +1,5 @@
 ---
-id: version-1.7.21-401_Top_Query
+id: 401_Top_Query
 title: $top クエリ
 sidebar_label: $top クエリ
 ---

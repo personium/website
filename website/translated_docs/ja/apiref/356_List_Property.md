@@ -1,5 +1,5 @@
 ---
-id: version-1.7.21-356_List_Property
+id: 356_List_Property
 title: Property一覧取得
 sidebar_label: Property一覧取得
 ---

@@ -1,5 +1,5 @@
 ---
-id: version-1.7.21-293_OAuth2_Token_Endpoint
+id: 293_OAuth2_Token_Endpoint
 title: OAuth 2.0 トークンエンドポイント
 sidebar_label: OAuth 2.0 トークンエンドポイント
 ---

@@ -1,5 +1,5 @@
 ---
-id: version-1.7.21-277_Event_Summary
+id: 277_Event_Summary
 title: イベントの概要
 sidebar_label: イベントの概要
 ---

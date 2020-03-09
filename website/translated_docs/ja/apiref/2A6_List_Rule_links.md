@@ -1,5 +1,5 @@
 ---
-id: version-1.7.21-2A6_List_Rule_links
+id: 2A6_List_Rule_links
 title: Ruleと他オブジェクトとのリンク一覧取得
 sidebar_label: Ruleと他オブジェクトとのリンク一覧取得
 ---
