@@ -153,21 +153,17 @@ TODO: 図を書く
 
 これまで単純化のためにアプリを通さないデータアクセス方法について記述しました。しかし、実際はデータアクセサーが直接セルにアクセスすることは基本的になく、アプリに移譲して行います。
 
-しかし、無尽蔵にアプリのデータアクセスを許可すると、ユーザー利益に反した不正操作を起こすアプリを許す可能性があります。
+PDS上のデータが活用されていくためにはデータを提供するアプリとデータを利用するアプリが豊富にあることが望まれます。そのためには、1事業者だけでなく他の事業者がアプリを開発・提供できるようなオープンAPIの活用が必要になります。また、アプリにはブラウザ上で実行するWebアプリやスマートフォン上のネイティブアプリなど様々な提供形態があります。
 
-そのため、Personiumではアプリを安全に利用するためにOAuth2を使ったアプリへの権限移譲に対応し、許可されたアプリが許可された権限でのみデータアクセスをできるようにする仕組みを備えています。
+これらを安全性を保ちながらアプリに行わせるためには、アプリの提供形態によって適切な権限移譲を行う必要があります。Personiumではアプリの認可・権限移譲のフレームワークであるOAuthを採用してこれらを実現しています。
 
-本項ではこの仕組みで何を行うか、どうやって使うのかについて記述します。
-
-[アプリ認証](../app-developer/app_authn.html)の項で詳細を記述しています。
-
-### PDSにおけるOAuth
+[アプリ認証](../app-developer/app_authn.html)の項においても詳細を記述しています。
 
 先に記述した通り、PDSであるPersoniumは各データ主体のセルで認可サーバの機能を備えております。この場合のOAuthの登場人物に当てはめると以下の図の通りとなります。
 
-TODO: 図を書く
+![OAuth in PDS](assets/auth/pds_oauth.png)
 
-具体的なフローはアプリの形態(Confidential ClientかPublic Clientかなど)によって異なります。Personiumのv1.7.20現在のバージョンでは以下のgrant_typeフローに対応しております。
+具体的なフローはアプリの形態(Confidential ClientかPublic Clientかなど)によって異なります。Personiumのv1.7.21現在のバージョンでは以下のgrant_typeフローに対応しております。
 
 - 認可コードフロー
 - ROPC (Resource Owner Password Credential) フロー
@@ -175,23 +171,31 @@ TODO: 図を書く
 
 順にフローを見ていきます。
 
+### ROPC (Resource Owner Password Credential) フロー
+
+![ROPC Flow](assets/auth/ROPC.png)
+
+本フローはPDS事業者とアプリ提供者が同じである場合など、アプリの信頼性が高い場合に使用できるフローです。そうでない場合は次の認可コードフローを採用します。
+
 ### 認可コードフロー
 
 認可コードフローでは次のフローを取ります。
 
 ![Authorization Code Flow](assets/auth/personium-authz-code-flow/personium-authz-code-flow.png)
 
-ホームアプリを経由した場合次のフローを取ります。
-
-![Authorization Code Flow on home app](assets/auth/personium-authz-code-flow-home-app/personium-authz-code-flow.png)
-
-### ROPC (Resource Owner Password Credential) フロー
-
-準備中
+[アプリ認証](../app-developer/app_authn.html)の項で詳細を記述しています。
 
 ### インプリシットフロー
 
 準備中
+
+### 認可コードフロー+SSO
+
+各アプリで認可コードフローを取った場合、各アプリごとにデータ主体のセルURLを入力し、認証することになります。このセルURLの入力と認証を1度で行い、SSOを実現することもできます。Personiumコミュニティで提供している[ホームアプリ](https://github.com/personium/app-cc-home)と、ホームアプリでの認証後に起動される[app-myboard](https://github.com/personium/app-myboard)はこれらを実現するサンプルアプリとなっています。
+
+ホームアプリを経由した場合次のフローを取ります。
+
+![Authorization Code Flow on home app](assets/auth/personium-authz-code-flow-home-app/personium-authz-code-flow.png)
 
 ### アプリ認証とトランスセルトークン取得
 
