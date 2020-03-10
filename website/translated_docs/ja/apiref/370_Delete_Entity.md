@@ -1,5 +1,5 @@
 ---
-id: version-1.7.21-370_Delete_Entity
+id: 370_Delete_Entity
 title: Entity削除
 sidebar_label: Entity削除
 ---

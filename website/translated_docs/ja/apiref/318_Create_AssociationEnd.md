@@ -1,5 +1,5 @@
 ---
-id: version-1.7.21-318_Create_AssociationEnd
+id: 318_Create_AssociationEnd
 title: AssociationEnd登録
 sidebar_label: AssociationEnd登録
 ---

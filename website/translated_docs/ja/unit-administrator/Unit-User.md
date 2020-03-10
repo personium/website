@@ -1,5 +1,5 @@
 ---
-id: version-1.7.21-Unit-User
+id: Unit-User
 title: ユニットユーザ
 sidebar_label: ユニットユーザ
 ---

@@ -99,7 +99,7 @@ Check the basic settings of the server on which the AP service runs.
     # openssl x509 -noout -subject -in /opt/x509/unit-self-sign.crt
     ```
 
-    * When created as shown in the example of creation of unit certificate described in [How to generate Self-signed Unit Certificate](How_to_generate_Self-Signed_Unit_Certificate.md), it is displayed as follows. The CN should represent the common name and it must match the FQDN for HTTPS access.
+    * When created as shown in the example of creation of unit certificate described in [How to generate Self-signed Unit Certificate](https://github.com/personium/ansible/blob/master/How_to_generate_Self-signed_Unit_Certificate.md), it is displayed as follows. The CN should represent the common name and it must match the FQDN for HTTPS access.
 
     ```
     subject= /C=XXX/L=Default City/O=Default Company Ltd/CN=personium.example.com

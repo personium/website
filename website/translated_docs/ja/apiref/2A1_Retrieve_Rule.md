@@ -1,5 +1,5 @@
 ---
-id: version-1.7.21-2A1_Retrieve_Rule
+id: 2A1_Retrieve_Rule
 title: Rule取得
 sidebar_label: Rule取得
 ---

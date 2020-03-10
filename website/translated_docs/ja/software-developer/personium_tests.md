@@ -1,5 +1,5 @@
 ---
-id: version-1.7.21-personium_tests
+id: personium_tests
 title: Personiumのテスト
 sidebar_label: Personiumのテスト
 ---

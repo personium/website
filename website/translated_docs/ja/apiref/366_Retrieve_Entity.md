@@ -1,5 +1,5 @@
 ---
-id: version-1.7.21-366_Retrieve_Entity
+id: 366_Retrieve_Entity
 title: Entity取得
 sidebar_label: Entity取得
 ---

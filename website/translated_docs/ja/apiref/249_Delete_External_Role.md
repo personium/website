@@ -1,5 +1,5 @@
 ---
-id: version-1.7.21-249_Delete_External_Role
+id: 249_Delete_External_Role
 title: ExtRole削除
 sidebar_label: ExtRole削除
 ---

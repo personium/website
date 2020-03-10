@@ -1,5 +1,5 @@
 ---
-id: version-1.7.21-217_Link_Account
+id: 217_Link_Account
 title: Accountと他オブジェクトとのリンク
 sidebar_label: Accountと他オブジェクトとのリンク
 ---

@@ -1,5 +1,5 @@
 ---
-id: version-1.7.21-340_Delete_ComplexTypeProperty
+id: 340_Delete_ComplexTypeProperty
 title: ComplexTypeProperty削除
 sidebar_label: ComplexTypeProperty削除
 ---

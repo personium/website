@@ -19,17 +19,17 @@ Register to join the Slack community [here](https://bit.ly/Join_Personium_Slack)
 
 ### For Personium Operators
 
-#### [Server Software Operator's Guide](./server-operator/README)
+#### [Server Software Operator's Guide](./server-operator/README.md)
 
 It is a document for people who want to provide / operate PDS service environment using Personium
 
-#### [Unit Administrator's Guide](./unit-administrator/README)
+#### [Unit Administrator's Guide](./unit-administrator/README.md)
 
 It is a document for people who want to manage pre-built Personium units and those who want users to use PDS applications to provide PDS service using Personium
 
 ### For App Developers
 
-#### [App Developer's Guide](./app-developer/README)
+#### [App Developer's Guide](./app-developer/README.md)
 
 Documents for people who want to develop PDS applications using Personium's API
 
@@ -37,12 +37,12 @@ Documents for people who want to develop PDS applications using Personium's API
 
 ### For Document Contribution
 
-#### [Documentation Contributor's Guide](./document-writer/README)
+#### [Documentation Contributor's Guide](./document-writer/README.md)
 
 Personium Project is looking for documentation contributors.
 
 ### For Code Contribution
 
-#### [Server Developer's Guide](./software-developer/README)
+#### [Server Developer's Guide](./software-developer/README.md)
 
 It is a document for people who want to develop Personium's OSS function or who want to commit to OSS

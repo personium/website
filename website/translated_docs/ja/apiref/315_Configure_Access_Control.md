@@ -1,5 +1,5 @@
 ---
-id: version-1.7.21-315_Configure_Access_Control
+id: 315_Configure_Access_Control
 title: Box Level アクセス制御設定
 sidebar_label: Box Level アクセス制御設定
 ---

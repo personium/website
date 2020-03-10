@@ -1,5 +1,5 @@
 ---
-id: version-1.7.21-506_Delete_Snapshot_Cell
+id: 506_Delete_Snapshot_Cell
 title: Cellスナップショットファイル削除
 sidebar_label: Cellスナップショットファイル削除
 ---

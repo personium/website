@@ -1,5 +1,5 @@
 ---
-id: version-1.7.21-312_Register_and_Update_WebDAV
+id: 312_Register_and_Update_WebDAV
 title: ファイル登録更新
 sidebar_label: ファイル登録更新
 ---

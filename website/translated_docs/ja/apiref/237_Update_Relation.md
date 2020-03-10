@@ -1,5 +1,5 @@
 ---
-id: version-1.7.21-237_Update_Relation
+id: 237_Update_Relation
 title: Relation更新
 sidebar_label: Relation更新
 ---

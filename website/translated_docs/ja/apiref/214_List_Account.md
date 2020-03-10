@@ -1,5 +1,5 @@
 ---
-id: version-1.7.21-214_List_Account
+id: 214_List_Account
 title: Account一覧取得
 sidebar_label: Account一覧取得
 ---

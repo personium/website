@@ -1,5 +1,5 @@
 ---
-id: version-1.7.21-290_Cell_Get_Property
+id: 290_Cell_Get_Property
 title: プロパティ取得
 sidebar_label: プロパティ取得
 ---

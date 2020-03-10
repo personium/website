@@ -1,5 +1,5 @@
 ---
-id: version-1.7.21-2AB_Partial_Update_Role
+id: 2AB_Partial_Update_Role
 title: Role部分更新
 sidebar_label: Role部分更新
 ---

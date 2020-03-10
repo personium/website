@@ -1,5 +1,5 @@
 ---
-id: version-1.7.21-215_Update_Account
+id: 215_Update_Account
 title: Account更新
 sidebar_label: Account更新
 ---

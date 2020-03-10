@@ -1,5 +1,5 @@
 ---
-id: version-1.7.21-376_Unlink_User_Data
+id: 376_Unlink_User_Data
 title: Entityと他オブジェクトとのリンク解除
 sidebar_label: Entityと他オブジェクトとのリンク解除
 ---

@@ -1,5 +1,5 @@
 ---
-id: version-1.7.21-302_Box_Installation
+id: 302_Box_Installation
 title: Boxインストール
 sidebar_label: Boxインストール
 ---

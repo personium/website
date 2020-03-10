@@ -1,5 +1,5 @@
 ---
-id: version-1.7.21-README
+id: README
 title: Cell GUI開発者向けガイド
 sidebar_label: Cell GUI開発者向けガイド
 ---

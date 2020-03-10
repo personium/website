@@ -1,5 +1,5 @@
 ---
-id: version-1.7.21-254_Create_Obj_Via_External_Role_NP
+id: 254_Create_Obj_Via_External_Role_NP
 title: ExtRoleのNavigation Property経由での他オブジェクト登録
 sidebar_label: ExtRoleのNavigation Property経由での他オブジェクト登録
 ---

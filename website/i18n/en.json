@@ -1134,7 +1134,8 @@
         "sidebar_label": "Client registration & authentication"
       },
       "user_guide/005_Model_construction": {
-        "title": "user_guide/005_Model_construction"
+        "title": "Cell model",
+        "sidebar_label": "Cell model"
       },
       "user_guide/007_WebDAV_model": {
         "title": "WebDAV Model",
@@ -2275,6 +2276,10 @@
       "version-1.7.21/user_guide/version-1.7.21-004_Client_auth": {
         "title": "Client registration & authentication",
         "sidebar_label": "Client registration & authentication"
+      },
+      "version-1.7.21/user_guide/version-1.7.21-005_Model_construction": {
+        "title": "Cell model",
+        "sidebar_label": "Cell model"
       },
       "version-1.7.21/user_guide/version-1.7.21-007_WebDAV_model": {
         "title": "WebDAV Model",

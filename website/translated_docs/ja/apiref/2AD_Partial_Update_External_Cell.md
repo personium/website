@@ -1,5 +1,5 @@
 ---
-id: version-1.7.21-2AD_Partial_Update_External_Cell
+id: 2AD_Partial_Update_External_Cell
 title: ExtCell部分更新
 sidebar_label: ExtCell部分更新
 ---

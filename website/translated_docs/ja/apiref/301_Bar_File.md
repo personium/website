@@ -1,5 +1,5 @@
 ---
-id: version-1.7.21-301_Bar_File
+id: 301_Bar_File
 title: barファイル
 sidebar_label: barファイル
 ---

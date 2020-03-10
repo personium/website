@@ -1,5 +1,5 @@
 ---
-id: version-1.7.21-348_Update_EntityType
+id: 348_Update_EntityType
 title: EntityType更新
 sidebar_label: EntityType更新
 ---

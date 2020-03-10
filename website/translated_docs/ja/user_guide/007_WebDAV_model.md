@@ -1,5 +1,5 @@
 ---
-id: version-1.7.21-007_WebDAV_model
+id: 007_WebDAV_model
 title: WebDAV モデル
 sidebar_label: WebDAV モデル
 ---

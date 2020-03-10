@@ -1,5 +1,5 @@
 ---
-id: version-1.7.21-224_List_External_Cell
+id: 224_List_External_Cell
 title: ExtCell一覧取得
 sidebar_label: ExtCell一覧取得
 ---

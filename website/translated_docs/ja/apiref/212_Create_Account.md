@@ -1,5 +1,5 @@
 ---
-id: version-1.7.21-212_Create_Account
+id: 212_Create_Account
 title: Account登録
 sidebar_label: Account登録
 ---

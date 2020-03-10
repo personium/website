@@ -1,5 +1,5 @@
 ---
-id: version-1.7.21-216_Delete_Account
+id: 216_Delete_Account
 title: Account削除
 sidebar_label: Account削除
 ---

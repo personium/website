@@ -1,5 +1,5 @@
 ---
-id: version-1.7.21-258_Retrieve_Box
+id: 258_Retrieve_Box
 title: Box取得
 sidebar_label: Box取得
 ---

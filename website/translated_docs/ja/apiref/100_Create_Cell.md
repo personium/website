@@ -1,5 +1,5 @@
 ---
-id: version-1.7.21-100_Create_Cell
+id: 100_Create_Cell
 title: Cell作成
 sidebar_label: Cell作成
 ---

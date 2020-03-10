@@ -1,5 +1,5 @@
 ---
-id: version-1.7.21-335_Delete_ComplexType_links
+id: 335_Delete_ComplexType_links
 title: ComplexTypeと他オブジェクトとのリンク解除
 sidebar_label: ComplexTypeと他オブジェクトとのリンク解除
 ---

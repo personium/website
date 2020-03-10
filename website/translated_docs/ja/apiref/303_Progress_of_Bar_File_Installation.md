@@ -1,5 +1,5 @@
 ---
-id: version-1.7.21-303_Progress_of_Bar_File_Installation
+id: 303_Progress_of_Bar_File_Installation
 title: Boxメタデータ取得
 sidebar_label: Boxメタデータ取得
 ---

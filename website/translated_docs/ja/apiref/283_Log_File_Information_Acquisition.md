@@ -1,5 +1,5 @@
 ---
-id: version-1.7.21-283_Log_File_Information_Acquisition
+id: 283_Log_File_Information_Acquisition
 title: ログファイル情報取得
 sidebar_label: ログファイル情報取得
 ---

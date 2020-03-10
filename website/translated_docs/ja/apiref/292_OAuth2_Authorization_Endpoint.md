@@ -1,5 +1,5 @@
 ---
-id: version-1.7.21-292_OAuth2_Authorization_Endpoint
+id: 292_OAuth2_Authorization_Endpoint
 title: OAuth 2.0 認可エンドポイント
 sidebar_label: OAuth 2.0 認可エンドポイント
 ---
@@ -44,7 +44,7 @@ GET
 セルやユニットに設定された認証フォームまたはパスワード変更フォーム表示のためのHTMLを返却します。 設定がない場合はデフォルトhtmlが返ります。  
 
 #### HTML設定方法
-[Unitの設定](../../server-operator/unit_config_list.md)または[対象Cellのプロパティ設定](./291_Cell_Change_Property.md)が必要。2つを同時に設定した場合、対象Cellのプロパティ設定が優先される。  
+[Unitの設定](../server-operator/unit_config_list.md)または[対象Cellのプロパティ設定](./291_Cell_Change_Property.md)が必要。2つを同時に設定した場合、対象Cellのプロパティ設定が優先される。  
 
 Unitの設定  
 ```

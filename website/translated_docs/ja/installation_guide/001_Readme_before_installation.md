@@ -1,5 +1,5 @@
 ---
-id: version-1.7.21-001_Readme_before_installation
+id: 001_Readme_before_installation
 title: インストール前の注意事項
 sidebar_label: インストール前の注意事項
 ---

@@ -1,5 +1,5 @@
 ---
-id: version-1.7.21-220_Unlink_Account
+id: 220_Unlink_Account
 title: Accountと他オブジェクトとのリンク解除
 sidebar_label: Accountと他オブジェクトとのリンク解除
 ---

@@ -1,5 +1,5 @@
 ---
-id: version-1.7.21-2A0_Create_Rule
+id: 2A0_Create_Rule
 title: Rule作成
 sidebar_label: Rule作成
 ---

@@ -1,5 +1,5 @@
 ---
-id: version-1.7.21-211_List_Obj_Via_Role_NP
+id: 211_List_Obj_Via_Role_NP
 title: RoleのNavigation Property経由での他オブジェクト一覧取得
 sidebar_label: RoleのNavigation Property経由での他オブジェクト一覧取得
 ---

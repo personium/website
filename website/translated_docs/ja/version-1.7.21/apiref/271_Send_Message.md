@@ -63,7 +63,7 @@ Name または ClassUrlで指定したRelationと、TargetUrlで指定したCell
 |:--|:--|:--|:--|:--|
 |RequestType|リクエストの種別|relation.add<br>relation.remove|〇||
 |Name|リレーション名|桁数：1～128<br>文字種:半角英数字と-(半角ハイフン)と_(半角アンダーバー)と+(プラス)と:(コロン)<br>ただし、先頭文字に_(半角アンダーバー)と:(コロン)は指定不可|※1|※1 NameまたはClassUrlのどちらかは必須<br>Name指定時は以下のURLからの相対URLとみなす<br>BoxBoundがtrue：[対象BoxスキーマURL]\_\_relation/\_\_/<br>BoxBoundがfalse：[送信先セルURL]\_\_relation/\_\_/|
-|ClassUrl|リレーションクラスURL|リレーションクラスURL<br>詳細は[用語集](../../user_guide/008_Glossary.md#anc_r)を参照|※1|※1 NameまたはClassUrlのどちらかは必須|
+|ClassUrl|リレーションクラスURL|リレーションクラスURL<br>詳細は[用語集](../user_guide/008_Glossary.md#anc_r)を参照|※1|※1 NameまたはClassUrlのどちらかは必須|
 |TargetUrl|関係を結ぶセルURL|URL形式|〇||
 
 ##### Role add/remove
@@ -74,7 +74,7 @@ Name または ClassUrlで指定したRoleと、TargetUrlで指定したCellの�
 |:--|:--|:--|:--|:--|
 |RequestType|リクエストの種別|role.add<br>role.remove|〇||
 |Name|ロール名|桁数：1～128<br>文字種:半角英数字と-(半角ハイフン)と_(半角アンダーバー)<br>ただし、先頭文字に-(半角ハイフン)と_(半角アンダーバー)は指定不可|※1|※1 NameまたはClassUrlのどちらかは必須<br>Name指定時は以下のURLからの相対URLとみなす<br>BoxBoundがtrue：[対象BoxスキーマURL]\_\_role/\_\_/<br>BoxBoundがfalse：[送信先セルURL]\_\_role/\_\_/|
-|ClassUrl|ロールクラスURL|ロールクラスURL<br>詳細は[用語集](../../user_guide/008_Glossary.md#anc_r)を参照|※1|※1 NameまたはClassUrlのどちらかは必須|
+|ClassUrl|ロールクラスURL|ロールクラスURL<br>詳細は[用語集](../user_guide/008_Glossary.md#anc_r)を参照|※1|※1 NameまたはClassUrlのどちらかは必須|
 |TargetUrl|関係を結ぶセルURL|URL形式|〇||
 
 ##### Rule add/remove

@@ -1,5 +1,5 @@
 ---
-id: version-1.7.21-001_Cross_Domain_Policy_File
+id: 001_Cross_Domain_Policy_File
 title: クロスドメインポリシーファイル
 sidebar_label: クロスドメインポリシーファイル
 ---

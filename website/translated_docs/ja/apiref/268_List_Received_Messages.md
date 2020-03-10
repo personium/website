@@ -1,5 +1,5 @@
 ---
-id: version-1.7.21-268_List_Received_Messages
+id: 268_List_Received_Messages
 title: ReceivedMessage一覧取得
 sidebar_label: ReceivedMessage一覧取得
 ---

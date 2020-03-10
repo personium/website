@@ -1,5 +1,5 @@
 ---
-id: version-1.7.21-331_Delete_ComplexType
+id: 331_Delete_ComplexType
 title: ComplexType削除
 sidebar_label: ComplexType削除
 ---

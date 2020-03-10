@@ -1,5 +1,5 @@
 ---
-id: version-1.7.21-313_Change_Property
+id: 313_Change_Property
 title: ファイル設定変更
 sidebar_label: ファイル設定変更
 ---

@@ -1,5 +1,5 @@
 ---
-id: version-1.7.21-222_List_Obj_Via_Account_NP
+id: 222_List_Obj_Via_Account_NP
 title: AccountのNavigation Property経由での他オブジェクト一覧取得
 sidebar_label: AccountのNavigation Property経由での他オブジェクト一覧取得
 ---

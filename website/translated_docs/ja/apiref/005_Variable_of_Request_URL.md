@@ -1,5 +1,5 @@
 ---
-id: version-1.7.21-005_Variable_of_Request_URL
+id: 005_Variable_of_Request_URL
 title: リクエストURLの変数一覧
 sidebar_label: リクエストURLの変数一覧
 ---
@@ -13,7 +13,7 @@ APIリファレンスのリクエストURLで使われている変数につい�
 |{UnitURL}|Unitにアクセスする為のURL|URL:https&#58;//{UnitFQDN}/|
 |{UnitFQDN}|Personiumが動作しているサーバのFQDN<br>Unitとは複数のCellをホストするサーバを指す||
 |{CellName}|Cell名<br>Cellとはデータ主体ごとのData Stroreを指す||
-|{CellURL}|Cellにアクセスする為のURL<br>CellURLには"path based cell URL"と"per cell FQDN URL"の2種類が存在し、[プロパティ](../../server-operator/unit_config_list.md)(pathBasedCellUrl.enabled)で切替可能|path based cell URL:https&#58;//{UnitFQDN}/{CellName}/<br>per cell FQDN URL:https&#58;//{CellName}.{UnitFQDN}/|
+|{CellURL}|Cellにアクセスする為のURL<br>CellURLには"path based cell URL"と"per cell FQDN URL"の2種類が存在し、[プロパティ](../server-operator/unit_config_list.md)(pathBasedCellUrl.enabled)で切替可能|path based cell URL:https&#58;//{UnitFQDN}/{CellName}/<br>per cell FQDN URL:https&#58;//{CellName}.{UnitFQDN}/|
 |{BoxName}|Box名<br>Boxとはアプリケーションに用いるデータを格納する領域を指す||
 |{SchemaURL}|SchemaのURL<br>SchemaとはPersonium内に格納されたSchemaを指す||
 |{RoleName}|Role名<br>RoleとはCellに対して定義される有効な「役割」を指す||

@@ -1,5 +1,5 @@
 ---
-id: version-1.7.21-226_Update_External_Cell
+id: 226_Update_External_Cell
 title: ExtCell更新
 sidebar_label: ExtCell更新
 ---

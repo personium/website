@@ -1,5 +1,5 @@
 ---
-id: version-1.7.21-305_Get_Property
+id: 305_Get_Property
 title: コレクション設定取得
 sidebar_label: コレクション設定取得
 ---

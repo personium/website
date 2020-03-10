@@ -1,5 +1,5 @@
 ---
-id: version-1.7.21-279_Event_Bus_Connect
+id: 279_Event_Bus_Connect
 title: イベントバスへの Web Socket 接続
 sidebar_label: イベントバスへの Web Socket 接続
 ---

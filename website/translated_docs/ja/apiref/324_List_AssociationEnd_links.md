@@ -1,5 +1,5 @@
 ---
-id: version-1.7.21-324_List_AssociationEnd_links
+id: 324_List_AssociationEnd_links
 title: AssociationEndと他オブジェクトとのリンク一覧取得
 sidebar_label: AssociationEndと他オブジェクトとのリンク一覧取得
 ---

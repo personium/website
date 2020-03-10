@@ -1,5 +1,5 @@
 ---
-id: version-1.7.21-102_Retrieve_Cell
+id: 102_Retrieve_Cell
 title: Cell取得
 sidebar_label: Cell取得
 ---

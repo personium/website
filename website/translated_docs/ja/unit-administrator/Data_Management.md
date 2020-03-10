@@ -1,5 +1,5 @@
 ---
-id: version-1.7.21-Data_Management
+id: Data_Management
 title: データの管理
 sidebar_label: データの管理
 ---

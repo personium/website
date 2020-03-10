@@ -1,5 +1,5 @@
 ---
-id: version-1.7.21-359_Delete_Property
+id: 359_Delete_Property
 title: Property削除
 sidebar_label: Property削除
 ---

@@ -1,5 +1,5 @@
 ---
-id: version-1.7.21-291_Cell_Change_Property
+id: 291_Cell_Change_Property
 title: プロパティ変更
 sidebar_label: プロパティ変更
 ---

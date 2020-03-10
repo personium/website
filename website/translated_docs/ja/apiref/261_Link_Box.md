@@ -1,5 +1,5 @@
 ---
-id: version-1.7.21-261_Link_Box
+id: 261_Link_Box
 title: Boxと他オブジェクトとのリンク
 sidebar_label: Boxと他オブジェクトとのリンク
 ---

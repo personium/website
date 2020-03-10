@@ -1,5 +1,5 @@
 ---
-id: version-1.7.21-990_Old_Version_API_Ref
+id: 990_Old_Version_API_Ref
 title: 古いバージョンのAPIリファレンス
 sidebar_label: 古いバージョンのAPIリファレンス
 ---

@@ -1,5 +1,5 @@
 ---
-id: version-1.7.21-build_development_environment
+id: build_development_environment
 title: 開発用環境の構築手順
 sidebar_label: 開発用環境の構築手順
 ---

@@ -1,5 +1,5 @@
 ---
-id: version-1.7.21-006_Access_Control
+id: 006_Access_Control
 title: アクセス制御モデル
 sidebar_label: アクセス制御モデル
 ---

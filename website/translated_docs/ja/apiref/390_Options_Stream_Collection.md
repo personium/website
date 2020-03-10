@@ -1,5 +1,5 @@
 ---
-id: version-1.7.21-390_Options_Stream_Collection
+id: 390_Options_Stream_Collection
 title: Streamコレクションの操作可能メソッド取得
 sidebar_label: Streamコレクションの操作可能メソッド取得
 ---

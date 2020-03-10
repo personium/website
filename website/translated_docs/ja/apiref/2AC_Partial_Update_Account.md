@@ -1,5 +1,5 @@
 ---
-id: version-1.7.21-2AC_Partial_Update_Account
+id: 2AC_Partial_Update_Account
 title: Account部分更新
 sidebar_label: Account部分更新
 ---

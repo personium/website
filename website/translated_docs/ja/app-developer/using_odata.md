@@ -1,5 +1,5 @@
 ---
-id: version-1.7.21-using_odata
+id: using_odata
 title: OData Service Collection (OSC)の使い方
 sidebar_label: OData Service Collection (OSC)の使い方
 ---

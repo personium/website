@@ -1,5 +1,5 @@
 ---
-id: version-1.7.21-337_List_ComplexTypeProperty
+id: 337_List_ComplexTypeProperty
 title: ComplexTypeProperty一覧取得
 sidebar_label: ComplexTypeProperty一覧取得
 ---

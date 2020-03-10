@@ -1,5 +1,5 @@
 ---
-id: version-1.7.21-218_List_Account_links
+id: 218_List_Account_links
 title: Accountと他オブジェクトとのリンク一覧取得
 sidebar_label: Accountと他オブジェクトとのリンク一覧取得
 ---

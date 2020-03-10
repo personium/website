@@ -1,5 +1,5 @@
 ---
-id: version-1.7.21-201_Create_Role
+id: 201_Create_Role
 title: Role登録
 sidebar_label: Role登録
 ---

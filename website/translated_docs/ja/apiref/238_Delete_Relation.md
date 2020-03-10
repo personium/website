@@ -1,5 +1,5 @@
 ---
-id: version-1.7.21-238_Delete_Relation
+id: 238_Delete_Relation
 title: Relation削除
 sidebar_label: Relation削除
 ---

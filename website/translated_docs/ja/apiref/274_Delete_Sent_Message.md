@@ -1,5 +1,5 @@
 ---
-id: version-1.7.21-274_Delete_Sent_Message
+id: 274_Delete_Sent_Message
 title: SentMessage削除
 sidebar_label: SentMessage削除
 ---

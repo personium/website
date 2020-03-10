@@ -1,5 +1,5 @@
 ---
-id: version-1.7.21-297_OAtuh2_Token_Introspection_Endpoint
+id: 297_OAtuh2_Token_Introspection_Endpoint
 title: OAuth 2.0 Token Introspection Endpoint
 sidebar_label: OAuth 2.0 Token Introspection Endpoint
 ---

@@ -1,5 +1,5 @@
 ---
-id: version-1.7.21-Roles
+id: Roles
 title: Personiumにおけるロール
 sidebar_label: Personiumにおけるロール
 ---

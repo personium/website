@@ -1,5 +1,5 @@
 ---
-id: version-1.7.21-2A3_Update_Rule
+id: 2A3_Update_Rule
 title: Rule更新
 sidebar_label: Rule更新
 ---

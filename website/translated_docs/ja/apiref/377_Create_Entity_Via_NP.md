@@ -1,5 +1,5 @@
 ---
-id: version-1.7.21-377_Create_Entity_Via_NP
+id: 377_Create_Entity_Via_NP
 title: EntityのNavigation Property経由での他オブジェクト登録
 sidebar_label: EntityのNavigation Property経由での他オブジェクト登録
 ---

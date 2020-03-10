@@ -1,5 +1,5 @@
 ---
-id: version-1.7.21-328_List_ComplexType
+id: 328_List_ComplexType
 title: ComplexType一覧取得
 sidebar_label: ComplexType一覧取得
 ---

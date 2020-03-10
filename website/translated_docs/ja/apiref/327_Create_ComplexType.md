@@ -1,5 +1,5 @@
 ---
-id: version-1.7.21-327_Create_ComplexType
+id: 327_Create_ComplexType
 title: ComplexType登録
 sidebar_label: ComplexType登録
 ---

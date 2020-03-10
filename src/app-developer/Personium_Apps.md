@@ -20,7 +20,7 @@ However, Personium App developer should note that other Personium App developers
 [![Data ACL Management](https://i.ytimg.com/vi/indyfGp4KJQ/2.jpg?time=1514274599855)](https://youtu.be/indyfGp4KJQ)  
 
 ## Types of Personium App  
-In Personium, App is categorized according to the level of permission of APIs the App can use. There are basically 3 types of Apps. For details on how APIs are categorized, please refer to the [Personium Concepts](../user_guide/001_Personium_Concepts.md).  
+In Personium, App is categorized according to the level of permission of APIs the App can use. There are basically 3 types of Apps. For details on how APIs are categorized, please refer to the [Personium Concepts](../user_guide/001_Personium_Architecture.md).  
 
 1. [General Apps](#1-general-apps)
 1. [Cell Management Clients](#2-cell-management-clients)

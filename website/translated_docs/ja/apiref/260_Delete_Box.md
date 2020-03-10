@@ -1,5 +1,5 @@
 ---
-id: version-1.7.21-260_Delete_Box
+id: 260_Delete_Box
 title: Box削除
 sidebar_label: Box削除
 ---

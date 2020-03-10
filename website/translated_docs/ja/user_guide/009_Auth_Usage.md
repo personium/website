@@ -1,5 +1,5 @@
 ---
-id: version-1.7.21-009_Auth_Usage
+id: 009_Auth_Usage
 title: 認証/認可の使い方
 sidebar_label: 認証/認可の使い方
 ---

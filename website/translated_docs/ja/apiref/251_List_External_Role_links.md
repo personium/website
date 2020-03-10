@@ -1,5 +1,5 @@
 ---
-id: version-1.7.21-251_List_External_Role_links
+id: 251_List_External_Role_links
 title: ExtRoleと他オブジェクトとのリンク一覧取得
 sidebar_label: ExtRoleと他オブジェクトとのリンク一覧取得
 ---

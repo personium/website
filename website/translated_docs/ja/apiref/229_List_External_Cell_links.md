@@ -1,5 +1,5 @@
 ---
-id: version-1.7.21-229_List_External_Cell_links
+id: 229_List_External_Cell_links
 title: ExtCellと他オブジェクトとのリンク一覧取得
 sidebar_label: ExtCellと他オブジェクトとのリンク一覧取得
 ---

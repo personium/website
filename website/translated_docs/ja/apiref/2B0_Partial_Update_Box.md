@@ -1,5 +1,5 @@
 ---
-id: version-1.7.21-2B0_Partial_Update_Box
+id: 2B0_Partial_Update_Box
 title: Box部分更新
 sidebar_label: Box部分更新
 ---

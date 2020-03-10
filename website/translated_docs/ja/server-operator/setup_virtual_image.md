@@ -1,5 +1,5 @@
 ---
-id: version-1.7.21-setup_virtual_image
+id: setup_virtual_image
 title: 仮想イメージを使ってPersoniumを始めよう
 sidebar_label: 仮想イメージを使ってPersoniumを始めよう
 ---

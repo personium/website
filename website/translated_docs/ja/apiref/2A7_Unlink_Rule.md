@@ -1,5 +1,5 @@
 ---
-id: version-1.7.21-2A7_Unlink_Rule
+id: 2A7_Unlink_Rule
 title: Ruleから紐づいたBoxとのリンクを解除
 sidebar_label: Ruleから紐づいたBoxとのリンクを解除
 ---

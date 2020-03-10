@@ -1,5 +1,5 @@
 ---
-id: version-1.7.21-404_Format_Query
+id: 404_Format_Query
 title: $formatクエリ
 sidebar_label: $formatクエリ
 ---

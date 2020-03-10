@@ -1,5 +1,5 @@
 ---
-id: version-1.7.21-323_Link_AssociationEnd
+id: 323_Link_AssociationEnd
 title: AssociationEndと他オブジェクトとのリンク
 sidebar_label: AssociationEndと他オブジェクトとのリンク
 ---

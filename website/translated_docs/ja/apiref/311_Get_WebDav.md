@@ -1,5 +1,5 @@
 ---
-id: version-1.7.21-311_Get_WebDav
+id: 311_Get_WebDav
 title: ファイル取得
 sidebar_label: ファイル取得
 ---

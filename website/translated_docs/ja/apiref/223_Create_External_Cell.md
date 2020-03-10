@@ -1,5 +1,5 @@
 ---
-id: version-1.7.21-223_Create_External_Cell
+id: 223_Create_External_Cell
 title: ExtCell登録
 sidebar_label: ExtCell登録
 ---

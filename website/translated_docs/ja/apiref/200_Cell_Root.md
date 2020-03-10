@@ -1,5 +1,5 @@
 ---
-id: version-1.7.21-200_Cell_Root
+id: 200_Cell_Root
 title: Cellルート取得
 sidebar_label: Cellルート取得
 ---
@@ -7,7 +7,7 @@ sidebar_label: Cellルート取得
 Cellルートとして設定されているHTMLファイルを取得する。
 
 ### 前提条件
-[Unitの設定](../../server-operator/unit_config_list.md)または[対象Cellのプロパティ設定](./291_Cell_Change_Property.md)が必要。2つを同時に設定した場合、対象Cellのプロパティ設定が優先される。  
+[Unitの設定](../server-operator/unit_config_list.md)または[対象Cellのプロパティ設定](./291_Cell_Change_Property.md)が必要。2つを同時に設定した場合、対象Cellのプロパティ設定が優先される。  
 
 Unitの設定  
 ```

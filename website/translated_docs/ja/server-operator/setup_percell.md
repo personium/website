@@ -1,5 +1,5 @@
 ---
-id: version-1.7.21-setup_percell
+id: setup_percell
 title: Personium Unitの percell 環境時の設定
 sidebar_label: Personium Unitの percell 環境時の設定
 ---

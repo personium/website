@@ -1,5 +1,5 @@
 ---
-id: version-1.7.21-app_authn
+id: app_authn
 title: アプリ認証
 sidebar_label: アプリ認証
 ---

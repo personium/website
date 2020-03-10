@@ -1,5 +1,5 @@
 ---
-id: version-1.7.21-289_Cell_ACL
+id: 289_Cell_ACL
 title: Cell Level アクセス制御設定
 sidebar_label: Cell Level アクセス制御設定
 ---

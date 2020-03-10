@@ -1,5 +1,5 @@
 ---
-id: version-1.7.21-371_Get_Schema
+id: 371_Get_Schema
 title: スキーマ取得 ($metadata)
 sidebar_label: スキーマ取得 ($metadata)
 ---

@@ -1,5 +1,5 @@
 ---
-id: version-1.7.21-264_Unlink_Box
+id: 264_Unlink_Box
 title: Boxと他オブジェクトとのリンク解除
 sidebar_label: Boxと他オブジェクトとのリンク解除
 ---

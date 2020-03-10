@@ -1,5 +1,5 @@
 ---
-id: version-1.7.21-231_Unlink_External_Cell
+id: 231_Unlink_External_Cell
 title: Extcellと他オブジェクトとのリンク解除
 sidebar_label: Extcellと他オブジェクトとのリンク解除
 ---

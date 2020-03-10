@@ -1,5 +1,5 @@
 ---
-id: version-1.7.21-259_Update_Box
+id: 259_Update_Box
 title: Box更新
 sidebar_label: Box更新
 ---

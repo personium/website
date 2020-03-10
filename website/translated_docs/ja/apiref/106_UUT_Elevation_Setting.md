@@ -1,5 +1,5 @@
 ---
-id: version-1.7.21-106_UUT_Elevation_Setting
+id: 106_UUT_Elevation_Setting
 title: ULUUT昇格設定
 sidebar_label: ULUUT昇格設定
 ---

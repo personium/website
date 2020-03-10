@@ -1,5 +1,5 @@
 ---
-id: version-1.7.21-505_Get_Property_Snapshot_Cell
+id: 505_Get_Property_Snapshot_Cell
 title: Cellスナップショットファイル設定取得
 sidebar_label: Cellスナップショットファイル設定取得
 ---

@@ -1,5 +1,5 @@
 ---
-id: version-1.7.21-269_Retrieve_Received_Message
+id: 269_Retrieve_Received_Message
 title: ReceivedMessage取得
 sidebar_label: ReceivedMessage取得
 ---

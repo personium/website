@@ -1,5 +1,5 @@
 ---
-id: version-1.7.21-203_Retrieve_Role
+id: 203_Retrieve_Role
 title: Role取得
 sidebar_label: Role取得
 ---

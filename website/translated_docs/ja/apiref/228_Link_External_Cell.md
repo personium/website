@@ -1,5 +1,5 @@
 ---
-id: version-1.7.21-228_Link_External_Cell
+id: 228_Link_External_Cell
 title: Extcellと他オブジェクトとのリンク
 sidebar_label: Extcellと他オブジェクトとのリンク
 ---

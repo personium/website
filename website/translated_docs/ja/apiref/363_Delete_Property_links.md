@@ -1,5 +1,5 @@
 ---
-id: version-1.7.21-363_Delete_Property_links
+id: 363_Delete_Property_links
 title: Propertyと他オブジェクトとのリンク解除
 sidebar_label: Propertyと他オブジェクトとのリンク解除
 ---

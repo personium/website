@@ -1,5 +1,5 @@
 ---
-id: version-1.7.21-tutorial
+id: tutorial
 title: Personiumユニット管理 チュートリアル
 sidebar_label: Personiumユニット管理 チュートリアル
 ---

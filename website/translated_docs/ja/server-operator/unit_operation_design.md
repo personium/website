@@ -1,5 +1,5 @@
 ---
-id: version-1.7.21-unit_operation_design
+id: unit_operation_design
 title: Unitの運用設計と設定
 sidebar_label: Unitの運用設計と設定
 ---

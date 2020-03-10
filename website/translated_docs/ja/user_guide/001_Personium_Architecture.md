@@ -1,5 +1,5 @@
 ---
-id: version-1.7.21-001_Personium_Architecture
+id: 001_Personium_Architecture
 title: Personiumのアーキテクチャ
 sidebar_label: Personiumのアーキテクチャ
 ---

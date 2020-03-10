@@ -1,5 +1,5 @@
 ---
-id: version-1.7.21-Personium-Engine
+id: Personium-Engine
 title: Personium Engine
 sidebar_label: Personium Engine
 ---

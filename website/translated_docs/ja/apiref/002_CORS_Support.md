@@ -1,5 +1,5 @@
 ---
-id: version-1.7.21-002_CORS_Support
+id: 002_CORS_Support
 title: CORS(Cross Origin Resource Sharing)対応
 sidebar_label: CORS(Cross Origin Resource Sharing)対応
 ---

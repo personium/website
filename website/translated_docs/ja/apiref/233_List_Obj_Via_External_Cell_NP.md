@@ -1,5 +1,5 @@
 ---
-id: version-1.7.21-233_List_Obj_Via_External_Cell_NP
+id: 233_List_Obj_Via_External_Cell_NP
 title: ExtCellのNavigation Property経由での他オブジェクト一覧取得
 sidebar_label: ExtCellのNavigation Property経由での他オブジェクト一覧取得
 ---

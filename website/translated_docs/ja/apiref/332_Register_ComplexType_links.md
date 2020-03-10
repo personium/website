@@ -1,5 +1,5 @@
 ---
-id: version-1.7.21-332_Register_ComplexType_links
+id: 332_Register_ComplexType_links
 title: ComplexTypeと他オブジェクトとのリンク
 sidebar_label: ComplexTypeと他オブジェクトとのリンク
 ---

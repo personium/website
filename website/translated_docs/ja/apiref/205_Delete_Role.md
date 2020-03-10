@@ -1,5 +1,5 @@
 ---
-id: version-1.7.21-205_Delete_Role
+id: 205_Delete_Role
 title: Role削除
 sidebar_label: Role削除
 ---

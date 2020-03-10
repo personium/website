@@ -1,5 +1,5 @@
 ---
-id: version-1.7.21-227_Delete_External_Cell
+id: 227_Delete_External_Cell
 title: ExtCell削除
 sidebar_label: ExtCell削除
 ---

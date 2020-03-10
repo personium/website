@@ -1,5 +1,5 @@
 ---
-id: version-1.7.21-005_Model_construction
+id: 005_Model_construction
 title: Cellのモデル
 sidebar_label: Cellのモデル
 ---

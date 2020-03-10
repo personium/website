@@ -1,5 +1,5 @@
 ---
-id: version-1.7.21-001_Introduction
+id: 001_Introduction
 title: Personiumとは何ですか？
 sidebar_label: Personiumとは何ですか？
 ---

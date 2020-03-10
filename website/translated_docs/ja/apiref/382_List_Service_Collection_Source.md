@@ -1,5 +1,5 @@
 ---
-id: version-1.7.21-382_List_Service_Collection_Source
+id: 382_List_Service_Collection_Source
 title: サービスコレクションソース取得
 sidebar_label: サービスコレクションソース取得
 ---

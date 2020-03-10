@@ -1,5 +1,5 @@
 ---
-id: version-1.7.21-265_Create_Obj_Via_Box_NP
+id: 265_Create_Obj_Via_Box_NP
 title: BoxのNavigation Property経由での他オブジェクト登録
 sidebar_label: BoxのNavigation Property経由での他オブジェクト登録
 ---

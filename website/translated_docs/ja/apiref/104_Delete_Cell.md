@@ -1,5 +1,5 @@
 ---
-id: version-1.7.21-104_Delete_Cell
+id: 104_Delete_Cell
 title: Cell削除
 sidebar_label: Cell削除
 ---

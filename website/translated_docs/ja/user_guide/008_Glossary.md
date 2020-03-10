@@ -1,5 +1,5 @@
 ---
-id: version-1.7.21-008_Glossary
+id: 008_Glossary
 title: 用語集
 sidebar_label: 用語集
 ---

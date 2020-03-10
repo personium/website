@@ -1,7 +1,8 @@
 ---
-id: 005_Model_construction
+id: version-1.7.21-005_Model_construction
 title: Cell model
 sidebar_label: Cell model
+original_id: 005_Model_construction
 ---
 #### Message model  
 

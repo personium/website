@@ -1,5 +1,5 @@
 ---
-id: version-1.7.21-2AA_List_Internal_Rule
+id: 2AA_List_Internal_Rule
 title: Rule内部情報一覧取得
 sidebar_label: Rule内部情報一覧取得
 ---

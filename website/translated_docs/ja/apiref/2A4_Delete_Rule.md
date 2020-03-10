@@ -1,5 +1,5 @@
 ---
-id: version-1.7.21-2A4_Delete_Rule
+id: 2A4_Delete_Rule
 title: Rule削除
 sidebar_label: Rule削除
 ---

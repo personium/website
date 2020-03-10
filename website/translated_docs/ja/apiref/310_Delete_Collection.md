@@ -1,5 +1,5 @@
 ---
-id: version-1.7.21-310_Delete_Collection
+id: 310_Delete_Collection
 title: コレクション削除
 sidebar_label: コレクション削除
 ---

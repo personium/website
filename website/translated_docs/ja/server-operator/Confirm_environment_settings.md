@@ -1,5 +1,5 @@
 ---
-id: version-1.7.21-Confirm_environment_settings
+id: Confirm_environment_settings
 title: Ansible で構築したユニットの環境情報
 sidebar_label: Ansible で構築したユニットの環境情報
 ---

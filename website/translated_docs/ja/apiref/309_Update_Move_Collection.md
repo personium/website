@@ -1,5 +1,5 @@
 ---
-id: version-1.7.21-309_Update_Move_Collection
+id: 309_Update_Move_Collection
 title: コレクション移動名称変更
 sidebar_label: コレクション移動名称変更
 ---

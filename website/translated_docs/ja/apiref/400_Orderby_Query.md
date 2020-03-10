@@ -1,5 +1,5 @@
 ---
-id: version-1.7.21-400_Orderby_Query
+id: 400_Orderby_Query
 title: $orderby クエリ
 sidebar_label: $orderby クエリ
 ---

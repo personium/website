@@ -1,5 +1,5 @@
 ---
-id: version-1.7.21-234_Create_Relation
+id: 234_Create_Relation
 title: Relation登録
 sidebar_label: Relation登録
 ---

@@ -1,5 +1,5 @@
 ---
-id: version-1.7.21-244_List_Obj_Via_Relation_NP
+id: 244_List_Obj_Via_Relation_NP
 title: RelationのNavigation Property経由での他オブジェクト一覧取得
 sidebar_label: RelationのNavigation Property経由での他オブジェクト一覧取得
 ---
