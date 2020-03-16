@@ -168,13 +168,13 @@ PDS上のデータが活用されていくためには以下のアプリが豊�
 
 ![OAuth in PDS](assets/auth/pds_oauth.png)
 
-具体的なフローはアプリの形態(Confidential ClientかPublic Clientかなど)によって異なります。Personiumのv1.7.21現在のバージョンでは以下のgrant_typeフローに対応しております。
+具体的なフローはアプリの形態(Confidential ClientかPublic Clientかなど)によって異なります。Personiumでは以下のgrant_typeフローに対応しております。
 
-- 認可コードフロー
 - ROPC (Resource Owner Password Credential) フロー
+- 認可コードフロー
 - インプリシットフロー
 
-順にフローを見ていきます。
+ここでは主に使用するROPCと認可コードフローを説明します。
 
 ### ROPC (Resource Owner Password Credential) フロー
 
@@ -190,10 +190,6 @@ PDS上のデータが活用されていくためには以下のアプリが豊�
 
 [アプリ認証](../app-developer/app_authn.html)の項で詳細を記述しています。
 
-### インプリシットフロー
-
-準備中
-
 ### 認可コードフロー+SSO
 
 各アプリで認可コードフローを取った場合、各アプリごとにデータ主体のセルURLを入力し、認証することになります。このセルURLの入力と認証を1度で行い、SSOを実現することもできます。Personiumコミュニティで提供している[ホームアプリ](https://github.com/personium/app-cc-home)と、ホームアプリでの認証後に起動される[app-myboard](https://github.com/personium/app-myboard)はこれらを実現するサンプルアプリとなっています。
@@ -201,15 +197,3 @@ PDS上のデータが活用されていくためには以下のアプリが豊�
 ホームアプリを経由した場合次のフローを取ります。
 
 ![Authorization Code Flow on home app](assets/auth/personium-authz-code-flow-home-app/personium-authz-code-flow.png)
-
-### アプリ認証とトランスセルトークン取得
-
-準備中
-
-### アプリ認証とトークン交換
-
-準備中
-
-### 他Boxへのデータアクセス
-
-準備中
