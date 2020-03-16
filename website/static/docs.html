@@ -1,0 +1,63 @@
+<!DOCTYPE HTML>
+<!--
+	Just redirect page
+-->
+<HTML>
+
+<HEAD>
+    <title>Personium | Open Source PDS Software.</title>
+    <meta name="description"
+        content="An interconnectable open source PDS (Personal Data Store) server envisioning world wide web of protected data APIs.">
+    <meta name="keywords" content="HTML5, bootstrap, mobile, app, landing, ios, android, responsive">
+    <meta property="og:title" content="Personium | Open Source PDS" />
+    <meta property="og:type" content="website" />
+    <meta property="og:url" content="https://personium.io/" />
+    <meta property="og:description"
+        content="An interconnectable open source PDS (Personal Data Store) server envisioning world wide web of protected data APIs." />
+    <meta property="og:image" content="https://personium.io/images/header-icon.png" />
+    <link rel="icon" href="./images/favicon.ico" type="image/x-icon" />
+</HEAD>
+
+<BODY>
+
+
+    <script type="text/javascript" charset="utf-8">
+        var browserLanguage = function () {
+            var ua = window.navigator.userAgent.toLowerCase();
+            try {
+                // chrome
+                if (ua.indexOf('chrome') != -1) {
+                    return (navigator.languages[0] || navigator.browserLanguage || navigator.language || navigator
+                        .userLanguage).substr(0, 2);
+                }
+                // それ以外
+                else {
+                    return (navigator.browserLanguage || navigator.language || navigator.userLanguage).substr(0, 2);
+                }
+            } catch (e) {
+                return undefined;
+            }
+        }
+
+        var getLanguage = function () {
+            var result = /docs\/(\w{2})/.exec(document.referrer);
+            var lang = null;
+
+            if (result) {
+                return result[1];
+            }
+
+            lang = browserLanguage();
+            if (lang) {
+                return lang;
+            }
+
+            return 'en';
+        };
+
+        location.href = '/docs/' + getLanguage() + '/README';
+    </script>
+
+</BODY>
+
+</HTML>
