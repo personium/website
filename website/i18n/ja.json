@@ -2313,9 +2313,9 @@
     },
     "categories": {
       "API Reference": "APIリファレンス",
-      "Unit Level API": "ユニットレベルAPI",
-      "Cell Level API": "セルレベルAPI",
-      "Box Level API": "ボックスレベルAPI",
+      "Unit Level API": "Unit Level API",
+      "Cell Level API": "Cell Level API",
+      "Box Level API": "Box Level API",
       "Common": "共通",
       "Introduction": "はじめに",
       "For Personium Operators": "Personium運用者向け",
