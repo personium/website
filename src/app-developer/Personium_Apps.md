@@ -135,7 +135,7 @@ The following diagram shows the folder structure of a very simple Personium App.
 Cell Management Client is the GUI tool for managing Cell.  
 
 Cell level APIs allow administrative operations to be performed on the Cell.  
-For details, see [here](../user_guide/001_Personium_Concepts.html).  
+For details, see [here](../user_guide/001_Personium_Concepts.md).  
 
 #### Functions  
 The Cell management client provides the following functions.  

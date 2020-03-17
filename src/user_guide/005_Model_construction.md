@@ -22,7 +22,7 @@ sidebar_label: Cell model
 
 * Collection is a data set stored in Box.
 * There are the following three types.  
-    * <a href="./007_WebDAV_model.html">WebDAV model</a>
+    * [WebDAV model](./007_WebDAV_model.md)
     * OData model
     * Service model
 
