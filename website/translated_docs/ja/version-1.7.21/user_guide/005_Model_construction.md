@@ -8,7 +8,7 @@ sidebar_label: Cellのモデル
 
 #### イベントのモデル
 
-#### [認証/認可モデル](./003_Auth.html)
+#### [認証/認可モデル](./003_Auth.md)
 
 #### [アクセス制御モデル](../apiref/006_Access_Control.md)
 

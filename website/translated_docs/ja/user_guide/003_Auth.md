@@ -145,7 +145,7 @@ Personiumではセル間の信頼関係によってデータアクセスの制�
 
 TODO: 図を書く
 
-詳細は[アクセス制御モデル](../apiref/006_Access_Control.html)の項を参照してください。
+詳細は[アクセス制御モデル](../apiref/006_Access_Control.md)の項を参照してください。
 
 -------------------------------------------------------------------------------
 
@@ -160,7 +160,7 @@ TODO: 図を書く
 
 そのためには、1事業者だけでなく他の事業者がアプリを開発・提供できるようなオープンAPIの活用が必要になります。本項ではこのような想定の元でのアプリの認証/認可の概略について記述します。
 
-[アプリ認証](../app-developer/app_authn.html)の項においても詳細を記述しています。
+[アプリ認証](../app-developer/app_authn.md)の項においても詳細を記述しています。
 
 ### PDSにおけるOAuth
 
@@ -201,7 +201,7 @@ PDS事業者とアプリ提供者が同じである場合など、アプリの�
 
 ![Authorization Code Flow](assets/auth/personium-authz-code-flow/personium-authz-code-flow.png)
 
-[アプリ認証](../app-developer/app_authn.html)の項で詳細を記述しています。
+[アプリ認証](../app-developer/app_authn.md)の項で詳細を記述しています。
 
 ### Boxの保護
 

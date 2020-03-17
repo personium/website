@@ -144,8 +144,7 @@ x509.rootについては、複数のファイルの指定が可能です。
 何等かの設定を行えばこの動作は無効化されるので、Personiumプロジェクトのエコシステムに参加
 させたくない場合は、何等かの設定を行ってください。
 
-参照：
-https://personium.github.io/ja/server-operator/unit_config_list.html
+[参照](../server-operator/unit_config_list.md)
 
 ## ユニット証明書発行者となるには
 

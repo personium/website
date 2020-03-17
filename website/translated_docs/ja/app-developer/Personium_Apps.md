@@ -122,7 +122,7 @@ GitHubで公開している各種アプリのフォルダ構成は一定のル�
 
 Cell管理クライアントは、Cellの所有者であるユーザがCellの管理権限相当の操作を行うためのGUIのことを指す。
 Cellの管理権限相当の操作はCellレベルAPIで
-詳細は[ここ](https://personium.github.io/ja/user_guide/001_Personium_Concepts.html)を参照。
+詳細は[ここ](../user_guide/001_Personium_Concepts.md)を参照。
 
 #### 機能
  Cell管理クライアントはおおまかに以下の機能を有しています。
