@@ -46,8 +46,17 @@ const siteConfig = {
     {href: '/docs.html', label: 'Documentation'},
     {href: '/apiref.html', label: 'API Reference'},
     {blog: true, label: 'News'},
+    {search: true},
     // {page: 'help', label: 'Help'},
   ],
+
+  algolia: {
+    apiKey: '4ca37a28dcf8f84caf27cbfd300cb701',
+    indexName: 'personium',
+    algoliaOptions: {
+      facetFilters: ['language:LANGUAGE', 'version:VERSION'],
+    },
+  },
 
   blogSidebarCount: 10,
   blogSidebarTitle: { default: 'Recent News', all: 'All News' },
