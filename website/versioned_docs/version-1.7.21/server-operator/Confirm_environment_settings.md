@@ -118,7 +118,7 @@ Check the basic settings of the server on which the AP service runs.
 | personium-engine Log Directory| /personium/personium-engine/log/personium-engine.log                  |
 | Unit Config File              | /personium/personium-core/conf/18888/personium-unit-config.properties |  
 
-* By changing personium-unit-config.properties, you can change [Unit configurations](https://personium.io/docs/en/server-operator/unit_config_list.html) from the default.  
+* By changing personium-unit-config.properties, you can change [Unit configurations](../server-operator/unit_config_list.md) from the default.  
     Immediately after construction with Ansible, it is set as follows.  
     \* {} Means that the contents defined in hosts changed before Ansible execution are described.  
     \* {{}} Indicates that a randomly determined character string is described when Ansible is executed. 

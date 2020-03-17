@@ -137,8 +137,7 @@ If you do not specify anything, the certificate of Personium official CA will be
 If any setting is made this action will be invalidated so join the ecosystem of the Personium project
 If you do not want to do so, please make some settings.
 
-reference:
-https://personium.github.io/en/server-operator/unit_config_list.html
+[reference](../server-operator/unit_config_list.md)
 
 ## Become a unit certificate issuer
 

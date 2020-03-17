@@ -59,7 +59,7 @@ Only your application knows the application ID and application password. To set 
 
 In any case, the "authentication_token" item of the authentication success response JSON for this request is "application authentication token". Please parse JSON and get it.  
 
-Reference: http://personium.io/docs/en/apiref/293_OAuth2_Token_Endpoint.html
+[Reference](../apiref/293_OAuth2_Token_Endpoint.md)
 
 ### Receive access token
 
@@ -78,7 +78,7 @@ The "access_token" item in the response JSON returned here is the access token f
 
 Use the following API to get the URL of Box which is the area for your application on target user Cell.  
 
-Reference: http://personium.io/docs/en/apiref/304_Get_Box_URL.html
+[Reference](../apiref/304_Get_Box_URL.md)
 
 At this time, please specify the access token acquired in the Authorization header.  
 

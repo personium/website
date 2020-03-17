@@ -19,7 +19,7 @@ In Personium, the schema manipulation itself is also done with the OData interfa
 
 ## Create table
 By creating an EntityType in Personium, it is possible to create something equivalent to a table.  
-   http://personium.io/docs/en/apiref/345_Create_EntityType.html
+    See [here](../apiref/345_Create_EntityType.md).
 
 > In the OData specification, EntityType is originally type information, and based on it, it is the idea of making something equivalent to a table called EntitySet. Personium emphasizes practicality and automatically creates an EntitySet (table equivalent concept) of the same name by creating EntityType. Therefore, the table will be created by EntityType creation.
 
