@@ -46,6 +46,7 @@ const siteConfig = {
     {href: '/docs.html', label: 'Documentation'},
     {href: '/apiref.html', label: 'API Reference'},
     {blog: true, label: 'News'},
+    {languages: true},
     {search: true},
     // {page: 'help', label: 'Help'},
   ],
