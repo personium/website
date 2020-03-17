@@ -191,20 +191,18 @@ grant_typeはアプリの形態(信用できるアプリかどうか、サーバ
 
 ![ROPC Flow](assets/auth/ROPC.png)
 
-本フローはPDS事業者とアプリ提供者が同じである場合など、アプリの信頼性が高い場合に使用できるフローです。そうでない場合は次の認可コードフローを採用します。
+本フローはアプリ上でusername/passwordを入力してアクセストークンを取得するというシンプルなフローです。
+
+PDS事業者とアプリ提供者が同じである場合など、アプリの信頼性が高い場合に使用できるフローです。そうでない場合は次の認可コードフローを採用します。
 
 ### 認可コードフロー
 
-認可コードフローでは次のフローを取ります。
+認可コードフローでは、PDS上の画面でデータアクセス同意・username/passwordを入力した後、短命な認可コードをアプリ側で一旦受け取り、アプリからPDSに認可コードを送ってアクセストークンを取得するフローです。
 
 ![Authorization Code Flow](assets/auth/personium-authz-code-flow/personium-authz-code-flow.png)
 
 [アプリ認証](../app-developer/app_authn.html)の項で詳細を記述しています。
 
-### 認可コードフロー+SSO
+### Boxの保護
 
-各アプリで認可コードフローを取った場合、各アプリごとにデータ主体のセルURLを入力し、認証することになります。このセルURLの入力と認証を1度で行い、SSOを実現することもできます。Personiumコミュニティで提供している[ホームアプリ](https://github.com/personium/app-cc-home)と、ホームアプリでの認証後に起動される[app-myboard](https://github.com/personium/app-myboard)はこれらを実現するサンプルアプリとなっています。
-
-ホームアプリを経由した場合次のフローを取ります。
-
-![Authorization Code Flow on home app](assets/auth/personium-authz-code-flow-home-app/personium-authz-code-flow.png)
+準備中

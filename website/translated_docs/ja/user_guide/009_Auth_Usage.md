@@ -36,6 +36,14 @@ ROPC
 
 Code flow
 
+### 認可コードフロー+SSO
+
+各アプリで認可コードフローを取った場合、各アプリごとにデータ主体のセルURLを入力し、認証することになります。このセルURLの入力と認証を1度で行い、SSOを実現することもできます。Personiumコミュニティで提供している[ホームアプリ](https://github.com/personium/app-cc-home)と、ホームアプリでの認証後に起動される[app-myboard](https://github.com/personium/app-myboard)はこれらを実現するサンプルアプリとなっています。
+
+ホームアプリを経由した場合次のフローを取ります。
+
+![Authorization Code Flow on home app](assets/auth/personium-authz-code-flow-home-app/personium-authz-code-flow.png)
+
 ### 他者のセルのボックスにアクセス
 
 ### 自分のセルの他アプリのボックスにアクセス
