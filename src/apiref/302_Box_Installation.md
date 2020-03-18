@@ -62,6 +62,7 @@ box-install
 |Box installation reception|boxinstall|BoxURL|Response Code|
 |Box installation process in progress|PL-BI-1000|BoxURL|Bar installation started.|
 ||PL-BI-1001|Entry path in bar file|Installation started.|
+||PL-BI-1002|Entry path in bar file|Installation processing.|
 ||PL-BI-1003|Entry path in bar file|Installation completed.|
 ||PL-BI-1004|Entry path in bar file|Installation failed({cause}).|
 ||PL-BI-1005||Unknown error({cause}).|
@@ -76,6 +77,7 @@ box-install
 |PL-BI-0001|Box installation complete (abnormal termination)|
 |PL-BI-1000|Box installation start|
 |PL-BI-1001|Bar file entry start installation|
+|PL-BI-1002|Bar file entry installation processing|
 |PL-BI-1003|Bar file entry installation completed (normal termination)|
 |PL-BI-1004|Bar file entry installation completed (abnormal termination)|
 |PL-BI-1005|Internal error|

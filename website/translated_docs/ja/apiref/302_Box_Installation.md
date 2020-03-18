@@ -52,6 +52,7 @@ box-install
 |Boxインストール受付|boxinstall|BoxのURL|ステータスコード|
 |Boxインストール処理中|PL-BI-1000|BoxのURL|Bar installation started.|
 ||PL-BI-1001|Barファイル内のエントリパス|Installation started.|
+||PL-BI-1002|Barファイル内のエントリパス|Installation processing.|
 ||PL-BI-1003|Barファイル内のエントリパス|Installation completed.|
 ||PL-BI-1004|Barファイル内のエントリパス|Installation failed({原因}).|
 ||PL-BI-1005||Unknown error({原因}).|
@@ -65,6 +66,7 @@ box-install
 |PL-BI-0001|Boxインストール完了(異常終了)|
 |PL-BI-1000|Boxインストール開始|
 |PL-BI-1001|barファイル内エントリインストール開始|
+|PL-BI-1002|barファイル内エントリインストール処理中|
 |PL-BI-1003|barファイル内エントリインストール完了(正常終了)|
 |PL-BI-1004|barファイル内エントリインストール完了(異常終了)|
 |PL-BI-1005|内部エラー|
