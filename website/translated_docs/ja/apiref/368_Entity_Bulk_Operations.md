@@ -147,7 +147,7 @@ POST, GET, PUT, DELETE
 Content-Type: application/http
 Content-Transfer-Encoding:binary
 
-GET https://cell1.unit1.example/box1/collection1/entity-type1('0000')
+GET entity-type1('0000')
 Accept-Encoding: gzip
 Accept: application/json
 Content-Length: 0
@@ -159,7 +159,7 @@ Content-Length: 608
 Content-Type: application/http
 Content-Transfer-Encoding: binary
 
-POST https://cell1.unit1.example/box1/odata-collection1/entity-type1
+POST entity-type1
 Content-Type: application/json
 Content-Length: 41
 
@@ -169,7 +169,7 @@ Content-Length: 41
 Content-Type: application/http
 Content-Transfer-Encoding: binary
 
-PUT https://cell1.unit1.example/box1/odata-collection1/entity-type1('0000')
+PUT entity-type1('0000')
 Content-Type: application/json
 Content-Length: 87
 If-Match: *
@@ -181,7 +181,7 @@ If-Match: *
 Content-Type: application/http
 Content-Transfer-Encoding:binary
 
-GET https://cell1.unit1.example/box1/odata-collection1/entity-type1('0000')
+GET entity-type1('0000')
 Accept-Encoding: gzip
 Accept: application/json
 Content-Length: 0
@@ -193,7 +193,7 @@ Content-Length: 686
 Content-Type: application/http
 Content-Transfer-Encoding: binary
 
-POST https://cell1.unit1.example/box1/odata-collection1/entity-type1('0001')/_log
+POST entity-type1('0001')/_log
 Content-Type: application/json
 Content-Length: 37
 
@@ -203,14 +203,14 @@ Content-Length: 37
 Content-Type: application/http
 Content-Transfer-Encoding: binary
 
-DELETE https://cell1.unit1.example/box1/odata-collection1/entity-type1('0001')/_log
+DELETE entity-type1('0001')/_log
 Content-Length: 0
 If-Match: *
 --changeset_d4883767-a06e-4632-9608-ae952b443dfc
 Content-Type: application/http
 Content-Transfer-Encoding: binary
 
-DELETE https://cell1.unit1.example/box1/odata-collection1/entity-type1('0000')
+DELETE entity-type1('0000')
 Content-Length: 0
 If-Match: *
 --changeset_d4883767-a06e-4632-9608-ae952b443dfc--
@@ -376,7 +376,7 @@ sample.txt
 Content-Type: application/http
 Content-Transfer-Encoding:binary
 
-GET https://cell1.unit1.example/box1/odata-collection1/entity-type1('{100-1_20101108-111352093}')
+GET entity-type1('{100-1_20101108-111352093}')
 Authorization: Bearer AA~PBDc...(省略)...FrTjA
 --batch_XAmu9BiJJLBa20sRWIq74jp2UlNAVueztqu
 Content-Type: multipart/mixed; boundary=changeset_76c10b01-3eaf-49c2-bdd7-9fe90df24159
@@ -386,7 +386,7 @@ Content-Length: 608
 Content-Type: application/http
 Content-Transfer-Encoding: binary
 
-POST https://cell1.unit1.example/box1/odata-collection1/entity-type1
+POST entity-type1
 Content-Type: application/json
 Content-Length: 41
 
