@@ -1013,6 +1013,26 @@
         "title": "Personium How to participate in document maintenance / improvement",
         "sidebar_label": "Personium How to participate in document maintenance / improvement"
       },
+      "getting-started/appdev-1": {
+        "title": "App dev 1",
+        "sidebar_label": "App dev 1"
+      },
+      "getting-started/appdev-2": {
+        "title": "App dev 2",
+        "sidebar_label": "App dev 2"
+      },
+      "getting-started/appdev-3": {
+        "title": "App dev 3",
+        "sidebar_label": "App dev 3"
+      },
+      "getting-started/README": {
+        "title": "Getting Started",
+        "sidebar_label": "Getting Started"
+      },
+      "getting-started/unit-setup": {
+        "title": "Unit Setup",
+        "sidebar_label": "Unit Setup"
+      },
       "installation_guide/001_Readme_before_installation": {
         "title": "Readme before installation",
         "sidebar_label": "Readme before installation"
@@ -2306,6 +2326,7 @@
       "Box Level API": "Box Level API",
       "Common": "Common",
       "Introduction": "Introduction",
+      "Getting Started": "Getting Started",
       "For Personium Operators": "For Personium Operators",
       "For App Developer": "For App Developer",
       "Contributor Guides": "Contributor Guides",
