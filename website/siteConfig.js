@@ -28,7 +28,7 @@ const siteConfig = {
     'An interconnectable open source PDS (Personal Data Store) server ',
     'envisioning world wide web of protected data APIs.',
   ].join(''),
-  url: 'https://personium.github.io', // Your website URL
+  url: 'https://personium.io', // Your website URL
   baseUrl: '/', // Base URL for your project */
   // For github.io type URLs, you would set the url and baseUrl like:
   //   url: 'https://facebook.github.io',
