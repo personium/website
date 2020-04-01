@@ -1,8 +1,8 @@
 /* your custom css */
 
-/* .fixedHeaderContainer {
-  display: none;
-} */
+.headerTitleWithLogo {
+  display: none!important;
+}
 
 /* .singleRowMobileNav.navPusher {
   padding-top: 80px!important;

@@ -23,7 +23,7 @@ const users = [
 const siteConfig = {
   customDocsPath : 'src',
   docsUrl: 'docs',
-  title: '', // Title for your website.
+  title: 'Personium', // Title for your website.
   tagline: [
     'An interconnectable open source PDS (Personal Data Store) server ',
     'envisioning world wide web of protected data APIs.',
