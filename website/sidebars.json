@@ -398,6 +398,14 @@
       "user_guide/008_Glossary",
       "user_guide/990_Old_Version_API_Ref"
     ],
+    "Getting Started": [
+      "getting-started/README",
+      "getting-started/unit-setup",
+      "unit-administrator/tutorial",
+      "getting-started/appdev-1",
+      "getting-started/appdev-2",
+      "getting-started/appdev-3"
+    ],
     "For Personium Operators": [
       {
         "type": "subcategory",
@@ -422,7 +430,6 @@
         "ids": [
           "unit-administrator/README",
           "unit-administrator/Unit-User",
-          "unit-administrator/tutorial",
           "unit-administrator/Data_Management"
         ]
       }
