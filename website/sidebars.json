@@ -391,12 +391,9 @@
     "Introduction": [
       "README",
       "overview/001_Introduction",
+      "overview/Aims_for",
       "user_guide/001_Personium_Architecture",
-      "user_guide/005_Model_construction",
-      "user_guide/003_Auth",
-      "user_guide/007_WebDAV_model",
-      "user_guide/008_Glossary",
-      "user_guide/990_Old_Version_API_Ref"
+      "user_guide/008_Glossary"
     ],
     "Getting Started": [
       "getting-started/README",
@@ -436,6 +433,9 @@
     ],
     "For App Developer": [
       "app-developer/README",
+      "user_guide/005_Model_construction",
+      "user_guide/003_Auth",
+      "user_guide/007_WebDAV_model",
       "app-developer/using_odata",
       "app-developer/Personium_Apps",
       "user_guide/004_Client_auth",
@@ -444,7 +444,8 @@
       "app-developer/launch_from_homeapp",
       "app-developer/Personium-Engine",
       "app-developer/671_Engine_Script_Samples",
-      "cell-gui-developer/README"
+      "cell-gui-developer/README",
+      "user_guide/990_Old_Version_API_Ref"
     ],
     "Contributor Guides": [
       {

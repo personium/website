@@ -1049,6 +1049,10 @@
         "title": "What is Personium?",
         "sidebar_label": "What is Personium?"
       },
+      "overview/Aims_for": {
+        "title": "Personium aims for",
+        "sidebar_label": "Personium aims for"
+      },
       "plugin-developer/EngineExtension_Imple_and_Deploy": {
         "title": "Engine Extension implementation and deployment specification",
         "sidebar_label": "Engine Extension implementation and deployment specification"

@@ -17,6 +17,8 @@ Register to join the Slack community [here](https://bit.ly/Join_Personium_Slack)
 
 ## User Guides
 
+Figure that presents user roles associated with Personium
+
 ### For Personium Operators
 
 #### [Server Software Operator's Guide](./server-operator/README.md)

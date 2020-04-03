@@ -48,3 +48,4 @@ Personium's API is build on international standards.
 * WebDAV for File operation
 * OData for relational data
 
+Figure that presents above
