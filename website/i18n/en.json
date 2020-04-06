@@ -1009,6 +1009,10 @@
         "title": "Cell GUI developer's Guide",
         "sidebar_label": "Cell GUI developer's Guide"
       },
+      "contributor/README": {
+        "title": "Contributor's Guide",
+        "sidebar_label": "Contributor's Guide"
+      },
       "document-writer/README": {
         "title": "Personium How to participate in document maintenance / improvement",
         "sidebar_label": "Personium How to participate in document maintenance / improvement"

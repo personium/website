@@ -448,6 +448,7 @@
       "user_guide/990_Old_Version_API_Ref"
     ],
     "Contributor Guides": [
+      "contributor/README",
       {
         "type": "subcategory",
         "label": "For Document Contribution",
