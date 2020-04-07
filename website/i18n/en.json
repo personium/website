@@ -1009,6 +1009,10 @@
         "title": "Cell GUI developer's Guide",
         "sidebar_label": "Cell GUI developer's Guide"
       },
+      "contributor/README": {
+        "title": "Contributor's Guide",
+        "sidebar_label": "Contributor's Guide"
+      },
       "document-writer/README": {
         "title": "Personium How to participate in document maintenance / improvement",
         "sidebar_label": "Personium How to participate in document maintenance / improvement"
@@ -1048,6 +1052,10 @@
       "overview/001_Introduction": {
         "title": "What is Personium?",
         "sidebar_label": "What is Personium?"
+      },
+      "overview/Aims_for": {
+        "title": "Personium aims for",
+        "sidebar_label": "Personium aims for"
       },
       "plugin-developer/EngineExtension_Imple_and_Deploy": {
         "title": "Engine Extension implementation and deployment specification",

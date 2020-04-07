@@ -31,6 +31,8 @@ Personium unit construction requires to assign the combination of following 7 ro
 |NFS|Required|server to operate `Network File System (NFS)`.|
 |Bastion|Optional|Bastion server. Used to execute ansible and to connect other servers by ssh.|
 
+TODO: Figure 3-server
+
 ## Unit configuration design
 
 Personium has a scalable architecture. For evaluation and personal use, it is also possible to build a Personium unit packed all in one machine. Meanwhile, it is recommended to adopt the layer structure such as Web layer - AP layer - DB layer because non-function such as security and performance is required to construct units used by hundreds or thousands of people, You should take a minimum of 2-3 configurations. Furthermore, in order to construct a large-scale unit that tens of thousands to hundreds of thousands of people use every day, each layer is scaled out and it takes 10 to 20 units.
