@@ -4,6 +4,10 @@ author: Dixon Siu
 authorURL: https://twitter.com/dixon_siu
 ---
 
+Updates (April 6th): Meeting memo of April 1st is available [here](https://bit.ly/CEPS-Bi-weekly-Meeting-Memo). Next meeting is April 15th, 8.30am-9.30am CEST (Vienna).    
+
+<!--truncate-->
+
 A bi-weekly meeting hosted by [Freezr](http://www.freezr.info/)/[OwnYourData](https://www.ownyourdata.eu/)/[Personium](https://personium.io/)   will start on April 1st. We will discuss PDS interoperability issues and try to implement the agreed solutions.  
 
 
@@ -11,13 +15,13 @@ A Common Endpoint for Personal data Stores ([CEPS](https://mydata-global.org/com
 
 <img src="https://ceps.demo-eu.personium.io/meeting/images/PDS-Interoperability.png" width="550px" >
 
-<!--truncate-->
 
-## Preliminary Agenda (Wednesday, April 1st, 8.30am-9.30am CET)  
+
+## Agenda (Wednesday, April 1st, 8.30am-9.30am CEST)  
 [https://bit.ly/CEPS-Bi-weekly-Meeting-Memo](https://bit.ly/CEPS-Bi-weekly-Meeting-Memo)  
 
 1. Opening round  
+1. jLinc introduction (Iain)  
 1. Go over comments/notes from Workshop  
-1. Add core participants to Trello Team  
-1. Demo of Personium CEPS  
+1. Salman: Discussion of sharing  
 1. Closing round  
