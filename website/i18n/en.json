@@ -1187,7 +1187,7 @@
       },
       "unit-administrator/tutorial": {
         "title": "Personium Unit management tutorial",
-        "sidebar_label": "Personium Unit management tutorial"
+        "sidebar_label": "Create Cell"
       },
       "unit-administrator/Unit-User": {
         "title": "Unit User",

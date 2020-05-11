@@ -456,19 +456,45 @@
     ],
     "For App Developer": [
       "app-developer/README",
-      "user_guide/005_Model_construction",
-      "user_guide/003_Auth",
-      "user_guide/007_WebDAV_model",
-      "app-developer/using_odata",
-      "app-developer/Personium_Apps",
-      "user_guide/004_Client_auth",
-      "app-developer/app_authn",
-      "app-developer/Roles",
-      "app-developer/launch_from_homeapp",
-      "app-developer/Personium-Engine",
-      "app-developer/671_Engine_Script_Samples",
+      {
+        "type": "subcategory",
+        "label": "Authentication/Authorization",
+        "ids": [
+          "user_guide/003_Auth",
+          "user_guide/004_Client_auth",
+          "app-developer/app_authn",
+          "app-developer/Roles",
+          "app-developer/launch_from_homeapp"
+        ]
+      },
+      {
+        "type": "subcategory",
+        "label": "Box/Bar File",
+        "ids": [
+          "apiref/007_Box_install",
+          "apiref/301_Bar_File"
+        ]
+      },
+      {
+        "type": "subcategory",
+        "label": "Collection",
+        "ids": [
+          "user_guide/007_WebDAV_model",
+          "app-developer/using_odata",
+          "app-developer/Personium-Engine",
+          "app-developer/671_Engine_Script_Samples"
+        ]
+      },
       "cell-gui-developer/README",
-      "user_guide/990_Old_Version_API_Ref"
+      {
+        "type": "subcategory",
+        "label": "Old Docs",
+        "ids": [
+          "user_guide/005_Model_construction",
+          "app-developer/Personium_Apps",
+          "user_guide/990_Old_Version_API_Ref"
+        ]
+      }
     ],
     "Contributor Guides": [
       "contributor/README",
