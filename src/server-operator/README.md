@@ -39,6 +39,10 @@ Personium has a scalable architecture. For evaluation and personal use, it is al
 
 First of all, let's decide what kind of unit to make and design the necessary infrastructure.
 
+## Preparation
+
+TODO: Write HTTPS and DNS settings
+
 ## Construction of unit
 
 By using it you can build a unit using Virtual image, Vagrant, Ansible. If you are building in an Open Stack-based cloud environment, you can almost unit-build by using Heat Template. Of course, you can also build units using any cloud or physical/virtual machine without using these automatic construction tools. However, since we do not have the physical strength to prepare and maintain the document etc. for that, please build it with reference to the server infrastructure building procedure using Heat of Open Stack and the automatic unit building procedure using Ansible.
