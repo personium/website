@@ -1017,25 +1017,69 @@
         "title": "Personium How to participate in document maintenance / improvement",
         "sidebar_label": "Personium How to participate in document maintenance / improvement"
       },
-      "getting-started/appdev-1": {
-        "title": "App dev 1",
-        "sidebar_label": "App dev 1"
+      "getting-started/appdev-appcell-and-box": {
+        "title": "App Cell & Box on User Cell",
+        "sidebar_label": "App Cell & Box on User Cell"
       },
-      "getting-started/appdev-2": {
-        "title": "App dev 2",
-        "sidebar_label": "App dev 2"
+      "getting-started/appdev-dist-bar": {
+        "title": "Distribute Bar File",
+        "sidebar_label": "Distribute Bar File"
       },
-      "getting-started/appdev-3": {
-        "title": "App dev 3",
-        "sidebar_label": "App dev 3"
+      "getting-started/appdev-dist-SSO-launch-app": {
+        "title": "Distribute SSO launch App",
+        "sidebar_label": "Distribute SSO launch App"
+      },
+      "getting-started/appdev-dist-stand-alone-app": {
+        "title": "Distribute Stand-alone App",
+        "sidebar_label": "Distribute Stand-alone App"
+      },
+      "getting-started/appdev-impl-auth": {
+        "title": "Implement Authentication",
+        "sidebar_label": "Implement Authentication"
+      },
+      "getting-started/appdev-impl-data-sharing": {
+        "title": "Implement Data Sharing",
+        "sidebar_label": "Implement Data Sharing"
+      },
+      "getting-started/appdev-impl-engine-script": {
+        "title": "Implement Engine Script",
+        "sidebar_label": "Implement Engine Script"
+      },
+      "getting-started/appdev-impl-oauth2-code-flow": {
+        "title": "Implement OAuth2 Code Flow",
+        "sidebar_label": "Implement OAuth2 Code Flow"
+      },
+      "getting-started/appdev-impl-odata": {
+        "title": "Implement Relational Data (OData)",
+        "sidebar_label": "Implement Relational Data (OData)"
+      },
+      "getting-started/appdev-impl-webdav": {
+        "title": "Implement File (WebDAV)",
+        "sidebar_label": "Implement File (WebDAV)"
+      },
+      "getting-started/appdev-introduction": {
+        "title": "Develop your App",
+        "sidebar_label": "Introduction"
+      },
+      "getting-started/appdev-management-tool": {
+        "title": "Management tool (UnitManager)",
+        "sidebar_label": "Management tool (UnitManager)"
+      },
+      "getting-started/appdev-template": {
+        "title": "App Template",
+        "sidebar_label": "App Template"
       },
       "getting-started/README": {
         "title": "Getting Started",
-        "sidebar_label": "Getting Started"
+        "sidebar_label": "Introduction"
       },
-      "getting-started/unit-setup": {
-        "title": "Unit Setup",
-        "sidebar_label": "Unit Setup"
+      "getting-started/setup-sample-apps": {
+        "title": "Setup Sample Apps",
+        "sidebar_label": "Setup Sample Apps"
+      },
+      "getting-started/setup-unit": {
+        "title": "Setup Unit",
+        "sidebar_label": "Setup Unit"
       },
       "installation_guide/001_Readme_before_installation": {
         "title": "Readme before installation",

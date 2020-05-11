@@ -1,7 +1,7 @@
 ---
-id: unit-setup
-title: Unit Setup
-sidebar_label: Unit Setup
+id: setup-unit
+title: Setup Unit
+sidebar_label: Setup Unit
 ---
 
 ## Introduction

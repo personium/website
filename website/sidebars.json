@@ -397,11 +397,34 @@
     ],
     "Getting Started": [
       "getting-started/README",
-      "getting-started/unit-setup",
-      "unit-administrator/tutorial",
-      "getting-started/appdev-1",
-      "getting-started/appdev-2",
-      "getting-started/appdev-3"
+      {
+        "type": "subcategory",
+        "label": "Prepare Personium",
+        "ids": [
+          "getting-started/setup-unit",
+          "unit-administrator/tutorial",
+          "getting-started/setup-sample-apps"
+        ]
+      },
+      {
+        "type": "subcategory",
+        "label": "Develop your App",
+        "ids": [
+          "getting-started/appdev-introduction",
+          "getting-started/appdev-management-tool",
+          "getting-started/appdev-appcell-and-box",
+          "getting-started/appdev-template",
+          "getting-started/appdev-impl-auth",
+          "getting-started/appdev-impl-webdav",
+          "getting-started/appdev-impl-odata",
+          "getting-started/appdev-impl-data-sharing",
+          "getting-started/appdev-impl-engine-script",
+          "getting-started/appdev-impl-oauth2-code-flow",
+          "getting-started/appdev-dist-bar",
+          "getting-started/appdev-dist-stand-alone-app",
+          "getting-started/appdev-dist-SSO-launch-app"
+        ]
+      }
     ],
     "For Personium Operators": [
       {
