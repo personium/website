@@ -4,48 +4,59 @@ title: Application Developer's Guide
 sidebar_label: Application Developer's Guide
 ---
 
-## App development
+Personiumを使ってアプリケーションを開発するためのドキュメントです。
 
+## Application structure
 
+一般のアプリと同様、Personiumを使ってブラウザアプリ・ネイティブアプリなど様々なアプリを開発することができます。一般のアプリと違う点はユーザーのデータが各ユーザーのPDS上の領域に格納されることです。
 
-## App種類
-
-- Server side app
-- Client side app
-- Desktop app
-- Native app
-
-## Box
-
-アプリはBoxとやり取りを行うので、Boxを使う。
-
-## As WEB and API Server
-
-Cellは基本ユーザー。アプリ用のCellを用意することで、Webサーバ・APIサーバとして使える。
-
-Webサーバ・APIサーバとしてのアプリCellは必須ではなく、別サーバの使用も可能。
-
-## Client side app
-
-アプリの例。
+以下の図はブラウザアプリの場合の構成例となります。
 
 ```
+# 図
 user -----> WEB Server
 app ------> UserCell data
 app ------> API Server -----> UserCell data
 app ------> API Server -----> DB
 ```
 
-アプリ用のCellを使う場合。
+Personiumを使ってアプリを開発する場合、上記のような構成になるように行います。
+
+### OAuth
+
+データアクセスの認可はOAuthに基づいて行います。
+
+### Box
+
+アプリのデータアクセスはBoxという領域に行います。
+
+### WebDavとOData
+
+データアクセスの種類としてWebDavとODataがあります。
+
+### As WEB and API Server
+
+Cellは基本ユーザーのデータ領域ですが、アプリ用のCellを用意することで、そこをWebサーバ・APIサーバとして使えます。
+
+Webサーバ・APIサーバとしてのアプリCellは必須ではなく、別サーバの使用も可能です。
 
 ```
+# 図
 user -----> AppCell data
 app ------> UserCell (EngineScript) --> UserCell Data
 app ------> AppCell
 app ------> AppCell (EngineScript) --> AppCell Data
 ```
 
-## 構成
+## 開発者ツール
+
+UnitManager
+
+## サンプルアプリ
+
+
+
+## 詳細
 
 - 認証認可
   - 全体像
@@ -61,9 +72,3 @@ app ------> AppCell (EngineScript) --> AppCell Data
   - EngineScript
   - Stream
 - CellGUIカスタマイズ
-
-## サンプルアプリ
-
-## 開発者ツール
-
-UnitManager
