@@ -15,6 +15,10 @@ Register to join the Slack community [here](https://bit.ly/Join_Personium_Slack)
 #### [Personium Architecture](./user_guide/001_Personium_Architecture.md)
 #### [Glossary](./user_guide/008_Glossary.md)
 
+## [Getting Started](./getting-started/README.md)
+
+For app developers who starts developing app using Personium quickly.
+
 ## User Guides
 
 Figure that presents user roles associated with Personium
