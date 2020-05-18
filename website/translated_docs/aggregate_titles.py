@@ -29,6 +29,7 @@ def main():
           if filename.endswith('.md'):
             # print((locale, dirname, filename))
             add_info(locale, dirname, filename, versions)
+    add_info(locale, '', 'README.md', versions)
   keys = sorted(sidebars_dict.keys())
   sorted_dict = OrderedDict()
   for key in keys:
