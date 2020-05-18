@@ -1029,6 +1029,10 @@
         "title": "App dev 3",
         "sidebar_label": "App dev 3"
       },
+      "getting-started/appdev": {
+        "title": "App dev",
+        "sidebar_label": "App dev"
+      },
       "getting-started/README": {
         "title": "Getting Started",
         "sidebar_label": "Getting Started"
