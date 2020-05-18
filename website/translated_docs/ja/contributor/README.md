@@ -4,7 +4,7 @@ title: コントリビューターガイド
 sidebar_label: コントリビューターガイド
 ---
 
-Personiumはオープンソースプロジェクトです。プロジェクトへの様々な形での参加を歓迎しています。
+オープンソースプロジェクトPersoniumでは様々な形での参加・コントリビューションを歓迎しております。
 
 ## 質問
 
@@ -23,8 +23,12 @@ Slackコミュニティへの参加登録は[こちら](https://bit.ly/Join_Pers
 
 ## ドキュメントの不備指摘・改善
 
-Personiumのドキュメントの不備指摘・改善を行う場合は[ドキュメント整備・改善への参加方法](../document-writer/README.md)をご参照ください。
+Personiumのドキュメントの不備指摘・改善を行う場合は以下ドキュメントをご参照ください。
+
+* [ドキュメント整備・改善への参加方法](../document-writer/README.md)
 
 ## Personiumサーバのバグ報告・開発
 
-Personiumのサーバソフトウェアそのもの、もしくはpluginやextensionのバグ報告、修正する場合は[サーバ開発者向けガイド](../software-developer/README.md)をご参照ください。
+Personiumのサーバソフトウェアそのもの、もしくはpluginやextensionのバグ報告、修正する場合は以下ドキュメントをご参照ください。
+
+* [サーバ開発者向けガイド](../software-developer/README.md)
