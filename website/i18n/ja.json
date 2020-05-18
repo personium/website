@@ -2297,11 +2297,7 @@
         "sidebar_label": "古いバージョンのAPIリファレンス",
         "title": "古いバージョンのAPIリファレンス"
       },
-      "version-1.7.21-version-1.7.21/README": {
-        "sidebar_label": "Personium ドキュメント",
-        "title": "Personium ドキュメント"
-      },
-      "version-1.7.21/README": {
+      "version-1.7.21-README": {
         "sidebar_label": "Personium ドキュメント",
         "title": "Personium ドキュメント"
       }
