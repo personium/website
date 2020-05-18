@@ -1069,10 +1069,6 @@
         "title": "App Template",
         "sidebar_label": "App Template"
       },
-      "getting-started/appdev": {
-        "title": "App dev",
-        "sidebar_label": "App dev"
-      },
       "getting-started/README": {
         "title": "Getting Started",
         "sidebar_label": "Introduction"
