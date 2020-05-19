@@ -50,7 +50,7 @@ app ------> AppCell (EngineScript) --> AppCell Data
 
 ## 開発者ツール
 
-UnitManager
+Unit Manager
 
 ## サンプルアプリ
 
