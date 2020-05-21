@@ -1010,12 +1010,12 @@
         "sidebar_label": "Cell GUI developer's Guide"
       },
       "contributor/README": {
-        "title": "Contributor's Guide",
-        "sidebar_label": "Contributor's Guide"
+        "title": "Contributor Guides",
+        "sidebar_label": "Contributor Guides"
       },
       "document-writer/README": {
-        "title": "Personium How to participate in document maintenance / improvement",
-        "sidebar_label": "Personium How to participate in document maintenance / improvement"
+        "title": "How to participate in Personium document maintenance and improvement",
+        "sidebar_label": "How to participate in Personium document maintenance and improvement"
       },
       "getting-started/appdev-appcell-and-box": {
         "title": "App Cell & Box on User Cell",
