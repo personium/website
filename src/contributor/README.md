@@ -8,7 +8,7 @@ The open source project Personium welcomes various forms of participations and c
 
 ## Questions
 
-If you have any questions about the concept and usage of Personium, please use [Slack Community](https://personium-io.slack.com/).
+If you have any questions about the concept and usage of Personium, please contact us through [Slack](https://personium-io.slack.com/).
 To register for the Slack community, click [here](https://bit.ly/Join_Personium_Slack).
 
 The usage of each channel is as follows.
