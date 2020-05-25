@@ -4,7 +4,7 @@ title: Contributor Guides
 sidebar_label: Contributor Guides
 ---
 
-The open source project Personium welcomes various forms of participation and contributions.
+The open source project Personium welcomes various forms of participations and contributions.
 
 ## Question
 
