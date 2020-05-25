@@ -1,6 +1,6 @@
 ---
 id: README
-title: Contributor Guides
+title: Contributor Guide
 sidebar_label: Contributor Guides
 ---
 
