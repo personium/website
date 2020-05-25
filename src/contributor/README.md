@@ -23,7 +23,7 @@ The usage of each channel is as follows.
 
 ## Document maintenance and improvement
 
-Please refer to the following documents when you point out the deficiency and improve the Personium document.
+Please refer to the following guideline(s) when you want to help maintaining and improving the documents.
 
 * [How to participate in document maintenance and improvement](../document-writer/README.md)
 
