@@ -24,7 +24,7 @@ By performing the above, Personium project members or other participants can cor
 1. Read the [README](https://github.com/personium/website) before you starts working on the bug fix and/or improvement.  
 1. Push to your forked GitHub repository and send a Pull Request to the original repository
 
-By performing the above procedure, the Personium project members will review and publish it in an appropriate form.
+Personium project members will review, merge and publish it accordingly.
 We look forward to your cooperation.
 
 
