@@ -1,20 +1,34 @@
 ---
 id: README
-title: Contributor's Guide
-sidebar_label: Contributor's Guide
+title: Contributor Guide
+sidebar_label: Contributor Guide
 ---
 
-Personium project is an open source project. Any contribution to Personium is welcome. There are several ways for contribution.
+The open source project Personium welcomes various forms of participations and contributions.
 
 ## Questions
 
-If you have any questions, please contact [Slack Community](https://personium-io.slack.com/).  
-Register to join the Slack community [here](https://bit.ly/Join_Personium_Slack).  
+If you have any questions about the concept and usage of Personium, please contact us through [Slack](https://personium-io.slack.com/).
+If you do not have a Personium Slack account, click [here](https://bit.ly/Join_Personium_Slack) to create one.
 
-## Documentation improvement
+The usage of each channel is as follows.
 
-Please see [the Documentation improvement guide](../document-writer/README.md).
+| Channel name | Topic |
+| ---------- | ---- |
+| #general | General content |
+| #random | Chat |
+| #infra | Personium server construction |
+| #appdev | Application development using Personium |
+| #dev | Development of Personium itself |
 
-## Personium server development
+## Document maintenance and improvement
 
-Please see [the server development guide](../software-developer/README.md).
+Please refer to the following guideline(s) when you want to help maintaining and improving the documents.
+
+* [How to participate in document maintenance and improvement](../document-writer/README.md)
+
+## Personium server bug report / development
+
+Please refer to the following guideline(s) when you want to report or fix bugs in Personium server software, plugins, or extensions.
+
+* [Server Developer's Guide](../software-developer/README.md)
