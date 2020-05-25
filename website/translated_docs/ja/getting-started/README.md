@@ -26,7 +26,7 @@ Getting Startedは大きく分けるとPersonium運用者向けの「1. Personiu
     3. [サンプルアプリの構築](./setup-sample-apps.md)
 2. アプリ開発 (アプリ開発者向け)
     1. [はじめに](./appdev-introduction.md)
-    2. [管理ツール (CellManager)](./appdev-management-tool.md)
+    2. [管理ツール (Unit Manager)](./appdev-management-tool.md)
     3. [アプリCellとユーザーCell上のBox](./appdev-appcell-and-box.md)
     4. [アプリテンプレート](./appdev-template.md)
     5. アプリの実装
