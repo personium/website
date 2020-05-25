@@ -6,7 +6,7 @@ sidebar_label: Contributor Guide
 
 The open source project Personium welcomes various forms of participations and contributions.
 
-## Question
+## Questions
 
 If you have any questions about the concept and usage of Personium, please use [Slack Community](https://personium-io.slack.com/).
 To register for the Slack community, click [here](https://bit.ly/Join_Personium_Slack).
