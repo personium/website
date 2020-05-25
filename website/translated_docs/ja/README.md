@@ -11,11 +11,32 @@ Slackコミュニティへの参加登録は[こちら](https://bit.ly/Join_Pers
 ## はじめに
 
 #### [Personiumとは](./overview/001_Introduction.md)
+#### [Personiumが目指す世界](./overview/Aims_for.md)
 #### [Personiumのアーキテクチャ](./user_guide/001_Personium_Architecture.md)
-#### [Cellのモデル](./user_guide/005_Model_construction.md)
 #### [用語集](./user_guide/008_Glossary.md)
 
+## Personiumのユーザーロール
+
+Personiumのユーザーロールは大きく以下に分けられます。
+
+|ユーザーロール|役割|
+|-------------|----|
+|Personium 運用者|Personiumサーバの構築と管理|
+|アプリ開発者|Personiumとアクセスするアプリの開発|
+
+以下の図はその関係を表しています。
+
+![Personiumのユーザーロール](assets/personium-users.png)
+
+## Getting-Started
+
+Personium 運用者とアプリ開発者向けのPersonium入門ドキュメントを以下で提供しています。
+
+* [Getting Started](./getting-started/README.md)
+
 ## ユーザガイド
+
+PersoniumのユーザーロールごとのガイドおよびPersoniumプロジェクトへの貢献・参加方法のガイドを提供しています。
 
 ### Personium 運用者向け
 

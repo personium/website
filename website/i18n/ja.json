@@ -1015,7 +1015,7 @@
       },
       "getting-started/README": {
         "title": "Getting Started",
-        "sidebar_label": "Getting Started"
+        "sidebar_label": "はじめに"
       },
       "getting-started/appdev-appcell-and-box": {
         "title": "App Cell & Box on User Cell",

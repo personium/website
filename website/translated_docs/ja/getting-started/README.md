@@ -4,36 +4,43 @@ title: Getting Started
 sidebar_label: はじめに
 ---
 
-## Introduction
+## はじめに
 
-Before you begin, read [Personium Architecture](../user_guide/001_Personium_Architecture.md).
+本ドキュメントはPersoniumを初めて使ってみる方を対象とした入門記事です。本ドキュメントを読むことで、Personiumの基本を理解し、使えるようにすることを目的としています。
 
-Figure
+## 前提知識
 
-Whole steps are:
+Personiumの共通となる前提知識として、[Personiumのアーキテクチャー](../user_guide/001_Personium_Architecture.md)を読んでいない場合、読むことを推奨します。
 
-1. Prepare Personium
-    1. [Setup Unit](./setup-unit.md)
-    1. [Create Cell](../unit-administrator/tutorial.md)
-    1. [Setup Sample apps](./setup-sample-apps.md)
-1. Develop your App
-    1. [Introduction](./appdev-introduction.md)
-    1. [Management tool (Unit Manager)](./appdev-management-tool.md)
-    1. [App Cell & Box on User Cell]()
-    1. [App template]()
-    1. Implement App
-        1. [Authentication]()
-        1. [File (WebDAV)]()
-        1. [Relational Data (OData)]()
-        1. [Data Sharing]()
-        1. [Engine Script]()
-        1. [OAuth2 Authorization Code flow]()
-    1. Distribute App
-        1. [Bar file]()
-        1. [Stand-alone App]()
-        1. [SSO launch App]()
+## 章構成
 
-If you want to use main Personium's APIs now, you can request a demo cell that we already set up.
-To request, please join our [Slack community](https://bit.ly/Join_Personium_Slack) and give a message to the #demo-cell-request channel.
+Getting Startedは大きく分けるとPersonium運用者向けの「1. Personiumの準備」の章とアプリ開発者向けの 「2. アプリ開発」の章から構成されています。各章の位置付けは以下の図の通りとなります。
 
-By this way, you could skip step 1. And you can touch demo apps and start step 3 soon.
+![Getting Started 2 steps](assets/users-for-getting-started.png)
+
+章構成の詳細は以下の通りとなります。
+
+1. Personiumの準備 (Personium 運用者向け)
+    1. [Personium Unitの構築](./setup-unit.md)
+    2. [Cellの作成](../unit-administrator/tutorial.md)
+    3. [サンプルアプリの構築](./setup-sample-apps.md)
+2. アプリ開発 (アプリ開発者向け)
+    1. [はじめに](./appdev-introduction.md)
+    2. [管理ツール (Unit Manager)](./appdev-management-tool.md)
+    3. [アプリCellとユーザーCell上のBox](./appdev-appcell-and-box.md)
+    4. [アプリテンプレート](./appdev-template.md)
+    5. アプリの実装
+        1. [認証](./appdev-impl-auth.md)
+        2. [ファイル (WebDAV)](./appdev-impl-webdav.md)
+        3. [リレーショナルデータ (OData)](./appdev-impl-odata.md)
+        4. [データ共有](./appdev-impl-data-shareing.md)
+        5. [エンジンスクリプト](./appdev-impl-engine-script.md)
+        6. [OAuth2 認可コードフロー](./appdev-impl-oauth2-code-flow.md)
+    6. アプリの配布
+        1. [Barファイル](./appdev-dist-bar.md)
+        2. [スタンドアローンアプリ](./appdev-dist-stand-alone-app.md)
+        3. [SSO起動アプリ](./appdev-dist-SSO-launch-app.md)
+
+> もし構築済みのPersoniumを利用できる場合、「1. Personiumの準備」の章をスキップして「2. アプリ開発」の章から読むこともできます。
+
+それではまずは[Personium Unitの構築](./setup-unit.md)から始めましょう。
