@@ -1,7 +1,7 @@
 ---
 id: README
 title: Contributor Guide
-sidebar_label: Contributor Guides
+sidebar_label: Contributor Guide
 ---
 
 The open source project Personium welcomes various forms of participations and contributions.
