@@ -29,6 +29,6 @@ Please refer to the following guideline(s) when you want to help maintaining and
 
 ## Personium server bug report / development
 
-Please refer to the following documents when you report or fix bugs in Personium server software itself, or plugins or extensions.
+Please refer to the following guideline(s) when you want to report or fix bugs in Personium server software, plugins, or extensions.
 
 * [Server Developer's Guide](../software-developer/README.md)
