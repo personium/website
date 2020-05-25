@@ -21,7 +21,7 @@ The usage of each channel is as follows.
 | #appdev | Application development using Personium |
 | #dev | Development of Personium itself |
 
-## Document deficiency / improvement
+## Document maintenance and improvement
 
 Please refer to the following documents when you point out the deficiency and improve the Personium document.
 
