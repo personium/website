@@ -11,7 +11,7 @@ If you can help improve the documentation, please follow the steps below.
 
 ## Document improvements pointed out
 
-1. Create improvement issue in issues on GitHub repository
+1. Create issue (label: bug or documentation) in GitHub repository
     1. [Personium Documentation Website issues](https://github.com/personium/website/issues)
 
 By performing the above, Personium project members or other participants can correct and publish based on the pointed out.
