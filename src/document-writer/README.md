@@ -21,7 +21,7 @@ By performing the above, Personium project members or other participants can cor
 1. Fork the following GitHub repository
     1. [Personium Documentation Website](https://github.com/personium/website)
 1. Clone to your local environment
-1. Update the document by referring to [Repository README](https://github.com/personium/website)
+1. Read the [README](https://github.com/personium/website) before you starts working on the bug fix and/or improvement.  
 1. Push to Fork's own GitHub repository and issue a Pull Request to the parent repository of the Fork
 
 By performing the above procedure, the Personium project members will review and publish it in an appropriate form.
