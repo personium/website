@@ -15,30 +15,32 @@ Slackコミュニティへの参加登録は[こちら](https://bit.ly/Join_Pers
 #### [Personiumのアーキテクチャ](./user_guide/001_Personium_Architecture.md)
 #### [用語集](./user_guide/008_Glossary.md)
 
-## Personiumのユーザーロール
+## Personiumのユーザー種類
 
-Personiumのユーザーロールは大きく以下に分けられます。
+Personiumのユーザーは大きく以下に分けられます。
 
-|ユーザーロール|役割|
+|ユーザー種類|役割|
 |-------------|----|
-|Personium 運用者|Personiumサーバの構築と管理|
-|アプリ開発者|Personiumとアクセスするアプリの開発|
+|Personium運用者|Personiumサーバの構築や運用管理|
+|アプリ開発者|Personiumを使ったアプリの開発|
 
 以下の図はその関係を表しています。
 
-![Personiumのユーザーロール](assets/personium-users.png)
+![Personiumのユーザー種類](assets/personium-users.png)
 
 ## Getting-Started
 
-Personium 運用者とアプリ開発者向けのPersonium入門ドキュメントを以下で提供しています。
+Personium運用者とアプリ開発者向けのPersonium入門ドキュメントを以下で提供しています。
 
 * [Getting Started](./getting-started/README.md)
 
 ## ユーザガイド
 
-PersoniumのユーザーロールごとのガイドおよびPersoniumプロジェクトへの貢献・参加方法のガイドを提供しています。
+Personiumのユーザー種類ごとのガイドおよびPersoniumプロジェクトへの貢献・参加方法のガイドを提供しています。
 
-### Personium 運用者向け
+### Personium運用者向け
+
+Personium運用者は更にサーバソフトウェア運用者とユニット管理者に分けられます。
 
 #### [サーバソフトウェア運用者向けガイド](./server-operator/README.md)
 
@@ -52,7 +54,7 @@ Personiumのサーバソフトウェアを使ってPersoniumユニットを構�
 
 #### [Personiumアプリ開発者向けガイド](./app-developer/README.md)  
 
-PersoniumのAPIを使用して、一般的なPDSアプリを開発したい人向けのドキュメントです
+PersoniumのAPIを使用して、アプリを開発したい人向けのドキュメントです
 
 ## コントリビュータガイド  
 
@@ -60,7 +62,7 @@ PersoniumのAPIを使用して、一般的なPDSアプリを開発したい人�
 
 #### [ドキュメント整備への参加方法](./document-writer/README.md)
 
-Personiumプロジェクトでは、当ドキュメントに貢献してくださる方も募集中です。
+Personiumプロジェクトの当ドキュメントの整備・改善を行いたい人向けのドキュメントです。
 
 ### コードコントリビュータ
 
