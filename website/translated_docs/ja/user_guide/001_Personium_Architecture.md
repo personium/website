@@ -50,3 +50,5 @@ Personiumは様々な国際標準をベースにこれを拡張したり組み�
 * 認可のためのOAuth2.0
 * ファイル操作のためのWebDAV
 * リレーショナルデータのOData
+
+![Personiumのインターフェース](assets/interface.png)
