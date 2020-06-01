@@ -143,7 +143,9 @@ Personiumではセル間の信頼関係によってデータアクセスの制�
 
 前項では認証したセル内のAccountやセル同士の関係によってRoleが決定されることを述べました。PersoniumはこのRoleによってデータアクセスをどこまで許可するかを制御するRBAC (Role Based Access Control)の仕組みを備えています。
 
-TODO: 図を書く
+ユーザーはリソースごとにどのRoleがどの操作まで行えるか(ACL)を設定することでアクセス制御を行います。
+
+![ACL](assets/auth/acl-role.png)
 
 詳細は[アクセス制御モデル](../apiref/006_Access_Control.md)の項を参照してください。
 
