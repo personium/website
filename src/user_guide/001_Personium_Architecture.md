@@ -11,8 +11,8 @@ Personium defines the following three layered basic objects in order to achieve 
 |Name|Overview|URL example|
 |:--|:--|:--|
 |**Unit**|A server to host multiple Cells. What you get by server installation|https&#58;//personium.example/|
-|**Cell**|A datastore for a data subject|https&#58;//personium.example/john.doe/|
-|**Box**|Per-app datastores installed on each Cell|https&#58;//personium.example/john.doe/schedule/|
+|**Cell**|A datastore for a data subject|https&#58;//john.personium.example/|
+|**Box**|Per-app datastores installed on each Cell|https&#58;//john.personium.example/schedule/|
 
 ### Unit  
 * A unit is a system infrastructure which runs Personium which have a unique FQDN.
