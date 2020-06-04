@@ -4,9 +4,16 @@ title: Personiumとは何ですか？
 sidebar_label: Personiumとは何ですか？
 ---
 
-Personium(ペルソニアム)はオープンソースのPDS (Personal Data Store) サーバソフトウェアです。
+Personium(ペルソニアム)はオープンソースのPDS (Personal Data Store) サーバソフトウェアです。  
+PDSでは個人を中心にしたデータの格納・集約を行います。
 
 ![Personiumとは](assets/Personium.png "Personiumとは")
+
+## Personiumが目指す世界
+
+データを個人中心に置くことで、個人は自身の意思でデータをコントロールし、自身に価値が還元されるようなデータ流通・利活用を目指します。
+
+![Personiumが目指すデータ流通・利活用](assets/personium_aims_for.png)
 
 ## Personiumの特長
 
@@ -43,4 +50,3 @@ Personium(ペルソニアム)はオープンソースのPDS (Personal Data Store
 * IoM, IoT, IoE を統合的に扱うモデルを標榜します。（Cyber-Physical）
 
 ![データ主体の拡張](assets/ExpansionDataSubject.png "データ主体の拡張")
-

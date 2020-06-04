@@ -11,7 +11,6 @@ Register to join the Slack community [here](https://bit.ly/Join_Personium_Slack)
 ## Introduction
 
 #### [What is Personium?](./overview/001_Introduction.md)
-#### [Personium aims for](./overview/Aims_for.md)
 #### [Personium Architecture](./user_guide/001_Personium_Architecture.md)
 #### [Glossary](./user_guide/008_Glossary.md)
 
