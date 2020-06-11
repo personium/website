@@ -1074,8 +1074,8 @@
         "sidebar_label": "Setup Sample Apps"
       },
       "getting-started/setup-unit": {
-        "title": "Setup Unit",
-        "sidebar_label": "Setup Unit"
+        "title": "Personium Unitの構築",
+        "sidebar_label": "Unitの構築"
       },
       "installation_guide/001_Readme_before_installation": {
         "title": "インストール前の注意事項",
@@ -2454,6 +2454,9 @@
       "Box Level API": "Box Level API",
       "Common": "共通",
       "Introduction": "はじめに",
+      "Getting Started": "Getting Started",
+      "Prepare Personium": "Personiumの準備",
+      "Develop App": "アプリの開発",
       "For Personium Operators": "Personium運用者向け",
       "For Server Operator": "サーバ運用",
       "For Unit Administrator": "ユニット管理",
