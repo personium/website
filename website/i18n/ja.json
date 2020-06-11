@@ -1075,7 +1075,7 @@
       },
       "getting-started/setup-unit": {
         "title": "Personium Unitの構築",
-        "sidebar_label": "Unitの構築"
+        "sidebar_label": "Personium Unitの構築"
       },
       "installation_guide/001_Readme_before_installation": {
         "title": "インストール前の注意事項",
@@ -1186,8 +1186,8 @@
         "sidebar_label": "ユニットユーザ"
       },
       "unit-administrator/tutorial": {
-        "title": "Personiumユニット管理 チュートリアル",
-        "sidebar_label": "Personiumユニット管理 チュートリアル"
+        "title": "Personium Unit管理 チュートリアル",
+        "sidebar_label": "Personium Unitの管理"
       },
       "user_guide/001_Personium_Architecture": {
         "title": "Personiumのアーキテクチャ",
@@ -2459,7 +2459,7 @@
       "Develop App": "アプリの開発",
       "For Personium Operators": "Personium運用者向け",
       "For Server Operator": "サーバ運用",
-      "For Unit Administrator": "ユニット管理",
+      "For Unit Administrator": "Unit管理",
       "For App Developer": "アプリ開発者向け",
       "Contributor Guides": "コントリビューター向け",
       "For Document Contribution": "ドキュメント作成",

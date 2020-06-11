@@ -22,7 +22,7 @@ Getting Startedは大きく分けるとPersonium運用者向けの「1. Personiu
 
 1. Personiumの準備 (Personium 運用者向け)
     1. [Personium Unitの構築](./setup-unit.md)
-    2. [Cellの作成](../unit-administrator/tutorial.md)
+    2. [Personium Unitの管理](../unit-administrator/tutorial.md)
     3. [サンプルアプリの構築](./setup-sample-apps.md)
 2. アプリ開発 (アプリ開発者向け)
     1. [はじめに](./appdev-introduction.md)

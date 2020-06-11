@@ -1,7 +1,7 @@
 ---
 id: setup-unit
 title: Personium Unitの構築
-sidebar_label: Unitの構築
+sidebar_label: Personium Unitの構築
 ---
 
 ## はじめに

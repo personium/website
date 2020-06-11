@@ -1,7 +1,7 @@
 ---
 id: tutorial
-title: Personiumユニット管理 チュートリアル
-sidebar_label: Personiumユニット管理 チュートリアル
+title: Personium Unit管理 チュートリアル
+sidebar_label: Personium Unitの管理
 ---
 
 **※この文書はPersonium Version 1.6.15 以降をご利用される方を対象としています。**
@@ -27,7 +27,7 @@ sidebar_label: Personiumユニット管理 チュートリアル
 
 
 ## <a name="sect1">1. 本文書の目的</a>
-本文書は、Personiumを初めてご利用される方でも、すぐにPersoniumユニットを管理するための基本的な流れをご理解いただけるよう具体的な手順を説明したものです。  
+本文書は、Personiumを初めてご利用される方でも、すぐにCell作成等のPersonium Unitを管理するための基本的な流れをご理解いただけるよう具体的な手順を説明したものです。  
 
 Personiumでは全ての機能をREST APIで提供しておりますので、OSや開発言語を問わずご利用いただけます。
 javascriptを用いたサンプルソースが公開されていますので、是非ご活用ください。
