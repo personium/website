@@ -408,7 +408,7 @@
       },
       {
         "type": "subcategory",
-        "label": "Develop your App",
+        "label": "Develop App",
         "ids": [
           "getting-started/appdev-introduction",
           "getting-started/appdev-management-tool",
