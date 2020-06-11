@@ -16,7 +16,7 @@ Whole steps are:
     1. [Setup Unit](./setup-unit.md)
     1. [Create Cell](../unit-administrator/tutorial.md)
     1. [Setup Sample apps](./setup-sample-apps.md)
-1. Develop your App
+1. Develop App
     1. [Introduction](./appdev-introduction.md)
     1. [Management tool (Unit Manager)](./appdev-management-tool.md)
     1. [App Cell & Box on User Cell]()
