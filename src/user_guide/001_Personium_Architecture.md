@@ -21,7 +21,8 @@ Personium defines the following three layered basic objects in order to achieve 
 
 ### Cell  
 
-* A cell is a fundamental concepts of Personium
+* Cell is a data store for each data subject. For personal use, it will be PDS (Personal Data Store).
+* In Personium, the concept of data subject is extended to not only people but also organizations and things, so it can be used as a data store for organizations and things.
 * Each Cells are independent as if they are different tenant in multi-tenancy model.
 * A Cell provides following feature  
     * Authentication and authorization
@@ -38,14 +39,12 @@ Personium defines the following three layered basic objects in order to achieve 
     * File Object
     * OData Data Service
 
+## Based on Open Standards  
 
-
-## Based on Standards  
-
-Personium's API is build on international standards.  
+Personium's API is build on open standards.  
 
 * OAuth2.0 for Authorization
 * WebDAV for File operation
 * OData for relational data
 
-Figure that presents above
+![Personium specifications](assets/interface.png)
