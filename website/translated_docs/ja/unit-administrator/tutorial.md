@@ -1,7 +1,7 @@
 ---
 id: tutorial
-title: Personium Unit管理 チュートリアル
-sidebar_label: Personium Unitの管理
+title: Cellの払い出し チュートリアル
+sidebar_label: Cellの払い出し
 ---
 
 **※この文書はPersonium Version 1.6.15 以降をご利用される方を対象としています。**
