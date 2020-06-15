@@ -42,31 +42,29 @@ Personiumはスケーラブルなアーキテクチャを採用しています�
 
 ![3-server_unit.jpg](assets/server-operator/3-server_unit.jpg)
 
+## ユニットの構築時の注意点
+
+Personium Unitは`https://user1.personium.example`や`https://user2.personium.example`といったユーザによって異なるサブドメインでのHTTPSアクセスを行うことを前提にしているため、以下が基本必要となります。
+
+- WebサーバにアクセスするIPアドレスに対しての`*.personium.example`といったワイルドカードドメイン名でのDNSレコード設定
+- `*.personium.example`といったワイルドカードドメイン名に対応したSSL証明書の取得と設定
+
+上記を簡単に行うために、ローカルネットワーク上で構築するよりもパブリックIaaSとDNSサービスを使って構築することを推奨します。
+
+詳細な手順は後述の[[Personium Ansible Playbook上の実行手順](https://github.com/personium/ansible/tree/master)の中で記載しています。
+
 ## ユニットの構築
 
-ユニット構築には仮想イメージ、Vagrant、Ansibleを利用することができます。またOpen Stack ベースのクラウド環境に構築する場合は Heat Template を使えば、ほぼ自動でユニット構築が可能です。もちろん、これら自動構築ツールを使わないで任意のクラウドや物理/仮想マシンを使ってユニット構築を行うこともできます。しかし、そのための手順等ドキュメントを私たちが準備しメンテナンスする体力がないため、以下Open StackのHeatを使ったサーバインフラ構築手順やAnsibleを使ったユニット自動構築手順を参考に構築を行ってください。
+ユニット構築にはVagrant、Ansibleを利用することができます。またOpen Stack ベースのクラウド環境に構築する場合は Heat Template を使えば、ほぼ自動でユニット構築が可能です。もちろん、これら自動構築ツールを使わないで任意のクラウドや物理/仮想マシンを使ってユニット構築を行うこともできます。しかし、本ドキュメントでは現状その構築手順を用意していないため、Open StackのHeatを使ったサーバインフラ構築手順やAnsibleを使ったユニット自動構築手順を参考に構築を行ってください。
 
-さまざまな環境でユニットが構築できたというお話をコミュニティの#infraチャンネルで聞かせて頂けると嬉しく思います。
+|    | サーバ | サーバ構築 | Personiumセットアップ | Personiumバージョン | デフォルトFQDN |
+| :- | :----- | :-------- | :------------------- | :------------- | :------------------ |
+| 小規模環境 | Linuxサーバ1台 | Vagrant | Ansibleを自動実行 | 最新 | personium.example.com |
+| | | ユーザ側でLinuxサーバを準備 | Ansible | 任意<br>デフォルトは最新 | なし |
+| 中・大規模環境 | Linuxサーバ3台 | HeatTemplate | Ansible | 任意<br>デフォルトは最新 | なし |
+| | | ユーザ側でLinuxサーバを準備 | Ansible | 任意<br>デフォルトは最新 | なし |
 
-|    | サーバ | サーバ構築 | Personiumセットアップ | 導入済拡張エンジン | Personiumバージョン | CellにアクセスするURL形式 | 導入済アプリケーション | デフォルトFQDN |
-| :- | :----- | :-------- | :------------------- | :------------- | :------------------ | :------------------ | :------------------ | :------------------ |
-| Personiumを使ってみる | Linuxサーバ1台 | 不要 | 不要 | httpclient<br>ew-services<br>mailsender<br>slack | 1.6.15 | path based cell url | unit-manager | personium.example.com |
-| | | | | | 1.7系（未定） | path based cell url | unit-manager | personium.example.com |
-| | | | | | 1.7系（未定） | per cell fqdn url | なし※1 | personium.example.com |
-| 小規模環境 | Linuxサーバ1台 | Vagrant | 不要 | httpclient<br>ew-services<br>mailsender<br>slack | 最新 | path based cell url | unit-manager | personium.example.com |
-| | | | | | 最新 | per cell fqdn url | なし※1 | personium.example.com |
-| | | ユーザ側でLinuxサーバを準備 | Ansible | なし | 任意<br>デフォルトは最新 | path based cell url<br>per cell fqdn url | なし※1 | なし |
-| 中・大規模環境 | Linuxサーバ3台 | HeatTemplate | Ansible | なし | 任意<br>デフォルトは最新 | path based cell url<br>per cell fqdn url | なし※1 | なし |
-| | | ユーザ側でLinuxサーバを準備 | 自力 | なし | 任意<br>デフォルトは最新 | path based cell url<br>per cell fqdn url | なし※1 | なし |
-※1 unit-managerをインストールしたい場合は、[こちら](https://github.com/personium/app-uc-unit-manager/blob/master/README_ja.%6D%64)の手順をご確認ください。
-
-### Personiumを使ってみる
-
-* 仮想イメージを利用したユニットの自動構築
-  
-    仮想イメージを利用してユニットを構築するためのガイドを公開しています。  
-
-    * [仮想イメージを利用したユニット構築ガイド](./setup_virtual_image.md)
+※1 サンプルアプリをインストールしたい場合は、[こちら](../getting-started/setup-sample-apps.md)の手順をご確認ください。
 
 ### 小規模環境(サーバ1台で動作するPersonium環境)を構築する
 
@@ -74,12 +72,12 @@ Personiumはスケーラブルなアーキテクチャを採用しています�
 
 * Vagrant  
 
-    Vagrantを利用してユニットを構築するためのガイドを公開しています。  
+    Vagrantを利用してローカル環境のVM上にユニットを構築するためのガイドを公開しています。  
 
     * [Vagrantを利用したユニット構築ガイド](https://github.com/personium/setup-vagrant)  
 
 * Ansible(1-Server)   
-   
+
     Ansible(1-Server)を利用してLinuxサーバ1台構成のユニットを構築するためのガイドを公開しています。
 
     * [Ansible(1-server)を利用したユニット構築ガイド](https://github.com/personium/ansible/tree/master/1-server_unit)
