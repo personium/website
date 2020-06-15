@@ -14,15 +14,19 @@ Register to join the Slack community [here](https://bit.ly/Join_Personium_Slack)
 #### [Personium Architecture](./user_guide/001_Personium_Architecture.md)
 #### [Glossary](./user_guide/008_Glossary.md)
 
-## [Getting Started](./getting-started/README.md)
+## Getting Started
 
-For app developers who starts developing app using Personium quickly.
+Below you will find the Personium introductory documentation for Personium operators and app developers.
 
-## User Guides
+* [Getting Started](./getting-started/README.md)
 
-Figure that presents user roles associated with Personium
+## User Guide
 
-### For Personium Operators
+We provide a guide for each type of Personium user and a guide on how to contribute to and participate in the Personium project.
+
+### Personium Operators
+
+Personium operators are further divided into server software operators and unit administrators.
 
 #### [Server Software Operator's Guide](./server-operator/README.md)
 
@@ -44,7 +48,7 @@ Documents for people who want to develop PDS applications using Personium's API
 
 #### [Documentation Contributor's Guide](./document-writer/README.md)
 
-Personium Project is looking for documentation contributors.
+This document is for people who want to maintain and improve this document of the Personium project.
 
 ### For Code Contribution
 
