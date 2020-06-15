@@ -50,7 +50,7 @@ sidebar_label: 用語集
 
 ## <a name="anc_c"> C</a>
 ### Cell
-<font size=1>[Personium]</font> データ主体ごとのData Strore。個人で使う場合はPDS(Personal Data Store)となる。Personiumでは、データ主体という概念を人のみでなく組織やモノなどにも拡張したモデル化を行っているため、組織やモノのデータストアとしても使うことが可能。  
+<font size=1>[Personium]</font> データ主体ごとのData Store。個人で使う場合はPDS(Personal Data Store)となる。Personiumでは、データ主体という概念を人のみでなく組織やモノなどにも拡張したモデル化を行っているため、組織やモノのデータストアとしても使うことが可能。  
 （例、私のCell, あなたのCell, ○○会社のCell, ○○部のCell, 私の車のCell）
 
 
