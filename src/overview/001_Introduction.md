@@ -5,12 +5,19 @@ sidebar_label: What is Personium?
 ---
 
 Personium is a open source PDS (Personal Data Store) server software.  
+PDS manages the data centered on the individual.
 
 ![What is Personium?](assets/Personium.png "What is Personium?")  
 
-### Anyone can set up a PDS server  
+## The world that Personium aims for
 
-Because it is a open source software, anyone (business, municipality, government, individual, etc.) can become a PDS provider.  
+By placing the data in the center of the individual, we aim to control the data by the individual's will and to distribute and utilize the data so that the value is returned to the individual.
+
+![Personium aims for data distribution and utilization](assets/personium_aims_for.png)
+
+### You can set up your own PDS server
+
+Because it is open source software, businesses/municipalities/governments/individuals, etc. can become PDS providers.
 
 ### All functions are REST API  
 
