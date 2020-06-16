@@ -22,7 +22,7 @@ Personium defines the following three layered basic objects in order to achieve 
 ### Cell  
 
 * Cell is a data store for each data subject. For personal use, it will be PDS (Personal Data Store).
-* In Personium, the concept of data subject is extended to not only people but also organizations and things, so it can be used as a data store for organizations and things.
+* In Personium, the concept of data subject is extended to not only people but also organizations and objects, so it can be used as a data store for a NGO or a car.
 * Each Cells are independent as if they are different tenant in multi-tenancy model.
 * A Cell provides following feature  
     * Authentication and authorization
