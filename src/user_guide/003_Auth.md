@@ -107,7 +107,7 @@ The access Role and access scope are the same as the transcell token.
 
 ### token renewal
 
-When you get the access token or transcell token, a refresh token is issued to update the expiration date of the access token.
+When you get the access token or transcell token, a refresh token is issued for renewing the token's expiration date.
 
 To update the access token using the refresh token, proceed in the following order.
 
