@@ -68,7 +68,7 @@ The access scope of the access token obtained by this method is within Alice's o
 
 ### Data access to other cell
 
-Next, consider data access to another cell where Alice accesses Bob's data. This access method does the following in advance:
+Next, consider data access to another cell where Alice accesses Bob's data. Please perform the following in advance:
 
 - Add Alice cell to Bob cell's ExtCell and link Alice's Role as seen by Bob
 
