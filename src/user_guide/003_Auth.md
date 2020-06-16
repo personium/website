@@ -98,7 +98,7 @@ Please perform the following in advance.
 Token exchange will be performed in the following order.
 
 1. Set the issue target parameter (p_target) to Bob cell for the token endpoint of Alice cell, authenticate, and obtain the trans cell token
-2. Authenticate with the transcell token against the token endpoint in the Bob cell, and obtain the access token in the Bob cell
+2. Authenticate with the transcell token against the token endpoint of Bob cell, and obtain the access token from Bob cell
 3. Access data in Bob cell with access token
 
 ![Access other owner's data by token exchange](assets/auth/access_other_data_by_exchange.png)
