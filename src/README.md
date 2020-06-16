@@ -16,7 +16,7 @@ Register to join the Slack community [here](https://bit.ly/Join_Personium_Slack)
 
 ## Getting Started
 
-Below you will find the Personium introductory documentation for Personium operators and app developers.
+Below you will find the introductory documentation for Personium operators and app developers.
 
 * [Getting Started](./getting-started/README.md)
 
