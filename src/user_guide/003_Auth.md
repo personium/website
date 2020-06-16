@@ -192,7 +192,7 @@ Next, the ROPC and authorization code flow used mainly are explained.
 
 This is a simple flow of providing username/password to the application and receiving an access token.
 
-This flow can be used when the reliability of the application is high, such as when the PDS provider and the application provider are the same. If not, use the following authorization code flow.
+This flow can be used when the reliability of the application is high. Such as when the PDS provider and the application provider are the same. If not, use the authorization code flow explained below.
 
 ### Authorization code flow
 
