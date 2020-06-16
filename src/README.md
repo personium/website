@@ -20,7 +20,7 @@ Below you will find the introductory documentation for Personium operators and a
 
 * [Getting Started](./getting-started/README.md)
 
-## User Guide
+## User Guides
 
 We provide a guide for each type of Personium user and a guide on how to contribute to and participate in the Personium project.
 
