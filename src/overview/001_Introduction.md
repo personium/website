@@ -11,7 +11,7 @@ PDS is a human-centric approach to manage the data of or about the individual.
 
 ## The world that Personium aims for
 
-By placing the data in the center of the individual, we aim to control the data by the individual's will and to distribute and utilize the data so that the value is returned to the individual.
+By making the individual as the point of integration, we aim to empower the individual to control the data at individual's own will. Third parties can then distribute and utilize the data with permission so that the individual can receive valuable services.
 
 ![Personium aims for data distribution and utilization](assets/personium_aims_for.png)
 
