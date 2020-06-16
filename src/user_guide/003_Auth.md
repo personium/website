@@ -89,7 +89,7 @@ Other cell's data can also be accessed by the token exchange method.
 
 The transcell token described above is verified according to SAML2 Assertion, so the token is long. Therefore, performance tends to deteriorate due to client-server communication and server-side verification processing. Performance can be improved by exchanging a shorter tokens.
 
-The token exchange is the same as the procedure for obtaining transcell tokens, with one additional step, and is otherwise the same.
+The token exchange method has similar procedure for obtaining transcell tokens, only with an additional step.
 
 In the token exchange, do the following in advance.
 
