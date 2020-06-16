@@ -458,7 +458,7 @@
       "app-developer/README",
       {
         "type": "subcategory",
-        "label": "Authentication/Authorization",
+        "label": "Authorization",
         "ids": [
           "user_guide/003_Auth",
           "user_guide/004_Client_auth",

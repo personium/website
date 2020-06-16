@@ -1194,8 +1194,8 @@
         "sidebar_label": "Personiumのアーキテクチャ"
       },
       "user_guide/003_Auth": {
-        "title": "認証/認可モデル",
-        "sidebar_label": "認証/認可モデル"
+        "title": "認可モデル",
+        "sidebar_label": "認可モデル"
       },
       "user_guide/004_Client_auth": {
         "title": "クライアント登録&認証",
@@ -2461,6 +2461,10 @@
       "For Server Operator": "サーバ運用",
       "For Unit Administrator": "Unit管理",
       "For App Developer": "アプリ開発者向け",
+      "Authorization": "認可",
+      "Box/Bar File": "Box/Barファイル",
+      "Collection": "コレクション",
+      "Old Docs": "旧ドキュメント",
       "Contributor Guides": "コントリビューター向け",
       "For Document Contribution": "ドキュメント作成",
       "For Code Contribution": "サーバ開発"
