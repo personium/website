@@ -154,7 +154,7 @@ Please refer to [Access Control Model](../apiref/006_Access_Control.md) for deta
 
 So far, for simplicity we have described a data access method that does not pass through the application. However, when the data accessor actually accesses the data, it basically does not directly access the cell and transfers the data access to the application.
 
-Also, in order to utilize the data on PDS, it is necessary to have abundant applications below.
+Also, in order to utilize the data on PDS, it is necessary to have abundant applications.
 
 -App that provides data
 -App that uses data
