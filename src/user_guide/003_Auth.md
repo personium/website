@@ -79,7 +79,7 @@ Follow the steps below to access the data.
 
 ![Access other owner's data](assets/auth/access_other_data.png)
 
-Personium controls data access based on the trust relationship between cells. By setting Alice cell as Bob's ExtCell and linking the Role, Bob's data is accessed by Alice using that Role. In the above figure, the ExtCell (Alice) and Role called Friend are linked, so Bob's data is accessed as Friend.
+Personium controls data access based on the trust relationship between cells. By setting Alice cell as Bob's ExtCell and linking the Role, Bob's data is accessed by Alice using that Role. In the above figure, the ExtCell (Alice) and Role called Secretary are linked, so Bob's data is accessed as Secretary.
 
 The access scope of the transcell token obtained by this method is within Bob's cell.
 
