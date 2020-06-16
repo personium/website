@@ -166,7 +166,7 @@ To do so, it is necessary to utilize open APIs that allow not only one business 
 Appropriate delegation of authority is required to allow apps that take various forms of provision to access data securely.
 Personium uses OAuth, which is a framework for app authorization and delegation, to achieve these.
 
-As described above, PDS Personium has the function of the authorization server in the cell of each data subject. If you apply to OAuth characters in this case, it will be as shown in the following figure.
+As described above, Personium has the function of the authorization server in each cell. If you apply to OAuth characters in this case, it will be as shown in the following figure.
 
 ![OAuth in PDS](assets/auth/pds_oauth.png)
 
