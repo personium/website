@@ -85,7 +85,7 @@ The access scope of the transcell token obtained by this method is within Bob's 
 
 ### Accessing other cell's data by token exchange
 
-There is another method of data access to the other party cell by token exchange.
+Other cell's data can also be accessed by the token exchange method.
 
 The transcell token described above is verified according to SAML2 Assertion, so the token length is long. Therefore, performance tends to deteriorate due to client-server communication and server-side verification processing. Performance improvement can be expected by exchanging tokens.
 
