@@ -91,7 +91,7 @@ The transcell token described above is verified according to SAML2 Assertion, so
 
 The token exchange method has similar procedure for obtaining transcell tokens, only with an additional step.
 
-In the token exchange, do the following in advance.
+Please perform the following in advance.
 
 -Add Alice cell to Bob cell's ExtCell and link Alice's Role as seen by Bob
 
