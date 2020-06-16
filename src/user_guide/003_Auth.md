@@ -109,7 +109,7 @@ The access Role and access scope are the same as the transcell token.
 
 When you get the access token or transcell token, a refresh token is issued for renewing the token's expiration date.
 
-To update the access token using the refresh token, proceed in the following order.
+To renew the access token using the refresh token, perform the following procedures.
 
 1. Authenticate to the token endpoint of Alice cell, get access token and refresh token
 2. Send the grant_type=refresh_token parameter and refresh token to the token endpoint in the Alice cell
