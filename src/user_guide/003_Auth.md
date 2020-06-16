@@ -12,7 +12,6 @@ This section describes the authorization model that is important when using Pers
 1. RBAC (Role Based Access Control)
 1. App authorization
 
-I will explain in order.
 
 -------------------------------------------------------------------------------
 
