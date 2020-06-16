@@ -180,7 +180,7 @@ grant_type is selected according to the form of the application (whether it is a
 
 |grant_type|Selection Criteria|
 |----------|-------|
-|ROPC|PDS Adopted when the app and the app provider are highly reliable, such as when the operator and the app provider are the same. |
+|ROPC|Adopted when the app and the app provider are highly reliable, such as when the operator and the app provider are the same. |
 |Authorization code | Adopted when the PDS provider and the application provider are different. For native apps, we recommend using PKCE together, which will be added in the future. |
 | Implicit | Basic deprecation. |
 
