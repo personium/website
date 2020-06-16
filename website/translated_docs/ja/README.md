@@ -27,7 +27,7 @@ Personiumのユーザーは大きく以下に分けられます。
 
 ![Personiumのユーザー種類](assets/personium-users.png)
 
-## Getting-Started
+## Getting Started
 
 Personium運用者とアプリ開発者向けのPersonium入門ドキュメントを以下で提供しています。
 

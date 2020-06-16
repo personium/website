@@ -434,8 +434,6 @@
           "server-operator/README",
           "server-operator/setup",
           "server-operator/Confirm_environment_settings",
-          "server-operator/setup_virtual_image",
-          "server-operator/proxy_exclusion_setting",
           "server-operator/setup_authentication_plugins",
           "server-operator/setup_engine_extensions",
           "server-operator/unit_operation_design",
@@ -452,13 +450,21 @@
           "unit-administrator/Unit-User",
           "unit-administrator/Data_Management"
         ]
+      },
+      {
+        "type": "subcategory",
+        "label": "Old Docs",
+        "ids": [
+          "server-operator/setup_virtual_image",
+          "server-operator/proxy_exclusion_setting"
+        ]
       }
     ],
     "For App Developer": [
       "app-developer/README",
       {
         "type": "subcategory",
-        "label": "Authentication/Authorization",
+        "label": "Authorization",
         "ids": [
           "user_guide/003_Auth",
           "user_guide/004_Client_auth",
