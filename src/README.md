@@ -48,7 +48,7 @@ Documents for people who want to develop PDS applications using Personium's API
 
 #### [Documentation Contributor's Guide](./document-writer/README.md)
 
-This document is for people who want to maintain and improve this document of the Personium project.
+The contributor guide is for participants who want to maintain and improve the documentation of the Personium project.
 
 ### For Code Contribution
 
