@@ -22,7 +22,7 @@ Below you will find the introductory documentation for Personium operators and a
 
 ## User Guides
 
-We provide a guide for each type of Personium user and a guide on how to contribute to and participate in the Personium project.
+We provide a guide for each type of Personium user and a contributor guide for Personium project participants.
 
 ### Personium Operators
 
