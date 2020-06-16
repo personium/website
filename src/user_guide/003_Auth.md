@@ -28,7 +28,7 @@ The following roles appear when accessing data with PDS.
 | Role name | Description |
 |-------|----|
 | Data subject | Data owner. In the above figure, it indicates Alice, Bob, Carol. |
-| Data Accessor | Person who accesses data. This includes cases where not only the data subject but also those other than the data subject access. |
+| Data Accessor | Person who accesses data. This includes cases where not only the data subject but also those other than the data subject. |
 | Apps | Applications that data accessors use to access data on their behalf. |
 |Authorization server |A server that authorizes data access. |
 |PDS| A server that stores data in units of data. |
