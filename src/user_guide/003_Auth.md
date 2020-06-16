@@ -126,7 +126,7 @@ Please refer to [Unit User](../unit-administrator/Unit-User) for details.
 
 ### Token type
 
-Many tokens have been introduced to access data. The table below shows the summary.
+Many tokens have been introduced to access data and they are summarized in the table below.
 
 | Token type | Description | Expiration date |
 |----|----|----|
