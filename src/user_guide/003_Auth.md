@@ -184,7 +184,7 @@ grant_type is selected according to the form of the application (whether it is a
 |Authorization code | Adopted when the PDS provider and the application provider are different. For native apps, we recommend using PKCE together, which will be added in the future. |
 | Implicit | Basic deprecation. |
 
-Next, the ROPC and authorization code flow used mainly are explained.
+Next, the ROPC and authorization code flow will be explained.
 
 ### ROPC (Resource Owner Password Credential) flow
 
