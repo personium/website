@@ -37,7 +37,7 @@ As shown in the figure above, the data accessor normally accesses the PDS throug
 
 Personium adopts an authorization model centered on data subjects (mainly individuals) as shown on the right, instead of the service-centered authorization model shown on the left.
 
-Therefore, in Personium, the data subject is expressed in units of cells, each cell has an independent URL, and has an authorization mechanism. Specifically, each cell holds two endpoints (Authz and Token) of OAuth2, which is the authorization framework, for each cell. The following table shows examples of specific URLs for each data subject.
+Therefore, in Personium, the data subject is expressed in units of cells, each cell has an independent URL, and has an authorization mechanism. Specifically, each cell holds two endpoints (Authz and Token) of OAuth2, which is the authorization framework. The following table shows examples of specific URLs for each data subject.
 
 |Data Subject|Cell URL|OAuth2 Authorization Endpoint|OAuth2 Token Endpoint|
 |----|----|----|----|
