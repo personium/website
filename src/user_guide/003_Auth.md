@@ -62,7 +62,7 @@ When performing authentication at the token endpoint, use the Account (for examp
 
 Roles are used for data access control and are described in detail in the RBAC section.
 
-The access range of the access token obtained by this method is within Alice's own cell.
+The access scope of the access token obtained by this method is within Alice's own cell.
 
 [^1]: Authentication service outside Personium is also available. We plan to support authentication methods other than passwords in the future.
 
