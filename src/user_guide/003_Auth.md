@@ -83,7 +83,7 @@ Personium controls data access based on the trust relationship between cells. By
 
 The access scope of the transcell token obtained by this method is within Bob's cell.
 
-### Data access to other cell by token exchange
+### Accessing other cell's data by token exchange
 
 There is another method of data access to the other party cell by token exchange.
 
