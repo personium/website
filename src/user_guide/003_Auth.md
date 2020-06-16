@@ -6,7 +6,7 @@ sidebar_label: Authorization model
 
 ## Introduction
 
-This page describes the authorization model that is important when using Personium. To get a first understanding of Personium's authorization model, the following three concepts are key.
+This section describes the authorization model that is important when using Personium. The following three key concepts are the basics of Personium's authorization model.
 
 1. Cell-centric authorization
 1. RBAC (Role Based Access Control)
