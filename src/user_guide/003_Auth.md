@@ -103,7 +103,7 @@ Token exchange will be performed in the following order.
 
 ![Access other owner's data by token exchange](assets/auth/access_other_data_by_exchange.png)
 
-The access Role and access range are the same as the transcell token.
+The access Role and access scope are the same as the transcell token.
 
 ### token renewal
 
