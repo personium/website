@@ -118,7 +118,7 @@ To renew the access token using the refresh token, perform the following procedu
 
 ### Administrative token
 
-So far, I have described the data access method assuming that there is a cell mainly of data and an account in the cell, but immediately after building the Personium unit, there is no cell and it is necessary to create it. In addition, when operating the unit, an operator who is not the data subject must operate the cell.
+So far, the data access method described assumes that an existing cell with data and an account to access the cell are available. However, no cell exist immediately after building the Personium unit. It is necessary to create it. In addition, an operator who is not the data subject must operate on the cell.
 
 `Unit master token` and `unit user token` are prepared as administrative tokens for doing these.
 
