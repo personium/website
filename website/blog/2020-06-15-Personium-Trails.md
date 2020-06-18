@@ -3,7 +3,7 @@ title: Release of Personium Trails
 author: Yasufumi Tochiori
 ---
 
-We have released a demo app called "Personium Trails" that captures the movement history data on Google into Personium and exposes part of the data to others.
+We have released a demo app called "Personium Trails" that allow user to import location history data on Google into Personium and share selected data to others.
 
 <img
    src="/images/news/personium-trails.png"
