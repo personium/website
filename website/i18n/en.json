@@ -1194,8 +1194,8 @@
         "sidebar_label": "Personium Architecture"
       },
       "user_guide/003_Auth": {
-        "title": "Authentication model",
-        "sidebar_label": "Authentication model"
+        "title": "Authorization Model",
+        "sidebar_label": "Authorization model"
       },
       "user_guide/004_Client_auth": {
         "title": "Client registration & authentication",
