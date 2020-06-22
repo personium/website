@@ -34,8 +34,8 @@
         "sidebar_label": "リクエストURLの変数一覧"
       },
       "apiref/006_Access_Control": {
-        "title": "アクセス制御モデル",
-        "sidebar_label": "アクセス制御モデル"
+        "title": "RBACによるアクセス制御",
+        "sidebar_label": "RBACによるアクセス制御"
       },
       "apiref/007_Box_install": {
         "title": "Boxインストール",
@@ -994,8 +994,8 @@
         "sidebar_label": "アプリ認証"
       },
       "app-developer/launch_from_homeapp": {
-        "title": "Homeアプリからのアプリ起動",
-        "sidebar_label": "Homeアプリからのアプリ起動"
+        "title": "Single Sign On",
+        "sidebar_label": "Single Sign On"
       },
       "app-developer/using_odata": {
         "title": "OData Service Collection (OSC)の使い方",
@@ -1250,8 +1250,8 @@
         "sidebar_label": "リクエストURLの変数一覧"
       },
       "version-1.7.21-apiref/006_Access_Control": {
-        "title": "アクセス制御モデル",
-        "sidebar_label": "アクセス制御モデル"
+        "title": "RBACによるアクセス制御",
+        "sidebar_label": "RBACによるアクセス制御"
       },
       "version-1.7.21-apiref/007_Box_install": {
         "title": "Boxインストール",

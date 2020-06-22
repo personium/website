@@ -1,7 +1,7 @@
 ---
 id: 006_Access_Control
-title: アクセス制御モデル
-sidebar_label: アクセス制御モデル
+title: RBACによるアクセス制御
+sidebar_label: RBACによるアクセス制御
 ---
 
 ## ACL

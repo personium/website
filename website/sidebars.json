@@ -468,7 +468,7 @@
         "ids": [
           "user_guide/003_Auth",
           "app-developer/Roles",
-          "../apiref/006_Access_Control.md",
+          "apiref/006_Access_Control",
           "app-developer/app_authn",
           "app-developer/launch_from_homeapp"
         ]
