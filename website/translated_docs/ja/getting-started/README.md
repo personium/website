@@ -27,19 +27,8 @@ Getting Startedは大きく分けるとPersonium運用者向けの「1. Personiu
 2. アプリ開発 (アプリ開発者向け)
     1. [はじめに](./appdev-introduction.md)
     2. [管理ツール (Unit Manager)](./appdev-management-tool.md)
-    3. [アプリCellとユーザーCell上のBox](./appdev-appcell-and-box.md)
-    4. [アプリテンプレート](./appdev-template.md)
-    5. アプリの実装
-        1. [認証・認可 (OAuth2 ROPCフロー)](./appdev-impl-auth.md)
-        2. [ファイル (WebDAV)](./appdev-impl-webdav.md)
-        3. [リレーショナルデータ (OData)](./appdev-impl-odata.md)
-        4. [データ共有](./appdev-impl-data-shareing.md)
-        5. [エンジンスクリプト](./appdev-impl-engine-script.md)
-        6. [OAuth2 認可コードフロー](./appdev-impl-oauth2-code-flow.md)
-    6. アプリの配布
-        1. [Barファイル](./appdev-dist-bar.md)
-        2. [スタンドアローンアプリ](./appdev-dist-stand-alone-app.md)
-        3. [Single Sign Onアプリ](./appdev-dist-SSO-launch-app.md)
+    3. [アプリ開発の流れ](./appdev-process.md)
+    4. [アプリの実装](./appdev-impl.md)
 
 > もし構築済みのPersoniumを利用できる場合、「1. Personiumの準備」の章をスキップして「2. アプリ開発」の章から読むこともできます。
 

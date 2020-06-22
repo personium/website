@@ -412,17 +412,8 @@
         "ids": [
           "getting-started/appdev-introduction",
           "getting-started/appdev-management-tool",
-          "getting-started/appdev-appcell-and-box",
-          "getting-started/appdev-template",
-          "getting-started/appdev-impl-auth",
-          "getting-started/appdev-impl-webdav",
-          "getting-started/appdev-impl-odata",
-          "getting-started/appdev-impl-data-sharing",
-          "getting-started/appdev-impl-engine-script",
-          "getting-started/appdev-impl-oauth2-code-flow",
-          "getting-started/appdev-dist-bar",
-          "getting-started/appdev-dist-stand-alone-app",
-          "getting-started/appdev-dist-SSO-launch-app"
+          "getting-started/appdev-process",
+          "getting-started/appdev-impl"
         ]
       }
     ],
@@ -467,9 +458,9 @@
         "label": "Authorization",
         "ids": [
           "user_guide/003_Auth",
-          "user_guide/004_Client_auth",
-          "app-developer/app_authn",
           "app-developer/Roles",
+          "apiref/006_Access_Control",
+          "app-developer/app_authn",
           "app-developer/launch_from_homeapp"
         ]
       },
@@ -497,6 +488,7 @@
         "label": "Old Docs",
         "ids": [
           "user_guide/005_Model_construction",
+          "user_guide/004_Client_auth",
           "app-developer/Personium_Apps",
           "user_guide/990_Old_Version_API_Ref"
         ]

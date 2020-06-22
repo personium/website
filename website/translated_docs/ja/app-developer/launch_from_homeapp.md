@@ -1,10 +1,24 @@
 ---
 id: launch_from_homeapp
-title: Homeアプリからのアプリ起動
-sidebar_label: Homeアプリからのアプリ起動
+title: Single Sign On
+sidebar_label: Single Sign On
 ---
 
-Personiumアプリには様々な形態がありますが、ここでは最も標準的なHomeアプリから起動されるアプリについて以下を説明します。
+本ページはSingle Sign Onの実現するためのサンプルアプリであるHomeアプリについて説明します。
+
+## Homeアプリ
+
+認可コードフローをとった場合のPersoniumを使ったアプリでは、フローの初めに以下が必要になります。
+
+1. データ主体のCell URLの入力
+2. Cell URL上での認証と同意
+3. barファイルインストール
+
+上記をアプリごとに行うのはユーザー操作の負担となりますが、一括してアプリを管理・認証できるようなアプリがあるとこの問題を解消できます。Homeアプリはこれを行うサンプルアプリとなります。以下のリポジトリで公開されています。
+
+* [Homeアプリ](https://github.com/personium/app-cc-home)
+
+次の項からは以下のHomeアプリの仕様について説明します。
 
 + アプリ起動時に渡されるパラメタ
 + アプリ起動後に行うべき処理

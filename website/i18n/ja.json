@@ -34,8 +34,8 @@
         "sidebar_label": "リクエストURLの変数一覧"
       },
       "apiref/006_Access_Control": {
-        "title": "アクセス制御モデル",
-        "sidebar_label": "アクセス制御モデル"
+        "title": "RBACによるアクセス制御",
+        "sidebar_label": "RBACによるアクセス制御"
       },
       "apiref/007_Box_install": {
         "title": "Boxインストール",
@@ -994,8 +994,8 @@
         "sidebar_label": "アプリ認証"
       },
       "app-developer/launch_from_homeapp": {
-        "title": "Homeアプリからのアプリ起動",
-        "sidebar_label": "Homeアプリからのアプリ起動"
+        "title": "Single Sign On",
+        "sidebar_label": "Single Sign On"
       },
       "app-developer/using_odata": {
         "title": "OData Service Collection (OSC)の使い方",
@@ -1033,6 +1033,10 @@
         "title": "Distribute Stand-alone App",
         "sidebar_label": "Distribute Stand-alone App"
       },
+      "getting-started/appdev-impl": {
+        "title": "アプリの実装",
+        "sidebar_label": "アプリの実装"
+      },
       "getting-started/appdev-impl-auth": {
         "title": "Implement Authentication",
         "sidebar_label": "Implement Authentication"
@@ -1064,6 +1068,10 @@
       "getting-started/appdev-management-tool": {
         "title": "Management tool (Unit Manager)",
         "sidebar_label": "Management tool (Unit Manager)"
+      },
+      "getting-started/appdev-process": {
+        "title": "アプリ開発の流れ",
+        "sidebar_label": "アプリ開発の流れ"
       },
       "getting-started/appdev-template": {
         "title": "App Template",
@@ -1250,8 +1258,8 @@
         "sidebar_label": "リクエストURLの変数一覧"
       },
       "version-1.7.21-apiref/006_Access_Control": {
-        "title": "アクセス制御モデル",
-        "sidebar_label": "アクセス制御モデル"
+        "title": "RBACによるアクセス制御",
+        "sidebar_label": "RBACによるアクセス制御"
       },
       "version-1.7.21-apiref/007_Box_install": {
         "title": "Boxインストール",
