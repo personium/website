@@ -4,13 +4,19 @@ title: アプリを開発する
 sidebar_label: はじめに
 ---
 
-本章ではサンプルアプリの開発を通して、Personiumを使ったアプリ開発のやり方を学びます。
+本章ではサンプルアプリの開発の流れを見ることで、Personiumを使ったアプリ開発のやり方を学びます。
 
 ## サンプルアプリの開発
 
-開発するサンプルアプリは自分の健康データをPersoniumに格納して、そのデーターの一部を特定の人に共有するもので、ブラウザ上で稼働するWebアプリケーションです。以下は完成したサンプルアプリのスクリーンショットとなります。
+サンプルアプリ(Personium Trails)はGoogle上に蓄積した移動履歴データをPersoniumに格納して、そのデータの一部を他の人に共有するものです。アプリケーションの種類としてはブラウザ上で稼働するWebアプリケーションです。
+
+以下は完成したサンプルアプリのスクリーンショットとなります。
 
 TODO: アプリのスクリーンショットを掲載
+
+完成されたサンプルアプリのコードは以下のリンク先にあります。
+
+[app-personium-trails](https://github.com/personium/app-personium-trails)
 
 ## 事前知識
 
@@ -22,13 +28,13 @@ TODO: アプリのスクリーンショットを掲載
 
 ## 事前準備
 
-Getting Startedを進める前に、2つのCellとCellに関連するAccount, Role, ACL設定を事前に準備してください。準備方法は[前章チュートリアル](../unit-administrator/tutorial.md)を参考にしてください。  
+サンプルアプリでは、2つのCell作成とCellに関連するAccount, Role, ACL設定を事前に行っています。Personiumを使ったアプリを開発する場合、同様のことを行います。Cell作成と関連する設定方法は[前章チュートリアル](../unit-administrator/tutorial.md)を参考にしてください。  
 
-2つのCellの用途と詳細の設定は以下の表の通りとなります。それぞれのCell, Account, Roleの名前は任意なので表の通りでなくてもかまいません。
+サンプルアプリでの2つのCellの用途と詳細の設定は以下の表の通りとなります。
 
-|用途|Cell例|Account例|AccountにリンクするRole例|RoleのACL設定|
+|用途|Cell名例|Account名例|AccountにリンクするRole名例|Roleの権限設定|
 |----|---|---------|-----------------------|--------------|
-|ユーザー用Cell|user|me|admin|root|
+|データ主体用Cell|alice|me|admin|root|
 |アプリ用Cell|sample-app|app|admin|root|
 
-事前準備ができましたら、サンプルアプリ開発を始めましょう。
+自身のアプリを開発する場合、それぞれのCell, Account, Roleの名前は任意なので表の通りでなくてもかまいません。
