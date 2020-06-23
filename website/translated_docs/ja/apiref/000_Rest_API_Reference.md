@@ -7,7 +7,7 @@ API リファレンスへようこそ。  ここではPersoniumが提供する�
 本リファレンス内のリクエストURLの変数については[リクエストURLの変数一覧](005_Variable_of_Request_URL.md)を参照してください。
 
 ## Unit Level API
-Unit Level API はCell群をホストするユニットに属するAPIで、Cellの生成や作成したCell群の管理を行うものです。  
+Unit Level API はCell群をホストするUnitに属するAPIで、Cellの生成や作成したCell群の管理を行うものです。  
 これらAPIは原則としてCellから発行されたアクセストークンではアクセスできず、Unitユーザとしてのトークンでのみアクセス可能です。
 
 #### Unit Root URL
@@ -16,7 +16,7 @@ https://{UnitFQDN}/
 ````
 Unit Level API の大半はUnit制御オブジェクトという形で実現されています。ODataに従ったREST操作でUnit制御オブジェクトを操作してください。
 
-### ユニット制御オブジェクト
+### Unit制御オブジェクト
 
 |Cell|操作|
 |:--|:--|

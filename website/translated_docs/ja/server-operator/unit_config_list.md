@@ -4,17 +4,17 @@ title: Unitの設定一覧
 sidebar_label: Unitの設定一覧
 ---
 
-ユニット設定ファイルは、Personium Unitの設定を行うための
-"personium-unit-config.properties" という名前のjavaプロパティファイルです。このファイルを所定の場所に配置しサーブレットコンテナを起動すると、ユニットはこのファイルで定義された項目はその設定値を使い、定義されていない項目についてはデフォルトの設定値を使って動作します。
+Unit設定ファイルは、Personium Unitの設定を行うための
+"personium-unit-config.properties" という名前のjavaプロパティファイルです。このファイルを所定の場所に配置しサーブレットコンテナを起動すると、Unitはこのファイルで定義された項目はその設定値を使い、定義されていない項目についてはデフォルトの設定値を使って動作します。
 
 ## デフォルト設定値
 
-ユニット設定のデフォルト設定値はGitHubソース上の "personium-unit-config-default.properties" ファイル(war ファイルに同梱)で定義されています。
-このファイル自体に変更を加えることでもユニット設定は切替わりますが、非推奨です。
+Unit設定のデフォルト設定値はGitHubソース上の "personium-unit-config-default.properties" ファイル(war ファイルに同梱)で定義されています。
+このファイル自体に変更を加えることでもUnit設定は切替わりますが、非推奨です。
 
-## ユニット設定ファイルの配置場所
+## Unit設定ファイルの配置場所
 
-ユニット設定ファイルの配置場所はJavaのシステムプロパティで指定可能です。
+Unit設定ファイルの配置場所はJavaのシステムプロパティで指定可能です。
 
 ```
 io.personium.configurationFile={ファイル名まで含めたPath}
@@ -23,13 +23,13 @@ io.personium.configurationFile={ファイル名まで含めたPath}
 
 personium-unit-config.propertiesが正しく読み取られたかどうかを確認するには、起動ログをご確認ください。
 
-#### ユニット設定ファイルのキー名について
+#### Unit設定ファイルのキー名について
 すべてのキーは、以下のキープレフィックスを持ちます。
 ```
 io.personium.core.
 ```
 
-例としてユニット証明書の設定には次のキーを使用する必要があります。
+例としてUnit証明書の設定には次のキーを使用する必要があります。
 ```
 io.personium.core.x509.crt
 ```
@@ -58,8 +58,8 @@ Personiumを運用する上でデフォルトからの変更を任意として�
 |thread.pool.num.io.box|Box Export/Installで使用するスレッドプール数|int|20|core|v1.6.10以降。|
 |thread.pool.num.misc|汎用スレッドプール数|int|10|core|v1.6.10以降。|
 |plugin.path|Personiumプラグイン配置先パス|プラグイン配置先フルパス|/personium/personium-core/plugins|core|<br>|
-|unitScheme|ユニットのスキーム設定|"http" または "https"|https|core|開発用途にhttpを設定することも可能ですが、運用時には必ずhttpsを設定してください。|
-|unitPort|ユニットのポート番号|ポート番号||core|v1.6.0以降。UnitURLが "https&#58;//p-host:8080/" の場合、unitPortは8080になります。UnitURLが "https&#58;//p-host/" の場合、unitPortは設定しません。|
+|unitScheme|Unitのスキーム設定|"http" または "https"|https|core|開発用途にhttpを設定することも可能ですが、運用時には必ずhttpsを設定してください。|
+|unitPort|Unitのポート番号|ポート番号||core|v1.6.0以降。UnitURLが "https&#58;//p-host:8080/" の場合、unitPortは8080になります。UnitURLが "https&#58;//p-host/" の場合、unitPortは設定しません。|
 |masterToken|マスタートークン|トークン文字列||core, engine|デフォルトは無効です。開発用途などで設定することもできますが、運用時には設定しないでください。|
 |pathBasedCellUrl.enabled|セルにアクセスするURL形式|true:path based cell url<br>false:per cell fqdn url|v1.7.5以前:true<br>v1.7.6以降:false|core|v1.7.0以降|
 
@@ -138,7 +138,7 @@ Personiumを運用する上でデフォルトからの変更を任意として�
 |:--|:--|:--|:--|:--|:--|
 |es.hosts|Elasticsearch ホスト名|Elasticsearchのノードを{host:port}形式で指定<br>カンマ区切りで複数指定可能|localhost:9300|core, engine|接続可能なノードが１つでも指定されていれば動作可能です。|
 |es.cluster.name|Elasticsearch クラスタ名|文字列|clusterpersonium|core, engine|<br>|
-|es.unitPrefix|Elasticsearchを使用する際、index生成時のindex名に用いるプレフィックス|文字列|u0|core, engine|通常はユニット名を指定します。|
+|es.unitPrefix|Elasticsearchを使用する際、index生成時のindex名に用いるプレフィックス|文字列|u0|core, engine|通常はUnit名を指定します。|
 |es.topnum|Elasticsearch の検索結果出力上限数|Int|10000|core|<br>|
 |es.retryTimes|エラー発生時のリトライ回数|Int|3|core|<br>|
 |es.retryInterval|エラー発生時のリトライ間隔(msec)|Int|1500|core|<br>|
@@ -212,7 +212,7 @@ http://{engine.host}:{engine.port}/{engine.path}
 #### OpenID Connect
 |キー|説明|値|デフォルト値|使用コンポーネント|備考|
 |:--|:--|:--|:--|:--|:--|
-|oidc.google.trustedClientIds|Google OpenID Connectにおいて、このユニットが信頼するClientID<br>スペース区切りで複数指定可能|文字列|*|core|"*"を指定した場合全てのClientIDを信頼する<br><b>将来的にPlugin独自設定として移動予定</b>|
+|oidc.google.trustedClientIds|Google OpenID Connectにおいて、このUnitが信頼するClientID<br>スペース区切りで複数指定可能|文字列|*|core|"*"を指定した場合全てのClientIDを信頼する<br><b>将来的にPlugin独自設定として移動予定</b>|
 
 #### CellSnapshot
 |キー|説明|値|デフォルト値|使用コンポーネント|備考|
