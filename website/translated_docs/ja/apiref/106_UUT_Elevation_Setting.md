@@ -7,7 +7,7 @@ sidebar_label: ULUUT昇格設定
 UUT（Unit User Token）昇格設定を変更する
 
 ### 必要な権限
-ユニットユーザのみ可能
+Unitユーザのみ可能
 
 ## リクエスト
 ### リクエストURL

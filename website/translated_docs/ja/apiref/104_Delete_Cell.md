@@ -8,7 +8,7 @@ sidebar_label: Cell削除
 Cellに紐付くBox,Account,Role,ExtCell,ExtRole,Relationがある場合は409となり削除は行わない
 
 ### 必要な権限
-ユニットユーザのみ可能
+Unitユーザのみ可能
 ### 制限事項
 * OData制限
 	* リクエストヘッダのContent-Typeは全てapplication/jsonとして扱う

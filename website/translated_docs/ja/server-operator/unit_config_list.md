@@ -43,7 +43,7 @@ Personiumを運用する上でデフォルトから変更を必須としてい�
 |x509.crt|X509証明書を配置したパス|PEM形式証明書のフルパス|/opt/x509/localhost.crt|core, engine|<br>|
 |x509.root|X509ルート証明書を配置したパス|信頼すべきPEM形式ルート証明書のフルパス<br>スペース区切りで複数指定可能|/opt/x509/personium_ca.crt|core, engine|何も指定しなければ(キーの定義もしない)、Personiumプロジェクト公式CAの証明書は自動的に信頼されます。|
 |security.secret16|トークンとファイル生成時の暗号化キー|16桁の16進文字列|secret16abcdefgh|core, engine|<br>|
-|unitUser.issuers|ユニットユーザトークン発⾏者として認定する文字列<br>セルURLを指定することでそのセルをユニットユーザトークン発行者として指定できます|URL<br>スペース区切りで複数指定可能|http&#58;//localhost:8080/UnitUserCell/ |core|<br>|
+|unitUser.issuers|Unitユーザトークン発⾏者として認定する文字列<br>セルURLを指定することでそのセルをUnitユーザトークン発行者として指定できます|URL<br>スペース区切りで複数指定可能|http&#58;//localhost:8080/UnitUserCell/ |core|<br>|
 
 
 ### 変更任意設定

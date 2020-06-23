@@ -47,7 +47,7 @@ Personiumのサーバソフトウェアを使ってPersonium Unitを構築する
 
 #### [Unit管理者向けガイド](./unit-administrator/README.md)
 
-構築・設定済のPersonium Unitに対してユニットユーザトークンを使ってアクセスして、 Unit管理者の主たる業務、すなわちCellの作成・払出しや、払出したCellの管理等を実施する方のためのドキュメントです。
+構築・設定済のPersonium Unitに対してUnitユーザトークンを使ってアクセスして、 Unit管理者の主たる業務、すなわちCellの作成・払出しや、払出したCellの管理等を実施する方のためのドキュメントです。
 
 ### アプリ開発者向け
 

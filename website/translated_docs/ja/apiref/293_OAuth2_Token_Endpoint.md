@@ -107,7 +107,7 @@ POST
 |client_id|アプリのスキーマURI|String|(grant_type=authorization_codeの場合必須)|多くの場合アプリセルURL<br>client_assertion, client_secretとともに有効値を指定した場合アプリ認証済トークンを発行。|
 |client_secret|アプリ認証トークン|String|×|アプリセル等から発行されるアプリ認証トークン<br>client_idとともに指定した場合アプリ認証済トークンを発行<br>同時にAuthorizationヘッダで同様情報が送信された場合、Authorizationヘッダの設定が優先される|
 |scope|要求scope|String|×|アプリが求めるscope情報をスペース区切りで指定|
-|p_owner|ユニットユーザ昇格指定|String|×|trueのみ有効|
+|p_owner|Unitユーザ昇格指定|String|×|trueのみ有効|
 |p_cookie|認証クッキー発行オプション<br>指定された場合は認証クッキーを発行する<br>p_targetが指定された場合は、本パラメタの指定は無視する|String|×|trueのみ有効|
 |expires_in|アクセストークンの有効期限（秒）|Int<br>1～3600|×|発行されるアクセストークンの有効期限を指定<br>デフォルトは3600（1時間）|
 |refresh_token_expires_in|リフレッシュトークンの有効期限（秒）|Int<br>1～86400|×|発行されるリフレッシュトークンの有効期限を指定<br>デフォルトは86400（24時間）<br>p_ownerが指定された場合は、本パラメタの指定は無視する|

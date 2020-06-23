@@ -309,7 +309,7 @@ Personiumでは以下の種類:があり、発行から1時間で変更される
 
 
 ### Unit制御オブジェクト
-<font size=1>[Personium]</font> ユニットユーザ（管理者）として、セルの作成や管理をするためのオブジェクト群。
+<font size=1>[Personium]</font> Unitユーザ（管理者）として、セルの作成や管理をするためのオブジェクト群。
 
 
 ### Unit User
