@@ -4,7 +4,7 @@ title: Single Sign On
 sidebar_label: Single Sign On
 ---
 
-本ページはSingle Sign Onの実現するためのサンプルアプリであるHomeアプリについて説明します。
+本ページはSingle Sign Onを実現するためのサンプルアプリであるHomeアプリについて説明します。
 
 ## Homeアプリ
 
