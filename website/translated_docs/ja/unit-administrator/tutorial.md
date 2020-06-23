@@ -58,7 +58,7 @@ javascriptを用いたサンプルソースが公開されていますので、�
 
 ## <a name="sect4">4. トークンについて</a>
 
-本文書では、Personiumユニットの操作のためユニットマスタートークン、またはユニットユーザートークンを使用します。ユニットマスタートークンやユニットユーザートークンの詳細については[こちら](Unit-User.md)を参照ください。  
+本文書では、Personium Unitの操作のためユニットマスタートークン、またはユニットユーザートークンを使用します。ユニットマスタートークンやユニットユーザートークンの詳細については[こちら](Unit-User.md)を参照ください。  
 
 Ansible を使って構築した環境のユニットマスタートークンやユニットユーザーのアカウント名／パスワードの確認方法は[こちら](../server-operator/Confirm_environment_settings.md)を参照してください。  
 独自に環境を構築された場合はサーバソフトウェア管理者に確認してください。
@@ -70,7 +70,7 @@ Ansible を使って構築した環境のユニットマスタートークンや
 何も入っていない空のCell(PDS)を作ります。
 
 新たなCellを追加作成する前に、Cell一覧取得APIで事前の状態を確認してみましょう。
-構築直後のPersoniumユニットには、Unit管理用のCellのみ登録されている状態です。
+構築直後のPersonium Unitには、Unit管理用のCellのみ登録されている状態です。
 
 ```sh
 curl "https://{Personium_FQDN}/__ctl/Cell" \
@@ -79,7 +79,7 @@ curl "https://{Personium_FQDN}/__ctl/Cell" \
 ```
 
 Unit管理用のCellの情報1件がレスポンスに返ります。
-この状態が Personiumユニット の初期状態です。
+この状態が Personium Unit の初期状態です。
 
 ```json
 {

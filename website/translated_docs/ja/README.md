@@ -43,11 +43,11 @@ Personium運用者は更にサーバソフトウェア運用者とUnit管理者�
 
 #### [サーバソフトウェア運用者向けガイド](./server-operator/README.md)
 
-Personiumのサーバソフトウェアを使ってPersoniumユニットを構築する方や、Personiumサーバプログラムをビルド・デプロイ・設定する方、Personiumを使用したPDSサービス環境を提供・運用したい方向けのドキュメントです。
+Personiumのサーバソフトウェアを使ってPersonium Unitを構築する方や、Personiumサーバプログラムをビルド・デプロイ・設定する方、Personiumを使用したPDSサービス環境を提供・運用したい方向けのドキュメントです。
 
 #### [Unit管理者向けガイド](./unit-administrator/README.md)
 
-構築・設定済のPersoniumユニットに対してユニットユーザトークンを使ってアクセスして、 Unit管理者の主たる業務、すなわちCellの作成・払出しや、払出したCellの管理等を実施する方のためのドキュメントです。
+構築・設定済のPersonium Unitに対してユニットユーザトークンを使ってアクセスして、 Unit管理者の主たる業務、すなわちCellの作成・払出しや、払出したCellの管理等を実施する方のためのドキュメントです。
 
 ### アプリ開発者向け
 

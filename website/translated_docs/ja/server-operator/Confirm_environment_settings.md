@@ -203,7 +203,7 @@ AP サービスが動作するサーバの基本設定を確認します。
     Personium_FQDN={Personium_FQDN}  
     ```  
 
-    * {Personium_FQDN} PersoniumユニットのFQDN
+    * {Personium_FQDN} Personium UnitのFQDN
     * {unitadmin_account} Unit管理アカウント
     * {unitudmin_password} Unit管理パスワード
 
