@@ -17,7 +17,7 @@ $orderby={propertyName} {option}, ・・・
 |{PropertyName}|並び替えのキーに指定するプロパティ名|
 |{Option}|並び替え方法<br>asc:昇順<br>desc:降順<br>デフォルト値:asc|
 ## cURLサンプル
-例：セル情報をセル名の降順で取得する場合:
+例：Cell情報をCell名の降順で取得する場合:
 ```sh
 curl "https://unit1.example/__ctl/Cell?\$orderby=Name%20desc" -X GET -i -H \
 'Authorization: Bearer AA~PBDc...(省略)...FrTjA' -H 'Accept: application/json'

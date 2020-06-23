@@ -162,7 +162,7 @@ Unit管理クライアントはUnitレベルの操作（Cellの新規作成や�
 これらはUnit管理権限を持つ特別なToken(Personium Serverで定義されたUnitAdmin Cellで発行可能)を使用するため、ログイン時にはそれらを取得するための情報(以下4つ)を何らかの形でインプットする必要がある。<br>
 
 1. Personium環境のURL
-1. UnitAdminCellのセル名（PersoniumのUnitConfigで規定）
+1. UnitAdminCellのCell名（PersoniumのUnitConfigで規定）
 1. UnitAdminアカウント
 1. UnitAdminのパスワード
 

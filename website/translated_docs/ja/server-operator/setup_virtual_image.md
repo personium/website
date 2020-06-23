@@ -14,7 +14,7 @@ sidebar_label: 仮想イメージを使ってPersoniumを始めよう
 
 1. [VirtualBox](https://www.virtualbox.org/wiki/Downloads)をインストールしてください。  
 
-1. あなたが構築したいPersoniumユニットのバージョンのイメージファイルを
+1. あなたが構築したいPersonium Unitのバージョンのイメージファイルを
    以下のURLからダウンロードしてください。 
 
    * 1.6.15  

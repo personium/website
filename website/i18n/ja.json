@@ -1118,8 +1118,8 @@
         "sidebar_label": "サーバプラグイン開発者向けガイド"
       },
       "server-operator/Confirm_environment_settings": {
-        "title": "Ansible で構築したユニットの環境情報",
-        "sidebar_label": "Ansible で構築したユニットの環境情報"
+        "title": "Ansible で構築したUnitの環境情報",
+        "sidebar_label": "Ansible で構築したUnitの環境情報"
       },
       "server-operator/README": {
         "title": "サーバソフトウェア運用者向けガイド",
@@ -1186,12 +1186,12 @@
         "sidebar_label": "データの管理"
       },
       "unit-administrator/README": {
-        "title": "ユニット管理者向けガイド",
-        "sidebar_label": "ユニット管理者向けガイド"
+        "title": "Unit管理者向けガイド",
+        "sidebar_label": "Unit管理者向けガイド"
       },
       "unit-administrator/Unit-User": {
-        "title": "ユニットユーザ",
-        "sidebar_label": "ユニットユーザ"
+        "title": "Unitユーザ",
+        "sidebar_label": "Unitユーザ"
       },
       "unit-administrator/tutorial": {
         "title": "Personium Unit管理 チュートリアル",

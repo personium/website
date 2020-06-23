@@ -6,7 +6,7 @@ sidebar_label: ローカルマシンへのインストール
 
 ###概要
 
-この手順では、Vagrant + Ansibleを使用して1VM上にPersoniumユニットを設定できます。
+この手順では、Vagrant + Ansibleを使用して1VM上にPersonium Unitを設定できます。
 あなたのマシンに簡単にセットアップして、Personium APIを探索することができます。
 
 \* この手順は、VirtualBox 4.3.20およびVagrant 1.7.2でテストされています。
@@ -39,13 +39,13 @@ sidebar_label: ローカルマシンへのインストール
 	$ cd ./io-vagrant-ansible
 	$ vagrant up
 	```
-5. Personiumユニットが起動して動作していることを確認します。
+5. Personium Unitが起動して動作していることを確認します。
 
 	```bash
 	$ curl -X POST "http://localhost:1210/__ctl/Cell" -d "{\"Name\":\"sample\"}" -H "Authorization:Bearer personiumio" -H "Accept:application/json" -i -s
 	```
 
-	Personiumユニットが正常にセットアップされた場合、以下のように201レスポンスが返され、Cellが作成されます！
+	Personium Unitが正常にセットアップされた場合、以下のように201レスポンスが返され、Cellが作成されます！
 
 	```bash
 	HTTP/1.1 201 Created

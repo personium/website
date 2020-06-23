@@ -11,14 +11,14 @@ sidebar_label: Ansibleを使ってPersoniumを始めよう
 ansibleに興味のあるかたは以下のページもあわせてご参照ください。  
 [HOW ANSIBLE WORKS](http://www.ansible.com/how-ansible-works)
 
-### Personiumのユニット構成
+### PersoniumのUnit構成
 
-Personiumのユニットは評価、開発、確認、運用等々の様々な異なる目的に応じて構成することが可能です。Personiumは必要に応じて簡単に、自動的に環境を構築できるセットアップツールを提供しています。  
-Personiumのユニットはセットアップツールを使用せずに構築することも可能ですが、Personiumのユニットを簡単に構築するためにセットアップツールの使用をお勧めいたします。
+PersoniumのUnitは評価、開発、確認、運用等々の様々な異なる目的に応じて構成することが可能です。Personiumは必要に応じて簡単に、自動的に環境を構築できるセットアップツールを提供しています。  
+PersoniumのUnitはセットアップツールを使用せずに構築することも可能ですが、PersoniumのUnitを簡単に構築するためにセットアップツールの使用をお勧めいたします。
 
 ### Personiumにおける各サーバーの役割
 
-Personiumのユニットは以下の役割を持ったサーバーから構成されます。これらの役割は相互に接続された単独または複数のサーバーに割り当てることが可能です。
+PersoniumのUnitは以下の役割を持ったサーバーから構成されます。これらの役割は相互に接続された単独または複数のサーバーに割り当てることが可能です。
 
 |役割|必須|詳細|
 |:--|:--|:--|
@@ -32,12 +32,12 @@ Personiumのユニットは以下の役割を持ったサーバーから構成�
 ### Personiumセットアップツール
 
 本セットアップツールはPersoniumをインストールする前に、あなたのサーバー（linuxのサーバーまたはWindowsやMac上の仮想マシン）へのミドルウェアの導入やOSやネットワークの設定を行います。  
-セットアップツールにはPersoniumとのユニットの構成に応じて複数の形式がありますので、あなたの目的に応じたセットアップツールをご使用ください。
+セットアップツールにはPersoniumとのUnitの構成に応じて複数の形式がありますので、あなたの目的に応じたセットアップツールをご使用ください。
 
 #### パターン1 : 1 Server
 
 -   機器環境 : **Linux**
--   Personiumユニット構成サーバー台数 : **1 Server**
+-   Personium Unit構成サーバー台数 : **1 Server**
 -   サーバー1の構成 : Web, AP, ES, MQ, NFS
 -   構築時間: 1 時間
 -   使用するセットアップツール: [ansible/1-server\_unit](https://github.com/personium/ansible/tree/master/1-server_unit "1-server_unit")
@@ -49,14 +49,14 @@ Personiumのユニットは以下の役割を持ったサーバーから構成�
 #### パターン2 : 3 Servers
 
 -   機器環境 : **Linux**
--   Personiumユニット構成サーバー台数 : **3 Servers**
+-   Personium Unit構成サーバー台数 : **3 Servers**
 -   サーバー1の構成 : Bastion, Web
 -   サーバー2の構成 : AP, MQ, NFS
 -   サーバー3の構成 : ES
 -   構築時間 : 2 時間
 -   使用するセットアップツール: [ansible/3-server\_unit](https://github.com/personium/ansible/tree/master/3-server_unit "3-server_unit")
 -   注意  
-    　もしもあなたがPersoniumプロジェクトにご参加いただき、いくつかの素晴らしいアプリケーションをリリースしようとするならば、3台のサーバからユニットが構成される、本構成をお勧めします。
+    　もしもあなたがPersoniumプロジェクトにご参加いただき、いくつかの素晴らしいアプリケーションをリリースしようとするならば、3台のサーバからUnitが構成される、本構成をお勧めします。
 
 本ドキュメントでは、Personiumを構成する基本的なパターンをご紹介しています。  
 目的に応じて最適なパターンをご選択ください。

@@ -23,7 +23,7 @@ Personiumの各オブジェクトの管理を示す。
 |アクセス制御設定|ACL (Cell Level)<br>ACL (Box Level)|WebDAV|
 <br>
 #### 参考情報
-例えばバックアップ目的などでセル内のデータを取得したい場合、PersoniumのAPIを実行することで可能。
+例えばバックアップ目的などでCell内のデータを取得したい場合、PersoniumのAPIを実行することで可能。
 > Accountのパスワードは取得不可。
 
 ##### OData空間のデータ取得

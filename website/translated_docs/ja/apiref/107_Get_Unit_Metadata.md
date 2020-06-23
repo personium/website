@@ -6,7 +6,7 @@ sidebar_label: Unitメタデータ取得
 ## 概要
 Unitのメタデータを取得する。メタデータには、以下の情報が含まれる。  
 * UnitのURL
-* Unit内のセルにアクセスする際のURL形式
+* Unit内のCellにアクセスする際のURL形式
 
 ### 必要な権限
 なし

@@ -6,7 +6,7 @@ sidebar_label: Cell作成
 ## 概要
 新規Cellを作成する
 ### 必要な権限
-ユニットユーザのみ可能
+Unitユーザのみ可能
 ### 制限事項
 * OData制限
 	- リクエストヘッダのContent-Typeは全てapplication/jsonとして扱う
