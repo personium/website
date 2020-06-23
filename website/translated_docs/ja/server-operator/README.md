@@ -9,15 +9,18 @@ Personiumを使用したPDSサービス環境を提供・運用したい方向�
 
 構築・設定済のPersonium Unitに対して、Cellの作成・払出しや、払出したCellの管理等を実施する方は、[Unit管理者向けガイド](../unit-administrator/)をご覧ください。
 
-## PersoniumのUnit構成
+## システム構成とセットアップツール
 
-PersoniumのUnitは評価、開発、確認、運用等々の様々な異なる目的に応じて構成することが可能です。Personiumは必要に応じて簡単に、環境を自動構築できるセットアップツールを提供しています。  
-PersoniumのUnitはセットアップツールを使用せずに構築することも可能ですが、PersoniumのUnitを簡単に構築するためにセットアップツールの使用をお勧めいたします。
+PersoniumのUnitは評価、開発、確認、運用等々の様々な目的に応じてサーバ台数を増やしてシステムを構成することが可能です。また、構成に応じたVM作成やミドルウェア導入等を行うセットアップツールを一部提供しています。本ページで提供するシステム構成とセットアップツールの組み合わせは以下の表の通りとなります。
 
-## Personiumセットアップツール
+|    | サーバ | サーバ構築 | Personiumセットアップ | Personiumバージョン |
+| :- | :----- | :-------- | :------------------- | :------------- |
+| 小規模環境 | | ユーザ側でLinuxサーバを準備 | Ansible | 任意<br>デフォルトは最新 |
+| | Linuxサーバ1台 | Vagrant | Ansible | デフォルトは最新 |
+| 中規模環境 | Linuxサーバ3台 | HeatTemplate | Ansible | 任意<br>デフォルトは最新 |
+| | | ユーザ側でLinuxサーバを準備 | Ansible | 任意<br>デフォルトは最新 |
 
-本セットアップツールはPersoniumをインストールする前に、あなたのサーバー（linuxのサーバーまたはWindowsやMac上の仮想マシン）へのミドルウェアの導入やOSやネットワークの設定を行います。  
-セットアップツールにはPersoniumとのUnitの構成に応じて複数の形式がありますので、あなたの目的に応じたセットアップツールをご使用ください。
+※1 サンプルアプリをインストールしたい場合は、[こちら](../getting-started/setup-sample-apps.md)の手順をご確認ください。
 
 ## Personiumにおける各サーバーの役割
 
@@ -32,19 +35,13 @@ PersoniumのUnitは以下の役割を持ったサーバーから構成されま�
 | NFS | 必須 | ネットワークファイルシステム(NFS)が動作するサーバーです。  |
 | Bastion | オプション|踏み台サーバ。各サーバへのsshでのアクセスを中継させるためにのサーバです。  |
 
-## Unit構成設計
-
-Personiumはスケーラブルなアーキテクチャを採用しています。評価用や個人利用であれば1台のマシンにすべてを詰め込んだPersonium Unitを構築することも可能です。一方で数百人、数千人が使うUnitを構築するには、セキュリティや性能といった非機能が必要となるため、Web層-AP層-DB層といった層構成をとるのが推奨されますので、最低2-3台の構成をとるべきでしょう。さらに数万人～数十万人以上が日々使う大規模なUnit構成するためには各層をスケールアウトさせ、10台-20台といった構成をとることとなります。
-
-まずは、どのような構成のUnitを作るべきかを決め、必要なインフラ設計をしましょう。
-
-以下の図はPersoniumセットアップツールのAnsibleで想定するWeb層-AP層-DB層3台の場合の構成図です。インフラ設計の参考にしてください。
+以下の図はPersoniumセットアップツールのAnsibleで想定するWeb層-AP層-DB層3台の場合の構成図です。
 
 ![3-server_unit.jpg](assets/server-operator/3-server_unit.jpg)
 
-## Unitの構築時の注意点
+## Unit構築時の注意点
 
-Personium Unitは`https://user1.personium.example`や`https://user2.personium.example`といったユーザによって異なるサブドメインでのHTTPSアクセスを行うことを前提にしているため、以下が基本必要となります。
+Personium Unitは`https://alice.personium.example`や`https://bob.personium.example`といったデータ主体によって異なるサブドメインでのHTTPSアクセスを行うことを前提にしているため、以下が基本必要となります。
 
 - WebサーバにアクセスするIPアドレスに対しての`*.personium.example`といったワイルドカードドメイン名でのDNSレコード設定
 - `*.personium.example`といったワイルドカードドメイン名に対応したSSL証明書の取得と設定
@@ -57,42 +54,39 @@ Personium Unitは`https://user1.personium.example`や`https://user2.personium.ex
 
 Unit構築にはVagrant、Ansibleを利用することができます。またOpen Stack ベースのクラウド環境に構築する場合は Heat Template を使えば、ほぼ自動でUnit構築が可能です。もちろん、これら自動構築ツールを使わないで任意のクラウドや物理/仮想マシンを使ってUnit構築を行うこともできます。しかし、本ドキュメントでは現状その構築手順を用意していないため、Open StackのHeatを使ったサーバインフラ構築手順やAnsibleを使ったUnit自動構築手順を参考に構築を行ってください。
 
-|    | サーバ | サーバ構築 | Personiumセットアップ | Personiumバージョン | デフォルトFQDN |
-| :- | :----- | :-------- | :------------------- | :------------- | :------------------ |
-| 小規模環境 | Linuxサーバ1台 | Vagrant | Ansibleを自動実行 | 最新 | personium.example.com |
-| | | ユーザ側でLinuxサーバを準備 | Ansible | 任意<br>デフォルトは最新 | なし |
-| 中・大規模環境 | Linuxサーバ3台 | HeatTemplate | Ansible | 任意<br>デフォルトは最新 | なし |
-| | | ユーザ側でLinuxサーバを準備 | Ansible | 任意<br>デフォルトは最新 | なし |
-
-※1 サンプルアプリをインストールしたい場合は、[こちら](../getting-started/setup-sample-apps.md)の手順をご確認ください。
-
 ### 小規模環境(サーバ1台で動作するPersonium環境)を構築する
 
 **もしもあなたが、Personiumにより一層興味を持ち、アプリケーションの開発やテストを実施してみたいと思ったならば、1台のサーバからUnitが構成される、本構成をお勧めします。**
 
-* Vagrant  
-
-    Vagrantを利用してローカル環境のVM上にUnitを構築するためのガイドを公開しています。  
-
-    * [Vagrantを利用したUnit構築ガイド](https://github.com/personium/setup-vagrant)  
-
-* Ansible(1-Server)   
+* サーバ1台手動構築 + Ansible(1-Server)  
 
     Ansible(1-Server)を利用してLinuxサーバ1台構成のUnitを構築するためのガイドを公開しています。
 
-    * [Ansible(1-server)を利用したUnit構築ガイド](https://github.com/personium/ansible/tree/master/1-server_unit)
+    * [Getting Started: Unitの構築](../getting-started/appdev-appcell-and-box.md)
+    * [Ansible(1-server)](https://github.com/personium/ansible/tree/master/1-server_unit)
 
-### 中・大規模環境(サーバ3台で動作するPersonium環境)を構築する
+* Vagrant (+ Ansible)
 
-**もしもあなたがPersoniumプロジェクトにご参加いただき、アプリケーションをリリースしようとするならば、3台のサーバからUnitが構成される、本構成をお勧めします。**
+    Vagrantを利用してローカル環境のVM上にUnitを構築するためのガイドを公開しています。Vagrant実行時にVM作成とともにAnsibleが実行されます  
 
-* Open Stack Heat
+    * [Vagrantを利用したUnit構築ガイド](https://github.com/personium/setup-vagrant)  
+
+
+### 中規模環境(サーバ3台で動作するPersonium環境)を構築する
+
+**もしもあなたがPersoniumプロジェクトにご参加いただき、アプリケーションをリリースしようとするならば、3層構成の3台サーバからUnitが構成される、本構成をお勧めします。**
+
+* Open Stack Heat(サーバ3台構築) + Ansible(3-Server)
 
     HeatTemplateを利用して、OpenStackでPersonium 3ServerUnit用のネットワークおよびサーバ構成を自動構築するためのガイドを公開してしています。
 
     * [Open Stack Heatを利用したサーバインフラの自動構築](https://github.com/personium/openstack-heat)
 
-* Ansible(3-Server)
+    Ansible(3-Server)を利用してLinuxサーバ3台構成のUnitを構築するためのガイドを公開しています。
+
+    * [Ansible(3-server)を利用したUnit構築ガイド](https://github.com/personium/ansible/tree/master/3-server_unit "3-server_unit")
+
+* サーバ3台手動構築 + Ansible(3-Server)
 
     Ansible(3-Server)を利用してLinuxサーバ3台構成のUnitを構築するためのガイドを公開しています。
 
