@@ -187,11 +187,11 @@ AP サービスが動作するサーバの基本設定を確認します。
 
 **ユニットマスタートークン無効化の方法については [Unit のセキュリティ（デフォルトから変更したほうが良い設定）](unit_security.md)を参照ください。**
 
-#### Personium ユニット管理アカウント
+#### Personium Unit管理アカウント
 
-* Ansible を実行することで自動的にPersonium ユニット管理アカウントが作成されます。この情報はPersonium ユニット管理者がセルの作成等の管理作業を行う際に必要となります。
+* Ansible を実行することで自動的にPersonium Unit管理アカウントが作成されます。この情報はPersonium Unit管理者がセルの作成等の管理作業を行う際に必要となります。
 
-    ユニット管理アカウントのID/PASSの確認
+    Unit管理アカウントのID/PASSの確認
 
     * 情報の取得のため、Ansibleを実行したサーバーにログインし、以下コマンドを実行します。
 
@@ -204,8 +204,8 @@ AP サービスが動作するサーバの基本設定を確認します。
     ```  
 
     * {Personium_FQDN} PersoniumユニットのFQDN
-    * {unitadmin_account} ユニット管理アカウント
-    * {unitudmin_password} ユニット管理パスワード
+    * {unitadmin_account} Unit管理アカウント
+    * {unitudmin_password} Unit管理パスワード
 
 >**（注意）**  
 >**ここで取得した情報は初期値であるため、ユーザが変更した場合は各自で管理するようにしてください。**

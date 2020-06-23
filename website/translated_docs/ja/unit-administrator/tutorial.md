@@ -70,7 +70,7 @@ Ansible を使って構築した環境のユニットマスタートークンや
 何も入っていない空のCell(PDS)を作ります。
 
 新たなCellを追加作成する前に、Cell一覧取得APIで事前の状態を確認してみましょう。
-構築直後のPersoniumユニットには、ユニット管理用のCellのみ登録されている状態です。
+構築直後のPersoniumユニットには、Unit管理用のCellのみ登録されている状態です。
 
 ```sh
 curl "https://{Personium_FQDN}/__ctl/Cell" \
@@ -78,7 +78,7 @@ curl "https://{Personium_FQDN}/__ctl/Cell" \
 -H "Accept:application/json" -H "Authorization:Bearer {Token}"
 ```
 
-ユニット管理用のCellの情報1件がレスポンスに返ります。
+Unit管理用のCellの情報1件がレスポンスに返ります。
 この状態が Personiumユニット の初期状態です。
 
 ```json
@@ -627,7 +627,7 @@ Unit Managerについての詳細は[こちら](https://github.com/personium/app
 <iframe width="560" height="315" src="https://www.youtube.com/embed/d1_pET0M-YA" frameborder="0" allow="autoplay; encrypted-media" allowfullscreen></iframe>
 </div>
 
-「Unit Manager」使用時に必要となるログイン情報は、「[4. トークンについて](#sec4)」で取得したユニット管理アカウント情報をご使用ください。
+「Unit Manager」使用時に必要となるログイン情報は、「[4. トークンについて](#sec4)」で取得したUnit管理アカウント情報をご使用ください。
 
 
 ## <a name="sect8">8. PDSの払い出しを自動化する</a>

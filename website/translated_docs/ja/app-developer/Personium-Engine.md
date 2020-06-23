@@ -137,7 +137,7 @@ Engine ExtensionはEngine Libraryの機能を拡張するための機構です�
 ユニットに設定することにより、 Engine Script内で _p.extension. パッケージ以下に新たな機能を提供するオブジェクトが現れ、利用可能となります。
 
 Engine Extension は、概要で記載のとおりサンドボックス環境として設計されているengineの制約を緩和するための機構です。
-そのため Engine Extensionの導入はユニット管理者でないと行うことができません。
+そのため Engine Extensionの導入はUnit管理者でないと行うことができません。
 
 ### Engine Extension のセットアップ
 
