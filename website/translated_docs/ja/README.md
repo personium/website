@@ -10,18 +10,18 @@ Slackコミュニティへの参加登録は[こちら](https://bit.ly/Join_Pers
 
 ## はじめに
 
-#### [Personiumとは](./overview/001_Introduction.md)
-#### [Personiumのアーキテクチャ](./user_guide/001_Personium_Architecture.md)
-#### [用語集](./user_guide/008_Glossary.md)
+* [Personiumとは](./overview/001_Introduction.md)
+* [Personiumのアーキテクチャ](./user_guide/001_Personium_Architecture.md)
+* [用語集](./user_guide/008_Glossary.md)
 
 ## Personiumのユーザー種類
 
 Personiumのユーザーは大きく以下に分けられます。
 
-|ユーザー種類|役割|
+|ユーザー種類|説明|
 |-------------|----|
 |Personium運用者|Personiumサーバの構築や運用管理|
-|アプリ開発者|Personiumを使ったアプリの開発|
+|アプリ開発者|PersoniumのAPIを使用したアプリの開発|
 
 以下の図はその関係を表しています。
 
@@ -49,13 +49,13 @@ Personiumのサーバソフトウェアを使ってPersoniumユニットを構�
 
 構築・設定済のPersoniumユニットに対してユニットユーザトークンを使ってアクセスして、 ユニット管理者の主たる業務、すなわちCellの作成・払出しや、払出したCellの管理等を実施する方のためのドキュメントです。
 
-### アプリ開発者向け  
+### アプリ開発者向け
 
-#### [Personiumアプリ開発者向けガイド](./app-developer/README.md)  
+#### [Personiumアプリ開発者向けガイド](./app-developer/README.md)
 
 PersoniumのAPIを使用して、アプリを開発したい人向けのドキュメントです
 
-## コントリビュータガイド  
+## コントリビュータガイド
 
 ### ドキュメントコントリビュータ
 
