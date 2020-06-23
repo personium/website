@@ -5,7 +5,7 @@ sidebar_label: OAuth 2.0 トークンエンドポイント
 ---
 ## 概要
 
-セルの様々なAPIにアクセスするためのアクセストークンを発行するAPIのエンドポイントです。 OAuth 2.0仕様に準拠しており、様々な方法でユーザやアプリを認証してアクセストークンやリフレッシュトークン等を発行します。
+Cellの様々なAPIにアクセスするためのアクセストークンを発行するAPIのエンドポイントです。 OAuth 2.0仕様に準拠しており、様々な方法でユーザやアプリを認証してアクセストークンやリフレッシュトークン等を発行します。
 
 ### ユーザ認証のバリエーション
 
@@ -14,13 +14,13 @@ sidebar_label: OAuth 2.0 トークンエンドポイント
 * OAuth 2.0 の ROPC (Resource Owner Password Credential) フローです。
 * 登録したアカウントの名前とパスワードに基づきアカウントの所有者を認証してアクセストークン発行を受けることができます。
 * 総当たり攻撃に対する防御策として、認証に失敗後1秒間はそのアカウントについてはパスワードが正当であっても認証エラーとなります。
-* このフローはセルGUIをはじめとして、セル所有者が高いレベルの信用を置く前提であるセル管理アプリのみが使うべきものです。
+* このフローはCellGUIをはじめとして、Cell所有者が高いレベルの信用を置く前提であるCell管理アプリのみが使うべきものです。
 * OAuth 2.0の仕様に記述されているとおり、このフローを一般のPersoniumアプリは使うべきではありません。
 
-#### トランスセルアクセストークンによる他セルユーザの認証
+#### トランスセルアクセストークンによる他Cellユーザの認証
 
 * OAuth 2.0 拡張の SAML2 assertion フローに対応する認証方法です。
-* このセル宛のトランスセルアクセストークンを送信することで、他セルユーザを認証してアクセストークン発行を受けることができます。
+* このCell宛のトランスセルアクセストークンを送信することで、他Cellユーザを認証してアクセストークン発行を受けることができます。
 * 送信するトランスセルアクセストークンの発行を受けたときにアプリ認証を経ていた場合も、ここでアプリの再認証が必要となります。
 
 #### リフレッシュトークン送信によるユーザ認証状態継続
@@ -28,12 +28,12 @@ sidebar_label: OAuth 2.0 トークンエンドポイント
 * リフレッシュトークンを送信することでそのリフレッシュトークン発行時にうけたユーザ認証状態を引き継いだ新たなアクセストークン発行を受けることができます。
 * 送信するリフレッシュトークンの発行を受けたときにアプリ認証を経ていた場合も、ここでアプリの再認証が必要となります。
 * トークンリフレッシュ時に別アプリのclient_id, client_secretを送信することで、アプリの切り替えをすることはできません。
-* セルアプリから一般アプリへのシングルサインオンなどアプリ間で認証状態を引き継ぎたい場合は、必要に応じてOpenID Connectの IDトークンを使ってください。アクセストークンやリフレッシュトークンをアプリ間で共有・やり取りはすべきではありません。
+* Cellアプリから一般アプリへのシングルサインオンなどアプリ間で認証状態を引き継ぎたい場合は、必要に応じてOpenID Connectの IDトークンを使ってください。アクセストークンやリフレッシュトークンをアプリ間で共有・やり取りはすべきではありません。
 
 ### アプリ認証のための情報送信
 
 * PersoniumではOAuthのclient認証の枠組を使ってアプリの認証を行います。
-* Personiumではclient_idとして、アプリのスキーマURIを用います。多くの場合スキーマURIはアプリセルのURLです。
+* Personiumではclient_idとして、アプリのスキーマURIを用います。多くの場合スキーマURIはアプリCellのURLです。
 * Personiumではclient_secretとしてアプリ認証トークンを用います。
 * アプリ認証のための情報送信は必須ではありません。
 
@@ -41,22 +41,22 @@ sidebar_label: OAuth 2.0 トークンエンドポイント
 
 #### アクセストークンの発行
 
-p_target というパラメタの指定がないときはこのセルで有効なアクセストークン（セルローカルアクセストークン）を発行します。
+p_target というパラメタの指定がないときはこのCellで有効なアクセストークン（セルローカルアクセストークン）を発行します。
 
 #### トランスセルアクセストークンの発行
 
-p_target というパラメタで他のセルのURLを指定することで、他のセルにアクセスするためのトランスセルアクセストークンを発行します。
+p_target というパラメタで他のCellのURLを指定することで、他のCellにアクセスするためのトランスセルアクセストークンを発行します。
 
 
 ### その他のバリエーション
 
 #### クッキーの発行
 
-* p_cookie というパラメタをtrue値で指定することでこのセルでのみ有効なクッキーを発行します。
+* p_cookie というパラメタをtrue値で指定することでこのCellでのみ有効なクッキーを発行します。
 * このクッキーは単体ではアクセストークンの代わりになりませんが、同時に発行されるcookie_peerという文字列と共に用いることでアクセストークン同等の効果を持ちます。
-* このセル上のリソースをGETするさいにURLにcookie_peerというクエリパラメタでこの値をつけてアクセスすることで、同時に送られるクッキーと対応が取れているときのみ、アクセストークン送信と同様の扱います。
+* このCell上のリソースをGETするさいにURLにcookie_peerというクエリパラメタでこの値をつけてアクセスすることで、同時に送られるクッキーと対応が取れているときのみ、アクセストークン送信と同様の扱います。
 * これにより例えばHTMLの img video audio等のタグで非公開のメディアを許可されたユーザにのみ表示することなどが可能です。
-* 発行されるクッキーはこのセルでのみ有効なものであるため、他セルアクセスのためのトークン取得用パラメタであるp_target と併用することはできません。
+* 発行されるクッキーはこのCellでのみ有効なものであるため、他Cellアクセスのためのトークン取得用パラメタであるp_target と併用することはできません。
 
 ### 認証履歴の記録
 
@@ -101,11 +101,11 @@ POST
 |code|認可コード|String|(grant_type=authorization_codeの場合必須)|有効な認可コード|
 |refresh_token|リフレッシュトークン|String|(grant_type=refresh_tokenの場合必須)|有効なリフレッシュトークン|
 |id_token|IDトークン|JSON Web Token|(grant_type=urn&#58;x-personium:oidc:googleの場合必須)|有効なIDトークン|
-|p_target|発行ターゲット|String|×|任意の他者セルURL<br>指定した場合そのセル宛のトランスセルアクセストークンを発行|
+|p_target|発行ターゲット|String|×|任意の他者Cell URL<br>指定した場合そのCell宛のトランスセルアクセストークンを発行|
 |client_assertion_type|client_assertionのタイプ|String|×|RFC7522の定義値"urn:ietf:params:oauth:grant-type:saml2-bearer"のみ有効。このパラメタやclient_assertionの設定があるときはRFC7522の動作を優先的に行い、Authorizationヘッダの内容やclient_sercretの内容は参照せずにClient認証を行う。|
-|client_assertion|アプリ認証トークン|String|×|アプリセル等から発行されるアプリ認証トークン<br>client_assertion_typeとともに指定した場合アプリ認証済トークンを発行<br>このパラメタやclient_assertion_typeの設定があるときはRFC7522の動作を優先的に行う。（Authorizationヘッダの内容やclient_sercretの内容は参照しない。）|
-|client_id|アプリのスキーマURI|String|(grant_type=authorization_codeの場合必須)|多くの場合アプリセルURL<br>client_assertion, client_secretとともに有効値を指定した場合アプリ認証済トークンを発行。|
-|client_secret|アプリ認証トークン|String|×|アプリセル等から発行されるアプリ認証トークン<br>client_idとともに指定した場合アプリ認証済トークンを発行<br>同時にAuthorizationヘッダで同様情報が送信された場合、Authorizationヘッダの設定が優先される|
+|client_assertion|アプリ認証トークン|String|×|アプリCell等から発行されるアプリ認証トークン<br>client_assertion_typeとともに指定した場合アプリ認証済トークンを発行<br>このパラメタやclient_assertion_typeの設定があるときはRFC7522の動作を優先的に行う。（Authorizationヘッダの内容やclient_sercretの内容は参照しない。）|
+|client_id|アプリのスキーマURI|String|(grant_type=authorization_codeの場合必須)|多くの場合アプリCellURL<br>client_assertion, client_secretとともに有効値を指定した場合アプリ認証済トークンを発行。|
+|client_secret|アプリ認証トークン|String|×|アプリCell等から発行されるアプリ認証トークン<br>client_idとともに指定した場合アプリ認証済トークンを発行<br>同時にAuthorizationヘッダで同様情報が送信された場合、Authorizationヘッダの設定が優先される|
 |scope|要求scope|String|×|アプリが求めるscope情報をスペース区切りで指定|
 |p_owner|Unitユーザ昇格指定|String|×|trueのみ有効|
 |p_cookie|認証クッキー発行オプション<br>指定された場合は認証クッキーを発行する<br>p_targetが指定された場合は、本パラメタの指定は無視する|String|×|trueのみ有効|
@@ -138,7 +138,7 @@ Google発行のOpen ID Connect Id Tokenによるアカウント所有者認証
 grant_type=urn:x-personium:oidc:google&id_token=IDTOKEN
 ```
 
-トランスセルアクセストークンによる他セルユーザ認証
+トランスセルアクセストークンによる他Cellユーザ認証
 ```
 grant_type=urn:ietf:params:oauth:grant-type:saml2-bearer&assertion=WjzDmvJ...(省略)...4nHgo
 ```
@@ -213,7 +213,7 @@ grant_type=password&username=username&password=pass&p_cookie=true
 curl "https://cell1.unit1.example/__token" -X POST -i \
 -d 'grant_type=password&username=user1&password=pass'
 ```
-#### 他セルユーザ認証
+#### 他Cellユーザ認証
 ```sh
 curl "https://cell1.unit1.example/__token" -X POST -i \
 -d 'grant_type=urn:ietf:params:oauth:grant-type:saml2-bearer&assertion=WjzDmvJ...(省略)...4nHgo'
@@ -229,7 +229,7 @@ curl "https://cell1.unit1.example/__token" -X POST -i \
 -d 'grant_type=password&username=name1&password=pass&client_id=\
 https://app-cell1.unit1.example/&client_secret=WjzDmvJ...(省略)...4nHgo'
 ```
-#### 他セルユーザ認証 による他セル向けトランスセルアクセストークン発行
+#### 他Cellユーザ認証 による他Cell向けトランスセルアクセストークン発行
 ```sh
 curl "https://cell1.unit1.example/__token" -X POST -i \
 -d 'grant_type=urn:ietf:params:oauth:grant-type:saml2-bearer&assertion=\

@@ -17,7 +17,7 @@ $formatのクエリオプション有効値は下表の通り。
 |ある独自ODataサービスに固有のフォーマットを表すサービス特化型の値|IANA定義コンテンツ形式|
 
 ## cURLサンプル
-例：セル一覧をJSON形式で取得する場合:
+例：Cell一覧をJSON形式で取得する場合:
 ```sh
 curl "https://unit1.example/__ctl/Cell?\$format=json" -X GET -i -H 'Authorization: Bearer AA~PBDc...(省略)...FrTjA'
 ```

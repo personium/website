@@ -4,7 +4,7 @@ title: Personium Unitの percell 環境時の設定
 sidebar_label: Personium Unitの percell 環境時の設定
 ---
 
-PersoniumではセルにアクセスするURL形式として以下の２つの形式をサポートしています。  
+PersoniumではCellにアクセスするURL形式として以下の２つの形式をサポートしています。  
 
 ||アクセス形式|備考|
 |:--|:--|:--|

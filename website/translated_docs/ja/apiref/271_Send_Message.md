@@ -43,8 +43,8 @@ JSON
 |:--|:--|:--|:--|:--|
 |BoxBound|Boxと紐付けるか否か|true / false<br>デフォルト値はfalse|×|Boxに結びつける場合に本項目を「true」にしてスキーマ認証したトークンを送る|
 |InReplyTo|返信対象のメッセージID|桁数：32<br>null|×||
-|To|送信先セルURL|URL形式<br>null|※ 1|複数Cellに送信する場合はCSV形式で指定する<br>※1 ToまたはToRelationのどちらかは必須,<br>ToまたはToRelationで指定できる送信先セルURLの最大件数は1000件|
-|ToRelation|送信対象の関係名|桁数：1&#65374;128<br>文字種:半角英数字と-(半角ハイフン)と_(半角アンダーバー)と+(プラス)と:(コロン)<br>ただし、先頭文字に_(半角アンダーバー)と:(コロン)は指定不可<br>null|※ 1|※1 ToまたはToRelationのどちらかは必須<br>ToまたはToRelationで指定できる送信先セルURLの最大件数は1000件|
+|To|送信先Cell URL|URL形式<br>null|※ 1|複数Cellに送信する場合はCSV形式で指定する<br>※1 ToまたはToRelationのどちらかは必須,<br>ToまたはToRelationで指定できる送信先Cell URLの最大件数は1000件|
+|ToRelation|送信対象の関係名|桁数：1&#65374;128<br>文字種:半角英数字と-(半角ハイフン)と_(半角アンダーバー)と+(プラス)と:(コロン)<br>ただし、先頭文字に_(半角アンダーバー)と:(コロン)は指定不可<br>null|※ 1|※1 ToまたはToRelationのどちらかは必須<br>ToまたはToRelationで指定できる送信先Cell URLの最大件数は1000件|
 |Type|メッセージタイプ|message<br>request|×|省略時はmessageとして扱う|
 |Title|メッセージタイトル|桁数：256文字以下|×|省略時は空文字として扱う|
 |Body|メッセージ本文|桁数：64Kbyte以下|×|省略時は空文字として扱う|
@@ -62,9 +62,9 @@ Name または ClassUrlで指定したRelationと、TargetUrlで指定したCell
 |項目名|概要|有効値|必須|備考|
 |:--|:--|:--|:--|:--|
 |RequestType|リクエストの種別|relation.add<br>relation.remove|〇||
-|Name|リレーション名|桁数：1～128<br>文字種:半角英数字と-(半角ハイフン)と_(半角アンダーバー)と+(プラス)と:(コロン)<br>ただし、先頭文字に_(半角アンダーバー)と:(コロン)は指定不可|※1|※1 NameまたはClassUrlのどちらかは必須<br>Name指定時は以下のURLからの相対URLとみなす<br>BoxBoundがtrue：[対象BoxスキーマURL]\_\_relation/\_\_/<br>BoxBoundがfalse：[送信先セルURL]\_\_relation/\_\_/|
+|Name|リレーション名|桁数：1～128<br>文字種:半角英数字と-(半角ハイフン)と_(半角アンダーバー)と+(プラス)と:(コロン)<br>ただし、先頭文字に_(半角アンダーバー)と:(コロン)は指定不可|※1|※1 NameまたはClassUrlのどちらかは必須<br>Name指定時は以下のURLからの相対URLとみなす<br>BoxBoundがtrue：[対象BoxスキーマURL]\_\_relation/\_\_/<br>BoxBoundがfalse：[送信先Cell URL]\_\_relation/\_\_/|
 |ClassUrl|リレーションクラスURL|リレーションクラスURL<br>詳細は[用語集](../user_guide/008_Glossary.md#anc_r)を参照|※1|※1 NameまたはClassUrlのどちらかは必須|
-|TargetUrl|関係を結ぶセルURL|URL形式|〇||
+|TargetUrl|関係を結ぶCell URL|URL形式|〇||
 
 ##### Role add/remove
 RequestType : role.add / role.remove  
@@ -73,9 +73,9 @@ Name または ClassUrlで指定したRoleと、TargetUrlで指定したCellの�
 |項目名|概要|有効値|必須|備考|
 |:--|:--|:--|:--|:--|
 |RequestType|リクエストの種別|role.add<br>role.remove|〇||
-|Name|ロール名|桁数：1～128<br>文字種:半角英数字と-(半角ハイフン)と_(半角アンダーバー)<br>ただし、先頭文字に-(半角ハイフン)と_(半角アンダーバー)は指定不可|※1|※1 NameまたはClassUrlのどちらかは必須<br>Name指定時は以下のURLからの相対URLとみなす<br>BoxBoundがtrue：[対象BoxスキーマURL]\_\_role/\_\_/<br>BoxBoundがfalse：[送信先セルURL]\_\_role/\_\_/|
+|Name|ロール名|桁数：1～128<br>文字種:半角英数字と-(半角ハイフン)と_(半角アンダーバー)<br>ただし、先頭文字に-(半角ハイフン)と_(半角アンダーバー)は指定不可|※1|※1 NameまたはClassUrlのどちらかは必須<br>Name指定時は以下のURLからの相対URLとみなす<br>BoxBoundがtrue：[対象BoxスキーマURL]\_\_role/\_\_/<br>BoxBoundがfalse：[送信先Cell URL]\_\_role/\_\_/|
 |ClassUrl|ロールクラスURL|ロールクラスURL<br>詳細は[用語集](../user_guide/008_Glossary.md#anc_r)を参照|※1|※1 NameまたはClassUrlのどちらかは必須|
-|TargetUrl|関係を結ぶセルURL|URL形式|〇||
+|TargetUrl|関係を結ぶCell URL|URL形式|〇||
 
 ##### Rule add/remove
 RequestType : rule.add / rule.remove  

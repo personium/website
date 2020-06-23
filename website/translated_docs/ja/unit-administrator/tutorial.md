@@ -52,7 +52,7 @@ javascriptを用いたサンプルソースが公開されていますので、�
 
 |キーワード<br>|概要<br>|
 |:--|:--|
-|Unit<br>|「Personium」のサーバ内で、複数のセルから構成されるデータ領域。<br>完全修飾ドメイン名（UnitFQDN）を持ち、絶対ドメイン名として参照される。<br>|
+|Unit<br>|「Personium」のサーバ内で、複数のCellから構成されるデータ領域。<br>完全修飾ドメイン名（UnitFQDN）を持ち、絶対ドメイン名として参照される。<br>|
 |Cell<br>|データ主体ごとのData Strore。個人で使う場合はPDS(Personal Data Store)となる。<br>「Personium」では、データ主体という概念を人のみでなく組織やモノなどにも拡張したモデル化を行っているため、組織やモノのデータストアとしても使うことが可能。<br>（例、私のCell, あなたのCell, ○○会社のCell, ○○部のCell, 私の車のCell）<br>|
 |Box<br>|アプリケーションに用いるデータを格納する領域。<br>自身もWebDAVコレクションの一つである。一意の名前とスキーマURLを持つ。<br>Cellは、Box未作成でも初期状態で1つのBox（メインBox） を持ち、削除は不可。<br>|
 
@@ -415,7 +415,7 @@ HTTP/1.1 204 No Content
 すべてのrole(役割)に対して設定('root'指定)することも、細かくRole別にアクセス権を設定する事も可能です。
 前項のRoleとAccountの紐付けに従い、Account(User)のアクセス権限が決定します。
 
-セルレベルアクセス制御設定APIを使用します。
+Cellレベルアクセス制御設定APIを使用します。
 
 ```sh
 curl "https://{Personium_FQDN}/usercell" \

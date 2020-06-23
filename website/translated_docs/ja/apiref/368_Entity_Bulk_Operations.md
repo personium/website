@@ -26,7 +26,7 @@ ODataEntityに対して、一覧取得や一件取得、登録、更新、削除
 ```
 |パス|概要|
 |:--|:--|
-|{CellName}|セル名|
+|{CellName}|Cell名|
 |{BoxName}|Box名|
 |{ODataCollecitonName}|コレクション名|
 ### メソッド

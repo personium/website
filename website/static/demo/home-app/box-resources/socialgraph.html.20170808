@@ -45,7 +45,7 @@
                                 <div id="dvExtCellList"></div>
                                 <!--<div id="dvExtCell" class="toggleButton" style="margin-bottom: 10px;">
                                   <a class="list-group-item toggle" id="extcellToggle">
-                                    外部セル
+                                    外部Cell
                                   </a>
                                 </div>
                                 <nav class="extcellMenu">

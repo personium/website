@@ -16,7 +16,7 @@ Unitユーザのみ可能
 ```
 |Path|概要|
 |:--|:--|
-|{CellName}|セル名|
+|{CellName}|Cell名|
 
 ### メソッド
 PROPPATCH

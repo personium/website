@@ -27,8 +27,8 @@ GET
 |項目名|概要|書式|必須|有効値|
 |:--|:--|:--|:--|:--|
 |response_type|応答タイプ|String|○|token, code, id_token(scope=openid必須)|
-|client_id|アプリセル URL|String|○|スキーマ認証元のアプリセルURL|
-|redirect_uri|クライアントのリダイレクトエンドポイントURL|String|○|アプリセルのデフォルトBOX配下に登録されたリダイレクトスクリプトのURL<br>application/x-www-form-urlencodedでフォーマットされたクエリパラメータを含める事ができる<br>フラグメントを含める事はできない<br>有効桁長:512byte|
+|client_id|アプリCell URL|String|○|スキーマ認証元のアプリCellURL|
+|redirect_uri|クライアントのリダイレクトエンドポイントURL|String|○|アプリCellのデフォルトBOX配下に登録されたリダイレクトスクリプトのURL<br>application/x-www-form-urlencodedでフォーマットされたクエリパラメータを含める事ができる<br>フラグメントを含める事はできない<br>有効桁長:512byte|
 |state|リクエストとコールバックの間で状態を維持するために使用するランダムな値|String|×|ランダムな値<br>有効桁長:512byte|
 |scope|要求するアクセス範囲|String|×|Personiumでは"openid"等の値をスペース区切りで指定|
 |expires_in|アクセストークンの有効期限（秒）|Int<br>1～3600|×|発行されるアクセストークンの有効期限を指定<br>デフォルトは3600（1時間）<br>※response_typeがtoken以外の場合は、本パラメタの指定は無視する|
@@ -41,7 +41,7 @@ GET
 ただし、リクエストパラメータが不正な場合や、送信Cookieの値によってはリダイレクトエンドポイントにリダイレクトします。
 
 ### HTMLレスポンス
-セルやUnitに設定された認証フォームまたはパスワード変更フォーム表示のためのHTMLを返却します。 設定がない場合はデフォルトhtmlが返ります。  
+CellやUnitに設定された認証フォームまたはパスワード変更フォーム表示のためのHTMLを返却します。 設定がない場合はデフォルトhtmlが返ります。  
 
 #### HTML設定方法
 [Unitの設定](../server-operator/unit_config_list.md)または[対象Cellのプロパティ設定](./291_Cell_Change_Property.md)が必要。2つを同時に設定した場合、対象Cellのプロパティ設定が優先される。  
@@ -77,7 +77,7 @@ URLに指定可能なスキームは"http","https","personium-localunit","person
 
 
 ### パラメータチェックエラー（client_id、redirect_uri）
-「client_id、redirect_uriが未指定」「client_id、redirect_uriがURL形式ではない」「client_idとredirect_uriのセルが異なる」の場合
+「client_id、redirect_uriが未指定」「client_id、redirect_uriがURL形式ではない」「client_idとredirect_uriのCellが異なる」の場合
 #### ステータスコード
 303  
 ブラウザはシステムのエラーページにリダイレクトされる。
@@ -88,7 +88,7 @@ URLに指定可能なスキームは"http","https","personium-localunit","person
 #### URLパラメータ
 |項目名|概要|備考|
 |:--|:--|:--|
-|error_page_uri|Redirect URL|システムのエラーページ「セルのURL + __html/error」|
+|error_page_uri|Redirect URL|システムのエラーページ「CellのURL + __html/error」|
 |code|[Personiumのメッセージコード](004_Error_Messages.md)||
 
 ### パラメータチェックエラー（上記以外）
@@ -153,7 +153,7 @@ redirect_uriに、「URLパラメータ」で示すフラグメントが格納�
 |state|リクエスト時に設定したstateの値|リクエストとコールバックの間で状態を維持するために使用するランダムな値|
 |last_authenticated|前回認証日時|前回の認証日時（long型のUNIX時間）<br>初回認証時はnull<br>※パスワード認証の場合のみ返却する|
 |failed_count|認証失敗回数|前回認証時からのパスワード認証に連続で失敗した回数<br>※パスワード認証の場合のみ返却する|
-|box_not_installed|Box未インストールフラグ|アプリセルURLをスキーマに持つBoxが作成されていない場合のみtrueを返却する|
+|box_not_installed|Box未インストールフラグ|アプリCellURLをスキーマに持つBoxが作成されていない場合のみtrueを返却する|
 
 ### 認可処理成功（認可コード）
 認可処理に成功 かつ リクエストのresponse_typeにcodeを指定した場合
@@ -172,7 +172,7 @@ redirect_uriに、「URLパラメータ」で示すクエリが格納される�
 |state|リクエスト時に設定したstateの値|リクエストとコールバックの間で状態を維持するために使用するランダムな値|
 |last_authenticated|前回認証日時|前回の認証日時（long型のUNIX時間）<br>初回認証時はnull<br>※パスワード認証の場合のみ返却する|
 |failed_count|認証失敗回数|前回認証時からのパスワード認証に連続で失敗した回数<br>※パスワード認証の場合のみ返却する|
-|box_not_installed|Box未インストールフラグ|アプリセルURLをスキーマに持つBoxが作成されていない場合のみtrueを返却する|
+|box_not_installed|Box未インストールフラグ|アプリCellURLをスキーマに持つBoxが作成されていない場合のみtrueを返却する|
 
 ### 認可処理成功（IDトークン発行）
 認可処理に成功 かつ リクエストのresponse_typeにid_tokenを指定した場合
@@ -193,14 +193,14 @@ redirect_uriに、「URLパラメータ」で示すフラグメントが格納�
 |state|リクエスト時に設定したstateの値|リクエストとコールバックの間で状態を維持するために使用するランダムな値|
 |last_authenticated|前回認証日時|前回の認証日時（long型のUNIX時間）<br>初回認証時はnull<br>※パスワード認証の場合のみ返却する|
 |failed_count|認証失敗回数|前回認証時からのパスワード認証に連続で失敗した回数<br>※パスワード認証の場合のみ返却する|
-|box_not_installed|Box未インストールフラグ|アプリセルURLをスキーマに持つBoxが作成されていない場合のみtrueを返却する|
+|box_not_installed|Box未インストールフラグ|アプリCellURLをスキーマに持つBoxが作成されていない場合のみtrueを返却する|
 
 ### 認証失敗
 認証に失敗した場合（パスワード不一致、アカウントロック中など）
 
 #### ステータスコード
 303  
-ブラウザは認可エンドポイント（セルのURL + \_\_authz）に再度リダイレクトされる。  
+ブラウザは認可エンドポイント（CellのURL + \_\_authz）に再度リダイレクトされる。  
 認可エンドポイントに、「URLパラメータ」で示すクエリが格納される。
 ```
 {authorization_endpoint_url}?response_type={response_type}&redirect_uri={redirect_uri}&client_id={client_id}&state={state}&scope={scope}
@@ -211,7 +211,7 @@ redirect_uriに、「URLパラメータ」で示すフラグメントが格納�
 #### URLパラメータ
 |項目名|概要|備考|
 |:--|:--|:--|
-|authorization_endpoint_url|認可エンドポイントのURL（セルのURL + __authz）||
+|authorization_endpoint_url|認可エンドポイントのURL（CellのURL + __authz）||
 |response_type|リクエスト時に設定したresponse_typeの値||
 |client_id|リクエスト時に設定したclient_idの値||
 |redirect_uri|リクエスト時に設定したredirect_uriの値||
@@ -234,7 +234,7 @@ redirect_uriに、「URLパラメータ」で示すフラグメントが格納�
 |server_error|サーバエラー||
 
 ### パラメータチェックエラー（client_id、redirect_uri）
-「client_id、redirect_uriが未指定」「client_id、redirect_uriがURL形式ではない」「client_idとredirect_uriのセルが異なる」の場合  
+「client_id、redirect_uriが未指定」「client_id、redirect_uriがURL形式ではない」「client_idとredirect_uriのCellが異なる」の場合  
 「レスポンス（認証フォームリクエスト）」の「パラメータチェックエラー（client_id、redirect_uri）」と同様。
 
 ### パラメータチェックエラー（上記以外）

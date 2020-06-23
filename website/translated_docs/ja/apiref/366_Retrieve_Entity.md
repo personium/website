@@ -27,7 +27,7 @@ read
 ```
 |パス|概要|
 |:--|:--|
-|{CellName}|セル名|
+|{CellName}|Cell名|
 |{BoxName}|Box名|
 |{ODataCollecitonName}|コレクション名|
 |{EntityTypeName}|EntityType名|

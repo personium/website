@@ -43,7 +43,7 @@ Personiumを運用する上でデフォルトから変更を必須としてい�
 |x509.crt|X509証明書を配置したパス|PEM形式証明書のフルパス|/opt/x509/localhost.crt|core, engine|<br>|
 |x509.root|X509ルート証明書を配置したパス|信頼すべきPEM形式ルート証明書のフルパス<br>スペース区切りで複数指定可能|/opt/x509/personium_ca.crt|core, engine|何も指定しなければ(キーの定義もしない)、Personiumプロジェクト公式CAの証明書は自動的に信頼されます。|
 |security.secret16|トークンとファイル生成時の暗号化キー|16桁の16進文字列|secret16abcdefgh|core, engine|<br>|
-|unitUser.issuers|Unitユーザトークン発⾏者として認定する文字列<br>セルURLを指定することでそのセルをUnitユーザトークン発行者として指定できます|URL<br>スペース区切りで複数指定可能|http&#58;//localhost:8080/UnitUserCell/ |core|<br>|
+|unitUser.issuers|Unitユーザトークン発⾏者として認定する文字列<br>Cell URLを指定することでそのCellをUnitユーザトークン発行者として指定できます|URL<br>スペース区切りで複数指定可能|http&#58;//localhost:8080/UnitUserCell/ |core|<br>|
 
 
 ### 変更任意設定
@@ -61,7 +61,7 @@ Personiumを運用する上でデフォルトからの変更を任意として�
 |unitScheme|Unitのスキーム設定|"http" または "https"|https|core|開発用途にhttpを設定することも可能ですが、運用時には必ずhttpsを設定してください。|
 |unitPort|Unitのポート番号|ポート番号||core|v1.6.0以降。UnitURLが "https&#58;//p-host:8080/" の場合、unitPortは8080になります。UnitURLが "https&#58;//p-host/" の場合、unitPortは設定しません。|
 |masterToken|マスタートークン|トークン文字列||core, engine|デフォルトは無効です。開発用途などで設定することもできますが、運用時には設定しないでください。|
-|pathBasedCellUrl.enabled|セルにアクセスするURL形式|true:path based cell url<br>false:per cell fqdn url|v1.7.5以前:true<br>v1.7.6以降:false|core|v1.7.0以降|
+|pathBasedCellUrl.enabled|CellにアクセスするURL形式|true:path based cell url<br>false:per cell fqdn url|v1.7.5以前:true<br>v1.7.6以降:false|core|v1.7.0以降|
 
 #### Cell
 |キー|説明|値|デフォルト値|使用コンポーネント|備考|
@@ -89,7 +89,7 @@ Personiumを運用する上でデフォルトからの変更を任意として�
 #### アカウント
 |キー|説明|値|デフォルト値|使用コンポーネント|備考|
 |:--|:--|:--|:--|:--|:--|
-|account.lastauthenticated.enabled|パスワード認証成功時に、Accountの最終ログイン時刻を更新するか|true:更新する<br>false:更新しない|true|core|～v1.7.4<br>v1.7.5で廃止<br>最終更新日時を記録すると認証処理内部で登録処理が⾏われるため、書き込みの多重ロックの影響を受けます（ロック範囲はセル単位）。<br>また書き込みが発生するため性能の低下が発生します。<br>Basic認証はこの設定で最終ログイン日時の記録は行われません。|
+|account.lastauthenticated.enabled|パスワード認証成功時に、Accountの最終ログイン時刻を更新するか|true:更新する<br>false:更新しない|true|core|～v1.7.4<br>v1.7.5で廃止<br>最終更新日時を記録すると認証処理内部で登録処理が⾏われるため、書き込みの多重ロックの影響を受けます（ロック範囲はCell単位）。<br>また書き込みが発生するため性能の低下が発生します。<br>Basic認証はこの設定で最終ログイン日時の記録は行われません。|
 
 #### WebDAV
 |キー|説明|値|デフォルト値|使用コンポーネント|備考|
@@ -120,8 +120,8 @@ Personiumを運用する上でデフォルトからの変更を任意として�
 |lock.accountlock.time|アカウントロックの有効期限(sec)<br>認証失敗時にそのアカウントの認証をロックし、認証を失敗させる期間|Int|1|core|～v1.7.4<br>v1.7.5で廃止|
 |lock.retry.times|ロック取得時のリトライ回数|Int|50|core|<br>|
 |lock.retry.interval|ロック取得リトライ時の間隔(msec)|Long|100|core|<br>|
-|lock.cell.retry.times|セルロック取得時のリトライ回数|Int|50|core|<br>|
-|lock.cell.retry.interval|セルロック取得リトライ時の間隔(msec)|Long|100|core|<br>|
+|lock.cell.retry.times|Cellロック取得時のリトライ回数|Int|50|core|<br>|
+|lock.cell.retry.interval|Cellロック取得リトライ時の間隔(msec)|Long|100|core|<br>|
 |lock.memcached.host|ロックをmemcachedに保持する際のmemcachedホスト名|ホスト名|localhost|core|<br>|
 |lock.memcached.port|ロックをmemcachedに保持する際のmemcachedポート番号|ポート番号|11211|core|<br>|
 |lock.memcached.opTimeout|ロック用memcached operationタイムアウト値(msec)|Long|12000|core|<br>|

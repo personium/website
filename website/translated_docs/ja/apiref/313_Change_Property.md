@@ -15,7 +15,7 @@ write-properties
 ```
 |パス|概要|備考|
 |:--|:--|:--|
-|{CellName}|セル名||
+|{CellName}|Cell名||
 |{BoxName}|Box名||
 |{ResourcePath}|リソースへのパス|有効値 桁数:1&#65374;256|
 ### メソッド

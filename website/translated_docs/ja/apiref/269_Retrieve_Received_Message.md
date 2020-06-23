@@ -93,8 +93,8 @@ GET
 |{2}|__id|string|受信メッセージID<br>UUIDで「b5d008e9092f489c8d3c574a768afc33」のような32文字の文字列を返却|
 |{2}|_Box.Name|string|関係対象のBox名|
 |{2}|InReplyTo|string|受信元メッセージID<br>UUIDで「b5d008e9092f489c8d3c574a768afc33」のような32文字の文字列を返却|
-|{2}|From|string|送信元セルURL|
-|{2}|MulticastTo|string|受信先セルURL<br>複数セルが送信先の場合にCSV形式でセルのURLを返却|
+|{2}|From|string|送信元Cell URL|
+|{2}|MulticastTo|string|受信先Cell URL<br>複数Cellが送信先の場合にCSV形式でCellのURLを返却|
 |{2}|Type|string|メッセージタイプ<br>メッセージ：message<br>依頼：request|
 |{2}|Title|string|メッセージタイトル|
 |{2}|Body|string|メッセージ本文|

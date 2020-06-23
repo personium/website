@@ -28,7 +28,7 @@ V1.0系での制限
 
 |パス|概要|備考|
 |:--|:--|:--|
-|{CellName}|セル名||
+|{CellName}|Cell名||
 |{BoxName}|Box名||
 |{CollectionName}|コレクション名|有効値 桁数:1&#65374;256|
 

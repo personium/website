@@ -14,7 +14,7 @@ sidebar_label: 用語集
 （例：Read:読込許可、Write:編集許可、Read/Write:読込/編集許可）
 
 ### Account
-<font size=1>[Personium]</font> セル制御オブジェクトの一つ。そのセルでのユーザ認証手段を表し１セルに複数の登録が可能。基本タイプ（デフォルトで選択される）ではアカウント名やパスワードといった情報によって構成される。またプラグインを導入することでOpenID Connectをはじめとする他の認証手段に対応させることも可能。個人のセルで複数の認証手段を登録するのに用いてもよいし、組織のセルで組織構成員を認証するのに用いてもよい。
+<font size=1>[Personium]</font> Cell制御オブジェクトの一つ。そのCellでのユーザ認証手段を表し１Cellに複数の登録が可能。基本タイプ（デフォルトで選択される）ではアカウント名やパスワードといった情報によって構成される。またプラグインを導入することでOpenID Connectをはじめとする他の認証手段に対応させることも可能。個人のCellで複数の認証手段を登録するのに用いてもよいし、組織のCellで組織構成員を認証するのに用いてもよい。
 
 ### Association
 <font size=1>[OData]</font> 2つ以上のEntityType（RDBにおけるテーブル）間の関係性を示す。1対のAssociationEndとその間の$linksによって構成される。  
@@ -56,7 +56,7 @@ sidebar_label: 用語集
 
 
 ### Cell制御オブジェクト
-<font size=1>[Personium]</font> セルが持つ機能を個別に定義する定義体。Role,   Account, Box, ExtCell, ExtRoleなどがある。
+<font size=1>[Personium]</font> Cellが持つ機能を個別に定義する定義体。Role,   Account, Box, ExtCell, ExtRoleなどがある。
 
 
 ### Cell レベル ACL
@@ -64,7 +64,7 @@ sidebar_label: 用語集
 
 
 ### Cell Profile
-<font size=1>[Personium]</font> Personiumセルの情報を格納する定義体。ホームアプリケーション等のアプリケーションでセル名、イメージ、 そのセルの情報などを表示する項目。
+<font size=1>[Personium]</font> PersoniumCellの情報を格納する定義体。ホームアプリケーション等のアプリケーションでCell名、イメージ、 そのCellの情報などを表示する項目。
 
 
 ### Collection （コレクション）
@@ -120,11 +120,11 @@ sidebar_label: 用語集
 
 
 ### External Cell
-<font size=1>[Personium]</font> 外部セル。セル制御オブジェクトの1つ(ExtCell)。あるセルから見たとき外にある他のセルをURLで管理する。URLで扱うため他のユニットのセルを外部セルとして登録することができる。
+<font size=1>[Personium]</font> 外部Cell。Cell制御オブジェクトの1つ(ExtCell)。あるCellから見たとき外にある他のCellをURLで管理する。URLで扱うため他のユニットのCellを外部Cellとして登録することができる。
 
 
 ### External Role
-<font size=1>[Personium]</font> 外部ロール。セル制御オブジェクトの1つ(ExtRole)。特定の関係にある外部セル群において特定の役割（Role）を付与された利用者主体を表す。例えば、「所属団体（という関係にあるCell）の管理者（というロール）」や「商品購入顧客（という関係にあるCell）のかかりつけ医（というロール）」などをExternal Roleとして登録し、これとロールを紐づけることで間接的な関係にある他者に対してのデータ開示等操作を許すような使い方が可能。
+<font size=1>[Personium]</font> 外部ロール。Cell制御オブジェクトの1つ(ExtRole)。特定の関係にある外部Cell群において特定の役割（Role）を付与された利用者主体を表す。例えば、「所属団体（という関係にあるCell）の管理者（というロール）」や「商品購入顧客（という関係にあるCell）のかかりつけ医（というロール）」などをExternal Roleとして登録し、これとロールを紐づけることで間接的な関係にある他者に対してのデータ開示等操作を許すような使い方が可能。
 
 
 ## <a name="anc_f"> F</a>
@@ -157,12 +157,12 @@ sidebar_label: 用語集
 
 ## <a name="anc_m"> M</a>
 ### Main Box　（メインBox）
-<font size=1>[Personium]</font> セル作成時にデフォルトで作成される、”\__”(アンダーバー2つ)と名づけられたBox。動作は通常のBoxと同様だが、削除は不可。  
+<font size=1>[Personium]</font> Cell作成時にデフォルトで作成される、”\__”(アンダーバー2つ)と名づけられたBox。動作は通常のBoxと同様だが、削除は不可。  
 アプリケーションデータを保管する目的以外にも、そのCellの固有情報（json形式を用いる）の格納に使われる。
 
 
 ### Message
-<font size=1>[Personium]</font> Personiumにおいて、セルの間でメッセージを送受信する機能。ユーザ任意のメッセージの送受信およびセル間の関係性($links)の発行が可能。
+<font size=1>[Personium]</font> Personiumにおいて、Cellの間でメッセージを送受信する機能。ユーザ任意のメッセージの送受信およびCell間の関係性($links)の発行が可能。
 
 
 ### Multiplicity
@@ -203,7 +203,7 @@ PersoniumではACLの設定によって定義される。詳細は[アクセス�
 
 
 ### ReceivedMessage
-<font size=1>[Personium]</font> 特定のセルからの、Relation発行リクエストやメッセージを受信する定義体。
+<font size=1>[Personium]</font> 特定のCellからの、Relation発行リクエストやメッセージを受信する定義体。
 
 
 ### Refreshトークン
@@ -215,8 +215,8 @@ PersoniumではACLの設定によって定義される。詳細は[アクセス�
 
 
 ### Relation
-<font size=1>[Personium]</font> 自身（自セル）と他者（外部セル）との関係を示すセル制御オブジェクト。セル制御オブジェクトRelationとRoleをリンクすることにより、特定の関係にある他者セルからのアクセス者に一括してロールを付与することができる。 自身から見た他者への関係という一方的な関係性を独立して定義するモデルである点は注意が必要。具体的には、原則自セルのRelation登録や外部セルへの紐づけは相手の同意なく行うことができるため、
-例えば「親子」という相互的な関係を表現する際は、親のセルが外部セルとして登録する子のセルに対して、親セルの中で「私の子」というRelationオブジェクトを登録して紐づけることとあわせて、子のセルが外部セルとして登録する親のセルに対して、子セルの中で「私の親」という逆の意味を持つRelationオブジェクトを登録して紐づけることが望ましい。「友人」といった対称な関係は同一の意味を持つRelationオブジェクトを双方のセルで登録のうえ、相互の外部セルにそれを紐づけることで表現する。「ファン」のような一方的な関係であれば、片方のセルが相手に特段断ることなく相手外部セルと紐づけて管理すればよい。
+<font size=1>[Personium]</font> 自身（自Cell）と他者（外部Cell）との関係を示すCell制御オブジェクト。Cell制御オブジェクトRelationとRoleをリンクすることにより、特定の関係にある他者Cellからのアクセス者に一括してロールを付与することができる。 自身から見た他者への関係という一方的な関係性を独立して定義するモデルである点は注意が必要。具体的には、原則自CellのRelation登録や外部Cellへの紐づけは相手の同意なく行うことができるため、
+例えば「親子」という相互的な関係を表現する際は、親のCellが外部Cellとして登録する子のCellに対して、親Cellの中で「私の子」というRelationオブジェクトを登録して紐づけることとあわせて、子のCellが外部Cellとして登録する親のCellに対して、子Cellの中で「私の親」という逆の意味を持つRelationオブジェクトを登録して紐づけることが望ましい。「友人」といった対称な関係は同一の意味を持つRelationオブジェクトを双方のCellで登録のうえ、相互の外部Cellにそれを紐づけることで表現する。「ファン」のような一方的な関係であれば、片方のCellが相手に特段断ることなく相手外部Cellと紐づけて管理すればよい。
 
 
 ### Relation クラス URL
@@ -239,7 +239,7 @@ ${Cell URL}/\__relation/${BoxName}/${RelationName}
 
 
 ### Role
-<font size=1>[Personium]</font> セル制御オブジェクトの1つ。そのCellの中で有効な「役割」をあらわす。（例：administrator、teacher、student）  
+<font size=1>[Personium]</font> Cell制御オブジェクトの1つ。そのCellの中で有効な「役割」をあらわす。（例：administrator、teacher、student）  
 どのアカウント(ユーザ)が、そのCellにアクセスすることができるかを指定できるようになるので、Cellのアカウント所有権を規定するアクセス権限の異なった設定を持つことができる。  
 
 ### Role クラス URL
@@ -256,7 +256,7 @@ ${Cell URL}/\__role/${BoxName}/${RoleName}
 <font size=1>[OAuth2.0]</font> Resource Owner Password Credentials (リソースオーナーパスワードクレデンシャル)の略称。[OAuth2.0](http://tools.ietf.org/pdf/rfc6749.pdf)において規定された認可プロセスの1つ。詳細は[外部サイト](http://openid-foundation-japan.github.io/draft-ietf-oauth-v2-draft22.ja.html#anchor7)参照。ID/PWを用いる、Personiumでアクセストークンを取得するための標準的な認証方法のひとつ。
 
 ### Rule
-<font size=1>[Personium]</font> セル制御オブジェクトの1つ。そのCellの中で起きたイベントに対してActionを実行させることを可能とする。あるエンティティに書込みがあったときにログを出力するとか、メッセージを受信したときに、自動で承認を行うといったことが可能となる。
+<font size=1>[Personium]</font> Cell制御オブジェクトの1つ。そのCellの中で起きたイベントに対してActionを実行させることを可能とする。あるエンティティに書込みがあったときにログを出力するとか、メッセージを受信したときに、自動で承認を行うといったことが可能となる。
 
 
 ## <a name="anc_s"> S</a>
@@ -269,7 +269,7 @@ ${Cell URL}/\__role/${BoxName}/${RoleName}
 
 
 ### SentMessage
-<font size=1>[Personium]</font> 目的のセルに対しRelation設定承認を得るためのメッセージや通常のメッセージを送信する定義体。
+<font size=1>[Personium]</font> 目的のCellに対しRelation設定承認を得るためのメッセージや通常のメッセージを送信する定義体。
 
 
 ### Service Collection (サービスコレクション)
@@ -290,8 +290,8 @@ ${Cell URL}/\__role/${BoxName}/${RoleName}
 ### Token (トークン)
 <font size=1>[一般]</font> 主にユーザ認証に用いられるランダムな文字列。Personiumでは、格納したデータやリソースにアクセスする際に用いられる。クライアントがリクエストするcURL内に記載して使用する。  
 Personiumでは以下の種類:があり、発行から1時間で変更される。  
-(1)セルローカルトークン：認証されたセル内のリソースにアクセスする際に使用  
-(2)トランスセルトークン：他のセルに認証されたセル内のリソースにアクセスする際に使用  
+(1)セルローカルトークン：認証されたCell内のリソースにアクセスする際に使用  
+(2)トランスセルトークン：他のCellに認証されたCell内のリソースにアクセスする際に使用  
 
 
 
@@ -305,11 +305,11 @@ Personiumでは以下の種類:があり、発行から1時間で変更される
 
 ## <a name="anc_u"> U</a>
 ### Unit
-<font size=1>[Personium]</font> 複数のセルをホストするサーバ。完全修飾ドメイン名（UnitFQDN）を持ち、絶対ドメイン名として参照される。
+<font size=1>[Personium]</font> 複数のCellをホストするサーバ。完全修飾ドメイン名（UnitFQDN）を持ち、絶対ドメイン名として参照される。
 
 
 ### Unit制御オブジェクト
-<font size=1>[Personium]</font> Unitユーザ（管理者）として、セルの作成や管理をするためのオブジェクト群。
+<font size=1>[Personium]</font> Unitユーザ（管理者）として、Cellの作成や管理をするためのオブジェクト群。
 
 
 ### Unit User

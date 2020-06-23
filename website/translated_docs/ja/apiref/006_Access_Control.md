@@ -29,12 +29,12 @@ PersoniumV1系では、以下のような制限事項がある。
 
 ### 対象
 PersoniumのACL設定の対象はリソースであり、各リソースのURLへのACLメソッドで設定を行う。  
-セルのパスの場合 セルレベルACL となり、Box配下のパスの場合 BoxレベルACL となる。  
+Cellのパスの場合 CellレベルACL となり、Box配下のパスの場合 BoxレベルACL となる。  
 この２つは設定出来るPrivilege（権限）が異なり、互いに影響することは無い。  
 
 ||内容|対象のリソース|
 |:--|:--|:--|
-|セルレベルACL|セルへの設定や、セル制御オブジェクトのCRUDを制御する|セル|
+|CellレベルACL|Cellへの設定や、Cell制御オブジェクトのCRUDを制御する|Cell|
 |BoxレベルACL|Box配下のリソースへのCRUDを制御する|Box、WebDAVコレクション、ODataコレクション、Serviceコレクション、Streamコレクション<br>WebDAVコレクション配下のディレクトリ・ファイル|
 
 ## ace
@@ -80,7 +80,7 @@ privilege:all
 対象となるアクセス主体にロールを定義する場合は、href要素で囲んだ上で、ロールリソースURLを設定する。  
 ロールリソースについての仕様は ロール発行を参照。  
 
-なお、設定出来るロールリソースURLはACL設定対象のセルURLと異なるロールリソースURLを指定することは出来ない。  
+なお、設定出来るロールリソースURLはACL設定対象のCell URLと異なるロールリソースURLを指定することは出来ない。  
 
 ##### 設定例
 Principalに設定するロールリソースURLを全て記述する  
@@ -144,18 +144,18 @@ acl要素のxml:base属性にBoxまでのロールリソースURLを記述する
 
 #### PROPFINDでの出力
 ACL設定をPROPFINDで出力した際、xml:base属性は以下の様に出力される。
-* セルへのPROPFINDの場合、メインBoxのURL
+* CellへのPROPFINDの場合、メインBoxのURL
 * Box配下へのPROPFINDの場合、そのBoxまでのURL
 
 ### grant/Privilege
 権限はPersoniumが定義した要素で設定し、grant要素内のPrivilege要素に囲んで設定する。  
 また、grant要素の中にはPrivilege要素を複数指定することが出来る。  
 
-#### セルレベルACL Privilege
-設定したセルに対して、セル制御オブジェクトの実行権限やメソッドの実行権限を指定する。  
+#### CellレベルACL Privilege
+設定したCellに対して、Cell制御オブジェクトの実行権限やメソッドの実行権限を指定する。  
 上位に位置する権限が設定されている場合、下位に属する権限を有する。(例:messageは、message-readの権限も有する)  
 
-|権限名|対象セル制御オブジェクト|上位の権限名|実行できるメソッド|備考|
+|権限名|対象Cell制御オブジェクト|上位の権限名|実行できるメソッド|備考|
 |:--|:--|:--|:--|:--|
 |root|以下の全ての権限を有する|-|全て||
 |auth|Account,Role,ExtRole|root|PUT,POST,DELETE,GET,OPTIONS||
@@ -216,7 +216,7 @@ ACL設定をPROPFINDで出力した際、xml:base属性は以下の様に出力�
 BoxレベルPrivilegeは基本的にWebDAV ACLに沿って定義されている。  
 上位に位置する権限が設定されている場合、下位に属する権限を有する。(例：readは、read-propertiesの権限も有する)  
 
-|権限名|対象セル制御オブジェクト|上位の権限名|実行できるメソッド|
+|権限名|対象Cell制御オブジェクト|上位の権限名|実行できるメソッド|
 |:--|:--|:--|:--|
 |all|以下の全ての権限を有する|p:root|全て|
 |read|読み出し権限を有する。read-aclは含まない。|all|GET,OPTIONS|
@@ -263,7 +263,7 @@ MOVEは、移動元コレクションのunbind権限と移動先コレクショ�
 ```
 
 ## ACLの継承
-BoxレベルACLの設定は、アクセスしたリソースの親（上位のディレクトリ）の設定をセルまで遡って適用される。  
+BoxレベルACLの設定は、アクセスしたリソースの親（上位のディレクトリ）の設定をCellまで遡って適用される。  
 アクセス主体に対するACL設定は、親の設定が追加される形で継承される。  
 よって、ACLの設定時には以下の点に注意が必要となる。  
 * 親にall等の強い権限を設定している場合、子に制限をかけても無効となる
@@ -273,7 +273,7 @@ BoxレベルACLの設定は、アクセスしたリソースの親（上位の�
 
 |リソースのタイプ|リソース名|リソースURL|
 |:--|:--|:--|
-|セル|cell|https&#58;//cell.unit1.example/|
+|Cell|cell|https&#58;//cell.unit1.example/|
 |Box|box|https&#58;//cell.unit1.example/box|
 |WebDAVコレクション|webdav|https&#58;//cell.unit1.example/box/webdav|
 |ディレクトリ|directory|https&#58;//cell.unit1.example/box/webdav/directory|
@@ -283,7 +283,7 @@ BoxレベルACLの設定は、アクセスしたリソースの親（上位の�
 
 |アクセスするリソース|設定された権限|適用される権限|
 |:--|:--|:--|
-|セル|auth-read|auth-read|
+|Cell|auth-read|auth-read|
 |Box|read-acl|auth-read,read-acl|
 |WebDAVコレクション|read|auth-read,read-acl,read|
 |ディレクトリ|設定なし|auth-read,read-acl,read|
@@ -335,7 +335,7 @@ BoxレベルACLの設定は、アクセスしたリソースの親（上位の�
 
 |リソースのタイプ|リソース名|リソースURL|
 |:--|:--|:--|
-|セル|cell|https&#58;//cell.unit1.example/|
+|Cell|cell|https&#58;//cell.unit1.example/|
 |Box|box|https&#58;//cell.unit1.example/box|
 |WebDAVコレクション|webdav|https&#58;//cell.unit1.example/box/webdav|
 |ディレクトリ|directory|https&#58;//cell.unit1.example/box/webdav/directory|

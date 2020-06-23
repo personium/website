@@ -189,7 +189,7 @@ AP サービスが動作するサーバの基本設定を確認します。
 
 #### Personium Unit管理アカウント
 
-* Ansible を実行することで自動的にPersonium Unit管理アカウントが作成されます。この情報はPersonium Unit管理者がセルの作成等の管理作業を行う際に必要となります。
+* Ansible を実行することで自動的にPersonium Unit管理アカウントが作成されます。この情報はPersonium Unit管理者がCellの作成等の管理作業を行う際に必要となります。
 
     Unit管理アカウントのID/PASSの確認
 

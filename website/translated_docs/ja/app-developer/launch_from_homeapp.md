@@ -95,7 +95,7 @@ Home Appのランチャから起動されるPersnium Appは、何らかの起動
     grant_type=authorization_code&code={grantCode}&client_id={アプリCellURL}&client_secret={アプリ認証トークン}
 
 ここで返ってくるレスポンスJSONの中の"access_token"項目が、対象ユーザCellに対するあなたのアプリのためのアクセストークンです。
-この処理はアプリセル上のengineスクリプトで実装することをお勧めします。
+この処理はアプリCell上のengineスクリプトで実装することをお勧めします。
 
 [参考](../apiref/293_OAuth2_Token_Endpoint.md)
 

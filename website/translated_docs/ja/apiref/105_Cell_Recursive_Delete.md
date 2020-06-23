@@ -4,7 +4,7 @@ title: Cell再帰削除
 sidebar_label: Cell再帰削除
 ---
 ## 概要
-* 指定されたセル配下の関連データを全て削除する
+* 指定されたCell配下の関連データを全て削除する
 * 削除対象のデータは下記API
 	- Box
 	- Account
