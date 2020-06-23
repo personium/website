@@ -170,7 +170,7 @@ RequestType : rule.add / rule.remove
 |{4}|EventObject|string|詳細はリクエストボディ参照|
 |{4}|EventInfo|string|詳細はリクエストボディ参照|
 |{4}|Action|string|詳細はリクエストボディ参照|
-|{2}|_Box.Name|string|関係対象のボックス名|
+|{2}|_Box.Name|string|関係対象のBox名|
 |{2}|Result|array|送信先Cell毎の送信結果<br>オブジェクト{5}の配列|
 |{5}|To|string|送信先CellURL|
 |{5}|Code|string|ステータスコード|

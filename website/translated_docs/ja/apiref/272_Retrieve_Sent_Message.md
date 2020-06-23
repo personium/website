@@ -79,7 +79,7 @@ GET
 |:--|:--|:--|:--|
 |{3}|type|string|CellCtl.ReceivedMessage|
 |{2}|__id|string|受信メッセージID<br>UUIDで「b5d008e9092f489c8d3c574a768afc33」のような32文字の文字列を返却|
-|{2}|_Box.Name|string|関係対象のボックス名|
+|{2}|_Box.Name|string|関係対象のBox名|
 |{2}|InReplyTo|string|受信元メッセージID<br>UUIDで「b5d008e9092f489c8d3c574a768afc33」のような32文字の文字列を返却|
 |{4}|To|string|送信先CellURL|
 |{2}|ToRelation|string|送信対象の関係名|

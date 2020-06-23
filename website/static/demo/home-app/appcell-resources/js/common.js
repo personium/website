@@ -1113,7 +1113,7 @@ function testAPI(evt) {
         //var binary = evt.target.result.substr(evt.target.result.indexOf(',')+1);
         $.ajax({
                 type: "MKCOL",
-                url: url + 'MyBoard/', // 作成ボックス名
+                url: url + 'MyBoard/', // 作成Box名
                 data: blob,
                 //data: 'C:\Users\coe\Desktop\V1_1_2_bar_webdav_odata.bar',
                 processData: false,

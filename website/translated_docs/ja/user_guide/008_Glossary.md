@@ -37,7 +37,7 @@ sidebar_label: 用語集
 
 
 ### Box
-<font size=1>[Personium]</font> アプリケーションに用いるデータを格納する領域。自身もWebDAVコレクションの一つである。一意の名前とスキーマURLを持つ。Cellは、Box未作成でも初期状態で1つのBox（メインボックス） を持ち、削除は不可。
+<font size=1>[Personium]</font> アプリケーションに用いるデータを格納する領域。自身もWebDAVコレクションの一つである。一意の名前とスキーマURLを持つ。Cellは、Box未作成でも初期状態で1つのBox（メインBox） を持ち、削除は不可。
 
 
 ### Box インストール
@@ -156,7 +156,7 @@ sidebar_label: 用語集
 
 
 ## <a name="anc_m"> M</a>
-### Main Box　（メインボックス）
+### Main Box　（メインBox）
 <font size=1>[Personium]</font> セル作成時にデフォルトで作成される、”\__”(アンダーバー2つ)と名づけられたBox。動作は通常のBoxと同様だが、削除は不可。  
 アプリケーションデータを保管する目的以外にも、そのCellの固有情報（json形式を用いる）の格納に使われる。
 

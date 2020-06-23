@@ -28,7 +28,7 @@ read
 |パス|概要|
 |:--|:--|
 |{CellName}|セル名|
-|{BoxName}|ボックス名|
+|{BoxName}|Box名|
 |{ODataCollecitonName}|コレクション名|
 |{EntityTypeName}|EntityType名|
 |{EntityID}|取得するEntityのID|

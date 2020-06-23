@@ -29,7 +29,7 @@ V1.0系での制限
 |パス|概要|備考|
 |:--|:--|:--|
 |{CellName}|セル名||
-|{BoxName}|ボックス名||
+|{BoxName}|Box名||
 |{CollectionName}|コレクション名|有効値 桁数:1&#65374;256|
 
 ### メソッド
@@ -136,7 +136,7 @@ XMLの構造
 |odata|p:|要素|リソースのタイプがODataコレクションであることを表す|ODataコレクションの場合表示|
 |service|p:|要素|リソースのタイプがサービスコレクションであることを表す|Serviceコレクションの場合表示|
 |acl|D:|要素|リソースに設定されているACL設定|ACL設定を取得するためには、対象リソースに対するacl-read権限が必要<br>ACL要素以下の内容については、[Cell Level アクセス制御設定API](289_Cell_ACL.md)を参照|
-|base|xml:|属性|ACLのPrivilegeのBaseURL|CellへのPROPFINDの場合、デフォルトボックス（"__"）のリソースURL|
+|base|xml:|属性|ACLのPrivilegeのBaseURL|CellへのPROPFINDの場合、デフォルトBox（"__"）のリソースURL|
 
 
 DTD表記

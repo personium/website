@@ -111,7 +111,7 @@ PROPFIND
 |service|p:|要素|リソースのタイプがサービスコレクションであることを表す|Serviceコレクションの場合表示|
 |cellstatus|p:|要素|Cellのステータスを表す<br>normal:正常<br>import failed:Cell Import失敗|Cellのステータスがimport failedの場合は以下のAPI以外は実行不可<br>- Unit Level API<br>- OAuth2.0 トークンエンドポイント<br>- Cellインポート|
 |acl|p:|要素|リソースに設定されているACL設定|ACL設定を取得するためには、対象リソースに対するacl-read権限が必要<br>ACL要素以下の内容については、[Cell Level アクセス制御設定API](289_Cell_ACL.md)を参照|
-|base|p:|要素|ACLのPrivilegeのBaseURL|CellへのPROPFINDの場合、デフォルトボックス（"__"）のリソースURL|
+|base|p:|要素|ACLのPrivilegeのBaseURL|CellへのPROPFINDの場合、デフォルトBox（"__"）のリソースURL|
 |status|D:|要素|リソース取得のレスポンスコードを表す||
 
 #### DTD表記

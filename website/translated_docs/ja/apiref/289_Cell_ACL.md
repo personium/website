@@ -80,8 +80,8 @@ privilegeタグ配下の権限設定の内容については、acl_model（[ア�
 |log-read|p:|要素|イベントバスのログAPI参照権限||
 |social|p:|要素|関係系管理API編集・参照権限||
 |social-read|p:|要素|関係系管理API参照権限||
-|box|p:|要素|ボックス管理API編集・参照権限||
-|box-read|p:|要素|ボックス管理API参照権限||
+|box|p:|要素|Box管理API編集・参照権限||
+|box-read|p:|要素|Box管理API参照権限||
 |box-install|p:|要素|Boxインストール実行権限 ※V1.2.3対応||
 |box-export|p:|要素|Boxエクスポート実行権限|未対応(設定不可)|
 |acl|p:|要素|ACL管理API編集・参照権限||
