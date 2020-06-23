@@ -6,26 +6,24 @@ sidebar_label: Personium Unitの構築
 
 ## はじめに
 
-本章ではPersonium Unitの構築を行います。
-
-Personium Unitを構築するためのサーバインフラの構成や構築方法は様々な形をとることができますが、本章では入門用としてIaaS上の1台のサーバに全ての役割の持たせるall-in-one構成のPersonium UnitをAnsible Playbookで構築します。
+本節ではPersonium Unitの構築について説明します。入門用としてIaaS上の1台のサーバに全ての役割の持たせるall-in-one構成のPersonium UnitをAnsible Playbookで構築します。
 
 もし、他の構成で構築する場合、[サーバソフトウェア運用者向けガイド](../server-operator/README.md)をご参照ください。
 
 ## 注意事項
 
-Personium Unitは`https://user1.personium.example`や`https://user2.personium.example`といったユーザによって異なるサブドメインでのHTTPSアクセスを行うことを前提にしているため、以下が基本必要となります。
+Personium Unitは`https://alice.personium.example`や`https://bob.personium.example`といったデータ主体によって異なるサブドメインでのHTTPSアクセスを行うことを前提にしているため、以下が基本必要となります。
 
 - WebサーバにアクセスするIPアドレスに対しての`*.personium.example`といったワイルドカードドメイン名でのDNSレコード設定
 - `*.personium.example`といったワイルドカードドメイン名に対応したSSL証明書の取得と設定
 
-上記を簡単に行うために、ローカルネットワーク上で構築するよりもパブリックIaaSとDNSサービスを使って構築することを推奨します。本章もそれを前提にした手順をとっています。
+上記を簡単に行うために、ローカルネットワーク上で構築するよりもパブリックIaaSとDNSサービスを使って構築することを推奨します。本節もそれを前提にした手順をとっています。
 
-## 構築
+## Unitの構築
 
 ### VMの作成
 
-パブリックIaaSを使ってVMを作成します。以下スペックのVMで動作することを確認しています。
+パブリックIaaSを使ってVMを作成します。VM作成時のパラメータの参考情報として、動作確認済みのパラメータを以下に載せます。(2020年6月現在の情報)
 
 |項目|値|
 |----|----|

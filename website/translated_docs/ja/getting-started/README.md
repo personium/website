@@ -31,5 +31,3 @@ Getting Startedは大きく分けるとPersonium運用者向けの「1. Personiu
     4. [アプリの実装](./appdev-impl.md)
 
 > もし構築済みのPersoniumを利用できる場合、「1. Personiumの準備」の章をスキップして「2. アプリ開発」の章から読むこともできます。
-
-それではまずは[Personium Unitの構築](./setup-unit.md)から始めましょう。

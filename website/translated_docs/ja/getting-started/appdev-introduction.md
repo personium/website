@@ -4,7 +4,7 @@ title: アプリを開発する
 sidebar_label: はじめに
 ---
 
-本章ではサンプルアプリの開発の流れを見ることで、Personiumを使ったアプリ開発のやり方を学びます。
+本章ではサンプルアプリの開発の流れを通して、PersoniumのAPIを使用したアプリの開発方法を説明します。
 
 ## サンプルアプリの開発
 
@@ -32,7 +32,7 @@ TODO: アプリのスクリーンショットを掲載
 
 サンプルアプリでの2つのCellの用途と詳細の設定は以下の表の通りとなります。
 
-|用途|Cell名例|Account名例|AccountにリンクするRole名例|Roleの権限設定|
+|用途|Cell名|Account名|AccountにリンクするRole名|Roleの権限設定|
 |----|---|---------|-----------------------|--------------|
 |データ主体用Cell|alice|me|admin|root|
 |アプリ用Cell|sample-app|app|admin|root|
