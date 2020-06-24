@@ -31,7 +31,7 @@ Personiumのユーザーは大きく以下に分けられます。
 
 Personium運用者とアプリ開発者向けのPersonium入門ドキュメントを以下で提供しています。
 
-* [Getting Started](./getting-started/README.md)
+[Getting Started](./getting-started/README.md)
 
 ## ユーザガイド
 
