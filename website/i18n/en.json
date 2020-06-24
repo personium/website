@@ -982,8 +982,8 @@
         "sidebar_label": "App authentication"
       },
       "app-developer/launch_from_homeapp": {
-        "title": "Launch application from Home application",
-        "sidebar_label": "Launch application from Home application"
+        "title": "Single Sign On",
+        "sidebar_label": "Single Sign On"
       },
       "app-developer/Personium_Apps": {
         "title": "Personium App",
@@ -994,8 +994,8 @@
         "sidebar_label": "Personium Engine"
       },
       "app-developer/README": {
-        "title": "Application Developer's Guide",
-        "sidebar_label": "Application Developer's Guide"
+        "title": "Guide for App Developers",
+        "sidebar_label": "A guide for app developers"
       },
       "app-developer/Roles": {
         "title": "Role in Personium",
@@ -1043,7 +1043,7 @@
       },
       "getting-started/setup-unit": {
         "title": "Setup Personium Unit",
-        "sidebar_label": "Setup a Personium Unit"
+        "sidebar_label": "Setup Personium Unit"
       },
       "installation_guide/001_Readme_before_installation": {
         "title": "Readme before installation",

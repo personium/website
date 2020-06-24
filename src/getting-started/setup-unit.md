@@ -1,7 +1,7 @@
 ---
 id: setup-unit
 title: Setup Personium Unit
-sidebar_label: Setup a Personium Unit
+sidebar_label: Setup Personium Unit
 ---
 
 ## Introduction

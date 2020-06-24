@@ -1,7 +1,7 @@
 ---
 id: launch_from_homeapp
-title: Launch application from Home application
-sidebar_label: Launch application from Home application
+title: Single Sign On
+sidebar_label: Single Sign On
 ---
 
 This page describes Home application which is a sample application for realizing Single Sign On.
