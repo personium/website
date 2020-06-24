@@ -63,4 +63,4 @@ Personium Unitにアクセスするために、作成したVMのパブリックI
 
 Ansible Playbookで構築した場合、Cell作成などを行うためのUnit管理アカウントが作成されます。Unit管理アカウントについては以下ドキュメントを参照してください。
 
-[Personium Unit管理アカウント](../server-operator/Confirm_environment_settings/#personium-%E3%83%A6%E3%83%8B%E3%83%83%E3%83%88%E7%AE%A1%E7%90%86%E3%82%A2%E3%82%AB%E3%82%A6%E3%83%B3%E3%83%88)
+[Personium Unit管理アカウント](../server-operator/Confirm_environment_settings.md#personium-unit管理アカウント)

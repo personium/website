@@ -1,46 +1,66 @@
 ---
 id: setup-unit
-title: Setup Unit
-sidebar_label: Setup Unit
+title: Setup Personium Unit
+sidebar_label: Setup a Personium Unit
 ---
 
 ## Introduction
 
-You can choose various system structure like followings.
+This section describes the construction of Personium Unit. As an introduction, we will build an All-in-one personium unit with an Ansible Playbook that allows all the roles of one server on IaaS.
 
-- Any Machine(s)
-  - all-in-one
-  - 3-tier
-- Local VM
-- Local Containers
+If you want to build with other configurations, please refer to [Server Software Operator's Guide](../server-operator/README.md).
 
-In this section, we introduced one simple way that is all-in-one on IaaS VM with Ansible Playbook.
-If you want to choose other way, please see [Server Software Operator's Guide](../server-operator/README.md).
+## Precautions
 
-## Notes
+Personium Unit is based on the assumption that HTTPS access is performed in different subdomains depending on the data subject such as `https://alice.personium.example` and `https://bob.personium.example`, so the following is the basic Will be required.
 
-Personium requires followings.
+-DNS record setting with a wildcard domain name such as `*.personium.example` for the IP address accessing the web server
+-Get and set SSL certificate corresponding to wildcard domain name such as `*.personium.example`
 
-- Wild card subdomain DNS settings so that users can access Personium url like `user1.personium.example` or `user2.personium.example`.
-- SSL Server certificate settings to access by HTTPS.
+To simplify the above, it is recommended to build using public IaaS and DNS service rather than building on the local network. This section also takes steps based on that.
 
-To set up above easily, we recommend public IaaS server rather than local server.
-On public IaaS, you can use DNS service and server certificate service.
-
-## Setup
+## Unit construction
 
 ### Create VM
 
-TODO
+Create a VM with public IaaS. The parameters whose operation has been confirmed are listed below as reference information for creating the VM. (Information as of June 2020)
 
-### Set DNS
+| Item | Value |
+|----|----|
+|IaaS|Microsoft Azure Virtual Machines|
+|OS|CentOS 7|
+| Size | Standard B2ms (2 vcpu number, 8 GiB memory) |
+|OS Disk |30 GiB|
+| Public IP address | Yes |
 
-TODO
+> Personium itself works on OSs other than CentOS7, but since the Ansible Playbook used later is based on CentOS7, please use CentOS7 series.
 
-### Create server certificate
+### Security group/firewall settings
 
-TODO
+To access the Personium Unit, set the security group/firewall to allow access to the following ports for the public IP address of the created VM.
 
-### Install Personium with Ansible
+| Port | Purpose |
+|----|----|
+|443|HTTPS access|
 
-TODO
+### Personium installation using Ansible
+
+Follow the steps in the document below.
+
+[Personium Ansible Playbook 1-server](https://github.com/personium/ansible/tree/develop/1-server_unit)
+
+If successful, the Personium Unit will be built.
+
+### Confirm access to Personium Unit
+
+Access `https://{Personium Unit domain name}/` with a browser. A response in the following format is displayed.
+
+```json
+{"unit":{"path_based_cellurl_enabled":false,"url":"https:\/\/{Personium Unit domain name}\/"}}
+```
+
+### Access information for Personium Unit management
+
+When built with Ansible Playbook, a Unit management account for creating a Cell will be created. For the Unit management account, refer to the following document.
+
+[Personium Unit management account](../server-operator/Confirm_environment_settings.md#personium-unit-management-account)

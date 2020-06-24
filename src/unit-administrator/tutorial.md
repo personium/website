@@ -1,7 +1,7 @@
 ---
 id: tutorial
-title: Personium Unit management tutorial
-sidebar_label: Create Cell
+title: Payout of Cell tutorial
+sidebar_label: Payout of Cell
 ---
 
 **\* This document is intended for those who use Personium Version 1.6.15 or later.**
