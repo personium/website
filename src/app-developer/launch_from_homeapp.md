@@ -4,10 +4,24 @@ title: Launch application from Home application
 sidebar_label: Launch application from Home application
 ---
 
-There are various forms of Personium applications, but here we will explain about the applications launched from the most standard Home application.  
+This page describes Home application which is a sample application for realizing Single Sign On.
 
-+ Parameters passed at application startup
-+ Processing to be done after launching the application
+## Home app
+
+In the case of using the authorization code flow, an application using Personium needs the following at the beginning of the flow.
+
+1. Input Cell URL of data subject
+2. Authentication and consent on Cell URL
+3. Bar file installation
+
+Doing the above for each app will be a burden on the user operation, but if there is an app that can manage and authenticate the apps collectively, this problem can be solved. The Home app is a sample app that does this. It is published in the following repositories.
+
+* [Home App](https://github.com/personium/app-cc-home)
+
+The following section describes the specifications of the following Home apps.
+
+* Parameters passed at application startup
+* Processing to be done after launching the application
 
 Caution: Personium core version 1.6.9 or above required
 
