@@ -6,11 +6,22 @@ sidebar_label: アプリ開発の流れ
 
 本節ではアプリ開発の流れについて説明します。
 
+まず、アプリ開発の流れの説明の前にいくつか知っておいた方がよいことを説明します。
+
+## OAuth 2.0 認可コードフロー
+
+Personiumを使用したアプリの場合、アプリからのパーソナルデータへのアクセスはデータ主体Cell内のBoxに対してREST APIを通じて行います。この時、データアクセスの認可方法はOAuth 2.0の仕様に従います。OAuth 2.0のフローは種類がありますが、サンプルアプリではPDS事業者とアプリ事業者が異なる場合に採用する認可コードフローを使用します。
+
+認可コードフローについての詳細は[認可モデル](../user_guide/003_Auth.md#アプリ認可)を参照してください。
+
 ## データ主体CellとアプリCell
 
-アプリ開発の流れの説明の前に、データ主体CellとアプリCellという2種類のCellについて説明します。
+認可コードフローで実装する場合、データ主体CellとアプリCellという2種類のCellを使用します。この2種類のCellは以下のように使われます。
 
-Personiumを使用したアプリの場合、アプリからのパーソナルデータへのアクセスはデータ主体Cell内のBoxに対してREST APIを通じて行います。この時、データアクセスの認可方法はOAuth 2の仕様に従います。OAuth認可コードフローによるデータアクセスの認可を行う時[^1]、データ主体の認証はデータ主体Cellで行い、アプリの認可にアプリ用のCellを使用します。OAuthにおけるクライアント登録は、PersoniumではアプリCellの作成になります。
+* 認可コードフローにおけるクライアント登録はアプリCell作成によって行う
+* client_idはアプリCellのURLを使用する
+* アプリCell上のアカウントを使用してアプリの認証を行い、client_secretを取得する
+* データ主体の認証・認可をデータ主体Cellで行う
 
 また、必須ではありませんがアプリCell上にHTML, JavaScript, CSSといったファイルを格納し、アクセス設定を誰でも参照できるようにすることで、静的Websiteのホスティングを行えます。本節のJavaScriptによるサンプルアプリはアプリCell上でホスティングすることを想定しています。
 
@@ -19,8 +30,6 @@ Personiumを使用したアプリの場合、アプリからのパーソナル�
 ![Cell Relation](assets/getting-started/cell_relation.png)
 
 アプリの開発はデータ主体Cell部分とアプリCell部分に対して行います。
-
-[^1]: OAuth認可コードフローを取るべきかどうかは[認可モデル](../user_guide/003_Auth.md#アプリ認可)を参照してください。
 
 ## Boxとbarファイルインストール
 
@@ -47,14 +56,14 @@ Personiumコミュニティでは[React](https://reactjs.org/)ベースのJavaSc
 2. アプリCellの構築
    1. 設定ファイルの編集
    2. アプリCellへのデプロイ (`npm run deploy`の実行)
-   3. アプリCell上ファイルのACL設定[^2]
+   3. アプリCell上ファイルのACL設定
 3. データ主体Cellの構築
    1. barファイルのビルド (`npm build-bar`の実行)
-   2. 開発用データ主体CellへのBoxインストール[^2]
+   2. 開発用データ主体CellへのBoxインストール
 
 具体的な手順は[personium-blank-app](https://github.com/personium/personium-blank-app)を参照してください。
 
-[^2]: ACL設定やBoxインストールといったCell上の操作を行うのに[前節で説明したUnit Manager](./appdev-management-tool.md)が活用できます。
+> ACL設定やBoxインストールといったCell上の操作を行うのに[前節で説明したUnit Manager](./appdev-management-tool.md)が活用できます。
 
 ## アプリ開発の流れ
 
@@ -67,12 +76,12 @@ Personiumコミュニティでは[React](https://reactjs.org/)ベースのJavaSc
   4. barファイルのコードリポジトリへのコミット
 * アプリCell上の開発
   1. ローカル開発環境でのファイル編集(HTML/JavaScript/CSSなど)
-  2. アプリCellへのデプロイ (`npm run deploy`の実行)[^3]
+  2. アプリCellへのデプロイ (`npm run deploy`の実行)
   3. アプリCell上ファイルのACL設定
   4. アプリの動作確認
   5. アプリCell上ファイルのコードリポジトリへのコミット
 
-[^3]: ローカル開発環境上で開発用Webサーバを起動して動作確認することもできます。その場合、`npm run debug`を実行します。
+> アプリCellへのデプロイの代わりにローカル開発環境上で開発用Webサーバを起動して動作確認することもできます。その場合、`npm run debug`を実行します。
 
 ## Boxデータ構造の作成
 
@@ -89,7 +98,7 @@ Personiumではファイルデータ(WebDAV)とリレーショナルデータ(OD
 
 ## サンプルアプリでのBoxデータ構造
 
-サンプルアプリではBoxデータ構造は以下のようになっています。
+参考までにサンプルアプリではBoxデータ構を記載します。
 
 ### コレクション全体
 

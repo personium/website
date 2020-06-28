@@ -1017,46 +1017,6 @@
         "title": "How to participate in Personium document maintenance and improvement",
         "sidebar_label": "How to participate in Personium document maintenance and improvement"
       },
-      "getting-started/appdev-appcell-and-box": {
-        "title": "App Cell & Box on User Cell",
-        "sidebar_label": "App Cell & Box on User Cell"
-      },
-      "getting-started/appdev-dist-bar": {
-        "title": "Distribute Bar File",
-        "sidebar_label": "Distribute Bar File"
-      },
-      "getting-started/appdev-dist-SSO-launch-app": {
-        "title": "Distribute SSO launch App",
-        "sidebar_label": "Distribute SSO launch App"
-      },
-      "getting-started/appdev-dist-stand-alone-app": {
-        "title": "Distribute Stand-alone App",
-        "sidebar_label": "Distribute Stand-alone App"
-      },
-      "getting-started/appdev-impl-auth": {
-        "title": "Implement Authentication",
-        "sidebar_label": "Implement Authentication"
-      },
-      "getting-started/appdev-impl-data-sharing": {
-        "title": "Implement Data Sharing",
-        "sidebar_label": "Implement Data Sharing"
-      },
-      "getting-started/appdev-impl-engine-script": {
-        "title": "Implement Engine Script",
-        "sidebar_label": "Implement Engine Script"
-      },
-      "getting-started/appdev-impl-oauth2-code-flow": {
-        "title": "Implement OAuth2 Code Flow",
-        "sidebar_label": "Implement OAuth2 Code Flow"
-      },
-      "getting-started/appdev-impl-odata": {
-        "title": "Implement Relational Data (OData)",
-        "sidebar_label": "Implement Relational Data (OData)"
-      },
-      "getting-started/appdev-impl-webdav": {
-        "title": "Implement File (WebDAV)",
-        "sidebar_label": "Implement File (WebDAV)"
-      },
       "getting-started/appdev-impl": {
         "title": "アプリの実装",
         "sidebar_label": "アプリの実装"
@@ -1072,10 +1032,6 @@
       "getting-started/appdev-process": {
         "title": "アプリ開発の流れ",
         "sidebar_label": "アプリ開発の流れ"
-      },
-      "getting-started/appdev-template": {
-        "title": "App Template",
-        "sidebar_label": "App Template"
       },
       "getting-started/README": {
         "title": "Getting Started",
