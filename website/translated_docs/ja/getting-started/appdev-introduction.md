@@ -12,7 +12,7 @@ sidebar_label: はじめに
 
 以下は完成したサンプルアプリのスクリーンショットとなります。
 
-TODO: アプリのスクリーンショットを掲載
+![移動履歴データ一覧](assets/getting-started/trails_locations_public.png)
 
 完成されたサンプルアプリのコードは以下のリンク先にあります。
 
@@ -35,6 +35,6 @@ TODO: アプリのスクリーンショットを掲載
 |用途|Cell名|Account名|AccountにリンクするRole名|Roleの権限設定|
 |----|---|---------|-----------------------|--------------|
 |データ主体用Cell|alice|me|admin|root|
-|アプリ用Cell|sample-app|app|admin|root|
+|アプリ用Cell|app-personium-trails.example|app|admin|root|
 
 自身のアプリを開発する場合、それぞれのCell, Account, Roleの名前は任意なので表の通りでなくてもかまいません。
