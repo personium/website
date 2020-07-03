@@ -28,6 +28,7 @@
         "label": "Authentication",
         "ids": [
           "apiref/292_OAuth2_Authorization_Endpoint",
+          "apiref/292p_OAuth2_Authorization_Endpoint",
           "apiref/293_OAuth2_Token_Endpoint",
           "apiref/294_Password_Change",
           "apiref/297_OAtuh2_Token_Introspection_Endpoint",

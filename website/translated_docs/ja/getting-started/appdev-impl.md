@@ -28,11 +28,11 @@ Personiumを使ってOAuth 2.0 認可コードフローを取る場合、以下�
   * [start_oauth2](https://github.com/personium/app-personium-trails/blob/master/src/app/engine/auth/start_oauth2.js)
   * [recieve_redirect](https://github.com/personium/app-personium-trails/blob/master/src/app/engine/auth/receive_redirect.js)
 * Personium Cell Level API
-  * [GET {CellURL}/__authz](https://personium.io/docs/ja/apiref/292_OAuth2_Authorization_Endpoint/)
-  * [POST {CellURL}/__authz](https://personium.io/docs/ja/apiref/292p_OAuth2_Authorization_Endpoint/)
-  * [POST {CellURL}/__token](https://personium.io/docs/ja/apiref/293_OAuth2_Token_Endpoint/)
+  * [OAuth 2.0 認可エンドポイント](../apiref/292_OAuth2_Authorization_Endpoint.md)
+  * [OAuth2.0 認可エンドポイントにおける POST の受け入れ](../apiref/292p_OAuth2_Authorization_Endpoint.md)
+  * [OAuth 2.0 トークンエンドポイント](../apiref/293_OAuth2_Token_Endpoint.md)
 
-詳細のシーケンス図は[こちら](../app-developer/003_Auth.md#認可コードフロー)を参照してください。
+詳細のシーケンス図は[こちら](../user_guide/003_Auth.md#認可コードフロー)を参照してください。
 
 サンプルアプリを起動するとき、HTMLを返すエンジンスクリプト`https://app-personium-trails.example/__/front/app`にWebブラウザでアクセスします。すると以下の画面が表示され、データ操作連携を行うユーザ自身のCell URLの入力が求められます。
 
@@ -52,12 +52,12 @@ Location: https://alice.example/__authz
 ?response_type=code
 &client_id=https://app-personium-trails.example/
 &redirect_uri=https://app-personium-trails.example/__/front/app?cellUrl=https://alice.example/
-&state=1593274289986-per
+&state=15933********-per
 ```
 
 このスクリプトはCSRF対策で使用するstateパラメータをサーバサイド上で生成し、認可エンドポイントにリダイレクトします。パラメータのredirect_uriには認可コードを受け取り、アクセストークン取得を行うアプリのURLを指定します。サンプルアプリではエンジンスクリプト`https://app-personium-trails.example/__/front/app`が最初に受け取るので、このURLを指定します。
 
-リダイレクトするときのHTTP通信は以下のようになります。
+リダイレクトするときの[OAuth 2.0 認可エンドポイント](../apiref/292_OAuth2_Authorization_Endpoint.md)へのHTTP通信は以下のようになります。
 
 ```text
 # リクエスト
@@ -66,7 +66,7 @@ GET https://alice.example/__authz
 response_type=code
 client_id=https://app-personium-trails.example/
 redirect_uri=https://app-personium-trails.example/__/front/app?cellUrl=https://alice.example/
-state=1593274289986-per
+state=15933********-per
 
 # レスポンス
 Status Code: 200
@@ -79,7 +79,7 @@ Content-Type: text/html;charset=UTF-8
 
 ![認証フォーム](assets/getting-started/oauth_form.png)
 
-上記の認証フォーム上でUserID, Passwordを入力し、ログインボタンを押すと以下のHTTP通信が行われます。
+上記の認証フォーム上でUserID, Passwordを入力し、ログインボタンを押すと[OAuth2.0 認可エンドポイントにおける POST の受け入れ](../apiref/292p_OAuth2_Authorization_Endpoint.md)へのHTTP通信は以下のように行われます。
 
 ```text
 # リクエスト
@@ -88,7 +88,7 @@ POST https://alice.example/__authz
 response_type=code
 client_id=https://app-personium-trails.example/
 redirect_uri=https://app-personium-trails.example/__/auth/receive_redirect?cellUrl=https://alice.example/
-state=1593274289986-per
+state=15933********-per
 username=me
 password=mypassword
 
@@ -97,9 +97,9 @@ Status Code: 303
 Location: https://app-personium-trails.example/__/front/app
 ?cellUrl=https://alice.example/
 &last_authenticated=1592968464695
-&code=GC~EPETSBHQOtlZ-0EfKNGJ7NzlRDND1nz8OPS-thzQIfLxhvE93wL_b5jHT_6esGKEQ3qZ6T-b1MfGN6J1MQjoCF-mibnrtUiXwFCNp7wdBjN7OZoiECEqWx0SYekt24kId2LVUWPWwJoieAfUWkcNyxy_kifOxR5_xvq00kL-9ws
+&code=GC~EPET********-9ws
 &failed_count=0
-&state=1593348659632-per
+&state=15933********-per
 ```
 
 code(認可コード)とstateのパラメータを加えた状態で、元のサンプルアプリを起動するエンジンスクリプト`https://app-personium-trails.example/__/front/app`にリダイレクトします。
@@ -109,9 +109,9 @@ code(認可コード)とstateのパラメータを加えた状態で、元のサ
 GET https://app-personium-trails.example/__/front/app
 ?cellUrl=https://alice.example/
 &last_authenticated=1592968464695
-&code=GC~EPETSBHQOtlZ-0EfKNGJ7NzlRDND1nz8OPS-thzQIfLxhvE93wL_b5jHT_6esGKEQ3qZ6T-b1MfGN6J1MQjoCF-mibnrtUiXwFCNp7wdBjN7OZoiECEqWx0SYekt24kId2LVUWPWwJoieAfUWkcNyxy_kifOxR5_xvq00kL-9ws
+&code=GC~EPET********-9ws
 &failed_count=0
-&state=1593348659632-per
+&state=15933********-per
 
 # レスポンス
 Status Code: 200
@@ -127,27 +127,27 @@ Content-Type: text/html;charset=UTF-8
 POST https://app-personium-trails.example/__/auth/receive_redirect
 
 cellUrl=https://alice.example/
-code=GC~EPETSBHQOtlZ-0EfKNGJ7NzlRDND1nz8OPS-thzQIfLxhvE93wL_b5jHT_6esGKEQ3qZ6T-b1MfGN6J1MQjoCF-mibnrtUiXwFCNp7wdBjN7OZoiECEqWx0SYekt24kId2LVUWPWwJoieAfUWkcNyxy_kifOxR5_xvq00kL-9ws
+code=GC~EPET********-9ws
 failed_count=0
-state=1593348659632-per
+state=15933********-per
 ```
 
-エンジンスクリプトのreceive_redirect上の処理で、stateの検証を行った後、Personiumのトークンエンドポイントにアクセスします。
+エンジンスクリプトのreceive_redirect上の処理で、stateの検証を行った後、Personiumの[OAuth 2.0 トークンエンドポイント](../apiref/293_OAuth2_Token_Endpoint.md)にアクセスします。HTTP通信は以下のように行われます。
 
 ```text
 # リクエスト
 POST https://alice.example/__token
 
 grant_type=authorization_code
-code=GC~EPETSBHQOtlZ-0EfKNGJ7NzlRDND1nz8OPS-thzQIfLxhvE93wL_b5jHT_6esGKEQ3qZ6T-b1MfGN6J1MQjoCF-mibnrtUiXwFCNp7wdBjN7OZoiECEqWx0SYekt24kId2LVUWPWwJoieAfUWkcNyxy_kifOxR5_xvq00kL-9ws
+code=GC~EPET********-9ws
 client_id=https://app-personium-trails.example/
 client_secret=<アプリCell上で認証したデータ主体Cellへのトランスセルトークン>
 
 # レスポンス
 {
-  "access_token": "AR~omWDOwFP90oqOP_hCC17UQHKxpCViGmdsdLxp_AZ_PvL2qGdnHTk-wqvUaZljkXBU9LvffKQH7odo6nln3pQfO5gHcurESaMUB2q_HHx-4P61HDRFx7sPwP0bhI3pql7UxwEkzFVascbbVW7vQ7cFnuyu2rmjyUc7G8zuoB8IPo",
+  "access_token": "AR~omWD********IPo",
   "refresh_token_expires_in": 86400,
-  "refresh_token": "RR~KR9CRapqHKBc-_JqMnRhootcxaSAq_vSXIluk4ct2c-3lp_pHqtk1-TrzPhsHf6eP7_PUc7wdw5ipgCMYUXp_WuqCvA2tQWZbOY-3jPdWikiTO8o4GqihYRq2tHYEAym6c0MpuvdvzKY_Vw7YE5vLUt6qmmxOseYSN2gYxUlhbs",
+  "refresh_token": "RR~KR9********hbs",
   "p_target": "https://alice.example/",
   "scope": "root",
   "token_type": "Bearer",
@@ -260,10 +260,10 @@ Status Code: 200
         "__published": "/Date(1593356562389)/",
         "__updated": "/Date(1593356562389)/",
         "endTime": "/Date(1589596800521)/",
-        "latitudeE7": 375278530,
-        "longitudeE7": 1396176872,
+        "latitudeE7": 3752*****,
+        "longitudeE7": 13961*****,
         "name": "Wakaba Store",
-        "placeId": "ChIJjy_Hz-XrGGARbIZ4iP39hBI",
+        "placeId": "ChI********hBI",
         "startTime": "/Date(1589594150000)/"
       },
 ```
@@ -300,7 +300,7 @@ PersoniumではリソースのACL設定を行うことで、他者とのデー�
 
 ```xml
 # リクエスト
-ACL https://alice.example/app-personium-trails/locations/2020/0516/s_1589594150000.json
+ACL https://alice.example/app-personium-trails/locations/2020/0516/s_1589592400000.json
 
 <?xml version="1.0" encoding="utf-8" ?>
 <acl xmlns="DAV:" xmlns:p="urn:x-personium:xmlns">
@@ -324,7 +324,7 @@ ACL設定は[ファイル設定取得](../apiref/307_Get_Property.md)APIによ�
 
 ```xml
 # リクエスト
-PROPFIND https://alice.example/app-personium-trails/locations/2020/0516/s_1589594150000.json
+PROPFIND https://alice.example/app-personium-trails/locations/2020/0516/s_1589592400000.json
 
 # レスポンス
 Status Code: 207
