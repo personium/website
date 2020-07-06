@@ -34,7 +34,7 @@ sidebar_label: はじめに
 
 |用途|Cell名|Account名|AccountにリンクするRole名|Roleの権限設定|
 |----|---|---------|-----------------------|--------------|
-|データ主体用Cell|alice|me|admin|root|
+|データ主体用Cell|alice.example|me|admin|root|
 |アプリ用Cell|app-personium-trails.example|app|admin|root|
 
 自身のアプリを開発する場合、それぞれのCell, Account, Roleの名前は任意なので表の通りでなくてもかまいません。
