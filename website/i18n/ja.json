@@ -1062,12 +1062,12 @@
         "sidebar_label": "Implement File (WebDAV)"
       },
       "getting-started/appdev-introduction": {
-        "title": "アプリを開発する",
-        "sidebar_label": "アプリを開発する"
+        "title": "はじめに",
+        "sidebar_label": "はじめに"
       },
       "getting-started/appdev-management-tool": {
-        "title": "Management tool (Unit Manager)",
-        "sidebar_label": "Management tool (Unit Manager)"
+        "title": "管理ツール（Unit Manager）",
+        "sidebar_label": "管理ツール（Unit Manager）"
       },
       "getting-started/appdev-process": {
         "title": "アプリ開発の流れ",
