@@ -424,7 +424,6 @@
         "label": "For Server Operator",
         "ids": [
           "server-operator/README",
-          "server-operator/setup",
           "server-operator/Confirm_environment_settings",
           "server-operator/setup_authentication_plugins",
           "server-operator/setup_engine_extensions",
@@ -448,7 +447,8 @@
         "label": "Old Docs",
         "ids": [
           "server-operator/setup_virtual_image",
-          "server-operator/proxy_exclusion_setting"
+          "server-operator/proxy_exclusion_setting",
+          "server-operator/setup"
         ]
       }
     ],

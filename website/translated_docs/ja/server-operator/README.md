@@ -7,7 +7,7 @@ sidebar_label: サーバソフトウェア運用者向けガイド
 Personiumのサーバソフトウェアを使ってPersonium Unitを構築する方や、Personiumサーバプログラムをビルド・デプロイ・設定する方、
 Personiumを使用したPDSサービス環境を提供・運用したい方向けのドキュメントです。
 
-構築・設定済のPersonium Unitに対して、Cellの作成・払出しや、払出したCellの管理等を実施する方は、[Unit管理者向けガイド](../unit-administrator/)をご覧ください。
+構築・設定済のPersonium Unitに対して、Cellの作成・払出しや、払出したCellの管理等を実施する方は、[Unit管理者向けガイド](../unit-administrator/README.md)をご覧ください。
 
 ## システム構成とセットアップツール
 
@@ -48,7 +48,7 @@ Personium Unitは`https://alice.personium.example`や`https://bob.personium.exam
 
 上記を簡単に行うために、ローカルネットワーク上で構築するよりもパブリックIaaSとDNSサービスを使って構築することを推奨します。
 
-詳細な手順は後述の[[Personium Ansible Playbook上の実行手順](https://github.com/personium/ansible/tree/master)の中で記載しています。
+詳細な手順は後述の[Personium Ansible Playbook上の実行手順](https://github.com/personium/ansible/tree/master)の中で記載しています。
 
 ## Unitの構築
 
@@ -62,7 +62,7 @@ Unit構築にはVagrant、Ansibleを利用することができます。またOp
 
     Ansible(1-Server)を利用してLinuxサーバ1台構成のUnitを構築するためのガイドを公開しています。
 
-    * [Getting Started: Unitの構築](../getting-started/appdev-appcell-and-box.md)
+    * [Getting Started: Unitの構築](../getting-started/setup-unit.md)
     * [Ansible(1-server)](https://github.com/personium/ansible/tree/master/1-server_unit)
 
 * Vagrant (+ Ansible)
@@ -98,7 +98,7 @@ Unit構築にはVagrant、Ansibleを利用することができます。またOp
 
 * [構築したUnitの環境確認](./Confirm_environment_settings.md)
 
-構築完了後、Unitの管理方法を確認したい場合は[こちら](../unit-administrator/)をご覧ください。
+構築完了後、Unitの管理方法を確認したい場合は[こちら](../unit-administrator/README.md)をご覧ください。
 
 ### Pluginの導入
 
@@ -136,7 +136,7 @@ Unitの構成ができたら、Unitを正しく設定する必要があります
 * Unitのセキュリティ対応について  
     構築した環境は場合によってはセキュリティホールとなりえる情報が設定が含まれています。そのため、デフォルトから変更したほうが良い設定について説明します。
     
-    * [デフォルトからの変更を推奨する設定](unit_security.md)
+    * [デフォルトからの変更を推奨する設定](./unit_security.md)
 
 ### 関連するリポジトリ
 
