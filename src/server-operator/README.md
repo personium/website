@@ -6,7 +6,7 @@ sidebar_label: Server Software Operator's Guide
 
 It is a document for people who use Personium's server software to build Personium units, who build/deploy/configure Personium server programs, and who wish to provide / operate a PDS service environment using Personium.
 
-Those who access the constructed/configured Personium unit using the unit user token and perform the main task of the unit administrator, that is, the creation/payout of the Cell, management of the dispensed Cell, etc., Please see [Guide for unit administrator](../unit-administrator/).
+Those who access the constructed/configured Personium unit using the unit user token and perform the main task of the unit administrator, that is, the creation/payout of the Cell, management of the dispensed Cell, etc., Please see [Guide for unit administrator](../unit-administrator/README.md).
 
 ### Personium unit structure
 
@@ -103,7 +103,7 @@ Confirm the environment information of the main middleware of the unit construct
 
 * [Confirmation of the environment of units constructed](./Confirm_environment_settings.md)
 
-When you want to check how to manage the unit after build, please click [here](../unit-administrator/).
+When you want to check how to manage the unit after build, please click [here](../unit-administrator/README.md).
 
 ### Apply plugin
 

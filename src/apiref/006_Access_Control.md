@@ -288,7 +288,7 @@ After applying the following ACL setting to the above resource, the authorities 
 
 ## Schema authority request level
 For access control to the application according to the schema authority request level, the request level is set by the RequireSchemaAuthz attribute of the ACL element at the time of setting the ACL.  
-For schema authentication specifications, see "Schema authentication (application authentication)" in the authentication model.  
+For schema authentication specifications, see "Schema authentication (application authentication)" in the authorization model.  
 
 ### Setting value
 Schema privilege request level value  
