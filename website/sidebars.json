@@ -63,7 +63,7 @@
       },
       {
         "type": "subcategory",
-        "label": "Cell Control Object",
+        "label": "Role (Cell Control Object)",
         "ids": [
           "apiref/201_Create_Role",
           "apiref/203_Retrieve_Role",
@@ -262,6 +262,14 @@
       },
       {
         "type": "subcategory",
+        "label": "OData: Service Document Retrieve/Schema Retrieve",
+        "ids": [
+          "apiref/317_Document_Acquisition_Service",
+          "apiref/316_User_Defined_Data_Schema"
+        ]
+      },
+      {
+        "type": "subcategory",
         "label": "OData: Schema Definition - EntityType",
         "ids": [
           "apiref/345_Create_EntityType",
@@ -318,14 +326,6 @@
       },
       {
         "type": "subcategory",
-        "label": "OData: Service Dcoument Retrieve/Schema Retrieve",
-        "ids": [
-          "apiref/317_Document_Acquisition_Service",
-          "apiref/316_User_Defined_Data_Schema"
-        ]
-      },
-      {
-        "type": "subcategory",
         "label": "OData: Data Manipulation",
         "ids": [
           "apiref/364_Create_Entity",
@@ -366,6 +366,16 @@
       }
     ],
     "Common": [
+      "apiref/005_Variable_of_Request_URL",
+      {
+        "type": "subcategory",
+        "label": "Error",
+        "ids": [
+          "apiref/004_Error_Messages",
+          "apiref/error/PR401-AU-0008",
+          "apiref/error/PR503-SV-0001"
+        ]
+      },
       {
         "type": "subcategory",
         "label": "OData Acquisition Common Queries",
@@ -381,8 +391,6 @@
           "apiref/408_Full_Text_Search_Query"
         ]
       },
-      "apiref/005_Variable_of_Request_URL",
-      "apiref/004_Error_Messages",
       "apiref/003_Common_Limitations_on_HTTP_Implementation",
       "apiref/002_CORS_Support",
       "apiref/001_Cross_Domain_Policy_File"
