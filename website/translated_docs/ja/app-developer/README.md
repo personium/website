@@ -15,9 +15,11 @@ PersoniumのAPIを使用して、アプリを開発する人のためのドキ�
 3. [アプリ開発の流れ](../getting-stared/appdev-process.md)
 4. [アプリの実装](../getting-stared/appdev-impl.md)
 
-### [OData,WebDAVの体験](https://baas-demo.demo-jp.personium.io/1/index.html)
+### OData, WebDAVのデモ
 
-このデモでODataとWebDAVの概要をつかんでおくと後が楽になります。
+Personiumのデータ操作はOData, WebDAVによって行います。仕様を理解するためにOData, WebDAVのデモを体験することを推奨します。
+
+[OData,WebDAVのデモ](https://baas-demo.demo-jp.personium.io/1/index.html)
 
 ## アプリ開発の詳細
 

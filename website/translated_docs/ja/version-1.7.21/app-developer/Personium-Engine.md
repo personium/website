@@ -145,4 +145,4 @@ Engine Extensionを使用したい方は、[Engine Extensionのセットアッ�
 
 ### Engine Extension の開発
 
-Engine Extensionを開発したい方は、[プラグイン開発者向けガイド](../plugin-developer/)をご覧ください。
+Engine Extensionを開発したい方は、[プラグイン開発者向けガイド](../plugin-developer/README.md)をご覧ください。
