@@ -1194,8 +1194,8 @@
         "sidebar_label": "Unitユーザ"
       },
       "unit-administrator/tutorial": {
-        "title": "Personium Unit管理 チュートリアル",
-        "sidebar_label": "Personium Unitの管理"
+        "title": "Cellの払い出し チュートリアル",
+        "sidebar_label": "Cellの払い出し"
       },
       "user_guide/001_Personium_Architecture": {
         "title": "Personiumのアーキテクチャ",
