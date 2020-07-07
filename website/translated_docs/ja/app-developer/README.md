@@ -26,7 +26,7 @@ PersoniumのAPIを使用して、アプリを開発する人のためのドキ�
 - 認可
   - [認可モデル](../user_guide/003_Auth.md)
   - [Personiumにおけるロール](./Roles.md)
-  - [RBACによるアクセス制御](../apiref/006_Access_Control.md)
+  - [アクセス制御モデル](../apiref/006_Access_Control.md)
   - [アプリ認証](./app_authn.md)
   - [Single Sign On](./launch_from_homeapp.md)
 - Box/barファイル
