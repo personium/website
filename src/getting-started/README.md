@@ -18,7 +18,7 @@ This Getting Started guide is roughly divided into two chapters . "1. Preparing 
 
 ![Getting Started 2 steps](assets/users-for-getting-started.png)
 
-The details of the chapter structure are as follows.
+The following is the layout of each chapter.
 
 1. Preparation of Personium (for Personium operators)
     1. [Setup Personium Unit](./setup-unit.md)
