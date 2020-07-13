@@ -61,6 +61,6 @@ Access `https://{Personium Unit domain name}/` with a browser. A response in the
 
 ### Access information for Personium Unit management
 
-When built with Ansible Playbook, a Unit management account for creating a Cell will be created. For the Unit management account, refer to the following document.
+When built with Ansible Playbook, a Unit management account for creating Cells will be created. For details on the Unit management account, refer to the following document.
 
 [Personium Unit management account](../server-operator/Confirm_environment_settings.md#personium-unit-management-account)
