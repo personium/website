@@ -206,7 +206,7 @@ Check the basic settings of the server on which the AP service runs.
     * {unitadmin_password} Unit management password
 
 > **(Caution)**
-> **The information acquired here is the initial value, so if the user changes it, please manage it yourself.**
+> **The information acquired here is the initial value, so if the Unit Manager changes it, please manage it properly.**
 
 ## DB service
 
