@@ -6,7 +6,7 @@ sidebar_label: Introduction
 
 ## Introduction
 
-This document is an introductory article for those who are new to Personium. The purpose of this document is to familiarize you with the basics of Personium so that you can use it.
+This Getting Started guide is for those who are new to Personium. It will cover the fundamental and technical knowledge of Personium.
 
 ## Prerequisite knowledge
 
