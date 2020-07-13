@@ -21,7 +21,7 @@ Doing the above for each app will be a burden for the user. If there is an app t
 The remaining section describes the following specifications of the HomeApp.
 
 * Parameters passed from the HomeApp when the app is launched
-* Processing to be done after launching the application
+* Process to be performed by the app
 
 Caution: Personium core version 1.6.9 or above required
 
