@@ -1,7 +1,7 @@
 ---
 id: tutorial
 title: Cell creation tutorial
-sidebar_label: Payout of Cell
+sidebar_label: Create Cell
 ---
 
 **\* This document is intended for those who use Personium Version 1.6.15 or later.**
