@@ -42,6 +42,6 @@ This is a sample application that captures the location history data accumulated
 
 ## Timefiller
 
-This is a sample application that recommends event information based on the schedule information and profile information accumulated on PDS in conjunction with Personium Calendar.
+This is a sample application that recommends event information based on the schedules and profile information accumulated on PDS in conjunction with Personium Calendar.
 
 * [Timefiller](https://github.com/personium/app-timefiller)
