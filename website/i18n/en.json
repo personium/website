@@ -1147,7 +1147,7 @@
       },
       "unit-administrator/tutorial": {
         "title": "Cell creation tutorial",
-        "sidebar_label": "Payout of Cell"
+        "sidebar_label": "Create Cell"
       },
       "unit-administrator/Unit-User": {
         "title": "Unit User",
