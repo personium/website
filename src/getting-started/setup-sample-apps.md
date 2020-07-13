@@ -26,7 +26,7 @@ All apps introduced below can be authenticated and launched from the home app.
 
 This is a sample app that shares text with other people.
 
-* [My Board](https://github.com/personium/app-myboard)
+* [MyBoard](https://github.com/personium/app-myboard)
 
 ## Personium Calendar
 
