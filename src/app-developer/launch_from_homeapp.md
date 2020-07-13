@@ -18,7 +18,7 @@ Doing the above for each app will be a burden for the user. If there is an app t
 
 * [Home App](https://github.com/personium/app-cc-home)
 
-The following section describes the specifications of the following Home apps.
+The remaining section describes the following specifications of the HomeApp.
 
 * Parameters passed at application startup
 * Processing to be done after launching the application
