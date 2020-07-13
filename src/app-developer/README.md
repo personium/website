@@ -37,6 +37,6 @@ Details of app development are divided in the following categories.
 
 ## Sample app
 
-Some sample applications have been released as JavaScript applications for web browsers.
+Some sample apps have been released as JavaScript web apps.
 
 See [Building a sample app](../getting-started/setup-sample-apps.md) in Getting Started.
