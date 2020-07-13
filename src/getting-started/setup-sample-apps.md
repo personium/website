@@ -36,7 +36,7 @@ This is a sample application that aggregates and manages data on existing calend
 
 ## Personium Trails
 
-This is a sample application that captures the movement history data accumulated on Google into PDS and discloses a part of the data to others.
+This is a sample application that captures the location history data accumulated on Google into PDS and allow user to discloses selected data to third parties.
 
 * [Personium Trails](https://github.com/personium/app-personium-trails)
 
