@@ -982,8 +982,8 @@
         "sidebar_label": "App authentication"
       },
       "app-developer/launch_from_homeapp": {
-        "title": "Launch application from Home application",
-        "sidebar_label": "Launch application from Home application"
+        "title": "Single Sign On",
+        "sidebar_label": "Single Sign On"
       },
       "app-developer/Personium_Apps": {
         "title": "Personium App",
@@ -994,8 +994,8 @@
         "sidebar_label": "Personium Engine"
       },
       "app-developer/README": {
-        "title": "Application Developer's Guide",
-        "sidebar_label": "Application Developer's Guide"
+        "title": "Guide for App Developers",
+        "sidebar_label": "Guide for app developers"
       },
       "app-developer/Roles": {
         "title": "Role in Personium",
@@ -1038,12 +1038,12 @@
         "sidebar_label": "Introduction"
       },
       "getting-started/setup-sample-apps": {
-        "title": "Setup Sample Apps",
-        "sidebar_label": "Setup Sample Apps"
+        "title": "Building a sample app",
+        "sidebar_label": "Building a sample app"
       },
       "getting-started/setup-unit": {
-        "title": "Setup Unit",
-        "sidebar_label": "Setup Unit"
+        "title": "Setup Personium Unit",
+        "sidebar_label": "Setup Personium Unit"
       },
       "installation_guide/001_Readme_before_installation": {
         "title": "Readme before installation",
@@ -1146,7 +1146,7 @@
         "sidebar_label": "Unit Administrator's Guide"
       },
       "unit-administrator/tutorial": {
-        "title": "Personium Unit management tutorial",
+        "title": "Cell creation tutorial",
         "sidebar_label": "Create Cell"
       },
       "unit-administrator/Unit-User": {

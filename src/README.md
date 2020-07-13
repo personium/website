@@ -10,15 +10,28 @@ Register to join the Slack community [here](https://bit.ly/Join_Personium_Slack)
 
 ## Introduction
 
-#### [What is Personium?](./overview/001_Introduction.md)
-#### [Personium Architecture](./user_guide/001_Personium_Architecture.md)
-#### [Glossary](./user_guide/008_Glossary.md)
+* [What is Personium?](./overview/001_Introduction.md)
+* [Personium Architecture](./user_guide/001_Personium_Architecture.md)
+* [Glossary](./user_guide/008_Glossary.md)
+
+## Personium user types
+
+Personium users can be divided into the following:
+
+| User type | Description |
+|-------------|----|
+|Personium operator |Constructs Personium server and manages PDS services|
+| App Developer | Developes apps using Personium APIs |
+
+The figure below shows the relationship.
+
+![Personium user type](assets/personium-users.png)
 
 ## Getting Started
 
 Below you will find the introductory documentation for Personium operators and app developers.
 
-* [Getting Started](./getting-started/README.md)
+[Getting Started](./getting-started/README.md)
 
 ## User Guides
 

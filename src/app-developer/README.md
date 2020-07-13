@@ -1,74 +1,42 @@
 ---
 id: README
-title: Application Developer's Guide
-sidebar_label: Application Developer's Guide
+title: Guide for App Developers
+sidebar_label: Guide for app developers
 ---
 
-Personiumを使ってアプリケーションを開発するためのドキュメントです。
+This document is for developers who develop apps using Personium's APIs.
 
-## Application structure
+## Introduction to app development
 
-一般のアプリと同様、Personiumを使ってブラウザアプリ・ネイティブアプリなど様々なアプリを開発することができます。一般のアプリと違う点はユーザーのデータが各ユーザーのPDS上の領域に格納されることです。
+To learn the basics of app development, refer to the following documents in Getting Started.
 
-以下の図はブラウザアプリの場合の構成例となります。
+1. [Introduction](../getting-stared/appdev-introduction.md)
+2. [Unit Manager](../getting-stared/appdev-management-tool.md)
+3. [App development flow](../getting-stared/appdev-process.md)
+4. [App implementation](../getting-stared/appdev-impl.md)
 
-```
-# 図
-user -----> WEB Server
-app ------> UserCell data
-app ------> API Server -----> UserCell data
-app ------> API Server -----> DB
-```
+## App development details
 
-Personiumを使ってアプリを開発する場合、上記のような構成になるように行います。
+Details of app development are divided in the following categories.
 
-### OAuth
+- Authorization
+  - [Authorization model](../user_guide/003_Auth.md)
+  - [Role in Personium](./Roles.md)
+  - [Access control by RBAC](../apiref/006_Access_Control.md)
+  - [App Authentication](./app_authn.md)
+  - [Single Sign On](./launch_from_homeapp.md)
+- Box/bar file
+  - [Box installation](../apiref/007_Box_install.md)
+  - [bar file](../apiref/301_Bar_File.md)
+- Collection
+  - [WebDAV](../user_guide/007_WebDAV_model.md)
+  - [OData](./using_odata.md)
+  - [Personium Engine](./Personium-Engine.md)
+  - [Engine Script samples](./671_Engine_Script_Samples.md)
+- [Cell GUI Developer's Guide](../cell-gui-developer/README.md)
 
-データアクセスの認可はOAuthに基づいて行います。
+## Sample app
 
-### Box
+Some sample apps have been released as JavaScript web apps.
 
-アプリのデータアクセスはBoxという領域に行います。
-
-### WebDavとOData
-
-データアクセスの種類としてWebDavとODataがあります。
-
-### As WEB and API Server
-
-Cellは基本ユーザーのデータ領域ですが、アプリ用のCellを用意することで、そこをWebサーバ・APIサーバとして使えます。
-
-Webサーバ・APIサーバとしてのアプリCellは必須ではなく、別サーバの使用も可能です。
-
-```
-# 図
-user -----> AppCell data
-app ------> UserCell (EngineScript) --> UserCell Data
-app ------> AppCell
-app ------> AppCell (EngineScript) --> AppCell Data
-```
-
-## 開発者ツール
-
-Unit Manager
-
-## サンプルアプリ
-
-
-
-## 詳細
-
-- 認証認可
-  - 全体像
-  - Role/ACL詳細
-  - アプリ認証詳細
-  - Single Sign On
-- Box
-  - 概要
-  - BarファイルとBoxインストール
-- コレクション
-  - WebDAV
-  - OData
-  - EngineScript
-  - Stream
-- CellGUIカスタマイズ
+See [Building a sample app](../getting-started/setup-sample-apps.md) in Getting Started.
