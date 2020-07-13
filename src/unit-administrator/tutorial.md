@@ -1,6 +1,6 @@
 ---
 id: tutorial
-title: Payout of Cell tutorial
+title: Cell creation tutorial
 sidebar_label: Payout of Cell
 ---
 
