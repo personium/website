@@ -24,7 +24,7 @@ The following is the layout of each chapter.
     1. [Setup Personium Unit](./setup-unit.md)
     2. [Payout of Cell](../unit-administrator/tutorial.md)
     3. [Building a sample app](./setup-sample-apps.md)
-2. App development (for app developers)
+2. Developing app (for app developers)
     1. [Introduction](./appdev-introduction.md)
     2. [Management Tool (Unit Manager)](./appdev-management-tool.md)
     3. [Flow of application development](./appdev-process.md)
