@@ -8,7 +8,7 @@ This page describes HomeApp which is a sample app for realizing Single Sign On.
 
 ## HomeApp
 
-In the case of using the authorization code flow, an application using Personium needs the following at the beginning of the flow.
+In the case of using the authorization code flow, an app using Personium needs the user to perform the followings.
 
 1. Input Cell URL of data subject
 2. Authentication and consent on Cell URL
