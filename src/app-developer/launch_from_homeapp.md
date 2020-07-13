@@ -6,7 +6,7 @@ sidebar_label: Single Sign On
 
 This page describes HomeApp which is a sample app for realizing Single Sign On.
 
-## Home app
+## HomeApp
 
 In the case of using the authorization code flow, an application using Personium needs the following at the beginning of the flow.
 
