@@ -14,7 +14,7 @@ In the case of using the authorization code flow, an app using Personium needs t
 2. User authenticates and approves permission to access the contents in the Cell (beginning of every flow)
 3. User installs the Bar file in advance
 
-Doing the above for each app will be a burden on the user operation, but if there is an app that can manage and authenticate the apps collectively, this problem can be solved. The Home app is a sample app that does this. It is published in the following repositories.
+Doing the above for each app will be a burden for the user. If there is an app that can manage and authenticate the apps collectively, this issue can be solved. The HomeApp is a sample app that does this. It is published in the following repository.
 
 * [Home App](https://github.com/personium/app-cc-home)
 
