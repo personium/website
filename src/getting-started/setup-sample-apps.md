@@ -22,7 +22,7 @@ This is a sample application for managing applications that uses Personium and l
 
 All apps introduced below can be authenticated and launched from the home app.
 
-## My Board
+## MyBoard
 
 This is a sample app that shares text with other people.
 
