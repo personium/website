@@ -187,7 +187,7 @@ Check the basic settings of the server on which the AP service runs.
 
 #### Personium Unit Management Account
 
-* Running Ansible will automatically create a Personium Unit administration account. This information is required for the Personium Unit administrator to perform administrative work such as creating cells.
+* Running Ansible will automatically create a Personium Unit Management account. This information is required for the Personium Unit Manager to perform administrative work such as creating cells.
 
     Confirm ID/PASS of Unit management account
 
