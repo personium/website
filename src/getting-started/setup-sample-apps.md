@@ -20,7 +20,7 @@ This is a sample application for managing applications that uses Personium and l
 
 * [HomeApp](https://github.com/personium/app-cc-home)
 
-All apps introduced below can be authenticated and activated from the home app.
+All apps introduced below can be authenticated and launched from the home app.
 
 ## My Board
 
