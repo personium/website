@@ -1,7 +1,7 @@
 ---
 id: README
 title: Guide for App Developers
-sidebar_label: A guide for app developers
+sidebar_label: Guide for app developers
 ---
 
 This document is for developers who develop apps using Personium's APIs.
