@@ -12,7 +12,7 @@ If you want to build with other configurations, please refer to [Server Software
 
 ## Precautions
 
-Personium Unit is based on the assumption that HTTPS access is performed in different subdomains depending on the data subject such as `https://alice.personium.example` and `https://bob.personium.example`, so the following is the basic Will be required.
+Personium Unit assumes that HTTPS access is performed in different subdomains depending on the data subject such as `https://alice.personium.example` and `https://bob.personium.example`, so the followings are required.
 
 -DNS record setting with a wildcard domain name such as `*.personium.example` for the IP address accessing the web server
 -Get and set SSL certificate corresponding to wildcard domain name such as `*.personium.example`
