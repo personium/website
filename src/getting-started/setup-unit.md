@@ -33,7 +33,7 @@ Create a VM with public IaaS. The parameters suggested below has been confirmed 
 |OS Disk |30 GiB|
 | Public IP address | Yes |
 
-> Personium itself works on OSs other than CentOS7, but since the Ansible Playbook used later is based on CentOS7, please use CentOS7 series.
+> Personium itself works on OSs other than CentOS7, but since the Ansible Playbook that we tested is based on CentOS7, please use CentOS7 series to avoid any configuration trouble.
 
 ### Security group/firewall settings
 
