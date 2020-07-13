@@ -17,7 +17,7 @@ Personium Unit assumes that HTTPS access is performed in different subdomains de
 -DNS record setting with a wildcard domain name such as `*.personium.example` for the IP address accessing the web server
 -Get and set SSL certificate corresponding to wildcard domain name such as `*.personium.example`
 
-To simplify the above, it is recommended to build using public IaaS and DNS service rather than building on the local network. This section also takes steps based on that.
+To simplify the above, it is recommended to build the Personium Unit using public IaaS and DNS service rather than building on a local network. This section introduces the steps based on public IaaS and DNS service.
 
 ## Unit construction
 
