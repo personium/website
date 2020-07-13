@@ -14,7 +14,7 @@ This is a sample application that manages data on Personium.
 
 * [Unit Manager](https://github.com/personium/app-uc-unit-manager)
 
-## Home app
+## HomeApp
 
 This is a sample application for centrally managing an application that uses Personium and performing Single Sign On.
 
