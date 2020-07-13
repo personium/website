@@ -20,7 +20,7 @@ Personium users can be divided into the following:
 
 | User type | Description |
 |-------------|----|
-|Personium operator |Personium server construction and operation management|
+|Personium operator |Constructs Personium server and manages PDS services|
 | App Developer | Developing apps using Personium APIs |
 
 The figure below shows the relationship.
