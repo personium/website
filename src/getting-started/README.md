@@ -20,7 +20,7 @@ This Getting Started guide is roughly divided into two chapters . "1. Preparing 
 
 The following is the layout of each chapter.
 
-1. Preparation of Personium (for Personium operators)
+1. Preparing Personium (for Personium operators)
     1. [Setup Personium Unit](./setup-unit.md)
     2. [Payout of Cell](../unit-administrator/tutorial.md)
     3. [Building a sample app](./setup-sample-apps.md)
