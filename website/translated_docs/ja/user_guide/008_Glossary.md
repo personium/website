@@ -91,7 +91,7 @@ sidebar_label: 用語集
 
 ## <a name="anc_e"> E</a>
 ### Engine Service Collection
-<font size=1>[Personium]</font> ユーザがサーバ側のロジックを新たに登録するための特別なコレクション。詳細は[Engineサービスコレクション](../apiref/379_Engine_Service_Collection_APIs.md)を参照。
+<font size=1>[Personium]</font> ユーザがサーバ側のロジックを新たに登録するための特別なコレクション。詳細は[Personium Engine](../app-developer/Personium-Engine.md)を参照。
 
 
 ### Entity
@@ -296,7 +296,7 @@ Personiumでは以下の種類:があり、発行から1時間で変更される
 
 
 ### Token (トークン)認証
-<font size=1>[一般]</font> 認証プロセスの一つ。クライアントがリクエストするcURLのアクセストークンによる認証方法。詳細は[認証モデル](./003_Auth.md)を参照。
+<font size=1>[一般]</font> 認証プロセスの一つ。クライアントがリクエストするcURLのアクセストークンによる認証方法。詳細は[認可モデル](./003_Auth.md)を参照。
 
 
 ### $top クエリ

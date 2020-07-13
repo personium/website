@@ -10,7 +10,7 @@ sidebar_label: はじめに
 
 ## 前提知識
 
-Personiumの共通となる前提知識として、[Personiumのアーキテクチャー](../user_guide/001_Personium_Architecture.md)を読んでいない場合、読むことを推奨します。
+Personiumの共通となる前提知識として、[Personiumのアーキテクチャ](../user_guide/001_Personium_Architecture.md)を読んでいない場合、読むことを推奨します。
 
 ## 章構成
 

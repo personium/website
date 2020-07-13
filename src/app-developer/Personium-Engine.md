@@ -132,4 +132,4 @@ If you would like to use Engine Extension please see [Setup Engine Extensions](.
 
 ### Engine Extension development
 
-If you would like to develop Engine Extension please see [the guide for plugin developer](../plugin-developer/).
+If you would like to develop Engine Extension please see [the guide for plugin developer](../plugin-developer/README.md).

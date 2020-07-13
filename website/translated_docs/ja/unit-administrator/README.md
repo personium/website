@@ -7,7 +7,7 @@ sidebar_label: Unit管理者向けガイド
 構築・設定済のPersonium Unitに対してUnitユーザトークンを使ってアクセスして、
 Unit管理者の業務、すなわちCellの作成・払出しや払出したCellの管理等を実施する方のためのガイドドキュメントです。
 
-Personium Unitを構築する方や、Personiumサーバプログラムをビルド・デプロイ・設定する方は、[サーバソフトウェア運用者向けガイド](../server-operator/)をご覧ください。
+Personium Unitを構築する方や、Personiumサーバプログラムをビルド・デプロイ・設定する方は、[サーバソフトウェア運用者向けガイド](../server-operator/README.md)をご覧ください。
 
 ## UnitユーザとユニットレベルAPI
 
@@ -25,7 +25,7 @@ Unitユーザに対しては、常にCellレベル・Boxレベルのすべての
 Personium Unitを管理するための基本的な操作に関するチュートリアルを公開しています。
 Personium Unitを初めて管理される方はご確認ください。
 
-* [PersoniumUnit管理 チュートリアル](./tutorial.md)
+* [Cellの払い出し チュートリアル](./tutorial.md)
 
 
 ## GUIを利用したユニットの管理

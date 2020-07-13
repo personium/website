@@ -15,9 +15,11 @@ PersoniumのAPIを使用して、アプリを開発する人のためのドキ�
 3. [アプリ開発の流れ](../getting-stared/appdev-process.md)
 4. [アプリの実装](../getting-stared/appdev-impl.md)
 
-### [OData,WebDAVの体験](https://baas-demo.demo-jp.personium.io/1/index.html)
+### OData, WebDAVのデモ
 
-このデモでODataとWebDAVの概要をつかんでおくと後が楽になります。
+Personiumのデータ操作はOData, WebDAVによって行います。仕様を理解するためにOData, WebDAVのデモを体験することを推奨します。
+
+[OData,WebDAVのデモ](https://baas-demo.demo-jp.personium.io/1/index.html)
 
 ## アプリ開発の詳細
 
@@ -26,7 +28,7 @@ PersoniumのAPIを使用して、アプリを開発する人のためのドキ�
 - 認可
   - [認可モデル](../user_guide/003_Auth.md)
   - [Personiumにおけるロール](./Roles.md)
-  - [RBACによるアクセス制御](../apiref/006_Access_Control.md)
+  - [アクセス制御モデル](../apiref/006_Access_Control.md)
   - [アプリ認証](./app_authn.md)
   - [Single Sign On](./launch_from_homeapp.md)
 - Box/barファイル

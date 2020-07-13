@@ -14,4 +14,6 @@ You need the following information to access your Cell.
 1. Account name with admin permission  
 1. Password of the above account  
 
+See [Personium Unit management account](../server-operator/Confirm_environment_settings.md#personium-unit-management-account) for more information.
+
 ![Login screen of Unit Manager](https://app-uc-unit-manager.appdev.personium.io/__/html/images/unit_manager_login.png)

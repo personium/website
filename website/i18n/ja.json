@@ -34,8 +34,8 @@
         "sidebar_label": "リクエストURLの変数一覧"
       },
       "apiref/006_Access_Control": {
-        "title": "RBACによるアクセス制御",
-        "sidebar_label": "RBACによるアクセス制御"
+        "title": "アクセス制御モデル",
+        "sidebar_label": "アクセス制御モデル"
       },
       "apiref/007_Box_install": {
         "title": "Boxインストール",
@@ -122,8 +122,8 @@
         "sidebar_label": "RoleのNavigation Property経由での他オブジェクト一覧取得"
       },
       "apiref/212_Create_Account": {
-        "title": "Account登録",
-        "sidebar_label": "Account登録"
+        "title": "Account作成",
+        "sidebar_label": "Account作成"
       },
       "apiref/213_Retrieve_Account": {
         "title": "Account取得",
@@ -1062,12 +1062,12 @@
         "sidebar_label": "Implement File (WebDAV)"
       },
       "getting-started/appdev-introduction": {
-        "title": "アプリを開発する",
-        "sidebar_label": "アプリを開発する"
+        "title": "はじめに",
+        "sidebar_label": "はじめに"
       },
       "getting-started/appdev-management-tool": {
-        "title": "Management tool (Unit Manager)",
-        "sidebar_label": "Management tool (Unit Manager)"
+        "title": "管理ツール（Unit Manager）",
+        "sidebar_label": "管理ツール（Unit Manager）"
       },
       "getting-started/appdev-process": {
         "title": "アプリ開発の流れ",
@@ -1194,8 +1194,8 @@
         "sidebar_label": "Unitユーザ"
       },
       "unit-administrator/tutorial": {
-        "title": "Personium Unit管理 チュートリアル",
-        "sidebar_label": "Personium Unitの管理"
+        "title": "Cellの払い出し チュートリアル",
+        "sidebar_label": "Cellの払い出し"
       },
       "user_guide/001_Personium_Architecture": {
         "title": "Personiumのアーキテクチャ",
@@ -1258,8 +1258,8 @@
         "sidebar_label": "リクエストURLの変数一覧"
       },
       "version-1.7.21-apiref/006_Access_Control": {
-        "title": "RBACによるアクセス制御",
-        "sidebar_label": "RBACによるアクセス制御"
+        "title": "アクセス制御モデル",
+        "sidebar_label": "アクセス制御モデル"
       },
       "version-1.7.21-apiref/007_Box_install": {
         "title": "Boxインストール",
@@ -2461,6 +2461,38 @@
       "Cell Level API": "Cell Level API",
       "Box Level API": "Box Level API",
       "Common": "共通",
+      "Unit Control Objects": "Unit制御オブジェクト",
+      "Other API's": "その他API",
+      "Authentication": "認証",
+      "Account (Cell Control Object)": "アカウント (Cell制御オブジェクト)",
+      "Access control": "アクセス制御",
+      "Role (Cell Control Object)": "ロール (Cell制御オブジェクト)",
+      "Cell Control Object": "Cell制御オブジェクト",
+      "External Cell (Cell Control Object)": "ExtCell (Cell制御オブジェクト)",
+      "Relation (Cell Control Object)": "Relation (Cell制御オブジェクト)",
+      "ExtRole (Cell Control Object)": "ExtRole (Cell制御オブジェクト)",
+      "Box creation and management inside the Cell": "Box作成・管理",
+      "Box (Cell Control Object)": "Box (Cell制御オブジェクト)",
+      "Message Manipulation": "メッセージ操作",
+      "Event processing": "イベント処理",
+      "Event Processing Rule (Cell Control Object)": "イベント処理ルール (Cell制御オブジェクト)",
+      "Event Log": "イベントログ",
+      "Cell root access": "Cellルートアクセス",
+      "Exporting / Importing the contents inside the Cell": "Cellのエクスポート/インポート",
+      "WebDAV: Collection Operations": "WebDAV: コレクション操作",
+      "WebDAV: File Operations": "WebDAV: ファイル操作",
+      "WebDAV: Common Operations": "WebDAV: 共通操作",
+      "OData: Schema Definition - EntityType": "OData: スキーマ定義 - EntityType",
+      "OData: Schema Definition - Property": "OData: スキーマ定義 - Property",
+      "OData: Schema Definition - AssociationEnd": "OData: スキーマ定義 - AssociationEnd",
+      "OData: Schema Definition - ComplexType": "OData: スキーマ定義 - ComplexType",
+      "OData: Schema Definition - ComplexTypeProperty": "OData: スキーマ定義 - ComplexTypeProperty",
+      "OData: Service Document Retrieve/Schema Retrieve": "OData: スキーマ情報取得",
+      "OData: Data Manipulation": "OData: データ操作",
+      "Engine Service Collection": "Engine サービスコレクション",
+      "Stream Collection": "Stream コレクション",
+      "OData Acquisition Common Queries": "OData取得共通クエリ",
+      "Error": "エラー",
       "Introduction": "はじめに",
       "Getting Started": "Getting Started",
       "Prepare Personium": "Personiumの準備",

@@ -199,13 +199,13 @@ AP サービスが動作するサーバの基本設定を確認します。
     $ sudo su -
     # cat /root/ansible/unitadmin_account  
     unitadmin_account={unitadmin_account}  
-    unitudmin_password={unitudmin_password}  
+    unitadmin_password={unitadmin_password}  
     Personium_FQDN={Personium_FQDN}  
     ```  
 
     * {Personium_FQDN} Personium UnitのFQDN
     * {unitadmin_account} Unit管理アカウント
-    * {unitudmin_password} Unit管理パスワード
+    * {unitadmin_password} Unit管理パスワード
 
 >**（注意）**  
 >**ここで取得した情報は初期値であるため、ユーザが変更した場合は各自で管理するようにしてください。**

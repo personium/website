@@ -1,6 +1,6 @@
 ---
 id: tutorial
-title: Personium Unit management tutorial
+title: Cell creation tutorial
 sidebar_label: Create Cell
 ---
 

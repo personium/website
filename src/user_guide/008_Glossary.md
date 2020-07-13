@@ -93,7 +93,7 @@ For details, refer to [bar File](../apiref/301_Bar_File.md).
 
 ## <a name="anc_e"> E</a>
 ### Engine Service Collection
-<font size=1>[Personium]</font> A special collection for the user to register new logic on the server side. For details, refer to [Engine Service Collection](../apiref/379_Engine_Service_Collection_APIs.md).
+<font size=1>[Personium]</font> A special collection for the user to register new logic on the server side. For details, refer to [Personium Engine](../app-developer/Personium-Engine.md).
 
 
 ### Entity
