@@ -17,7 +17,7 @@ To learn the basics of app development, refer to the following documents in Gett
 
 ## App development details
 
-Details of app development are divided by topic.
+Details of app development are divided in the following categories.
 
 - Authorization
   - [Authorization model](../user_guide/003_Auth.md)
