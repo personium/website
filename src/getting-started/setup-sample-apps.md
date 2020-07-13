@@ -18,7 +18,7 @@ This is a sample application that manages data on Personium.
 
 This is a sample application for managing applications that uses Personium and launch such applications using Single Sign On flow.
 
-* [Home App](https://github.com/personium/app-cc-home)
+* [HomeApp](https://github.com/personium/app-cc-home)
 
 All apps introduced below can be authenticated and activated from the home app.
 
