@@ -1,6 +1,6 @@
 ---
 id: setup-sample-apps
-title: Building the sample app
+title: Building a sample app
 sidebar_label: Building a sample app
 ---
 
