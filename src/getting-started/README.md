@@ -12,7 +12,7 @@ This Getting Started guide is for those who are new to Personium. It will cover 
 
 It is recommended to read the [Personium architecture](../user_guide/001_Personium_Architecture.md) chapter before you continue further.
 
-## Chapter structure
+## Chapter's layout
 
 The Getting Started is roughly divided into a chapter "1. Preparing Personium" for Personium operators and a chapter "2. App Development" for app developers. The position of each chapter is as shown in the figure below.
 
