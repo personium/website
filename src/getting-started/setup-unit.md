@@ -23,7 +23,7 @@ To simplify the above, it is recommended to build the Personium Unit using publi
 
 ### Create VM
 
-Create a VM with public IaaS. The parameters whose operation has been confirmed are listed below as reference information for creating the VM. (Information as of June 2020)
+Create a VM with public IaaS. The parameters suggested below has been confirmed recently. (As of June 2020)
 
 | Item | Value |
 |----|----|
