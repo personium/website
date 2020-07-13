@@ -30,4 +30,4 @@ The following is the layout of each chapter.
     3. [Flow of application development](./appdev-process.md)
     4. [App implementation](./appdev-impl.md)
 
-> If you can use the built-in Personium, you can skip the chapter "1. Preparing Personium" and read from the chapter "2. App Development".
+> If you have access to a Personium Unit, you can skip "1. Preparing Personium" and start from "2. Developing app".
