@@ -8,7 +8,7 @@ sidebar_label: Introduction
 
 This Getting Started guide is for those who are new to Personium. It will cover the fundamental and technical knowledge of Personium.
 
-## Prerequisite knowledge
+## Prerequisite  
 
 If you have not read [Personium architecture](../user_guide/001_Personium_Architecture.md) as a common prerequisite knowledge of Personium, it is recommended to read it.
 
