@@ -14,7 +14,7 @@ It is recommended to read the [Personium architecture](../user_guide/001_Personi
 
 ## Chapter's layout
 
-The Getting Started is roughly divided into a chapter "1. Preparing Personium" for Personium operators and a chapter "2. App Development" for app developers. The position of each chapter is as shown in the figure below.
+This Getting Started guide is roughly divided into two chapters . "1. Preparing Personium" for Personium operators and "2. Devloping app" for app developers. Each chapter corresponds to the layers as shown in the figure below.
 
 ![Getting Started 2 steps](assets/users-for-getting-started.png)
 
