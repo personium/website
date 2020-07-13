@@ -6,7 +6,7 @@ sidebar_label: Setup Personium Unit
 
 ## Introduction
 
-This section describes the construction of Personium Unit. As an introduction, we will build an All-in-one personium unit with an Ansible Playbook that allows all the roles of one server on IaaS.
+This section describes the construction of Personium Unit. As an introduction, we will build an All-in-one Personium Unit with an Ansible Playbook that allows all the roles of one server on IaaS.
 
 If you want to build with other configurations, please refer to [Server Software Operator's Guide](../server-operator/README.md).
 
