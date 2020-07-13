@@ -4,7 +4,7 @@ title: Single Sign On
 sidebar_label: Single Sign On
 ---
 
-This page describes Home application which is a sample application for realizing Single Sign On.
+This page describes HomeApp which is a sample app for realizing Single Sign On.
 
 ## Home app
 
