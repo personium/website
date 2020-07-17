@@ -34,7 +34,7 @@ The following figure shows the relationship between the data subject and app Cel
 
 ![Cell Relation](assets/getting-started/cell_relation.png)
 
-The development of the application is done for the data subject Cell part and the application Cell part.
+The scope of the app development includes both the data subject and app Cells.
 
 ## Box and bar file installation
 
