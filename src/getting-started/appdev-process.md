@@ -26,7 +26,7 @@ App Cell is used in the following authorization code flow operations.
 
 * Client registration: done by creating the application Cell
 * client_id: URL of the app Cell
-* client_secret: Authenticate and acquire the application using the account on the application Cell
+* client_secret: Token received from authentication of the account in the app Cell
 
 You can also host static websites by storing files such as HTML, JavaScript, CSS on the application Cell so that anyone can refer to the access settings. The sample application in JavaScript in this section is supposed to be hosted on the Cell application.
 
