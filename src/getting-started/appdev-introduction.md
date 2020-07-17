@@ -34,7 +34,7 @@ In the sample app, the following operations are performed in advance.
 
 When developing an app that uses Personium, please perform the same operations. Refer to [Previous Chapter Tutorial](../unit-administrator/tutorial.md) for the APIs relevant to Cell creation.
 
-The usage and details of the two cells in the sample app are shown in the table below.
+The descriptions of the two cells used in the sample app are shown in the table below.
 
 |Use|Cell name|Account name|Role name linked to Account|Role permission settings|
 |----|---|---------|-----------------------|--------------|
