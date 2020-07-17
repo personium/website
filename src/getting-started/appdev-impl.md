@@ -237,7 +237,7 @@ In the following screen, a list of location histories from a specific period is 
 
 ![Movement history data list](assets/getting-started/trails_locations.png)
 
-OData is suitable for the data you want to search. Use [Entity list acquisition](../apiref/365_List_Entity.md) API of OData collection to get the data list of accommodations for a specific period. HTTP communication is as follows.
+OData is suitable for searching through location histories. The following is an example of using [Entity list acquisition](../apiref/365_List_Entity.md) API of OData collection to get a list of locations for a specific period.
 
 ```text
 # request
