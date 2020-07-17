@@ -292,7 +292,7 @@ Status Code: 200
 
 ## Data sharing
 
-In Personium, you can share data with others by setting ACL of resources. In the sample application, by pressing a toggle on part of the movement history data, anyone can view it without authentication.
+In Personium, you can share data with others by setting the ACL (access control list) of resources. In the sample app, by clicking the toggle button to "pubic", anyone can view it without authentication.
 
 ![Movement history data list](assets/getting-started/trails_locations_public.png)
 
