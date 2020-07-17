@@ -51,7 +51,7 @@ The Personium community offers templates and deployment tools for [React](https:
 
 [personium-blank-app](https://github.com/personium/personium-blank-app)
 
-By using this tool, you can develop the original application by customizing from the minimum data subject Cell and application Cell. It also simplifies development work such as building bar files and uploading them to the Cell application.
+By using this tool, you can develop your original app by customizing the data subject and app Cell. The tool also simplifies development work such as building bar files and uploading them to the app Cell.
 
 ### Flow of initial construction
 
