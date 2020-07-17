@@ -38,7 +38,7 @@ The scope of the app development includes both the data subject and app Cells.
 
 ## Box and bar file installation
 
-The application needs to take the same data structure on Box in order to perform the intended behavior regardless of which data subject Cell is used. In Personium, before the user of the application uses the application, Box installation is performed using the bar file that defines the data structure of the data subject Cell, and the application-specific data structure is built on Box. Please refer to the following documents for details.
+The app needs to make sure that the same data structure is inside any data subject Cell's Box in order to perform the intended behavior. In Personium, before the user can start using the app, Box installation is required. Bar file is to be installed that defines the app-specific data structure of the box. Please refer to the following documents for details.
 
 * [Box installation](../apiref/007_Box_install.md)
 * [bar file](../apiref/301_Bar_File.md)
