@@ -6,7 +6,6 @@ sidebar_label: Flow of app development
 
 This section describes the flow of app development.
 
-First, let me explain a few things you should know before explaining the flow of application development.
 
 ## OAuth 2.0 authorization code flow
 
