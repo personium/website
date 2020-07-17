@@ -58,7 +58,7 @@ By using this tool, you can develop your original app by customizing the data su
 The procedures for setting up the environment are as follows.
 
 1. clone personium-blank-app to local development environment
-2. Construction of application Cell
+2. Construction of app Cell
    1. Editing the configuration file
    2. Deploy to application Cell (execute `npm run deploy`)
    3. ACL setting of file on application Cell
