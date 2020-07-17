@@ -8,7 +8,7 @@ We will explain the main API of Personium through the implementation of the samp
 
 [app-personium-trails](https://github.com/personium/app-personium-trails)
 
-The URL of Cell used in the sample application of this document is as shown in the table below.
+The dummy Cell URLs used in this sample app are listed below.
 
 |Cell type|URL|
 |-------|---|
