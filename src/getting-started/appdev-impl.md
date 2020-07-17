@@ -55,7 +55,7 @@ Location: https://alice.example/__authz
 &state=15933********-per
 ```
 
-This script generates the state parameter used for CSRF measures on the server side and redirects it to the authorization endpoint. In the parameter redirect_uri, specify the URL of the application that receives the authorization code and acquires the access token. In the sample app, the engine script `https://app-personium-trails.example/__/front/app` is received first, so specify this URL.
+On the server side, this endpoint generates the state parameter used for CSRF (Cross-Site Request Forgery) prevention and then redirects the request to the authorization endpoint. In the parameter redirect_uri, the URL of the application that receives the authorization code is specified. In the sample app, the engine script endpoint (`https://app-personium-trails.example/__/front/app`) is specified.
 
 The HTTP communication to [OAuth 2.0 authorization endpoint](../apiref/292_OAuth2_Authorization_Endpoint.md) when redirecting is as follows.
 
