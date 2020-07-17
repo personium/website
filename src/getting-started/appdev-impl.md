@@ -79,7 +79,7 @@ The above response is rendered as an authentication form.
 
 ![Authentication Form](assets/getting-started/oauth_form.png)
 
-Enter UserID and Password on the above authentication form and click the login button. HTTP communication to [Accept POST at OAuth2.0 authorization endpoint](../apiref/292p_OAuth2_Authorization_Endpoint.md) is performed as follows. Will be opened.
+Enter UserID and Password and click the login button. The following HTTP communication to [Accept POST at OAuth2.0 authorization endpoint](../apiref/292p_OAuth2_Authorization_Endpoint.md) is performed.
 
 ```text
 # request
