@@ -20,7 +20,7 @@ When implementing with authorization code flow, use two types of Cell, data subj
 | Cell type | Description |
 |----|----|
 |Data Subject Cell | Data management and authorization of the corresponding data subject|
-|App Cell|App authorization according to OAuth 2.0 and storage/publication of app assets|
+|App Cell|App authorization (OAuth 2.0) and storage/deployment of the corresponding app|
 
 App Cell is used in the authorization code flow as follows.
 
