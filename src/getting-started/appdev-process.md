@@ -17,7 +17,7 @@ Please refer to [Authorization model](../user_guide/003_Auth.md#app-authorizatio
 
 When implementing with authorization code flow, use two types of Cell, data subject Cell and application Cell. These two types of cells are used as follows.
 
-| Cell type | Role |
+| Cell type | Description |
 |----|----|
 |Data Subject Cell | Data Subject Data Management and Authorization |
 |App Cell|App authorization according to OAuth 2.0 and storage/publication of app assets|
