@@ -43,7 +43,7 @@ The app needs to make sure that the same data structure is inside any data subje
 * [Box installation](../apiref/007_Box_install.md)
 * [bar file](../apiref/301_Bar_File.md)
 
-The development of the data-oriented Cell part is the construction of the data structure on Box and the output of the bar file.
+The app developments involving the data subject Cell are the construction of the Box's data structure and the output of the bar file.
 
 ## Template app
 
