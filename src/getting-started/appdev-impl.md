@@ -38,7 +38,7 @@ In order to start the sample app, access the engine script endpoint (`https://ap
 
 ![Data Subject Cell URL](assets/getting-started/cell_url_input.png)
 
-If you enter your own Cell URL `https://alice.example/`, you can access start_oauth2 of the following engine script by asynchronous communication by Fetch.
+Enter the data subject Cell URL `https://alice.example/` to start the asynchronous communication that executes the engine script endpoint (start_oauth2).
 
 ```text
 # request
