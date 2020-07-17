@@ -66,7 +66,7 @@ The procedures for setting up the environment are as follows.
    1. Build the bar file (run `npm build-bar`)
    2. Install Box in the data subject Cell
 
-Please refer to [personium-blank-app](https://github.com/personium/personium-blank-app) for the detailed procedure.
+Please refer to [personium-blank-app](https://github.com/personium/personium-blank-app) for the detailed procedures.
 
 > [Unit Manager explained in the previous section](./appdev-management-tool.md) can be used to perform operations on the Cell such as ACL setting and Box installation.
 
