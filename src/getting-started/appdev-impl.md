@@ -227,7 +227,7 @@ The following screen will be displayed when Box installation is completed.
 
 ![Personium Trails Top Page](assets/getting-started/personium_trails_top.png)
 
-From this screen, take the movement history data (eg 2020_MAY.json) obtained with Google Takeout into Personium. I will skip the explanation of that part and proceed to the next section assuming it is completed.
+From this screen, you can select the location history data (eg 2020_MAY.json) which you have to obtain from Google Takeout and upload to Personium in advance. Please follow the instructions in [Personium Trails](https://github.com/personium/app-personium-trails).
 
 ----
 
