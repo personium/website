@@ -41,4 +41,4 @@ The descriptions of the two cells used in the sample app are shown in the table 
 |Data subject Cell|alice.example|me|admin|root|
 |App Cell|app-personium-trails.example|app|admin|root|
 
-When developing your own application, the names of each Cell, Account, and Role do not have to be as shown in the table because they are arbitrary.
+When developing your own app, you do not have to use the same names as the sample's.
