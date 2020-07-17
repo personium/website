@@ -19,7 +19,7 @@ The source code of the sample app is available on GitHub ([app-personium-trails]
 
 ## Prior knowledge
 
-It is assumed that you have the following prior knowledge.
+The following knowledges are required before you continue reading.
 
 * Basic web application development
 * Front-end development (Html, JavaScript, CSS)
