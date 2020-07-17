@@ -70,7 +70,7 @@ Please refer to [personium-blank-app](https://github.com/personium/personium-bla
 
 > [Unit Manager explained in the previous section](./appdev-management-tool.md) can be used to perform ACL setting and Box installation on the Cell.
 
-## Application development flow
+## App development flow
 
 After building the template application, you can develop by repeating the following.
 
