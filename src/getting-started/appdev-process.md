@@ -114,7 +114,7 @@ For reference, Box data structure is described in the sample app.
 |/index/Stay|OData|Searchable location information|
 |/index/Move|OData|Searchable movement information|
 
-The movement history data obtained with the original Google Takeout is divided into moving/stay units, and the divided files are stored in WebDAV. When sharing data to others, do it for each WebDAV file. In addition, the data for searching is stored in OData.
+The location histories obtained from Google Takeout is divided into moving/stay types. Each record is stored in a WebDAV file. When sharing data to third parties, each WebDAV file is assigned with a predefined role with proper permission. To display the list of location histories by date, searchable data is stored in OData.
 
 ### OData Entity Type (Stay)
 
