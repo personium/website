@@ -80,7 +80,7 @@ After building the template app, you can develop by repeating the following.
   3. Use Unit Manager to export the bar file  
   4. Commit the bar file to the your repository
 * Development on App Cell
-  1. File editing in local development environment (HTML/JavaScript/CSS etc.)
+  1. Edit files in local development environment (HTML/JavaScript/CSS etc.)
   2. Deploy to application Cell (execute `npm run deploy`)
   3. ACL setting of file on application Cell
   4. App operation check
