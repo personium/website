@@ -4,7 +4,7 @@ title: Develop an app
 sidebar_label: Introduction
 ---
 
-In this chapter, we will explain how to develop an application using Personium API through the flow of sample application development.
+In this chapter, we will explain how to develop an app using Personium APIs through the flow of sample app development.
 
 ## Sample app development
 
