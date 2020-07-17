@@ -102,7 +102,7 @@ Location: https://app-personium-trails.example/__/front/app
 &state=15933********-per
 ```
 
-With the code (authorization code) and state parameter added, redirect to the engine script `https://app-personium-trails.example/__/front/app` that starts the original sample app.
+The authorization code (code) and state parameters are included and further redirected to the engine script endpoint (`https://app-personium-trails.example/__/front/app`) that launches the sample app with necessary information.
 
 ```text
 # request
