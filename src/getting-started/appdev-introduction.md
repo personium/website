@@ -27,7 +27,12 @@ The following knowledges are required before you continue reading.
 
 ## Advance preparation
 
-In the sample application, 2 Cell creation and Account, Role, ACL settings related to Cell are done in advance. When developing an app that uses Personium, do the same thing. Refer to [Previous Chapter Tutorial](../unit-administrator/tutorial.md) for the setting method related to cell creation.
+In the sample app, the following operations are performed in advance.
+
+* create two Cells  
+* configure account, role and ACL settings in each Cell  
+
+When developing an app that uses Personium, please perform the same operations. Refer to [Previous Chapter Tutorial](../unit-administrator/tutorial.md) for the APIs relevant to Cell creation.
 
 The usage and details of the two cells in the sample app are shown in the table below.
 
