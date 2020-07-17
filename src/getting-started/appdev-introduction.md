@@ -8,7 +8,7 @@ In this chapter, we will explain how to develop an application using Personium A
 
 ## Sample app development
 
-Sample application (Personium Trails) is to store the movement history data accumulated on Google in Personium and share a part of the data with others. The type of application is a web application that runs on a browser.
+This sample app (Personium Trails) is a web application that runs on a browser. It allows the user to store the location history data accumulated from Google onto Personium and share selected data with third parties.
 
 Below is a screenshot of the completed sample app.
 
