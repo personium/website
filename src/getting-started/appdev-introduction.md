@@ -14,7 +14,7 @@ Below is a screenshot of the sample app.
 
 ![Movement history data list](assets/getting-started/trails_locations_public.png)
 
-The code of the completed sample app can be found at the link below.
+The source code of the sample app is available on GitHub ([app-personium-trails](https://github.com/personium/app-personium-trails)).
 
 [app-personium-trails](https://github.com/personium/app-personium-trails)
 
