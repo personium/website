@@ -82,7 +82,7 @@ After building the template app, you can develop by repeating the following.
 * Development on App Cell
   1. Edit files in local development environment (HTML/JavaScript/CSS etc.)
   2. Deploy to app Cell (execute `npm run deploy`)
-  3. ACL setting of file on application Cell
+  3. Configure the files' ACL setting on the app Cell
   4. App operation check
   5. Commit the files on the application Cell to the code repository
 
