@@ -84,7 +84,7 @@ After building the template app, you can develop by repeating the following.
   2. Deploy to app Cell (execute `npm run deploy`)
   3. Configure the files' ACL setting on the app Cell
   4. Verify the App's functions
-  5. Commit the files on the application Cell to the code repository
+  5. Commit the modified files to the your repository
 
 > Instead of deploying to the application Cell, you can start the development Web server on the local development environment and check the operation. In that case, run `npm run debug`.
 
