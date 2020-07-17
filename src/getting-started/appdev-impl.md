@@ -358,4 +358,4 @@ Status Code: 207
 </multistatus>
 ```
 
-[^1]: The engine script executes simple server-side logic on Personium. See [Personium Engine](../app-developer/Personium-Engine.md) for details. The template app personium-blank-app allows you to use two engine scripts, start_oauth2.js and receive_redirect.js, for use in the OAuth 2.0 authorization code flow.
+[^1]: The engine script executes simple server-side logic on Personium. See [Personium Engine](../app-developer/Personium-Engine.md) for details. The template app (personium-blank-app) allows you to use two engine scripts, start_oauth2.js and receive_redirect.js, for use in the OAuth 2.0 authorization code flow.
