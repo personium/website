@@ -272,7 +272,7 @@ Status Code: 200
 
 ## file (WebDAV)
 
-Each destination information and movement information is saved as a JSON format file by dividing the original data. The detail page uses the [Get File](../apiref/311_Get_WebDav) API of the WebDAV collection to get and display this file.
+Each location or movement information is saved as JSON format file. The detail screen uses the [Get File](../apiref/311_Get_WebDav) API of the WebDAV collection to retrieve and display the file content.
 
 ![Details page](assets/getting-started/trails_detail.png)
 
