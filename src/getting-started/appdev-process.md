@@ -101,7 +101,7 @@ Both file data (WebDAV) and relational data (OData) can be used in Personium. Di
 
 Therefore, it is recommended to use OData for searchable data and use WebDAV for data which ACL setting is to be applied.
 
-## Box data structure in sample application
+## Box data structure in sample app
 
 For reference, Box data structure is described in the sample application.
 
