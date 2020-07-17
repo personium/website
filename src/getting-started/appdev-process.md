@@ -103,7 +103,7 @@ Therefore, it is recommended to use OData for searchable data and use WebDAV for
 
 ## Box data structure in sample app
 
-For reference, Box data structure is described in the sample application.
+For reference, Box data structure is described in the sample app.
 
 ### Entire collection
 
