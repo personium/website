@@ -55,7 +55,7 @@ By using this tool, you can develop your original app by customizing the data su
 
 ### Flow of initial construction
 
-The flow of initial construction of the template application is as follows.
+The procedures for setting up the environment are as follows.
 
 1. clone of personium-blank-app to local development environment
 2. Construction of application Cell
