@@ -81,7 +81,7 @@ After building the template app, you can develop by repeating the following.
   4. Commit the bar file to the your repository
 * Development on App Cell
   1. Edit files in local development environment (HTML/JavaScript/CSS etc.)
-  2. Deploy to application Cell (execute `npm run deploy`)
+  2. Deploy to app Cell (execute `npm run deploy`)
   3. ACL setting of file on application Cell
   4. App operation check
   5. Commit the files on the application Cell to the code repository
