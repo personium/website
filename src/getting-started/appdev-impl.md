@@ -36,7 +36,7 @@ Detailed sequence diagram available [here](../user_guide/003_Auth.md#authorizati
 
 In order to start the sample app, access the engine script endpoint (`https://app-personium-trails.example/__/front/app`) from the web browser. Then, the following screen will prompt you to enter the data subject Cell URL.
 
-![Input Cell URL](assets/getting-started/cell_url_input.png)
+![Data Subject Cell URL](assets/getting-started/cell_url_input.png)
 
 If you enter your own Cell URL `https://alice.example/`, you can access start_oauth2 of the following engine script by asynchronous communication by Fetch.
 
