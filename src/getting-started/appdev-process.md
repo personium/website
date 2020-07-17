@@ -92,7 +92,7 @@ After building the template app, you can develop by repeating the following.
 
 Additional explanation for the previous section ("Creating Data Structure on Box with Unit Manager").
 
-Both file data (WebDAV) and relational data (OData) can be used with Personium. There are the following differences between the two.
+Both file data (WebDAV) and relational data (OData) can be used in Personium. Differences are listed below.
 
 | Data type | Searchability | ACL setting unit |
 |--------|-----|------------|
