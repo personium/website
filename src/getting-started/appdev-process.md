@@ -112,7 +112,7 @@ For reference, Box data structure is described in the sample app.
 |/locations/{YYYY}/{MMdd}/s_{start_time}.json|WebDAV|Location Details|
 |/locations/{YYYY}/{MMdd}/m_{start_time}.json|WebDAV|Movement Details |
 |/index/Stay|OData|Searchable location information|
-|/index/Move|OData|Move information for search|
+|/index/Move|OData|Searchable movement information|
 
 The movement history data obtained with the original Google Takeout is divided into moving/stay units, and the divided files are stored in WebDAV. When sharing data to others, do it for each WebDAV file. In addition, the data for searching is stored in OData.
 
