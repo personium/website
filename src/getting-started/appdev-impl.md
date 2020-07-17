@@ -32,7 +32,7 @@ If you want to use OAuth 2.0 authorization code flow with Personium, use the fol
   * [POST acceptance in OAuth2.0 authorization endpoint](../apiref/292p_OAuth2_Authorization_Endpoint.md)
   * [OAuth 2.0 token endpoint](../apiref/293_OAuth2_Token_Endpoint.md)
 
-Please refer to [here](../user_guide/003_Auth.md#authorization-code-flow) for the detailed sequence diagram.
+Detailed sequence diagram available [here](../user_guide/003_Auth.md#authorization-code-flow).
 
 When starting the sample app, access the engine script `https://app-personium-trails.example/__/front/app` that returns HTML with a web browser. Then, the following screen is displayed, and you are prompted to enter the Cell URL of the user who performs data operation cooperation.
 
