@@ -9,7 +9,7 @@ This section describes the flow of app development.
 
 ## OAuth 2.0 authorization code flow
 
-In the case of an application that uses Personium, access to personal data from the application is performed through the REST API for Box in the data subject Cell. At this time, the data access authorization method follows the OAuth 2.0 specifications. There are various types of OAuth 2.0 flows, but the sample app uses the authorization code flow that is adopted when the PDS operator and the application operator are different.
+App that uses Personium gains access to scoped data in the data subject Cell by executing the REST APIs for Box. The data access authorization method follows the OAuth 2.0 specifications. There are various types of OAuth 2.0 flows. The sample app adopts the authorization code flow for the ecosystem where PDS and app operators are different.
 
 Please refer to [Authorization model](../user_guide/003_Auth.md#app-authorization) for details about authorization code flow.
 
