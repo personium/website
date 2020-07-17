@@ -90,7 +90,7 @@ After building the template app, you can develop by repeating the following.
 
 ## Create Box data structure
 
-Supplement to "Creating Data Structure on Box with Unit Manager" in the previous section.
+Additional explanation for the previous section ("Creating Data Structure on Box with Unit Manager").
 
 Both file data (WebDAV) and relational data (OData) can be used with Personium. There are the following differences between the two.
 
