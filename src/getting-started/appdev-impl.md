@@ -165,7 +165,7 @@ If the authorization is successful, the Box installation screen will be displaye
 
 ![Box installation](assets/getting-started/box_install.png)
 
-Click the "Start Install" button to access the [Box Installation](../apiref/302_Box_Installation.md) API.
+Click the "Start Install" button to execute the [Box Installation](../apiref/302_Box_Installation.md) API.
 
 ```text
 # request
