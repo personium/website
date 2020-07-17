@@ -36,7 +36,7 @@ When developing an app that uses Personium, please perform the same operations. 
 
 The descriptions of the two cells used in the sample app are shown in the table below.
 
-|Use|Cell name|Account name|Role name linked to Account|Role permission settings|
+|Cell type|Cell name|Account name|Role name linked to Account|Role permission settings|
 |----|---|---------|-----------------------|--------------|
 |Data subject Cell|alice.example|me|admin|root|
 |App Cell|app-personium-trails.example|app|admin|root|
