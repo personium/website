@@ -75,7 +75,7 @@ Content-Type: text/html;charset=UTF-8
 <HTML of authentication form>
 ```
 
-Since the above response is returned, the authentication form will be displayed.
+The above response is rendered as an authentication form.
 
 ![Authentication Form](assets/getting-started/oauth_form.png)
 
