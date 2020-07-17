@@ -34,7 +34,7 @@ If you want to use OAuth 2.0 authorization code flow with Personium, use the fol
 
 Detailed sequence diagram available [here](../user_guide/003_Auth.md#authorization-code-flow).
 
-When starting the sample app, access the engine script `https://app-personium-trails.example/__/front/app` that returns HTML with a web browser. Then, the following screen is displayed, and you are prompted to enter the Cell URL of the user who performs data operation cooperation.
+In order to start the sample app, access the engine script endpoint (`https://app-personium-trails.example/__/front/app`) from the web browser. Then, the following screen will prompt you to enter the data subject Cell URL.
 
 ![Input Cell URL](assets/getting-started/cell_url_input.png)
 
