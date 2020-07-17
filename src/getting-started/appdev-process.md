@@ -110,7 +110,7 @@ For reference, Box data structure is described in the sample app.
 | Path | Type | Content |
 |----|----|----|
 |/locations/{YYYY}/{MMdd}/s_{start_time}.json|WebDAV|Location Details|
-|/locations/{YYYY}/{MMdd}/m_{start_time}.json|WebDAV|Move Details |
+|/locations/{YYYY}/{MMdd}/m_{start_time}.json|WebDAV|Movement Details |
 |/index/Stay|OData|Accommodation information for search|
 |/index/Move|OData|Move information for search|
 
