@@ -72,7 +72,7 @@ Please refer to [personium-blank-app](https://github.com/personium/personium-bla
 
 ## App development flow
 
-After building the template application, you can develop by repeating the following.
+After building the template app, you can develop by repeating the following.
 
 * Development on the development data-based Cell
   1. Creation of data structure on Box by Unit Manager
