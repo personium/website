@@ -61,7 +61,7 @@ The procedures for setting up the environment are as follows.
 2. Construction of app Cell
    1. Editing the configuration file
    2. Deploy to app Cell (execute `npm run deploy`)
-   3. ACL setting of file on application Cell
+   3. ACL setting of file on app Cell
 3. Construction of data subject Cell
    1. Build the bar file (run `npm build-bar`)
    2. Install Box in the data subject Cell
