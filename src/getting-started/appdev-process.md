@@ -68,7 +68,7 @@ The procedures for setting up the environment are as follows.
 
 Please refer to [personium-blank-app](https://github.com/personium/personium-blank-app) for the detailed procedures.
 
-> [Unit Manager explained in the previous section](./appdev-management-tool.md) can be used to perform operations on the Cell such as ACL setting and Box installation.
+> [Unit Manager explained in the previous section](./appdev-management-tool.md) can be used to perform ACL setting and Box installation on the Cell.
 
 ## Application development flow
 
