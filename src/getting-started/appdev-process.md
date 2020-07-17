@@ -1,6 +1,6 @@
 ---
 id: appdev-process
-title: Flow of application development
+title: Flow of app development
 sidebar_label: Flow of application development
 ---
 
