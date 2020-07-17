@@ -30,7 +30,7 @@ App Cell is used in the following authorization code flow operations.
 
 You can also host static website by storing files (HTML, JavaScript and CSS) in the app Cell by configuring public access. The sample app in this section is assumed to be hosted on the app Cell.
 
-The following figure shows the relationship between the data subject Cell and the application Cell in the sample application.
+The following figure shows the relationship between the data subject and app Cells in the sample app.
 
 ![Cell Relation](assets/getting-started/cell_relation.png)
 
