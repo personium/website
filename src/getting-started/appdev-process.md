@@ -13,7 +13,7 @@ App that uses Personium gains access to scoped data in the data subject Cell by 
 
 Please refer to [Authorization model](../user_guide/003_Auth.md#app-authorization) for details about authorization code flow.
 
-## Data subject Cell and application Cell
+## Data subject and app Cells
 
 When implementing with authorization code flow, use two types of Cell, data subject Cell and application Cell. These two types of cells are used as follows.
 
