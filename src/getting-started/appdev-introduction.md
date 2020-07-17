@@ -10,7 +10,7 @@ In this chapter, we will explain how to develop an app using Personium APIs thro
 
 This sample app (Personium Trails) is a web application that runs on a browser. It allows the user to store the location history data accumulated from Google onto Personium and share selected data with third parties.
 
-Below is a screenshot of the completed sample app.
+Below is a screenshot of the sample app.
 
 ![Movement history data list](assets/getting-started/trails_locations_public.png)
 
