@@ -4,7 +4,7 @@ title: App implementation
 sidebar_label: App implementation
 ---
 
-We will explain the main API of Personium through the implementation of the sample app created from the template app. The code for the sample app is below.
+We will explain some basic Personium APIs while going through the implementation of the following sample app.
 
 [app-personium-trails](https://github.com/personium/app-personium-trails)
 
