@@ -76,7 +76,7 @@ After building the template app, you can develop by repeating the following.
 
 * Development on the data subject Cell
   1. Use Unit Manager to design and create the Box's data structure  
-  2. App operation check
+  2. Verify the App's functions
   3. Output of bar file by Unit Manager
   4. Commit the bar file to the code repository
 * Development on App Cell
