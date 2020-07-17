@@ -78,7 +78,7 @@ After building the template app, you can develop by repeating the following.
   1. Use Unit Manager to design and create the Box's data structure  
   2. Verify the App's functions
   3. Use Unit Manager to export the bar file  
-  4. Commit the bar file to the code repository
+  4. Commit the bar file to the your repository
 * Development on App Cell
   1. File editing in local development environment (HTML/JavaScript/CSS etc.)
   2. Deploy to application Cell (execute `npm run deploy`)
