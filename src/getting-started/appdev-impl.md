@@ -15,7 +15,7 @@ The dummy Cell URLs used in this sample app are listed below.
 |Data Subject Cell|https://alice.example/|
 |App Cell|https://app-personium-trails.example/|
 
-> In this document, only the required parts of HTTP communication are described, and they are expressed in a simplified notation with line breaks added for ease of viewing.
+> Simplified relevant information of the HTTP communications are described for easy understanding.
 
 ----
 
