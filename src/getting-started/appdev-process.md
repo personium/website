@@ -86,7 +86,7 @@ After building the template app, you can develop by repeating the following.
   4. Verify the App's functions
   5. Commit the modified files to the your repository
 
-> Instead of deploying to the application Cell, you can start the development Web server on the local development environment and check the operation. In that case, run `npm run debug`.
+> Instead of deploying to the app Cell, you can start the development Web server on the local development environment and verify the functions. In that case, run `npm run debug`.
 
 ## Create Box data structure
 
