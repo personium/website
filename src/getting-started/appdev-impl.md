@@ -233,7 +233,7 @@ From this screen, you can select the location history data (eg 2020_MAY.json) wh
 
 ## Relational data (OData)
 
-In the following screen, the data list for a specific period is acquired and displayed.
+In the following screen, a list of location histories from a specific period is retrieved and displayed.
 
 ![Movement history data list](assets/getting-started/trails_locations.png)
 
