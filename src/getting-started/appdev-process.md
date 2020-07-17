@@ -64,7 +64,7 @@ The procedures for setting up the environment are as follows.
    3. ACL setting of file on application Cell
 3. Construction of data subject Cell
    1. Build the bar file (run `npm build-bar`)
-   2. Box installation in the development data-based Cell
+   2. Install Box in the data subject Cell
 
 Please refer to [personium-blank-app](https://github.com/personium/personium-blank-app) for the detailed procedure.
 
