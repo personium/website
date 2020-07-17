@@ -16,7 +16,6 @@ Below is a screenshot of the sample app.
 
 The source code of the sample app is available on GitHub ([app-personium-trails](https://github.com/personium/app-personium-trails)).
 
-[app-personium-trails](https://github.com/personium/app-personium-trails)
 
 ## Prior knowledge
 
