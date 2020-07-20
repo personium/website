@@ -10,7 +10,7 @@ This Getting Started guide is for those who are new to Personium. It will cover 
 
 ## Prerequisite  
 
-It is recommended to read the [Personium architecture](../user_guide/001_Personium_Architecture.md) chapter before you continue further.
+It is recommended to read the [Personium architecture](../introduction/001_Personium_Architecture.md) chapter before you continue further.
 
 ## Chapter's layout
 
