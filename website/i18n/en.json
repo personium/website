@@ -1057,7 +1057,7 @@
         "title": "Install to local machine",
         "sidebar_label": "Install to local machine"
       },
-      "overview/001_Introduction": {
+      "introduction/001_introduction": {
         "title": "What is Personium?",
         "sidebar_label": "What is Personium?"
       },
