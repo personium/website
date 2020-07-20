@@ -965,6 +965,10 @@
         "title": "Retrieve cell import status",
         "sidebar_label": "Retrieve cell import status"
       },
+      "apiref/990_Old_Version_API_Ref": {
+        "title": "Old Version API References",
+        "sidebar_label": "Old Version API References"
+      },
       "apiref/error/PR401-AU-0008": {
         "title": "Error Code PR401-AU-0008",
         "sidebar_label": "Error Code PR401-AU-0008"
@@ -972,6 +976,22 @@
       "apiref/error/PR503-SV-0001": {
         "title": "Error Code PR503-SV-0001",
         "sidebar_label": "Error Code PR503-SV-0001"
+      },
+      "app-developer/003_Auth": {
+        "title": "Authorization Model",
+        "sidebar_label": "Authorization model"
+      },
+      "app-developer/004_Client_auth": {
+        "title": "Client registration & authentication",
+        "sidebar_label": "Client registration & authentication"
+      },
+      "app-developer/005_Model_construction": {
+        "title": "Cell model",
+        "sidebar_label": "Cell model"
+      },
+      "app-developer/007_WebDAV_model": {
+        "title": "WebDAV Model",
+        "sidebar_label": "WebDAV Model"
       },
       "app-developer/671_Engine_Script_Samples": {
         "title": "Engine Script Samples",
@@ -1057,9 +1077,17 @@
         "title": "Install to local machine",
         "sidebar_label": "Install to local machine"
       },
-      "introduction/001_introduction": {
+      "introduction/001_Introduction": {
         "title": "What is Personium?",
         "sidebar_label": "What is Personium?"
+      },
+      "introduction/001_Personium_Architecture": {
+        "title": "Personium Architecture",
+        "sidebar_label": "Personium Architecture"
+      },
+      "introduction/008_Glossary": {
+        "title": "Glossary",
+        "sidebar_label": "Glossary"
       },
       "plugin-developer/EngineExtension_Imple_and_Deploy": {
         "title": "Engine Extension implementation and deployment specification",
@@ -1152,34 +1180,6 @@
       "unit-administrator/Unit-User": {
         "title": "Unit User",
         "sidebar_label": "Unit User"
-      },
-      "introduction/001_Personium_Architecture": {
-        "title": "Personium Architecture",
-        "sidebar_label": "Personium Architecture"
-      },
-      "app-developer/003_Auth": {
-        "title": "Authorization Model",
-        "sidebar_label": "Authorization model"
-      },
-      "app-developer/004_Client_auth": {
-        "title": "Client registration & authentication",
-        "sidebar_label": "Client registration & authentication"
-      },
-      "app-developer/005_Model_construction": {
-        "title": "Cell model",
-        "sidebar_label": "Cell model"
-      },
-      "app-developer/007_WebDAV_model": {
-        "title": "WebDAV Model",
-        "sidebar_label": "WebDAV Model"
-      },
-      "introduction/008_Glossary": {
-        "title": "Glossary",
-        "sidebar_label": "Glossary"
-      },
-      "apiref/990_Old_Version_API_Ref": {
-        "title": "Old Version API References",
-        "sidebar_label": "Old Version API References"
       },
       "version-1.7.21/apiref/version-1.7.21-000_Rest_API_Reference": {
         "title": "Personium API Reference",
