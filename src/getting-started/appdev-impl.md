@@ -87,7 +87,7 @@ POST https://alice.example/__authz
 
 response_type=code
 client_id=https://app-personium-trails.example/
-redirect_uri=https://app-personium-trails.example/__/auth/receive_redirect?cellUrl=https://alice.example/
+redirect_uri=https://app-personium-trails.example/__/front/app?cellUrl=https://alice.example/
 state=15933********-per
 username=me
 password=mypassword
