@@ -1201,7 +1201,7 @@
         "title": "Personiumのアーキテクチャ",
         "sidebar_label": "Personiumのアーキテクチャ"
       },
-      "user_guide/003_Auth": {
+      "app-developer/003_Auth": {
         "title": "認可モデル",
         "sidebar_label": "認可モデル"
       },

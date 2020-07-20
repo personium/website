@@ -1157,7 +1157,7 @@
         "title": "Personium Architecture",
         "sidebar_label": "Personium Architecture"
       },
-      "user_guide/003_Auth": {
+      "app-developer/003_Auth": {
         "title": "Authorization Model",
         "sidebar_label": "Authorization model"
       },

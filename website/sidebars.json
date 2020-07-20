@@ -466,7 +466,7 @@
         "type": "subcategory",
         "label": "Authorization",
         "ids": [
-          "user_guide/003_Auth",
+          "app-developer/003_Auth",
           "app-developer/Roles",
           "apiref/006_Access_Control",
           "app-developer/app_authn",

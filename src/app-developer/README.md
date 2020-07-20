@@ -20,7 +20,7 @@ To learn the basics of app development, refer to the following documents in Gett
 Details of app development are divided in the following categories.
 
 - Authorization
-  - [Authorization model](../user_guide/003_Auth.md)
+  - [Authorization model](../app-developer/003_Auth.md)
   - [Role in Personium](./Roles.md)
   - [Access control by RBAC](../apiref/006_Access_Control.md)
   - [App Authentication](./app_authn.md)
