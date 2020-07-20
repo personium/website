@@ -12,7 +12,7 @@ Register to join the Slack community [here](https://bit.ly/Join_Personium_Slack)
 
 * [What is Personium?](./introduction/001_introduction.md)
 * [Personium Architecture](./introduction/001_Personium_Architecture.md)
-* [Glossary](./user_guide/008_Glossary.md)
+* [Glossary](./introduction/008_Glossary.md)
 
 ## Personium user types
 
