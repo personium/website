@@ -29,7 +29,7 @@ Details of app development are divided in the following categories.
   - [Box installation](../apiref/007_Box_install.md)
   - [bar file](../apiref/301_Bar_File.md)
 - Collection
-  - [WebDAV](../user_guide/007_WebDAV_model.md)
+  - [WebDAV](../app-developer/007_WebDAV_model.md)
   - [OData](./using_odata.md)
   - [Personium Engine](./Personium-Engine.md)
   - [Engine Script samples](./671_Engine_Script_Samples.md)

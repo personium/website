@@ -35,7 +35,7 @@ Personiumのデータ操作はOData, WebDAVによって行います。仕様を�
   - [Boxインストール](../apiref/007_Box_install.md)
   - [barファイル](../apiref/301_Bar_File.md)
 - コレクション
-  - [WebDAV](../user_guide/007_WebDAV_model.md)
+  - [WebDAV](../app-developer/007_WebDAV_model.md)
   - [OData](./using_odata.md)
   - [Personium Engine](./Personium-Engine.md)
   - [Engine Script のサンプル](./671_Engine_Script_Samples.md)

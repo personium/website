@@ -485,7 +485,7 @@
         "type": "subcategory",
         "label": "Collection",
         "ids": [
-          "user_guide/007_WebDAV_model",
+          "app-developer/007_WebDAV_model",
           "app-developer/using_odata",
           "app-developer/Personium-Engine",
           "app-developer/671_Engine_Script_Samples"
