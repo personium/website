@@ -26,7 +26,7 @@ Personiumのデータ操作はOData, WebDAVによって行います。仕様を�
 アプリ開発の詳細はトピックごとに分かれています。
 
 - 認可
-  - [認可モデル](../user_guide/003_Auth.md)
+  - [認可モデル](../app-developer/003_Auth.md)
   - [Personiumにおけるロール](./Roles.md)
   - [アクセス制御モデル](../apiref/006_Access_Control.md)
   - [アプリ認証](./app_authn.md)
@@ -35,7 +35,7 @@ Personiumのデータ操作はOData, WebDAVによって行います。仕様を�
   - [Boxインストール](../apiref/007_Box_install.md)
   - [barファイル](../apiref/301_Bar_File.md)
 - コレクション
-  - [WebDAV](../user_guide/007_WebDAV_model.md)
+  - [WebDAV](../app-developer/007_WebDAV_model.md)
   - [OData](./using_odata.md)
   - [Personium Engine](./Personium-Engine.md)
   - [Engine Script のサンプル](./671_Engine_Script_Samples.md)

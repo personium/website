@@ -1097,7 +1097,7 @@
         "title": "ローカルマシンへのインストール",
         "sidebar_label": "ローカルマシンへのインストール"
       },
-      "overview/001_Introduction": {
+      "introduction/001_introduction": {
         "title": "Personiumとは何ですか？",
         "sidebar_label": "Personiumとは何ですか？"
       },
@@ -1197,27 +1197,27 @@
         "title": "Cellの払い出し チュートリアル",
         "sidebar_label": "Cellの払い出し"
       },
-      "user_guide/001_Personium_Architecture": {
+      "introduction/001_Personium_Architecture": {
         "title": "Personiumのアーキテクチャ",
         "sidebar_label": "Personiumのアーキテクチャ"
       },
-      "user_guide/003_Auth": {
+      "app-developer/003_Auth": {
         "title": "認可モデル",
         "sidebar_label": "認可モデル"
       },
-      "user_guide/004_Client_auth": {
+      "app-developer/004_Client_auth": {
         "title": "クライアント登録&認証",
         "sidebar_label": "クライアント登録&認証"
       },
-      "user_guide/005_Model_construction": {
+      "app-developer/005_Model_construction": {
         "title": "Cellのモデル",
         "sidebar_label": "Cellのモデル"
       },
-      "user_guide/007_WebDAV_model": {
+      "app-developer/007_WebDAV_model": {
         "title": "WebDAV モデル",
         "sidebar_label": "WebDAV モデル"
       },
-      "user_guide/008_Glossary": {
+      "introduction/008_Glossary": {
         "title": "用語集",
         "sidebar_label": "用語集"
       },
@@ -1225,7 +1225,7 @@
         "title": "認証/認可の使い方",
         "sidebar_label": "認証/認可の使い方"
       },
-      "user_guide/990_Old_Version_API_Ref": {
+      "apiref/990_Old_Version_API_Ref": {
         "title": "古いバージョンのAPIリファレンス",
         "sidebar_label": "古いバージョンのAPIリファレンス"
       },

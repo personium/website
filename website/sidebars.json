@@ -399,10 +399,10 @@
   "docs": {
     "Introduction": [
       "README",
-      "overview/001_Introduction",
+      "introduction/001_introduction",
       "overview/Aims_for",
-      "user_guide/001_Personium_Architecture",
-      "user_guide/008_Glossary"
+      "introduction/001_Personium_Architecture",
+      "introduction/008_Glossary"
     ],
     "Getting Started": [
       "getting-started/README",
@@ -466,7 +466,7 @@
         "type": "subcategory",
         "label": "Authorization",
         "ids": [
-          "user_guide/003_Auth",
+          "app-developer/003_Auth",
           "app-developer/Roles",
           "apiref/006_Access_Control",
           "app-developer/app_authn",
@@ -485,7 +485,7 @@
         "type": "subcategory",
         "label": "Collection",
         "ids": [
-          "user_guide/007_WebDAV_model",
+          "app-developer/007_WebDAV_model",
           "app-developer/using_odata",
           "app-developer/Personium-Engine",
           "app-developer/671_Engine_Script_Samples"
@@ -496,10 +496,10 @@
         "type": "subcategory",
         "label": "Old Docs",
         "ids": [
-          "user_guide/005_Model_construction",
-          "user_guide/004_Client_auth",
+          "app-developer/005_Model_construction",
+          "app-developer/004_Client_auth",
           "app-developer/Personium_Apps",
-          "user_guide/990_Old_Version_API_Ref"
+          "apiref/990_Old_Version_API_Ref"
         ]
       }
     ],

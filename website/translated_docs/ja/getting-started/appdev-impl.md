@@ -32,7 +32,7 @@ Personiumを使ってOAuth 2.0 認可コードフローを取る場合、以下�
   * [OAuth2.0 認可エンドポイントにおける POST の受け入れ](../apiref/292p_OAuth2_Authorization_Endpoint.md)
   * [OAuth 2.0 トークンエンドポイント](../apiref/293_OAuth2_Token_Endpoint.md)
 
-詳細のシーケンス図は[こちら](../user_guide/003_Auth.md#認可コードフロー)を参照してください。
+詳細のシーケンス図は[こちら](../app-developer/003_Auth.md#認可コードフロー)を参照してください。
 
 サンプルアプリを起動するとき、HTMLを返すエンジンスクリプト`https://app-personium-trails.example/__/front/app`にWebブラウザでアクセスします。すると以下の画面が表示され、データ操作連携を行うユーザ自身のCell URLの入力が求められます。
 
@@ -87,7 +87,7 @@ POST https://alice.example/__authz
 
 response_type=code
 client_id=https://app-personium-trails.example/
-redirect_uri=https://app-personium-trails.example/__/auth/receive_redirect?cellUrl=https://alice.example/
+redirect_uri=https://app-personium-trails.example/__/front/app?cellUrl=https://alice.example/
 state=15933********-per
 username=me
 password=mypassword

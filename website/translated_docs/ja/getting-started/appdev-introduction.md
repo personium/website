@@ -14,9 +14,7 @@ sidebar_label: はじめに
 
 ![移動履歴データ一覧](assets/getting-started/trails_locations_public.png)
 
-完成されたサンプルアプリのコードは以下のリンク先にあります。
-
-[app-personium-trails](https://github.com/personium/app-personium-trails)
+完成されたサンプルアプリのコードはGitHub上にあります。([app-personium-trails](https://github.com/personium/app-personium-trails))
 
 ## 事前知識
 
@@ -32,7 +30,7 @@ sidebar_label: はじめに
 
 サンプルアプリでの2つのCellの用途と詳細の設定は以下の表の通りとなります。
 
-|用途|Cell名|Account名|AccountにリンクするRole名|Roleの権限設定|
+|Cell種類|Cell名|Account名|AccountにリンクするRole名|Roleの権限設定|
 |----|---|---------|-----------------------|--------------|
 |データ主体用Cell|alice.example|me|admin|root|
 |アプリ用Cell|app-personium-trails.example|app|admin|root|

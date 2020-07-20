@@ -10,7 +10,7 @@ This Getting Started guide is for those who are new to Personium. It will cover 
 
 ## Prerequisite  
 
-It is recommended to read the [Personium architecture](../user_guide/001_Personium_Architecture.md) chapter before you continue further.
+It is recommended to read the [Personium architecture](../introduction/001_Personium_Architecture.md) chapter before you continue further.
 
 ## Chapter's layout
 
@@ -22,7 +22,7 @@ The following is the layout of each chapter.
 
 1. Preparing Personium (for Personium operators)
     1. [Setup Personium Unit](./setup-unit.md)
-    2. [Payout of Cell](../unit-administrator/tutorial.md)
+    2. [Create Cell](../unit-administrator/tutorial.md)
     3. [Building a sample app](./setup-sample-apps.md)
 2. Developing app (for app developers)
     1. [Introduction](./appdev-introduction.md)

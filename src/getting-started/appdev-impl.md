@@ -32,7 +32,7 @@ If you want to use OAuth 2.0 authorization code flow with Personium, use the fol
   * [POST acceptance in OAuth2.0 authorization endpoint](../apiref/292p_OAuth2_Authorization_Endpoint.md)
   * [OAuth 2.0 token endpoint](../apiref/293_OAuth2_Token_Endpoint.md)
 
-Detailed sequence diagram available [here](../user_guide/003_Auth.md#authorization-code-flow).
+Detailed sequence diagram available [here](../app-developer/003_Auth.md#authorization-code-flow).
 
 In order to start the sample app, access the engine script endpoint (`https://app-personium-trails.example/__/front/app`) from the web browser. Then, the following screen will prompt you to enter the data subject Cell URL.
 
@@ -87,7 +87,7 @@ POST https://alice.example/__authz
 
 response_type=code
 client_id=https://app-personium-trails.example/
-redirect_uri=https://app-personium-trails.example/__/auth/receive_redirect?cellUrl=https://alice.example/
+redirect_uri=https://app-personium-trails.example/__/front/app?cellUrl=https://alice.example/
 state=15933********-per
 username=me
 password=mypassword

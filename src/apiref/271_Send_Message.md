@@ -76,7 +76,7 @@ Ask Relation specified by Name or ClassUrl and link / unlink of Cell specified b
 |:--|:--|:--|:--|:--|
 |RequestType|Request type|relation.add<br>relation.remove|Yes||
 |Name|Relation name|Number of digits: 1 - 128<br>Character type: Single-byte alphanumeric characters, hyphens ("-"), and underscores ("\_"), plus, :<br>However, the string cannot start with a underscore ("\_") or colon (:)|*1|*1 Either Name or ClassUrl is required<br>When Name is specified, it is regarded as a relative URL from the following URL<br>BoxBound is true:[target Box schema URL]\_\_relation/\_\_/<br>BoxBound is false:[destination cell URL]\_\_relation/\_\_/|
-|ClassUrl|Relation class URL|Relation class URL<br>See the [glossary](../user_guide/008_Glossary.md#anc_r) for details|*1|*1 Either Name or ClassUrl is required|
+|ClassUrl|Relation class URL|Relation class URL<br>See the [glossary](../introduction/008_Glossary.md#anc_r) for details|*1|*1 Either Name or ClassUrl is required|
 |TargetUrl|Cell URL that connects the relationship|URL format|Yes||
 
 ##### Role add/remove
@@ -87,7 +87,7 @@ Ask Role specified by Name or ClassUrl and link / unlink of Cell specified by Ta
 |:--|:--|:--|:--|:--|
 |RequestType|Request type|role.add<br>role.remove|Yes||
 |Name|Role name|Number of digits: 1 - 128<br>Character type: Single-byte alphanumeric characters, hyphens ("-"), and underscores ("\_")<br>However, the string cannot start with a single-byte hyphen ("-") or underscore ("\_")|*1|*1 Either Name or ClassUrl is required<br>When Name is specified, it is regarded as a relative URL from the following URL<br>BoxBound is true:[target Box schema URL]\_\_role/\_\_/<br>BoxBound is false:[destination cell URL]\_\_role/\_\_/|
-|ClassUrl|Role class URL|Role class URL<br>See the [glossary](../user_guide/008_Glossary.md#anc_r) for details|*1|*1 Either Name or ClassUrl is required|
+|ClassUrl|Role class URL|Role class URL<br>See the [glossary](../introduction/008_Glossary.md#anc_r) for details|*1|*1 Either Name or ClassUrl is required|
 |TargetUrl|Cell URL that connects the relationship|URL format|Yes||
 
 ##### Rule add/remove
