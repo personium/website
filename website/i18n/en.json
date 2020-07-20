@@ -1165,7 +1165,7 @@
         "title": "Client registration & authentication",
         "sidebar_label": "Client registration & authentication"
       },
-      "user_guide/005_Model_construction": {
+      "app-developer/005_Model_construction": {
         "title": "Cell model",
         "sidebar_label": "Cell model"
       },

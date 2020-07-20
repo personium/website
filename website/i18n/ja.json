@@ -1209,7 +1209,7 @@
         "title": "クライアント登録&認証",
         "sidebar_label": "クライアント登録&認証"
       },
-      "user_guide/005_Model_construction": {
+      "app-developer/005_Model_construction": {
         "title": "Cellのモデル",
         "sidebar_label": "Cellのモデル"
       },

@@ -496,7 +496,7 @@
         "type": "subcategory",
         "label": "Old Docs",
         "ids": [
-          "user_guide/005_Model_construction",
+          "app-developer/005_Model_construction",
           "app-developer/004_Client_auth",
           "app-developer/Personium_Apps",
           "user_guide/990_Old_Version_API_Ref"
