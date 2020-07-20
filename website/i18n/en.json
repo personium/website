@@ -1161,7 +1161,7 @@
         "title": "Authorization Model",
         "sidebar_label": "Authorization model"
       },
-      "user_guide/004_Client_auth": {
+      "app-developer/004_Client_auth": {
         "title": "Client registration & authentication",
         "sidebar_label": "Client registration & authentication"
       },

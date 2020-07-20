@@ -1205,7 +1205,7 @@
         "title": "認可モデル",
         "sidebar_label": "認可モデル"
       },
-      "user_guide/004_Client_auth": {
+      "app-developer/004_Client_auth": {
         "title": "クライアント登録&認証",
         "sidebar_label": "クライアント登録&認証"
       },
