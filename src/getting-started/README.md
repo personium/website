@@ -6,11 +6,11 @@ sidebar_label: Introduction
 
 ## Introduction
 
-This Getting Started guide is for those who are new to Personium. It will cover the fundamental and technical knowledge of Personium.
+This document is an introductory-level guide to using Personium for first-timers. It will cover the fundamental and technical knowledge of Personium.
 
 ## Prerequisite  
 
-It is recommended to read the [Personium architecture](../introduction/001_Personium_Architecture.md) chapter before you continue further.
+Although optional, reading [Personium architecture](../introduction/001_Personium_Architecture.md) before proceeding is strongly recommended.
 
 ## Chapter's layout
 
