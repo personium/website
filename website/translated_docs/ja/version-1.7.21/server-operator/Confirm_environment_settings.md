@@ -1,7 +1,7 @@
 ---
 id: version-1.7.21-Confirm_environment_settings
-title: Ansible で構築したユニットの環境情報
-sidebar_label: Ansible で構築したユニットの環境情報
+title: Ansible で構築したUnitの環境情報
+sidebar_label: Ansible で構築したUnitの環境情報
 ---
 
 -------------------------------------------------
@@ -72,11 +72,11 @@ AP サービスが動作するサーバの基本設定を確認します。
 | ログ出力先                     | /personium/tomcat/logs/             |
 | アプリケーション格納ディレクトリ | /opt/apache-tomcat-9.0.10/webapps/  |  
 
-### ユニット証明書
+### Unit証明書
 
-* Personium はアクセストークン検証等の様々な機能でユニット証明書を使用している重要なファイルです。
+* Personium はアクセストークン検証等の様々な機能でUnit証明書を使用している重要なファイルです。
 
-1. まず、現在使用しているユニット証明書のパスを確認します。ユニット証明書はpersonium-unit-config.properties というファイルで指定されています。
+1. まず、現在使用しているUnit証明書のパスを確認します。Unit証明書はpersonium-unit-config.properties というファイルで指定されています。
 
     * 以下のコマンドを実行しファイルを確認します。  
 
@@ -92,15 +92,15 @@ AP サービスが動作するサーバの基本設定を確認します。
     io.personium.core.x509.key=/opt/x509/unit.key
     ```
 
-1. ユニット証明書のコモンネームを確認します。このとき、ユニット証明書のコモンネームが自身のPersonium Unit のFQDNと一致している必要があります。
+1. Unit証明書のコモンネームを確認します。このとき、Unit証明書のコモンネームが自身のPersonium Unit のFQDNと一致している必要があります。
 
-    * 以下のコマンドを実行することでユニット証明書の情報を確認することができます。
+    * 以下のコマンドを実行することでUnit証明書の情報を確認することができます。
 
     ```console
     # openssl x509 -noout -subject -in /opt/x509/unit-self-sign.crt
     ```
 
-    * [How to generate Self-signed Unit Certificate](https://github.com/personium/ansible/blob/master/How_to_generate_Self-signed_Unit_Certificate.md) に記載されているユニット証明書の作成例の通り作成した場合、以下のように表示されます。CNがコモンネームを表し、HTTPSアクセスをする際のFQDNと一致している必要があります。
+    * [How to generate Self-signed Unit Certificate](https://github.com/personium/ansible/blob/master/How_to_generate_Self-signed_Unit_Certificate.md) に記載されているUnit証明書の作成例の通り作成した場合、以下のように表示されます。CNがコモンネームを表し、HTTPSアクセスをする際のFQDNと一致している必要があります。
 
     ```
     subject= /C=XXX/L=Default City/O=Default Company Ltd/CN=personium.example.com
@@ -116,7 +116,7 @@ AP サービスが動作するサーバの基本設定を確認します。
 | personium-engine              | /opt/tomcat/webapps/                                                  |
 | personium-core ログ出力先      | /personium/personium-core/log/personium-core.log                      |
 | personium-engine ログ出力先    | /personium/personium-engine/log/personium-engine.log                  |
-| ユニット設定ファイル            | /personium/personium-core/conf/18888/personium-unit-config.properties |  
+| Unit設定ファイル            | /personium/personium-core/conf/18888/personium-unit-config.properties |  
 
 * personium-unit-config.properties を変更することで[Unit設定](unit_config_list.md)をデフォルトから変更することができます。  
 
@@ -175,23 +175,23 @@ AP サービスが動作するサーバの基本設定を確認します。
     io.personium.core.dav.childresource.maxnum=1000000
     ```
 
-#### ユニットマスタートークンについて
+#### Unitマスタートークンについて
 
-* 「personium-unit-config.properties」の「io.personium.core.masterToken」に記載されている値がユニットマスタートークンです。ユニットマスタートークンの初期設定はAnsible を実行したサーバで以下のコマンドを実行する事でも確認することが可能です。
+* 「personium-unit-config.properties」の「io.personium.core.masterToken」に記載されている値がUnitマスタートークンです。Unitマスタートークンの初期設定はAnsible を実行したサーバで以下のコマンドを実行する事でも確認することが可能です。
 
     ```console
     # echo `grep "master_token" ~/ansible/static_inventory/hosts | sed -e "s/master_token=//" | uniq`
     ```
 
-> ユニットマスタートークンは上記のPersonium 環境に記載している「personium-unit-config.properties」の「io.personium.core.masterToken」を参照することでも確認可能です。
+> Unitマスタートークンは上記のPersonium 環境に記載している「personium-unit-config.properties」の「io.personium.core.masterToken」を参照することでも確認可能です。
 
-**ユニットマスタートークン無効化の方法については [Unit のセキュリティ（デフォルトから変更したほうが良い設定）](unit_security.md)を参照ください。**
+**Unitマスタートークン無効化の方法については [Unit のセキュリティ（デフォルトから変更したほうが良い設定）](unit_security.md)を参照ください。**
 
-#### Personium ユニット管理アカウント
+#### Personium Unit管理アカウント
 
-* Ansible を実行することで自動的にPersonium ユニット管理アカウントが作成されます。この情報はPersonium ユニット管理者がセルの作成等の管理作業を行う際に必要となります。
+* Ansible を実行することで自動的にPersonium Unit管理アカウントが作成されます。この情報はPersonium Unit管理者がCellの作成等の管理作業を行う際に必要となります。
 
-    ユニット管理アカウントのID/PASSの確認
+    Unit管理アカウントのID/PASSの確認
 
     * 情報の取得のため、Ansibleを実行したサーバーにログインし、以下コマンドを実行します。
 
@@ -199,13 +199,13 @@ AP サービスが動作するサーバの基本設定を確認します。
     $ sudo su -
     # cat /root/ansible/unitadmin_account  
     unitadmin_account={unitadmin_account}  
-    unitudmin_password={unitudmin_password}  
+    unitadmin_password={unitadmin_password}  
     Personium_FQDN={Personium_FQDN}  
     ```  
 
-    * {Personium_FQDN} PersoniumユニットのFQDN
-    * {unitadmin_account} ユニット管理アカウント
-    * {unitudmin_password} ユニット管理パスワード
+    * {Personium_FQDN} Personium UnitのFQDN
+    * {unitadmin_account} Unit管理アカウント
+    * {unitadmin_password} Unit管理パスワード
 
 >**（注意）**  
 >**ここで取得した情報は初期値であるため、ユーザが変更した場合は各自で管理するようにしてください。**

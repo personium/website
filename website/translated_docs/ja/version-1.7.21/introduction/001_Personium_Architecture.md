@@ -5,6 +5,7 @@ sidebar_label: Personiumのアーキテクチャ
 ---
 
 ## 基本となる3階層のオブジェクト
+
 Personiumはデータ主体中心のICT実現のため以下3階層の基本オブジェクトを定義しています。
 
 ![3階層オブジェクト](assets/3LayerStructure.png "3階層オブジェクト")
@@ -12,8 +13,8 @@ Personiumはデータ主体中心のICT実現のため以下3階層の基本オ�
 |名称|概要|URL例|
 |:--|:--|:--|
 |Unit|多数のCellをホストするサーバ|https&#58;//personium.example/|
-|Cell|データ主体ごとのデータストア|https&#58;//personium.example/john.doe/|
-|Box|アプリケーション毎のデータ領域|https&#58;//personium.example/john.doe/schedule/|
+|Cell|データ主体ごとのデータストア|https&#58;//john.personium.example/|
+|Box|アプリケーション毎のデータ領域|https&#58;//john.personium.example/schedule/|
 
 ### Unit
 
@@ -23,30 +24,31 @@ Personiumはデータ主体中心のICT実現のため以下3階層の基本オ�
 
 ### Cell
 
-* Cellは、Personiumの基本的な概念です。
+* Cellは、データ主体ごとのData Storeです。個人で使う場合はPDS(Personal Data Store)となります。
+* Personiumでは、データ主体という概念を人のみでなく組織やモノなどにも拡張したモデル化を行っているため、組織やモノのデータストアとしても使うことが可能です。
 * 各Cellは、マルチテナント・モデルで異なるテナントであるかのように独立しています。
 * Cellは以下の機能を提供します。
 
-	* 認証と承認
-	* アクセス制御
-	* アプリケーション用データストア（Box）
-	* イベント処理、メッセージング、スクリプト実行
-
+  * 認証と承認
+  * アクセス制御
+  * アプリケーション用データストア（Box）
+  * イベント処理、メッセージング、スクリプト実行
 
 ### Box
 
 * Boxは、アプリケーション用のデータストアです。
 * Boxには、以下のデータを格納できます。
 
-	* ディレクトリ
-	* ファイルオブジェクト
-	* ODataデータサービス
+  * ディレクトリ
+  * ファイルオブジェクト
+  * ODataデータサービス
 
+## オープン標準に基づく仕様
 
-## 国際標準に基づく設計
-
-Personiumは様々な国際標準をベースにこれを拡張したり組み合わせて構築されています。
+Personiumは様々なオープン標準をベースにこれを拡張したり組み合わせて構築されています。
 
 * 認可のためのOAuth2.0
 * ファイル操作のためのWebDAV
 * リレーショナルデータのOData
+
+![Personiumの仕様](assets/interface.png)

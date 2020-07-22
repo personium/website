@@ -7,7 +7,7 @@ original_id: README
 
 It is a document for people who want to manage pre-built Personium Unit and those who want users to use PDS applications to provide PDS service using Personium  
 
-For those who build Personium Unit, and how to build / deploy / configure Personium server programs, please refer to [Server Software Operator's Guide](../server-operator/).
+For those who build Personium Unit, and how to build / deploy / configure Personium server programs, please refer to [Server Software Operator's Guide](../server-operator/README.md).
 
 ## Unit User and Unit level API
 
@@ -23,7 +23,7 @@ In addition, Cell remembers which UUT was generated when it was created, and alw
 We have released a tutorial on basic operations for managing Personium Unit.
 If you are the first person to manage Personium Unit please check.
 
-* [Personium Unit management tutorial](./tutorial.md)
+* [Create Cell Tutorial](./tutorial.md)
 
 ## Management of Unit using GUI
 

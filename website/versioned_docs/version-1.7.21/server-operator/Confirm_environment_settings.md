@@ -41,7 +41,7 @@ Nginx is installed as follows.
     Immediately after construction, it is as follows.
 
     ```
-    ssl_sertificate         /opt/nginx/conf/server.crt
+    ssl_certificate         /opt/nginx/conf/server.crt
     ssl_certificate_key     /opt/nginx/conf/server.key
     ```
 
@@ -133,7 +133,7 @@ Check the basic settings of the server on which the AP service runs.
     io.personium.core.x509.crt=/opt/x509/unit-self-sign.crt
     io.personium.core.x509.key=/opt/x509/unit.key
     io.personium.core.security.secret16={{token.key}}
-    io.personium.core.security.auth.password.salt={{sakt.key}}
+    io.personium.core.security.auth.password.salt={{salt.key}}
     io.personium.core.account.lastauthenticated.enabled=false
     io.personium.core.lock.memcached.host=127.0.0.1
     io.personium.core.lock.memcached.port=11211
@@ -174,13 +174,48 @@ Check the basic settings of the server on which the AP service runs.
     io.personium.core.dav.childresource.maxnum=1000000
     ```
 
+#### Unit Master Token
+
+* The value described in "io.personium.core.masterToken" of "personium-unit-config.properties" is the Unit master token. The unit master token initial settings can also be confirmed by executing the following command on the server that executed Ansible.
+
+    ```console
+    # echo `grep "master_token" ~/ansible/static_inventory/hosts | sed -e "s/master_token=//" | uniq`
+    ```
+
+> The Unit master token can also be confirmed by referring to "io.personium.core.masterToken" of "personium-unit-config.properties" described in the above Personium environment.
+
+**Refer to [Unit security (settings that should be changed from default)](unit_security.md) for how to disable the Unit master token.**
+
+#### Personium Unit Management Account
+
+* Running Ansible will automatically create a Personium Unit Management account. This information is required for the Personium Unit Manager to perform administrative work such as creating cells.
+
+    Confirm ID/PASS of Unit management account
+
+    * To get the information, log in to the server where Ansible was executed and execute the following command.
+
+    ```console
+    $ sudo su-
+    # cat /root/ansible/unitadmin_account
+    unitadmin_account={unitadmin_account}
+    unitadmin_password={unitadmin_password}
+    Personium_FQDN={Personium_FQDN}
+    ```
+
+    * {Personium_FQDN} FQDN of Personium Unit
+    * {unitadmin_account} Unit admin account
+    * {unitadmin_password} Unit management password
+
+> **(Caution)**
+> **The information acquired here is the initial value, so if the Unit Manager changes it, please manage it properly.**
+
 ## DB service
 
 * Check the settings of the server on which the Elasticsearch service runs.
 
 ### Elasticsearch environment
 
-* Personium uses Elasticsearch to realize DB. 
+* Personium uses Elasticsearch to realize DB.
   Elasticsearch is installed as follows.  
   For version,Please check the version of elasticsearch [here](https://github.com/personium/ansible#middleware-on-vm).  
 
@@ -188,5 +223,5 @@ Check the basic settings of the server on which the AP service runs.
     |-------------------------|--------------------------------------------------------------|
     | Install Directory       | /opt/elasticsearch-{ Elasticsearch version }/                |
     | Config Files            | /opt/elasticsearch-{ Elasticsearch version }/config/         |
-    | Log Direcroty           | /personium/elasticsearch/log/                                |
-    | Data Direcroty          | /personium/elasticsearch-{ Elasticsearch version }/data/     |  
+    | Log Directory           | /personium/elasticsearch/log/                                |
+    | Data Directory          | /personium/elasticsearch-{ Elasticsearch version }/data/     |  

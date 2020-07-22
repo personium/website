@@ -7,7 +7,7 @@ sidebar_label: ULUUT昇格設定
 UUT（Unit User Token）昇格設定を変更する
 
 ### 必要な権限
-ユニットユーザのみ可能
+Unitユーザのみ可能
 
 ## リクエスト
 ### リクエストURL
@@ -16,7 +16,7 @@ UUT（Unit User Token）昇格設定を変更する
 ```
 |Path|概要|
 |:--|:--|
-|{CellName}|セル名|
+|{CellName}|Cell名|
 
 ### メソッド
 PROPPATCH

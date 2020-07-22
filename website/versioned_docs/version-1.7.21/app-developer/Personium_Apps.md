@@ -21,7 +21,7 @@ However, Personium App developer should note that other Personium App developers
 [![Data ACL Management](https://i.ytimg.com/vi/indyfGp4KJQ/2.jpg?time=1514274599855)](https://youtu.be/indyfGp4KJQ)  
 
 ## Types of Personium App  
-In Personium, App is categorized according to the level of permission of APIs the App can use. There are basically 3 types of Apps. For details on how APIs are categorized, please refer to the [Personium Concepts](../user_guide/001_Personium_Architecture.md).  
+In Personium, App is categorized according to the level of permission of APIs the App can use. There are basically 3 types of Apps. For details on how APIs are categorized, please refer to the [Personium Concepts](../introduction/001_Personium_Architecture.md).  
 
 1. [General Apps](#1-general-apps)
 1. [Cell Management Clients](#2-cell-management-clients)
@@ -136,7 +136,7 @@ The following diagram shows the folder structure of a very simple Personium App.
 Cell Management Client is the GUI tool for managing Cell.  
 
 Cell level APIs allow administrative operations to be performed on the Cell.  
-For details, see [here](../user_guide/001_Personium_Architecture.md).  
+For details, see [here](../introduction/001_Personium_Architecture.md).  
 
 #### Functions  
 The Cell management client provides the following functions.  

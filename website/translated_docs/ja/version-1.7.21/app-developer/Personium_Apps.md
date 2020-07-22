@@ -20,7 +20,7 @@ Personiumのインターフェースは基本的にREST APIのみでありGUIを
 [YouTube動画](https://www.youtube.com/watch?v=qlq0xM5TGiw&index=3&list=PLZDdjLhDam_SvjUZ5hN7I70KubzMEy3AX)  
 
 ### アプリの種類  
-Personiumでは、使用するAPIの権限レベルに応じて、大きく以下の3種類のGUIに分類される。APIの分類についての詳細は[ここ](../user_guide/001_Personium_Architecture.md)を参照。  
+Personiumでは、使用するAPIの権限レベルに応じて、大きく以下の3種類のGUIに分類される。APIの分類についての詳細は[ここ](../introduction/001_Personium_Architecture.md)を参照。  
 
 1. [一般アプリ](#1-%E4%B8%80%E8%88%AC%E3%82%A2%E3%83%97%E3%83%AA)  
 1. [Cell管理クライアント（Homeアプリ）](#2-cell%E7%AE%A1%E7%90%86%E3%82%AF%E3%83%A9%E3%82%A4%E3%82%A2%E3%83%B3%E3%83%88home%E3%82%A2%E3%83%97%E3%83%AA)  
@@ -122,7 +122,7 @@ GitHubで公開している各種アプリのフォルダ構成は一定のル�
 
 Cell管理クライアントは、Cellの所有者であるユーザがCellの管理権限相当の操作を行うためのGUIのことを指す。
 Cellの管理権限相当の操作はCellレベルAPIで
-詳細は[ここ](../user_guide/001_Personium_Architecture.md)を参照。
+詳細は[ここ](../introduction/001_Personium_Architecture.md)を参照。
 
 #### 機能
  Cell管理クライアントはおおまかに以下の機能を有しています。
@@ -162,7 +162,7 @@ Unit管理クライアントはUnitレベルの操作（Cellの新規作成や�
 これらはUnit管理権限を持つ特別なToken(Personium Serverで定義されたUnitAdmin Cellで発行可能)を使用するため、ログイン時にはそれらを取得するための情報(以下4つ)を何らかの形でインプットする必要がある。<br>
 
 1. Personium環境のURL
-1. UnitAdminCellのセル名（PersoniumのUnitConfigで規定）
+1. UnitAdminCellのCell名（PersoniumのUnitConfigで規定）
 1. UnitAdminアカウント
 1. UnitAdminのパスワード
 

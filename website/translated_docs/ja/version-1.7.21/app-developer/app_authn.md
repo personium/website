@@ -46,24 +46,24 @@ Personiumでは具体的には以下の情報を使う仕様としてます。
 * または、通常のID/PW認証を実施したときに取得したRefreshTokenを用いて有効期限更新をする際に、<br>上記と同様にClientID・ClientSecret指定によるTransCellトークン発行が可能です。（v1.5.2以降）
 
 ### 前提
-* Schema認証を実施するには、以下のセルが必須となります。<br>
-	* ・{appcell}: アプリセル（スキーマ認証セル）
-	* ・{cell}: ユーザセル
+* Schema認証を実施するには、以下のCellが必須となります。<br>
+	* ・{appcell}: アプリCell（スキーマ認証Cell）
+	* ・{cell}: データ主体Cell
 
 ### 認証の流れ
-* Personiumではアプリセルのアカウントに特殊ロール（`{issuerUrl} + /__role/__/confidentialClient`）を結びつけることで、<br>スキーマ認証（アプリ認証）を行います。（スキーマ認証レベル `confidential` の場合）
-* ユーザセル認証時の`client_id`と `client_secret` にスキーマ認証情報を入れてユーザ認証を行うことでユーザ認証、スキーマ認証の評価を一緒に行います。
+* PersoniumではアプリCellのアカウントに特殊ロール（`{issuerUrl} + /__role/__/confidentialClient`）を結びつけることで、<br>スキーマ認証（アプリ認証）を行います。（スキーマ認証レベル `confidential` の場合）
+* データ主体Cell認証時の`client_id`と `client_secret` にスキーマ認証情報を入れてユーザ認証を行うことでユーザ認証、スキーマ認証の評価を一緒に行います。
 
 ## Schema認証手順
-### アプリセルへアプリ認証情報設定
+### アプリCellへアプリ認証情報設定
 
-* アプリセルにアカウント作成（通常のアカウント作成）
-* アプリセルにロール作成（通常のロール作成）
+* アプリCellにアカウント作成（通常のアカウント作成）
+* アプリCellにロール作成（通常のロール作成）
 	* ロールの作成は任意。最上位のスキーマ認証（Confidential Client）を行う場合のみ実施
 * アカウントとロールの結びつけ（通常の結びつけ処理）
 	* ロールの作成と同じ理由により任意
 
-### ユーザセルのコレクションにスキーマ認証レベル設定
+### データ主体Cellのコレクションにスキーマ認証レベル設定
 
 * ACLを使ってスキーマ認証レベルの設定を行います。
 
@@ -94,28 +94,28 @@ p:requireSchemaAuthz="{スキーマ認証レベル}">
 | public       | スキーマがあればアクセス可能                               |
 | confidential | スキーマに特殊ロールconfidentialClientがあればアクセス可能 |
 
-### アプリセルでの認証
+### アプリCellでの認証
 
-* アプリからアプリセルに対して認証してデータセル向けトランスセルトークン取得
+* アプリからアプリCellに対して認証してデータCell向けトランスセルトークン取得
 * ここでは通常のパスワード認証
 
-### ユーザセルでの認証
+### データ主体Cellでの認証
 
-* Personiumアプリからユーザセルに対して通常のパスワード認証をすると同時にアプリセルから受け取ったトランスセルトークンをclient_secret、<br>アプリセルのURLをclient_idに入れて認証します。
+* Personiumアプリからデータ主体Cellに対して通常のパスワード認証をすると同時にアプリCellから受け取ったトランスセルトークンをclient_secret、<br>アプリCellのURLをclient_idに入れて認証します。
 * client_secret 内の`issuer`と`client_id`をチェックし、一致していれば発行するアクセストークンにスキーマ情報（URL）を付与します。
 * client_secret 内のロール（`AttributeStatement\Attribute\AttributeValue`の値）をチェックし、<br>ロールが特殊な値（`{issuerUrl} + /__role/__/confidentialClient`）であればスキーマ情報の後ろに#c（conficentialであることの印）を付与します。
 
 
 ```
 curl -X POST '{UnitURL}/{cell}}/__auth' -d \
-'grant_type=password&username=user&password=pass&client_id={UnitURL}/{appcell}/&client_secret={アプリセルから受け取ったトランセルトークン}'
+'grant_type=password&username=user&password=pass&client_id={UnitURL}/{appcell}/&client_secret={アプリCellから受け取ったトランCellトークン}'
 ```
 
-### ボックス及びコレクションのデータアクセス制御
+### Box及びコレクションのデータアクセス制御
 
-* ボックス及びコレクションにアクセスする際のアクセストークンのスキーマ認証情報と、<br>ボックスに設定されているスキーマ（アクセス先がコレクションの場合属するボックス）のチェックを行います。
+* Box及びコレクションにアクセスする際のアクセストークンのスキーマ認証情報と、<br>Boxに設定されているスキーマ（アクセス先がコレクションの場合属するBox）のチェックを行います。
 
-* アクセスするボックス/コレクションのスキーマ認証レベル設定とアクセストークンのスキーマ情報を比較し、<br>レベル設定に合わない場合はアクセスを拒否します。
+* アクセスするBox/コレクションのスキーマ認証レベル設定とアクセストークンのスキーマ情報を比較し、<br>レベル設定に合わない場合はアクセスを拒否します。
 
 	* ・none => スキーマ認証チェックを行わない
 
@@ -123,4 +123,4 @@ curl -X POST '{UnitURL}/{cell}}/__auth' -d \
 
 	* ・confidential => スキーマ認証チェックを行い、特殊ロール（confidentialClient）があればアクセス可能にする
 
-* アクセスするボックスのスキーマ値とアクセストークンのスキーマ値を比較し、値が異なる場合はアクセスを拒否します。
+* アクセスするBoxのスキーマ値とアクセストークンのスキーマ値を比較し、値が異なる場合はアクセスを拒否します。

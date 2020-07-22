@@ -4,7 +4,7 @@ title: ExtRoleのNavigation Property経由での他オブジェクト一覧取�
 sidebar_label: ExtRoleのNavigation Property経由での他オブジェクト一覧取得
 ---
 ## 概要
-セル制御オブジェクトをNavigation Property経由で取得する
+Cell制御オブジェクトをNavigation Property経由で取得する
 ### 必要な権限
 * Roleを取得する場合  
 auth-read

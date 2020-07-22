@@ -12,8 +12,8 @@ Personium defines the following three layered basic objects in order to achieve 
 |Name|Overview|URL example|
 |:--|:--|:--|
 |**Unit**|A server to host multiple Cells. What you get by server installation|https&#58;//personium.example/|
-|**Cell**|A datastore for a data subject|https&#58;//personium.example/john.doe/|
-|**Box**|Per-app datastores installed on each Cell|https&#58;//personium.example/john.doe/schedule/|
+|**Cell**|A datastore for a data subject|https&#58;//john.personium.example/|
+|**Box**|Per-app datastores installed on each Cell|https&#58;//john.personium.example/schedule/|
 
 ### Unit  
 * A unit is a system infrastructure which runs Personium which have a unique FQDN.
@@ -22,7 +22,8 @@ Personium defines the following three layered basic objects in order to achieve 
 
 ### Cell  
 
-* A cell is a fundamental concepts of Personium
+* Cell is a data store for each data subject. For personal use, it will be PDS (Personal Data Store).
+* In Personium, the concept of data subject is extended to not only people but also organizations and objects, so it can be used as a data store for a NGO or a car.
 * Each Cells are independent as if they are different tenant in multi-tenancy model.
 * A Cell provides following feature  
     * Authentication and authorization
@@ -39,13 +40,12 @@ Personium defines the following three layered basic objects in order to achieve 
     * File Object
     * OData Data Service
 
+## Based on Open Standards  
 
-
-## Based on Standards  
-
-Personium's API is build on international standards.  
+Personium's API is build on open standards.  
 
 * OAuth2.0 for Authorization
 * WebDAV for File operation
 * OData for relational data
 
+![Personium specifications](assets/interface.png)

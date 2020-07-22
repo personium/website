@@ -2141,6 +2141,10 @@
         "title": "Retrieve cell import status",
         "sidebar_label": "Retrieve cell import status"
       },
+      "version-1.7.21/apiref/version-1.7.21-990_Old_Version_API_Ref": {
+        "title": "Old Version API References",
+        "sidebar_label": "Old Version API References"
+      },
       "version-1.7.21/apiref/error/version-1.7.21-PR401-AU-0008": {
         "title": "Error Code PR401-AU-0008",
         "sidebar_label": "Error Code PR401-AU-0008"
@@ -2148,6 +2152,22 @@
       "version-1.7.21/apiref/error/version-1.7.21-PR503-SV-0001": {
         "title": "Error Code PR503-SV-0001",
         "sidebar_label": "Error Code PR503-SV-0001"
+      },
+      "version-1.7.21/app-developer/version-1.7.21-003_Auth": {
+        "title": "Authorization Model",
+        "sidebar_label": "Authorization model"
+      },
+      "version-1.7.21/app-developer/version-1.7.21-004_Client_auth": {
+        "title": "Client registration & authentication",
+        "sidebar_label": "Client registration & authentication"
+      },
+      "version-1.7.21/app-developer/version-1.7.21-005_Model_construction": {
+        "title": "Cell model",
+        "sidebar_label": "Cell model"
+      },
+      "version-1.7.21/app-developer/version-1.7.21-007_WebDAV_model": {
+        "title": "WebDAV Model",
+        "sidebar_label": "WebDAV Model"
       },
       "version-1.7.21/app-developer/version-1.7.21-671_Engine_Script_Samples": {
         "title": "Engine Script Samples",
@@ -2158,8 +2178,8 @@
         "sidebar_label": "App authentication"
       },
       "version-1.7.21/app-developer/version-1.7.21-launch_from_homeapp": {
-        "title": "Launch application from Home application",
-        "sidebar_label": "Launch application from Home application"
+        "title": "Single Sign On",
+        "sidebar_label": "Single Sign On"
       },
       "version-1.7.21/app-developer/version-1.7.21-Personium_Apps": {
         "title": "Personium App",
@@ -2170,8 +2190,8 @@
         "sidebar_label": "Personium Engine"
       },
       "version-1.7.21/app-developer/version-1.7.21-README": {
-        "title": "Application Developer's Guide",
-        "sidebar_label": "Application Developer's Guide"
+        "title": "Guide for App Developers",
+        "sidebar_label": "Guide for app developers"
       },
       "version-1.7.21/app-developer/version-1.7.21-Roles": {
         "title": "Role in Personium",
@@ -2185,9 +2205,41 @@
         "title": "Cell GUI developer's Guide",
         "sidebar_label": "Cell GUI developer's Guide"
       },
+      "version-1.7.21/contributor/version-1.7.21-README": {
+        "title": "Contributor Guide",
+        "sidebar_label": "Contributor Guide"
+      },
       "version-1.7.21/document-writer/version-1.7.21-README": {
-        "title": "Personium How to participate in document maintenance / improvement",
-        "sidebar_label": "Personium How to participate in document maintenance / improvement"
+        "title": "How to participate in Personium document maintenance and improvement",
+        "sidebar_label": "How to participate in Personium document maintenance and improvement"
+      },
+      "version-1.7.21/getting-started/version-1.7.21-appdev-impl": {
+        "title": "App implementation",
+        "sidebar_label": "App implementation"
+      },
+      "version-1.7.21/getting-started/version-1.7.21-appdev-introduction": {
+        "title": "Develop an app",
+        "sidebar_label": "Introduction"
+      },
+      "version-1.7.21/getting-started/version-1.7.21-appdev-management-tool": {
+        "title": "Management tool (Unit Manager)",
+        "sidebar_label": "Management tool (Unit Manager)"
+      },
+      "version-1.7.21/getting-started/version-1.7.21-appdev-process": {
+        "title": "Flow of app development",
+        "sidebar_label": "Flow of app development"
+      },
+      "version-1.7.21/getting-started/version-1.7.21-README": {
+        "title": "Getting Started",
+        "sidebar_label": "Introduction"
+      },
+      "version-1.7.21/getting-started/version-1.7.21-setup-sample-apps": {
+        "title": "Building a sample app",
+        "sidebar_label": "Building a sample app"
+      },
+      "version-1.7.21/getting-started/version-1.7.21-setup-unit": {
+        "title": "Setup Personium Unit",
+        "sidebar_label": "Setup Personium Unit"
       },
       "version-1.7.21/installation_guide/version-1.7.21-001_Readme_before_installation": {
         "title": "Readme before installation",
@@ -2201,9 +2253,17 @@
         "title": "Install to local machine",
         "sidebar_label": "Install to local machine"
       },
-      "version-1.7.21/overview/version-1.7.21-001_Introduction": {
+      "version-1.7.21/introduction/version-1.7.21-001_Introduction": {
         "title": "What is Personium?",
         "sidebar_label": "What is Personium?"
+      },
+      "version-1.7.21/introduction/version-1.7.21-001_Personium_Architecture": {
+        "title": "Personium Architecture",
+        "sidebar_label": "Personium Architecture"
+      },
+      "version-1.7.21/introduction/version-1.7.21-008_Glossary": {
+        "title": "Glossary",
+        "sidebar_label": "Glossary"
       },
       "version-1.7.21/plugin-developer/version-1.7.21-EngineExtension_Imple_and_Deploy": {
         "title": "Engine Extension implementation and deployment specification",
@@ -2290,40 +2350,12 @@
         "sidebar_label": "Unit Administrator's Guide"
       },
       "version-1.7.21/unit-administrator/version-1.7.21-tutorial": {
-        "title": "Personium Unit management tutorial",
-        "sidebar_label": "Personium Unit management tutorial"
+        "title": "Cell creation tutorial",
+        "sidebar_label": "Create Cell"
       },
       "version-1.7.21/unit-administrator/version-1.7.21-Unit-User": {
         "title": "Unit User",
         "sidebar_label": "Unit User"
-      },
-      "version-1.7.21/user_guide/version-1.7.21-001_Personium_Architecture": {
-        "title": "Personium Architecture",
-        "sidebar_label": "Personium Architecture"
-      },
-      "version-1.7.21/user_guide/version-1.7.21-003_Auth": {
-        "title": "Authentication model",
-        "sidebar_label": "Authentication model"
-      },
-      "version-1.7.21/user_guide/version-1.7.21-004_Client_auth": {
-        "title": "Client registration & authentication",
-        "sidebar_label": "Client registration & authentication"
-      },
-      "version-1.7.21/user_guide/version-1.7.21-005_Model_construction": {
-        "title": "Cell model",
-        "sidebar_label": "Cell model"
-      },
-      "version-1.7.21/user_guide/version-1.7.21-007_WebDAV_model": {
-        "title": "WebDAV Model",
-        "sidebar_label": "WebDAV Model"
-      },
-      "version-1.7.21/user_guide/version-1.7.21-008_Glossary": {
-        "title": "Glossary",
-        "sidebar_label": "Glossary"
-      },
-      "version-1.7.21/user_guide/version-1.7.21-990_Old_Version_API_Ref": {
-        "title": "Old Version API References",
-        "sidebar_label": "Old Version API References"
       }
     },
     "links": {

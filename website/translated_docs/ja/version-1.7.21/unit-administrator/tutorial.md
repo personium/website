@@ -1,7 +1,7 @@
 ---
 id: version-1.7.21-tutorial
-title: Personiumユニット管理 チュートリアル
-sidebar_label: Personiumユニット管理 チュートリアル
+title: Cellの払い出し チュートリアル
+sidebar_label: Cellの払い出し
 ---
 
 **※この文書はPersonium Version 1.6.15 以降をご利用される方を対象としています。**
@@ -27,7 +27,7 @@ sidebar_label: Personiumユニット管理 チュートリアル
 
 
 ## <a name="sect1">1. 本文書の目的</a>
-本文書は、Personiumを初めてご利用される方でも、すぐにPersoniumユニットを管理するための基本的な流れをご理解いただけるよう具体的な手順を説明したものです。  
+本文書は、Personiumを初めてご利用される方でも、すぐにCell作成等のPersonium Unitを管理するための基本的な流れをご理解いただけるよう具体的な手順を説明したものです。  
 
 Personiumでは全ての機能をREST APIで提供しておりますので、OSや開発言語を問わずご利用いただけます。
 javascriptを用いたサンプルソースが公開されていますので、是非ご活用ください。
@@ -52,15 +52,15 @@ javascriptを用いたサンプルソースが公開されていますので、�
 
 |キーワード<br>|概要<br>|
 |:--|:--|
-|Unit<br>|「Personium」のサーバ内で、複数のセルから構成されるデータ領域。<br>完全修飾ドメイン名（UnitFQDN）を持ち、絶対ドメイン名として参照される。<br>|
+|Unit<br>|「Personium」のサーバ内で、複数のCellから構成されるデータ領域。<br>完全修飾ドメイン名（UnitFQDN）を持ち、絶対ドメイン名として参照される。<br>|
 |Cell<br>|データ主体ごとのData Strore。個人で使う場合はPDS(Personal Data Store)となる。<br>「Personium」では、データ主体という概念を人のみでなく組織やモノなどにも拡張したモデル化を行っているため、組織やモノのデータストアとしても使うことが可能。<br>（例、私のCell, あなたのCell, ○○会社のCell, ○○部のCell, 私の車のCell）<br>|
-|Box<br>|アプリケーションに用いるデータを格納する領域。<br>自身もWebDAVコレクションの一つである。一意の名前とスキーマURLを持つ。<br>Cellは、Box未作成でも初期状態で1つのBox（メインボックス） を持ち、削除は不可。<br>|
+|Box<br>|アプリケーションに用いるデータを格納する領域。<br>自身もWebDAVコレクションの一つである。一意の名前とスキーマURLを持つ。<br>Cellは、Box未作成でも初期状態で1つのBox（メインBox） を持ち、削除は不可。<br>|
 
 ## <a name="sect4">4. トークンについて</a>
 
-本文書では、Personiumユニットの操作のためユニットマスタートークン、またはユニットユーザートークンを使用します。ユニットマスタートークンやユニットユーザートークンの詳細については[こちら](Unit-User.md)を参照ください。  
+本文書では、Personium Unitの操作のためユニットマスタートークン、またはUnitユーザートークンを使用します。ユニットマスタートークンやUnitユーザートークンの詳細については[こちら](Unit-User.md)を参照ください。  
 
-Ansible を使って構築した環境のユニットマスタートークンやユニットユーザーのアカウント名／パスワードの確認方法は[こちら](../server-operator/Confirm_environment_settings.md)を参照してください。  
+Ansible を使って構築した環境のユニットマスタートークンやUnitユーザーのアカウント名／パスワードの確認方法は[こちら](../server-operator/Confirm_environment_settings.md)を参照してください。  
 独自に環境を構築された場合はサーバソフトウェア管理者に確認してください。
 
 ## <a name="sect5">5. PDSを利用者に払い出す</a>
@@ -70,7 +70,7 @@ Ansible を使って構築した環境のユニットマスタートークンや
 何も入っていない空のCell(PDS)を作ります。
 
 新たなCellを追加作成する前に、Cell一覧取得APIで事前の状態を確認してみましょう。
-構築直後のPersoniumユニットには、ユニット管理用のCellのみ登録されている状態です。
+構築直後のPersonium Unitには、Unit管理用のCellのみ登録されている状態です。
 
 ```sh
 curl "https://{Personium_FQDN}/__ctl/Cell" \
@@ -78,8 +78,8 @@ curl "https://{Personium_FQDN}/__ctl/Cell" \
 -H "Accept:application/json" -H "Authorization:Bearer {Token}"
 ```
 
-ユニット管理用のCellの情報1件がレスポンスに返ります。
-この状態が Personiumユニット の初期状態です。
+Unit管理用のCellの情報1件がレスポンスに返ります。
+この状態が Personium Unit の初期状態です。
 
 ```json
 {
@@ -415,7 +415,7 @@ HTTP/1.1 204 No Content
 すべてのrole(役割)に対して設定('root'指定)することも、細かくRole別にアクセス権を設定する事も可能です。
 前項のRoleとAccountの紐付けに従い、Account(User)のアクセス権限が決定します。
 
-セルレベルアクセス制御設定APIを使用します。
+Cellレベルアクセス制御設定APIを使用します。
 
 ```sh
 curl "https://{Personium_FQDN}/usercell" \
@@ -627,7 +627,7 @@ Unit Managerについての詳細は[こちら](https://github.com/personium/app
 <iframe width="560" height="315" src="https://www.youtube.com/embed/d1_pET0M-YA" frameborder="0" allow="autoplay; encrypted-media" allowfullscreen></iframe>
 </div>
 
-「Unit Manager」使用時に必要となるログイン情報は、「[4. トークンについて](#sec4)」で取得したユニット管理アカウント情報をご使用ください。
+「Unit Manager」使用時に必要となるログイン情報は、「[4. トークンについて](#sec4)」で取得したUnit管理アカウント情報をご使用ください。
 
 
 ## <a name="sect8">8. PDSの払い出しを自動化する</a>

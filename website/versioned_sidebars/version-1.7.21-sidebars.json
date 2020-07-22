@@ -30,6 +30,7 @@
         "label": "Authentication",
         "ids": [
           "version-1.7.21-apiref/292_OAuth2_Authorization_Endpoint",
+          "version-1.7.21-apiref/292p_OAuth2_Authorization_Endpoint",
           "version-1.7.21-apiref/293_OAuth2_Token_Endpoint",
           "version-1.7.21-apiref/294_Password_Change",
           "version-1.7.21-apiref/297_OAtuh2_Token_Introspection_Endpoint",
@@ -64,7 +65,7 @@
       },
       {
         "type": "subcategory",
-        "label": "Cell Control Object",
+        "label": "Role (Cell Control Object)",
         "ids": [
           "version-1.7.21-apiref/201_Create_Role",
           "version-1.7.21-apiref/203_Retrieve_Role",
@@ -263,6 +264,14 @@
       },
       {
         "type": "subcategory",
+        "label": "OData: Service Document Retrieve/Schema Retrieve",
+        "ids": [
+          "version-1.7.21-apiref/317_Document_Acquisition_Service",
+          "version-1.7.21-apiref/316_User_Defined_Data_Schema"
+        ]
+      },
+      {
+        "type": "subcategory",
         "label": "OData: Schema Definition - EntityType",
         "ids": [
           "version-1.7.21-apiref/345_Create_EntityType",
@@ -319,14 +328,6 @@
       },
       {
         "type": "subcategory",
-        "label": "OData: Service Dcoument Retrieve/Schema Retrieve",
-        "ids": [
-          "version-1.7.21-apiref/317_Document_Acquisition_Service",
-          "version-1.7.21-apiref/316_User_Defined_Data_Schema"
-        ]
-      },
-      {
-        "type": "subcategory",
         "label": "OData: Data Manipulation",
         "ids": [
           "version-1.7.21-apiref/364_Create_Entity",
@@ -367,6 +368,16 @@
       }
     ],
     "Common": [
+      "version-1.7.21-apiref/005_Variable_of_Request_URL",
+      {
+        "type": "subcategory",
+        "label": "Error",
+        "ids": [
+          "version-1.7.21-apiref/004_Error_Messages",
+          "version-1.7.21-apiref/error/PR401-AU-0008",
+          "version-1.7.21-apiref/error/PR503-SV-0001"
+        ]
+      },
       {
         "type": "subcategory",
         "label": "OData Acquisition Common Queries",
@@ -382,8 +393,6 @@
           "version-1.7.21-apiref/408_Full_Text_Search_Query"
         ]
       },
-      "version-1.7.21-apiref/005_Variable_of_Request_URL",
-      "version-1.7.21-apiref/004_Error_Messages",
       "version-1.7.21-apiref/003_Common_Limitations_on_HTTP_Implementation",
       "version-1.7.21-apiref/002_CORS_Support",
       "version-1.7.21-apiref/001_Cross_Domain_Policy_File"
@@ -392,13 +401,32 @@
   "version-1.7.21-docs": {
     "Introduction": [
       "version-1.7.21-README",
-      "version-1.7.21-overview/001_Introduction",
-      "version-1.7.21-user_guide/001_Personium_Architecture",
-      "version-1.7.21-user_guide/005_Model_construction",
-      "version-1.7.21-user_guide/003_Auth",
-      "version-1.7.21-user_guide/007_WebDAV_model",
-      "version-1.7.21-user_guide/008_Glossary",
-      "version-1.7.21-user_guide/990_Old_Version_API_Ref"
+      "version-1.7.21-introduction/001_introduction",
+      "version-1.7.21-overview/Aims_for",
+      "version-1.7.21-introduction/001_Personium_Architecture",
+      "version-1.7.21-introduction/008_Glossary"
+    ],
+    "Getting Started": [
+      "version-1.7.21-getting-started/README",
+      {
+        "type": "subcategory",
+        "label": "Prepare Personium",
+        "ids": [
+          "version-1.7.21-getting-started/setup-unit",
+          "version-1.7.21-unit-administrator/tutorial",
+          "version-1.7.21-getting-started/setup-sample-apps"
+        ]
+      },
+      {
+        "type": "subcategory",
+        "label": "Develop App",
+        "ids": [
+          "version-1.7.21-getting-started/appdev-introduction",
+          "version-1.7.21-getting-started/appdev-management-tool",
+          "version-1.7.21-getting-started/appdev-process",
+          "version-1.7.21-getting-started/appdev-impl"
+        ]
+      }
     ],
     "For Personium Operators": [
       {
@@ -406,10 +434,7 @@
         "label": "For Server Operator",
         "ids": [
           "version-1.7.21-server-operator/README",
-          "version-1.7.21-server-operator/setup",
           "version-1.7.21-server-operator/Confirm_environment_settings",
-          "version-1.7.21-server-operator/setup_virtual_image",
-          "version-1.7.21-server-operator/proxy_exclusion_setting",
           "version-1.7.21-server-operator/setup_authentication_plugins",
           "version-1.7.21-server-operator/setup_engine_extensions",
           "version-1.7.21-server-operator/unit_operation_design",
@@ -424,24 +449,64 @@
         "ids": [
           "version-1.7.21-unit-administrator/README",
           "version-1.7.21-unit-administrator/Unit-User",
-          "version-1.7.21-unit-administrator/tutorial",
           "version-1.7.21-unit-administrator/Data_Management"
+        ]
+      },
+      {
+        "type": "subcategory",
+        "label": "Old Docs",
+        "ids": [
+          "version-1.7.21-server-operator/setup_virtual_image",
+          "version-1.7.21-server-operator/proxy_exclusion_setting",
+          "version-1.7.21-server-operator/setup"
         ]
       }
     ],
     "For App Developer": [
       "version-1.7.21-app-developer/README",
-      "version-1.7.21-app-developer/using_odata",
-      "version-1.7.21-app-developer/Personium_Apps",
-      "version-1.7.21-user_guide/004_Client_auth",
-      "version-1.7.21-app-developer/app_authn",
-      "version-1.7.21-app-developer/Roles",
-      "version-1.7.21-app-developer/launch_from_homeapp",
-      "version-1.7.21-app-developer/Personium-Engine",
-      "version-1.7.21-app-developer/671_Engine_Script_Samples",
-      "version-1.7.21-cell-gui-developer/README"
+      {
+        "type": "subcategory",
+        "label": "Authorization",
+        "ids": [
+          "version-1.7.21-app-developer/003_Auth",
+          "version-1.7.21-app-developer/Roles",
+          "version-1.7.21-apiref/006_Access_Control",
+          "version-1.7.21-app-developer/app_authn",
+          "version-1.7.21-app-developer/launch_from_homeapp"
+        ]
+      },
+      {
+        "type": "subcategory",
+        "label": "Box/Bar File",
+        "ids": [
+          "version-1.7.21-apiref/007_Box_install",
+          "version-1.7.21-apiref/301_Bar_File"
+        ]
+      },
+      {
+        "type": "subcategory",
+        "label": "Collection",
+        "ids": [
+          "version-1.7.21-app-developer/007_WebDAV_model",
+          "version-1.7.21-app-developer/using_odata",
+          "version-1.7.21-app-developer/Personium-Engine",
+          "version-1.7.21-app-developer/671_Engine_Script_Samples"
+        ]
+      },
+      "version-1.7.21-cell-gui-developer/README",
+      {
+        "type": "subcategory",
+        "label": "Old Docs",
+        "ids": [
+          "version-1.7.21-app-developer/005_Model_construction",
+          "version-1.7.21-app-developer/004_Client_auth",
+          "version-1.7.21-app-developer/Personium_Apps",
+          "version-1.7.21-apiref/990_Old_Version_API_Ref"
+        ]
+      }
     ],
     "Contributor Guides": [
+      "version-1.7.21-contributor/README",
       {
         "type": "subcategory",
         "label": "For Document Contribution",

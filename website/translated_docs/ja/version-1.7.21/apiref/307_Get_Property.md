@@ -130,7 +130,7 @@ XMLの構造
 |service|p:|要素|リソースのタイプがサービスコレクションであることを表す|Serviceコレクションの場合表示|
 |stream|p:|要素|リソースのタイプがStreamコレクションであることを表す|Streamコレクションの場合表示|
 |acl|D:|要素|リソースに設定されているACL設定|ACL設定を取得するためには、対象リソースに対するacl-read権限が必要<br>ACL要素以下の内容については、[Cell Level アクセス制御設定API](289_Cell_ACL.md)を参照|
-|base|xml:|属性|ACLのPrivilegeのBaseURL|CellへのPROPFINDの場合、デフォルトボックス（"__"）のリソースURL|
+|base|xml:|属性|ACLのPrivilegeのBaseURL|CellへのPROPFINDの場合、デフォルトBox（"__"）のリソースURL|
 
 
 DTD表記

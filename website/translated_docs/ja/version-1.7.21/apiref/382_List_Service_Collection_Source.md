@@ -16,8 +16,8 @@ read
 
 |パス|概要|備考|
 |:--|:--|:--|
-|{CellName}|セル名||
-|{BoxName}|ボックス名||
+|{CellName}|Cell名||
+|{BoxName}|Box名||
 |{CollectionName}|サービスコレクション名|有効値 桁数:1&#65374;256|
 |{ResourceName}|リソース名|有効値(制限) 桁数:1&#65374;256|
 
