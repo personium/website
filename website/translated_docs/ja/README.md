@@ -10,7 +10,7 @@ Slackコミュニティへの参加登録は[こちら](https://bit.ly/Join_Pers
 
 ## はじめに
 
-* [Personiumとは](./introduction/001_introduction.md)
+* [Personiumとは](./introduction/001_Introduction.md)
 * [Personiumのアーキテクチャ](./introduction/001_Personium_Architecture.md)
 * [用語集](./introduction/008_Glossary.md)
 
