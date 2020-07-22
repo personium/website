@@ -4,10 +4,10 @@ title: ExtCellのNavigation Property経由での他オブジェクト一覧取�
 sidebar_label: ExtCellのNavigation Property経由での他オブジェクト一覧取得
 ---
 ## 概要
-セル制御オブジェクトをNavigation Property経由で取得する
+Cell制御オブジェクトをNavigation Property経由で取得する
 
 ### 必要な権限
-* 取得するセル制御オブジェクトと経由するセル制御オブジェクト双方の参照権限
+* 取得するCell制御オブジェクトと経由するCell制御オブジェクト双方の参照権限
 * 例） Role経由でRelationを取得する場合  
 auth-readとsocial-read
 

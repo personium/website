@@ -7,7 +7,7 @@ sidebar_label: Cell更新
 既存のCell情報を更新する
 
 ### 必要な権限
-ユニットユーザのみ可能
+Unitユーザのみ可能
 
 ### 制限事項
 * OData制限

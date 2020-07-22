@@ -14,12 +14,12 @@ EngineへのアクセスはBox内に作成した Engine Service Collection (ESC)
 
 上記3ステップの準備をすることで、指定パスの呼出でサーバサイドロジックが走行するようになります。
 
-多くの場合 Engine Script はアプリ開発者がbarファイルの中に含めて配布を行い、セルのオーナが box インストールを行うことで実行可能となります。またセルのオーナはアプリを操作する中でそれがどれだけUnitに負荷をかけるのかをイメージすることなくアプリを操作しますし、そういった操作を契機にEngine Scriptは実行されることとなります。
+多くの場合 Engine Script はアプリ開発者がbarファイルの中に含めて配布を行い、Cellのオーナが box インストールを行うことで実行可能となります。またCellのオーナはアプリを操作する中でそれがどれだけUnitに負荷をかけるのかをイメージすることなくアプリを操作しますし、そういった操作を契機にEngine Scriptは実行されることとなります。
 
 そのため EngineはUnit に過度な負荷をかけたり、Unit を内部から攻撃するようなコードが記述できないようなサンドボックス環境として設計されています。
 
 一方で、その制約がきつすぎる場合には行えることが限定的になりすぎることもあるため、
-ユニットの管理者が設定をすれば機能拡張を行えるような枠組みとして Engine Extension を用意しています。
+Unitの管理者が設定をすれば機能拡張を行えるような枠組みとして Engine Extension を用意しています。
 
 
 ## Engine Service Collection (ESC)
@@ -134,10 +134,10 @@ function(request) {
 ## Engine Extension
 
 Engine ExtensionはEngine Libraryの機能を拡張するための機構です。具体的にはJava言語で特定の方法で書かれたクラスを含んだjarファイルを
-ユニットに設定することにより、 Engine Script内で _p.extension. パッケージ以下に新たな機能を提供するオブジェクトが現れ、利用可能となります。
+Unitに設定することにより、 Engine Script内で _p.extension. パッケージ以下に新たな機能を提供するオブジェクトが現れ、利用可能となります。
 
 Engine Extension は、概要で記載のとおりサンドボックス環境として設計されているengineの制約を緩和するための機構です。
-そのため Engine Extensionの導入はユニット管理者でないと行うことができません。
+そのため Engine Extensionの導入はUnit管理者でないと行うことができません。
 
 ### Engine Extension のセットアップ
 

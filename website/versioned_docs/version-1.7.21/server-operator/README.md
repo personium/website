@@ -7,7 +7,7 @@ original_id: README
 
 It is a document for people who use Personium's server software to build Personium units, who build/deploy/configure Personium server programs, and who wish to provide / operate a PDS service environment using Personium.
 
-Those who access the constructed/configured Personium unit using the unit user token and perform the main task of the unit administrator, that is, the creation/payout of the Cell, management of the dispensed Cell, etc., Please see [Guide for unit administrator](../unit-administrator/).
+Those who access the constructed/configured Personium unit using the unit user token and perform the main task of the unit administrator, that is, the creation/payout of the Cell, management of the dispensed Cell, etc., Please see [Guide for unit administrator](../unit-administrator/README.md).
 
 ### Personium unit structure
 
@@ -32,11 +32,17 @@ Personium unit construction requires to assign the combination of following 7 ro
 |NFS|Required|server to operate `Network File System (NFS)`.|
 |Bastion|Optional|Bastion server. Used to execute ansible and to connect other servers by ssh.|
 
+TODO: Figure 3-server
+
 ## Unit configuration design
 
 Personium has a scalable architecture. For evaluation and personal use, it is also possible to build a Personium unit packed all in one machine. Meanwhile, it is recommended to adopt the layer structure such as Web layer - AP layer - DB layer because non-function such as security and performance is required to construct units used by hundreds or thousands of people, You should take a minimum of 2-3 configurations. Furthermore, in order to construct a large-scale unit that tens of thousands to hundreds of thousands of people use every day, each layer is scaled out and it takes 10 to 20 units.
 
 First of all, let's decide what kind of unit to make and design the necessary infrastructure.
+
+## Preparation
+
+TODO: Write HTTPS and DNS settings
 
 ## Construction of unit
 
@@ -98,7 +104,7 @@ Confirm the environment information of the main middleware of the unit construct
 
 * [Confirmation of the environment of units constructed](./Confirm_environment_settings.md)
 
-When you want to check how to manage the unit after build, please click [here](../unit-administrator/).
+When you want to check how to manage the unit after build, please click [here](../unit-administrator/README.md).
 
 ### Apply plugin
 

@@ -4,14 +4,14 @@ title: Personium Unitの percell 環境時の設定
 sidebar_label: Personium Unitの percell 環境時の設定
 ---
 
-PersoniumではセルにアクセスするURL形式として以下の２つの形式をサポートしています。  
+PersoniumではCellにアクセスするURL形式として以下の２つの形式をサポートしています。  
 
 ||アクセス形式|備考|
 |:--|:--|:--|
 |path based|https&#58;//fqdn/cellname|1.7.5以前のデフォルト<br>|
 |percell fqdn|https&#58;//cellname.fqdn|1.7.6以降のデフォルト<br>|
 
-このアクセス形式はPersoniumユニット起動時のオプション（pathBasedCellUrl.enabled）の値で切り換えることが可能です。  
+このアクセス形式はPersonium Unit起動時のオプション（pathBasedCellUrl.enabled）の値で切り換えることが可能です。  
 personium-core1.7.5リリースからデフォルトになったpercell形式でのアクセスには、幾つかの必須要件があるので記載します。  
 
 必須要件

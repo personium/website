@@ -1,7 +1,7 @@
 ---
-id：appdev-management-tool
-タイトル：管理ツール（Unit Manager）
-sidebar_label：管理ツール（Unit Manager）
+id: appdev-management-tool
+title: 管理ツール（Unit Manager）
+sidebar_label: 管理ツール（Unit Manager）
 ---
 
 Personium Projectでは、開発プロセスを簡易化するための1つのサンプル管理ツールを提供しています(データモデルの設計とテスト、ファイルのアップロード、アクセス許可の構成とテストなど)。Unit Managerを使用すると、任意のPersonium UnitのPersonium Cellを管理できます。

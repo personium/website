@@ -115,7 +115,7 @@ Submit a certificate based on # # CSR
 
 To participate in the Personium unit ecosystem, please ask the Personium project to issue a unit certificate.
 
-⇒ Please request from the [Slack Community](https://personium-io.slack.com/) #infra / #infra_ja channel. Register to join the Slack community [here](https://join.slack.com/t/personium-io/shared_invite/enQtNDA4OTg1MzI3NjM3LTIwNjVkZjZkZDVlNTQ2NjFmZTFjMTljMzAwNzk0ZjQ0MGJhMDIzOGIxN2UyZmMxYTkwMzIzOTU5ZmZkMmEyNzE).  
+⇒ Please request from the [Slack Community](https://personium-io.slack.com/) #infra / #infra_ja channel. Register to join the Slack community [here](https://bit.ly/Join_Personium_Slack).  
 
 ### Self-issuing case
 

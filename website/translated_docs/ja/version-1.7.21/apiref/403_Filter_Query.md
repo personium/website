@@ -53,7 +53,7 @@ sidebar_label: $filterクエリ
 ※検索文字列にシングルクオートを含めたい場合、シングルクオートを２個「''」記述することでシングルクオートを検索文字列に指定することができる  
 ※$filterに存在しないプロパティ名を指定した場合、そのプロパティ名を無視して検索を行う  
 ## cURLサンプル
-例：セル名がsampleのセルを取得する場合:
+例：Cell名がsampleのCellを取得する場合:
 ```sh
 curl "https://unit1.example/__ctl/Cell?\$filter=Name%20eq%20'sample'" -X GET -i -H \
 'Authorization: Bearer AA~PBDc...(省略)...FrTjA' -H 'Accept: application/json'

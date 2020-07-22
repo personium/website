@@ -7,7 +7,7 @@ sidebar_label: Cell取得
 既存のCell情報を取得する
 
 ### 必要な権限
-ユニットユーザのみ可能
+Unitユーザのみ可能
 
 ### 制限事項
 * OData制限

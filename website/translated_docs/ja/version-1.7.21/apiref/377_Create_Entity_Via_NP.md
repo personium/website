@@ -28,8 +28,8 @@ write
 ```
 |パス|概要|
 |:--|:--|
-|{CellName}|セル名|
-|{BoxName}|ボックス名|
+|{CellName}|Cell名|
+|{BoxName}|Box名|
 |{ODataCollecitonName}|コレクション名|
 |{EntityTypeName}|EntityType名|
 |{EntityID}|EntityのID|

@@ -122,8 +122,8 @@
         "sidebar_label": "RoleのNavigation Property経由での他オブジェクト一覧取得"
       },
       "apiref/212_Create_Account": {
-        "title": "Account作成",
-        "sidebar_label": "Account作成"
+        "title": "Account登録",
+        "sidebar_label": "Account登録"
       },
       "apiref/213_Retrieve_Account": {
         "title": "Account取得",
@@ -969,6 +969,26 @@
         "title": "Cellインポート状態取得",
         "sidebar_label": "Cellインポート状態取得"
       },
+      "apiref/990_Old_Version_API_Ref": {
+        "title": "古いバージョンのAPIリファレンス",
+        "sidebar_label": "古いバージョンのAPIリファレンス"
+      },
+      "app-developer/003_Auth": {
+        "title": "認可モデル",
+        "sidebar_label": "認可モデル"
+      },
+      "app-developer/004_Client_auth": {
+        "title": "クライアント登録&認証",
+        "sidebar_label": "クライアント登録&認証"
+      },
+      "app-developer/005_Model_construction": {
+        "title": "Cellのモデル",
+        "sidebar_label": "Cellのモデル"
+      },
+      "app-developer/007_WebDAV_model": {
+        "title": "WebDAV モデル",
+        "sidebar_label": "WebDAV モデル"
+      },
       "app-developer/671_Engine_Script_Samples": {
         "title": "Engine Script のサンプル",
         "sidebar_label": "Engine Script のサンプル"
@@ -1015,55 +1035,15 @@
       },
       "getting-started/README": {
         "title": "Getting Started",
-        "sidebar_label": "はじめに"
-      },
-      "getting-started/appdev-appcell-and-box": {
-        "title": "App Cell & Box on User Cell",
-        "sidebar_label": "App Cell & Box on User Cell"
-      },
-      "getting-started/appdev-dist-SSO-launch-app": {
-        "title": "Distribute SSO launch App",
-        "sidebar_label": "Distribute SSO launch App"
-      },
-      "getting-started/appdev-dist-bar": {
-        "title": "Distribute Bar File",
-        "sidebar_label": "Distribute Bar File"
-      },
-      "getting-started/appdev-dist-stand-alone-app": {
-        "title": "Distribute Stand-alone App",
-        "sidebar_label": "Distribute Stand-alone App"
+        "sidebar_label": "Getting Started"
       },
       "getting-started/appdev-impl": {
         "title": "アプリの実装",
         "sidebar_label": "アプリの実装"
       },
-      "getting-started/appdev-impl-auth": {
-        "title": "Implement Authentication",
-        "sidebar_label": "Implement Authentication"
-      },
-      "getting-started/appdev-impl-data-shareing": {
-        "title": "Implement Data Sharing",
-        "sidebar_label": "Implement Data Sharing"
-      },
-      "getting-started/appdev-impl-engine-script": {
-        "title": "Implement Engine Script",
-        "sidebar_label": "Implement Engine Script"
-      },
-      "getting-started/appdev-impl-oauth2-code-flow": {
-        "title": "Implement OAuth2 Code Flow",
-        "sidebar_label": "Implement OAuth2 Code Flow"
-      },
-      "getting-started/appdev-impl-odata": {
-        "title": "Implement Relational Data (OData)",
-        "sidebar_label": "Implement Relational Data (OData)"
-      },
-      "getting-started/appdev-impl-webdav": {
-        "title": "Implement File (WebDAV)",
-        "sidebar_label": "Implement File (WebDAV)"
-      },
       "getting-started/appdev-introduction": {
-        "title": "はじめに",
-        "sidebar_label": "はじめに"
+        "title": "アプリを開発する",
+        "sidebar_label": "アプリを開発する"
       },
       "getting-started/appdev-management-tool": {
         "title": "管理ツール（Unit Manager）",
@@ -1072,10 +1052,6 @@
       "getting-started/appdev-process": {
         "title": "アプリ開発の流れ",
         "sidebar_label": "アプリ開発の流れ"
-      },
-      "getting-started/appdev-template": {
-        "title": "App Template",
-        "sidebar_label": "App Template"
       },
       "getting-started/setup-sample-apps": {
         "title": "サンプルアプリの構築",
@@ -1097,9 +1073,17 @@
         "title": "ローカルマシンへのインストール",
         "sidebar_label": "ローカルマシンへのインストール"
       },
-      "introduction/001_introduction": {
+      "introduction/001_Introduction": {
         "title": "Personiumとは何ですか？",
         "sidebar_label": "Personiumとは何ですか？"
+      },
+      "introduction/001_Personium_Architecture": {
+        "title": "Personiumのアーキテクチャ",
+        "sidebar_label": "Personiumのアーキテクチャ"
+      },
+      "introduction/008_Glossary": {
+        "title": "用語集",
+        "sidebar_label": "用語集"
       },
       "plugin-developer/EngineExtension_Imple_and_Deploy": {
         "title": "Engine Extensionの実装及び配備仕様",
@@ -1195,41 +1179,9 @@
       },
       "unit-administrator/tutorial": {
         "title": "Cellの払い出し チュートリアル",
-        "sidebar_label": "Cellの払い出し"
+        "sidebar_label": "Cellの払い出し チュートリアル"
       },
-      "introduction/001_Personium_Architecture": {
-        "title": "Personiumのアーキテクチャ",
-        "sidebar_label": "Personiumのアーキテクチャ"
-      },
-      "app-developer/003_Auth": {
-        "title": "認可モデル",
-        "sidebar_label": "認可モデル"
-      },
-      "app-developer/004_Client_auth": {
-        "title": "クライアント登録&認証",
-        "sidebar_label": "クライアント登録&認証"
-      },
-      "app-developer/005_Model_construction": {
-        "title": "Cellのモデル",
-        "sidebar_label": "Cellのモデル"
-      },
-      "app-developer/007_WebDAV_model": {
-        "title": "WebDAV モデル",
-        "sidebar_label": "WebDAV モデル"
-      },
-      "introduction/008_Glossary": {
-        "title": "用語集",
-        "sidebar_label": "用語集"
-      },
-      "user_guide/009_Auth_Usage": {
-        "title": "認証/認可の使い方",
-        "sidebar_label": "認証/認可の使い方"
-      },
-      "apiref/990_Old_Version_API_Ref": {
-        "title": "古いバージョンのAPIリファレンス",
-        "sidebar_label": "古いバージョンのAPIリファレンス"
-      },
-      "version-1.7.21-/README": {
+      "version-1.7.21-README": {
         "title": "Personium ドキュメント",
         "sidebar_label": "Personium ドキュメント"
       },
@@ -2193,6 +2145,26 @@
         "title": "Cellインポート状態取得",
         "sidebar_label": "Cellインポート状態取得"
       },
+      "version-1.7.21-apiref/990_Old_Version_API_Ref": {
+        "title": "古いバージョンのAPIリファレンス",
+        "sidebar_label": "古いバージョンのAPIリファレンス"
+      },
+      "version-1.7.21-app-developer/003_Auth": {
+        "title": "認可モデル",
+        "sidebar_label": "認可モデル"
+      },
+      "version-1.7.21-app-developer/004_Client_auth": {
+        "title": "クライアント登録&認証",
+        "sidebar_label": "クライアント登録&認証"
+      },
+      "version-1.7.21-app-developer/005_Model_construction": {
+        "title": "Cellのモデル",
+        "sidebar_label": "Cellのモデル"
+      },
+      "version-1.7.21-app-developer/007_WebDAV_model": {
+        "title": "WebDAV モデル",
+        "sidebar_label": "WebDAV モデル"
+      },
       "version-1.7.21-app-developer/671_Engine_Script_Samples": {
         "title": "Engine Script のサンプル",
         "sidebar_label": "Engine Script のサンプル"
@@ -2218,8 +2190,8 @@
         "sidebar_label": "アプリ認証"
       },
       "version-1.7.21-app-developer/launch_from_homeapp": {
-        "title": "Homeアプリからのアプリ起動",
-        "sidebar_label": "Homeアプリからのアプリ起動"
+        "title": "Single Sign On",
+        "sidebar_label": "Single Sign On"
       },
       "version-1.7.21-app-developer/using_odata": {
         "title": "OData Service Collection (OSC)の使い方",
@@ -2241,65 +2213,29 @@
         "title": "Getting Started",
         "sidebar_label": "Getting Started"
       },
-      "version-1.7.21-getting-started/appdev-appcell-and-box": {
-        "title": "App Cell & Box on User Cell",
-        "sidebar_label": "App Cell & Box on User Cell"
-      },
-      "version-1.7.21-getting-started/appdev-dist-SSO-launch-app": {
-        "title": "Distribute SSO launch App",
-        "sidebar_label": "Distribute SSO launch App"
-      },
-      "version-1.7.21-getting-started/appdev-dist-bar": {
-        "title": "Distribute Bar File",
-        "sidebar_label": "Distribute Bar File"
-      },
-      "version-1.7.21-getting-started/appdev-dist-stand-alone-app": {
-        "title": "Distribute Stand-alone App",
-        "sidebar_label": "Distribute Stand-alone App"
-      },
-      "version-1.7.21-getting-started/appdev-impl-auth": {
-        "title": "Implement Authentication",
-        "sidebar_label": "Implement Authentication"
-      },
-      "version-1.7.21-getting-started/appdev-impl-data-shareing": {
-        "title": "Implement Data Sharing",
-        "sidebar_label": "Implement Data Sharing"
-      },
-      "version-1.7.21-getting-started/appdev-impl-engine-script": {
-        "title": "Implement Engine Script",
-        "sidebar_label": "Implement Engine Script"
-      },
-      "version-1.7.21-getting-started/appdev-impl-oauth2-code-flow": {
-        "title": "Implement OAuth2 Code Flow",
-        "sidebar_label": "Implement OAuth2 Code Flow"
-      },
-      "version-1.7.21-getting-started/appdev-impl-odata": {
-        "title": "Implement Relational Data (OData)",
-        "sidebar_label": "Implement Relational Data (OData)"
-      },
-      "version-1.7.21-getting-started/appdev-impl-webdav": {
-        "title": "Implement File (WebDAV)",
-        "sidebar_label": "Implement File (WebDAV)"
+      "version-1.7.21-getting-started/appdev-impl": {
+        "title": "アプリの実装",
+        "sidebar_label": "アプリの実装"
       },
       "version-1.7.21-getting-started/appdev-introduction": {
         "title": "アプリを開発する",
         "sidebar_label": "アプリを開発する"
       },
       "version-1.7.21-getting-started/appdev-management-tool": {
-        "title": "Management tool (Unit Manager)",
-        "sidebar_label": "Management tool (Unit Manager)"
+        "title": "管理ツール（Unit Manager）",
+        "sidebar_label": "管理ツール（Unit Manager）"
       },
-      "version-1.7.21-getting-started/appdev-template": {
-        "title": "App Template",
-        "sidebar_label": "App Template"
+      "version-1.7.21-getting-started/appdev-process": {
+        "title": "アプリ開発の流れ",
+        "sidebar_label": "アプリ開発の流れ"
       },
       "version-1.7.21-getting-started/setup-sample-apps": {
-        "title": "Setup Sample Apps",
-        "sidebar_label": "Setup Sample Apps"
+        "title": "サンプルアプリの構築",
+        "sidebar_label": "サンプルアプリの構築"
       },
       "version-1.7.21-getting-started/setup-unit": {
-        "title": "Setup Unit",
-        "sidebar_label": "Setup Unit"
+        "title": "Personium Unitの構築",
+        "sidebar_label": "Personium Unitの構築"
       },
       "version-1.7.21-installation_guide/001_Readme_before_installation": {
         "title": "インストール前の注意事項",
@@ -2313,9 +2249,17 @@
         "title": "ローカルマシンへのインストール",
         "sidebar_label": "ローカルマシンへのインストール"
       },
-      "version-1.7.21-overview/001_Introduction": {
+      "version-1.7.21-introduction/001_Introduction": {
         "title": "Personiumとは何ですか？",
         "sidebar_label": "Personiumとは何ですか？"
+      },
+      "version-1.7.21-introduction/001_Personium_Architecture": {
+        "title": "Personiumのアーキテクチャ",
+        "sidebar_label": "Personiumのアーキテクチャ"
+      },
+      "version-1.7.21-introduction/008_Glossary": {
+        "title": "用語集",
+        "sidebar_label": "用語集"
       },
       "version-1.7.21-plugin-developer/EngineExtension_Imple_and_Deploy": {
         "title": "Engine Extensionの実装及び配備仕様",
@@ -2334,8 +2278,8 @@
         "sidebar_label": "サーバプラグイン開発者向けガイド"
       },
       "version-1.7.21-server-operator/Confirm_environment_settings": {
-        "title": "Ansible で構築したユニットの環境情報",
-        "sidebar_label": "Ansible で構築したユニットの環境情報"
+        "title": "Ansible で構築したUnitの環境情報",
+        "sidebar_label": "Ansible で構築したUnitの環境情報"
       },
       "version-1.7.21-server-operator/README": {
         "title": "サーバソフトウェア運用者向けガイド",
@@ -2402,52 +2346,16 @@
         "sidebar_label": "データの管理"
       },
       "version-1.7.21-unit-administrator/README": {
-        "title": "ユニット管理者向けガイド",
-        "sidebar_label": "ユニット管理者向けガイド"
+        "title": "Unit管理者向けガイド",
+        "sidebar_label": "Unit管理者向けガイド"
       },
       "version-1.7.21-unit-administrator/Unit-User": {
-        "title": "ユニットユーザ",
-        "sidebar_label": "ユニットユーザ"
+        "title": "Unitユーザ",
+        "sidebar_label": "Unitユーザ"
       },
       "version-1.7.21-unit-administrator/tutorial": {
-        "title": "Personiumユニット管理 チュートリアル",
-        "sidebar_label": "Personiumユニット管理 チュートリアル"
-      },
-      "version-1.7.21-user_guide/001_Personium_Architecture": {
-        "title": "Personiumのアーキテクチャ",
-        "sidebar_label": "Personiumのアーキテクチャ"
-      },
-      "version-1.7.21-user_guide/003_Auth": {
-        "title": "認証/認可モデル",
-        "sidebar_label": "認証/認可モデル"
-      },
-      "version-1.7.21-user_guide/004_Client_auth": {
-        "title": "クライアント登録&認証",
-        "sidebar_label": "クライアント登録&認証"
-      },
-      "version-1.7.21-user_guide/005_Model_construction": {
-        "title": "Cellのモデル",
-        "sidebar_label": "Cellのモデル"
-      },
-      "version-1.7.21-user_guide/007_WebDAV_model": {
-        "title": "WebDAV モデル",
-        "sidebar_label": "WebDAV モデル"
-      },
-      "version-1.7.21-user_guide/008_Glossary": {
-        "title": "用語集",
-        "sidebar_label": "用語集"
-      },
-      "version-1.7.21-user_guide/009_Auth_Usage": {
-        "title": "認証/認可の使い方",
-        "sidebar_label": "認証/認可の使い方"
-      },
-      "version-1.7.21-user_guide/990_Old_Version_API_Ref": {
-        "title": "古いバージョンのAPIリファレンス",
-        "sidebar_label": "古いバージョンのAPIリファレンス"
-      },
-      "version-1.7.21-README": {
-        "title": "Personium ドキュメント",
-        "sidebar_label": "Personium ドキュメント"
+        "title": "Cellの払い出し チュートリアル",
+        "sidebar_label": "Cellの払い出し チュートリアル"
       }
     },
     "links": {

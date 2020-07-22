@@ -4,7 +4,7 @@ title: RuleのNavigation Property経由での他オブジェクト一覧取得
 sidebar_label: RuleのNavigation Property経由での他オブジェクト一覧取得
 ---
 ## 概要
-セル制御オブジェクトをNavigation Property経由で取得する
+Cell制御オブジェクトをNavigation Property経由で取得する
 ### 必要な権限
 *	rule-read
 * box-read

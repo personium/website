@@ -1,7 +1,7 @@
 ---
 id: version-1.7.21-tutorial
-title: Personium Unit management tutorial
-sidebar_label: Personium Unit management tutorial
+title: Cell creation tutorial
+sidebar_label: Create Cell
 original_id: tutorial
 ---
 

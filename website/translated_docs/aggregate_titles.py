@@ -35,7 +35,9 @@ def main():
   for key in keys:
     sorted_dict[key] = sidebars_dict[key]
   sidebars_json = json.dumps(sorted_dict, indent=2, ensure_ascii=False)
-  print(sidebars_json)
+  # print(sidebars_json)
+  with open('out.json', mode='w', encoding='utf-8') as f:
+    f.write(sidebars_json)
 
 if __name__ == "__main__":
     main()

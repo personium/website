@@ -11,14 +11,36 @@ Register to join the Slack community [here](https://bit.ly/Join_Personium_Slack)
 
 ## Introduction
 
-#### [What is Personium?](./overview/001_Introduction.md)
-#### [Personium Architecture](./user_guide/001_Personium_Architecture.md)
-#### [Cell Model](./user_guide/005_Model_construction.md)
-#### [Glossary](./user_guide/008_Glossary.md)
+* [What is Personium?](./introduction/001_Introduction.md)
+* [Personium Architecture](./introduction/001_Personium_Architecture.md)
+* [Glossary](./introduction/008_Glossary.md)
+
+## Personium user types
+
+Personium users can be divided into the following:
+
+| User type | Description |
+|-------------|----|
+|Personium operator |Constructs Personium server and manages PDS services|
+| App Developer | Developes apps using Personium APIs |
+
+The figure below shows the relationship.
+
+![Personium user type](assets/personium-users.png)
+
+## Getting Started
+
+Below you will find the introductory documentation for Personium operators and app developers.
+
+[Getting Started](./getting-started/README.md)
 
 ## User Guides
 
-### For Personium Operators
+We provide a guide for each type of Personium user and a contributor guide for Personium project participants.
+
+### Personium Operators
+
+Personium operators are further divided into server software operators and unit administrators.
 
 #### [Server Software Operator's Guide](./server-operator/README.md)
 
@@ -40,7 +62,7 @@ Documents for people who want to develop PDS applications using Personium's API
 
 #### [Documentation Contributor's Guide](./document-writer/README.md)
 
-Personium Project is looking for documentation contributors.
+The contributor guide is for participants who want to maintain and improve the documentation of the Personium project.
 
 ### For Code Contribution
 

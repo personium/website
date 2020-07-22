@@ -15,7 +15,7 @@ Personiumの主要構成要素は以下2つのJava Web アプリケーション�
 |[personium-core](https://github.com/personium/personium-core)|Personiumのメインサーバプログラム|準備中|
 |[personium-engine](https://github.com/personium/personium-engine)|coreの配下でEngine機能を担当するサブサーバプログラム|準備中|
 
-これらサーバプログラムをTomcatなどのJavaサーブレットコンテナで動作させ、NginxやApacheなどのリバースプロキシサーバ経由で適切に用いて構築することでPersoniumのユニットとなります。
+これらサーバプログラムをTomcatなどのJavaサーブレットコンテナで動作させ、NginxやApacheなどのリバースプロキシサーバ経由で適切に用いて構築することでPersoniumのUnitとなります。
 
 またバックエンドとして以下のミドルウェアに依存しています。
 

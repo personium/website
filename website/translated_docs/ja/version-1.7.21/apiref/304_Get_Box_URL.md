@@ -29,7 +29,7 @@ GET
 |クエリ名|概要|有効値|必須|備考|
 |:--|:--|:--|:--|:--|
 |p_cookie_peer|クッキー認証値|認証時にサーバから返却されたクッキー認証値|×|Authorizationヘッダの指定が無い場合のみ有効<br>クッキーの認証情報を利用する場合に指定する|
-|schema|アプリセルURL|URL形式|×|桁数：1&#65374;1024<br>URIの形式に従う|
+|schema|アプリCellURL|URL形式|×|桁数：1&#65374;1024<br>URIの形式に従う|
 
 
 ### リクエストヘッダ
@@ -54,7 +54,7 @@ GET
 
 |ヘッダ名|概要|備考|
 |:--|:--|:--|
-|Location|Boxメタデータ取得API用URL|リクエストの指定方法により、以下の値となる<br>schemaクエリを指定<br>schemaクエリで指定されたアプリセルURLに対応するBoxのURL<br>schemaクエリなしで、Authorizationヘッダのみを指定<br>トークンに含まれるスキーマURLに対応するBoxのURL|
+|Location|Boxメタデータ取得API用URL|リクエストの指定方法により、以下の値となる<br>schemaクエリを指定<br>schemaクエリで指定されたアプリCellURLに対応するBoxのURL<br>schemaクエリなしで、Authorizationヘッダのみを指定<br>トークンに含まれるスキーマURLに対応するBoxのURL|
 Locationサンプル
 ```
 Location:https://cell1.unit1.example/box1
