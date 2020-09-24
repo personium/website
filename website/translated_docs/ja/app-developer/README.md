@@ -10,10 +10,10 @@ PersoniumのAPIを使用して、アプリを開発する人のためのドキ�
 
 アプリ開発の基本を学ぶためにはGetting Startedの以下ドキュメントを参照してください。
 
-1. [はじめに](../getting-stared/appdev-introduction.md)
-2. [管理ツール (Unit Manager)](../getting-stared/appdev-management-tool.md)
-3. [アプリ開発の流れ](../getting-stared/appdev-process.md)
-4. [アプリの実装](../getting-stared/appdev-impl.md)
+1. [はじめに](../getting-started/appdev-introduction.md)
+2. [管理ツール (Unit Manager)](../getting-started/appdev-management-tool.md)
+3. [アプリ開発の流れ](../getting-started/appdev-process.md)
+4. [アプリの実装](../getting-started/appdev-impl.md)
 
 ### OData, WebDAVのデモ
 

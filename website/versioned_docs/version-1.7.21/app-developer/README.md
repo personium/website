@@ -11,10 +11,10 @@ This document is for developers who develop apps using Personium's APIs.
 
 To learn the basics of app development, refer to the following documents in Getting Started.
 
-1. [Introduction](../getting-stared/appdev-introduction.md)
-2. [Unit Manager](../getting-stared/appdev-management-tool.md)
-3. [App development flow](../getting-stared/appdev-process.md)
-4. [App implementation](../getting-stared/appdev-impl.md)
+1. [Introduction](../getting-started/appdev-introduction.md)
+2. [Unit Manager](../getting-started/appdev-management-tool.md)
+3. [App development flow](../getting-started/appdev-process.md)
+4. [App implementation](../getting-started/appdev-impl.md)
 
 ## App development details
 
