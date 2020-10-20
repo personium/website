@@ -37,11 +37,15 @@ Create a VM with public IaaS. The parameters suggested below has been confirmed 
 
 ### Security group/firewall settings
 
-To access the Personium Unit, set the security group/firewall to allow access to the following ports for the public IP address of the created VM.
+To create and access the Personium Unit, set the security group/firewall to allow access to the following ports for the created VM.
 
-| Port | Purpose |
-|----|----|
-|443|HTTPS access|
+| Direction | Port | Source | Destination | Purpose |
+|-----------|------|--------|-------------|---------|
+| Inbound | 443 | any | any | the Personium API access using HTTPS |
+| Inbound | 22 | your work machine | any | the created VM access using SSH |
+| Outbound | 443 | any | any | External repositories access using HTTPS |
+| Outbound | 80 | any | any | External repositories access using HTTP |
+
 
 ### Personium installation using Ansible
 
