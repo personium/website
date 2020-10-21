@@ -42,7 +42,7 @@ To create and access the Personium Unit, set the security group/firewall to allo
 
 | Direction | Port | Source | Destination | Purpose |
 |-----------|------|--------|-------------|---------|
-| Inbound | 443 | any | any | the Personium API access using HTTPS |
+| Inbound | 443 | any | any |Allow access to the Personium API through HTTPS |
 | Inbound | 22 | your work machine | any | the created VM access using SSH |
 | Outbound | 443 | any | any | External repositories access using HTTPS |
 | Outbound | 80 | any | any | External repositories access using HTTP |
