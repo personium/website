@@ -44,7 +44,7 @@ To create and access the Personium Unit, set the security group/firewall to allo
 | Inbound | 443 | any | any | Allow access to the Personium API through HTTPS |
 | Inbound | 22 | your work machine | any | Allow access to the created VMs through SSH |
 | Outbound | 443 | any | any | To access any external repositories through HTTPS |
-| Outbound | 80 | any | any | External repositories access using HTTP |
+| Outbound | 80 | any | any | To access any external repositories through HTTP |
 
 
 ### Personium installation using Ansible
