@@ -2269,6 +2269,10 @@
         "title": "Glossary",
         "sidebar_label": "Glossary"
       },
+      "version-1.7.21/introduction/version-1.7.21-009_FAQ": {
+        "title": "FAQ",
+        "sidebar_label": "FAQ"
+      },
       "version-1.7.21/plugin-developer/version-1.7.21-EngineExtension_Imple_and_Deploy": {
         "title": "Engine Extension implementation and deployment specification",
         "sidebar_label": "Engine Extension implementation and deployment specification"
