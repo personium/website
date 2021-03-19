@@ -1089,6 +1089,10 @@
         "title": "Glossary",
         "sidebar_label": "Glossary"
       },
+      "introduction/009_FAQ": {
+        "title": "FAQ",
+        "sidebar_label": "FAQ"
+      },
       "plugin-developer/EngineExtension_Imple_and_Deploy": {
         "title": "Engine Extension implementation and deployment specification",
         "sidebar_label": "Engine Extension implementation and deployment specification"
