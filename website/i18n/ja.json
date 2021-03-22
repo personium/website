@@ -2265,6 +2265,10 @@
         "title": "用語集",
         "sidebar_label": "用語集"
       },
+      "version-1.7.21-introduction/009_FAQ": {
+        "title": "よくある質問（FAQ）",
+        "sidebar_label": "よくある質問（FAQ）"
+      },
       "version-1.7.21-plugin-developer/EngineExtension_Imple_and_Deploy": {
         "title": "Engine Extensionの実装及び配備仕様",
         "sidebar_label": "Engine Extensionの実装及び配備仕様"
