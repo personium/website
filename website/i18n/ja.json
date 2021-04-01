@@ -1085,6 +1085,10 @@
         "title": "用語集",
         "sidebar_label": "用語集"
       },
+      "introduction/009_FAQ": {
+        "title": "よくある質問（FAQ）",
+        "sidebar_label": "よくある質問（FAQ）"
+      },
       "plugin-developer/EngineExtension_Imple_and_Deploy": {
         "title": "Engine Extensionの実装及び配備仕様",
         "sidebar_label": "Engine Extensionの実装及び配備仕様"
@@ -1108,10 +1112,6 @@
       "server-operator/README": {
         "title": "サーバソフトウェア運用者向けガイド",
         "sidebar_label": "サーバソフトウェア運用者向けガイド"
-      },
-      "server-operator/faq": {
-        "title": "サーバソフトウェア運用者からのFAQ",
-        "sidebar_label": "サーバソフトウェア運用者からのFAQ"
       },
       "server-operator/proxy_exclusion_setting": {
         "title": "プロキシ除外設定",
@@ -2261,6 +2261,10 @@
         "title": "用語集",
         "sidebar_label": "用語集"
       },
+      "version-1.7.21-introduction/009_FAQ": {
+        "title": "よくある質問（FAQ）",
+        "sidebar_label": "よくある質問（FAQ）"
+      },
       "version-1.7.21-plugin-developer/EngineExtension_Imple_and_Deploy": {
         "title": "Engine Extensionの実装及び配備仕様",
         "sidebar_label": "Engine Extensionの実装及び配備仕様"
@@ -2284,10 +2288,6 @@
       "version-1.7.21-server-operator/README": {
         "title": "サーバソフトウェア運用者向けガイド",
         "sidebar_label": "サーバソフトウェア運用者向けガイド"
-      },
-      "version-1.7.21-server-operator/faq": {
-        "title": "サーバソフトウェア運用者からのFAQ",
-        "sidebar_label": "サーバソフトウェア運用者からのFAQ"
       },
       "version-1.7.21-server-operator/proxy_exclusion_setting": {
         "title": "プロキシ除外設定",
