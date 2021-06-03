@@ -843,6 +843,14 @@ noindex:-o-prefocus,
     width: 50%;
 }
 
+.row .network {
+    margin-top: 15px;
+    margin-bottom: 15px;
+}
+.row .network img {
+    max-width: 150px;
+}
+
 .card.pricing .list-group-item {
     border: 0;
     text-align: center;
@@ -963,7 +971,7 @@ noindex:-o-prefocus,
 }
 
 
-#community a {
+#personium-community a {
     border: 1px solid;
     margin: 5px 2%;
     display: -webkit-flex;
@@ -973,25 +981,25 @@ noindex:-o-prefocus,
 }
 
 @media (max-width: 576px){
-    #community a {
+    #personium-community a {
         width: 100%;
     }
 }
 
 @media (min-width: 576px){
-    #community a {
+    #personium-community a {
         width: 100%;
     }
 }
 
 @media (min-width: 768px){
-    #community a {
+    #personium-community a {
         width: 46%;
     }
 }
     
 @media (min-width: 1200px){
-    #community a {
+    #personium-community a {
         width: 46%;
     }
 }
