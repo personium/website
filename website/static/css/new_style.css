@@ -561,6 +561,11 @@ noindex:-o-prefocus,
 	margin-bottom: 10px;
 }
 
+.operator-icon img{
+	margin-bottom: 10px;
+	height: 108.5px;
+}
+
 /*.card.features:before {
     content: "";
     position: absolute;
