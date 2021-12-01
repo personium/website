@@ -7,8 +7,7 @@ original_id: appdev-management-tool
 
 Personium Project provides one sample management tool to simplify your development process (design and test data model, upload files, configure and test access persmission, etc). Unit Manager allows you to manage Personium Cells on any Personium Unit.  
 
-If you want to install your own Unit manager, please refer to the [Unit Manager GitHub repository](https://github.com/personium/app-uc-unit-manager/). Otherwise, access your Cell(s) using the following Unit Manager provided by the Personium Project.  
-> https://app-uc-unit-manager.appdev.personium.io/__/html/login.html  
+If you want to install your own Unit manager, please refer to the [Unit Manager GitHub repository](https://github.com/personium/app-uc-unit-manager/).  
 
 You need the following information to access your Cell.  
 1. Cell URL  
