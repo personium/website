@@ -22,6 +22,8 @@
 
 
     <script type="text/javascript" charset="utf-8">
+
+        var supportedLanguage = ['en', 'ja'];
         var browserLanguage = function () {
             var ua = window.navigator.userAgent.toLowerCase();
             try {
@@ -48,11 +50,11 @@
             }
 
             lang = browserLanguage();
-            if (lang) {
+            if (lang && supportedLanguage.indexOf(lang) > -1) {
                 return lang;
             }
 
-            return 'en';
+            return supportedLanguage[0];
         };
 
         location.href = '/docs/' + getLanguage() + '/README';
