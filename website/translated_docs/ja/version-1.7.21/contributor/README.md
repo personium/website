@@ -8,8 +8,8 @@ sidebar_label: コントリビューターガイド
 
 ## 質問
 
-Personiumのコンセプトや使い方を質問する場合は[Slack Community](https://personium-io.slack.com/)でお願いします。  
-Slackコミュニティへの参加登録は[こちら](https://bit.ly/Join_Personium_Slack)です。  
+Personiumのコンセプトや使い方を質問する場合は[Discordコミュニティー](https://discord.gg/RgwCgvc3Ur)でお願いします。  
+
 
 各チャンネルの使い方は以下のようになっています。
 

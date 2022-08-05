@@ -5,8 +5,8 @@ sidebar_label: Personium ドキュメント
 ---
 
 本ページでは様々な立場でPersoniumに関心を持っていただけた方に向けた様々なドキュメントを公開しています。  
-ご不明な点がございましたら、[Slackコミュニティ](https://personium-io.slack.com/)までお問い合わせください。  
-Slackコミュニティへの参加登録は[こちら](https://bit.ly/Join_Personium_Slack)からどうぞ。
+ご不明な点がございましたら、[Discordコミュニティ](https://discord.gg/RgwCgvc3Ur)までお問い合わせください。  
+
 
 ## はじめに
 

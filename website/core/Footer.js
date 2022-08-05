@@ -64,7 +64,7 @@ class Footer extends React.Component {
               rel="noreferrer noopener">
               Stack Overflow
             </a> */}
-            <a href="https://personium-io.slack.com/">Slack</a>
+            <a href="https://discord.gg/RgwCgvc3Ur">Discord</a>
             <a href="https://github.com/personium">GitHub</a>
             {/* <a
               className="github-button"

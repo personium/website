@@ -118,8 +118,7 @@ Example:)
 
 Personium Unitエコシステムへ参加させる場合は、PersoniumプロジェクトにUnit証明書の発行を依頼してください。
 
-⇒[Slackコミュニティ](https://personium-io.slack.com/)の #infra / #infra_ja チャネルに依頼を出してください。
-Slackコミュニティへの参加登録は[こちら](https://bit.ly/Join_Personium_Slack)からどうぞ。
+⇒[Discordコミュニティ](https://discord.gg/RgwCgvc3Ur)の #infra / #infra_ja チャネルに依頼を出してください。
 
 
 ### 自己発行する場合
