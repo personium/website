@@ -23,8 +23,13 @@ io.personium.configurationFile={ファイル名まで含めたPath}
 
 personium-unit-config.propertiesが正しく読み取られたかどうかを確認するには、起動ログをご確認ください。
 
-#### Unit設定ファイルのキー名について
-すべてのキーは、以下のキープレフィックスを持ちます。
+## コア設定
+
+Unitの基本設定を行います。
+
+### コア設定のキー名について
+
+コア設定のキーは、以下のプレフィックスを持ちます。
 ```
 io.personium.core.
 ```
@@ -212,7 +217,7 @@ http://{engine.host}:{engine.port}/{engine.path}
 #### OpenID Connect
 |キー|説明|値|デフォルト値|使用コンポーネント|備考|
 |:--|:--|:--|:--|:--|:--|
-|oidc.google.trustedClientIds|Google OpenID Connectにおいて、このUnitが信頼するClientID<br>スペース区切りで複数指定可能|文字列|*|core|"*"を指定した場合全てのClientIDを信頼する<br><b>将来的にPlugin独自設定として移動予定</b>|
+|oidc.google.trustedClientIds|Google OpenID Connectにおいて、このUnitが信頼するClientID<br>スペース区切りで複数指定可能|文字列|*|core|v1.7.22以前。"*"を指定した場合全てのClientIDを信頼する<br><b>v1.7.23以降はプラグイン設定に移動</b>|
 
 #### CellSnapshot
 |キー|説明|値|デフォルト値|使用コンポーネント|備考|
@@ -248,3 +253,28 @@ http://{engine.host}:{engine.port}/{engine.path}
 |:--|:--|:--|:--|:--|:--|
 |introspect.username|ユーザ名|文字列||core|Resource ServerからToken Introspectionにアクセスする際のBasic認証用<br>v1.7.4以降|
 |introspect.password|パスワード|文字列||core|Resource ServerからToken Introspectionにアクセスする際のBasic認証用<br>v1.7.4以降|
+
+## プラグイン設定
+
+Unitのプラグインの設定を行います。
+
+### プラグイン設定のキー名について
+
+プラグイン設定のキーは、以下のプレフィックスを持ちます。
+```
+io.personium.plugin.
+```
+
+### OpenID Connect認証連携設定
+
+OpenID Connect認証連携プラグイン（以下、OIDC認証連携プラグイン）は複数のconfigIdを定義することで複数のID Providerに対応することができます。分けたい設定ごとに`[configId]`を読み替えて記述してください。
+
+|キー|説明|値|記載例|備考|
+|:--|:--|:--|:--|:--|
+|oidc.[configId].enabled|当該configIdで指定されたOIDC認証連携プラグインの設定を有効にするフラグ|boolean|true|v1.7.23以降|
+|oidc.[configId].pluginName|OIDC認証連携プラグインを識別するための名前|文字列|Google OpenID Connect auth|v1.7.23以降。<br>同一configIdにのみ適用|
+|oidc.[configId].configURL|OIDC認証連携プラグインが参照する設定用URL|文字列|https://accounts.google.com/.well-known/openid-configuration|v1.7.23以降。ID Providerから提供されるURLを指定する。OpenID Connect Discovery 1.0に対応。<br>同一configIdにのみ適用|
+|oidc.[configId].trustedClientIds|OIDC認証連携プラグインが信頼するClientID<br>スペース区切りで複数指定可能|文字列|*|v1.7.23以降。"*"を指定した場合全てのClientIDを信頼する。<br>同一configIdにのみ適用|
+|oidc.[configId].accountType|OIDC認証連携プラグインが認証した結果、返却されるaccountType|文字列|oidc:google|v1.7.23以降<br>同一configIdにのみ適用|
+|oidc.[configId].accountNameKey|OIDC認証連携プラグインがアカウント名として参照するClaimsのキー|文字列|email|v1.7.23以降。<br>同一configIdにのみ適用|
+|oidc.[configId].grantType|OIDC認証連携プラグインが対応付けされるgrantType|文字列|urn:x-personium:oidc:google|v1.7.23以降。<br>同一configIdにのみ適用|
